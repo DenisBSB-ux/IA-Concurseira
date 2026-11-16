@@ -43,6 +43,12 @@ def aplicar(slug, arq):
                 for j, l in enumerate(L):
                     if l.startswith('> [!resumo]') and (' — ' + velho) in l: L[j] = l.replace(' — ' + velho, ' — ' + novo[2:])
         r['assuntos'][a - 1]['md'] = '\n'.join(L); ok.append(e)
+    for a in r['assuntos']:      # cabeçalhos de lei que ficaram sem nenhuma regra
+        L = a['md'].split('\n'); out = []
+        for k, l in enumerate(L):
+            if l.startswith('### ') and not (k + 1 < len(L) and re.match(r'^\s*- ', L[k + 1])): continue
+            out.append(l)
+        a['md'] = '\n'.join(out)
     gravar(R)
     subprocess.run([sys.executable, '.claude/skills/teoria-em-figura/contexto_trocas.py', '--so', slug], check=False)
     orf = []
