@@ -11,11 +11,11 @@ Ordem e situação:
 - [x] rju-lc840 (127 edições; readaptação art. 277 e horário especial 50% corrigidos)
 - [x] direito-civil (42 edições; revogação tácita, pródigos, domicílio do marítimo e posse provisória do ausente corrigidos)
 - [x] previdenciario (44 edições; RPPS com atividade paralela, déficit de plano e pais/irmãos corrigidos) ← lote 1 publicado (v581)
-- [ ] lei-14133
-- [ ] lei-organica-tcdf
-- [ ] lodf
-- [ ] reg-interno
-- [ ] adm-lgpd-lai          ← publicar (lote 2)
+- [x] lei-14133 (54 edições + 2 resumos do 'Em 30 segundos'; margem de preferência 10%/20%, desempate do art. 60 e PNCP do art. 56 corrigidos)
+- [x] lei-organica-tcdf (24 edições)
+- [x] lodf (54 edições; rótulos de artigo do 'Em 30 segundos' corrigidos: art. 71 I–V, art. 161/170 p.ú.)
+- [x] reg-interno (58 edições)
+- [x] adm-lgpd-lai (64 edições; definição de anonimização, LINDB art. 28 e renovação do sigilo ultrassecreto corrigidos) ← lote 2 publicado (v582)
 - [ ] adm-8429
 - [ ] analise-dados-ia
 - [ ] conhec-df
@@ -32,3 +32,8 @@ Alertas para o usuário (acumulados):
 - RJU LC 840: flashcard sobre assistência à servidora (art. 41-A) parece exigir/excluir 'sindicância prévia' e a lei é silente — conferir o gabarito.
 - Direito Civil: regras de fundação e desconsideração estão no assunto 4 (Bens) mas pertencem ao 3 (Pessoas jurídicas); art. 96 §3º misturado com 'acessória segue o principal'; conferir flashcards de fundação (MPDFT no DF, art. 66 §1º); pegadinha removida do assunto 2; regra 'domicílio necessário do servidor não impede outros domicílios' é discutível.
 - Previdenciário: 'recursos da portabilidade não passam pelo participante' não consta do art. 14 §1º da LC 109; flashcard do salário-maternidade no RPPS/DF conflita com o art. 35 da LC 769; regra de pensão de 80% (CF art. 40 §7º) conflita com o art. 29 da LC 769 (pode estar defasado); regras de jurisprudência (ex.: perda auditiva) sem confirmação no texto do projeto.
+- Lei 14.133: flashcards n=106 e n=136 dizem 'margem de preferência menor que 30%' (o art. 26 traz 10% e 20%) — conferir gabaritos; flashcard sobre modos de disputa cita PNCP (art. 56 não trata disso); flashcards de luxo (qualidade/durabilidade/eficiência energética) não estão no art. 20; flashcard de repactuação analítica no maior desconto pode confundir com art. 25 §8º II; regra de convocação de licitantes remanescentes (art. 90) está no assunto de contratação direta; valores do art. 75 I e II ficaram só nominais (atualizados por decreto).
+- Lei Orgânica TCDF: (a) idade do Conselheiro — resumo cita CF art. 73 §1º I (menos de 70 anos, EC 122/2022), mas LC 1/1994 art. 69 I e LODF art. 82 §1º I ainda dizem 65; art. 75 p.ú. (Auditor) também remete a 65 — conferir qual regra a banca cobra; (b) composição: LC 1/1994 art. 70 (2 pelo Governador, 5 pela Câmara) × LODF art. 82 §2º (3 e 4; EC 36/2002) — o resumo segue a LODF; (c) macete 'Subsídio não mata 13º nem terço de férias' sem apoio na LC 1/1994; (d) 'representação do MP de Contas é privativa do Plenário' (RI art. 13, I, h) — conferir gabarito; (e) o 'Em 30 segundos' do assunto 4 repete o item de registro (art. 1º, III) do assunto 1.
+- LODF: art. 103 (admissão de denúncia por 2/3) declarado inconstitucional na ADI 3466 e o texto do projeto não traz o quórum; itens de segurança pública (PCDF subordinada, policiamento comunitário, atividades de risco contínuo) e o art. 119 §7º (concurso 'na forma da lei') sem apoio no texto do projeto; 'representantes dos servidores na direção superior' não bate com o art. 160, I; 'imunidade cultural alcança formato eletrônico' decorre da jurisprudência do STF (art. 128, VI, d só cita livros, jornais, periódicos e papel).
+- Regimento Interno: (a) 'RI não prevê convocar servidores de controle externo para substituir em Plenário' não confirmado (arts. 30/44/45 só tratam de Auditores); (b) 'demissão e cassação cabem ao Plenário, por proposta do Presidente' não confirmado (art. 16, XXXV dá ao Presidente as sanções a servidor, observado o art. 13, XI); (c) 'execução nas varas é da PGDF e o MP de Contas não a propõe' é inferência do art. 54, III; (d) assunto 13 (Comunicação das decisões) só tem um macete, sem regra; (e) pegadinha 'admissão sem concurso afasta a competência do TCDF' presa a uma questão.
+- LGPD/LAI: assunto 15 (transferência internacional) só tinha a regra do art. 3º, II (alcance territorial) — conferir se o flashcard deveria estar em disposições preliminares.
