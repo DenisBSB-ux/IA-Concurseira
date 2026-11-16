@@ -18,7 +18,7 @@ Ordem e situação:
 - [x] adm-lgpd-lai (64 edições; definição de anonimização, LINDB art. 28 e renovação do sigilo ultrassecreto corrigidos) ← lote 2 publicado (v582)
 - [x] adm-8429 (46 edições; impedimento × suspeição e cominações do art. 12, III corrigidos)
 - [x] analise-dados-ia (20 edições, sobretudo frases sem sujeito e pegadinhas sem referente; sem base legal, revisão conceitual leve)
-- [ ] conhec-df
+- [x] conhec-df (69 edições; Pico do Roncador, planejamento de Taguatinga, art. 5º da LC 94 e conselho da RIDE corrigidos)
 - [ ] contratos
 - [ ] pdpm                  ← publicar (lote 3)
 - [ ] in5
@@ -39,3 +39,4 @@ Alertas para o usuário (acumulados):
 - LGPD/LAI: assunto 15 (transferência internacional) só tinha a regra do art. 3º, II (alcance territorial) — conferir se o flashcard deveria estar em disposições preliminares.
 - Lei 8.429: rótulo 'Art. 1º ▸ § 2º' da primeira regra do assunto 1 não bate com o conteúdo (revogação da modalidade culposa em processos sem trânsito em julgado; o art. 1º §2º define dolo); título do assunto 2 cita a Lei distrital 2.834/2001, mas o resumo não traz regra dela e o texto não está no projeto.
 - Análise de Dados e IA: revisão conceitual leve (sem texto de lei); regra 'média aritmética' está no assunto 1 (Ética) mas pertence à estatística descritiva; 'dados não estruturados não se encaixam em bancos relacionais' é simplificação (podem ir como BLOB/texto); 'pizza funciona mal com mais de cinco categorias' é heurística, não regra; linhas próximas (dados quantitativos, barras com eixo zero) mantidas por trazerem nuances diferentes.
+- Conhecimentos do DF: flashcard n=159 ('ocupação suprimiu mais da metade da vegetação nativa') × doutrina (51% remanescente); n=160 (sorgo antes do feijão) × doutrina (feijão em 3º); n=83 e n=114 com 'gabarito em conferência'; n=176 (maior IDH e expectativa de vida) e n=179 (Ceilândia com mais de 380 mil) vêm só da apostila; 'Reserva da Biosfera do Cerrado' sem fonte no projeto; macete 'Cidade Livre: comércio sem imposto' não confirmado; Descoberto abastece 'mais de 60%' (cartões 46/184/186) × 'quase 60%' (doutrina); cartão n=67 pode ler o Cine Brasília como bem imaterial (o imaterial é o Festival de Brasília); cartões 119/136/188/202 têm o campo v em formato 'o trecho está errado'.
