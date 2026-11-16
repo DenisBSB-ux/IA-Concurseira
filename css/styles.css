@@ -2619,3 +2619,6 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 .tr-modal .tr-ferr .tr-full{ position:static; float:none; margin:0 8px 0 0; }
 .tr-modal .tr-full:hover{ border-color:var(--m-acc); }
 .r7-modal:fullscreen .tr-full{ background:var(--m-link); border-color:var(--m-link); color:var(--m-bg); }
+
+/* v568: botão última não respondida */
+.tr-modal .tr-last{ min-width:44px; }
