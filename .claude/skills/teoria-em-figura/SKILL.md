@@ -157,3 +157,4 @@ Questão sem fonte suficiente **não vira pendência para o usuário**: a base �
 - v557 (14/11): lacunas: Limpar e Trocar palavras passam para a linha de filtros; 🔀 e Resetar (com menu) para a linha de ações. Só código.
 - v558 (14/11): flashcards sem o botão 'Ver a questão' (lacunas mantêm). Só código.
 - v559 (14/11): treino: filtros 'Certas (n)' nas lacunas e 'Já sei (n)' nos flashcards, ao lado de 'Que errei' / 'Revisar'. Só código.
+- v560 (16/11): resumos visuais para revisão rápida (gerados por .claude/skills/teoria-em-figura/resumo_visual.py a partir do resumos-dados.js + treino): Em 30 segundos, tabelas Números e prazos / O que a banca troca, regras com regra-chave + variações, callouts, marcas amarelo/azul/vermelho, modos Rápido/Completo e Recordar. Só código/dados do site; sem upload.
