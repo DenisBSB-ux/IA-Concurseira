@@ -2634,3 +2634,11 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 .tr-reset-pop button.perigo{ border-color:#c0392b; } .tr-reset-pop button.perigo b{ color:#e0584a; }
 .tr-reset-pop button.fecha{ min-height:40px; align-items:center; font-weight:600; background:transparent; }
 .tr-modal .tr-filtros button.on{ font-weight:800; }
+
+/* v572: figura no resumo + ampliação */
+.r7-fig{ margin:8px 0 18px; } .r7-fig img{ display:block; width:100%; height:auto; border-radius:12px; border:1px solid var(--m-bd); cursor:zoom-in; background:#fff; }
+.r7-fig figcaption{ margin-top:6px; font-size:12.5px; color:var(--m-mut, var(--mut)); text-align:center; }
+.r7-lb{ position:fixed; inset:0; background:rgba(0,0,0,.92); overflow:auto; display:flex; align-items:flex-start; justify-content:center; padding:56px 8px 24px; cursor:zoom-out; }
+.r7-lb img{ width:max(100%, min(1400px, 900px)); max-width:none; height:auto; border-radius:8px; background:#fff; }
+.r7-lb-x{ position:fixed; top:10px; right:12px; width:44px; height:44px; border-radius:13px; border:1px solid rgba(255,255,255,.3); background:rgba(0,0,0,.6); color:#fff; font-size:19px; cursor:pointer; }
+@media (min-width:1000px){ .r7-lb img{ width:min(1400px, 100%); } }
