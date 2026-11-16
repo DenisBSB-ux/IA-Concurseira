@@ -17,7 +17,7 @@ Ordem e situação:
 - [x] reg-interno (58 edições)
 - [x] adm-lgpd-lai (64 edições; definição de anonimização, LINDB art. 28 e renovação do sigilo ultrassecreto corrigidos) ← lote 2 publicado (v582)
 - [x] adm-8429 (46 edições; impedimento × suspeição e cominações do art. 12, III corrigidos)
-- [ ] analise-dados-ia
+- [x] analise-dados-ia (20 edições, sobretudo frases sem sujeito e pegadinhas sem referente; sem base legal, revisão conceitual leve)
 - [ ] conhec-df
 - [ ] contratos
 - [ ] pdpm                  ← publicar (lote 3)
@@ -38,3 +38,4 @@ Alertas para o usuário (acumulados):
 - Regimento Interno: (a) 'RI não prevê convocar servidores de controle externo para substituir em Plenário' não confirmado (arts. 30/44/45 só tratam de Auditores); (b) 'demissão e cassação cabem ao Plenário, por proposta do Presidente' não confirmado (art. 16, XXXV dá ao Presidente as sanções a servidor, observado o art. 13, XI); (c) 'execução nas varas é da PGDF e o MP de Contas não a propõe' é inferência do art. 54, III; (d) assunto 13 (Comunicação das decisões) só tem um macete, sem regra; (e) pegadinha 'admissão sem concurso afasta a competência do TCDF' presa a uma questão.
 - LGPD/LAI: assunto 15 (transferência internacional) só tinha a regra do art. 3º, II (alcance territorial) — conferir se o flashcard deveria estar em disposições preliminares.
 - Lei 8.429: rótulo 'Art. 1º ▸ § 2º' da primeira regra do assunto 1 não bate com o conteúdo (revogação da modalidade culposa em processos sem trânsito em julgado; o art. 1º §2º define dolo); título do assunto 2 cita a Lei distrital 2.834/2001, mas o resumo não traz regra dela e o texto não está no projeto.
+- Análise de Dados e IA: revisão conceitual leve (sem texto de lei); regra 'média aritmética' está no assunto 1 (Ética) mas pertence à estatística descritiva; 'dados não estruturados não se encaixam em bancos relacionais' é simplificação (podem ir como BLOB/texto); 'pizza funciona mal com mais de cinco categorias' é heurística, não regra; linhas próximas (dados quantitativos, barras com eixo zero) mantidas por trazerem nuances diferentes.
