@@ -2587,7 +2587,6 @@ body:not(.theme-light) .r7-md mark.k{ background:rgba(212,170,77,.30); color:#ff
 .r7-md ul{ list-style:none; padding-left:0; margin:4px 0 8px; } .r7-md li{ position:relative; padding:5px 8px 5px 22px; margin:3px 0; border-radius:8px; }
 .r7-md li::before{ content:"▸"; position:absolute; left:6px; top:5px; color:var(--m-acc); font-weight:800; }
 .r7-md li.det{ margin-left:18px; font-size:13.5px; color:var(--m-mut2); } .r7-md li.det::before{ content:"·"; font-size:18px; top:1px; color:var(--m-mut); }
-.r7-md.modo-rapido li.det{ display:none; }
 .r7-md .r7-tab-rolagem{ overflow-x:auto; margin:8px 0 12px; } .r7-md table.r7-tb{ display:table; width:100%; margin:0; font-size:13.5px; border-radius:10px; overflow:hidden; }
 .r7-md table.r7-tb tr:nth-child(even) td{ background:rgba(127,127,127,.06); }
 .r7-md table.r7-tb.cmp th:nth-child(1), .r7-md table.r7-tb.cmp td:nth-child(1){ background:rgba(192,57,43,.10); } .r7-md table.r7-tb.cmp th:nth-child(2), .r7-md table.r7-tb.cmp td:nth-child(2){ background:rgba(46,155,87,.12); }
