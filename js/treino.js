@@ -198,7 +198,7 @@ function treinoMontarFila(){
   } else {
     let l = d.lacunas.slice();
     if(TR.filtro === 'erradas') l = l.filter(x => treinoMarca(slug, treinoChaveItem(x, 'l')) === 'err');
-    else if(TR.filtro === 'certas') l = l.filter(x => treinoMarca(slug, treinoChaveItem(x, 'l')) === 'ok');
+    else if(TR.filtro === 'certas'){ l = l.filter(x => treinoMarca(slug, treinoChaveItem(x, 'l')) === 'ok'); l.forEach(x => { delete TR.mem[treinoChaveItem(x, 'l')]; }); }   // acertadas: reaparecem preenchidas e conferidas
     else if(TR.filtro === 'novos') l = l.filter(x => !treinoMarca(slug, treinoChaveItem(x, 'l')));
     TR.fila = treinoEmbaralha(l);
   }
