@@ -2659,3 +2659,14 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 .r7-err-regra{ display:block; } .r7-err-chips{ display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
 .r7-err-qb{ min-height:34px; padding:0 11px; border-radius:999px; border:1px solid #c0392b; background:rgba(192,57,43,.14); color:var(--m-ink); font:inherit; font-size:13px; font-weight:800; cursor:pointer; }
 .r7-md .r7-err-lista li::before{ content:none; display:none; } .r7-md .r7-err-lista li{ padding-left:12px; }
+
+/* v580: destaque dos assuntos com erro, chip de erros no cartão, tabela errado x correto em cartões */
+.r7-ass button.erro{ border-color:#c0392b; background:rgba(192,57,43,.14); } .r7-ass button.erro.on{ background:#c0392b; color:#fff; }
+.r7-ass button small.e{ margin-left:6px; padding:1px 7px; border-radius:999px; background:#c0392b; color:#fff; font-weight:800; opacity:1; }
+.r7-errs{ margin-left:6px; padding:3px 9px; border-radius:999px; background:rgba(192,57,43,.18); border:1px solid #c0392b; color:#e0584a; font-size:12.5px; font-weight:800; }
+.r7-cmp{ display:flex; flex-direction:column; gap:10px; margin:8px 0 18px; }
+.r7-cmp-card{ display:grid; grid-template-columns:1fr; gap:0; border:1px solid var(--m-bd); border-radius:12px; overflow:hidden; background:var(--m-soft); }
+.r7-cmp-x, .r7-cmp-ok{ padding:10px 12px; } .r7-cmp-x{ background:rgba(192,57,43,.12); border-bottom:1px solid var(--m-bd); } .r7-cmp-ok{ background:rgba(46,155,87,.12); }
+.r7-cmp-x b, .r7-cmp-ok b{ display:block; font-size:12px; letter-spacing:.02em; margin-bottom:4px; opacity:.85; } .r7-cmp-x p, .r7-cmp-ok p{ margin:0; line-height:1.55; }
+.r7-cmp-onde{ grid-column:1 / -1; padding:6px 12px; font-size:12.5px; color:var(--m-mut, var(--mut)); border-top:1px solid var(--m-bd); }
+@media (min-width:760px){ .r7-cmp-card{ grid-template-columns:1fr 1fr; } .r7-cmp-x{ border-bottom:0; border-right:1px solid var(--m-bd); } }
