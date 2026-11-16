@@ -147,14 +147,13 @@ function reta7Md(md){
 }
 // preferências do resumo: modo (rápido mostra só a regra-chave; completo mostra as variações) e "recordar" (esconde os termos-chave: toque para revelar)
 const R7_PREF_KEY = 'tcdf_resumo_pref_v1';
-function reta7Pref(){ const o = reta7LerJ(R7_PREF_KEY); return { modo: (o && o.modo === 'completo') ? 'completo' : 'rapido', rec: !!(o && o.rec) }; }
+function reta7Pref(){ const o = reta7LerJ(R7_PREF_KEY); return { rec: !!(o && o.rec) }; }
 function reta7AplicaPref(box){ const p = reta7Pref(), md = box.querySelector('.r7-md'); if(!md) return;
-  md.classList.toggle('modo-rapido', p.modo === 'rapido'); md.classList.toggle('rec', p.rec);
-  box.querySelectorAll('[data-r7-modo]').forEach(b => { const on = b.dataset.r7Modo === p.modo; b.classList.toggle('on', on); b.setAttribute('aria-pressed', String(on)); });
+  md.classList.toggle('rec', p.rec);
   const rb = box.querySelector('[data-r7-rec]'); if(rb){ rb.classList.toggle('on', p.rec); rb.setAttribute('aria-pressed', String(p.rec)); }
 }
 function reta7Ferramentas(){
-  return '<div class="r7-tools" role="group" aria-label="Modo de revisão"><span class="r7-seg2"><button type="button" data-r7-modo="rapido" title="Só a regra-chave de cada dispositivo, tabelas e macetes">⚡ Rápido</button><button type="button" data-r7-modo="completo" title="Mostra também as variações de cada regra">📖 Completo</button></span><button type="button" class="r7-rec" data-r7-rec="1" title="Esconde os termos-chave: tente lembrar e toque para revelar (recuperação ativa)">🧠 Recordar</button><span class="r7-leg" aria-label="Legenda"><mark class="k">termo-chave</mark><mark class="n">número/prazo</mark><mark class="g">não/limite</mark></span></div>';
+  return '<div class="r7-tools" role="group" aria-label="Modo de revisão"><button type="button" class="r7-rec" data-r7-rec="1" title="Esconde os termos-chave: tente lembrar e toque para revelar (recuperação ativa)">🧠 Recordar</button><span class="r7-leg" aria-label="Legenda"><mark class="k">termo-chave</mark><mark class="n">número/prazo</mark><mark class="g">não/limite</mark></span></div>';
 }
 // resumo separado por assunto: aba "Visão geral" (tabela do que mais cai) + uma aba por assunto
 function reta7MdVisao(r){ return r.geral || reta7MdGeral(r.md); }
@@ -180,7 +179,6 @@ function reta7AbrirResumo(mat){
     box.addEventListener('click', e => {
       if(e.target.closest('.r7-modal-x')){ fechar(); return; }
       const ab = e.target.closest('[data-r7-ass]');
-      const md_ = e.target.closest('[data-r7-modo]'); if(md_){ const p = reta7Pref(); p.modo = md_.dataset.r7Modo; reta7GravarJ(R7_PREF_KEY, p); reta7AplicaPref(box); return; }
       if(e.target.closest('[data-r7-rec]')){ const p = reta7Pref(); p.rec = !p.rec; reta7GravarJ(R7_PREF_KEY, p); reta7AplicaPref(box); box.querySelectorAll('mark.k.rev').forEach(x => x.classList.remove('rev')); return; }
       const mk = e.target.closest('mark.k'); if(mk && box.querySelector('.r7-md.rec')){ mk.classList.toggle('rev'); return; }
       const ck = e.target.closest('[data-r7-chk]');
