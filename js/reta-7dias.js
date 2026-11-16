@@ -190,11 +190,11 @@ function reta7RegraDaQuestao(q){
 }
 function reta7ErrosHtml(mat, r){
   const L = reta7ErrosLista(mat);
-  if(!L.length) return '<h2>❌ Meus erros</h2><p class="r7-err-vazio">Nenhuma questão errada nesta matéria agora. 🎉<br>O que você errar nas listas principais aparece aqui: um resumo objetivo por assunto, com as questões que você errou. Ao acertar de novo, a questão sai desta seção.</p>';
+  if(!L.length) return '<h2>🎯 Resumo dos meus erros</h2><p class="r7-err-vazio">Nenhuma questão errada nesta matéria agora. 🎉<br>O que você errar nas listas principais aparece aqui: um resumo objetivo por assunto, com as questões que você errou. Ao acertar de novo, a questão sai desta seção.</p>';
   const por = {}; L.forEach(e => { const t = e.q.tema || 'Sem assunto'; (por[t] = por[t] || []).push(e); });
   const temas = Object.keys(por).sort((a, b) => por[b].length - por[a].length || a.localeCompare(b));
   const idxAss = t => reta7IdxAssunto(r, t);
-  let h = '<h2>❌ Meus erros</h2><p class="r7-err-vazio">' + L.length + ' questão(ões) errada(s) em ' + temas.length + ' assunto(s). Abaixo, a regra de cada uma; os botões <b>Q</b> abrem a questão para refazer.</p><button type="button" class="r7-err-todas" data-r7-refazer="' + L.map(e => esc(e.uid)).join(',') + '">↺ Refazer todas (' + L.length + ')</button>';
+  let h = '<h2>🎯 Resumo dos meus erros</h2><p class="r7-err-vazio">' + L.length + ' questão(ões) errada(s) em ' + temas.length + ' assunto(s). Abaixo, a regra de cada uma; os botões <b>Q</b> abrem a questão para refazer.</p><button type="button" class="r7-err-todas" data-r7-refazer="' + L.map(e => esc(e.uid)).join(',') + '">↺ Refazer todas (' + L.length + ')</button>';
   temas.forEach(t => {
     const itens = por[t].slice().sort((a, b) => b.ts - a.ts), grupos = [];
     itens.forEach(e => {
