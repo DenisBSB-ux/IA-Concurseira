@@ -16,7 +16,7 @@ Ordem e situação:
 - [x] lodf (54 edições; rótulos de artigo do 'Em 30 segundos' corrigidos: art. 71 I–V, art. 161/170 p.ú.)
 - [x] reg-interno (58 edições)
 - [x] adm-lgpd-lai (64 edições; definição de anonimização, LINDB art. 28 e renovação do sigilo ultrassecreto corrigidos) ← lote 2 publicado (v582)
-- [ ] adm-8429
+- [x] adm-8429 (46 edições; impedimento × suspeição e cominações do art. 12, III corrigidos)
 - [ ] analise-dados-ia
 - [ ] conhec-df
 - [ ] contratos
@@ -37,3 +37,4 @@ Alertas para o usuário (acumulados):
 - LODF: art. 103 (admissão de denúncia por 2/3) declarado inconstitucional na ADI 3466 e o texto do projeto não traz o quórum; itens de segurança pública (PCDF subordinada, policiamento comunitário, atividades de risco contínuo) e o art. 119 §7º (concurso 'na forma da lei') sem apoio no texto do projeto; 'representantes dos servidores na direção superior' não bate com o art. 160, I; 'imunidade cultural alcança formato eletrônico' decorre da jurisprudência do STF (art. 128, VI, d só cita livros, jornais, periódicos e papel).
 - Regimento Interno: (a) 'RI não prevê convocar servidores de controle externo para substituir em Plenário' não confirmado (arts. 30/44/45 só tratam de Auditores); (b) 'demissão e cassação cabem ao Plenário, por proposta do Presidente' não confirmado (art. 16, XXXV dá ao Presidente as sanções a servidor, observado o art. 13, XI); (c) 'execução nas varas é da PGDF e o MP de Contas não a propõe' é inferência do art. 54, III; (d) assunto 13 (Comunicação das decisões) só tem um macete, sem regra; (e) pegadinha 'admissão sem concurso afasta a competência do TCDF' presa a uma questão.
 - LGPD/LAI: assunto 15 (transferência internacional) só tinha a regra do art. 3º, II (alcance territorial) — conferir se o flashcard deveria estar em disposições preliminares.
+- Lei 8.429: rótulo 'Art. 1º ▸ § 2º' da primeira regra do assunto 1 não bate com o conteúdo (revogação da modalidade culposa em processos sem trânsito em julgado; o art. 1º §2º define dolo); título do assunto 2 cita a Lei distrital 2.834/2001, mas o resumo não traz regra dela e o texto não está no projeto.
