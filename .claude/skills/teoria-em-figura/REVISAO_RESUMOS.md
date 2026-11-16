@@ -6,7 +6,7 @@ Gabarito nunca muda sem confirmação do usuário (alertas vão para o relatóri
 
 Ordem e situação:
 - [x] d-tributario (publicado v580; revisão manual — `revisao_d_tributario.py`)
-- [ ] afo
+- [x] afo (28 edições; limite de pessoal da União corrigido para 50% da RCL)
 - [ ] constitucional
 - [ ] rju-lc840
 - [ ] direito-civil
@@ -26,4 +26,5 @@ Ordem e situação:
 - [ ] decreto-44330
 - [ ] administrativo-geral  ← publicar (lote 4, final)
 
-Alertas para o usuário (acumulados): —
+Alertas para o usuário (acumulados):
+- AFO: (a) 'ação nova pode entrar na LOA durante o exercício' (CF 165 §2º) sem apoio direto no texto da CF do projeto; (b) 'A execução da LOA começa com a sua sanção' / macete 'Sancionou, executa' imprecisos; (c) regra sobre pedágio e taxas sem dispositivo conferível na Lei 4.320; (d) macete 'Pessoal só compensa no fim do ano, e com lei' vago; (e) resumo do art. 17 da LRF mistura classificação de obra com despesa continuada.
