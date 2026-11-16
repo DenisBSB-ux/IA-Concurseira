@@ -138,6 +138,7 @@ function reta7Md(md){
     if(/^\|/.test(l)){ fechaLista(); tab.push(l); return; } fechaTab();
     let m;
     if((m = l.match(/^(#{1,3})\s+(.*)/))){ fechaLista(); const n = m[1].length + 1; out += '<h' + n + (n === 4 && /^Art\./.test(m[2]) ? ' class="art"' : '') + '>' + inl(m[2]) + '</h' + n + '>'; }
+    else if((m = l.match(/^!\[([^\]]*)\]\((img\/[\w.\-]+)\)\s*$/))){ fechaLista(); out += '<figure class="r7-fig"><img src="' + esc(m[2]) + '" alt="' + esc(m[1]) + '" loading="lazy" data-r7-zoom="1"><figcaption>' + esc(m[1]) + '</figcaption></figure>'; }
     else if((m = l.match(/^>\s*\[!(resumo|pega|dica)\]\s*(.*)/))){ fechaLista(); const ic = { resumo:'⚡', pega:'⚠️', dica:'💡' }[m[1]]; out += '<div class="co co-' + m[1] + '"><span class="co-ic" aria-hidden="true">' + ic + '</span><span>' + inl(m[2]) + '</span></div>'; }
     else if((m = l.match(/^>\s?(.*)/))){ fechaLista(); out += '<blockquote>' + inl(m[1]) + '</blockquote>'; }
     else if((m = l.match(/^(\s*)[-*]\s+(.*)/))){ if(!lista){ out += '<ul>'; lista = true; } out += '<li' + (m[1].length >= 2 ? ' class="det"' : '') + '>' + inl(m[2]) + '</li>'; }
@@ -179,6 +180,8 @@ function reta7AbrirResumo(mat){
     box.addEventListener('click', e => {
       if(e.target.closest('.r7-modal-x')){ fechar(); return; }
       const ab = e.target.closest('[data-r7-ass]');
+      const zi = e.target.closest('[data-r7-zoom]');
+      if(zi){ const lb = document.createElement('div'); lb.className = 'r7-lb'; lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-label', 'Imagem ampliada'); lb.innerHTML = '<button type="button" class="r7-lb-x" aria-label="Fechar">✕</button><img src="' + esc(zi.getAttribute('src')) + '" alt="' + esc(zi.getAttribute('alt') || '') + '">'; lb.style.zIndex = ++_janZ + 50; lb.addEventListener('click', () => lb.remove()); (document.fullscreenElement || document.body).appendChild(lb); return; }
       if(e.target.closest('[data-jan-full]')){ janTelaCheia(box); return; }
       if(e.target.closest('[data-r7-rec]')){ const p = reta7Pref(); p.rec = !p.rec; reta7GravarJ(R7_PREF_KEY, p); reta7AplicaPref(box); box.querySelectorAll('mark.k.rev').forEach(x => x.classList.remove('rev')); return; }
       const mk = e.target.closest('mark.k'); if(mk && box.querySelector('.r7-md.rec')){ mk.classList.toggle('rev'); return; }
