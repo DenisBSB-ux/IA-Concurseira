@@ -163,9 +163,39 @@ const R7_CHK_KEY = 'tcdf_resumo_check_v1';
 function reta7CheckLer(slug){ const o = reta7LerJ(R7_CHK_KEY); return (o && o[slug]) || {}; }
 function reta7CheckSet(slug, i, v){ const o = reta7LerJ(R7_CHK_KEY) || {}; const m = (o[slug] = o[slug] || {}); m[i] = v ? 1 : 0; reta7GravarJ(R7_CHK_KEY, o); if(typeof revTsSet === 'function') revTsSet('check', slug, String(i)); if(typeof sincronizarRevisao === 'function') sincronizarRevisao(); }
 function reta7CheckBtn(slug, i){ const on = !!reta7CheckLer(slug)[i]; return '<div class="r7-chk"><button type="button" data-r7-chk="' + i + '" class="' + (on ? 'on' : '') + '" aria-pressed="' + on + '">' + (on ? '✓ Assunto estudado' : '☐ Marcar este assunto como estudado') + '</button></div>'; }
-function reta7AbasAssunto(r, sel, slug){
+// questões das listas principais cujo último resultado foi erro (o mesmo critério do Caderno de erros), da matéria do resumo
+function reta7ErrosLista(mat){
+  try{
+    if(typeof getBucket !== 'function' || typeof BY_UID === 'undefined') return [];
+    const b = getBucket(mat), out = [];
+    Object.entries(b.perguntas || {}).forEach(([uid, p]) => { const q = BY_UID[uid]; if(q && q.materia === mat && p.ultimoResultado === false) out.push({ uid, q, ts: (p.historico && p.historico.length ? p.historico[p.historico.length - 1].ts : 0) || 0 }); });
+    return out;
+  }catch(_){ return []; }
+}
+function reta7ErrosHtml(mat){
+  const L = reta7ErrosLista(mat);
+  if(!L.length) return '<h2>❌ Meus erros</h2><p class="r7-err-vazio">Nenhuma questão errada nesta matéria agora. 🎉<br>O que você errar nas listas principais aparece aqui, por assunto, com o gabarito e a resolução. Ao acertar de novo, a questão sai desta seção.</p>';
+  const por = {}; L.forEach(e => { (por[e.q.tema || 'Sem assunto'] = por[e.q.tema || 'Sem assunto'] || []).push(e); });
+  const temas = Object.keys(por).sort((a, b) => por[b].length - por[a].length || a.localeCompare(b));
+  let h = '<h2>❌ Meus erros</h2><p class="r7-err-vazio">' + L.length + ' questão(ões) das listas principais com o último resultado errado, por assunto. Releia a regra, depois refaça.</p><button type="button" class="r7-err-todas" data-r7-refazer="' + L.map(e => esc(e.uid)).join(',') + '">↺ Refazer todas (' + L.length + ')</button>';
+  temas.forEach(t => {
+    h += '<h3>' + esc(t) + ' <small>(' + por[t].length + ')</small></h3>';
+    por[t].sort((a, b) => b.ts - a.ts).forEach(({ uid, q }) => {
+      const g = String(typeof gabaritoEfetivo === 'function' ? gabaritoEfetivo(q) : q.g || ''), enun = String((typeof limparEnunciado === 'function' ? limparEnunciado(q.q, q.t) : q.q) || q.rf || '');
+      const lin = String((typeof limparResolucao === 'function' ? limparResolucao(q.r) : q.r) || '').replace(/\u0001([^\u0001\u0002\n]*)\u0002/g, '**$1**').replace(/\u0005([^\u0005\u0006\n]*)\u0006/g, '==$1==').replace(/[\u0001-\u0006]/g, '').split('\n').map(s => s.trim()).filter(s => /^(📌|💡|⚠)/u.test(s) && !/^⚠\uFE0F?\s*ERROS/u.test(s)).slice(0, 3);
+      const info = [q.bc ? String(q.bc).replace(/\s*\/\s*/g, ' · ') : '', q.ar || ''].filter(Boolean).join(' · ');
+      h += '<div class="r7-err"><div class="r7-err-cab"><b>Questão ' + esc(String(q.n)) + '</b>' + (info ? '<span class="r7-err-info">' + esc(info) + '</span>' : '') + '<span class="r7-err-g ' + (/^errado$/i.test(g) ? 'no' : 'ok') + '">Gabarito: ' + esc(g.toUpperCase()) + '</span></div>'
+        + '<p class="r7-err-q">' + esc(enun.length > 420 ? enun.slice(0, 420).replace(/\s+\S*$/, '') + '…' : enun) + '</p>'
+        + (lin.length ? '<div class="r7-err-res">' + reta7Md(lin.map(s => '- ' + s).join('\n')) + '</div>' : '')
+        + '<button type="button" class="r7-err-bt" data-r7-refazer="' + esc(uid) + '">↺ Refazer</button></div>';
+    });
+  });
+  return h;
+}
+function reta7AbasAssunto(r, sel, slug, mat){
   const abas = [{ nome:'Visão geral', n:0 }].concat(r.assuntos || []), chk = slug ? reta7CheckLer(slug) : {};
-  return abas.map((a, i) => '<button type="button" data-r7-ass="' + i + '" class="' + (i === sel ? 'on' : '') + (i > 0 && chk[i] ? ' chk' : '') + '" aria-pressed="' + (i === sel) + '">' + (i > 0 && chk[i] ? '✓ ' : '') + esc(a.nome) + (a.pct !== undefined ? '<small>' + a.pct + '%</small>' : (a.n ? '<small>' + a.n + '</small>' : '')) + '</button>').join('');
+  const nErr = mat ? reta7ErrosLista(mat).length : 0;
+  return abas.map((a, i) => '<button type="button" data-r7-ass="' + i + '" class="' + (i === sel ? 'on' : '') + (i > 0 && chk[i] ? ' chk' : '') + '" aria-pressed="' + (i === sel) + '">' + (i > 0 && chk[i] ? '✓ ' : '') + esc(a.nome) + (a.pct !== undefined ? '<small>' + a.pct + '%</small>' : (a.n ? '<small>' + a.n + '</small>' : '')) + '</button>').join('') + (mat ? '<button type="button" data-r7-ass="erros" class="err' + (sel === 'erros' ? ' on' : '') + '" aria-pressed="' + (sel === 'erros') + '">❌ Meus erros<small>' + nErr + '</small></button>' : '');
 }
 function reta7AbrirResumo(mat){
   const slug = reta7SlugResumo(mat); if(!slug) return;
@@ -175,7 +205,7 @@ function reta7AbrirResumo(mat){
     const r = ok && typeof RESUMOS_TCDF !== 'undefined' && RESUMOS_TCDF[slug];
     if(document.getElementById(id)) return;
     const box = document.createElement('div'); box.id = id; box.className = 'r7-modal'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Resumo de ' + mat);
-    box.innerHTML = '<div class="r7-modal-caixa"><button class="r7-modal-x" aria-label="Fechar">✕</button><button class="tr-tema" aria-label="Alternar tema claro e escuro" title="Tema claro/escuro">' + (document.body.classList.contains('theme-light') ? '🌙' : '☀️') + '</button><button class="tr-full" data-jan-full="1" aria-label="Tela cheia" title="Tela cheia (Esc para sair)">⛶</button>' + (r && r.assuntos ? '<div class="r7-ass" role="group" aria-label="Assuntos">' + reta7AbasAssunto(r, 0, slug) + '</div>' + reta7Ferramentas() : '') + '<div class="r7-md">' + (r ? reta7Md(r.assuntos ? reta7MdVisao(r) : r.md) : '<p>Não foi possível carregar o resumo agora. Tente de novo com internet.</p>') + '</div></div>';
+    box.innerHTML = '<div class="r7-modal-caixa"><button class="r7-modal-x" aria-label="Fechar">✕</button><button class="tr-tema" aria-label="Alternar tema claro e escuro" title="Tema claro/escuro">' + (document.body.classList.contains('theme-light') ? '🌙' : '☀️') + '</button><button class="tr-full" data-jan-full="1" aria-label="Tela cheia" title="Tela cheia (Esc para sair)">⛶</button>' + (r && r.assuntos ? '<div class="r7-ass" role="group" aria-label="Assuntos">' + reta7AbasAssunto(r, 0, slug, mat) + '</div>' + reta7Ferramentas() : '') + '<div class="r7-md">' + (r ? reta7Md(r.assuntos ? reta7MdVisao(r) : r.md) : '<p>Não foi possível carregar o resumo agora. Tente de novo com internet.</p>') + '</div></div>';
     const fechar = () => { if(document.fullscreenElement === box) document.exitFullscreen(); box.remove(); };
     box.addEventListener('click', e => {
       if(e.target.closest('.r7-modal-x')){ fechar(); return; }
@@ -188,12 +218,17 @@ function reta7AbrirResumo(mat){
       const ck = e.target.closest('[data-r7-chk]');
       if(ck && r && r.assuntos){
         const i = Number(ck.dataset.r7Chk); reta7CheckSet(slug, i, !reta7CheckLer(slug)[i]);
-        box.querySelector('.r7-chk').outerHTML = reta7CheckBtn(slug, i); box.querySelector('.r7-ass').innerHTML = reta7AbasAssunto(r, i, slug);
+        box.querySelector('.r7-chk').outerHTML = reta7CheckBtn(slug, i); box.querySelector('.r7-ass').innerHTML = reta7AbasAssunto(r, i, slug, mat);
         if(typeof reta7PreencherProg === 'function') reta7PreencherProg(document); return;
+      }
+      const rf = e.target.closest('[data-r7-refazer]');
+      if(rf){ const us = rf.dataset.r7Refazer.split(',').filter(Boolean); if(us.length && typeof retaAbrirQuiz === 'function') retaAbrirQuiz(mat, us, 'Meus erros · ' + mat); return; }
+      if(ab && r && r.assuntos && ab.dataset.r7Ass === 'erros'){
+        box.querySelector('.r7-md').innerHTML = reta7ErrosHtml(mat); box.querySelector('.r7-ass').innerHTML = reta7AbasAssunto(r, 'erros', slug, mat); box.querySelector('.r7-modal-caixa').scrollTop = 0; reta7AplicaPref(box); return;
       }
       if(ab && r && r.assuntos){
         const i = Number(ab.dataset.r7Ass), md = box.querySelector('.r7-md');
-        md.innerHTML = (i === 0 ? '' : reta7CheckBtn(slug, i)) + reta7Md(i === 0 ? reta7MdVisao(r) : r.assuntos[i-1].md); box.querySelector('.r7-ass').innerHTML = reta7AbasAssunto(r, i, slug); box.querySelector('.r7-modal-caixa').scrollTop = 0; reta7AplicaPref(box); return;
+        md.innerHTML = (i === 0 ? '' : reta7CheckBtn(slug, i)) + reta7Md(i === 0 ? reta7MdVisao(r) : r.assuntos[i-1].md); box.querySelector('.r7-ass').innerHTML = reta7AbasAssunto(r, i, slug, mat); box.querySelector('.r7-modal-caixa').scrollTop = 0; reta7AplicaPref(box); return;
       }
       const tm = e.target.closest('.tr-tema'); if(tm){ if(typeof alternarTema === 'function') alternarTema(); tm.textContent = document.body.classList.contains('theme-light') ? '🌙' : '☀️'; }
     });
