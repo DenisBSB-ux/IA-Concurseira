@@ -122,7 +122,7 @@ def construir(slug, nome, a, flash, lacunas, pct, mx=100):
         if com_onde: out += ['', '## ⚖️ O que a banca troca (errado × correto)', '| ❌ A banca diz | ✅ O correto | Onde |', '|---|---|---|'] + ['| %s | %s | %s |' % x for x in pares]
         else: out += ['', '## ⚖️ O que a banca troca (errado × correto)', '| ❌ A banca diz | ✅ O correto |', '|---|---|'] + ['| %s | %s |' % x[:2] for x in pares]
     # 3. regras por dispositivo
-    out += ['', '## 📌 Regras por dispositivo']
+    out += ['', '## 📌 Regras por lei']
     for art, ls in cards:
         if not ls: continue
         out.append('### %s · %d prova%s' % (art['t'], art['p'], '' if art['p'] == 1 else 's'))

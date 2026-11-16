@@ -55,25 +55,29 @@ def proc(md):
                 h = L[i]; i += 1; b = []
                 while i < len(L) and not L[i].startswith('#') and L[i].strip() != '': b.append(L[i]); i += 1
                 blocos.append((h, b))
-            grupos = {}; ordem = []
+            # agrupa por LEI/norma (cabeçalho "Art. X · Norma · N provas" -> "### Norma"); conceitos sem norma ficam como estão
+            leis = {}; conc = []
             for h, b in blocos:
-                c = chave(h); k = c[0] if c else h
-                if k not in grupos: grupos[k] = [h, c[2] if c else 0, list(b)]; ordem.append(k)
-                else: st['cab'] += 1; grupos[k][1] += (c[2] if c else 0); grupos[k][2] += b
-            for k in ordem:
-                h, n, b = grupos[k]; c = chave(h)
+                mm = re.match(r'### (.*?)(?: · (\d+) provas?)?(\s*)$', h)
+                partes = mm.group(1).split(' · ') if mm else [h[4:]]
+                if mm and mm.group(2) is None and len(partes) == 1:      # já é cabeçalho de lei (reexecução)
+                    k = norm(partes[0]).strip(); d = leis.setdefault(k, [partes[0], 0, []]); d[2] += b; d[1] += 0; continue
+                if len(partes) >= 2:
+                    k = norm(partes[-1]).strip(); d = leis.setdefault(k, [partes[-1], 0, []])
+                    d[1] += int(mm.group(2) or 0); d[2] += b; st['cab'] += 1
+                else: conc.append((h, b))
+            for k, (nome, pv, b) in sorted(leis.items(), key=lambda kv: -kv[1][1]):
                 pref = {}; txt = []
                 for x in b:
                     t_ = x.strip()[2:].strip(); txt.append(t_); pref.setdefault(t_, x[:len(x) - len(x.lstrip())] + '- ')
                 keep, mapa = melhores(txt); st['lin'] += len(txt) - len(keep)
-                for a, z in mapa.items(): remap[a] = z
-                # a frase mantida herda o nível da primeira do grupo que ela substituiu
-                slots = [pref[t_] for t_ in txt]; novos = []
+                for a_, z in mapa.items(): remap[a_] = z
+                novos = []
                 for t_ in keep:
-                    orig = [a for a in txt if a == t_ or mapa.get(a) == t_]
-                    novos.append((pref.get(t_) if t_ in pref else '- ') if not orig else min((pref[a] for a in orig), key=len))
-                nh = ('### %s · %d prova%s%s' % (c[1], n, '' if n == 1 else 's', c[3])) if c else h
-                out.append(nh); out += [pf + t for pf, t in zip(novos, keep)]
+                    orig = [a_ for a_ in txt if a_ == t_ or mapa.get(a_) == t_]
+                    novos.append(min((pref[a_] for a_ in orig), key=len) if orig else '- ')
+                out.append('### ' + nome); out += [pf + t_ for pf, t_ in zip(novos, keep)]
+            for h, b in conc: out.append(h); out += b
             continue
         if l.startswith('> [!pega]') or l.startswith('> [!dica]'):
             j = i; bl = []
