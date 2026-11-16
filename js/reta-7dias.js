@@ -172,23 +172,35 @@ function reta7ErrosLista(mat){
     return out;
   }catch(_){ return []; }
 }
-function reta7ErrosHtml(mat){
+// "Meus erros": resumo objetivo por assunto — a regra de cada questão errada (frases quase iguais viram uma só) com a identificação das questões que você errou
+function reta7NormTxt(t){ return String(t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim(); }
+function reta7ToksErro(t){ const s = new Set(); reta7NormTxt(String(t).replace(/[=*#!]/g, '')).split(' ').forEach(w => { if(w.length > 3) s.add(w.replace(/(am|em|m|s)$/, '').slice(0, 5)); }); return s; }
+function reta7ProxErro(a, b){ const A = reta7ToksErro(a), B = reta7ToksErro(b); if(!A.size || !B.size) return false; let i = 0; A.forEach(x => { if(B.has(x)) i++; }); return i / Math.min(A.size, B.size) >= 0.7 && i / (A.size + B.size - i) >= 0.4; }
+function reta7RegraDaQuestao(q){
+  const txt = String((typeof limparResolucao === 'function' ? limparResolucao(q.r) : q.r) || '').replace(/\u0001([^\u0001\u0002\n]*)\u0002/g, '**$1**').replace(/\u0005([^\u0005\u0006\n]*)\u0006/g, '==$1==').replace(/[\u0001-\u0006]/g, '');
+  const lin = txt.split('\n').map(s => s.trim());
+  const pega = ini => { const l = lin.find(s => s.startsWith(ini)); return l ? l.replace(/^\S+\s*/u, '').trim() : ''; };
+  return pega('📌') || pega('💡') || String(q.rf || '').trim();
+}
+function reta7ErrosHtml(mat, r){
   const L = reta7ErrosLista(mat);
-  if(!L.length) return '<h2>❌ Meus erros</h2><p class="r7-err-vazio">Nenhuma questão errada nesta matéria agora. 🎉<br>O que você errar nas listas principais aparece aqui, por assunto, com o gabarito e a resolução. Ao acertar de novo, a questão sai desta seção.</p>';
-  const por = {}; L.forEach(e => { (por[e.q.tema || 'Sem assunto'] = por[e.q.tema || 'Sem assunto'] || []).push(e); });
+  if(!L.length) return '<h2>❌ Meus erros</h2><p class="r7-err-vazio">Nenhuma questão errada nesta matéria agora. 🎉<br>O que você errar nas listas principais aparece aqui: um resumo objetivo por assunto, com as questões que você errou. Ao acertar de novo, a questão sai desta seção.</p>';
+  const por = {}; L.forEach(e => { const t = e.q.tema || 'Sem assunto'; (por[t] = por[t] || []).push(e); });
   const temas = Object.keys(por).sort((a, b) => por[b].length - por[a].length || a.localeCompare(b));
-  let h = '<h2>❌ Meus erros</h2><p class="r7-err-vazio">' + L.length + ' questão(ões) das listas principais com o último resultado errado, por assunto. Releia a regra, depois refaça.</p><button type="button" class="r7-err-todas" data-r7-refazer="' + L.map(e => esc(e.uid)).join(',') + '">↺ Refazer todas (' + L.length + ')</button>';
+  const idxAss = t => { const n = reta7NormTxt(String(t).replace(/^\s*\d+(?:\.\d+)*\s*/, '')); const i = ((r && r.assuntos) || []).findIndex(x => { const m = reta7NormTxt(x.nome); return m === n || (n && (m.includes(n) || n.includes(m))); }); return i < 0 ? 0 : i + 1; };
+  let h = '<h2>❌ Meus erros</h2><p class="r7-err-vazio">' + L.length + ' questão(ões) errada(s) em ' + temas.length + ' assunto(s). Abaixo, a regra de cada uma; os botões <b>Q</b> abrem a questão para refazer.</p><button type="button" class="r7-err-todas" data-r7-refazer="' + L.map(e => esc(e.uid)).join(',') + '">↺ Refazer todas (' + L.length + ')</button>';
   temas.forEach(t => {
-    h += '<h3>' + esc(t) + ' <small>(' + por[t].length + ')</small></h3>';
-    por[t].sort((a, b) => b.ts - a.ts).forEach(({ uid, q }) => {
-      const g = String(typeof gabaritoEfetivo === 'function' ? gabaritoEfetivo(q) : q.g || ''), enun = String((typeof limparEnunciado === 'function' ? limparEnunciado(q.q, q.t) : q.q) || q.rf || '');
-      const lin = String((typeof limparResolucao === 'function' ? limparResolucao(q.r) : q.r) || '').replace(/\u0001([^\u0001\u0002\n]*)\u0002/g, '**$1**').replace(/\u0005([^\u0005\u0006\n]*)\u0006/g, '==$1==').replace(/[\u0001-\u0006]/g, '').split('\n').map(s => s.trim()).filter(s => /^(📌|💡|⚠)/u.test(s) && !/^⚠\uFE0F?\s*ERROS/u.test(s)).slice(0, 3);
-      const info = [q.bc ? String(q.bc).replace(/\s*\/\s*/g, ' · ') : '', q.ar || ''].filter(Boolean).join(' · ');
-      h += '<div class="r7-err"><div class="r7-err-cab"><b>Questão ' + esc(String(q.n)) + '</b>' + (info ? '<span class="r7-err-info">' + esc(info) + '</span>' : '') + '<span class="r7-err-g ' + (/^errado$/i.test(g) ? 'no' : 'ok') + '">Gabarito: ' + esc(g.toUpperCase()) + '</span></div>'
-        + '<p class="r7-err-q">' + esc(enun.length > 420 ? enun.slice(0, 420).replace(/\s+\S*$/, '') + '…' : enun) + '</p>'
-        + (lin.length ? '<div class="r7-err-res">' + reta7Md(lin.map(s => '- ' + s).join('\n')) + '</div>' : '')
-        + '<button type="button" class="r7-err-bt" data-r7-refazer="' + esc(uid) + '">↺ Refazer</button></div>';
+    const itens = por[t].slice().sort((a, b) => b.ts - a.ts), grupos = [];
+    itens.forEach(e => {
+      const regra = reta7RegraDaQuestao(e.q), g = grupos.find(x => x.regra && regra && reta7ProxErro(x.regra, regra));
+      if(g){ g.qs.push(e); if(regra.length > g.regra.length) g.regra = regra; } else grupos.push({ regra, qs:[e] });
     });
+    const ai = idxAss(t);
+    h += '<h3>' + esc(t) + ' <small>(' + por[t].length + ' erro' + (por[t].length > 1 ? 's' : '') + ')</small></h3><div class="r7-err-acoes">' + (ai ? '<button type="button" class="r7-err-bt" data-r7-ass="' + ai + '">📖 Ver no resumo</button>' : '') + '<button type="button" class="r7-err-bt" data-r7-refazer="' + itens.map(e => esc(e.uid)).join(',') + '">↺ Refazer (' + itens.length + ')</button></div><ul class="r7-err-lista">';
+    grupos.forEach(g => {
+      h += '<li><span class="r7-err-regra">' + (g.regra ? reta7Md('- ' + g.regra).replace(/^<ul><li>|<\/li><\/ul>$/g, '') : 'Revise esta questão.') + '</span> <span class="r7-err-chips">' + g.qs.map(e => '<button type="button" class="r7-err-qb" data-r7-refazer="' + esc(e.uid) + '" title="Refazer a questão ' + esc(String(e.q.n)) + ' (gabarito: ' + esc(String(typeof gabaritoEfetivo === 'function' ? gabaritoEfetivo(e.q) : e.q.g || '')) + ')">❌ Q' + esc(String(e.q.n)) + '</button>').join('') + '</span></li>';
+    });
+    h += '</ul>';
   });
   return h;
 }
@@ -224,7 +236,7 @@ function reta7AbrirResumo(mat){
       const rf = e.target.closest('[data-r7-refazer]');
       if(rf){ const us = rf.dataset.r7Refazer.split(',').filter(Boolean); if(us.length && typeof retaAbrirQuiz === 'function') retaAbrirQuiz(mat, us, 'Meus erros · ' + mat); return; }
       if(ab && r && r.assuntos && ab.dataset.r7Ass === 'erros'){
-        box.querySelector('.r7-md').innerHTML = reta7ErrosHtml(mat); box.querySelector('.r7-ass').innerHTML = reta7AbasAssunto(r, 'erros', slug, mat); box.querySelector('.r7-modal-caixa').scrollTop = 0; reta7AplicaPref(box); return;
+        box.querySelector('.r7-md').innerHTML = reta7ErrosHtml(mat, r); box.querySelector('.r7-ass').innerHTML = reta7AbasAssunto(r, 'erros', slug, mat); box.querySelector('.r7-modal-caixa').scrollTop = 0; reta7AplicaPref(box); return;
       }
       if(ab && r && r.assuntos){
         const i = Number(ab.dataset.r7Ass), md = box.querySelector('.r7-md');
