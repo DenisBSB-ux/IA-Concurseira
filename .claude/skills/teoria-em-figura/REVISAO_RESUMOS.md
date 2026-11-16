@@ -12,7 +12,7 @@ Ordem e situação:
 - [x] direito-civil (42 edições; revogação tácita, pródigos, domicílio do marítimo e posse provisória do ausente corrigidos)
 - [x] previdenciario (44 edições; RPPS com atividade paralela, déficit de plano e pais/irmãos corrigidos) ← lote 1 publicado (v581)
 - [x] lei-14133 (54 edições + 2 resumos do 'Em 30 segundos'; margem de preferência 10%/20%, desempate do art. 60 e PNCP do art. 56 corrigidos)
-- [ ] lei-organica-tcdf
+- [x] lei-organica-tcdf (24 edições)
 - [ ] lodf
 - [ ] reg-interno
 - [ ] adm-lgpd-lai          ← publicar (lote 2)
@@ -33,3 +33,4 @@ Alertas para o usuário (acumulados):
 - Direito Civil: regras de fundação e desconsideração estão no assunto 4 (Bens) mas pertencem ao 3 (Pessoas jurídicas); art. 96 §3º misturado com 'acessória segue o principal'; conferir flashcards de fundação (MPDFT no DF, art. 66 §1º); pegadinha removida do assunto 2; regra 'domicílio necessário do servidor não impede outros domicílios' é discutível.
 - Previdenciário: 'recursos da portabilidade não passam pelo participante' não consta do art. 14 §1º da LC 109; flashcard do salário-maternidade no RPPS/DF conflita com o art. 35 da LC 769; regra de pensão de 80% (CF art. 40 §7º) conflita com o art. 29 da LC 769 (pode estar defasado); regras de jurisprudência (ex.: perda auditiva) sem confirmação no texto do projeto.
 - Lei 14.133: flashcards n=106 e n=136 dizem 'margem de preferência menor que 30%' (o art. 26 traz 10% e 20%) — conferir gabaritos; flashcard sobre modos de disputa cita PNCP (art. 56 não trata disso); flashcards de luxo (qualidade/durabilidade/eficiência energética) não estão no art. 20; flashcard de repactuação analítica no maior desconto pode confundir com art. 25 §8º II; regra de convocação de licitantes remanescentes (art. 90) está no assunto de contratação direta; valores do art. 75 I e II ficaram só nominais (atualizados por decreto).
+- Lei Orgânica TCDF: (a) idade do Conselheiro — resumo cita CF art. 73 §1º I (menos de 70 anos, EC 122/2022), mas LC 1/1994 art. 69 I e LODF art. 82 §1º I ainda dizem 65; art. 75 p.ú. (Auditor) também remete a 65 — conferir qual regra a banca cobra; (b) composição: LC 1/1994 art. 70 (2 pelo Governador, 5 pela Câmara) × LODF art. 82 §2º (3 e 4; EC 36/2002) — o resumo segue a LODF; (c) macete 'Subsídio não mata 13º nem terço de férias' sem apoio na LC 1/1994; (d) 'representação do MP de Contas é privativa do Plenário' (RI art. 13, I, h) — conferir gabarito; (e) o 'Em 30 segundos' do assunto 4 repete o item de registro (art. 1º, III) do assunto 1.
