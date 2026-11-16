@@ -2612,3 +2612,10 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 /* v566: porcentagem ao lado das mini barras e ✓ em 100% */
 .r7-pct{ font-size:12px; font-weight:700; color:var(--m-mut,var(--mut)); min-width:34px; font-variant-numeric:tabular-nums; }
 .r7-pct.ok{ color:#2e9b57; }
+
+/* v567: botão de tela cheia ao lado da lua (resumo, flashcards e lacunas) */
+.tr-full{ position:sticky; top:0; float:right; margin:-6px 6px 0 8px; width:34px; height:34px; border-radius:10px; border:1px solid var(--m-bd); background:var(--m-soft); color:var(--m-ink); font-size:16px; cursor:pointer; }
+.tr-modal .tr-full{ width:44px; height:44px; border-radius:13px; font-size:20px; font-weight:700; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; }
+.tr-modal .tr-ferr .tr-full{ position:static; float:none; margin:0 8px 0 0; }
+.tr-modal .tr-full:hover{ border-color:var(--m-acc); }
+.r7-modal:fullscreen .tr-full{ background:var(--m-link); border-color:var(--m-link); color:var(--m-bg); }

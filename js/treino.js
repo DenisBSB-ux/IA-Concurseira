@@ -59,6 +59,12 @@ function treinoRespGravar(st){
     localStorage.setItem(TREINO_RESP_KEY, JSON.stringify(o));
   }catch(_){}
 }
+function janTelaCheia(box){
+  if(!box) return;
+  if(document.fullscreenElement === box){ document.exitFullscreen(); return; }
+  const fb = () => { const mx = box.querySelector('[data-jan-max]'); if(mx) mx.click(); };
+  if(box.requestFullscreen){ box.requestFullscreen().catch(fb); } else fb();
+}
 let TR = null;     // estado da janela em uso (cada janela aberta tem o seu; TRS guarda todas)
 const TRS = [];
 
@@ -247,7 +253,7 @@ function treinoDesenhar(){
   const fim = TR.fila.length ? `${TR.i + 1} / ${TR.fila.length}` : '0';
   const stat = TR.modo === 'flash' ? `✓ ${nOk} sei · 🔁 ${nRev} revisar` : `✓ ${lOk} certas · ✗ ${lErr} erradas · sessão ${TR.sessao.ok}/${TR.sessao.tot}`;
   const fixos = [...box.querySelectorAll('.jan-barra, .jan-grip')]; box.innerHTML = `<div class="r7-modal-caixa tr-caixa">
-    <div class="tr-topo"><div class="tr-cab"><h2>${TR.modo === 'lacunas' ? '🧩 Lacunas' : '🃏 Flashcards'} · ${esc(d.nome)}</h2><div class="tr-ferr"><span class="tr-zoom" role="group" aria-label="Zoom do texto"><button data-tr-zoom="-1" title="Diminuir o texto" aria-label="Diminuir o texto">A−</button><b>${Math.round(treinoZoomLer(TR.modo) * 100)}%</b><button data-tr-zoom="1" title="Aumentar o texto" aria-label="Aumentar o texto">A+</button></span><button class="tr-tema" data-tr-tema="1" aria-label="Alternar tema claro e escuro" title="Tema claro/escuro">${document.body.classList.contains('theme-light') ? '🌙' : '☀️'}</button><button class="r7-modal-x" aria-label="Fechar" data-tr-fechar="1">✕</button></div></div><p class="tr-sub">Gerado só das questões da lista · ${esc(stat)}</p>${abas}${chips}</div>
+    <div class="tr-topo"><div class="tr-cab"><h2>${TR.modo === 'lacunas' ? '🧩 Lacunas' : '🃏 Flashcards'} · ${esc(d.nome)}</h2><div class="tr-ferr"><span class="tr-zoom" role="group" aria-label="Zoom do texto"><button data-tr-zoom="-1" title="Diminuir o texto" aria-label="Diminuir o texto">A−</button><b>${Math.round(treinoZoomLer(TR.modo) * 100)}%</b><button data-tr-zoom="1" title="Aumentar o texto" aria-label="Aumentar o texto">A+</button></span><button class="tr-full" data-jan-full="1" aria-label="Tela cheia" title="Tela cheia (Esc para sair)">⛶</button><button class="tr-tema" data-tr-tema="1" aria-label="Alternar tema claro e escuro" title="Tema claro/escuro">${document.body.classList.contains('theme-light') ? '🌙' : '☀️'}</button><button class="r7-modal-x" aria-label="Fechar" data-tr-fechar="1">✕</button></div></div><p class="tr-sub">Gerado só das questões da lista · ${esc(stat)}</p>${abas}${chips}</div>
     <div class="tr-corpo">${corpo}</div></div>`;
   box.style.setProperty('--tr-zoom', treinoZoomLer(TR.modo));
   fixos.forEach(f => { if(f.classList.contains('jan-barra')) box.insertBefore(f, box.firstChild); else box.appendChild(f); });
@@ -335,6 +341,7 @@ function treinoClique(e){
     if(uid){ treinoFechar(); retaAbrirQuiz(mat, [uid], 'Treino · ' + mat); } return;
   }
   if(t.closest('[data-tr-verificar]')){ treinoVerificar(); return; }
+  if(t.closest('[data-jan-full]')){ janTelaCheia(t.closest('.r7-modal')); return; }
   if(t.closest('[data-tr-tema]')){ if(typeof alternarTema === 'function') alternarTema(); const atual = TR; TRS.slice().forEach(x => { TR = x; treinoDesenhar(); }); TR = atual; return; }
   if(t.closest('[data-tr-limpar]')){ TR.slots.fill(null); TR.checado = false; TR.sel = null; treinoDesenhar(); return; }      // só a questão atual
   if(t.closest('[data-tr-resetar]')){ const it = TR.fila[TR.i]; if(it){ treinoMarcar(TR.slug, treinoChaveItem(it, 'l'), ''); const n = treinoNovaLacuna(it); TR.mem[treinoChaveItem(it, 'l')] = n; TR.slots = n.slots; TR.banco = n.banco; TR.checado = false; TR.sel = null; treinoDesenhar(); } return; }
