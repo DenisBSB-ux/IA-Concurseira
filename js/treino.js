@@ -250,7 +250,15 @@ function treinoGuardarLacuna(){
 }
 // botões 🔀 e ↺ Resetar (com o menu Todas / Só revisar·errei): ficam na linha de filtros (flashcards) ou na linha de ações (lacunas)
 function treinoBtnEmbaralhar(cls){ return `<button class="${cls}" data-tr-embaralhar="1" title="Embaralha de novo"><span class="tr-ic" aria-hidden="true">🔀</span></button>`; }
-function treinoBtnReset(cls){ return `<span class="tr-reset"><button class="${cls}" data-tr-reset-menu="1" title="Apaga as marcas para recomeçar"><span class="tr-ic" aria-hidden="true">↺</span>Resetar</button>${TR.menuReset ? `<span class="tr-reset-op"><button data-tr-reset="todas">Todas</button><button data-tr-reset="rev">${TR.modo === 'flash' ? 'Só revisar' : 'Só as que errei'}</button></span>` : ''}</span>`; }
+function treinoBtnReset(cls){
+  const flash = TR.modo === 'flash', tipo = flash ? 'f' : 'l', itens = flash ? TR.dados.flash : TR.dados.lacunas, alvo = flash ? 'rev' : 'err', mm = treinoLer()[TR.slug] || {};
+  const nTodas = itens.filter(x => mm[treinoChaveItem(x, tipo)]).length, nAlvo = itens.filter(x => mm[treinoChaveItem(x, tipo)] === alvo).length;
+  const pop = TR.menuReset ? `<div class="tr-reset-pop" role="menu"><p class="tr-reset-tit">O que apagar para recomeçar?</p>
+    <button type="button" role="menuitem" data-tr-reset="rev" ${nAlvo ? '' : 'disabled'}><b>${flash ? '🔁 Só as marcadas Revisar' : '✗ Só as que errei'} (${nAlvo})</b><small>${flash ? 'Esses cartões voltam a ficar novos.' : 'Essas questões voltam a ficar novas; as certas ficam.'}</small></button>
+    <button type="button" role="menuitem" class="perigo" data-tr-reset="todas" ${nTodas ? '' : 'disabled'}><b>↺ Tudo (${nTodas})</b><small>Apaga ${flash ? 'todas as marcas dos flashcards' : 'as respostas certas e erradas'} desta matéria.</small></button>
+    <button type="button" class="fecha" data-tr-reset-menu="1">Cancelar</button></div>` : '';
+  return `<span class="tr-reset${cls ? ' up' : ''}"><button class="${cls}" data-tr-reset-menu="1" aria-expanded="${TR.menuReset ? 'true' : 'false'}" title="Apaga as marcas para recomeçar"><span class="tr-ic" aria-hidden="true">↺</span>Resetar</button>${pop}</span>`;
+}
 function treinoDesenhar(){
   const box = TR && TR.box; if(!box || !TR) return;
   const d = TR.dados, slug = TR.slug, m = treinoLer()[slug] || {};
@@ -259,8 +267,8 @@ function treinoDesenhar(){
   treinoGuardarLacuna(); treinoRespGravar(TR);
   const abas = '';
   const filtros = TR.modo === 'flash'
-    ? [['todos', 'Todos'], ['sei', '✓ Já sei (' + nOk + ')'], ['revisar', 'Revisar (' + nRev + ')']]
-    : [['todos', 'Todas'], ['certas', '✓ Certas (' + lOk + ')'], ['erradas', 'Que errei (' + lErr + ')']];
+    ? [['todos', 'Todos (' + d.flash.length + ')'], ['sei', '✓ Já sei (' + nOk + ')'], ['revisar', '🔁 Revisar (' + nRev + ')'], ['novos', 'Novos (' + (d.flash.length - nOk - nRev) + ')']]
+    : [['todos', 'Todas (' + d.lacunas.length + ')'], ['certas', '✓ Certas (' + lOk + ')'], ['erradas', '✗ Que errei (' + lErr + ')'], ['novos', 'Novas (' + (d.lacunas.length - lOk - lErr) + ')']];
   const chips = `<div class="tr-filtros">${filtros.map(f => `<button class="${TR.filtro === f[0] ? 'on' : ''}" data-tr-filtro="${f[0]}">${esc(f[1])}</button>`).join('')}<span class="tr-cont" aria-live="polite">${TR.fila.length ? (TR.i + 1) + ' / ' + TR.fila.length : '0'}</span>${TR.modo === 'lacunas'
       ? '<button data-tr-limpar="1" title="Limpa só as palavras desta questão"><span class="tr-ic" aria-hidden="true">🧹</span> Limpar</button><button data-tr-resetar="1" title="Embaralha as palavras de novo e apaga o resultado desta questão"><span class="tr-ic" aria-hidden="true">🔄</span> Trocar palavras</button>'
       : treinoBtnEmbaralhar('') + treinoBtnReset('')}</div>`;
@@ -347,6 +355,7 @@ function treinoClique(e){
   if(!TR) return; const t = e.target;
   if(t.closest('[data-tr-fechar]')){ treinoFechar(); return; }
   let el;
+  if(TR.menuReset && !t.closest('.tr-reset')){ TR.menuReset = false; treinoDesenhar(); }
   if((el = t.closest('[data-tr-filtro]'))){ TR.filtro = el.dataset.trFiltro; TR.salvo = TR.filtro === 'todos' ? treinoRespLer(TR.slug, TR.modo) : null; treinoMontarFila(); if(TR.salvo === null && TR.filtro === 'todos') TR.salvo = null; treinoDesenhar(); return; }
   if(t.closest('[data-tr-reset-menu]')){ TR.menuReset = !TR.menuReset; treinoDesenhar(); return; }
   if((el = t.closest('[data-tr-reset]'))){ treinoResetar(el.dataset.trReset); return; }

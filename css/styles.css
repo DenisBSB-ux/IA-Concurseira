@@ -2533,7 +2533,6 @@ body:not(.theme-light) .r7-modal{ --m-bg:#1d1f24; --m-card:#262930; --m-ink:#e8e
 .tr-cont{ display:inline-flex; align-items:center; padding:7px 12px; font-size:14px; font-weight:700; color:var(--m-mut2); border:1px dashed var(--m-bd); border-radius:999px; font-variant-numeric:tabular-nums; }
 .tr-reset{ position:relative; display:inline-flex; gap:6px; align-items:center; flex-wrap:wrap; }
 .tr-filtros .tr-reset > button{ font-size:14px; padding:7px 15px; font-weight:600; }
-.tr-reset-op{ display:inline-flex; gap:6px; } .tr-reset-op button{ border-color:var(--tr-no, #c0392b) !important; color:var(--tr-no, #c0392b) !important; background:var(--m-bg) !important; }
 /* v542: enunciado, resposta e frase das lacunas com o MESMO tamanho de fonte (acompanha o A−/A+) */
 .tr-modal .tr-texto, .tr-modal .tr-frase, .tr-modal .tr-quest, .tr-modal .tr-extra, .tr-modal .tr-fb{ font-size:calc(17px * var(--tr-zoom, 1)); line-height:1.6; }
 .tr-modal .tr-extra{ opacity:.85; } .tr-modal .tr-chip{ font-size:calc(16px * var(--tr-zoom, 1)); }
@@ -2622,3 +2621,16 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 
 /* v568: botão última não respondida */
 .tr-modal .tr-last{ min-width:44px; }
+
+/* v571: menu do Resetar em cartão; filtros com contagem */
+.tr-reset{ position:relative; }
+.tr-reset-pop{ position:absolute; z-index:30; top:calc(100% + 8px); left:0; width:min(320px, 86vw); display:flex; flex-direction:column; gap:8px; padding:12px; border-radius:14px; border:1px solid var(--m-bd); background:var(--m-card, var(--m-bg)); box-shadow:0 12px 32px rgba(0,0,0,.35); }
+.tr-reset.up .tr-reset-pop{ top:auto; bottom:calc(100% + 8px); }
+.tr-reset-tit{ margin:0; font-size:13px; font-weight:700; color:var(--m-mut, var(--mut)); }
+.tr-reset-pop button{ text-align:left; display:flex; flex-direction:column; gap:2px; padding:10px 12px; min-height:48px; border-radius:11px; border:1px solid var(--m-bd); background:var(--m-soft); color:var(--m-ink); font:inherit; cursor:pointer; }
+.tr-reset-pop button b{ font-size:15px; } .tr-reset-pop button small{ font-size:12.5px; opacity:.8; }
+.tr-reset-pop button:hover:not([disabled]){ border-color:var(--m-acc); }
+.tr-reset-pop button[disabled]{ opacity:.45; cursor:not-allowed; }
+.tr-reset-pop button.perigo{ border-color:#c0392b; } .tr-reset-pop button.perigo b{ color:#e0584a; }
+.tr-reset-pop button.fecha{ min-height:40px; align-items:center; font-weight:600; background:transparent; }
+.tr-modal .tr-filtros button.on{ font-weight:800; }
