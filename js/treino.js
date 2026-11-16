@@ -309,8 +309,7 @@ function treinoHtmlLacuna(it){
       ${treinoBtnReset('btn tr-bt')}
       <button class="btn tr-bt" data-tr-nav="-1" ${TR.i === 0 ? 'disabled' : ''}><span class="tr-ic" aria-hidden="true">◀</span>Anterior</button>
       <button class="btn tr-bt" data-tr-nav="1" ${TR.i >= TR.fila.length - 1 ? 'disabled' : ''}>Próxima<span class="tr-ic" aria-hidden="true">▶</span></button>
-      ${treinoBtnNaoResp()}
-      ${TR.checado ? `<button class="btn tr-bt" data-tr-questao="${it.n}:${esc(it.h)}"><span class="tr-ic" aria-hidden="true">🔎</span>Ver a questão</button>` : ''}`;
+      ${treinoBtnNaoResp()}`;
   return `<div class="tr-card tr-lacuna${TR.checado ? (TR.slots.every((w, i) => w && w.w === it.p.filter(p => p.l !== undefined)[i].l) ? ' tr-c-ok' : ' tr-c-no') : ''}"><span class="tr-tag">Complete arrastando as palavras</span>${treinoInfoHtml(it)}<p class="tr-frase">${frase}</p>
     <div class="tr-banco" aria-label="Banco de palavras">${banco || '<span class="tr-dica">Todas as palavras foram usadas.</span>'}</div></div>${fb}<div class="tr-acoes">${acao}</div>`;
 }
