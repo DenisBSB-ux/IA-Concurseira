@@ -22,7 +22,7 @@ Ordem e situação:
 - [x] contratos (40 edições; exceção do art. 12 do Decreto 44.330, vedações do art. 5º da IN 5/2017 e art. 119 corrigidos)
 - [x] pdpm (28 edições; art. 21, parágrafo único da Maria da Penha estava invertido — corrigido) ← lote 3 publicado (v583)
 - [x] in5 (24 edições)
-- [ ] primeiros-socorros
+- [x] primeiros-socorros (14 edições só de destaque/redação; sem conduta nova)
 - [ ] decreto-44330
 - [ ] administrativo-geral  ← publicar (lote 4, final)
 
@@ -43,3 +43,4 @@ Alertas para o usuário (acumulados):
 - Contratos: flashcard n=140 — o art. 117 não prevê expressamente a responsabilização do fiscal por atestar serviço não executado (gabarito CERTO mantido); dois macetes do assunto 5 (conta vinculada, vício no material) sem regra correspondente; art. 110 — conferir se o flashcard não generaliza para serviço contínuo em geral; assuntos 7, 8 e 9 — conferir se as pegadinhas restantes têm flashcard.
 - PDPM: flashcard n=122 (gabarito CERTO) cita lésbicas, transexuais e mulheres em situação de rua, que o Anexo III não traz; competência do STJ para ameaças pela internet sem texto no projeto; 'cotas de ingresso não bastam' (Eixo 8) e ciência e tecnologia no Eixo 2 não constam literalmente do Anexo; 'condição do sexo feminino' (CP) × 'condição de sexo feminino' (cartão n=17 e resumo); 'assistência não depende de boletim de ocorrência' sem dispositivo confirmado.
 - IN 5/2017: o 'Em 30 segundos' do art. 59, IV cita planilha de custos e formação de preços, que não está no art. 59, IV/§2 da Lei 14.133 — conferir o flashcard de exequibilidade; 'preposto e fiscal não se acumulam por segregação de funções' não consta do art. 44; 'conceder folga ou feriado aos terceirizados é ingerência vedada' e 'transição contratual' só têm apoio parcial (Anexo VIII e artigo de transição); macetes vagos ('Cláusula só do governo: não vincula', 'Garantia trabalhista: pode acompanhar').
+- Primeiros Socorros (19 alertas; os principais): a 'pausa de dois segundos' da RCP não existe nos protocolos (o ponto é minimizar interrupções) — revisar a explicação do flashcard n=17; frequência respiratória do adulto 14–20 (cartão n=6) × 12–20 (várias fontes); 'não é sair comprimindo' (cartão n=13) pode induzir a erro (C-A-B); cartão n=70 com o campo v truncado; epistaxe 5–10 min (cartão n=89) × 10–15 min (manuais); torniquete 5–7 cm acima da lesão (cartão n=88) não está no resumo; lactente (cartão n=80, AHA 2025) calcanhar da mão/polegares × dois dedos nas diretrizes antigas; criança >1 ano (cartões 63/83) ordem dos golpes dorsais varia entre ERC e AHA; arrastamento de emergência (cartão n=33); art. 135 do CP não cita '192 ou 193' (vem do cartão n=67).
