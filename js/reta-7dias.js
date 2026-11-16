@@ -312,18 +312,22 @@ function reta7Cartao(b, dia0){
 function reta7PreencherProg(raiz){
   const els = Array.from((raiz || document).querySelectorAll('[data-r7-prog]')); if(!els.length) return;
   const por = (a, b) => b ? Math.min(100, Math.round(100 * a / b)) : 0;
+  const rotulo = (el, pct) => {
+    let l = el.nextElementSibling; if(!l || !l.classList.contains('r7-pct')){ l = document.createElement('b'); l.className = 'r7-pct'; el.after(l); }
+    l.textContent = pct >= 100 ? '✓ 100%' : pct + '%'; l.classList.toggle('ok', pct >= 100); el.classList.toggle('feito', pct >= 100);
+  };
   const pinta = el => {
     const [slug, t] = el.dataset.r7Prog.split(':'), is = el.querySelectorAll('i');
     if(t === 'r'){
       const r = typeof RESUMOS_TCDF !== 'undefined' && RESUMOS_TCDF[slug]; if(!r) return;
       const tot = (r.assuntos || []).length, ok = Object.keys(reta7CheckLer(slug)).filter(k => reta7CheckLer(slug)[k] && Number(k) >= 1 && Number(k) <= tot).length;
-      is[0].style.width = por(ok, tot) + '%'; el.title = ok + ' de ' + tot + ' assuntos estudados'; el.dataset.txt = ok + '/' + tot;
+      is[0].style.width = por(ok, tot) + '%'; el.title = ok + ' de ' + tot + ' assuntos estudados'; el.dataset.txt = ok + '/' + tot; rotulo(el, por(ok, tot));
     } else {
       const e = typeof TREINO_TCDF !== 'undefined' && TREINO_TCDF[slug] ? reta7EstatTreino(slug) : null; if(!e) return;
       const x = t === 'f' ? e.f : e.l, a = x.ok, b = t === 'f' ? x.rev : x.err;
       is[0].style.width = por(a, x.tot) + '%'; is[1].style.width = por(b, x.tot) + '%';
       el.title = t === 'f' ? a + ' já sei · ' + b + ' revisar · ' + (x.tot - a - b) + ' novos (de ' + x.tot + ')' : a + ' certas · ' + b + ' erradas · ' + (x.tot - a - b) + ' novas (de ' + x.tot + ')';
-      el.dataset.txt = (a + b) + '/' + x.tot;
+      el.dataset.txt = (a + b) + '/' + x.tot; rotulo(el, por(a + b, x.tot));
     }
   };
   els.forEach(el => {

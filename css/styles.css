@@ -2608,3 +2608,7 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 .r7-modal:fullscreen{ left:0 !important; top:0 !important; width:100vw !important; height:100vh !important; max-width:none !important; max-height:none !important; border-radius:0 !important; }
 .r7-modal:fullscreen .r7-modal-caixa{ max-width:960px; margin:0 auto; }
 .r7-modal:fullscreen .r7-full{ background:var(--m-link); border-color:var(--m-link); color:var(--m-bg); }
+
+/* v566: porcentagem ao lado das mini barras e ✓ em 100% */
+.r7-pct{ font-size:12px; font-weight:700; color:var(--m-mut,var(--mut)); min-width:34px; font-variant-numeric:tabular-nums; }
+.r7-pct.ok{ color:#2e9b57; }
