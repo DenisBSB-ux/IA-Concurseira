@@ -20,7 +20,7 @@ Ordem e situação:
 - [x] analise-dados-ia (20 edições, sobretudo frases sem sujeito e pegadinhas sem referente; sem base legal, revisão conceitual leve)
 - [x] conhec-df (69 edições; Pico do Roncador, planejamento de Taguatinga, art. 5º da LC 94 e conselho da RIDE corrigidos)
 - [x] contratos (40 edições; exceção do art. 12 do Decreto 44.330, vedações do art. 5º da IN 5/2017 e art. 119 corrigidos)
-- [ ] pdpm                  ← publicar (lote 3)
+- [x] pdpm (28 edições; art. 21, parágrafo único da Maria da Penha estava invertido — corrigido) ← lote 3 publicado (v583)
 - [ ] in5
 - [ ] primeiros-socorros
 - [ ] decreto-44330
@@ -41,3 +41,4 @@ Alertas para o usuário (acumulados):
 - Análise de Dados e IA: revisão conceitual leve (sem texto de lei); regra 'média aritmética' está no assunto 1 (Ética) mas pertence à estatística descritiva; 'dados não estruturados não se encaixam em bancos relacionais' é simplificação (podem ir como BLOB/texto); 'pizza funciona mal com mais de cinco categorias' é heurística, não regra; linhas próximas (dados quantitativos, barras com eixo zero) mantidas por trazerem nuances diferentes.
 - Conhecimentos do DF: flashcard n=159 ('ocupação suprimiu mais da metade da vegetação nativa') × doutrina (51% remanescente); n=160 (sorgo antes do feijão) × doutrina (feijão em 3º); n=83 e n=114 com 'gabarito em conferência'; n=176 (maior IDH e expectativa de vida) e n=179 (Ceilândia com mais de 380 mil) vêm só da apostila; 'Reserva da Biosfera do Cerrado' sem fonte no projeto; macete 'Cidade Livre: comércio sem imposto' não confirmado; Descoberto abastece 'mais de 60%' (cartões 46/184/186) × 'quase 60%' (doutrina); cartão n=67 pode ler o Cine Brasília como bem imaterial (o imaterial é o Festival de Brasília); cartões 119/136/188/202 têm o campo v em formato 'o trecho está errado'.
 - Contratos: flashcard n=140 — o art. 117 não prevê expressamente a responsabilização do fiscal por atestar serviço não executado (gabarito CERTO mantido); dois macetes do assunto 5 (conta vinculada, vício no material) sem regra correspondente; art. 110 — conferir se o flashcard não generaliza para serviço contínuo em geral; assuntos 7, 8 e 9 — conferir se as pegadinhas restantes têm flashcard.
+- PDPM: flashcard n=122 (gabarito CERTO) cita lésbicas, transexuais e mulheres em situação de rua, que o Anexo III não traz; competência do STJ para ameaças pela internet sem texto no projeto; 'cotas de ingresso não bastam' (Eixo 8) e ciência e tecnologia no Eixo 2 não constam literalmente do Anexo; 'condição do sexo feminino' (CP) × 'condição de sexo feminino' (cartão n=17 e resumo); 'assistência não depende de boletim de ocorrência' sem dispositivo confirmado.
