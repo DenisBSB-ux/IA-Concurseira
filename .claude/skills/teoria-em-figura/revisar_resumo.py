@@ -45,7 +45,12 @@ def aplicar(slug, arq):
         r['assuntos'][a - 1]['md'] = '\n'.join(L); ok.append(e)
     gravar(R)
     subprocess.run([sys.executable, '.claude/skills/teoria-em-figura/contexto_trocas.py', '--so', slug], check=False)
-    print('aplicadas', len(ok), 'falhas', len(falhas))
+    orf = []
+    for i, a in enumerate(carregar()[slug]['assuntos'], 1):
+        L = a['md'].split('\n'); regras = set(re.sub(r'^\s*- ', '', l) for l in L if re.match(r'^\s*- ', l))
+        orf += ['%d: %s' % (i, l[:110]) for l in L if l.startswith('> [!resumo]') and ' — '.join(l.split(' — ')[1:]) not in regras]
+    print('aplicadas', len(ok), 'falhas', len(falhas), '| callouts sem regra correspondente:', len(orf))
+    for o in orf: print('  ', o)
     for e, m in falhas: print(' FALHA', m, '|', (e.get('old') or e.get('after') or '')[:90])
 if __name__ == '__main__':
     c = sys.argv[1]
