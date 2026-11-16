@@ -217,12 +217,31 @@ function treinoNovaLacuna(it){
   const resp = it.p.filter(p => p.l !== undefined).map(p => p.l);
   return { slots: resp.map(() => null), banco: treinoEmbaralha(resp.concat(it.d || []).map((w, id) => ({ w, id }))), checado:false };
 }
+// próxima questão ainda sem resposta: a primeira sem marca depois da última já respondida (onde parei); se não houver, a primeira sem marca
+function treinoIdxNaoResp(){
+  const tipo = TR.modo === 'lacunas' ? 'l' : 'f'; let ult = -1;
+  const sem = TR.fila.map(x => !treinoMarca(TR.slug, treinoChaveItem(x, tipo)));
+  sem.forEach((s, i) => { if(!s) ult = i; });
+  for(let i = ult + 1; i < sem.length; i++) if(sem[i]) return i;
+  return sem.findIndex(Boolean);
+}
+function treinoBtnNaoResp(){
+  const i = treinoIdxNaoResp();
+  return `<button class="btn tr-bt tr-last" data-tr-naoresp="1" ${i < 0 ? 'disabled' : ''} title="${i < 0 ? 'Todas já foram respondidas' : 'Ir para a última não respondida (onde parei)'}" aria-label="Ir para a última não respondida"><span class="tr-ic" aria-hidden="true">⏭</span></button>`;
+}
 function treinoPrepararLacuna(){
   TR.sel = null;
   if(TR.modo !== 'lacunas'){ TR.slots = []; TR.banco = []; TR.checado = false; return; }
   const it = TR.fila[TR.i]; if(!it){ TR.slots = []; TR.banco = []; TR.checado = false; return; }
   const k = treinoChaveItem(it, 'l');
-  if(!TR.mem[k]) TR.mem[k] = treinoNovaLacuna(it);
+  if(!TR.mem[k]){
+    TR.mem[k] = treinoNovaLacuna(it);
+    if(TR.filtro === 'certas' && treinoMarca(TR.slug, k) === 'ok'){       // já acertada: mostra as respostas no lugar, conferidas
+      const m0 = TR.mem[k], usados = new Set();
+      it.p.filter(p => p.l !== undefined).forEach((p, i) => { const c = m0.banco.find(x => x.w === p.l && !usados.has(x.id)); if(c){ usados.add(c.id); m0.slots[i] = c; } });
+      m0.checado = m0.slots.every(Boolean);
+    }
+  }
   const m = TR.mem[k]; TR.slots = m.slots; TR.banco = m.banco; TR.checado = m.checado;
 }
 function treinoGuardarLacuna(){
@@ -267,8 +286,8 @@ function treinoHtmlFlash(it){
   const ant = `<button class="btn tr-bt" data-tr-nav="-1" ${TR.i === 0 ? 'disabled' : ''}><span class="tr-ic" aria-hidden="true">◀</span>Anterior</button>`;
   const prox = `<button class="btn tr-bt" data-tr-nav="1" ${(TR.i >= TR.fila.length - 1 || !m) ? 'disabled' : ''} title="${m ? '' : 'Responda com Já sei ou Revisar para avançar'}">Próxima<span class="tr-ic" aria-hidden="true">▶</span></button>`;
   const acoes = TR.virado
-    ? `<div class="tr-acoes"><button class="btn tr-bt tr-sei${m === 'ok' ? ' on' : ''}" data-tr-marca="ok"><span class="tr-ic" aria-hidden="true">✅</span>Já sei <small>(1)</small></button><button class="btn tr-bt tr-rev${m === 'rev' ? ' on' : ''}" data-tr-marca="rev"><span class="tr-ic" aria-hidden="true">🔁</span>Revisar <small>(2)</small></button>${ant}${prox}</div>`
-    : `<div class="tr-acoes"><button class="btn btn-gold tr-bt" data-tr-virar="1"><span class="tr-ic" aria-hidden="true">🔄</span>Virar</button>${ant}${prox}</div>`;
+    ? `<div class="tr-acoes"><button class="btn tr-bt tr-sei${m === 'ok' ? ' on' : ''}" data-tr-marca="ok"><span class="tr-ic" aria-hidden="true">✅</span>Já sei <small>(1)</small></button><button class="btn tr-bt tr-rev${m === 'rev' ? ' on' : ''}" data-tr-marca="rev"><span class="tr-ic" aria-hidden="true">🔁</span>Revisar <small>(2)</small></button>${ant}${prox}${treinoBtnNaoResp()}</div>`
+    : `<div class="tr-acoes"><button class="btn btn-gold tr-bt" data-tr-virar="1"><span class="tr-ic" aria-hidden="true">🔄</span>Virar</button>${ant}${prox}${treinoBtnNaoResp()}</div>`;
   return lado + acoes;
 }
 function treinoHtmlLacuna(it){
@@ -290,6 +309,7 @@ function treinoHtmlLacuna(it){
       ${treinoBtnReset('btn tr-bt')}
       <button class="btn tr-bt" data-tr-nav="-1" ${TR.i === 0 ? 'disabled' : ''}><span class="tr-ic" aria-hidden="true">◀</span>Anterior</button>
       <button class="btn tr-bt" data-tr-nav="1" ${TR.i >= TR.fila.length - 1 ? 'disabled' : ''}>Próxima<span class="tr-ic" aria-hidden="true">▶</span></button>
+      ${treinoBtnNaoResp()}
       ${TR.checado ? `<button class="btn tr-bt" data-tr-questao="${it.n}:${esc(it.h)}"><span class="tr-ic" aria-hidden="true">🔎</span>Ver a questão</button>` : ''}`;
   return `<div class="tr-card tr-lacuna${TR.checado ? (TR.slots.every((w, i) => w && w.w === it.p.filter(p => p.l !== undefined)[i].l) ? ' tr-c-ok' : ' tr-c-no') : ''}"><span class="tr-tag">Complete arrastando as palavras</span>${treinoInfoHtml(it)}<p class="tr-frase">${frase}</p>
     <div class="tr-banco" aria-label="Banco de palavras">${banco || '<span class="tr-dica">Todas as palavras foram usadas.</span>'}</div></div>${fb}<div class="tr-acoes">${acao}</div>`;
@@ -333,6 +353,7 @@ function treinoClique(e){
   if((el = t.closest('[data-tr-reset]'))){ treinoResetar(el.dataset.trReset); return; }
   if(t.closest('[data-tr-embaralhar]')){ TR.salvo = null; treinoMontarFila(); treinoDesenhar(); return; }
   if((el = t.closest('[data-tr-zoom]'))){ const z = Math.max(0.8, Math.min(2, Math.round((treinoZoomLer(TR.modo) + 0.1 * parseInt(el.dataset.trZoom, 10)) * 10) / 10)); treinoZoomGravar(TR.modo, z); treinoDesenhar(); return; }
+  if(t.closest('[data-tr-naoresp]')){ const j = treinoIdxNaoResp(); if(j >= 0) treinoIr(j - TR.i); return; }
   if((el = t.closest('[data-tr-nav]'))){ treinoIr(parseInt(el.dataset.trNav, 10)); return; }
   if(t.closest('[data-tr-virar]')){ TR.virado = !TR.virado; treinoDesenhar(); return; }
   if((el = t.closest('[data-tr-marca]'))){ const it = TR.fila[TR.i]; if(it){ treinoMarcar(TR.slug, treinoChaveItem(it, 'f'), el.dataset.trMarca); if(TR.i < TR.fila.length - 1){ treinoIr(1); return; } treinoDesenhar(); } return; }
