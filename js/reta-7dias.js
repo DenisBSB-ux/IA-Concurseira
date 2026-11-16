@@ -122,25 +122,39 @@ function reta7CarregarResumos(cb){
   sc.onerror = () => { _r7ResumosEstado = 0; try{ sc.remove(); }catch(_){} cb(false); };
   document.head.appendChild(sc);
 }
-// markdown mínimo e seguro (tudo escapado antes): títulos, citação, tabela, listas, negrito
+// markdown mínimo e seguro (tudo escapado antes): títulos, citação, callouts, tabela, listas (com nível 2), negrito e marcas
+// marcas: ==termo-chave== (amarelo) · ##número/prazo## (azul) · !!negação/limite!! (vermelho) · **negrito**
 function reta7Md(md){
-  const inl = t => esc(t).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  const inl = t => esc(t).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/==([^=]+)==/g, '<mark class="k">$1</mark>').replace(/##([^#]+)##/g, '<mark class="n">$1</mark>').replace(/!!([^!]+)!!/g, '<mark class="g">$1</mark>');
   const linhas = String(md || '').split('\n'); let out = '', lista = false, tab = [];
   const fechaLista = () => { if(lista){ out += '</ul>'; lista = false; } };
   const fechaTab = () => {
     if(!tab.length) return;
     const lin = tab.filter(l => !/^\|\s*:?-{2,}/.test(l)).map(l => l.replace(/^\||\|$/g, '').split('|').map(c => c.trim()));
-    out += '<table>' + lin.map((c, i) => '<tr>' + c.map(x => (i === 0 ? '<th>' : '<td>') + inl(x) + (i === 0 ? '</th>' : '</td>')).join('') + '</tr>').join('') + '</table>'; tab = [];
+    const cmp = /❌/.test(lin[0].join(' ')) ? ' cmp' : (/Valor/.test(lin[0][0] || '') ? ' num' : '');
+    out += '<div class="r7-tab-rolagem"><table class="r7-tb' + cmp + '">' + lin.map((c, i) => '<tr>' + c.map(x => (i === 0 ? '<th>' : '<td>') + inl(x) + (i === 0 ? '</th>' : '</td>')).join('') + '</tr>').join('') + '</table></div>'; tab = [];
   };
   linhas.forEach(l => {
     if(/^\|/.test(l)){ fechaLista(); tab.push(l); return; } fechaTab();
     let m;
-    if((m = l.match(/^(#{1,3})\s+(.*)/))){ fechaLista(); const n = m[1].length + 1; out += '<h' + n + '>' + inl(m[2]) + '</h' + n + '>'; }
+    if((m = l.match(/^(#{1,3})\s+(.*)/))){ fechaLista(); const n = m[1].length + 1; out += '<h' + n + (n === 4 && /^Art\./.test(m[2]) ? ' class="art"' : '') + '>' + inl(m[2]) + '</h' + n + '>'; }
+    else if((m = l.match(/^>\s*\[!(resumo|pega|dica)\]\s*(.*)/))){ fechaLista(); const ic = { resumo:'⚡', pega:'⚠️', dica:'💡' }[m[1]]; out += '<div class="co co-' + m[1] + '"><span class="co-ic" aria-hidden="true">' + ic + '</span><span>' + inl(m[2]) + '</span></div>'; }
     else if((m = l.match(/^>\s?(.*)/))){ fechaLista(); out += '<blockquote>' + inl(m[1]) + '</blockquote>'; }
-    else if((m = l.match(/^\s*[-*]\s+(.*)/))){ if(!lista){ out += '<ul>'; lista = true; } out += '<li>' + inl(m[1]) + '</li>'; }
+    else if((m = l.match(/^(\s*)[-*]\s+(.*)/))){ if(!lista){ out += '<ul>'; lista = true; } out += '<li' + (m[1].length >= 2 ? ' class="det"' : '') + '>' + inl(m[2]) + '</li>'; }
     else if(l.trim()){ fechaLista(); out += '<p>' + inl(l) + '</p>'; }
   });
   fechaLista(); fechaTab(); return out;
+}
+// preferências do resumo: modo (rápido mostra só a regra-chave; completo mostra as variações) e "recordar" (esconde os termos-chave: toque para revelar)
+const R7_PREF_KEY = 'tcdf_resumo_pref_v1';
+function reta7Pref(){ const o = reta7LerJ(R7_PREF_KEY); return { modo: (o && o.modo === 'completo') ? 'completo' : 'rapido', rec: !!(o && o.rec) }; }
+function reta7AplicaPref(box){ const p = reta7Pref(), md = box.querySelector('.r7-md'); if(!md) return;
+  md.classList.toggle('modo-rapido', p.modo === 'rapido'); md.classList.toggle('rec', p.rec);
+  box.querySelectorAll('[data-r7-modo]').forEach(b => { const on = b.dataset.r7Modo === p.modo; b.classList.toggle('on', on); b.setAttribute('aria-pressed', String(on)); });
+  const rb = box.querySelector('[data-r7-rec]'); if(rb){ rb.classList.toggle('on', p.rec); rb.setAttribute('aria-pressed', String(p.rec)); }
+}
+function reta7Ferramentas(){
+  return '<div class="r7-tools" role="group" aria-label="Modo de revisão"><span class="r7-seg2"><button type="button" data-r7-modo="rapido" title="Só a regra-chave de cada dispositivo, tabelas e macetes">⚡ Rápido</button><button type="button" data-r7-modo="completo" title="Mostra também as variações de cada regra">📖 Completo</button></span><button type="button" class="r7-rec" data-r7-rec="1" title="Esconde os termos-chave: tente lembrar e toque para revelar (recuperação ativa)">🧠 Recordar</button><span class="r7-leg" aria-label="Legenda"><mark class="k">termo-chave</mark><mark class="n">número/prazo</mark><mark class="g">não/limite</mark></span></div>';
 }
 // resumo separado por assunto: aba "Visão geral" (tabela do que mais cai) + uma aba por assunto
 function reta7MdVisao(r){ return r.geral || reta7MdGeral(r.md); }
@@ -161,11 +175,14 @@ function reta7AbrirResumo(mat){
     const r = ok && typeof RESUMOS_TCDF !== 'undefined' && RESUMOS_TCDF[slug];
     if(document.getElementById(id)) return;
     const box = document.createElement('div'); box.id = id; box.className = 'r7-modal'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Resumo de ' + mat);
-    box.innerHTML = '<div class="r7-modal-caixa"><button class="r7-modal-x" aria-label="Fechar">✕</button><button class="tr-tema" aria-label="Alternar tema claro e escuro" title="Tema claro/escuro">' + (document.body.classList.contains('theme-light') ? '🌙' : '☀️') + '</button>' + (r && r.assuntos ? '<div class="r7-ass" role="group" aria-label="Assuntos">' + reta7AbasAssunto(r, 0, slug) + '</div>' : '') + '<div class="r7-md">' + (r ? reta7Md(r.assuntos ? reta7MdVisao(r) : r.md) : '<p>Não foi possível carregar o resumo agora. Tente de novo com internet.</p>') + '</div></div>';
+    box.innerHTML = '<div class="r7-modal-caixa"><button class="r7-modal-x" aria-label="Fechar">✕</button><button class="tr-tema" aria-label="Alternar tema claro e escuro" title="Tema claro/escuro">' + (document.body.classList.contains('theme-light') ? '🌙' : '☀️') + '</button>' + (r && r.assuntos ? '<div class="r7-ass" role="group" aria-label="Assuntos">' + reta7AbasAssunto(r, 0, slug) + '</div>' + reta7Ferramentas() : '') + '<div class="r7-md">' + (r ? reta7Md(r.assuntos ? reta7MdVisao(r) : r.md) : '<p>Não foi possível carregar o resumo agora. Tente de novo com internet.</p>') + '</div></div>';
     const fechar = () => box.remove();
     box.addEventListener('click', e => {
       if(e.target.closest('.r7-modal-x')){ fechar(); return; }
       const ab = e.target.closest('[data-r7-ass]');
+      const md_ = e.target.closest('[data-r7-modo]'); if(md_){ const p = reta7Pref(); p.modo = md_.dataset.r7Modo; reta7GravarJ(R7_PREF_KEY, p); reta7AplicaPref(box); return; }
+      if(e.target.closest('[data-r7-rec]')){ const p = reta7Pref(); p.rec = !p.rec; reta7GravarJ(R7_PREF_KEY, p); reta7AplicaPref(box); box.querySelectorAll('mark.k.rev').forEach(x => x.classList.remove('rev')); return; }
+      const mk = e.target.closest('mark.k'); if(mk && box.querySelector('.r7-md.rec')){ mk.classList.toggle('rev'); return; }
       const ck = e.target.closest('[data-r7-chk]');
       if(ck && r && r.assuntos){
         const i = Number(ck.dataset.r7Chk); reta7CheckSet(slug, i, !reta7CheckLer(slug)[i]);
@@ -174,11 +191,11 @@ function reta7AbrirResumo(mat){
       }
       if(ab && r && r.assuntos){
         const i = Number(ab.dataset.r7Ass), md = box.querySelector('.r7-md');
-        md.innerHTML = (i === 0 ? '' : reta7CheckBtn(slug, i)) + reta7Md(i === 0 ? reta7MdVisao(r) : r.assuntos[i-1].md); box.querySelector('.r7-ass').innerHTML = reta7AbasAssunto(r, i, slug); box.querySelector('.r7-modal-caixa').scrollTop = 0; return;
+        md.innerHTML = (i === 0 ? '' : reta7CheckBtn(slug, i)) + reta7Md(i === 0 ? reta7MdVisao(r) : r.assuntos[i-1].md); box.querySelector('.r7-ass').innerHTML = reta7AbasAssunto(r, i, slug); box.querySelector('.r7-modal-caixa').scrollTop = 0; reta7AplicaPref(box); return;
       }
       const tm = e.target.closest('.tr-tema'); if(tm){ if(typeof alternarTema === 'function') alternarTema(); tm.textContent = document.body.classList.contains('theme-light') ? '🌙' : '☀️'; }
     });
-    document.body.appendChild(box);
+    document.body.appendChild(box); reta7AplicaPref(box);
     if(typeof janelaFlutuante === 'function') janelaFlutuante(box, '📄 Resumo · ' + mat + (R7_ATUALIZADAS.includes(slug) ? ' · ✨ atualizada' : ''), fechar, 'resumo');
   };
   reta7CarregarResumos(mostrar);

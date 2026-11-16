@@ -2574,3 +2574,33 @@ body:not(.theme-light) .r7-modal{ --m-bg:#1d1f24; --m-card:#262930; --m-ink:#e8e
 .tr-modal .tr-acoes .tr-bt, .tr-modal .tr-filtros button, .tr-modal .tr-cont, .tr-modal .tr-reset > button{ font-size:15px; }
 .tr-modal .tr-zoom button{ font-size:15px; }
 @media (max-width:520px){ .tr-modal .tr-texto, .tr-modal .tr-frase, .tr-modal .tr-quest{ font-size:calc(17.5px * var(--tr-zoom, 1)); } }
+/* v560: resumos visuais para revisão rápida — 3 cores com significado fixo (termo-chave · número/prazo · negação/limite) */
+.r7-md mark{ padding:0 3px; border-radius:4px; color:inherit; font-weight:600; }
+.r7-md mark.k{ background:#fff0a8; } .r7-md mark.n{ background:#cfe6ff; color:#0f3a66; } .r7-md mark.g{ background:#ffd9d4; color:#8a1f12; font-weight:800; }
+body:not(.theme-light) .r7-md mark.k{ background:rgba(212,170,77,.30); color:#ffe9a8; } body:not(.theme-light) .r7-md mark.n{ background:rgba(110,165,235,.30); color:#c6defa; } body:not(.theme-light) .r7-md mark.g{ background:rgba(235,110,95,.30); color:#ffbdb3; }
+.r7-md strong{ font-weight:800; }
+.r7-md h3{ display:flex; align-items:center; gap:8px; font-size:17px; margin:22px 0 8px; padding:6px 10px; border:0; border-left:5px solid var(--m-acc); background:var(--m-soft); border-radius:0 10px 10px 0; }
+.r7-md h4.art{ margin:14px 0 4px; padding:5px 10px; font-size:14px; color:var(--m-strong); background:var(--m-th); border-radius:8px; border-left:4px solid var(--m-link); }
+.r7-md .co{ display:flex; gap:10px; align-items:flex-start; margin:6px 0; padding:9px 12px; border-radius:10px; border:1px solid var(--m-bd2); background:var(--m-card); line-height:1.5; }
+.r7-md .co-ic{ flex:0 0 auto; font-size:16px; line-height:1.4; }
+.r7-md .co-resumo{ border-left:5px solid var(--m-link); } .r7-md .co-pega{ border-left:5px solid #c0392b; background:rgba(192,57,43,.08); } .r7-md .co-dica{ border-left:5px solid #2e9b57; background:rgba(46,155,87,.09); }
+.r7-md ul{ list-style:none; padding-left:0; margin:4px 0 8px; } .r7-md li{ position:relative; padding:5px 8px 5px 22px; margin:3px 0; border-radius:8px; }
+.r7-md li::before{ content:"▸"; position:absolute; left:6px; top:5px; color:var(--m-acc); font-weight:800; }
+.r7-md li.det{ margin-left:18px; font-size:13.5px; color:var(--m-mut2); } .r7-md li.det::before{ content:"·"; font-size:18px; top:1px; color:var(--m-mut); }
+.r7-md.modo-rapido li.det{ display:none; }
+.r7-md .r7-tab-rolagem{ overflow-x:auto; margin:8px 0 12px; } .r7-md table.r7-tb{ display:table; width:100%; margin:0; font-size:13.5px; border-radius:10px; overflow:hidden; }
+.r7-md table.r7-tb tr:nth-child(even) td{ background:rgba(127,127,127,.06); }
+.r7-md table.r7-tb.cmp th:nth-child(1), .r7-md table.r7-tb.cmp td:nth-child(1){ background:rgba(192,57,43,.10); } .r7-md table.r7-tb.cmp th:nth-child(2), .r7-md table.r7-tb.cmp td:nth-child(2){ background:rgba(46,155,87,.12); }
+.r7-md table.r7-tb.num td:first-child{ white-space:nowrap; font-weight:700; }
+.r7-md table.r7-tb td:last-child{ color:var(--m-mut); font-size:12.5px; }
+.r7-md blockquote{ font-weight:600; }
+.r7-tools{ display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:6px 0 12px; padding:8px 10px; border:1px solid var(--m-bd); border-radius:12px; background:var(--m-soft); }
+.r7-tools button{ min-height:40px; padding:0 14px; border-radius:11px; border:1px solid var(--m-bd); background:var(--m-card); color:var(--m-ink); font:inherit; font-size:14px; font-weight:700; cursor:pointer; }
+.r7-tools button.on{ background:var(--m-link); border-color:var(--m-link); color:var(--m-bg); }
+.r7-seg2{ display:inline-flex; gap:6px; } .r7-leg{ margin-left:auto; display:inline-flex; gap:6px; flex-wrap:wrap; font-size:12.5px; }
+.r7-md.rec mark.k:not(.rev){ color:transparent !important; background:var(--m-acc) !important; opacity:.5; cursor:pointer; user-select:none; border-radius:5px; }
+.r7-md.rec mark.k.rev{ cursor:pointer; outline:1.5px dashed var(--m-acc); }
+.r7-leg mark{ padding:1px 7px; border-radius:5px; font-weight:700; font-size:12.5px; }
+.r7-leg mark.k{ background:#fff0a8; color:#3b3000; } .r7-leg mark.n{ background:#cfe6ff; color:#0f3a66; } .r7-leg mark.g{ background:#ffd9d4; color:#8a1f12; }
+body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#ffe9a8; } body:not(.theme-light) .r7-leg mark.n{ background:rgba(110,165,235,.30); color:#c6defa; } body:not(.theme-light) .r7-leg mark.g{ background:rgba(235,110,95,.30); color:#ffbdb3; }
+.r7-md blockquote{ letter-spacing:.01em; }
