@@ -266,9 +266,10 @@ function treinoDesenhar(){
   const lOk = d.lacunas.filter(x => m[treinoChaveItem(x, 'l')] === 'ok').length, lErr = d.lacunas.filter(x => m[treinoChaveItem(x, 'l')] === 'err').length;
   treinoGuardarLacuna(); treinoRespGravar(TR);
   const abas = '';
+  const pc = (n, tot) => tot ? Math.round(100 * n / tot) + '%' : '0%';
   const filtros = TR.modo === 'flash'
-    ? [['todos', 'Todos (' + d.flash.length + ')'], ['sei', '✓ Já sei (' + nOk + ')'], ['revisar', '🔁 Revisar (' + nRev + ')'], ['novos', 'Novos (' + (d.flash.length - nOk - nRev) + ')']]
-    : [['todos', 'Todas (' + d.lacunas.length + ')'], ['certas', '✓ Certas (' + lOk + ')'], ['erradas', '✗ Que errei (' + lErr + ')'], ['novos', 'Novas (' + (d.lacunas.length - lOk - lErr) + ')']];
+    ? [['todos', 'Todos ' + d.flash.length + ' · ' + pc(nOk + nRev, d.flash.length) + ' resp.'], ['sei', '✓ Já sei ' + nOk + ' · ' + pc(nOk, d.flash.length)], ['revisar', '🔁 Revisar ' + nRev + ' · ' + pc(nRev, d.flash.length)]]
+    : [['todos', 'Todas ' + d.lacunas.length + ' · ' + pc(lOk + lErr, d.lacunas.length) + ' resp.'], ['certas', '✓ Certas ' + lOk + ' · ' + pc(lOk, d.lacunas.length)], ['erradas', '✗ Erros ' + lErr + ' · ' + pc(lErr, d.lacunas.length)]];
   const chips = `<div class="tr-filtros">${filtros.map(f => `<button class="${TR.filtro === f[0] ? 'on' : ''}" data-tr-filtro="${f[0]}">${esc(f[1])}</button>`).join('')}<span class="tr-cont" aria-live="polite">${TR.fila.length ? (TR.i + 1) + ' / ' + TR.fila.length : '0'}</span>${TR.modo === 'lacunas'
       ? '<button data-tr-limpar="1" title="Limpa só as palavras desta questão"><span class="tr-ic" aria-hidden="true">🧹</span> Limpar</button><button data-tr-resetar="1" title="Embaralha as palavras de novo e apaga o resultado desta questão"><span class="tr-ic" aria-hidden="true">🔄</span> Trocar palavras</button>'
       : treinoBtnEmbaralhar('') + treinoBtnReset('')}</div>`;

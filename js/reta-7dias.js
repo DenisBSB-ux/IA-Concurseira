@@ -158,16 +158,7 @@ function reta7Ferramentas(){
   return '<div class="r7-tools" role="group" aria-label="Modo de revisão"><button type="button" class="r7-rec" data-r7-rec="1" title="Esconde os termos-chave: tente lembrar e toque para revelar (recuperação ativa)">🧠 Recordar</button><span class="r7-leg" aria-label="Legenda"><mark class="k">termo-chave</mark><mark class="n">número/prazo</mark><mark class="g">não/limite</mark></span></div>';
 }
 // resumo separado por assunto: aba "Visão geral" (tabela do que mais cai) + uma aba por assunto
-function reta7MdVisao(r, mat){
-  const g = r.geral || reta7MdGeral(r.md); if(!mat) return g;
-  const er = reta7ErrosPorAssunto(mat, r); if(!Object.keys(er).length) return g;
-  return g.split('\n').map(l => {
-    if(/^\|\s*Assunto\s*\|/.test(l)) return l.replace(/\|\s*$/, '| Meus erros |');
-    if(/^\|\s*-{3}/.test(l) && l.split('|').length === 5) return l.replace(/\|\s*$/, '|---|');
-    const m = l.match(/^\|\s*([^|]+?)\s*\|/); const i = m && ((r.assuntos || []).findIndex(a => a.nome === m[1].trim()) + 1);
-    return (i && l.split('|').length === 5) ? l.replace(/\|\s*$/, '| ' + (er[i] ? '!!❌ ' + er[i] + '!!' : '—') + ' |') : l;
-  }).join('\n');
-}
+function reta7MdVisao(r){ return r.geral || reta7MdGeral(r.md); }
 function reta7MdGeral(md){ const i = String(md || '').indexOf('## 2.'); return i > 0 ? md.slice(0, i).trim() : String(md || ''); }
 const R7_CHK_KEY = 'tcdf_resumo_check_v1';
 function reta7CheckLer(slug){ const o = reta7LerJ(R7_CHK_KEY); return (o && o[slug]) || {}; }
@@ -189,13 +180,39 @@ function reta7IdxAssunto(r, tema){
   const i = ((r && r.assuntos) || []).findIndex(x => { const m = reta7NormTxt(x.nome); return m === n || m.includes(n) || n.includes(m); });
   return i < 0 ? 0 : i + 1;
 }
-// erros (último resultado errado nas listas principais) por assunto do resumo: { 1: n, 2: n, ... }
-function reta7ErrosPorAssunto(mat, r){
-  const o = {}; reta7ErrosLista(mat).forEach(e => { const i = reta7IdxAssunto(r, e.q.tema); if(i) o[i] = (o[i] || 0) + 1; }); return o;
+function reta7ToksErro(t){ const s = new Set(); reta7NormTxt(String(t).replace(/[=*#!]/g, '')).split(' ').forEach(w => { if(w.length > 3) s.add(w.replace(/(am|em|m|s)$/, '').slice(0, 5)); }); return s; }
+function reta7ProxErro(a, b){ const A = reta7ToksErro(a), B = reta7ToksErro(b); if(!A.size || !B.size) return false; let i = 0; A.forEach(x => { if(B.has(x)) i++; }); return i / Math.min(A.size, B.size) >= 0.7 && i / (A.size + B.size - i) >= 0.4; }
+function reta7RegraDaQuestao(q){
+  const txt = String((typeof limparResolucao === 'function' ? limparResolucao(q.r) : q.r) || '').replace(/\u0001([^\u0001\u0002\n]*)\u0002/g, '**$1**').replace(/\u0005([^\u0005\u0006\n]*)\u0006/g, '==$1==').replace(/[\u0001-\u0006]/g, '');
+  const lin = txt.split('\n').map(s => s.trim());
+  const pega = ini => { const l = lin.find(s => s.startsWith(ini)); return l ? l.replace(/^\S+\s*/u, '').trim() : ''; };
+  return pega('📌') || pega('💡') || String(q.rf || '').trim();
+}
+function reta7ErrosHtml(mat, r){
+  const L = reta7ErrosLista(mat);
+  if(!L.length) return '<h2>❌ Meus erros</h2><p class="r7-err-vazio">Nenhuma questão errada nesta matéria agora. 🎉<br>O que você errar nas listas principais aparece aqui: um resumo objetivo por assunto, com as questões que você errou. Ao acertar de novo, a questão sai desta seção.</p>';
+  const por = {}; L.forEach(e => { const t = e.q.tema || 'Sem assunto'; (por[t] = por[t] || []).push(e); });
+  const temas = Object.keys(por).sort((a, b) => por[b].length - por[a].length || a.localeCompare(b));
+  const idxAss = t => reta7IdxAssunto(r, t);
+  let h = '<h2>❌ Meus erros</h2><p class="r7-err-vazio">' + L.length + ' questão(ões) errada(s) em ' + temas.length + ' assunto(s). Abaixo, a regra de cada uma; os botões <b>Q</b> abrem a questão para refazer.</p><button type="button" class="r7-err-todas" data-r7-refazer="' + L.map(e => esc(e.uid)).join(',') + '">↺ Refazer todas (' + L.length + ')</button>';
+  temas.forEach(t => {
+    const itens = por[t].slice().sort((a, b) => b.ts - a.ts), grupos = [];
+    itens.forEach(e => {
+      const regra = reta7RegraDaQuestao(e.q), g = grupos.find(x => x.regra && regra && reta7ProxErro(x.regra, regra));
+      if(g){ g.qs.push(e); if(regra.length > g.regra.length) g.regra = regra; } else grupos.push({ regra, qs:[e] });
+    });
+    const ai = idxAss(t);
+    h += '<h3>' + esc(t) + ' <small>(' + por[t].length + ' erro' + (por[t].length > 1 ? 's' : '') + ')</small></h3><div class="r7-err-acoes">' + (ai ? '<button type="button" class="r7-err-bt" data-r7-ass="' + ai + '">📖 Ver no resumo</button>' : '') + '<button type="button" class="r7-err-bt" data-r7-refazer="' + itens.map(e => esc(e.uid)).join(',') + '">↺ Refazer (' + itens.length + ')</button></div><ul class="r7-err-lista">';
+    grupos.forEach(g => {
+      h += '<li><span class="r7-err-regra">' + (g.regra ? reta7Md('- ' + g.regra).replace(/^<ul><li>|<\/li><\/ul>$/g, '') : 'Revise esta questão.') + '</span> <span class="r7-err-chips">' + g.qs.map(e => '<button type="button" class="r7-err-qb" data-r7-refazer="' + esc(e.uid) + '" title="Refazer a questão ' + esc(String(e.q.n)) + ' (gabarito: ' + esc(String(typeof gabaritoEfetivo === 'function' ? gabaritoEfetivo(e.q) : e.q.g || '')) + ')">❌ Q' + esc(String(e.q.n)) + '</button>').join('') + '</span></li>';
+    });
+    h += '</ul>';
+  });
+  return h;
 }
 function reta7AbasAssunto(r, sel, slug, mat){
-  const abas = [{ nome:'Visão geral', n:0 }].concat(r.assuntos || []), chk = slug ? reta7CheckLer(slug) : {}, er = mat ? reta7ErrosPorAssunto(mat, r) : {};
-  return abas.map((a, i) => '<button type="button" data-r7-ass="' + i + '" class="' + (i === sel ? 'on' : '') + (i > 0 && chk[i] ? ' chk' : '') + (i > 0 && er[i] ? ' erro' : '') + '" aria-pressed="' + (i === sel) + '"' + (i > 0 && er[i] ? ' title="' + er[i] + ' questão(ões) errada(s) neste assunto"' : '') + '>' + (i > 0 && chk[i] ? '✓ ' : '') + esc(a.nome) + (a.pct !== undefined ? '<small>' + a.pct + '%</small>' : (a.n ? '<small>' + a.n + '</small>' : '')) + (i > 0 && er[i] ? '<small class="e">❌ ' + er[i] + '</small>' : '') + '</button>').join('');
+  const abas = [{ nome:'Visão geral', n:0 }].concat(r.assuntos || []), chk = slug ? reta7CheckLer(slug) : {};
+  return abas.map((a, i) => '<button type="button" data-r7-ass="' + i + '" class="' + (i === sel ? 'on' : '') + (i > 0 && chk[i] ? ' chk' : '') + '" aria-pressed="' + (i === sel) + '">' + (i > 0 && chk[i] ? '✓ ' : '') + esc(a.nome) + (a.pct !== undefined ? '<small>' + a.pct + '%</small>' : (a.n ? '<small>' + a.n + '</small>' : '')) + '</button>').join('') + (mat ? '<button type="button" data-r7-ass="erros" class="errs' + (sel === 'erros' ? ' on' : '') + '" aria-pressed="' + (sel === 'erros') + '">🎯 Resumo dos meus erros</button>' : '');
 }
 function reta7AbrirResumo(mat){
   const slug = reta7SlugResumo(mat); if(!slug) return;
@@ -205,7 +222,7 @@ function reta7AbrirResumo(mat){
     const r = ok && typeof RESUMOS_TCDF !== 'undefined' && RESUMOS_TCDF[slug];
     if(document.getElementById(id)) return;
     const box = document.createElement('div'); box.id = id; box.className = 'r7-modal'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Resumo de ' + mat);
-    box.innerHTML = '<div class="r7-modal-caixa"><button class="r7-modal-x" aria-label="Fechar">✕</button><button class="tr-tema" aria-label="Alternar tema claro e escuro" title="Tema claro/escuro">' + (document.body.classList.contains('theme-light') ? '🌙' : '☀️') + '</button><button class="tr-full" data-jan-full="1" aria-label="Tela cheia" title="Tela cheia (Esc para sair)">⛶</button>' + (r && r.assuntos ? '<div class="r7-ass" role="group" aria-label="Assuntos">' + reta7AbasAssunto(r, 0, slug, mat) + '</div>' + reta7Ferramentas() : '') + '<div class="r7-md">' + (r ? reta7Md(r.assuntos ? reta7MdVisao(r, mat) : r.md) : '<p>Não foi possível carregar o resumo agora. Tente de novo com internet.</p>') + '</div></div>';
+    box.innerHTML = '<div class="r7-modal-caixa"><button class="r7-modal-x" aria-label="Fechar">✕</button><button class="tr-tema" aria-label="Alternar tema claro e escuro" title="Tema claro/escuro">' + (document.body.classList.contains('theme-light') ? '🌙' : '☀️') + '</button><button class="tr-full" data-jan-full="1" aria-label="Tela cheia" title="Tela cheia (Esc para sair)">⛶</button>' + (r && r.assuntos ? '<div class="r7-ass" role="group" aria-label="Assuntos">' + reta7AbasAssunto(r, 0, slug, mat) + '</div>' + reta7Ferramentas() : '') + '<div class="r7-md">' + (r ? reta7Md(r.assuntos ? reta7MdVisao(r) : r.md) : '<p>Não foi possível carregar o resumo agora. Tente de novo com internet.</p>') + '</div></div>';
     const fechar = () => { if(document.fullscreenElement === box) document.exitFullscreen(); box.remove(); };
     box.addEventListener('click', e => {
       if(e.target.closest('.r7-modal-x')){ fechar(); return; }
@@ -221,9 +238,14 @@ function reta7AbrirResumo(mat){
         box.querySelector('.r7-chk').outerHTML = reta7CheckBtn(slug, i); box.querySelector('.r7-ass').innerHTML = reta7AbasAssunto(r, i, slug, mat);
         if(typeof reta7PreencherProg === 'function') reta7PreencherProg(document); return;
       }
+      const rf = e.target.closest('[data-r7-refazer]');
+      if(rf){ const us = rf.dataset.r7Refazer.split(',').filter(Boolean); if(us.length && typeof retaAbrirQuiz === 'function') retaAbrirQuiz(mat, us, 'Meus erros · ' + mat); return; }
+      if(ab && r && r.assuntos && ab.dataset.r7Ass === 'erros'){
+        box.querySelector('.r7-md').innerHTML = reta7ErrosHtml(mat, r); box.querySelector('.r7-ass').innerHTML = reta7AbasAssunto(r, 'erros', slug, mat); box.querySelector('.r7-modal-caixa').scrollTop = 0; reta7AplicaPref(box); return;
+      }
       if(ab && r && r.assuntos){
         const i = Number(ab.dataset.r7Ass), md = box.querySelector('.r7-md');
-        md.innerHTML = (i === 0 ? '' : reta7CheckBtn(slug, i)) + reta7Md(i === 0 ? reta7MdVisao(r, mat) : r.assuntos[i-1].md); box.querySelector('.r7-ass').innerHTML = reta7AbasAssunto(r, i, slug, mat); box.querySelector('.r7-modal-caixa').scrollTop = 0; reta7AplicaPref(box); return;
+        md.innerHTML = (i === 0 ? '' : reta7CheckBtn(slug, i)) + reta7Md(i === 0 ? reta7MdVisao(r) : r.assuntos[i-1].md); box.querySelector('.r7-ass').innerHTML = reta7AbasAssunto(r, i, slug, mat); box.querySelector('.r7-modal-caixa').scrollTop = 0; reta7AplicaPref(box); return;
       }
       const tm = e.target.closest('.tr-tema'); if(tm){ if(typeof alternarTema === 'function') alternarTema(); tm.textContent = document.body.classList.contains('theme-light') ? '🌙' : '☀️'; }
     });
@@ -332,13 +354,12 @@ function reta7Cartao(b, dia0){
     <p class="r7-meta"><b>${reta7Fmt(b.min)}</b> · ${ses.uids.length} questões${comp ? ' <span>(' + esc(comp) + ')</span>' : ''}</p>
     <div class="r7-barra" title="${feitas} respostas hoje nesta matéria"><i style="width:${pct}%"></i></div>
     <div class="r7-acoes">
-      ${resumo ? `<span class="r7-ac"><span class="r7-prog" data-r7-prog="${esc(slug)}:r" title="Assuntos do resumo marcados como estudados"><i></i></span><button class="btn r7-res" data-r7-resumo="${esc(mat)}">📄 Resumo</button><span class="r7-errs" data-r7-errs="${esc(mat)}" hidden></span></span>` : ''}
+      ${resumo ? `<span class="r7-ac"><span class="r7-prog" data-r7-prog="${esc(slug)}:r" title="Assuntos do resumo marcados como estudados"><i></i></span><button class="btn r7-res" data-r7-resumo="${esc(mat)}">📄 Resumo</button></span>` : ''}
       ${(typeof treinoDisponivel === 'function' && treinoDisponivel(mat)) ? `<span class="r7-ac"><span class="r7-prog" data-r7-prog="${esc(slug)}:f"><i class="a"></i><i class="b"></i></span><button class="btn r7-res" data-tr-abrir="${esc(mat)}" data-tr-modo="flash">🃏 Flashcards</button></span><span class="r7-ac"><span class="r7-prog" data-r7-prog="${esc(slug)}:l"><i class="a"></i><i class="c"></i></span><button class="btn r7-res" data-tr-abrir="${esc(mat)}" data-tr-modo="lacunas">🧩 Lacunas</button></span>` : ''}</div>
   </article>`;
 }
 /* ---------- mini barras de progresso do cartão (resumo, flashcards, lacunas): só da própria matéria ---------- */
 function reta7PreencherProg(raiz){
-  (raiz || document).querySelectorAll('[data-r7-errs]').forEach(el => { const n = reta7ErrosLista(el.dataset.r7Errs).length; el.hidden = !n; el.textContent = n ? '❌ ' + n : ''; el.title = n + ' questão(ões) errada(s) nesta matéria — veja os assuntos em destaque no resumo'; });
   const els = Array.from((raiz || document).querySelectorAll('[data-r7-prog]')); if(!els.length) return;
   const por = (a, b) => b ? Math.min(100, Math.round(100 * a / b)) : 0;
   const rotulo = (el, pct) => {

@@ -2670,3 +2670,9 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 .r7-cmp-x b, .r7-cmp-ok b{ display:block; font-size:12px; letter-spacing:.02em; margin-bottom:4px; opacity:.85; } .r7-cmp-x p, .r7-cmp-ok p{ margin:0; line-height:1.55; }
 .r7-cmp-onde{ grid-column:1 / -1; padding:6px 12px; font-size:12.5px; color:var(--m-mut, var(--mut)); border-top:1px solid var(--m-bd); }
 @media (min-width:760px){ .r7-cmp-card{ grid-template-columns:1fr 1fr; } .r7-cmp-x{ border-bottom:0; border-right:1px solid var(--m-bd); } }
+
+/* v586: assunto estudado em verde claro; aba do resumo dos erros */
+.r7-ass button.chk{ background:#d4f1de; border-color:#2e9b57; color:#14532d; }
+.r7-ass button.chk.on{ background:#a9e3bf; border-color:#1f7a41; color:#0f3d22; font-weight:700; }
+.r7-ass button.chk small{ opacity:.8; }
+.r7-ass button.errs{ border-color:#c0392b; } .r7-ass button.errs.on{ background:#c0392b; color:#fff; }
