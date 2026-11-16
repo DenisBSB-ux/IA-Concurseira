@@ -33,6 +33,8 @@ def aplicar(slug, arq):
         ach = [k for k, l in enumerate(L) if chave and chave in l and not l.startswith('|') and not l.startswith('#')]
         if len(ach) != 1: falhas.append((e, 'linha encontrada %d vez(es)' % len(ach))); continue
         k = ach[0]; novo = e.get('new')
+        if novo is not None and not re.match(r'^(\s*- |> \[!(pega|dica|resumo)\])', novo):      # revisor esqueceu o prefixo: herda o da linha
+            pf = re.match(r'^(\s*- |> \[!\w+\] (?:\*\*[^*]+\*\* — )?)', L[k]); novo = (pf.group(1) if pf else '- ') + novo
         if novo is not None and (not marcas_ok(novo) or not re.match(r'^(\s*- |> \[!(pega|dica|resumo)\])', novo)): falhas.append((e, 'texto novo inválido (marcas ou prefixo)')); continue
         if 'after' in e: L.insert(k + 1, novo)
         else:
@@ -56,7 +58,8 @@ def aplicar(slug, arq):
         L = a['md'].split('\n'); regras = set(re.sub(r'^\s*- ', '', l) for l in L if re.match(r'^\s*- ', l))
         orf += ['%d: %s' % (i, l[:110]) for l in L if l.startswith('> [!resumo]') and ' — '.join(l.split(' — ')[1:]) not in regras]
     print('aplicadas', len(ok), 'falhas', len(falhas), '| callouts sem regra correspondente:', len(orf))
-    for o in orf: print('  ', o)
+    if '--orfaos' in sys.argv:
+        for o in orf: print('  ', o)
     for e, m in falhas: print(' FALHA', m, '|', (e.get('old') or e.get('after') or '')[:90])
 if __name__ == '__main__':
     c = sys.argv[1]
