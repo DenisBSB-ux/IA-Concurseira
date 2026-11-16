@@ -153,7 +153,7 @@ function reta7AplicaPref(box){ const p = reta7Pref(), md = box.querySelector('.r
   const rb = box.querySelector('[data-r7-rec]'); if(rb){ rb.classList.toggle('on', p.rec); rb.setAttribute('aria-pressed', String(p.rec)); }
 }
 function reta7Ferramentas(){
-  return '<div class="r7-tools" role="group" aria-label="Modo de revisão"><button type="button" class="r7-rec" data-r7-rec="1" title="Esconde os termos-chave: tente lembrar e toque para revelar (recuperação ativa)">🧠 Recordar</button><span class="r7-leg" aria-label="Legenda"><mark class="k">termo-chave</mark><mark class="n">número/prazo</mark><mark class="g">não/limite</mark></span></div>';
+  return '<div class="r7-tools" role="group" aria-label="Modo de revisão"><button type="button" class="r7-full" data-r7-full="1" title="Resumo em tela cheia (Esc para sair)">⛶ Tela cheia</button><button type="button" class="r7-rec" data-r7-rec="1" title="Esconde os termos-chave: tente lembrar e toque para revelar (recuperação ativa)">🧠 Recordar</button><span class="r7-leg" aria-label="Legenda"><mark class="k">termo-chave</mark><mark class="n">número/prazo</mark><mark class="g">não/limite</mark></span></div>';
 }
 // resumo separado por assunto: aba "Visão geral" (tabela do que mais cai) + uma aba por assunto
 function reta7MdVisao(r){ return r.geral || reta7MdGeral(r.md); }
@@ -175,10 +175,16 @@ function reta7AbrirResumo(mat){
     if(document.getElementById(id)) return;
     const box = document.createElement('div'); box.id = id; box.className = 'r7-modal'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Resumo de ' + mat);
     box.innerHTML = '<div class="r7-modal-caixa"><button class="r7-modal-x" aria-label="Fechar">✕</button><button class="tr-tema" aria-label="Alternar tema claro e escuro" title="Tema claro/escuro">' + (document.body.classList.contains('theme-light') ? '🌙' : '☀️') + '</button>' + (r && r.assuntos ? '<div class="r7-ass" role="group" aria-label="Assuntos">' + reta7AbasAssunto(r, 0, slug) + '</div>' + reta7Ferramentas() : '') + '<div class="r7-md">' + (r ? reta7Md(r.assuntos ? reta7MdVisao(r) : r.md) : '<p>Não foi possível carregar o resumo agora. Tente de novo com internet.</p>') + '</div></div>';
-    const fechar = () => box.remove();
+    const fechar = () => { if(document.fullscreenElement === box) document.exitFullscreen(); box.remove(); };
     box.addEventListener('click', e => {
       if(e.target.closest('.r7-modal-x')){ fechar(); return; }
       const ab = e.target.closest('[data-r7-ass]');
+      if(e.target.closest('[data-r7-full]')){
+        if(document.fullscreenElement === box){ document.exitFullscreen(); return; }
+        if(box.requestFullscreen){ box.requestFullscreen().catch(() => { const mx = box.querySelector('[data-jan-max]'); if(mx) mx.click(); }); }
+        else { const mx = box.querySelector('[data-jan-max]'); if(mx) mx.click(); }
+        return;
+      }
       if(e.target.closest('[data-r7-rec]')){ const p = reta7Pref(); p.rec = !p.rec; reta7GravarJ(R7_PREF_KEY, p); reta7AplicaPref(box); box.querySelectorAll('mark.k.rev').forEach(x => x.classList.remove('rev')); return; }
       const mk = e.target.closest('mark.k'); if(mk && box.querySelector('.r7-md.rec')){ mk.classList.toggle('rev'); return; }
       const ck = e.target.closest('[data-r7-chk]');

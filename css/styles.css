@@ -2603,3 +2603,8 @@ body:not(.theme-light) .r7-md mark.k{ background:rgba(212,170,77,.30); color:#ff
 .r7-leg mark.k{ background:#fff0a8; color:#3b3000; } .r7-leg mark.n{ background:#cfe6ff; color:#0f3a66; } .r7-leg mark.g{ background:#ffd9d4; color:#8a1f12; }
 body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#ffe9a8; } body:not(.theme-light) .r7-leg mark.n{ background:rgba(110,165,235,.30); color:#c6defa; } body:not(.theme-light) .r7-leg mark.g{ background:rgba(235,110,95,.30); color:#ffbdb3; }
 .r7-md blockquote{ letter-spacing:.01em; }
+
+/* v564: resumo em tela cheia */
+.r7-modal:fullscreen{ left:0 !important; top:0 !important; width:100vw !important; height:100vh !important; max-width:none !important; max-height:none !important; border-radius:0 !important; }
+.r7-modal:fullscreen .r7-modal-caixa{ max-width:960px; margin:0 auto; }
+.r7-modal:fullscreen .r7-full{ background:var(--m-link); border-color:var(--m-link); color:var(--m-bg); }
