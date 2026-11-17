@@ -1,0 +1,1499 @@
+[
+{
+"n": 1,
+"m": "B",
+"t": "A representação formulada pelo membro do MP junto ao TCDF é apreciada privativamente pelo Plenário.",
+"b": [
+"privativamente",
+"Plenário"
+],
+"d": [
+"ordinariamente",
+"pelas câmaras",
+"pelo Presidente"
+]
+},
+{
+"n": 4,
+"m": "A",
+"r": [
+[
+"Compete exclusivamente ao Tribunal de Contas do Distrito Federal criar, transformar e extinguir os cargos de seus serviços auxiliares, bem como fixar os respectivos vencimentos",
+"Compete ao Tribunal de Contas do Distrito Federal propor à Câmara Legislativa a criação, transformação e extinção dos cargos de seus serviços auxiliares, bem como a fixação dos respectivos vencimentos"
+]
+],
+"b": [
+"propor à Câmara Legislativa",
+"Regimento Interno"
+],
+"d": [
+"criar diretamente",
+"Governador do Distrito Federal"
+]
+},
+{
+"n": 6,
+"m": "C",
+"b": [
+"embargos de declaração",
+"revisão",
+"Ministério Público"
+],
+"d": [
+"agravo",
+"pedido de reexame",
+"Tribunal de Justiça"
+]
+},
+{
+"n": 7,
+"m": "B",
+"t": "A Lei Orgânica do TCDF, bem como seu Regimento Interno, confere poder normativo ao TCDF sobre matéria de suas atribuições e sobre a organização dos processos que lhe devam ser submetidos, e, segundo o STF, essa atribuição normativa dos tribunais de contas é compatível com a ordem jurídica e com o princípio da legalidade.",
+"b": [
+"poder normativo",
+"compatível com a ordem jurídica"
+],
+"d": [
+"inova a ordem jurídica",
+"viola o princípio da legalidade"
+]
+},
+{
+"n": 8,
+"m": "A",
+"r": [
+[
+"três membros efetivos, escolhidos exclusivamente entre Conselheiros, cabendo ao Presidente do Tribunal designá-los independentemente de indicação do",
+"dois membros efetivos, com pelo menos um Auditor, cabendo ao Presidente do Tribunal nomeá-los mediante indicação do"
+]
+],
+"b": [
+"dois membros efetivos",
+"pelo menos um Auditor",
+"mediante indicação"
+],
+"d": [
+"cinco membros efetivos",
+"apenas Conselheiros",
+"sem indicação"
+]
+},
+{
+"n": 9,
+"m": "B",
+"t": "O TCDF, quando acionado judicialmente, é representado em juízo por sua Procuradoria-Geral, ressalvada a eventual necessidade de contratar serviço técnico profissional.",
+"b": [
+"sua Procuradoria-Geral",
+"ressalvada",
+"serviço técnico profissional"
+],
+"d": [
+"procurador-geral do Distrito Federal",
+"vedada a contratação"
+]
+},
+{
+"n": 20,
+"m": "A",
+"r": [
+[
+"constituem a totalidade dos cargos",
+"constituem apenas parte dos cargos"
+]
+],
+"b": [
+"apenas parte",
+"Conselheiros efetivos",
+"2 anos"
+],
+"d": [
+"a totalidade",
+"Conselheiros-substitutos",
+"4 anos"
+]
+},
+{
+"n": 22,
+"m": "A",
+"r": [
+[
+"Os conselheiros e os conselheiros-substitutos convocados elegem",
+"Os conselheiros efetivos elegem"
+]
+],
+"b": [
+"conselheiros efetivos",
+"mandato de dois anos"
+],
+"d": [
+"conselheiros-substitutos convocados",
+"mandato de quatro anos"
+]
+},
+{
+"n": 25,
+"m": "B",
+"t": "A jurisdição do TCDF abrange os representantes do DF na assembleia geral das empresas estatais e sociedades anônimas de cujo capital o DF participe, pela prática de ato de gestão ruinosa ou liberalidade às custas da entidade.",
+"b": [
+"ato de gestão ruinosa",
+"liberalidade às custas da entidade"
+],
+"d": [
+"qualquer ato de gestão",
+"mera omissão"
+]
+},
+{
+"n": 28,
+"m": "A",
+"r": [
+[
+"de qualquer natureza ou finalidade, ainda que em associação de classe e sem remuneração",
+"salvo em associação de classe, sem remuneração"
+]
+],
+"b": [
+"salvo",
+"associação de classe",
+"sem remuneração"
+],
+"d": [
+"ainda que",
+"com remuneração",
+"sindicato"
+]
+},
+{
+"n": 30,
+"m": "B",
+"t": "As comunicações processuais no âmbito do TCDF são realizadas por meio eletrônico, carta registrada com aviso de recebimento ou edital.",
+"b": [
+"meio eletrônico",
+"carta registrada com aviso de recebimento",
+"edital"
+],
+"d": [
+"somente por correspondência",
+"oficial de justiça",
+"telefone"
+]
+},
+{
+"n": 37,
+"m": "A",
+"r": [
+[
+"com maior idade",
+"mais antigo no cargo (e, se igual a antiguidade, com o mais idoso)"
+]
+],
+"b": [
+"mais antigo no cargo",
+"mais idoso"
+],
+"d": [
+"maior idade",
+"mais novo",
+"sorteio"
+]
+},
+{
+"n": 42,
+"m": "B",
+"t": "Um dos requisitos para a investidura no cargo de conselheiro do TCDF é ter menos de sessenta e cinco anos de idade.",
+"b": [
+"menos de sessenta e cinco anos",
+"conselheiro do TCDF"
+],
+"d": [
+"menos de setenta anos",
+"mais de trinta e cinco anos"
+]
+},
+{
+"n": 45,
+"m": "B",
+"t": "Ao conselheiro é vedado participar de sociedade comercial, exceto como cotista ou acionista sem poder de controle, direção ou administração.",
+"b": [
+"cotista ou acionista",
+"sem poder de controle"
+],
+"d": [
+"inclusive",
+"com poder de direção"
+]
+},
+{
+"n": 48,
+"m": "B",
+"t": "O auditor é aprovado em concurso público de provas e títulos.",
+"b": [
+"concurso público",
+"provas e títulos"
+],
+"d": [
+"livre nomeação",
+"provimento em comissão"
+]
+},
+{
+"n": 50,
+"m": "B",
+"t": "Segundo o Regimento Interno do TCDF, o auditor terá as garantias e os impedimentos de Juiz de Direito do Tribunal de Justiça do Distrito Federal e dos Territórios.",
+"b": [
+"garantias e os impedimentos",
+"Juiz de Direito"
+],
+"d": [
+"vencimentos",
+"desembargador"
+]
+},
+{
+"n": 52,
+"m": "B",
+"t": "A jurisdição do TCDF abrange os representantes do Distrito Federal na assembleia geral das sociedades anônimas de cujo capital o Distrito Federal participe, pela prática de ato de gestão ruinosa ou liberalidade às custas da entidade.",
+"b": [
+"ato de gestão ruinosa",
+"liberalidade às custas da entidade"
+],
+"d": [
+"qualquer ato de gestão",
+"mera omissão"
+]
+},
+{
+"n": 56,
+"m": "C",
+"b": [
+"obrigatória",
+"tomada ou prestação de contas",
+"admissão de pessoal"
+],
+"d": [
+"facultativa",
+"contratos administrativos",
+"exoneração de servidores"
+]
+},
+{
+"n": 57,
+"m": "A",
+"r": [
+[
+"é sanada, de maneira implícita, quando, posteriormente, o seu representante se manifesta nos autos e não argui o vício",
+"é sanada somente se o seu representante anuir expressamente aos atos"
+]
+],
+"b": [
+"somente",
+"anuir expressamente"
+],
+"d": [
+"de maneira implícita",
+"tacitamente",
+"por simples silêncio"
+]
+},
+{
+"n": 59,
+"m": "B",
+"t": "A expedição de certidões requeridas ao TCDF cabe ao presidente do tribunal.",
+"b": [
+"expedição de certidões",
+"presidente do tribunal"
+],
+"d": [
+"corregedor do tribunal",
+"Vice-Presidente"
+]
+},
+{
+"n": 64,
+"m": "B",
+"t": "As manifestações direcionadas à ouvidoria do TCDF que sejam expressamente genéricas ou inconsistentes são arquivadas pelo conselheiro-ouvidor.",
+"b": [
+"arquivadas",
+"conselheiro-ouvidor"
+],
+"d": [
+"encaminhadas ao presidente",
+"Corregedor"
+]
+},
+{
+"n": 65,
+"m": "B",
+"t": "Cabe ao regente da Escola de Contas Públicas do TCDF coordenar a elaboração e submeter à Presidência a proposta do Plano Bianual de Capacitação.",
+"b": [
+"coordenar a elaboração",
+"submeter à Presidência"
+],
+"d": [
+"aprovar",
+"submeter ao Plenário"
+]
+},
+{
+"n": 66,
+"m": "B",
+"t": "Existe no TCDF o cargo de conselheiro de relações institucionais, que exerce as atribuições de zelar pela representação do tribunal perante outras instituições públicas.",
+"b": [
+"conselheiro de relações institucionais",
+"representação do tribunal"
+],
+"d": [
+"presidente da corte de contas",
+"Corregedor"
+]
+},
+{
+"n": 72,
+"m": "B",
+"t": "No procedimento de verificação de invalidez de conselheiro, a recusa do paciente em submeter-se à perícia médica não impede o processo, e o julgamento pode basear-se em outras provas.",
+"b": [
+"não impede o processo",
+"outras provas"
+],
+"d": [
+"impede o prosseguimento do processo",
+"outras perícias"
+]
+},
+{
+"n": 73,
+"m": "B",
+"b": [
+"Governador",
+"concurso público de provas e títulos",
+"homologado pelo Tribunal"
+],
+"d": [
+"Presidente do Tribunal",
+"Câmara Legislativa",
+"livre nomeação"
+]
+},
+{
+"n": 76,
+"m": "B",
+"b": [
+"não vota nem é votado",
+"presidente, vice-presidente e corregedor"
+],
+"d": [
+"pode votar e ser votado",
+"vota, mas não é votado"
+]
+},
+{
+"n": 78,
+"m": "B",
+"b": [
+"gozo de férias",
+"cessada de imediato"
+],
+"d": [
+"licença-prêmio",
+"suspensa",
+"cessada ao fim do mês"
+]
+},
+{
+"n": 80,
+"m": "B",
+"b": [
+"antiguidade no cargo",
+"maior idade",
+"maior tempo de serviço público"
+],
+"d": [
+"menor idade",
+"ordem alfabética",
+"sorteio"
+]
+},
+{
+"n": 83,
+"m": "B",
+"t": "Os cargos de direção e assessoramento vinculados à área fim do TCDF, inclusive o de Secretário-Geral de Controle Externo, são ocupados por servidores da carreira de Controle Externo.",
+"b": [
+"servidores da carreira de Controle Externo",
+"área fim"
+],
+"d": [
+"pessoas sem vínculo efetivo",
+"livre provimento"
+]
+},
+{
+"n": 87,
+"m": "A",
+"r": [
+[
+"ao Presidente do tribunal, ainda que ele não tenha proferido o voto vencedor",
+"ao conselheiro que tenha proferido o voto vencedor"
+]
+],
+"b": [
+"redação do acórdão",
+"voto vencedor"
+],
+"d": [
+"Presidente do tribunal",
+"relator vencido"
+]
+},
+{
+"n": 89,
+"m": "C",
+"b": [
+"qualquer auditor",
+"procurador-geral do MP"
+],
+"d": [
+"qualquer servidor",
+"Ouvidor"
+]
+},
+{
+"n": 94,
+"m": "B",
+"b": [
+"cinco membros titulares",
+"inclusive quem preside"
+],
+"d": [
+"quatro membros titulares",
+"sete membros titulares"
+]
+},
+{
+"n": 95,
+"m": "B",
+"t": "A apreciação dos processos em sessão ordinária do Plenário do TCDF obedece à ordem decrescente de antiguidade dos conselheiros e auditores.",
+"b": [
+"ordem decrescente de antiguidade",
+"conselheiros e auditores"
+],
+"d": [
+"ordem alfabética",
+"ordem cronológica de autuação"
+]
+},
+{
+"n": 101,
+"m": "A",
+"r": [
+[
+"fica impedido de participar",
+"participa normalmente"
+]
+],
+"b": [
+"participa normalmente",
+"mérito do processo"
+],
+"d": [
+"fica impedido de participar",
+"participa apenas da discussão"
+]
+},
+{
+"n": 106,
+"m": "C",
+"b": [
+"pedido de reexame",
+"agravo",
+"recurso inominado"
+],
+"d": [
+"recurso ordinário",
+"apelação",
+"ação rescisória"
+]
+},
+{
+"n": 108,
+"m": "B",
+"t": "Em processo em trâmite no TCDF, a parte que interpuser embargos de declaração não poderá realizar sustentação oral quando da apreciação dos embargos.",
+"b": [
+"não poderá",
+"sustentação oral",
+"embargos de declaração"
+],
+"d": [
+"poderá livremente",
+"apresentar documentos novos"
+]
+},
+{
+"n": 109,
+"m": "C",
+"b": [
+"segundo dia útil",
+"órgãos oficiais",
+"portal do tribunal"
+],
+"d": [
+"terceiro dia útil",
+"quinto dia útil"
+]
+},
+{
+"n": 110,
+"m": "C",
+"b": [
+"medida cautelar urgente",
+"prescinde",
+"órgão oficial"
+],
+"d": [
+"exige",
+"tutela de evidência"
+]
+},
+{
+"n": 112,
+"m": "A",
+"r": [
+[
+"dependendo, contudo, de nova publicação",
+"independentemente de nova publicação"
+]
+],
+"b": [
+"independentemente de nova publicação",
+"sessão subsequente"
+],
+"d": [
+"dependendo de nova publicação",
+"sessão extraordinária"
+]
+},
+{
+"n": 115,
+"m": "B",
+"t": "O presidente do TCDF pode adotar medidas cautelares urgentes por despacho singular, com ou sem oitiva da parte, mesmo quando o assunto for de natureza administrativa.",
+"b": [
+"com ou sem oitiva da parte",
+"mesmo quando",
+"natureza administrativa"
+],
+"d": [
+"precedida da oitiva da parte",
+"salvo quando",
+"somente após oitiva"
+]
+},
+{
+"n": 116,
+"m": "B",
+"t": "Os membros do Ministério Público junto ao TCDF possuem independência funcional, mas dela não decorre legitimidade para impetrar mandado de segurança contra acórdão da corte de contas perante a qual oficiam.",
+"b": [
+"não decorre legitimidade",
+"mandado de segurança"
+],
+"d": [
+"decorre automaticamente a legitimidade",
+"habeas corpus"
+]
+},
+{
+"n": 119,
+"m": "A",
+"r": [
+[
+"de forma integral, independentemente do valor do patrimônio transferido",
+"até o limite do valor do patrimônio transferido"
+]
+],
+"b": [
+"até o limite",
+"patrimônio transferido"
+],
+"d": [
+"de forma integral",
+"independentemente do valor"
+]
+},
+{
+"n": 122,
+"m": "A",
+"r": [
+[
+"independentemente de haver urgência ou não na apreciação da matéria",
+"somente em caso de urgência na apreciação da matéria"
+]
+],
+"b": [
+"somente em caso de urgência",
+"Presidente"
+],
+"d": [
+"independentemente de urgência",
+"Corregedor"
+]
+},
+{
+"n": 123,
+"m": "A",
+"r": [
+[
+"no prazo improrrogável de 30 dias, ainda que não haja sessão ordinária convocada",
+"na próxima sessão ordinária"
+]
+],
+"b": [
+"na próxima sessão ordinária",
+"homologação do Plenário"
+],
+"d": [
+"prazo de 30 dias",
+"dez dias úteis"
+]
+},
+{
+"n": 127,
+"m": "B",
+"b": [
+"ato do Presidente",
+"dispensa aprovação do Plenário"
+],
+"d": [
+"ato do Plenário",
+"exige aprovação da maioria absoluta"
+]
+},
+{
+"n": 129,
+"m": "B",
+"t": "Membro do Ministério Público junto ao TCDF não possui legitimidade ativa para impetrar mandado de segurança contra acórdão da própria Corte perante a qual atua.",
+"b": [
+"não possui legitimidade ativa",
+"mandado de segurança"
+],
+"d": [
+"possui legitimidade ativa ad causam",
+"habeas corpus"
+]
+},
+{
+"n": 132,
+"m": "A",
+"r": [
+[
+"à Comissão de Regimento e Jurisprudência manifestar-se preliminarmente sobre a conveniência e oportunidade da proposta antes que esta seja submetida à votação plenária",
+"ao Presidente colocar em discussão e votação a preliminar"
+]
+],
+"b": [
+"ao Presidente",
+"discussão e votação"
+],
+"d": [
+"à Comissão de Regimento e Jurisprudência",
+"ao Corregedor"
+]
+},
+{
+"n": 133,
+"m": "B",
+"t": "As sessões reservadas do Plenário do TCDF exigem quórum mínimo de quatro Conselheiros titulares.",
+"b": [
+"exigem quórum mínimo",
+"quatro Conselheiros titulares"
+],
+"d": [
+"prescindem de quórum",
+"cinco Conselheiros titulares"
+]
+},
+{
+"n": 134,
+"m": "A",
+"r": [
+[
+"poderá, de forma monocrática, determinar a realização de diligência saneadora ou ordenar diretamente a juntada de novos documentos que julgue indispensáveis",
+"não poderá, sozinho, determinar diligência ou juntada de documentos sem aprovação do Plenário, ouvido o relator"
+]
+],
+"b": [
+"não poderá, sozinho",
+"aprovação do Plenário",
+"ouvido o relator"
+],
+"d": [
+"poderá, de forma monocrática",
+"aprovação do Presidente",
+"ouvido o Ministério Público"
+]
+},
+{
+"n": 135,
+"m": "A",
+"r": [
+[
+"fica impedido de proferir voto ou participar da discussão e votação do mérito",
+"deve proferir voto e participar da discussão e votação do mérito"
+]
+],
+"b": [
+"deve proferir voto",
+"discussão e votação do mérito"
+],
+"d": [
+"fica impedido de proferir voto",
+"pode se abster do voto"
+]
+},
+{
+"n": 138,
+"m": "A",
+"r": [
+[
+"sendo este prazo peremptório e improrrogável devido à relevância institucional do cargo de membro de Tribunal de Contas",
+"sendo este prazo prorrogável por até sessenta dias"
+]
+],
+"b": [
+"30 dias",
+"prorrogável por até sessenta dias"
+],
+"d": [
+"improrrogável",
+"noventa dias"
+]
+},
+{
+"n": 139,
+"m": "B",
+"t": "Cabe ao Vice-Presidente do Tribunal presidir a Segunda Câmara.",
+"b": [
+"Vice-Presidente do Tribunal",
+"Segunda Câmara"
+],
+"d": [
+"Primeira Câmara",
+"Corregedor"
+]
+},
+{
+"n": 140,
+"m": "B",
+"b": [
+"cinco titulares",
+"incluindo o Presidente"
+],
+"d": [
+"quatro titulares",
+"três titulares"
+]
+},
+{
+"n": 141,
+"m": "B",
+"t": "Na proposta de edição, alteração ou revogação de súmula, o Auditor também pode sugerir a proposta.",
+"b": [
+"Auditor",
+"também pode sugerir"
+],
+"d": [
+"não pode",
+"Procurador-Geral"
+]
+},
+{
+"n": 142,
+"m": "B",
+"t": "Excedido o prazo regimental pelo Relator ou por quem pediu vista, o processo é devolvido à Presidência, com voto ou parecer escrito, no prazo de dez dias.",
+"b": [
+"devolvido à Presidência",
+"dez dias"
+],
+"d": [
+"redistribuído a outro membro",
+"cinco dias"
+]
+},
+{
+"n": 143,
+"m": "A",
+"r": [
+[
+"possui efeito suspensivo automático, obstaculizando de imediato a execução do acórdão sancionatório e a respectiva inscrição do gestor nos cadastros de inadimplentes da administração pública",
+"não possui efeito suspensivo"
+]
+],
+"b": [
+"recurso de revisão",
+"não possui efeito suspensivo"
+],
+"d": [
+"recurso de reconsideração",
+"possui efeito suspensivo automático"
+]
+},
+{
+"n": 144,
+"m": "A",
+"r": [
+[
+"o quórum qualificado reforçado de dois terços dos votos dos membros do Plenário, com vistas a preservar a rigidez formal e a estabilidade das normas regimentais do controle externo distrital",
+"a maioria absoluta dos Conselheiros efetivos"
+]
+],
+"b": [
+"maioria absoluta",
+"Conselheiros efetivos"
+],
+"d": [
+"dois terços",
+"maioria simples"
+]
+},
+{
+"n": 146,
+"m": "B",
+"t": "O Auditor afastado por licença para tratamento de saúde preserva a integralidade de seus subsídios.",
+"b": [
+"licença para tratamento de saúde",
+"preserva a integralidade"
+],
+"d": [
+"sofre decréscimo proporcional",
+"perde um terço"
+]
+},
+{
+"n": 147,
+"m": "B",
+"t": "Assegura-se ao advogado constituído sustentação oral em processo pautado, salvo embargos, agravo, consulta e medida cautelar.",
+"b": [
+"salvo",
+"embargos, agravo, consulta e medida cautelar"
+],
+"d": [
+"qualquer processo pautado",
+"apenas embargos"
+]
+},
+{
+"n": 149,
+"m": "A",
+"r": [
+[
+"a aprovação unânime de todos os Conselheiros titulares do TCDF reunidos em Plenário extraordinário",
+"a decisão da maioria absoluta dos membros do Tribunal"
+]
+],
+"b": [
+"inabilitação",
+"maioria absoluta"
+],
+"d": [
+"unanimidade",
+"dois terços"
+]
+},
+{
+"n": 150,
+"m": "B",
+"t": "Os processos de pauta publicada não julgados na sessão designada permanecem em pauta, independentemente de nova publicação, sem nulidade.",
+"b": [
+"permanecem em pauta",
+"independentemente de nova publicação"
+],
+"d": [
+"nova e completa publicação",
+"nulidade insanável"
+]
+},
+{
+"n": 151,
+"m": "B",
+"t": "A medida cautelar do Relator pode ser concedida com ou sem prévia oitiva.",
+"b": [
+"com ou sem prévia oitiva",
+"medida cautelar"
+],
+"d": [
+"oitiva prévia obrigatória",
+"nulidade absoluta"
+]
+},
+{
+"n": 152,
+"m": "B",
+"t": "As decisões do TCDF que imponham ressarcimento ou multa têm eficácia de título executivo e são cobradas judicialmente por meio da Procuradoria-Geral do Distrito Federal.",
+"b": [
+"título executivo",
+"Procuradoria-Geral do Distrito Federal"
+],
+"d": [
+"corpo de procuradores internos",
+"Ministério Público de Contas"
+]
+},
+{
+"n": 153,
+"m": "B",
+"t": "Compete ao Corregedor relatar e presidir a instrução dos processos administrativos disciplinares.",
+"b": [
+"Corregedor",
+"relatar e presidir a instrução"
+],
+"d": [
+"julgar",
+"Ouvidor"
+]
+},
+{
+"n": 154,
+"m": "B",
+"b": [
+"caráter normativo",
+"dirigentes de entidades sindicais"
+],
+"d": [
+"caráter meramente consultivo",
+"órgãos de classe"
+]
+},
+{
+"n": 155,
+"m": "A",
+"r": [
+[
+"ostenta caráter vinculante e impositivo, de forma que a Câmara Legislativa do Distrito Federal não poderá rejeitar a manifestação técnica do controle externo distrital",
+"tem caráter opinativo"
+]
+],
+"b": [
+"Parecer Prévio",
+"caráter opinativo"
+],
+"d": [
+"caráter vinculante",
+"caráter terminativo"
+]
+},
+{
+"n": 157,
+"m": "B",
+"b": [
+"rodízio por antiguidade",
+"Vice-Presidente"
+],
+"d": [
+"sorteio",
+"Corregedor"
+]
+},
+{
+"n": 158,
+"m": "B",
+"t": "O acesso do TCDF a despesas sigilosas não depende de prévia autorização judicial.",
+"b": [
+"não depende",
+"prévia autorização judicial"
+],
+"d": [
+"depende de ordem",
+"reserva de jurisdição"
+]
+},
+{
+"n": 159,
+"m": "B",
+"t": "Os representantes do Poder Público na assembleia geral de sociedades anônimas de que o Distrito Federal participe estão sujeitos à jurisdição do TCDF quanto a ato de gestão ruinosa ou liberalidade às custas da entidade.",
+"b": [
+"ato de gestão ruinosa",
+"liberalidade às custas da entidade"
+],
+"d": [
+"quaisquer atos de gestão",
+"atos de mera omissão"
+]
+},
+{
+"n": 162,
+"m": "A",
+"r": [
+[
+"mais idoso, em detrimento do tempo de exercício no cargo de Conselheiro",
+"mais antigo no cargo"
+]
+],
+"b": [
+"segundo escrutínio",
+"mais antigo no cargo"
+],
+"d": [
+"mais idoso",
+"primeiro escrutínio"
+]
+},
+{
+"n": 164,
+"m": "B",
+"t": "Instruído o processo, o Presidente decide em trinta dias; vencido o prazo, o envio ao Plenário depende de pedido do requerente.",
+"b": [
+"trinta dias",
+"pedido do requerente"
+],
+"d": [
+"15 dias úteis",
+"remessa automática"
+]
+},
+{
+"n": 166,
+"m": "A",
+"r": [
+[
+"submetê-las ao Presidente do TCDF para que este decida motivadamente quanto ao arquivamento ou não das peças",
+"promover o arquivamento fundamentado delas"
+]
+],
+"b": [
+"de ofício",
+"promover o arquivamento fundamentado"
+],
+"d": [
+"submetê-las ao Presidente",
+"remeter ao Plenário"
+]
+},
+{
+"n": 167,
+"m": "A",
+"r": [
+[
+"a aprovação final do Plano Bianual de Capacitação do Tribunal, após parecer favorável emitido pela Presidência da Corte",
+"a coordenação e a submissão da proposta do Plano Bianual de Capacitação à Presidência"
+]
+],
+"b": [
+"Regente",
+"coordenação e a submissão da proposta"
+],
+"d": [
+"aprovação final",
+"homologação"
+]
+},
+{
+"n": 177,
+"m": "A",
+"r": [
+[
+"forma de Instrução Normativa, ao passo",
+"forma de Resolução, ao passo"
+],
+[
+"forma de Resolução.",
+"forma de Instrução Normativa."
+]
+],
+"b": [
+"Resolução",
+"Instrução Normativa"
+],
+"d": [
+"Portaria",
+"Decreto"
+]
+},
+{
+"n": 179,
+"m": "A",
+"r": [
+[
+"será concedido de forma individual a cada um deles em Plenário, com vistas a resguardar a plenitude da ampla defesa",
+"será contado em dobro e dividido igualmente entre eles"
+]
+],
+"b": [
+"contado em dobro",
+"dividido igualmente entre eles"
+],
+"d": [
+"concedido a cada um",
+"reduzido pela metade"
+]
+},
+{
+"n": 180,
+"m": "B",
+"t": "Não se admite sustentação oral pelas partes em Plenário no julgamento de consultas e de embargos de declaração.",
+"b": [
+"Não se admite",
+"consultas e de embargos de declaração"
+],
+"d": [
+"Admite-se",
+"Poder-se-á admitir"
+]
+},
+{
+"n": 181,
+"m": "A",
+"r": [
+[
+"apenas até o segundo grau, em exata simetria com a barreira de parentesco imposta pelo regimento para o assento simultâneo de membros no Plenário",
+"até o terceiro grau"
+]
+],
+"b": [
+"advogado",
+"terceiro grau"
+],
+"d": [
+"segundo grau",
+"quarto grau"
+]
+},
+{
+"n": 184,
+"m": "A",
+"r": [
+[
+"quaisquer servidores ocupantes de cargos em comissão de assessoria jurídica ou chefia administrativa do órgão interessado",
+"os dirigentes máximos do órgão interessado ou seus substitutos legalmente designados"
+]
+],
+"b": [
+"dirigentes máximos",
+"substitutos legalmente designados"
+],
+"d": [
+"assessoria jurídica",
+"chefia administrativa"
+]
+},
+{
+"n": 186,
+"m": "A",
+"r": [
+[
+"por até duas vezes consecutivas, exigindo-se que um eventual terceiro pedido de prorrogação seja submetido e apreciado pelo Plenário do Tribunal",
+"uma única vez, devendo o segundo pedido ser submetido ao Plenário do Tribunal"
+]
+],
+"b": [
+"uma única vez",
+"segundo pedido"
+],
+"d": [
+"duas vezes",
+"terceiro pedido"
+]
+},
+{
+"n": 187,
+"m": "B",
+"t": "A oitiva posterior do Ministério Público de Contas, com anuição às etapas anteriores, sana a ausência de sua manifestação obrigatória.",
+"b": [
+"sana",
+"anuição às etapas anteriores"
+],
+"d": [
+"não sana",
+"é incapaz de sanar"
+]
+},
+{
+"n": 188,
+"m": "B",
+"t": "A intempestividade do recurso de reconsideração impede o seu conhecimento, salvo se o recorrente apresentar fatos novos supervenientes.",
+"b": [
+"salvo se",
+"fatos novos supervenientes"
+],
+"d": [
+"ainda que",
+"mesmo que"
+]
+},
+{
+"n": 189,
+"m": "B",
+"t": "A oposição de embargos de declaração pelas partes interrompe ou suspende os prazos para cumprimento da decisão embargada e para interposição de outros recursos, salvo quando o relator os repute meramente protelatórios.",
+"b": [
+"salvo",
+"meramente protelatórios"
+],
+"d": [
+"de forma absoluta",
+"manifestamente protelatórios"
+]
+},
+{
+"n": 198,
+"m": "B",
+"t": "O recurso de agravo contra decisão monocrática de Relator em medida cautelar pode receber efeito suspensivo, a critério do Presidente ou do relator.",
+"b": [
+"pode receber efeito suspensivo",
+"Presidente ou do relator"
+],
+"d": [
+"automático",
+"sempre efeito suspensivo"
+]
+},
+{
+"n": 199,
+"m": "B",
+"t": "A publicação de pauta de julgamento é regra com exceções, sendo dispensada a publicação na inclusão extrapauta de medidas cautelares urgentes.",
+"b": [
+"regra com exceções",
+"dispensada a publicação"
+],
+"d": [
+"requisito absoluto",
+"vedada"
+]
+},
+{
+"n": 201,
+"m": "B",
+"t": "O Conselheiro que pede vista em mesa não detém poderes para ordenar novas inspeções ou auditorias, devendo propor ao Plenário.",
+"b": [
+"não detém poderes",
+"propor ao Plenário"
+],
+"d": [
+"pode determinar",
+"ordenar monocraticamente"
+]
+},
+{
+"n": 202,
+"m": "B",
+"t": "A ordem de julgamento fixada na pauta admite inversão por preferência deferida pelo Plenário, com prioridade para urgentes e sustentação oral.",
+"b": [
+"inversão por preferência",
+"deferida pelo Plenário"
+],
+"d": [
+"rígida e inflexível",
+"Procurador-Geral de Contas"
+]
+},
+{
+"n": 203,
+"m": "A",
+"r": [
+[
+"independentemente de se tratar de matéria de caráter urgente ou de segurança pública distrital",
+"salvo motivo relevante ou urgente, devidamente justificado"
+]
+],
+"b": [
+"24",
+"salvo motivo relevante ou urgente"
+],
+"d": [
+"48",
+"independentemente de urgência"
+]
+},
+{
+"n": 205,
+"m": "A",
+"r": [
+[
+"é privativa e exclusiva do Presidente do Tribunal, não se admitindo proposituras concorrentes de outros membros ou do Procurador-Geral do Ministério Público de Contas",
+"é concorrente, podendo ser exercida também por Conselheiros, pela Comissão, por Auditor e pelo Procurador-Geral"
+]
+],
+"b": [
+"concorrente",
+"Auditor"
+],
+"d": [
+"privativa",
+"exclusiva do Presidente"
+]
+},
+{
+"n": 206,
+"m": "A",
+"r": [
+[
+"ao Presidente da sessão, independentemente de qual tenha sido o voto vencedor",
+"ao Conselheiro que proferiu o voto vencedor"
+]
+],
+"b": [
+"vencido",
+"Conselheiro que proferiu o voto vencedor"
+],
+"d": [
+"Presidente da sessão",
+"novo Relator"
+]
+},
+{
+"n": 207,
+"m": "B",
+"t": "Os órgãos de cúpula e os gabinetes de relatores não detêm poder de alteração ou veto sobre os relatórios técnicos elaborados pelas unidades de instrução.",
+"b": [
+"não detêm poder",
+"alteração ou veto"
+],
+"d": [
+"detêm poderes",
+"revisão de mérito"
+]
+},
+{
+"n": 208,
+"m": "C",
+"b": [
+"não ostenta legitimidade ativa",
+"Procuradoria-Geral do Distrito Federal"
+],
+"d": [
+"Ministério Público Federal",
+"tem legitimidade concorrente"
+]
+},
+{
+"n": 209,
+"m": "B",
+"b": [
+"Auditores",
+"convocação do Presidente"
+],
+"d": [
+"Procuradores",
+"indicação do Governador"
+]
+},
+{
+"n": 210,
+"m": "B",
+"t": "O Conselheiro titular do TCDF tem assegurado o gozo das licenças previstas em lei, como saúde, família e gestante.",
+"b": [
+"licenças previstas em lei",
+"saúde, família e gestante"
+],
+"d": [
+"licença sem vencimentos",
+"interesses particulares"
+]
+},
+{
+"n": 211,
+"m": "A",
+"r": [
+[
+"a partir do ato formal de sua nomeação publicada no Diário Oficial do DF, antes mesmo do respectivo compromisso de posse",
+"a partir da posse"
+]
+],
+"b": [
+"inamovibilidade",
+"a partir da posse"
+],
+"d": [
+"nomeação",
+"aprovação pelo Plenário"
+]
+},
+{
+"n": 212,
+"m": "B",
+"t": "A Corregedoria do TCDF instaura e instrui processos disciplinares, cabendo ao Plenário, por proposta do Presidente, a demissão e a cassação de aposentadoria.",
+"b": [
+"instaura e instrui",
+"Plenário"
+],
+"d": [
+"aplica diretamente",
+"Secretaria do Tribunal"
+]
+},
+{
+"n": 214,
+"m": "B",
+"b": [
+"pública ou privada",
+"der causa a dano ao erário"
+],
+"d": [
+"apenas pública",
+"pessoa jurídica de direito público"
+]
+},
+{
+"n": 21,
+"m": "B",
+"b": [
+"caráter normativo",
+"não o caso concreto"
+],
+"d": [
+"caráter opinativo",
+"somente o caso concreto"
+]
+},
+{
+"n": 51,
+"m": "B",
+"b": [
+"declarar-se impedido",
+"sócio em negócio privado"
+],
+"d": [
+"declarar-se suspeito",
+"amigo íntimo"
+]
+},
+{
+"n": 100,
+"m": "A",
+"r": [
+[
+"e declaração de inidoneidade de licitante fraudador para participar de licitação na administração pública do Distrito Federal",
+"e nenhuma outra sanção"
+]
+],
+"b": [
+"maioria absoluta",
+"nenhuma outra sanção"
+],
+"d": [
+"dois terços",
+"declaração de inidoneidade"
+]
+},
+{
+"n": 148,
+"m": "C",
+"b": [
+"terceiro grau",
+"em linha reta ou colateral"
+],
+"d": [
+"segundo grau",
+"quarto grau"
+]
+},
+{
+"n": 215,
+"m": "B",
+"b": [
+"Câmara Legislativa",
+"noventa dias",
+"o Tribunal decide"
+],
+"d": [
+"Governador do Distrito Federal",
+"sessenta dias",
+"o Ministério Público decide"
+]
+}
+]

@@ -14,13 +14,15 @@
 {
 "n": 2,
 "m": "B",
+"t": "A gestão da seguridade social é quadripartite, com participação dos trabalhadores, dos empregadores, dos aposentados e do Governo nos órgãos colegiados.",
 "b": [
 "quadripartite",
 "aposentados"
 ],
 "d": [
-"bipartite",
-"empregadores"
+"tripartite",
+"estudantes",
+"consumidores"
 ]
 },
 {
@@ -415,13 +417,15 @@
 {
 "n": 57,
 "m": "B",
+"t": "A perda definitiva da qualidade de dependente pelo acusado de tentativa de homicídio qualificado do segurado exige condenação transitada em julgado; a denúncia não basta.",
 "b": [
-"condenação transitada em julgado",
-"a denúncia não basta"
+"qualidade de dependente",
+"condenação transitada em julgado"
 ],
 "d": [
-"denúncia recebida",
-"sentença em primeira instância"
+"condição de segurado",
+"sentença de primeira instância",
+"prisão preventiva"
 ]
 },
 {
@@ -443,13 +447,12 @@
 "m": "B",
 "b": [
 "teto a do participante",
-"encargos extras",
 "plano de custeio"
 ],
 "d": [
-"dobro da do participante",
-"encargos adicionais ilimitados",
-"plano de benefícios"
+"piso a do participante",
+"regulamento da patrocinadora",
+"dobro da do participante"
 ]
 },
 {
@@ -467,15 +470,14 @@
 {
 "n": 62,
 "m": "B",
+"t": "A contribuição normal do patrocinador de entidade fechada de previdência complementar pública não pode superar a do participante, nem com justificativa atuarial.",
 "b": [
-"não cede",
-"justificativa atuarial",
-"paridade"
+"patrocinador",
+"não pode superar"
 ],
 "d": [
-"pode ser superado",
-"parecer jurídico",
-"isonomia"
+"instituidor",
+"poderá exceder"
 ]
 },
 {
@@ -598,13 +600,15 @@
 {
 "n": 78,
 "m": "B",
+"t": "A comprovação da deficiência do segurado exige avaliação formal pelo INSS, e a prova testemunhal não a dispensa.",
 "b": [
-"avaliação formal pelo INSS",
-"testemunhas não a dispensam"
+"avaliação formal",
+"INSS"
 ],
 "d": [
-"prova testemunhal",
-"laudo particular"
+"declaração do empregador",
+"laudo particular",
+"Ministério da Saúde"
 ]
 },
 {
@@ -695,20 +699,16 @@
 },
 {
 "n": 93,
-"m": "A",
-"r": [
-[
-"não é considerada acidente de trabalho",
-"é considerada acidente de trabalho, por equiparação"
-]
-],
+"m": "B",
+"t": "A lesão do trabalhador decorrente de incêndio causado por raio, hipótese de caso fortuito ou força maior, é considerada acidente de trabalho.",
 "b": [
-"é considerada",
-"por equiparação"
+"caso fortuito ou força maior",
+"é considerada"
 ],
 "d": [
+"culpa exclusiva da vítima",
 "não é considerada",
-"por ficção legal"
+"dolo do empregado"
 ]
 },
 {
@@ -739,14 +739,15 @@
 {
 "n": 100,
 "m": "B",
+"t": "O aposentado que segue trabalhando não faz jus a nenhuma prestação em decorrência da atividade, salvo salário-família e reabilitação profissional, quando empregado.",
 "b": [
-"não faz jus",
-"salário-família e reabilitação profissional"
+"salário-família e reabilitação profissional",
+"quando empregado"
 ],
 "d": [
-"tem direito",
-"auxílio-acidente",
-"pensão por morte"
+"pensão por morte",
+"auxílio por incapacidade temporária e salário-maternidade",
+"quando contribuinte individual"
 ]
 },
 {
@@ -803,13 +804,15 @@
 {
 "n": 110,
 "m": "B",
+"t": "As diárias para viagens, até 50% da remuneração mensal, não integram o salário de contribuição; o excedente integra.",
 "b": [
-"não integram",
-"salário de contribuição"
+"50%",
+"não integram"
 ],
 "d": [
+"30%",
 "compõem",
-"salário-família"
+"25%"
 ]
 },
 {
@@ -832,21 +835,16 @@
 },
 {
 "n": 118,
-"m": "A",
-"r": [
-[
-"vedada a adoção de requisitos ou critérios diferenciados para concessão de aposentadoria",
-"ressalvados os critérios diferenciados previstos na Constituição"
-]
-],
+"m": "B",
+"t": "O RPPS dos servidores efetivos observará critérios que preservem o equilíbrio financeiro e atuarial, sendo vedados requisitos ou critérios diferenciados para a concessão de aposentadoria, salvo os previstos na Constituição.",
 "b": [
-"ressalvados",
+"vedados",
 "previstos na Constituição"
 ],
 "d": [
-"vedados",
-"previstos em lei ordinária",
-"previstos em lei complementar"
+"permitidos",
+"previstos em decreto",
+"previstos em lei ordinária"
 ]
 },
 {
@@ -957,13 +955,15 @@
 {
 "n": 130,
 "m": "B",
+"t": "A previdência complementar dos servidores efetivos é efetivada por intermédio de entidade fechada de previdência complementar, de natureza pública.",
 "b": [
-"fechada ou aberta",
-"não por entidade criada pelo regime próprio"
+"entidade fechada",
+"natureza pública"
 ],
 "d": [
-"exclusivamente aberta",
-"empresa pública"
+"entidade aberta",
+"natureza privada",
+"regime próprio de previdência"
 ]
 },
 {
@@ -1005,13 +1005,15 @@
 {
 "n": 140,
 "m": "B",
+"t": "É vedado o pagamento de benefícios por consórcio entre municípios; o ente que institui regime próprio deve ter número mínimo de segurados.",
 "b": [
-"vedado pagar benefícios por consórcio",
+"vedado",
 "número mínimo de segurados"
 ],
 "d": [
 "facultado",
-"número máximo"
+"número máximo",
+"permitido"
 ]
 },
 {
@@ -1191,13 +1193,15 @@
 {
 "n": 167,
 "m": "B",
+"t": "O plano de benefícios de previdência complementar do servidor efetivo é somente na modalidade de contribuição definida, e a fiscalização estatal não dispensa a supervisão do patrocinador.",
 "b": [
-"só de contribuição definida",
+"contribuição definida",
 "supervisão do patrocinador"
 ],
 "d": [
 "benefício definido",
-"fiscalização do patrocinador"
+"contribuição variável",
+"fiscalização exclusiva do Estado"
 ]
 },
 {
@@ -1215,38 +1219,30 @@
 },
 {
 "n": 171,
-"m": "A",
-"r": [
-[
-"somente ao curador do segurado, condicionado à apresentação do termo de curatela, ainda que provisório",
-"ao próprio segurado, sem exigência de termo de curatela"
-]
-],
+"m": "B",
+"t": "No RPPS/DF, a aposentadoria por invalidez decorrente de doença mental é paga ao próprio segurado, sem exigência de termo de curatela, pois o dispositivo que a impunha foi declarado inconstitucional.",
 "b": [
-"sem exigência",
-"termo de curatela"
+"ao próprio segurado",
+"sem exigência"
 ],
 "d": [
-"condicionado",
-"termo de tutela"
+"somente ao curador",
+"com exigência",
+"ao cônjuge"
 ]
 },
 {
 "n": 173,
-"m": "A",
-"r": [
-[
-"ambos considerados segurados obrigatórios do RPPS",
-"ambos vinculados ao RGPS"
-]
-],
+"m": "B",
+"t": "Os ocupantes de cargo em comissão e de emprego público do DF não integram o RPPS e ficam vinculados ao RGPS.",
 "b": [
-"ambos vinculados",
+"emprego público",
 "RGPS"
 ],
 "d": [
-"segurados obrigatórios do RPPS",
-"RPPS"
+"cargo efetivo",
+"regime próprio da União",
+"cargo vitalício"
 ]
 },
 {
@@ -1444,25 +1440,27 @@
 {
 "n": 217,
 "m": "B",
+"t": "As receitas previdenciárias do Iprev/DF só podem custear benefícios previdenciários, sendo vedado destiná-las livremente a outras finalidades.",
 "b": [
-"só custeiam benefícios previdenciários",
-"é vedado"
+"benefícios previdenciários",
+"vedado"
 ],
 "d": [
-"também custeiam ações de saúde",
-"é facultado"
+"ações de saúde dos servidores",
+"permitido",
+"assistência social básica"
 ]
 },
 {
 "n": 220,
 "m": "B",
+"t": "Os Conselhos Deliberativo e Fiscal do Iprev/DF têm composição paritária entre representantes do governo e dos segurados.",
 "b": [
-"paritária",
-"metade de representantes do governo"
+"paritária"
 ],
 "d": [
 "majoritária do governo",
-"dois terços de representantes do governo"
+"exclusivamente indicada pelo Governador"
 ]
 },
 {
@@ -1480,15 +1478,15 @@
 {
 "n": 228,
 "m": "B",
+"t": "Na previdência complementar do DF, o décimo terceiro salário integra a base de contribuição, mas o adicional de férias fica fora dela.",
 "b": [
 "adicional de férias",
-"fora da base",
-"décimo terceiro"
+"fica fora"
 ],
 "d": [
-"adicional noturno",
-"dentro da base",
-"abono de permanência"
+"vencimento básico",
+"salário-base",
+"integra também"
 ]
 },
 {
@@ -1510,12 +1508,12 @@
 "m": "B",
 "b": [
 "seletividade e distributividade",
-"administração democrática e descentralizada",
+"diversidade da base de financiamento",
 "competência exclusiva da União"
 ],
 "d": [
-"universalidade e uniformidade",
-"administração centralizada",
+"irredutibilidade e pessoalidade",
+"contributividade exclusiva",
 "competência exclusiva dos Estados"
 ]
 },
@@ -1545,20 +1543,16 @@
 },
 {
 "n": 34,
-"m": "A",
-"r": [
-[
-"contribuinte individual",
-"segurado empregado"
-]
-],
+"m": "B",
+"t": "O servidor contratado por tempo determinado no DF vincula-se ao Regime Geral como segurado empregado, não como contribuinte individual.",
 "b": [
 "segurado empregado",
-"regime geral de previdência social"
+"Regime Geral"
 ],
 "d": [
-"contribuinte individual",
-"segurado facultativo"
+"segurado facultativo",
+"segurado especial",
+"regime próprio"
 ]
 },
 {
@@ -1578,15 +1572,15 @@
 {
 "n": 51,
 "m": "B",
+"t": "O ministro de confissão religiosa é contribuinte individual, o vereador sem regime próprio é segurado empregado, e o militar da ativa, vinculado a regime próprio, não pode se filiar ao RGPS como facultativo.",
 "b": [
 "contribuinte individual",
-"segurado empregado",
-"regime próprio"
+"segurado empregado"
 ],
 "d": [
 "segurado especial",
-"segurado facultativo",
-"segurado avulso"
+"trabalhador avulso",
+"empregado doméstico"
 ]
 },
 {
@@ -1624,13 +1618,15 @@
 {
 "n": 97,
 "m": "B",
+"t": "O FAP pode reduzir em até 50% ou aumentar em até 100% a alíquota de risco ambiental da contribuição da empresa.",
 "b": [
-"alíquota de risco ambiental",
-"faixas maiores"
+"50%",
+"100%"
 ],
 "d": [
-"alíquota da contribuição patronal",
-"faixas menores"
+"30%",
+"25%",
+"200%"
 ]
 },
 {
@@ -1660,42 +1656,44 @@
 {
 "n": 105,
 "m": "B",
-"t": "O médico assistente do SUS pode emitir laudo que ateste a persistência da deficiência.",
+"t": "Na reavaliação da pessoa com deficiência para manutenção do vínculo em ações afirmativas, o médico assistente do SUS pode emitir laudo atestando a persistência da deficiência.",
 "b": [
-"pode emitir laudo",
-"persistência da deficiência"
+"pode emitir",
+"médico assistente do SUS"
 ],
 "d": [
-"é vedado emitir laudo",
-"cessação da deficiência"
+"não pode emitir",
+"empregador",
+"fiscal do trabalho"
 ]
 },
 {
 "n": 111,
 "m": "B",
+"t": "A contribuição do segurado empregado incide sobre as parcelas remuneratórias, como décimo terceiro salário e adicionais de periculosidade e insalubridade, e não sobre verbas indenizatórias.",
 "b": [
-"remuneração destinada a retribuir o trabalho",
-"décimo terceiro",
-"verbas indenizatórias"
+"décimo terceiro salário",
+"adicionais de periculosidade e insalubridade"
 ],
 "d": [
-"apenas o salário-base",
-"abono de férias",
-"FGTS"
+"FGTS",
+"indenização de férias",
+"licença-prêmio indenizada"
 ]
 },
 {
 "n": 112,
 "m": "B",
+"t": "Na cessão de mão de obra, a tomadora de serviços retém 11% do valor bruto da nota fiscal e recolhe em nome da cedente.",
 "b": [
 "cessão de mão de obra",
 "11%",
-"valor bruto da nota"
+"valor bruto"
 ],
 "d": [
-"empreitada",
-"20%",
-"valor líquido da nota"
+"prestação de serviço eventual",
+"valor líquido",
+"20%"
 ]
 },
 {
@@ -1725,15 +1723,15 @@
 {
 "n": 141,
 "m": "B",
+"t": "No RPPS, o abono de permanência não é computado para efeito de concessão de benefício, e a filiação do servidor titular de cargo efetivo é obrigatória.",
 "b": [
-"abono de permanência",
-"emitido pela União",
-"empregados públicos"
+"titular de cargo efetivo",
+"obrigatória"
 ],
 "d": [
-"terço de férias",
-"emitido pelo Tribunal de Contas",
-"militares"
+"servidores comissionados",
+"empregados públicos",
+"facultativa"
 ]
 },
 {
@@ -1762,27 +1760,30 @@
 },
 {
 "n": 205,
-"m": "C",
+"m": "B",
+"t": "Os planos de benefícios da previdência complementar dos servidores públicos do DF são ofertados somente na modalidade de contribuição definida.",
 "b": [
-"exclusivamente",
-"Contribuição Definida"
+"somente",
+"contribuição definida"
 ],
 "d": [
-"preferencialmente",
-"Benefício Definido",
-"Contribuição Variável"
+"benefício definido",
+"contribuição variável",
+"preferencialmente"
 ]
 },
 {
 "n": 209,
-"m": "C",
+"m": "B",
+"t": "O participante que opta pelo resgate perde o direito de realizar a portabilidade, pois resgate e portabilidade são institutos alternativos.",
 "b": [
-"Resgate",
-"mutuamente excludente"
+"perde o direito de realizar a portabilidade",
+"alternativos"
 ],
 "d": [
-"Autopatrocínio",
-"mutuamente cumulativo"
+"mantém o direito de realizar a portabilidade",
+"cumulativos",
+"complementares"
 ]
 },
 {
@@ -1814,13 +1815,15 @@
 {
 "n": 230,
 "m": "B",
+"t": "A DF-PREVICOM pode firmar convênio de adesão para servidores efetivos dos municípios da RIDE, e não de Estados e municípios em geral.",
 "b": [
 "servidores efetivos",
 "municípios da RIDE"
 ],
 "d": [
 "servidores comissionados",
-"municípios de todo o país"
+"municípios de todo o país",
+"militares"
 ]
 }
 ]
