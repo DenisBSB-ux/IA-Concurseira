@@ -1,0 +1,1491 @@
+[
+{
+"n": 9,
+"m": "B",
+"b": [
+"faculdade da autoridade competente",
+"não exigência obrigatória"
+],
+"d": [
+"dever do ordenador de despesa",
+"competência do fiscal"
+]
+},
+{
+"n": 11,
+"m": "C",
+"b": [
+"vigência máxima decenal",
+"previsão editalícia expressa"
+],
+"d": [
+"prazo de cinco anos",
+"autorização legislativa"
+]
+},
+{
+"n": 12,
+"m": "B",
+"b": [
+"independe do valor",
+"dispensa por valor"
+],
+"d": [
+"decorre do valor",
+"dispensa por urgência"
+]
+},
+{
+"n": 13,
+"m": "B",
+"b": [
+"operação continuada",
+"até 15 anos"
+],
+"d": [
+"até 5 anos",
+"até 10 anos"
+]
+},
+{
+"n": 14,
+"m": "C",
+"b": [
+"modificar e extinguir unilateralmente",
+"sanções motivadas"
+],
+"d": [
+"modificar bilateralmente",
+"sanções sem motivação"
+]
+},
+{
+"n": 15,
+"m": "B",
+"b": [
+"escopo predefinido",
+"prorroga automaticamente",
+"previsão em edital"
+],
+"d": [
+"não se prorroga",
+"ata de registro de preços"
+]
+},
+{
+"n": 16,
+"m": "B",
+"t": "Frustrada a contratação do vencedor, o licitante remanescente celebra o ajuste segundo as condições propostas pelo licitante vencedor.",
+"b": [
+"licitante remanescente",
+"condições propostas pelo licitante vencedor"
+],
+"d": [
+"condições de sua própria proposta",
+"condições do edital"
+]
+},
+{
+"n": 18,
+"m": "B",
+"t": "O domicílio da contratada no exterior não basta para o foro estrangeiro, que só cabe nas exceções taxativas; a regra é o foro da sede da Administração.",
+"b": [
+"exceções taxativas",
+"foro da sede da Administração"
+],
+"d": [
+"foro do país da contratada",
+"exceções discricionárias"
+]
+},
+{
+"n": 20,
+"m": "B",
+"t": "Os serviços continuados atendem a necessidade permanente ou prolongada da Administração.",
+"b": [
+"continuados",
+"necessidade permanente ou prolongada"
+],
+"d": [
+"prestação de serviço específico em período predeterminado",
+"necessidade eventual e pontual"
+]
+},
+{
+"n": 22,
+"m": "A",
+"r": [
+[
+"ao edital e à proposta do licitante vencedor",
+"ao ato que autorizou a contratação direta e à respectiva proposta"
+]
+],
+"b": [
+"ato que autorizou a contratação direta",
+"respectiva proposta"
+],
+"d": [
+"edital",
+"parecer jurídico"
+]
+},
+{
+"n": 24,
+"m": "C",
+"b": [
+"constar expressamente do instrumento contratual",
+"conteúdo necessário"
+],
+"d": [
+"constar apenas da lei",
+"conteúdo facultativo"
+]
+},
+{
+"n": 28,
+"m": "B",
+"t": "O fiscal informará a seus superiores, em tempo hábil, o que ultrapassar sua competência.",
+"b": [
+"informará a seus superiores",
+"em tempo hábil"
+],
+"d": [
+"decidirá por conta própria",
+"posteriormente"
+]
+},
+{
+"n": 30,
+"m": "B",
+"b": [
+"não reduz a responsabilidade do contratado",
+"responsabilidade solidária da Administração"
+],
+"d": [
+"atenua",
+"responsabilidade subsidiária"
+]
+},
+{
+"n": 31,
+"m": "B",
+"b": [
+"não pode ser recusado",
+"apenas comunica o superior"
+],
+"d": [
+"é facultativo",
+"decide sozinho",
+"pode declinar sumariamente"
+]
+},
+{
+"n": 32,
+"m": "B",
+"t": "O terceiro contratado apenas assiste e subsidia o fiscal, sem exercer atribuições próprias e exclusivas da fiscalização.",
+"b": [
+"assiste e subsidia",
+"atribuições próprias e exclusivas"
+],
+"d": [
+"substitui o fiscal",
+"assume a supervisão geral"
+]
+},
+{
+"n": 33,
+"m": "B",
+"b": [
+"impedem a designação",
+"trabalhistas",
+"não há exceção"
+],
+"d": [
+"não impedem a designação",
+"admite-se exceção"
+]
+},
+{
+"n": 35,
+"m": "B",
+"b": [
+"recebimento definitivo é do gestor",
+"provisório é dos fiscais"
+],
+"d": [
+"do fiscal",
+"do ordenador de despesa"
+]
+},
+{
+"n": 38,
+"m": "B",
+"b": [
+"só assistem e subsidiam",
+"não podem substituí-lo"
+],
+"d": [
+"substituem o fiscal",
+"respondem sozinhos"
+]
+},
+{
+"n": 39,
+"m": "B",
+"t": "A fiscalização setorial consiste no acompanhamento da execução em setores ou unidades distintos de um mesmo órgão ou entidade.",
+"b": [
+"setores ou unidades distintos",
+"mesmo órgão ou entidade"
+],
+"d": [
+"pesquisa de satisfação",
+"órgãos distintos"
+]
+},
+{
+"n": 41,
+"m": "B",
+"b": [
+"não transfere",
+"permanece com o fiscal"
+],
+"d": [
+"transfere à consultoria",
+"passa ao gestor"
+]
+},
+{
+"n": 42,
+"m": "A",
+"r": [
+[
+"designado pela Administração contratante",
+"aceito pela Administração contratante"
+]
+],
+"b": [
+"manter preposto",
+"aceito pela Administração contratante"
+],
+"d": [
+"designado pela Administração",
+"nomeado pelo fiscal"
+]
+},
+{
+"n": 45,
+"m": "B",
+"b": [
+"Conforme a natureza dos serviços",
+"escala semanal ou mensal"
+],
+"d": [
+"Em qualquer serviço",
+"escala diária"
+]
+},
+{
+"n": 47,
+"m": "B",
+"b": [
+"não desonera o contratado",
+"nem transfere a ele"
+],
+"d": [
+"isenta o contratado",
+"transfere ao preposto"
+]
+},
+{
+"n": 49,
+"m": "B",
+"b": [
+"só é exigida",
+"natureza da prestação dos serviços"
+],
+"d": [
+"sempre exigida",
+"valor do contrato"
+]
+},
+{
+"n": 50,
+"m": "C",
+"b": [
+"não constitui, por si só, fundamento legítimo",
+"vedado o retardamento imotivado"
+],
+"d": [
+"constitui fundamento legítimo",
+"permitido o retardamento"
+]
+},
+{
+"n": 52,
+"m": "B",
+"t": "Identificada incorreção decorrente dos materiais empregados, cabe ao contratado corrigir às suas expensas, com ou sem culpa.",
+"b": [
+"às suas expensas",
+"com ou sem culpa"
+],
+"d": [
+"às expensas da Administração",
+"somente com culpa"
+]
+},
+{
+"n": 54,
+"m": "C",
+"b": [
+"trabalhistas, previdenciários, fiscais e comerciais",
+"não se modifica"
+],
+"d": [
+"trabalhistas e previdenciários, apenas",
+"se transfere à Administração"
+]
+},
+{
+"n": 57,
+"m": "B",
+"t": "Havendo indício de inadimplemento de obrigações trabalhistas ou previdenciárias, a Administração pode reter cautelarmente créditos, observada a proporcionalidade com os valores inadimplidos.",
+"b": [
+"observada a proporcionalidade",
+"valores inadimplidos"
+],
+"d": [
+"integralidade dos créditos",
+"dispensada a proporcionalidade"
+]
+},
+{
+"n": 58,
+"m": "B",
+"t": "A subcontratação de empresa cujo dirigente é parente do agente responsável pela gestão do contrato é vedada, pois o parentesco gera vínculo civil que a impede.",
+"b": [
+"é vedada",
+"vínculo civil"
+],
+"d": [
+"é permitida",
+"vínculo econômico"
+]
+},
+{
+"n": 61,
+"m": "B",
+"t": "A repactuação é utilizada em serviços contínuos com dedicação exclusiva ou predominância de mão de obra, mediante demonstração analítica da variação dos custos.",
+"b": [
+"dedicação exclusiva ou predominância de mão de obra",
+"demonstração analítica da variação dos custos"
+],
+"d": [
+"sem dedicação exclusiva",
+"aplicação direta de índices"
+]
+},
+{
+"n": 62,
+"m": "B",
+"t": "O impedimento de licitar e contratar produz efeitos na administração direta e indireta do ente federativo que aplicou a sanção.",
+"b": [
+"do ente federativo que aplicou a sanção",
+"direta e indireta"
+],
+"d": [
+"todos os entes federativos",
+"âmbito nacional"
+]
+},
+{
+"n": 63,
+"m": "B",
+"t": "O interstício mínimo de um ano para o primeiro reajuste é contado a partir da data da proposta ou do orçamento.",
+"b": [
+"um ano",
+"data da proposta ou do orçamento"
+],
+"d": [
+"três anos",
+"data de assinatura do contrato"
+]
+},
+{
+"n": 64,
+"m": "B",
+"t": "A advertência continua no rol de sanções, ao lado de multa, impedimento de licitar e contratar e declaração de inidoneidade.",
+"b": [
+"advertência continua",
+"impedimento de licitar e contratar"
+],
+"d": [
+"advertência foi extinta",
+"suspensão temporária"
+]
+},
+{
+"n": 66,
+"m": "B",
+"t": "A multa pode variar de 0,5% a 30% do valor do contrato, sendo a liberdade do edital limitada pelos percentuais legais.",
+"b": [
+"0,5% a 30%",
+"pelos percentuais legais"
+],
+"d": [
+"1% a 20%",
+"plena liberdade"
+]
+},
+{
+"n": 68,
+"m": "B",
+"b": [
+"até 3 anos",
+"no ente que o aplicou"
+],
+"d": [
+"até 5 anos",
+"em todos os entes"
+]
+},
+{
+"n": 74,
+"m": "B",
+"t": "O programa de integridade implantado ou aperfeiçoado deve ser considerado pela Administração na aplicação das sanções.",
+"b": [
+"programa de integridade",
+"deve ser considerado"
+],
+"d": [
+"não pode ser considerado",
+"somente a gravidade da infração"
+]
+},
+{
+"n": 75,
+"m": "B",
+"t": "A extinção do contrato não configura óbice ao reconhecimento de desequilíbrio econômico-financeiro, podendo ser concedida indenização por termo indenizatório.",
+"b": [
+"não configura óbice",
+"termo indenizatório"
+],
+"d": [
+"constitui óbice intransponível",
+"termo aditivo"
+]
+},
+{
+"n": 77,
+"m": "B",
+"t": "Conforme a Súmula 214/TCU, a Administração pode promover aditivos de equilíbrio econômico-financeiro desde que as alterações não desfigurem o objeto original licitado.",
+"b": [
+"Súmula 214/TCU",
+"não desfigurem o objeto"
+],
+"d": [
+"Súmula 331/TST",
+"alterem a essência do objeto"
+]
+},
+{
+"n": 78,
+"m": "B",
+"b": [
+"35%",
+"teto legal de 30%"
+],
+"d": [
+"45%",
+"teto legal de 20%"
+]
+},
+{
+"n": 79,
+"m": "B",
+"t": "A advertência só cabe na inexecução parcial, para infração que não justifique sanção mais grave.",
+"b": [
+"inexecução parcial",
+"não justifique sanção mais grave"
+],
+"d": [
+"qualquer infração leve",
+"inexecução total"
+]
+},
+{
+"n": 83,
+"m": "B",
+"t": "O impedimento de licitar e contratar, pelo prazo máximo de 3 anos, produz efeitos no âmbito do ente que o aplicou.",
+"b": [
+"3 anos",
+"âmbito do ente que o aplicou"
+],
+"d": [
+"6 anos",
+"âmbito nacional"
+]
+},
+{
+"n": 85,
+"m": "B",
+"b": [
+"ministro de Estado",
+"secretário estadual ou municipal",
+"autoridade máxima"
+],
+"d": [
+"chefe de gabinete",
+"pregoeiro",
+"diretor-geral"
+]
+},
+{
+"n": 86,
+"m": "C",
+"b": [
+"simples apostila",
+"termo aditivo"
+],
+"d": [
+"nova licitação",
+"termo de rescisão"
+]
+},
+{
+"n": 88,
+"m": "B",
+"b": [
+"por acordo",
+"circunstância superveniente",
+"sem antecipação"
+],
+"d": [
+"unilateralmente",
+"com antecipação"
+]
+},
+{
+"n": 90,
+"m": "B",
+"t": "Em reforma de edifício ou equipamento, os acréscimos podem chegar a 50% e as supressões continuam em 25%.",
+"b": [
+"50%",
+"25%"
+],
+"d": [
+"30%",
+"75%"
+]
+},
+{
+"n": 93,
+"m": "B",
+"t": "A conta-depósito vinculada destina-se às obrigações trabalhistas, previdenciárias e do FGTS dos empregados da contratada.",
+"b": [
+"conta-depósito vinculada",
+"obrigações trabalhistas, previdenciárias e do FGTS"
+],
+"d": [
+"danos ao patrimônio da Administração",
+"conta corrente do contratado"
+]
+},
+{
+"n": 94,
+"m": "B",
+"t": "Na matriz de alocação de riscos, os eventos podem ser atribuídos ao contratante, ao contratado ou de forma compartilhada.",
+"b": [
+"matriz de alocação de riscos",
+"de forma compartilhada"
+],
+"d": [
+"integralmente ao contratado",
+"matriz de preços"
+]
+},
+{
+"n": 96,
+"m": "B",
+"t": "A modificação do projeto ou das especificações para melhor adequação técnica é alteração unilateral da Administração, sem depender de acordo.",
+"b": [
+"alteração unilateral",
+"sem depender de acordo"
+],
+"d": [
+"alteração consensual",
+"dependente de acordo"
+]
+},
+{
+"n": 97,
+"m": "B",
+"t": "A fiscalização setorial consiste no acompanhamento da execução em setores ou unidades desconcentradas do mesmo órgão.",
+"b": [
+"fiscalização setorial",
+"unidades desconcentradas"
+],
+"d": [
+"fiscalização técnica",
+"pesquisa de satisfação"
+]
+},
+{
+"n": 100,
+"m": "B",
+"b": [
+"por acordo",
+"fato imprevisível",
+"repartição de riscos"
+],
+"d": [
+"unilateralmente",
+"fato previsível",
+"alocação integral ao contratado"
+]
+},
+{
+"n": 102,
+"m": "B",
+"b": [
+"acordo entre as partes",
+"não é alteração unilateral"
+],
+"d": [
+"decisão unilateral da Administração",
+"autorização do tribunal de contas"
+]
+},
+{
+"n": 104,
+"m": "B",
+"b": [
+"independentemente do prazo",
+"orçamento estimado",
+"mais de um índice"
+],
+"d": [
+"somente nos contratos superiores a um ano",
+"data da assinatura",
+"um único índice geral"
+]
+},
+{
+"n": 106,
+"m": "B",
+"b": [
+"reajuste em sentido estrito",
+"sem dedicação exclusiva"
+],
+"d": [
+"revisão contratual",
+"com predominância de mão de obra"
+]
+},
+{
+"n": 107,
+"m": "B",
+"b": [
+"atualizado durante a gestão do contrato",
+"eventos relevantes"
+],
+"d": [
+"elaborado uma única vez",
+"qualquer alteração de preço"
+]
+},
+{
+"n": 108,
+"m": "B",
+"b": [
+"dedicação exclusiva ou predominância de mão de obra",
+"não de qualquer serviço contínuo"
+],
+"d": [
+"qualquer contrato administrativo",
+"obras de engenharia"
+]
+},
+{
+"n": 114,
+"m": "A",
+"r": [
+[
+"constitui obrigação do contratado",
+"é facultativa, a critério da autoridade, com previsão no edital"
+]
+],
+"b": [
+"facultativa",
+"a critério da autoridade",
+"previsão no edital"
+],
+"d": [
+"obrigatória",
+"automática",
+"previsão em regulamento"
+]
+},
+{
+"n": 116,
+"m": "B",
+"b": [
+"mais de dois meses",
+"emissão da nota fiscal"
+],
+"d": [
+"três meses",
+"data do vencimento"
+]
+},
+{
+"n": 117,
+"m": "B",
+"b": [
+"antes do documento de cobrança",
+"valor exato já líquido"
+],
+"d": [
+"após o pagamento",
+"valor bruto contratado"
+]
+},
+{
+"n": 118,
+"m": "B",
+"b": [
+"não dispensa",
+"a cada exercício",
+"plano plurianual"
+],
+"d": [
+"lei de diretrizes orçamentárias",
+"somente na contratação",
+"lei orçamentária anual"
+]
+},
+{
+"n": 119,
+"m": "B",
+"t": "O fiscal técnico tem o dever de registrar as ocorrências, cabendo o processo punitivo à comissão.",
+"b": [
+"registrar as ocorrências",
+"comissão"
+],
+"d": [
+"conduzir o processo de apuração",
+"autoridade máxima"
+]
+},
+{
+"n": 120,
+"m": "A",
+"r": [
+[
+"corresponde à duração que deverá ser adotada pela Administração, não podendo o ajuste estabelecer período inferior",
+"corresponde à duração máxima permitida, podendo o ajuste estabelecer período inferior"
+]
+],
+"b": [
+"duração máxima permitida",
+"período inferior"
+],
+"d": [
+"duração mínima obrigatória",
+"período superior"
+]
+},
+{
+"n": 122,
+"m": "B",
+"b": [
+"90 dias úteis",
+"direito à extinção",
+"independentemente das indenizações"
+],
+"d": [
+"três meses",
+"90 dias corridos",
+"condicionada às indenizações"
+]
+},
+{
+"n": 124,
+"m": "B",
+"b": [
+"autorização expressa",
+"ministro de Estado ou do secretário competente"
+],
+"d": [
+"decisão do gestor do contrato",
+"parecer do controle interno"
+]
+},
+{
+"n": 126,
+"m": "B",
+"b": [
+"análise conjunta",
+"complexidade técnica e riscos"
+],
+"d": [
+"análise alternativa",
+"apenas a complexidade técnica"
+]
+},
+{
+"n": 128,
+"m": "B",
+"b": [
+"atualizada monetariamente",
+"contratado depositário",
+"acrescido ao da garantia"
+],
+"d": [
+"valor nominal",
+"Administração depositária",
+"deduzido da garantia"
+]
+},
+{
+"n": 135,
+"m": "B",
+"b": [
+"índices específicos ou setoriais",
+"custos dos insumos"
+],
+"d": [
+"livre flutuação de preços",
+"IPCA aplicado automaticamente",
+"despesas individuais de cada empresa"
+]
+},
+{
+"n": 139,
+"m": "C",
+"b": [
+"fiscal administrativo",
+"valor proporcional"
+],
+"d": [
+"fiscal técnico",
+"valor integral das faturas"
+]
+},
+{
+"n": 140,
+"m": "B",
+"b": [
+"administrativa e civilmente",
+"vícios aparentes não anotados"
+],
+"d": [
+"apenas administrativamente",
+"vícios ocultos"
+]
+},
+{
+"n": 141,
+"m": "A",
+"r": [
+[
+"da data da assinatura do contrato administrativo de prestação de serviços continuados",
+"da data da proposta (custos de mercado) ou da convenção coletiva (mão de obra)"
+]
+],
+"b": [
+"data da proposta",
+"convenção coletiva"
+],
+"d": [
+"data da assinatura",
+"data da publicação"
+]
+},
+{
+"n": 143,
+"m": "B",
+"b": [
+"meios alternativos de resolução de controvérsias",
+"não são privativos"
+],
+"d": [
+"via judicial exclusiva",
+"são exclusivos"
+]
+},
+{
+"n": 152,
+"m": "A",
+"r": [
+[
+"atua de forma isolada, sendo-lhe vedado recorrer a outros órgãos de assessoramento da Administração Pública para subsidiar suas análises técnicas de execução, sob pena de violação à autonomia funcional do encargo",
+"é auxiliado pelos órgãos de assessoramento jurídico e de controle interno, que subsidiam suas análises técnicas de execução"
+]
+],
+"b": [
+"assessoramento jurídico e de controle interno",
+"subsidiam"
+],
+"d": [
+"atua de forma isolada",
+"dispensam",
+"assessoramento financeiro e orçamentário"
+]
+},
+{
+"n": 154,
+"m": "B",
+"b": [
+"fiscalização do órgão",
+"toma ciência",
+"apresentar justificativa"
+],
+"d": [
+"própria empresa contratada",
+"aprova o resultado",
+"dispensa a fiscalização"
+]
+},
+{
+"n": 156,
+"m": "C",
+"b": [
+"preclusão lógica",
+"antes da assinatura da prorrogação"
+],
+"d": [
+"prescrição",
+"após o término do contrato"
+]
+},
+{
+"n": 157,
+"m": "A",
+"r": [
+[
+"fica impedida por completo de reconhecer",
+"não fica impedida de reconhecer"
+],
+[
+"cabendo à empresa buscar ressarcimento exclusivamente por via judicial",
+"havendo indenização por termo indenizatório, e não só pela via judicial"
+]
+],
+"b": [
+"não fica impedida",
+"termo indenizatório"
+],
+"d": [
+"está proibida",
+"aditivo contratual"
+]
+},
+{
+"n": 160,
+"m": "A",
+"r": [
+[
+"mediante o mero pagamento das multas devidas e decurso de tempo, sendo-lhe facultativa a comprovação",
+"mediante reparação do dano, pagamento da multa e decurso do prazo mínimo, sendo-lhe obrigatória a comprovação"
+]
+],
+"b": [
+"reparação do dano",
+"obrigatória",
+"programa de integridade"
+],
+"d": [
+"mero pagamento da multa",
+"facultativa",
+"parecer do controle interno"
+]
+},
+{
+"n": 162,
+"m": "B",
+"b": [
+"fatores fora do controle do prestador",
+"não proibir"
+],
+"d": [
+"desempenho estritamente fático",
+"vedar"
+]
+},
+{
+"n": 165,
+"m": "A",
+"r": [
+[
+"contudo, a posse de novo Governante do Distrito Federal ou a troca de Secretário titular da pasta demandante caracteriza justa causa para a suspensão discricionária e unilateral do contrato por até 90 dias, sem ônus indenizatório para o Estado",
+"e a posse de novo Governante do Distrito Federal ou a troca de Secretário titular da pasta demandante não caracteriza justa causa para suspender o contrato"
+]
+],
+"b": [
+"atrasar imotivadamente",
+"não caracteriza justa causa"
+],
+"d": [
+"atrasar motivadamente",
+"constitui justa causa"
+]
+},
+{
+"n": 166,
+"m": "A",
+"r": [
+[
+"de realização compulsória e obrigatória para todos os contratos celebrados sob o regime de execução indireta, inclusive nas contratações simplificadas de pronto pagamento e entrega imediata de bens comuns",
+"de realização apenas quando a natureza da prestação exigir"
+]
+],
+"b": [
+"apenas quando",
+"natureza da prestação"
+],
+"d": [
+"sempre",
+"em todos os contratos",
+"valor do contrato"
+]
+},
+{
+"n": 167,
+"m": "B",
+"b": [
+"contratado responde",
+"não exclui nem reduz"
+],
+"d": [
+"Administração responde",
+"exclui ou reduz"
+]
+},
+{
+"n": 170,
+"m": "A",
+"r": [
+[
+"ficam suspensas até que seja providenciada a designação",
+"cabem ao responsável pela designação até que seja providenciada a designação"
+]
+],
+"b": [
+"cabem ao responsável pela designação",
+"falta de designação"
+],
+"d": [
+"ficam suspensas",
+"cabem ao gestor anterior"
+]
+},
+{
+"n": 171,
+"m": "C",
+"b": [
+"motivadamente",
+"titular do setor"
+],
+"d": [
+"sem motivação",
+"chefe do órgão"
+]
+},
+{
+"n": 172,
+"m": "A",
+"r": [
+[
+"limita-se a representar o público usuário, não exercendo as atribuições próprias dos fiscais técnico e administrativo",
+"exerce as atribuições próprias dos fiscais técnico e administrativo, não se limitando a representar o público usuário"
+]
+],
+"b": [
+"exerce as atribuições próprias",
+"não se limitando"
+],
+"d": [
+"limita-se",
+"apenas fiscaliza o público"
+]
+},
+{
+"n": 176,
+"m": "A",
+"r": [
+[
+"subsiste mesmo em caso de",
+"não é admitido em caso de"
+]
+],
+"b": [
+"três meses",
+"não é admitido",
+"calamidade pública"
+],
+"d": [
+"seis meses",
+"subsiste",
+"pandemia"
+]
+},
+{
+"n": 177,
+"m": "A",
+"r": [
+[
+"mas não terá direito à devolução da garantia, que permanece retida até decisão judicial",
+"e terá direito à devolução da garantia"
+]
+],
+"b": [
+"culpa exclusiva da Administração",
+"terá direito à devolução da garantia"
+],
+"d": [
+"culpa exclusiva do contratado",
+"não terá direito"
+]
+},
+{
+"n": 178,
+"m": "C",
+"b": [
+"15 dias úteis",
+"intimação"
+],
+"d": [
+"10 dias úteis",
+"publicação do ato"
+]
+},
+{
+"n": 180,
+"m": "A",
+"r": [
+[
+"em autos distintos, cada qual com seu rito e sua autoridade competente",
+"conjuntamente, nos mesmos autos"
+]
+],
+"b": [
+"conjuntamente",
+"mesmos autos"
+],
+"d": [
+"autos distintos",
+"separadamente"
+]
+},
+{
+"n": 181,
+"m": "C",
+"b": [
+"15 dias úteis",
+"Ceis e no Cnep"
+],
+"d": [
+"30 dias úteis",
+"Cadin e no Sicaf"
+]
+},
+{
+"n": 183,
+"m": "A",
+"r": [
+[
+"a qualquer pedido de restabelecimento do equilíbrio econômico-financeiro, inclusive os decorrentes de alterações unilaterais determinadas pela Administração",
+"aos pedidos de restabelecimento do equilíbrio econômico-financeiro relacionados aos riscos assumidos, ressalvadas as alterações unilaterais determinadas pela Administração"
+]
+],
+"b": [
+"riscos assumidos",
+"ressalvadas"
+],
+"d": [
+"quaisquer riscos",
+"incluídas"
+]
+},
+{
+"n": 188,
+"m": "C",
+"b": [
+"não excluem nem revogam",
+"lei especial"
+],
+"d": [
+"substituem",
+"lei complementar"
+]
+},
+{
+"n": 189,
+"m": "C",
+"b": [
+"não se aplica",
+"Lei nº 13.303/2016"
+],
+"d": [
+"aplica-se integralmente",
+"Lei nº 14.133/2021"
+]
+},
+{
+"n": 190,
+"m": "A",
+"r": [
+[
+"exclusivamente na forma presencial, vedada a forma eletrônica",
+"preferencialmente na forma eletrônica"
+]
+],
+"b": [
+"preferencialmente",
+"forma eletrônica"
+],
+"d": [
+"exclusivamente",
+"forma presencial"
+]
+},
+{
+"n": 191,
+"m": "C",
+"b": [
+"1 (um) ano",
+"última repactuação"
+],
+"d": [
+"2 (dois) anos",
+"assinatura do contrato"
+]
+},
+{
+"n": 192,
+"m": "B",
+"b": [
+"solicitação do contratado",
+"demonstração analítica dos custos"
+],
+"d": [
+"iniciativa da Administração",
+"parecer jurídico"
+]
+},
+{
+"n": 193,
+"m": "C",
+"b": [
+"mais de uma categoria profissional",
+"poderá ser dividida"
+],
+"d": [
+"uma única categoria",
+"deverá ser unificada"
+]
+},
+{
+"n": 197,
+"m": "A",
+"r": [
+[
+"obrigatoriamente, de quinze dias",
+"preferencialmente, de 1 mês"
+]
+],
+"b": [
+"preferencialmente",
+"1 mês"
+],
+"d": [
+"obrigatoriamente",
+"quinze dias"
+]
+},
+{
+"n": 198,
+"m": "C",
+"b": [
+"nulos de pleno direito",
+"periodicidade inferior à anual"
+],
+"d": [
+"anuláveis",
+"periodicidade superior à anual"
+]
+},
+{
+"n": 7,
+"m": "B",
+"b": [
+"índice da poupança"
+],
+"d": [
+"IPCA",
+"taxa Selic"
+]
+},
+{
+"n": 55,
+"m": "B",
+"b": [
+"glosa parcial",
+"valor exato dimensionado pela fiscalização"
+],
+"d": [
+"glosa total",
+"valor bruto contratado"
+]
+},
+{
+"n": 65,
+"m": "B",
+"b": [
+"independentemente do prazo",
+"data do orçamento estimado"
+],
+"d": [
+"somente acima de um ano",
+"data da assinatura"
+]
+},
+{
+"n": 71,
+"m": "B",
+"b": [
+"preclui",
+"assinatura da prorrogação contratual"
+],
+"d": [
+"prescreve",
+"publicação do extrato"
+]
+},
+{
+"n": 111,
+"m": "B",
+"t": "O contratado tem direito à extinção se a suspensão por ordem escrita passar de três meses e, por culpa da Administração, é ressarcido dos prejuízos comprovados.",
+"b": [
+"três meses",
+"ressarcido dos prejuízos comprovados"
+],
+"d": [
+"dois meses",
+"seis meses",
+"sem direito a indenização"
+]
+},
+{
+"n": 115,
+"m": "B",
+"b": [
+"descaracteriza o objeto",
+"vedada de forma absoluta"
+],
+"d": [
+"permitida até 25%",
+"admitida com justificativa"
+]
+},
+{
+"n": 121,
+"m": "B",
+"b": [
+"segregação de funções",
+"terceiro grau"
+],
+"d": [
+"unificação de funções",
+"segundo grau",
+"quinto grau"
+]
+},
+{
+"n": 123,
+"m": "B",
+"b": [
+"demonstração analítica",
+"planilha de custos e formação de preços"
+],
+"d": [
+"mera declaração do contratado",
+"tabela de preços de mercado"
+]
+},
+{
+"n": 129,
+"m": "B",
+"b": [
+"facultativa",
+"instrumento substituto"
+],
+"d": [
+"obrigatória",
+"vedada"
+]
+},
+{
+"n": 131,
+"m": "B",
+"b": [
+"terceiro grau",
+"licitação, fiscalização ou gestão do contrato"
+],
+"d": [
+"segundo grau",
+"quarto grau"
+]
+},
+{
+"n": 138,
+"m": "B",
+"b": [
+"recebimento definitivo",
+"garantia em dinheiro"
+],
+"d": [
+"recebimento provisório",
+"assinatura do contrato",
+"fiança bancária"
+]
+},
+{
+"n": 144,
+"m": "B",
+"b": [
+"averbação de tempo para aposentadoria",
+"matéria de pessoal"
+],
+"d": [
+"reajuste de preços",
+"matéria de licitação"
+]
+},
+{
+"n": 145,
+"m": "B",
+"b": [
+"taxas de inscrição em concursos",
+"receita pública"
+],
+"d": [
+"garantia contratual",
+"despesa pública",
+"reajuste de preços"
+]
+},
+{
+"n": 146,
+"m": "B",
+"b": [
+"conselhos de fiscalização",
+"concurso"
+],
+"d": [
+"tribunais de contas",
+"licitação",
+"equilíbrio econômico"
+]
+}
+]
