@@ -381,7 +381,15 @@ function treinoClique(e){
   if(t.closest('[data-tr-tema]')){ if(typeof alternarTema === 'function') alternarTema(); const atual = TR; TRS.slice().forEach(x => { TR = x; treinoDesenhar(); }); TR = atual; return; }
   if(t.closest('[data-tr-limpar]')){ TR.menuReset = false; TR.slots.fill(null); TR.checado = false; TR.sel = null; treinoDesenhar(); return; }      // só a questão atual
   if(t.closest('[data-tr-resetar]')){ const it = TR.fila[TR.i]; if(it){ treinoMarcar(TR.slug, treinoChaveItem(it, 'l'), ''); const n = treinoNovaLacuna(it); TR.mem[treinoChaveItem(it, 'l')] = n; TR.slots = n.slots; TR.banco = n.banco; TR.checado = false; TR.sel = null; treinoDesenhar(); } return; }
-  if((el = t.closest('[data-tr-chip]'))){ if(TR.checado) return; const id = parseInt(el.dataset.trChip, 10); TR.sel = TR.sel === id ? null : id; treinoDesenhar(); return; }
+  if((el = t.closest('[data-tr-chip]'))){
+    if(TR.checado) return; const id = parseInt(el.dataset.trChip, 10), agora = Date.now();
+    if(TR.ultChip && TR.ultChip.id === id && agora - TR.ultChip.t < 450){      // duplo toque na palavra: vai para o primeiro espaço em branco
+      TR.ultChip = null; const bi = TR.slots.findIndex(s => !s);
+      if(bi >= 0){ treinoColocar(id, bi); return; }
+    }
+    TR.ultChip = { id, t:agora };
+    TR.sel = TR.sel === id ? null : id; treinoDesenhar(); return;
+  }
   if((el = t.closest('[data-tr-blank]'))){
     if(TR.checado) return; const bi = parseInt(el.dataset.trBlank, 10);
     if(TR.sel !== null){ treinoColocar(TR.sel, bi); return; }
