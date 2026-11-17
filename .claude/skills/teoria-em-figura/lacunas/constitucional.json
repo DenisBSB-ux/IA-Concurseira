@@ -1,0 +1,1328 @@
+[
+{
+"n": 1,
+"m": "B",
+"b": [
+"inconstitucional",
+"outra carreira",
+"novo concurso público"
+],
+"d": [
+"facultativo",
+"mesma carreira",
+"processo seletivo simplificado"
+]
+},
+{
+"n": 2,
+"m": "A",
+"r": [
+[
+"objetivo fundamental da República previsto no art. 3º da Constituição",
+"diretriz das relações internacionais prevista no parágrafo único do art. 4º da Constituição"
+]
+],
+"b": [
+"diretriz das relações internacionais",
+"parágrafo único do art. 4º"
+],
+"d": [
+"objetivo fundamental da República",
+"art. 3º",
+"fundamento da República"
+]
+},
+{
+"n": 4,
+"m": "A",
+"r": [
+[
+"o exercício de qualquer trabalho, ofício ou profissão fica condicionado a essa regulamentação",
+"o trabalho, ofício ou profissão é exercitável desde logo, sem depender dela"
+]
+],
+"b": [
+"direta e imediata",
+"exercitável desde logo"
+],
+"d": [
+"indireta e mediata",
+"condicionado a essa regulamentação"
+]
+},
+{
+"n": 6,
+"m": "C",
+"b": [
+"eficácia jurídica",
+"desde a entrada em vigor",
+"impedir a edição de legislação"
+],
+"d": [
+"eficácia social",
+"somente após a regulamentação",
+"autorizar"
+]
+},
+{
+"n": 12,
+"m": "B",
+"b": [
+"1/3",
+"maioria relativa",
+"3/5 em dois turnos"
+],
+"d": [
+"1/2",
+"maioria absoluta",
+"2/3 em três turnos"
+]
+},
+{
+"n": 15,
+"m": "B",
+"b": [
+"funções de confiança",
+"exclusivamente",
+"cargo efetivo"
+],
+"d": [
+"cargos em comissão",
+"preferencialmente",
+"livre nomeação"
+]
+},
+{
+"n": 16,
+"m": "B",
+"b": [
+"reprodução obrigatória",
+"quórum diferente de 3/5",
+"ADI 6453"
+],
+"d": [
+"reprodução facultativa",
+"quórum de 2/3",
+"ADI 2391"
+]
+},
+{
+"n": 18,
+"m": "C",
+"b": [
+"liberdade",
+"sociais, econômicos e culturais",
+"fraternidade ou solidariedade"
+],
+"d": [
+"igualdade",
+"coletivos e difusos",
+"soberania"
+]
+},
+{
+"n": 19,
+"m": "B",
+"b": [
+"vereador",
+"compatibilidade de horários",
+"acumula"
+],
+"d": [
+"prefeito",
+"horários distintos",
+"opta por uma delas"
+]
+},
+{
+"n": 20,
+"m": "A",
+"r": [
+[
+"somente podem ocorrer por decisão judicial transitada em julgado",
+"exigem decisão judicial, sendo o trânsito em julgado exigido só para a dissolução"
+]
+],
+"b": [
+"trânsito em julgado",
+"só para a dissolução"
+],
+"d": [
+"só para a suspensão",
+"para ambas",
+"mera decisão administrativa"
+]
+},
+{
+"n": 22,
+"m": "B",
+"b": [
+"prévio aviso",
+"não autorização",
+"qualquer informação"
+],
+"d": [
+"autorização prévia",
+"comunicação formal e pessoal",
+"notificação registrada"
+]
+},
+{
+"n": 24,
+"m": "B",
+"t": "As associações só podem ter suas atividades suspensas por decisão judicial, mesmo sem trânsito em julgado, mas sua dissolução compulsória exige decisão judicial transitada em julgado.",
+"b": [
+"mesmo sem trânsito em julgado",
+"transitada em julgado"
+],
+"d": [
+"ato do Ministério Público",
+"decisão administrativa",
+"apenas após o trânsito em julgado"
+]
+},
+{
+"n": 27,
+"m": "B",
+"b": [
+"policial civil não pode fazer greve",
+"desconto dos dias parados",
+"acordo de compensação"
+],
+"d": [
+"policial civil pode fazer greve",
+"desconto vedado",
+"acordo coletivo"
+]
+},
+{
+"n": 28,
+"m": "B",
+"t": "O nascido no exterior de pai brasileiro ou de mãe brasileira que venha residir no Brasil e optar pela nacionalidade brasileira, depois de atingida a maioridade, é brasileiro nato.",
+"b": [
+"depois de atingida a maioridade",
+"brasileiro nato"
+],
+"d": [
+"brasileiro naturalizado",
+"estrangeiro equiparado",
+"antes de atingida a maioridade"
+]
+},
+{
+"n": 32,
+"m": "A",
+"r": [
+[
+"pode alistar-se como eleitor, mas é",
+"não pode alistar-se como eleitor e, por isso, também é"
+]
+],
+"b": [
+"não pode alistar-se como eleitor",
+"inelegível"
+],
+"d": [
+"alistar-se facultativamente",
+"elegível a cargos municipais"
+]
+},
+{
+"n": 35,
+"m": "B",
+"b": [
+"aplicação imediata",
+"falta de regulamentação não impede"
+],
+"d": [
+"aplicação diferida",
+"depende de regulamentação"
+]
+},
+{
+"n": 36,
+"m": "B",
+"b": [
+"15 anos ininterruptos",
+"sem condenação penal",
+"requerimento"
+],
+"d": [
+"10 anos",
+"com reciprocidade",
+"por concessão discricionária"
+]
+},
+{
+"n": 38,
+"m": "B",
+"b": [
+"dois turnos",
+"10 dias",
+"2/3 da Câmara"
+],
+"d": [
+"três turnos",
+"30 dias",
+"3/5 da Câmara"
+]
+},
+{
+"n": 52,
+"m": "A",
+"r": [
+[
+"vedado",
+"permitido, aplicando-se a lei de greve do setor privado (Lei 7.783/1989)"
+]
+],
+"b": [
+"permitido",
+"setor privado",
+"Lei 7.783/1989"
+],
+"d": [
+"vedado",
+"Lei 8.112/1990",
+"setor público"
+]
+},
+{
+"n": 58,
+"m": "B",
+"b": [
+"Conselho da República",
+"solicita ao Congresso Nacional autorização"
+],
+"d": [
+"Conselho de Estado",
+"comunica em vinte e quatro horas",
+"decreta e submete"
+],
+"t": "No estado de sítio, o Presidente, ouvidos o Conselho da República e o Conselho de Defesa Nacional, solicita ao Congresso Nacional autorização para decretar a medida."
+},
+{
+"n": 60,
+"m": "A",
+"r": [
+[
+"criar ou extinguir órgãos públicos",
+"dispor sobre a organização e o funcionamento da administração, sem criar nem extinguir órgãos públicos"
+]
+],
+"b": [
+"sem criar nem extinguir órgãos públicos",
+"não haja aumento de despesa"
+],
+"d": [
+"criando órgãos públicos",
+"por meio de lei complementar",
+"desde que haja autorização do Congresso"
+]
+},
+{
+"n": 62,
+"m": "C",
+"b": [
+"decisão de mérito",
+"Senado Federal",
+"irrecorrível"
+],
+"d": [
+"Câmara dos Deputados",
+"Supremo Tribunal Federal",
+"passível de recurso ao STF"
+]
+},
+{
+"n": 66,
+"m": "B",
+"b": [
+"Congresso Nacional",
+"controle externo",
+"controle interno de cada Poder"
+],
+"d": [
+"Senado Federal",
+"controle social",
+"Tribunal de Contas"
+]
+},
+{
+"n": 80,
+"m": "C",
+"b": [
+"direito à criação",
+"não se estende à prorrogação",
+"deliberação formal da respectiva Casa"
+],
+"d": [
+"direito à extinção",
+"também alcança a prorrogação",
+"decisão monocrática do relator"
+]
+},
+{
+"n": 81,
+"m": "B",
+"b": [
+"veda a cassação",
+"transitada em julgado",
+"efeito automático"
+],
+"d": [
+"permite a cassação",
+"dependente de declaração judicial",
+"efeito facultativo"
+]
+},
+{
+"n": 82,
+"m": "C",
+"b": [
+"sigilos bancário, fiscal e de dados",
+"fundamentada"
+],
+"d": [
+"interceptação telefônica",
+"sigilo da correspondência",
+"homologada pelo STF"
+]
+},
+{
+"n": 87,
+"m": "B",
+"b": [
+"cassação",
+"suspensão",
+"enquanto durarem seus efeitos"
+],
+"d": [
+"perda definitiva",
+"extinção",
+"por prazo fixo de 5 anos"
+]
+},
+{
+"n": 89,
+"m": "B",
+"b": [
+"vedado",
+"recursos financeiros de entidades estrangeiras",
+"subordinação a governo estrangeiro"
+],
+"d": [
+"permitido",
+"desde que não haja subordinação",
+"autorizado pelo TSE"
+],
+"t": "É assegurada a liberdade de criação, fusão, incorporação e extinção de partidos políticos, sendo vedado o recebimento de recursos financeiros de entidades estrangeiras, bem como a subordinação a governo estrangeiro."
+},
+{
+"n": 90,
+"m": "C",
+"b": [
+"independência funcional",
+"autonomia administrativa e orçamentária",
+"inconstitucional"
+],
+"d": [
+"independência administrativa",
+"autonomia financeira e patrimonial",
+"válida"
+]
+},
+{
+"n": 100,
+"m": "B",
+"t": "O filho de brasileiros nascido no exterior é brasileiro nato se os pais estavam a serviço do Brasil ou se for registrado em repartição brasileira competente; o nascido no Brasil de pais estrangeiros, um deles a serviço de seu país, não é brasileiro.",
+"b": [
+"a serviço do Brasil",
+"registrado em repartição brasileira"
+],
+"d": [
+"a serviço de outro país",
+"registrado em cartório estrangeiro",
+"residente no exterior"
+]
+},
+{
+"n": 108,
+"m": "B",
+"t": "Será declarada a perda da nacionalidade do brasileiro que fizer pedido expresso de perda perante autoridade brasileira competente, ressalvadas as situações que acarretem apatridia.",
+"b": [
+"pedido expresso",
+"apatridia"
+],
+"d": [
+"opção por outra nacionalidade",
+"fixação de residência no exterior",
+"dupla cidadania"
+]
+},
+{
+"n": 109,
+"m": "B",
+"b": [
+"deixou de ser causa automática",
+"pedido expresso"
+],
+"d": [
+"continua sendo causa automática",
+"decisão judicial"
+]
+},
+{
+"n": 111,
+"m": "C",
+"b": [
+"conceito de casa",
+"abrangente",
+"desde que ocupado"
+],
+"d": [
+"restrito",
+"ainda que desocupado",
+"apenas a residência fixa"
+]
+},
+{
+"n": 115,
+"m": "B",
+"b": [
+"rito qualificado",
+"três quintos, dois turnos",
+"supralegal"
+],
+"d": [
+"maioria simples",
+"dois terços, um turno",
+"status de lei ordinária"
+]
+},
+{
+"n": 117,
+"m": "B",
+"b": [
+"asilo inviolável",
+"flagrante delito",
+"durante o dia"
+],
+"d": [
+"asilo relativo",
+"denúncia anônima",
+"durante a noite"
+]
+},
+{
+"n": 125,
+"m": "B",
+"t": "Ninguém será submetido a tortura nem a tratamento desumano ou degradante, e a vedação à tortura é norma inderrogável (jus cogens).",
+"b": [
+"Ninguém",
+"inderrogável"
+],
+"d": [
+"Somente o preso",
+"relativizável",
+"derrogável em estado de defesa"
+]
+},
+{
+"n": 126,
+"m": "B",
+"b": [
+"Tribunal Penal Internacional",
+"manifestado adesão",
+"emenda constitucional"
+],
+"d": [
+"Corte Internacional de Justiça",
+"lei complementar",
+"tenha sido criado antes"
+]
+},
+{
+"n": 127,
+"m": "B",
+"b": [
+"não excluem outros",
+"tratados",
+"fora do catálogo"
+],
+"d": [
+"excluem os demais",
+"decretos",
+"restritos ao catálogo"
+]
+},
+{
+"n": 133,
+"m": "B",
+"b": [
+"não afasta a responsabilidade civil",
+"indícios concretos da falsidade",
+"Tema 995"
+],
+"d": [
+"exclui toda responsabilidade",
+"indícios genéricos",
+"Tema 1127"
+]
+},
+{
+"n": 138,
+"m": "B",
+"b": [
+"revista invertida",
+"pessoa com deficiência intelectual",
+"dignidade"
+],
+"d": [
+"revista íntima",
+"revista vexatória",
+"autonomia"
+]
+},
+{
+"n": 140,
+"m": "B",
+"b": [
+"sigilo da correspondência",
+"sem ordem",
+"ilícita"
+],
+"d": [
+"sigilo bancário",
+"com mera requisição policial",
+"admitida com ressalvas"
+]
+},
+{
+"n": 145,
+"m": "B",
+"b": [
+"direito de reunião",
+"apenas prévio aviso"
+],
+"d": [
+"prévia notificação pessoal",
+"autorização prévia",
+"direito de associação"
+],
+"t": "O exercício do direito de reunião exige apenas prévio aviso ao poder público."
+},
+{
+"n": 146,
+"m": "B",
+"b": [
+"constitucional",
+"bem de família do fiador",
+"Tema 1127"
+],
+"d": [
+"inconstitucional",
+"Tema 1.000",
+"apenas locação residencial"
+]
+},
+{
+"n": 147,
+"m": "B",
+"b": [
+"acesso amplo",
+"já documentados",
+"sem necessidade de autorização judicial"
+],
+"d": [
+"acesso restrito",
+"ainda não documentados",
+"mediante autorização judicial"
+],
+"t": "O advogado do investigado tem acesso amplo aos elementos de prova já documentados no inquérito policial, sem necessidade de autorização judicial (SV 14)."
+},
+{
+"n": 148,
+"m": "B",
+"b": [
+"não contenha informações falsas",
+"apologia a crime"
+],
+"d": [
+"mesmo que contenha",
+"discurso político"
+],
+"t": "É livre a expressão da atividade de comunicação, desde que a mensagem não contenha informações falsas nem faça apologia a crime."
+},
+{
+"n": 150,
+"m": "A",
+"r": [
+[
+"é considerada inconstitucional",
+"é considerada constitucional"
+]
+],
+"b": [
+"considerada constitucional",
+"manifestação cultural"
+],
+"d": [
+"considerada inconstitucional",
+"sem eficácia",
+"prática religiosa"
+]
+},
+{
+"n": 151,
+"m": "B",
+"b": [
+"concorrente",
+"só normas gerais",
+"Estados e ao DF"
+],
+"d": [
+"privativa",
+"normas específicas",
+"Municípios"
+]
+},
+{
+"n": 152,
+"m": "B",
+"b": [
+"União",
+"diretamente",
+"autorização, concessão ou permissão"
+],
+"d": [
+"Estados",
+"exclusivamente pela iniciativa privada",
+"apenas mediante concessão"
+]
+},
+{
+"n": 154,
+"m": "B",
+"b": [
+"reservadas aos estados",
+"vedadas pela CF"
+],
+"d": [
+"reservadas à União",
+"atribuídas aos municípios",
+"reservadas ao Distrito Federal"
+],
+"t": "São reservadas aos estados as competências que não lhes sejam vedadas pela CF."
+},
+{
+"n": 155,
+"m": "B",
+"b": [
+"da Câmara",
+"auxílio",
+"Tribunal de Contas do Estado"
+],
+"d": [
+"do Prefeito",
+"fiscalização",
+"Tribunal de Contas da União"
+]
+},
+{
+"n": 156,
+"m": "B",
+"b": [
+"incluído o transporte coletivo",
+"interesse local"
+],
+"d": [
+"excetuado o transporte coletivo",
+"competência dos estados",
+"interesse regional"
+]
+},
+{
+"n": 157,
+"m": "B",
+"t": "A organização administrativa e judiciária dos territórios será definida por meio de lei.",
+"b": [
+"por meio de lei",
+"territórios"
+],
+"d": [
+"lei complementar",
+"decreto presidencial",
+"lei delegada"
+]
+},
+{
+"n": 158,
+"m": "B",
+"b": [
+"competências legislativas",
+"Estados e dos Municípios"
+],
+"d": [
+"somente dos Estados",
+"da União",
+"apenas dos Municípios"
+]
+},
+{
+"n": 159,
+"m": "B",
+"t": "O Distrito Federal possui as mesmas competências legislativas dos estados e, por não ser dividido em municípios, também pode legislar a respeito de matérias afetas aos municípios.",
+"b": [
+"também pode legislar",
+"não ser dividido em municípios"
+],
+"d": [
+"não pode legislar",
+"por ser dividido em municípios",
+"só pode legislar"
+]
+},
+{
+"n": 163,
+"m": "B",
+"b": [
+"não exclui",
+"competência suplementar",
+"concorrente"
+],
+"d": [
+"afasta",
+"privativa da União",
+"exclusiva"
+]
+},
+{
+"n": 164,
+"m": "C",
+"b": [
+"pertencem à União",
+"particulares"
+],
+"d": [
+"pertencem aos Estados",
+"pertencem ao proprietário",
+"Municípios"
+]
+},
+{
+"n": 167,
+"m": "B",
+"b": [
+"competência legislativa concorrente",
+"lei estadual"
+],
+"d": [
+"competência legislativa privativa da União",
+"lei municipal",
+"competência comum administrativa"
+]
+},
+{
+"n": 168,
+"m": "B",
+"b": [
+"só se violarem a Constituição",
+"interna corporis"
+],
+"d": [
+"sempre que violarem lei",
+"ato administrativo",
+"qualquer norma"
+]
+},
+{
+"n": 169,
+"m": "B",
+"t": "A exploração dos serviços de energia elétrica compete à União, diretamente ou mediante autorização, concessão ou permissão.",
+"b": [
+"compete à União",
+"autorização, concessão ou permissão"
+],
+"d": [
+"compete aos Estados",
+"livre iniciativa",
+"licitação"
+]
+},
+{
+"n": 171,
+"m": "B",
+"b": [
+"parecer prévio",
+"2/3 dos vereadores",
+"exclusivo"
+],
+"d": [
+"maioria simples",
+"3/5 dos vereadores",
+"compartilhado"
+]
+},
+{
+"n": 172,
+"m": "B",
+"b": [
+"poder de polícia",
+"taxa"
+],
+"d": [
+"poder hierárquico",
+"imposto",
+"contribuição de melhoria"
+]
+},
+{
+"n": 175,
+"m": "B",
+"t": "Direito penal e processual são de competência privativa da União, razão pela qual o decreto estadual não pode regular a extinção da punibilidade.",
+"b": [
+"privativa da União",
+"penal e processual"
+],
+"d": [
+"concorrente da União e dos Estados",
+"comum aos entes federados",
+"administrativo e tributário"
+]
+},
+{
+"n": 177,
+"m": "A",
+"r": [
+[
+"em razão da subordinação deste sistema de controle àquele",
+"embora não haja subordinação deste sistema de controle àquele"
+]
+],
+"b": [
+"embora não haja subordinação",
+"controle interno"
+],
+"d": [
+"em razão da subordinação",
+"hierarquia funcional",
+"por delegação"
+]
+},
+{
+"n": 185,
+"m": "C",
+"b": [
+"defensor público-geral da União",
+"autonomia"
+],
+"d": [
+"Advogado-Geral da União",
+"Procurador-Geral da República",
+"hierarquia"
+]
+},
+{
+"n": 187,
+"m": "B",
+"b": [
+"requisitar diligências à autoridade policial",
+"apenas representa"
+],
+"d": [
+"requisitar ao Ministério Público",
+"apenas fiscaliza",
+"Poder Judiciário"
+]
+},
+{
+"n": 188,
+"m": "B",
+"b": [
+"judicial e extrajudicialmente",
+"Poder Executivo"
+],
+"d": [
+"Poderes da República",
+"somente judicialmente",
+"Poder Legislativo"
+]
+},
+{
+"n": 189,
+"m": "B",
+"b": [
+"magistratura",
+"Ministério Público"
+],
+"d": [
+"Defensoria Pública",
+"advocacia pública",
+"Tribunal de Contas"
+]
+},
+{
+"n": 191,
+"m": "B",
+"b": [
+"instituição permanente",
+"função jurisdicional",
+"interesses sociais e individuais indisponíveis"
+],
+"d": [
+"instituição transitória",
+"função executiva",
+"interesses patrimoniais disponíveis"
+]
+},
+{
+"n": 197,
+"m": "B",
+"b": [
+"limites da LDO",
+"o Executivo ajusta"
+],
+"d": [
+"limites da LOA",
+"o Judiciário ajusta",
+"o Legislativo veta"
+]
+},
+{
+"n": 202,
+"m": "B",
+"t": "A Constituição Federal de 1988 é omissa quanto à competência para a denúncia de tratado, e o STF discute se a denúncia exige aprovação do Congresso Nacional.",
+"b": [
+"omissa",
+"aprovação do Congresso Nacional"
+],
+"d": [
+"atribuição exclusiva do presidente da República",
+"expressa",
+"aprovação do Senado"
+]
+},
+{
+"n": 204,
+"m": "B",
+"b": [
+"15 membros",
+"dois anos",
+"uma recondução"
+],
+"d": [
+"11 membros",
+"quatro anos",
+"duas reconduções"
+]
+},
+{
+"n": 205,
+"m": "B",
+"t": "Os advogados que integram o CNJ são indicados pelo Conselho Federal da OAB, sendo tal indicação ainda submetida à aprovação do Senado Federal.",
+"b": [
+"Conselho Federal da OAB",
+"Senado Federal"
+],
+"d": [
+"STF",
+"Câmara dos Deputados",
+"Presidente da República"
+]
+},
+{
+"n": 210,
+"m": "B",
+"t": "A sociedade de economia mista exploradora de atividade econômica que distribui dividendos aos acionistas não se submete ao regime de precatórios.",
+"b": [
+"distribui dividendos",
+"não se submete"
+],
+"d": [
+"não distribui lucros",
+"submete-se",
+"fica sujeita"
+]
+},
+{
+"n": 212,
+"m": "B",
+"b": [
+"Congresso Nacional",
+"90 dias"
+],
+"d": [
+"Tribunal de Contas da União",
+"30 dias",
+"Senado Federal"
+]
+},
+{
+"n": 220,
+"m": "B",
+"b": [
+"inconstitucional",
+"sucessiva ilimitada",
+"princípio republicano"
+],
+"d": [
+"permitida",
+"limitada a duas",
+"princípio federativo"
+]
+},
+{
+"n": 224,
+"m": "B",
+"b": [
+"quebra de sigilo bancário",
+"decisão fundamentada",
+"reservas de jurisdição"
+],
+"d": [
+"decretação de prisão",
+"interceptação telefônica",
+"busca domiciliar"
+]
+},
+{
+"n": 235,
+"m": "B",
+"t": "É vedada a edição de medida provisória sobre direito processual civil, mas não sobre direito civil.",
+"b": [
+"vedada",
+"direito processual civil"
+],
+"d": [
+"permitida",
+"direito administrativo",
+"direito empresarial"
+]
+},
+{
+"n": 236,
+"m": "B",
+"b": [
+"inconstitucional",
+"matéria estranha ao seu objeto",
+"devido processo legislativo"
+],
+"d": [
+"permitido",
+"matéria afim",
+"princípio da anterioridade"
+]
+},
+{
+"n": 239,
+"m": "B",
+"b": [
+"não convalida",
+"iniciativa privativa do Presidente",
+"inconstitucional"
+],
+"d": [
+"sana o vício",
+"iniciativa popular",
+"passa a ser válido"
+]
+},
+{
+"n": 240,
+"m": "B",
+"b": [
+"poderiam ser objeto de MP",
+"PEC não é trancada"
+],
+"d": [
+"todas as proposições",
+"PEC também é trancada",
+"apenas projetos de lei complementar"
+]
+},
+{
+"n": 245,
+"m": "B",
+"t": "A discussão e a votação de projeto de lei de iniciativa dos tribunais superiores terão início na Câmara dos Deputados.",
+"b": [
+"tribunais superiores",
+"Câmara dos Deputados"
+],
+"d": [
+"Senado Federal",
+"Presidente da República",
+"Comissão Mista"
+]
+},
+{
+"n": 249,
+"m": "A",
+"r": [
+[
+"da maioria absoluta",
+"de dois terços"
+]
+],
+"b": [
+"dois terços",
+"perda do cargo"
+],
+"d": [
+"maioria absoluta",
+"três quintos",
+"suspensão dos direitos políticos"
+]
+},
+{
+"n": 39,
+"m": "B",
+"t": "A norma constitucional de eficácia contida tem aplicabilidade imediata e pode ser restringida por lei; a de eficácia plena não admite restrição; a programática é de eficácia limitada.",
+"b": [
+"contida",
+"pode ser restringida",
+"limitada"
+],
+"d": [
+"relativa",
+"só pode ser alterada por emenda",
+"absoluta"
+]
+},
+{
+"n": 65,
+"m": "A",
+"r": [
+[
+"quarenta e quatro",
+"quarenta"
+]
+],
+"b": [
+"oito horas diárias",
+"quarenta",
+"trabalhadores domésticos"
+],
+"d": [
+"quarenta e quatro",
+"trinta e seis",
+"seis horas diárias"
+]
+},
+{
+"n": 79,
+"m": "B",
+"b": [
+"sufrágio universal",
+"plebiscito e referendo",
+"facultativos"
+],
+"d": [
+"voto indireto",
+"obrigatórios",
+"recall"
+]
+},
+{
+"n": 144,
+"m": "A",
+"r": [
+[
+"sem o consentimento do usuário",
+"sem o uso de força física contra o usuário"
+]
+],
+"b": [
+"vacinação compulsória",
+"sem o uso de força física"
+],
+"d": [
+"com o uso de força física",
+"vacinação facultativa",
+"com prévio consentimento"
+]
+},
+{
+"n": 166,
+"m": "B",
+"t": "É constitucional, em regra, segundo o STF, lei estadual que atribua aos policiais militares do estado a prestação voluntária de serviços de guarda de imóveis locais e de guarda de quartéis da corporação.",
+"b": [
+"constitucional",
+"prestação voluntária"
+],
+"d": [
+"inconstitucional",
+"prestação obrigatória",
+"lei federal"
+]
+},
+{
+"n": 196,
+"m": "B",
+"b": [
+"função de confiança",
+"admitida",
+"observado o teto"
+],
+"d": [
+"vedada",
+"teto municipal",
+"remuneração variável"
+]
+},
+{
+"n": 216,
+"m": "B",
+"b": [
+"Congresso Nacional",
+"sustar atos impugnados"
+],
+"d": [
+"Poder Executivo",
+"sustar contratos",
+"Senado Federal"
+]
+},
+{
+"n": 223,
+"m": "B",
+"b": [
+"simetria",
+"não amplia",
+"maioria absoluta"
+],
+"d": [
+"autonomia",
+"amplia livremente",
+"maioria simples"
+]
+},
+{
+"n": 241,
+"m": "B",
+"b": [
+"envio simultâneo",
+"projeto idêntico",
+"diferente da usurpação"
+],
+"d": [
+"envio posterior",
+"projeto substitutivo",
+"igual à usurpação"
+]
+},
+{
+"n": 13,
+"m": "B",
+"b": [
+"exclusivamente por subsídio",
+"parcela única",
+"vedado qualquer acréscimo"
+],
+"d": [
+"por vencimentos",
+"parcelas variáveis",
+"permitida gratificação"
+]
+}
+]

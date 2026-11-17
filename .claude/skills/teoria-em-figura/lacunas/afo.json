@@ -1,0 +1,2900 @@
+[
+{
+"n": 1,
+"m": "B",
+"b": [
+"não institui nem majora tributo",
+"lei específica"
+],
+"d": [
+"institui tributo",
+"decreto"
+]
+},
+{
+"n": 2,
+"m": "B",
+"b": [
+"orçamento-programa",
+"não a tem necessariamente"
+],
+"d": [
+"orçamento base-zero",
+"orçamento incremental"
+]
+},
+{
+"n": 3,
+"m": "B",
+"b": [
+"sempre veiculado por lei",
+"não há instituição por decreto"
+],
+"d": [
+"veiculado por decreto",
+"ato administrativo"
+]
+},
+{
+"n": 4,
+"m": "A",
+"r": [
+[
+"O orçamento tradicional caracteriza-se",
+"O orçamento-programa caracteriza-se"
+]
+],
+"b": [
+"orçamento-programa",
+"objetivos e metas"
+],
+"d": [
+"orçamento tradicional",
+"orçamento base-zero"
+]
+},
+{
+"n": 7,
+"m": "B",
+"t": "O orçamento moderno expressa em dinheiro, para um período definido, o programa de operações do governo e os meios de financiá-lo.",
+"b": [
+"período definido",
+"programa de operações do governo"
+],
+"d": [
+"período indeterminado",
+"plano de metas do governo",
+"balanço das contas"
+]
+},
+{
+"n": 8,
+"m": "A",
+"r": [
+[
+"O orçamento-programa foca",
+"O orçamento tradicional foca"
+]
+],
+"b": [
+"orçamento tradicional",
+"objeto de gasto"
+],
+"d": [
+"orçamento-programa",
+"orçamento base-zero"
+]
+},
+{
+"n": 14,
+"m": "B",
+"t": "A consulta popular não vincula o Legislativo nem retira do Prefeito o poder de veto.",
+"b": [
+"não vincula",
+"poder de veto"
+],
+"d": [
+"vincula integralmente",
+"dever de sancionar integralmente"
+]
+},
+{
+"n": 16,
+"m": "A",
+"r": [
+[
+"créditos especiais",
+"créditos suplementares"
+]
+],
+"b": [
+"créditos suplementares",
+"operações de crédito"
+],
+"d": [
+"créditos especiais",
+"créditos extraordinários"
+]
+},
+{
+"n": 23,
+"m": "B",
+"b": [
+"administração tributária",
+"operações de ARO"
+],
+"d": [
+"gastos com pessoal",
+"dívida pública"
+]
+},
+{
+"n": 24,
+"m": "B",
+"b": [
+"não alcança",
+"educação, saúde e assistência social"
+],
+"d": [
+"também alcança",
+"segurança pública"
+]
+},
+{
+"n": 26,
+"m": "B",
+"b": [
+"lei que autorize a inclusão",
+"revisão do plano"
+],
+"d": [
+"decreto que autorize a inclusão",
+"emenda constitucional"
+]
+},
+{
+"n": 27,
+"m": "B",
+"b": [
+"elaborado no primeiro ano",
+"segundo ano"
+],
+"d": [
+"terceiro ano",
+"último ano"
+]
+},
+{
+"n": 29,
+"m": "C",
+"b": [
+"misto",
+"Poderes Executivo e Legislativo"
+],
+"d": [
+"impositivo",
+"Poderes Executivo e Judiciário"
+]
+},
+{
+"n": 30,
+"m": "C",
+"b": [
+"Lei de Diretrizes Orçamentárias (LDO)",
+"durante a sua execução"
+],
+"d": [
+"Lei de Responsabilidade Fiscal",
+"Constituição Federal"
+]
+},
+{
+"n": 35,
+"m": "A",
+"r": [
+[
+"caso em que ambos poderão ser reabertos",
+"caso em que apenas os especiais poderão ser reabertos"
+]
+],
+"b": [
+"apenas os especiais",
+"últimos quatro meses"
+],
+"d": [
+"apenas os suplementares",
+"últimos seis meses"
+]
+},
+{
+"n": 36,
+"m": "B",
+"b": [
+"orçamento-programa",
+"objetivos e metas"
+],
+"d": [
+"orçamento tradicional",
+"objeto de gasto"
+]
+},
+{
+"n": 37,
+"m": "B",
+"b": [
+"suplementar",
+"urgente e imprevisível"
+],
+"d": [
+"especial",
+"previsível e ordinária"
+]
+},
+{
+"n": 40,
+"m": "B",
+"b": [
+"orçamento incremental",
+"reavalia do zero"
+],
+"d": [
+"orçamento-programa",
+"orçamento tradicional"
+]
+},
+{
+"n": 42,
+"m": "A",
+"r": [
+[
+"que distingue o orçamento-programa de outras técnicas orçamentárias",
+"comum a todas as técnicas orçamentárias"
+]
+],
+"b": [
+"comum a todas",
+"expressão monetária"
+],
+"d": [
+"exclusiva do orçamento-programa",
+"própria do orçamento tradicional"
+]
+},
+{
+"n": 45,
+"m": "C",
+"b": [
+"diferença positiva",
+"ativo financeiro e o passivo financeiro"
+],
+"d": [
+"diferença negativa",
+"ativo permanente"
+]
+},
+{
+"n": 46,
+"m": "B",
+"b": [
+"dispensa indicação de recursos",
+"suplementares e especiais"
+],
+"d": [
+"exige indicação de recursos",
+"extraordinários e especiais"
+]
+},
+{
+"n": 48,
+"m": "B",
+"b": [
+"Termo de Execução Descentralizada",
+"sem convênio"
+],
+"d": [
+"Termo de Fomento",
+"com convênio"
+]
+},
+{
+"n": 49,
+"m": "A",
+"r": [
+[
+"caberá ao Poder Executivo encaminhar ao Legislativo, nos trinta dias subsequentes, projeto de lei que promova a limitação",
+"caberá a cada Poder e ao Ministério Público promover, por ato próprio, nos trinta dias subsequentes, a limitação"
+]
+],
+"b": [
+"cada Poder e ao Ministério Público",
+"por ato próprio"
+],
+"d": [
+"Poder Executivo",
+"projeto de lei"
+]
+},
+{
+"n": 50,
+"m": "B",
+"b": [
+"sem autorização legislativa",
+"ciência, tecnologia e inovação"
+],
+"d": [
+"segurança pública",
+"saúde e educação"
+]
+},
+{
+"n": 51,
+"m": "A",
+"r": [
+[
+"Com relação ao Decreto Distrital nº 32.598/2010, que aprova as Normas de Planejamento, Orçamento, Finanças, Patrimônio e Contabilidade do Distrito Federal, julgue o item subsequente. As dotações",
+"As dotações"
+],
+[
+"salvo se a indicação ocorrer nos dois últimos quadrimestres do exercício financeiro, independentemente de projeto de lei encaminhado à Câmara Legislativa do Distrito Federal, bastando ato do próprio ordenador de despesa",
+"salvo no último trimestre do exercício financeiro, mediante projeto de lei encaminhado à Câmara Legislativa do Distrito Federal"
+]
+],
+"b": [
+"último trimestre",
+"mediante projeto de lei"
+],
+"d": [
+"dois últimos quadrimestres",
+"ato do ordenador de despesa"
+]
+},
+{
+"n": 56,
+"m": "B",
+"t": "O lançamento é o estágio da receita pública em que se verifica a ocorrência do fato gerador, identifica-se o devedor, determina-se a matéria tributável e calcula-se o montante do tributo devido, não sendo aplicável a todas as espécies de receitas orçamentárias.",
+"b": [
+"não sendo aplicável"
+],
+"d": [
+"sendo exclusivo dos tributos",
+"sendo exclusivo das taxas"
+]
+},
+{
+"n": 57,
+"m": "A",
+"r": [
+[
+"Acerca da receita pública, julgue o item a seguir. Consoante",
+"Consoante"
+],
+[
+"correspondendo a arrecadação à transferência",
+"correspondendo o recolhimento à transferência"
+]
+],
+"b": [
+"o recolhimento à transferência",
+"conta específica do Tesouro"
+],
+"d": [
+"a arrecadação à transferência",
+"conta do contribuinte"
+]
+},
+{
+"n": 58,
+"m": "A",
+"r": [
+[
+"Acerca da receita pública, julgue o item a seguir. A dívida",
+"A dívida"
+],
+[
+"presunção absoluta de certeza e liquidez, a qual não pode ser ilidida por prova em contrário",
+"presunção relativa de certeza e liquidez, a qual pode ser ilidida por prova inequívoca"
+]
+],
+"b": [
+"presunção relativa",
+"prova inequívoca"
+],
+"d": [
+"presunção absoluta",
+"prova testemunhal"
+]
+},
+{
+"n": 61,
+"m": "A",
+"r": [
+[
+"Com relação à despesa pública, julgue o item que se segue. Nos moldes",
+"Nos moldes"
+],
+[
+"amortização da dívida",
+"transferências de capital"
+]
+],
+"b": [
+"transferências de capital",
+"despesas de custeio"
+],
+"d": [
+"amortização da dívida",
+"despesas de pessoal"
+]
+},
+{
+"n": 63,
+"m": "B",
+"b": [
+"empresa de fins lucrativos",
+"lei especial"
+],
+"d": [
+"entidade sem fins lucrativos",
+"lei complementar"
+]
+},
+{
+"n": 64,
+"m": "B",
+"t": "Novo benefício a servidor exige prévia dotação e autorização específica na LDO; a LOA não pode criá-lo sozinha.",
+"b": [
+"prévia dotação",
+"autorização específica na LDO"
+],
+"d": [
+"autorização genérica na LOA",
+"dispensa de dotação",
+"previsão no PPA"
+]
+},
+{
+"n": 65,
+"m": "B",
+"b": [
+"uma só LOA por ente",
+"fragmenta o orçamento"
+],
+"d": [
+"uma LOA por órgão",
+"unifica o orçamento"
+]
+},
+{
+"n": 66,
+"m": "A",
+"r": [
+[
+"a dispensa do próprio empenho, e não apenas da emissão da respectiva nota",
+"apenas a dispensa da emissão da respectiva nota de empenho"
+]
+],
+"b": [
+"apenas a dispensa da emissão",
+"pequeno vulto"
+],
+"d": [
+"a dispensa do próprio empenho",
+"grande vulto"
+]
+},
+{
+"n": 67,
+"m": "B",
+"b": [
+"receita líquida",
+"orçamento bruto"
+],
+"d": [
+"receita bruta",
+"orçamento líquido"
+]
+},
+{
+"n": 68,
+"m": "A",
+"r": [
+[
+"de modo a gerar obrigação de pagamento pelo Poder Público",
+"sem gerar obrigação de pagamento, que nasce com o empenho"
+]
+],
+"b": [
+"sem gerar obrigação de pagamento",
+"nasce com o empenho"
+],
+"d": [
+"gerando obrigação de pagamento",
+"nasce com a liquidação"
+]
+},
+{
+"n": 69,
+"m": "B",
+"b": [
+"programa permanente",
+"exclusividade"
+],
+"d": [
+"programa temporário",
+"anualidade"
+]
+},
+{
+"n": 71,
+"m": "B",
+"b": [
+"princípios distintos",
+"fundamentos próprios"
+],
+"d": [
+"mesmo conteúdo",
+"fundamento comum"
+]
+},
+{
+"n": 72,
+"m": "A",
+"r": [
+[
+"consiste na verificação do direito adquirido pelo credor, tendo por base os títulos e documentos comprovantes do respectivo crédito",
+"consiste em criar para o Estado a obrigação de pagamento"
+]
+],
+"b": [
+"criar para o Estado",
+"obrigação de pagamento"
+],
+"d": [
+"verificar o direito adquirido",
+"autorizar o pagamento"
+]
+},
+{
+"n": 76,
+"m": "A",
+"r": [
+[
+"nela se incluindo, por força da LRF, as operações de crédito por Antecipação de Receita Orçamentária, ainda que liquidadas no próprio exercício",
+"dela não fazendo parte as operações de crédito por antecipação de receita, liquidadas no próprio exercício"
+]
+],
+"b": [
+"superior a doze meses",
+"dela não fazendo parte"
+],
+"d": [
+"inferior a doze meses",
+"nela se incluindo"
+]
+},
+{
+"n": 83,
+"m": "A",
+"r": [
+[
+"ainda que sejam provenientes de anulação de despesa com serviço da dívida",
+"desde que não provenham de anulação de despesa com serviço da dívida"
+]
+],
+"b": [
+"desde que não provenham",
+"serviço da dívida"
+],
+"d": [
+"ainda que provenham",
+"custeio de saúde"
+]
+},
+{
+"n": 85,
+"m": "B",
+"b": [
+"despesa de capital",
+"despesa corrente"
+],
+"d": [
+"despesa de custeio",
+"despesa financeira"
+]
+},
+{
+"n": 88,
+"m": "C",
+"b": [
+"despesa corrente",
+"superior a dois exercícios"
+],
+"d": [
+"despesa de capital",
+"superior a três exercícios"
+]
+},
+{
+"n": 91,
+"m": "A",
+"r": [
+[
+"extingue automaticamente o ciclo orçamentário correspondente, dispensando-se as etapas posteriores de avaliação e o julgamento de contas",
+"não extingue o ciclo orçamentário, que prossegue com as etapas de avaliação e o julgamento de contas"
+]
+],
+"b": [
+"não extingue o ciclo orçamentário",
+"julgamento de contas"
+],
+"d": [
+"extingue automaticamente",
+"execução orçamentária"
+]
+},
+{
+"n": 93,
+"m": "C",
+"b": [
+"processo contínuo",
+"um único exercício financeiro"
+],
+"d": [
+"processo anual",
+"dois exercícios financeiros"
+]
+},
+{
+"n": 97,
+"m": "A",
+"r": [
+[
+"a LDO poderá autorizar, expressamente, a exclusão",
+"a LDO não poderá autorizar a exclusão"
+]
+],
+"b": [
+"não poderá autorizar",
+"despesas primárias"
+],
+"d": [
+"deverá autorizar",
+"despesas financeiras"
+]
+},
+{
+"n": 98,
+"m": "B",
+"b": [
+"Banco Central",
+"custeio administrativo"
+],
+"d": [
+"Tesouro Nacional",
+"operações de política monetária"
+]
+},
+{
+"n": 99,
+"m": "B",
+"t": "A LOA não pode conter dotações ilimitadas nem finalidade imprecisa, e o detalhamento posterior por decreto não sana a vedação.",
+"b": [
+"dotações ilimitadas",
+"detalhamento posterior por decreto"
+],
+"d": [
+"dotações específicas",
+"dotações detalhadas",
+"lei complementar"
+]
+},
+{
+"n": 100,
+"m": "B",
+"t": "A LDO pode dispor sobre normas de controle de custos e avaliação dos resultados dos programas financiados com recursos dos orçamentos.",
+"b": [
+"pode dispor",
+"controle de custos"
+],
+"d": [
+"não pode dispor",
+"criação de tributos"
+]
+},
+{
+"n": 101,
+"m": "B",
+"b": [
+"Anexo de Metas Fiscais",
+"integra a LDO"
+],
+"d": [
+"Anexo de Riscos Fiscais",
+"integra o PPA"
+]
+},
+{
+"n": 103,
+"m": "A",
+"r": [
+[
+"Suponha que, ao final de determinado bimestre, tenha sido verificado que, na execução do orçamento anual, a realização da receita não comportava o cumprimento das metas de resultado primário estabelecidas no Anexo de Metas Fiscais. Nesse caso, caberia privativamente ao Ministério Público promover, por ato próprio e nos montantes necessários, nos quinze dias subsequentes,",
+"Ao final de um bimestre, se a realização da receita não comportar o cumprimento das metas de resultado primário estabelecidas no Anexo de Metas Fiscais, cabe aos Poderes e ao Ministério Público promover, cada qual por ato próprio e nos montantes necessários, nos trinta dias subsequentes,"
+]
+],
+"b": [
+"trinta dias",
+"Poderes e ao Ministério Público"
+],
+"d": [
+"quinze dias",
+"privativamente ao Ministério Público"
+]
+},
+{
+"n": 105,
+"m": "A",
+"r": [
+[
+"o projeto da LOA",
+"o projeto da LDO"
+]
+],
+"b": [
+"metas anuais",
+"projeto da LDO"
+],
+"d": [
+"LOA",
+"PPA"
+]
+},
+{
+"n": 107,
+"m": "B",
+"t": "O PPA é de iniciativa do presidente da República, cabendo ao Congresso apreciar e emendar o plano.",
+"b": [
+"iniciativa do presidente",
+"apreciar e emendar"
+],
+"d": [
+"competência exclusiva",
+"apenas a sanção final",
+"iniciativa do Congresso"
+]
+},
+{
+"n": 108,
+"m": "B",
+"t": "O PPA inclui as despesas correntes decorrentes das de capital; a CF não veda despesas correntes no plano.",
+"b": [
+"inclui",
+"decorrentes das de capital"
+],
+"d": [
+"exclui",
+"relativas apenas à dívida pública"
+]
+},
+{
+"n": 109,
+"m": "B",
+"b": [
+"precisa constar do PPA",
+"lei que autorize a inclusão"
+],
+"d": [
+"da LDO",
+"decreto que autorize"
+]
+},
+{
+"n": 110,
+"m": "B",
+"b": [
+"seguem o PPA",
+"apreciados pelo Congresso"
+],
+"d": [
+"seguem a LDO",
+"sancionados pelo Presidente"
+]
+},
+{
+"n": 111,
+"m": "B",
+"b": [
+"despesas de capital",
+"programas de duração continuada",
+"não é conteúdo do plano"
+],
+"d": [
+"receitas correntes",
+"é conteúdo obrigatório do plano"
+]
+},
+{
+"n": 112,
+"m": "B",
+"b": [
+"de forma regionalizada",
+"despesas de capital",
+"correntes delas decorrentes"
+],
+"d": [
+"de forma setorizada",
+"receitas de capital"
+]
+},
+{
+"n": 113,
+"m": "A",
+"r": [
+[
+"Devido à natureza jurídica de direito privado de uma empresa estatal dependente, seus programas e suas ações não podem ser incluídos diretamente no PPA da União, devendo eles constar apenas do planejamento estratégico interno da empresa",
+"Os programas e as ações de uma empresa estatal dependente são incluídos no PPA da União"
+]
+],
+"b": [
+"empresa estatal dependente",
+"incluídos no PPA da União"
+],
+"d": [
+"excluídos do PPA da União",
+"incluídos apenas na LOA"
+]
+},
+{
+"n": 114,
+"m": "A",
+"r": [
+[
+"No que concerne à lei de diretrizes orçamentárias (LDO), julgar o item a seguir. ",
+""
+],
+[
+"política fiscal e monetária do período de vigência do Plano Plurianual",
+"política fiscal, em consonância com a trajetória sustentável da dívida pública"
+]
+],
+"b": [
+"política fiscal",
+"trajetória sustentável da dívida pública"
+],
+"d": [
+"política monetária",
+"período de vigência do PPA"
+]
+},
+{
+"n": 115,
+"m": "B",
+"b": [
+"Anexo de Riscos Fiscais",
+"passivos contingentes",
+"ações judiciais"
+],
+"d": [
+"Anexo de Metas Fiscais",
+"restos a pagar"
+]
+},
+{
+"n": 116,
+"m": "B",
+"b": [
+"Anexo de Metas Fiscais",
+"três seguintes",
+"sustentabilidade da dívida"
+],
+"d": [
+"Anexo de Riscos Fiscais",
+"dois seguintes"
+]
+},
+{
+"n": 117,
+"m": "A",
+"r": [
+[
+"deve estar prevista na LDO, conforme exigência constitucional",
+"dispensa autorização específica na LDO, pois empresas públicas e sociedades de economia mista são ressalvadas"
+]
+],
+"b": [
+"dispensa autorização específica",
+"empresas públicas e sociedades de economia mista"
+],
+"d": [
+"exige autorização específica",
+"órgãos da administração direta"
+]
+},
+{
+"n": 118,
+"m": "A",
+"r": [
+[
+"Julgue o item que se segue, a respeito da lei de diretrizes orçamentárias (LDO) e de sua aplicação às atividades de uma empresa estatal dependente. ",
+""
+],
+[
+", incluídas as despesas de capital para o exercício financeiro subsequente",
+" e as diretrizes de política fiscal e respectivas metas"
+]
+],
+"b": [
+"metas e prioridades",
+"diretrizes de política fiscal"
+],
+"d": [
+"despesas de capital",
+"diretrizes de política monetária"
+]
+},
+{
+"n": 120,
+"m": "B",
+"b": [
+"Metas Fiscais",
+"metas anuais primária e nominal",
+"Riscos Fiscais"
+],
+"d": [
+"Prioridades Fiscais",
+"metas anuais de receita"
+]
+},
+{
+"n": 121,
+"m": "B",
+"b": [
+"LDO",
+"metas de política fiscal",
+"trajetória sustentável da dívida pública"
+],
+"d": [
+"LOA",
+"metas de política monetária"
+]
+},
+{
+"n": 122,
+"m": "B",
+"b": [
+"orçamento de investimento",
+"maioria do capital votante"
+],
+"d": [
+"orçamento de custeio",
+"metade do capital votante"
+]
+},
+{
+"n": 123,
+"m": "B",
+"t": "Pelo princípio da universalidade, a LOA é única e o orçamento do Poder Judiciário não pode ser aprovado em lei separada, apesar da autonomia orçamentária.",
+"b": [
+"a LOA é única",
+"não pode ser aprovado em lei separada"
+],
+"d": [
+"há uma LOA para cada Poder",
+"pode ser aprovado em lei própria"
+]
+},
+{
+"n": 124,
+"m": "B",
+"b": [
+"vedada emenda",
+"dotações de pessoal e encargos"
+],
+"d": [
+"permitida emenda",
+"dotações de investimento"
+]
+},
+{
+"n": 125,
+"m": "A",
+"r": [
+[
+"No que se refere à lei orçamentaria anual (LOA), julgue o item subsequente. ",
+""
+],
+[
+"independentemente da manutenção do equilíbrio entre receitas e despesas, atribuindo ao Poder Executivo a indicação de recursos compensatórios",
+"desde que indiquem os recursos necessários, provenientes de anulação de despesa"
+]
+],
+"b": [
+"desde que indiquem",
+"recursos necessários",
+"anulação de despesa"
+],
+"d": [
+"independentemente de indicação",
+"recursos compensatórios"
+]
+},
+{
+"n": 126,
+"m": "B",
+"t": "A lei orçamentária não pode veicular créditos com finalidade imprecisa, nem mesmo de superávits de exercícios anteriores.",
+"b": [
+"não pode veicular",
+"finalidade imprecisa"
+],
+"d": [
+"poderá veicular",
+"finalidade específica"
+]
+},
+{
+"n": 129,
+"m": "C",
+"b": [
+"Comissão Mista",
+"examinar e emitir parecer",
+"demais comissões"
+],
+"d": [
+"Comissão de Constituição e Justiça",
+"aprovar em caráter terminativo"
+]
+},
+{
+"n": 131,
+"m": "B",
+"b": [
+"despesa corrente",
+"transferência corrente",
+"receita corrente"
+],
+"d": [
+"receita de capital",
+"transferência de capital"
+]
+},
+{
+"n": 132,
+"m": "B",
+"b": [
+"despesa de custeio",
+"corrente",
+"não de capital"
+],
+"d": [
+"despesa de investimento",
+"inversão financeira"
+]
+},
+{
+"n": 133,
+"m": "A",
+"r": [
+[
+"por configurar reposição de bens existentes, deve ser classificada como despesa corrente, no grupo “outras despesas correntes”, pois não representa acréscimo patrimonial",
+"por ser material permanente, deve ser classificada como despesa de capital"
+]
+],
+"b": [
+"material permanente",
+"despesa de capital"
+],
+"d": [
+"despesa corrente",
+"material de consumo"
+]
+},
+{
+"n": 135,
+"m": "A",
+"r": [
+[
+"receita de capital, classificada na categoria de alienação de bens",
+"receita corrente, classificada na categoria patrimonial"
+]
+],
+"b": [
+"receita corrente",
+"patrimonial"
+],
+"d": [
+"receita de capital",
+"alienação de bens"
+]
+},
+{
+"n": 136,
+"m": "A",
+"r": [
+[
+"devem estar necessariamente vinculadas às suas respectivas funções de origem, de modo a impedir que",
+"podem ser combinadas com funções diferentes das de origem, de modo que"
+],
+[
+"seja associada",
+"possa ser associada"
+]
+],
+"b": [
+"podem ser combinadas",
+"funções diferentes das de origem"
+],
+"d": [
+"devem estar vinculadas",
+"funções idênticas"
+]
+},
+{
+"n": 139,
+"m": "C",
+"b": [
+"nível mais elevado de agrupamento",
+"programas",
+"organização da atuação governamental"
+],
+"d": [
+"nível mais baixo de agrupamento",
+"subfunções",
+"projetos"
+]
+},
+{
+"n": 140,
+"m": "A",
+"r": [
+[
+"Julgue o seguinte item, a respeito do ciclo orçamentário e das alterações orçamentárias no contexto da gestão de contratos e programas de capacitação. ",
+""
+],
+[
+"o presidente da República pode editar medida provisória com vistas à abertura de crédito extraordinário para garantir a continuidade do programa, dada a sua urgência social",
+"deve-se abrir crédito suplementar, pois o crédito extraordinário só cabe se a despesa for imprevisível e urgente"
+]
+],
+"b": [
+"crédito suplementar",
+"imprevisível e urgente"
+],
+"d": [
+"crédito especial",
+"relevante e prioritário"
+]
+},
+{
+"n": 141,
+"m": "A",
+"r": [
+[
+"crédito especial, já que se trata de uma nova turma não prevista inicialmente",
+"crédito suplementar, já que a dotação existe, mas é insuficiente"
+]
+],
+"b": [
+"crédito suplementar",
+"a dotação existe"
+],
+"d": [
+"crédito especial",
+"crédito extraordinário"
+]
+},
+{
+"n": 142,
+"m": "A",
+"r": [
+[
+"Acerca da estrutura do plano de contas aplicado ao setor público (PCASP) e das demonstrações contábeis aplicadas ao setor público, julgue o item a seguir. ",
+""
+],
+[
+"dependem de prévia autorização legislativa, a exemplo dos créditos suplementares e especiais",
+"são abertos por decreto, sem prévia autorização legislativa"
+]
+],
+"b": [
+"abertos por decreto",
+"sem prévia autorização legislativa"
+],
+"d": [
+"abertos por lei",
+"dependem de autorização legislativa"
+]
+},
+{
+"n": 144,
+"m": "A",
+"r": [
+[
+"No que se refere às fontes de recursos para abertura de créditos adicionais, julgue o próximo item. ",
+""
+],
+[
+"da diferença acumulada mês a mês entre a arrecadação realizada e a prevista, deduzidos os valores dos créditos extraordinários abertos no exercício",
+"das diferenças acumuladas mês a mês, considerando-se a tendência do exercício"
+]
+],
+"b": [
+"diferenças acumuladas mês a mês",
+"tendência do exercício"
+],
+"d": [
+"diferença anual",
+"créditos extraordinários abertos"
+]
+},
+{
+"n": 146,
+"m": "B",
+"b": [
+"dois últimos quadrimestres",
+"obrigação não cumprível nele",
+"sem caixa"
+],
+"d": [
+"dois primeiros quadrimestres",
+"último semestre"
+]
+},
+{
+"n": 147,
+"m": "A",
+"r": [
+[
+"podendo ser estipulado que os encargos financeiros e as comissões sejam inferiores ao custo de captação",
+"não podendo os encargos financeiros e as comissões ser inferiores ao custo de captação ou ao definido em lei"
+]
+],
+"b": [
+"não podendo",
+"inferiores ao custo de captação"
+],
+"d": [
+"sendo livremente fixados",
+"superiores ao custo de captação"
+]
+},
+{
+"n": 148,
+"m": "B",
+"b": [
+"prazo de envio das contas",
+"transferências voluntárias",
+"educação, saúde e assistência social"
+],
+"d": [
+"prazo de aprovação das contas",
+"transferências obrigatórias"
+]
+},
+{
+"n": 150,
+"m": "B",
+"b": [
+"tetos de pessoal por Poder",
+"Poder Executivo estadual",
+"49% da RCL"
+],
+"d": [
+"54% da RCL",
+"Poder Judiciário estadual"
+]
+},
+{
+"n": 151,
+"m": "B",
+"t": "A vedação do art. 42 da LRF (contrair obrigação de despesa sem suficiente disponibilidade de caixa) vale só nos dois últimos quadrimestres do mandato; empenhar em dezembro de 2025, fora desse período, é regular.",
+"b": [
+"dois últimos quadrimestres do mandato",
+"é regular"
+],
+"d": [
+"dois últimos semestres do mandato",
+"viola a LRF"
+]
+},
+{
+"n": 153,
+"m": "B",
+"b": [
+"não decorre de ordem constitucional ou legal",
+"SUS"
+],
+"d": [
+"não decorre de lei orçamentária",
+"FUNDEB"
+]
+},
+{
+"n": 154,
+"m": "B",
+"t": "É vedada a transferência voluntária para o ente que deixe de arrecadar os impostos de sua competência constitucional.",
+"b": [
+"vedada",
+"deixe de arrecadar"
+],
+"d": [
+"permitida",
+"facultativa",
+"deixe de contratar servidores"
+]
+},
+{
+"n": 155,
+"m": "C",
+"b": [
+"transferências voluntárias",
+"não atinge",
+"saúde, educação e assistência social"
+],
+"d": [
+"transferências obrigatórias",
+"alcança também",
+"segurança pública"
+]
+},
+{
+"n": 156,
+"m": "B",
+"b": [
+"estrutura administrativa",
+"provisão",
+"destaque"
+],
+"d": [
+"natureza da despesa",
+"empenho",
+"repasse"
+]
+},
+{
+"n": 159,
+"m": "B",
+"b": [
+"TED",
+"descentralização de crédito",
+"OFSS"
+],
+"d": [
+"convênio",
+"remanejamento de crédito",
+"orçamento de investimento"
+]
+},
+{
+"n": 160,
+"m": "A",
+"r": [
+[
+"É vedada de forma expressa",
+"É permitida, até vinte por cento do valor global pactuado, com previsão no plano de trabalho"
+]
+],
+"b": [
+"permitida",
+"vinte por cento",
+"plano de trabalho"
+],
+"d": [
+"vedada",
+"dez por cento",
+"termo de referência"
+]
+},
+{
+"n": 162,
+"m": "B",
+"b": [
+"dotação continua no órgão de origem",
+"execução",
+"outro órgão"
+],
+"d": [
+"dotação passa ao órgão executor",
+"arrecadação"
+]
+},
+{
+"n": 163,
+"m": "B",
+"b": [
+"bimestral",
+"todos os Poderes",
+"trinta dias"
+],
+"d": [
+"quadrimestral",
+"dois Poderes",
+"sessenta dias"
+]
+},
+{
+"n": 164,
+"m": "C",
+"b": [
+"quadrimestralmente",
+"cada Poder e órgão autônomo",
+"trinta dias"
+],
+"d": [
+"bimestralmente",
+"apenas pelo Poder Executivo",
+"sessenta dias"
+]
+},
+{
+"n": 166,
+"m": "A",
+"r": [
+[
+"No que diz respeito à transparência e ao controle das contas públicas estabelecidos pela LRF, julgue o item a seguir. ",
+""
+],
+[
+", bem como o demonstrativo das despesas com pessoal, integram obrigatoriamente a estrutura básica de publicação quadrimestral do RREO",
+" integra a estrutura básica de publicação bimestral do RREO, enquanto o demonstrativo das despesas com pessoal pertence ao RGF"
+]
+],
+"b": [
+"bimestral",
+"pertence ao RGF"
+],
+"d": [
+"quadrimestral",
+"pertence ao RREO"
+]
+},
+{
+"n": 168,
+"m": "B",
+"b": [
+"chefes dos Poderes",
+"administração financeira",
+"controle interno"
+],
+"d": [
+"Ministério Público",
+"administração tributária"
+]
+},
+{
+"n": 171,
+"m": "B",
+"b": [
+"execução orçamentária e financeira",
+"meios eletrônicos de acesso público",
+"tempo real"
+],
+"d": [
+"meios impressos",
+"encerramento do exercício"
+]
+},
+{
+"n": 174,
+"m": "A",
+"r": [
+[
+"Em relação ao Sistema Integrado de Administração Financeira (SIAFI), julgue o próximo item. ",
+""
+],
+[
+"é restrita aos órgãos e entidades deste Poder, sendo vedado seu uso pelos Poderes Legislativo e Judiciário em razão do princípio constitucional da separação e independência dos Poderes",
+"abrange todos os Poderes, que devem usar o sistema único"
+]
+],
+"b": [
+"abrange todos os Poderes",
+"sistema único"
+],
+"d": [
+"é restrita ao Poder Executivo",
+"sistema facultativo"
+]
+},
+{
+"n": 177,
+"m": "A",
+"r": [
+[
+"foram instituídas e integralmente operacionalizadas a partir do Decreto-Lei n.º 200/1967, sistema eletrônico mantido sob a custódia direta do Banco do Brasil S.A.",
+"decorrem da unidade de caixa fixada pelo Decreto n.º 93.872/1986"
+]
+],
+"b": [
+"unidade de caixa",
+"Decreto n.º 93.872/1986"
+],
+"d": [
+"Decreto-Lei n.º 200/1967",
+"Lei n.º 4.320/1964"
+]
+},
+{
+"n": 178,
+"m": "A",
+"r": [
+[
+"instantaneamente em meio eletrônico",
+"em meio eletrônico"
+],
+[
+"no momento exato da emissão do ato pela unidade gestora",
+"no momento de sua realização"
+],
+[
+"bloqueio imediato dos repasses constitucionais do ente",
+"vedação ao recebimento de transferências voluntárias"
+]
+],
+"b": [
+"no momento de sua realização",
+"vedação ao recebimento de transferências voluntárias"
+],
+"d": [
+"bloqueio dos repasses",
+"ao vivo"
+]
+},
+{
+"n": 180,
+"m": "B",
+"b": [
+"um só estágio da despesa",
+"segregação de funções"
+],
+"d": [
+"todos os estágios da despesa",
+"controle de acessos"
+]
+},
+{
+"n": 181,
+"m": "B",
+"t": "Os deputados distritais e os auditores de controle externo do TCDF têm acesso ao SIGGo e ao seu extrator de dados apenas no modo consulta, sem poder fazer lançamentos.",
+"b": [
+"apenas no modo consulta",
+"sem poder fazer lançamentos"
+],
+"d": [
+"acesso irrestrito",
+"modo de alteração dos registros"
+]
+},
+{
+"n": 182,
+"m": "B",
+"b": [
+"Secretaria de Fazenda",
+"órgão central de contabilidade"
+],
+"d": [
+"Secretaria de Planejamento",
+"Controladoria-Geral"
+]
+},
+{
+"n": 183,
+"m": "A",
+"r": [
+[
+"obriga o ente a transmitir ao vivo e instantaneamente todo e qualquer ato de empenho no exato momento da digitação do registro pelo operador no terminal do sistema",
+"obriga o ente a liberar os atos da despesa no momento de sua realização, em meio eletrônico"
+]
+],
+"b": [
+"no momento de sua realização",
+"em meio eletrônico"
+],
+"d": [
+"ao vivo",
+"no momento da digitação"
+]
+},
+{
+"n": 185,
+"m": "A",
+"r": [
+[
+"Julgue o item que se seguem, referentes às classificações orçamentárias e à estrutura programática do orçamento público no Brasil. Em consonância com as normas de direito financeiro, o remanejamento",
+"Em consonância com as normas de direito financeiro, o remanejamento"
+],
+[
+"podem ser realizados mediante decreto do Poder Executivo, independentemente de autorização na lei de diretrizes orçamentárias",
+"somente podem ser realizados mediante prévia autorização legislativa, e não por simples decreto"
+]
+],
+"b": [
+"prévia autorização legislativa",
+"simples decreto"
+],
+"d": [
+"decreto do Poder Executivo",
+"portaria do ordenador de despesa"
+]
+},
+{
+"n": 186,
+"m": "A",
+"b": [
+"reforço de dotação orçamentária já existente",
+"créditos especiais"
+],
+"d": [
+"créditos extraordinários",
+"abertura de novo programa"
+]
+},
+{
+"n": 188,
+"m": "A",
+"r": [
+[
+"são classificados pelo ente recebedor como receita corrente de transferências correntes, ainda que o ente beneficiário os destine integralmente à realização de obras de saneamento básico",
+"são classificados conforme o destino: se financiam obras, são transferências de capital"
+]
+],
+"b": [
+"conforme o destino",
+"transferências de capital"
+],
+"d": [
+"transferências correntes",
+"receita patrimonial"
+]
+},
+{
+"n": 189,
+"m": "B",
+"b": [
+"não é item de receita orçamentária",
+"Anexo 1"
+],
+"d": [
+"receita de capital",
+"Anexo 2"
+]
+},
+{
+"n": 191,
+"m": "B",
+"t": "A receita arrecadada pelo uso de rodovias mediante pedágio é classificada como receita de serviços.",
+"b": [
+"receita de serviços"
+],
+"d": [
+"receita de capital",
+"receita agropecuária",
+"receita industrial"
+]
+},
+{
+"n": 193,
+"m": "A",
+"r": [
+[
+"é obrigatório para todas as receitas públicas, sendo o ato que atesta a ocorrência do fato gerador e liquida a obrigação tributária do contribuinte frente ao fisco",
+"só alcança impostos diretos e rendas com vencimento determinado, sendo o ato que inscreve o débito sem liquidar a obrigação"
+]
+],
+"b": [
+"impostos diretos e rendas com vencimento determinado",
+"sem liquidar a obrigação"
+],
+"d": [
+"todas as receitas públicas",
+"com liquidação da obrigação"
+]
+},
+{
+"n": 194,
+"m": "B",
+"b": [
+"dá recibo",
+"tesouraria única"
+],
+"d": [
+"emite empenho",
+"conta vinculada"
+]
+},
+{
+"n": 195,
+"m": "B",
+"t": "Só são objeto de lançamento as rendas com vencimento determinado em lei, regulamento ou contrato.",
+"b": [
+"com vencimento determinado"
+],
+"d": [
+"sem vencimento determinado",
+"com vencimento indeterminado"
+]
+},
+{
+"n": 196,
+"m": "B",
+"t": "No Brasil, a receita pública orçamentária só pode pagar despesas depois de arrecadada.",
+"b": [
+"depois de arrecadada"
+],
+"d": [
+"antes da arrecadação",
+"após o lançamento"
+]
+},
+{
+"n": 197,
+"m": "A",
+"r": [
+[
+"Com base nos princípios da administração financeira e orçamentária, bem como nas normas que regem a gestão das receitas públicas no Brasil, julgue o item a seguir, relativos ao conceito, à classificação, aos estágios, às fontes e à dívida ativa da receita pública. Os estágios",
+"Os estágios"
+],
+[
+"que se aplicam a todas as modalidades de receitas orçamentárias e garantem",
+"que não se aplicam a todas as receitas, pois o lançamento falta em várias, e garantem"
+]
+],
+"b": [
+"não se aplicam a todas as receitas",
+"o lançamento falta em várias"
+],
+"d": [
+"aplicam-se a todas as modalidades",
+"o recolhimento falta em várias"
+]
+},
+{
+"n": 199,
+"m": "A",
+"b": [
+"arrecadação de receitas da União",
+"devoluções de valores ao erário"
+],
+"d": [
+"pagamento de despesas da União",
+"transferências a municípios"
+]
+},
+{
+"n": 200,
+"m": "A",
+"b": [
+"insuficiência momentânea de caixa",
+"10 de dezembro"
+],
+"d": [
+"31 de dezembro",
+"30 de junho",
+"excesso de arrecadação"
+]
+},
+{
+"n": 201,
+"m": "A",
+"r": [
+[
+"podem ser contratadas",
+"não podem ser contratadas"
+],
+[
+"desde que a liquidação",
+"mesmo que a liquidação"
+]
+],
+"b": [
+"não podem ser contratadas",
+"último ano de mandato"
+],
+"d": [
+"livremente contratadas",
+"primeiro ano de mandato"
+]
+},
+{
+"n": 202,
+"m": "A",
+"r": [
+[
+"É permitido",
+"É proibido"
+],
+[
+"desde que tais recursos constem",
+"mesmo que tais recursos constem"
+]
+],
+"b": [
+"É proibido",
+"próprio estado controlador"
+],
+"d": [
+"É permitido",
+"É facultado"
+]
+},
+{
+"n": 205,
+"m": "A",
+"r": [
+[
+"os entes federados podem captar",
+"os entes federados não podem captar"
+],
+[
+"desde que não seja o último ano de mandato do chefe do respectivo Poder Executivo",
+"em qualquer ano, inclusive o último de mandato do chefe do respectivo Poder Executivo"
+]
+],
+"b": [
+"não podem captar",
+"em qualquer ano"
+],
+"d": [
+"podem livremente captar",
+"apenas no último ano"
+]
+},
+{
+"n": 208,
+"m": "B",
+"b": [
+"dois últimos quadrimestres",
+"obrigação sem caixa"
+],
+"d": [
+"dois últimos bimestres",
+"dois últimos semestres"
+]
+},
+{
+"n": 209,
+"m": "B",
+"t": "Os créditos da fazenda pública devem ser escriturados como receita do exercício em que forem arrecadados.",
+"b": [
+"em que forem arrecadados"
+],
+"d": [
+"da inscrição como dívida ativa",
+"do lançamento"
+]
+},
+{
+"n": 210,
+"m": "A",
+"r": [
+[
+"Julgue o item subsequente, relativo à dívida pública e à conta única do Tesouro Nacional. A inscrição",
+"A inscrição"
+],
+[
+"ocorre exclusivamente quando há a constituição de crédito tributário por lançamento, não sendo aplicável a créditos não tributários, como multas administrativas",
+"ocorre quando há a constituição de crédito tributário por lançamento, sendo aplicável também a créditos não tributários, como multas administrativas"
+]
+],
+"b": [
+"sendo aplicável também a créditos não tributários",
+"dívida ativa da União"
+],
+"d": [
+"exclusivamente a créditos tributários",
+"somente a multas"
+]
+},
+{
+"n": 213,
+"m": "A",
+"r": [
+[
+"A respeito da gestão fiscal e tributária aplicada ao setor público, julgue o item a seguir. No âmbito federal",
+"No âmbito federal"
+],
+[
+"é realizada de forma unificada e direta pela Secretaria do Tesouro Nacional (STN)",
+"é realizada pela Procuradoria-Geral da Fazenda Nacional (PGFN)"
+]
+],
+"b": [
+"Procuradoria-Geral da Fazenda Nacional",
+"dívida ativa"
+],
+"d": [
+"Secretaria do Tesouro Nacional",
+"Receita Federal"
+]
+},
+{
+"n": 214,
+"m": "A",
+"r": [
+[
+"Julgue o item a seguir, a respeito da contabilização de fatos contábeis, de acordo com o plano de contas aplicado ao setor público (PCASP). O recebimento",
+"O recebimento"
+],
+[
+"não gera reconhecimento de receita orçamentária, visto que a variação patrimonial aumentativa já foi reconhecida no momento da inscrição",
+"gera receita orçamentária no exercício da arrecadação, ainda que a variação patrimonial aumentativa já tenha sido reconhecida na inscrição"
+]
+],
+"b": [
+"gera receita orçamentária",
+"exercício da arrecadação"
+],
+"d": [
+"não gera reconhecimento",
+"exercício da inscrição"
+]
+},
+{
+"n": 215,
+"m": "A",
+"r": [
+[
+"Acerca das receitas públicas, julgue o item a seguir. A inscrição",
+"A inscrição"
+],
+[
+"constitui receita pública orçamentária, pois representa o ingresso efetivo de recursos financeiros nos cofres públicos oriundos da cobrança judicial de créditos tributários ou não tributários",
+"não constitui receita orçamentária, pois não há ingresso de recursos nos cofres públicos"
+]
+],
+"b": [
+"não constitui receita orçamentária",
+"não há ingresso de recursos"
+],
+"d": [
+"gera receita corrente",
+"ingresso efetivo de recursos"
+]
+},
+{
+"n": 220,
+"m": "A",
+"r": [
+[
+"deve ser classificada como despesa de capital no grupo investimentos, uma vez que tais gastos estendem a vida útil do imóvel e agregam valor físico ao patrimônio público",
+"deve ser classificada como despesa corrente de custeio, e não como investimento"
+]
+],
+"b": [
+"despesa corrente de custeio",
+"reforma, conservação e adaptação"
+],
+"d": [
+"despesa de capital",
+"grupo investimentos"
+]
+},
+{
+"n": 222,
+"m": "B",
+"t": "Para fins do limite de gastos com pessoal da LRF, a despesa total com pessoal corresponde ao somatório dos gastos com ativos, inativos e pensionistas.",
+"b": [
+"ativos, inativos e pensionistas"
+],
+"d": [
+"apenas servidores ativos",
+"ativos e inativos, sem pensionistas"
+]
+},
+{
+"n": 224,
+"m": "B",
+"b": [
+"decisão judicial de período anterior",
+"não entra no cômputo do limite",
+"art. 19, § 1º, IV"
+],
+"d": [
+"período posterior",
+"art. 19, § 2º, I"
+]
+},
+{
+"n": 225,
+"m": "A",
+"r": [
+[
+"é absoluto e rígido, não sendo possível qualquer remanejamento dos limites interna ou externamente a cada poder no âmbito do mesmo nível federativo",
+"admite remanejamento dos limites entre órgãos do mesmo Poder"
+]
+],
+"b": [
+"admite remanejamento",
+"órgãos do mesmo Poder"
+],
+"d": [
+"é absoluto e rígido",
+"entre Poderes distintos"
+]
+},
+{
+"n": 227,
+"m": "A",
+"r": [
+[
+"Empenho é o estágio",
+"Liquidação é o estágio"
+]
+],
+"b": [
+"Liquidação",
+"verificação do direito adquirido pelo credor"
+],
+"d": [
+"Empenho",
+"Pagamento"
+]
+},
+{
+"n": 229,
+"m": "A",
+"r": [
+[
+"sendo dispensada a verificação física da entrega do bem nas compras de pequeno vulto",
+"sem dispensa da verificação da entrega, mesmo em compras de pequeno vulto"
+]
+],
+"b": [
+"sem dispensa da verificação da entrega",
+"títulos e documentos comprobatórios"
+],
+"d": [
+"dispensada a verificação",
+"nota de empenho"
+]
+},
+{
+"n": 230,
+"m": "A",
+"r": [
+[
+"pode ser dispensado pela autoridade competente para despesas de pequeno valor e adiantamentos, permitindo o pagamento direto ao fornecedor com a Nota de Empenho emitida",
+"não pode ser dispensado pela autoridade, nem em despesas de pequeno valor e adiantamentos, devendo o pagamento ocorrer somente após a regular liquidação"
+]
+],
+"b": [
+"não pode ser dispensado",
+"somente após a regular liquidação"
+],
+"d": [
+"dispensado por ato do ordenador",
+"depois do empenho"
+]
+},
+{
+"n": 231,
+"m": "A",
+"r": [
+[
+"não há necessidade de empenho prévio",
+"há necessidade de empenho prévio"
+],
+[
+"visto que eles são descentralizados diretamente pelo Tesouro Nacional",
+"sendo vedada qualquer despesa sem ele"
+]
+],
+"b": [
+"há necessidade de empenho prévio",
+"vedada qualquer despesa"
+],
+"d": [
+"não há necessidade",
+"descentralizados pelo Tesouro"
+]
+},
+{
+"n": 232,
+"m": "A",
+"r": [
+[
+"é um procedimento meramente formal e restrito à conferência dos valores contratados, não sendo necessária a verificação da efetiva entrega de bens ou da prestação de serviço nessa fase",
+"não é um procedimento meramente formal nem restrito à conferência dos valores contratados, exigindo a verificação da efetiva entrega de bens ou da prestação de serviço nessa fase"
+]
+],
+"b": [
+"exigindo a verificação",
+"não é um procedimento meramente formal"
+],
+"d": [
+"não sendo necessária a verificação",
+"apenas a conferência dos valores"
+]
+},
+{
+"n": 234,
+"m": "B",
+"t": "O pré-empenho não é estágio da despesa; segundo a Lei 4.320/1964, nenhuma despesa pode ser realizada sem prévio empenho.",
+"b": [
+"não é estágio da despesa",
+"sem prévio empenho"
+],
+"d": [
+"é estágio obrigatório da despesa",
+"é estágio facultativo da despesa",
+"sem prévio pré-empenho"
+]
+},
+{
+"n": 235,
+"m": "B",
+"b": [
+"empenhadas e não pagas",
+"31/12"
+],
+"d": [
+"liquidadas e não pagas",
+"30/06",
+"31/03"
+]
+},
+{
+"n": 239,
+"m": "B",
+"b": [
+"resto a pagar processado",
+"a liquidação"
+],
+"d": [
+"resto a pagar não processado",
+"o empenho"
+]
+},
+{
+"n": 242,
+"m": "B",
+"b": [
+"não fixa limite para restos a pagar",
+"disponibilidade de caixa",
+"dois últimos quadrimestres"
+],
+"d": [
+"fixa limite de 50% da RCL",
+"dois últimos semestres",
+"disponibilidade orçamentária"
+]
+},
+{
+"n": 243,
+"m": "A",
+"r": [
+[
+"A respeito de suprimento de fundos, restos a pagar, despesas de exercícios anteriores, bem como da Conta Única do Tesouro Nacional, julgue o item seguinte. As despesas",
+"As despesas"
+],
+[
+"correspondem às despesas empenhadas no exercício anterior e regularmente inscritas em restos a pagar, desde que o pagamento ocorra no exercício seguinte",
+"correspondem a despesas não processadas na época própria"
+]
+],
+"b": [
+"não processadas na época própria",
+"exercícios anteriores"
+],
+"d": [
+"regularmente inscritas em restos a pagar",
+"empenhadas no exercício anterior"
+]
+},
+{
+"n": 244,
+"m": "B",
+"b": [
+"prescrição interrompida",
+"dotação específica"
+],
+"d": [
+"prescrição consumada",
+"extraorçamentária"
+]
+},
+{
+"n": 245,
+"m": "A",
+"r": [
+[
+"À luz do disposto na Lei n.º 4.320/1964, na Lei de Responsabilidade Fiscal e na Constituição Federal de 1988, julgue o item seguinte, relativo à execução de despesas com pessoal e serviços de terceiros. Suponha",
+"Suponha"
+],
+[
+"como o fato gerador patrimonial ocorreu no exercício subsequente, o empenho original deve ser anulado no encerramento de 2025 e a despesa tratada como despesa de exercício anterior (DEA) em 2026",
+"ainda que a entrega tenha ocorrido no exercício subsequente, o empenho permanece e a despesa é inscrita em restos a pagar não processados"
+]
+],
+"b": [
+"o empenho permanece",
+"restos a pagar não processados"
+],
+"d": [
+"despesa de exercício anterior",
+"o empenho deve ser anulado"
+]
+},
+{
+"n": 248,
+"m": "A",
+"r": [
+[
+"como o fato gerador ocorreu no exercício subsequente, o empenho deve ser anulado e a despesa tratada como despesa de exercício anterior (DEA)",
+"ainda que a entrega tenha ocorrido no exercício subsequente, o empenho permanece válido como resto a pagar não processado"
+]
+],
+"b": [
+"o empenho permanece válido",
+"resto a pagar não processado"
+],
+"d": [
+"despesa de exercício anterior",
+"o empenho deve ser anulado"
+]
+},
+{
+"n": 249,
+"m": "B",
+"b": [
+"gerado em ano anterior",
+"pago como DEA"
+],
+"d": [
+"gerado no mesmo ano",
+"pago como restos a pagar"
+]
+},
+{
+"n": 250,
+"m": "A",
+"r": [
+[
+"Julgue o item subsequente, relativos ao controle e ao pagamento de restos a pagar e de despesas de exercícios anteriores. Despesas",
+"Despesas"
+],
+[
+"são necessariamente aquelas empenhadas em exercício anterior e canceladas por insuficiência financeira",
+"abrangem também despesas não empenhadas na época própria"
+]
+],
+"b": [
+"abrangem também",
+"não empenhadas na época própria"
+],
+"d": [
+"são necessariamente",
+"canceladas por insuficiência financeira"
+]
+},
+{
+"n": 251,
+"m": "B",
+"t": "As despesas de exercícios anteriores são despesas orçamentárias do exercício do pagamento e consomem dotação e limite de saque.",
+"b": [
+"despesas orçamentárias",
+"consomem dotação"
+],
+"d": [
+"despesas extraorçamentárias",
+"dispensam dotação",
+"despesas de restos a pagar"
+]
+},
+{
+"n": 252,
+"m": "B",
+"b": [
+"dependem de dotação no orçamento atual",
+"dotação específica do exercício"
+],
+"d": [
+"independem de dotação",
+"Conta Única do Tesouro"
+]
+},
+{
+"n": 254,
+"m": "A",
+"r": [
+[
+"com exclusão das",
+"com inclusão das"
+]
+],
+"b": [
+"com inclusão das operações de crédito",
+"prazo inferior a doze meses"
+],
+"d": [
+"com exclusão das",
+"prazo igual a doze meses"
+]
+},
+{
+"n": 256,
+"m": "A",
+"r": [
+[
+"salvo quando destinada ao refinanciamento de dívidas já existentes",
+"sem exceção para o refinanciamento de dívidas já existentes"
+]
+],
+"b": [
+"sem exceção para o refinanciamento",
+"É vedada"
+],
+"d": [
+"salvo quando destinada",
+"É permitida"
+]
+},
+{
+"n": 258,
+"m": "A",
+"r": [
+[
+"podendo ser realizada a partir do primeiro dia do ano civil e exigindo liquidação com juros e encargos incidentes até o dia trinta e um de dezembro do mesmo exercício",
+"somente a partir do décimo dia do exercício e exigindo liquidação com juros e encargos incidentes até o dia dez de dezembro de cada ano"
+]
+],
+"b": [
+"décimo dia do exercício",
+"dez de dezembro"
+],
+"d": [
+"primeiro dia do ano civil",
+"trinta e um de dezembro"
+]
+},
+{
+"n": 260,
+"m": "B",
+"b": [
+"mais de 12 meses",
+"dívida flutuante"
+],
+"d": [
+"até 90 dias",
+"dívida consolidada"
+]
+},
+{
+"n": 261,
+"m": "B",
+"b": [
+"não prestou contas",
+"não recebe novo suprimento",
+"mesmo com urgência"
+],
+"d": [
+"poderá receber com autorização",
+"apenas se urgente"
+]
+},
+{
+"n": 262,
+"m": "B",
+"t": "O ordenador de despesa poderá conceder suprimento de fundos para despesas de caráter sigiloso, com empenho em dotação própria e prestação de contas.",
+"b": [
+"poderá",
+"caráter sigiloso",
+"prestação de contas"
+],
+"d": [
+"não poderá",
+"caráter particular",
+"dispensa de prestação de contas"
+]
+},
+{
+"n": 264,
+"m": "B",
+"t": "O suprimento de fundos é forma excepcional de execução de despesas que não possam subordinar-se ao processo normal de aplicação.",
+"b": [
+"excepcional",
+"processo normal"
+],
+"d": [
+"ordinária",
+"controle externo",
+"obrigatória"
+]
+},
+{
+"n": 265,
+"m": "B",
+"b": [
+"não fixa prazo de 30 dias",
+"assinalado pelo ordenador da despesa"
+],
+"d": [
+"fixa prazo de 60 dias",
+"fixado pelo Tribunal de Contas"
+]
+},
+{
+"n": 268,
+"m": "A",
+"r": [
+[
+"é forma ordinária de execução de despesas, aplicável a quaisquer gastos, desde que exista dotação suficiente",
+"é forma excepcional de execução de despesas, aplicável apenas às que não possam subordinar-se ao processo normal"
+]
+],
+"b": [
+"forma excepcional",
+"não possam subordinar-se ao processo normal"
+],
+"d": [
+"forma ordinária",
+"quaisquer gastos"
+]
+},
+{
+"n": 269,
+"m": "B",
+"b": [
+"mais amplo que o exercício",
+"se sobrepõe",
+"só o exercício"
+],
+"d": [
+"mais restrito que o exercício",
+"não se sobrepõe"
+]
+},
+{
+"n": 270,
+"m": "B",
+"b": [
+"elaboração",
+"discussão e aprovação",
+"controle e avaliação"
+],
+"d": [
+"fiscalização",
+"promulgação"
+]
+},
+{
+"n": 271,
+"m": "B",
+"b": [
+"do Poder Executivo",
+"aprecia e emenda",
+"não só sanciona"
+],
+"d": [
+"do Poder Legislativo",
+"do Tribunal de Contas"
+]
+},
+{
+"n": 273,
+"m": "B",
+"b": [
+"o interno e o externo",
+"Poder Legislativo",
+"Tribunal de Contas"
+],
+"d": [
+"apenas o interno",
+"Poder Judiciário",
+"Ministério Público"
+]
+},
+{
+"n": 275,
+"m": "B",
+"b": [
+"Comissão mista",
+"Plenário das duas Casas",
+"não há competência exclusiva do Senado"
+],
+"d": [
+"Comissão de Constituição e Justiça",
+"Plenário do Senado"
+]
+},
+{
+"n": 277,
+"m": "B",
+"b": [
+"com o PPA e a LDO",
+"corrigir erro ou omissão"
+],
+"d": [
+"com a LOA e a LRF",
+"reduzir dotações"
+]
+},
+{
+"n": 278,
+"m": "B",
+"b": [
+"não aceita matéria estranha",
+"à receita e à despesa"
+],
+"d": [
+"admite matéria estranha",
+"ao crédito e ao patrimônio"
+]
+},
+{
+"n": 281,
+"m": "B",
+"b": [
+"Presidente da República",
+"Presidente do Senado",
+"comissão mista"
+],
+"d": [
+"Presidente da Câmara",
+"Presidente do STF"
+]
+},
+{
+"n": 286,
+"m": "B",
+"b": [
+"órgão central de orçamento",
+"propostas parciais"
+],
+"d": [
+"órgãos setoriais de orçamento",
+"propostas finais"
+]
+},
+{
+"n": 288,
+"m": "B",
+"t": "No Distrito Federal, segundo o Decreto 32.598/2010, o órgão central de planejamento e orçamento é a Secretaria de Estado de Planejamento, Orçamento e Gestão, e o de administração financeira é a Secretaria de Estado de Fazenda.",
+"b": [
+"Secretaria de Estado de Planejamento, Orçamento e Gestão",
+"Secretaria de Estado de Fazenda"
+],
+"d": [
+"Secretaria de Estado de Administração Pública",
+"Secretaria de Estado de Obras",
+"Secretaria de Estado de Saúde"
+]
+},
+{
+"n": 291,
+"m": "B",
+"b": [
+"maior nível de agregação",
+"partição"
+],
+"d": [
+"menor nível de agregação",
+"extensão"
+]
+},
+{
+"n": 294,
+"m": "B",
+"b": [
+"contínuo e permanente",
+"do projeto"
+],
+"d": [
+"limitado no tempo",
+"da operação especial"
+]
+},
+{
+"n": 298,
+"m": "B",
+"b": [
+"autorizado por lei",
+"decreto do Executivo",
+"não basta ato interno"
+],
+"d": [
+"autorizado por portaria",
+"decreto do Legislativo"
+]
+},
+{
+"n": 31,
+"m": "B",
+"b": [
+"fora do PPA",
+"salvo lei que autorize a inclusão"
+],
+"d": [
+"dentro da LDO",
+"salvo decreto que autorize a inclusão"
+]
+},
+{
+"n": 47,
+"m": "B",
+"b": [
+"mesmo órgão",
+"externa",
+"não muda"
+],
+"d": [
+"órgãos distintos",
+"vertical",
+"é alterada"
+]
+},
+{
+"n": 77,
+"m": "B",
+"b": [
+"restos a pagar",
+"depósitos",
+"débitos de tesouraria"
+],
+"d": [
+"empréstimos internos",
+"títulos públicos"
+]
+},
+{
+"n": 81,
+"m": "B",
+"b": [
+"antes da entrega",
+"antecede a liquidação"
+],
+"d": [
+"depois da entrega",
+"sucede a liquidação"
+]
+},
+{
+"n": 90,
+"m": "C",
+"b": [
+"lei específica",
+"lei de diretrizes orçamentárias",
+"previsão no orçamento"
+],
+"d": [
+"decreto do Executivo",
+"plano plurianual"
+]
+},
+{
+"n": 92,
+"m": "B",
+"t": "O atraso na votação da LOA não implica descumprimento dos princípios da publicidade e da transparência.",
+"b": [
+"não implica",
+"publicidade e da transparência"
+],
+"d": [
+"acarreta",
+"anualidade"
+]
+},
+{
+"n": 95,
+"m": "B",
+"t": "Se a LOA não for sancionada até o início do exercício, a execução não fica necessariamente paralisada: admite-se execução provisória, em geral autorizada pela LDO.",
+"b": [
+"não fica necessariamente paralisada",
+"execução provisória",
+"LDO"
+],
+"d": [
+"permanece paralisada até a publicação",
+"execução definitiva",
+"PPA"
+]
+},
+{
+"n": 102,
+"m": "A",
+"r": [
+[
+"não está sujeita ao contingenciamento",
+"está sujeita ao contingenciamento"
+],
+[
+"ainda que a realização da receita não comporte",
+"quando a realização da receita não comportar"
+]
+],
+"b": [
+"está sujeita",
+"contingenciamento de recursos"
+],
+"d": [
+"está isenta",
+"contingenciamento de pessoal"
+]
+},
+{
+"n": 137,
+"m": "B",
+"b": [
+"outras despesas correntes (3)",
+"investimentos (4)",
+"inversões (5)"
+],
+"d": [
+"outras despesas de capital (3)",
+"investimentos (5)"
+]
+},
+{
+"n": 149,
+"m": "B",
+"t": "A LDO dispõe sobre o equilíbrio entre receitas e despesas; o limite de pessoal é percentual da RCL; a ARO é proibida no último ano de mandato.",
+"b": [
+"LDO",
+"percentual da RCL",
+"último ano de mandato"
+],
+"d": [
+"LOA",
+"percentual da receita total",
+"primeiro ano de mandato"
+]
+},
+{
+"n": 172,
+"m": "B",
+"t": "A transparência exige audiências públicas na elaboração dos planos e da LDO; na receita, divulgar lançamento e recebimento; na despesa, é obrigatório indicar o beneficiário do pagamento.",
+"b": [
+"lançamento e recebimento",
+"obrigatório indicar o beneficiário"
+],
+"d": [
+"apenas o recebimento",
+"facultativo indicar o beneficiário"
+]
+},
+{
+"n": 175,
+"m": "B",
+"t": "O acesso ao SIAFI Operacional exige certificação digital ou PassKey, não bastando CPF e senha individual.",
+"b": [
+"exige certificação digital ou PassKey",
+"não bastando CPF e senha"
+],
+"d": [
+"dispensa certificação digital",
+"basta CPF e senha individual"
+]
+},
+{
+"n": 176,
+"m": "A",
+"r": [
+[
+"a gestão do Sistema Integrado de Planejamento e Orçamento (SIOP)",
+"a gestão do Sistema Integrado de Administração Financeira (SIAFI)"
+],
+[
+"gestão e manutenção do Sistema Integrado de Administração Financeira (SIAFI)",
+"gestão e manutenção do Sistema Integrado de Planejamento e Orçamento (SIOP)"
+]
+],
+"b": [
+"Administração Financeira (SIAFI)",
+"Planejamento e Orçamento (SIOP)"
+],
+"d": [
+"Contabilidade Pública (SIPLAN)",
+"Gestão Fiscal (SIGEF)"
+]
+},
+{
+"n": 212,
+"m": "C",
+"b": [
+"permutativo",
+"não altera o valor"
+],
+"d": [
+"modificativo",
+"aumenta o valor"
+]
+},
+{
+"n": 218,
+"m": "B",
+"b": [
+"não pagos no vencimento",
+"protesto, parcelamento ou execução fiscal"
+],
+"d": [
+"vencidos e quitados",
+"compensação, prescrição ou arrolamento"
+]
+},
+{
+"n": 236,
+"m": "B",
+"t": "O cancelamento de restos a pagar não constitui nova receita orçamentária.",
+"b": [
+"não constitui nova receita orçamentária"
+],
+"d": [
+"constitui receita orçamentária do exercício",
+"constitui receita de capital"
+]
+},
+{
+"n": 257,
+"m": "B",
+"b": [
+"sem autorização orçamentária",
+"equipara-se a operação de crédito"
+],
+"d": [
+"com autorização legislativa",
+"equipara-se a receita corrente"
+]
+},
+{
+"n": 274,
+"m": "B",
+"t": "O PPA, a LDO e a LOA são apreciados em sessão conjunta do Congresso Nacional, mas os votos de cada Casa são computados separadamente, segundo o regimento comum.",
+"b": [
+"computados separadamente",
+"regimento comum"
+],
+"d": [
+"somados em votação única",
+"regimento interno da Câmara"
+]
+},
+{
+"n": 279,
+"m": "B",
+"b": [
+"LDO",
+"duodécimos"
+],
+"d": [
+"LRF",
+"quartos"
+]
+},
+{
+"n": 283,
+"m": "B",
+"b": [
+"elaboração e o acompanhamento",
+"não registra a execução contábil"
+],
+"d": [
+"apenas a execução",
+"registra a execução financeira"
+]
+},
+{
+"n": 287,
+"m": "C",
+"t": "O órgão central de orçamento estabelece normas e procedimentos para a elaboração dos orçamentos federais, detalhados no Manual Técnico de Orçamento (MTO).",
+"b": [
+"normas e procedimentos",
+"Manual Técnico de Orçamento (MTO)"
+],
+"d": [
+"metas fiscais",
+"Manual de Contabilidade"
+]
+},
+{
+"n": 289,
+"m": "C",
+"b": [
+"órgão central",
+"limites (tetos) orçamentários setoriais",
+"proposta parcial"
+],
+"d": [
+"órgão setorial",
+"proposta consolidada"
+]
+}
+]
