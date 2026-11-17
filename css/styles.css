@@ -2676,3 +2676,6 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 .r7-ass button.chk.on{ background:#a9e3bf; border-color:#1f7a41; color:#0f3d22; font-weight:700; }
 .r7-ass button.chk small{ opacity:.8; }
 .r7-ass button.errs{ border-color:#c0392b; } .r7-ass button.errs.on{ background:#c0392b; color:#fff; }
+
+/* v590: duplo toque nas palavras das lacunas sem zoom do navegador */
+.tr-chip{ touch-action:manipulation; }
