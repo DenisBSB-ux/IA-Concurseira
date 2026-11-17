@@ -2,13 +2,15 @@
 {
 "n": 2,
 "m": "B",
+"t": "Para os atos que atentam contra os princípios da administração pública (art. 11), as cominações se limitam a multa civil e proibição de contratar, sem perda da função pública nem suspensão dos direitos políticos.",
 "b": [
-"multa civil e proibição de contratar",
-"não são atingidos"
+"art. 11",
+"multa civil e proibição de contratar"
 ],
 "d": [
-"perda da função pública e multa",
-"penas restritivas de liberdade"
+"art. 9º",
+"art. 10",
+"perda de bens e valores acrescidos"
 ]
 },
 {
@@ -195,15 +197,15 @@
 },
 {
 "n": 39,
-"m": "C",
+"m": "B",
 "b": [
-"não é condição suficiente",
-"Lei de Improbidade Administrativa"
+"dolo",
+"vontade livre e consciente"
 ],
 "d": [
-"é bastante",
-"Lei de Licitações",
-"Lei Anticorrupção"
+"culpa grave",
+"mera voluntariedade",
+"negligência"
 ]
 },
 {
@@ -397,20 +399,16 @@
 },
 {
 "n": 97,
-"m": "A",
-"r": [
-[
-"perda dos direitos políticos e da função pública",
-"perda da função pública e suspensão dos direitos políticos"
-]
-],
+"m": "B",
+"t": "A sanção de improbidade administrativa que atinge os direitos políticos é a suspensão.",
 "b": [
-"perda da função pública",
-"suspensão dos direitos políticos"
+"suspensão",
+"direitos políticos"
 ],
 "d": [
-"perda dos direitos políticos",
-"suspensão da função pública"
+"perda",
+"cassação",
+"direitos civis"
 ]
 },
 {
@@ -482,15 +480,14 @@
 {
 "n": 111,
 "m": "B",
+"t": "A ação de improbidade administrativa é repressiva, de caráter sancionatório, e não serve ao controle de legalidade de políticas públicas.",
 "b": [
 "repressiva",
-"caráter sancionatório",
-"controle de políticas públicas"
+"não serve"
 ],
 "d": [
-"preventiva",
-"caráter indenizatório",
-"controle de constitucionalidade"
+"preventiva e repressiva",
+"é cabível"
 ]
 },
 {
@@ -571,12 +568,11 @@
 "n": 124,
 "m": "B",
 "b": [
-"direta e indireta",
-"autarquia federal"
+"direta e indireta"
 ],
 "d": [
 "apenas a direta",
-"empresa pública"
+"apenas a indireta"
 ]
 },
 {
@@ -599,8 +595,9 @@
 "expressamente"
 ],
 "d": [
-"Moralidade e publicidade",
-"implicitamente"
+"Anterioridade e unidade",
+"Territorialidade e especialidade",
+"apenas implicitamente"
 ]
 },
 {
@@ -661,38 +658,30 @@
 },
 {
 "n": 139,
-"m": "A",
-"r": [
-[
-"a possibilidade de delegação dos atos normativos está restrita ao substituto direto",
-"é vedada a delegação de atos normativos, inclusive ao substituto direto"
-]
-],
+"m": "B",
+"t": "A edição de atos normativos não pode ser delegada, nem mesmo ao substituto direto.",
 "b": [
-"vedada a delegação",
-"atos normativos"
+"atos normativos",
+"não pode ser delegada"
 ],
 "d": [
-"admitida a delegação",
-"decisão de recursos"
+"atos de gestão",
+"atos de mera execução",
+"é livremente delegável"
 ]
 },
 {
 "n": 141,
-"m": "A",
-"r": [
-[
-"pode ser objeto de delegação de competência, conforme a conveniência e a oportunidade, em razão de circunstâncias de cunho técnico e jurídico",
-"não pode ser objeto de delegação de competência"
-]
-],
+"m": "B",
+"t": "A decisão de recursos administrativos é indelegável.",
 "b": [
 "decisão de recursos administrativos",
-"não pode ser objeto de delegação"
+"indelegável"
 ],
 "d": [
-"edição de atos normativos",
-"é livremente delegável"
+"atos de gestão",
+"atos de mera execução",
+"passível de delegação"
 ]
 },
 {
@@ -754,12 +743,12 @@
 "m": "B",
 "b": [
 "irrenunciável",
-"delegação e avocação"
+"admite delegação e avocação"
 ],
 "d": [
-"inalienável",
-"delegação e revogação",
-"nenhuma delegação"
+"livremente renunciável",
+"revogável",
+"não admite delegação nem avocação"
 ]
 },
 {
@@ -817,15 +806,16 @@
 {
 "n": 159,
 "m": "B",
+"t": "O servidor fica impedido de atuar no processo quando seu companheiro ou parente e afim até o terceiro grau participa como perito ou testemunha; o primo, parente de quarto grau, não gera impedimento.",
 "b": [
-"companheira",
+"companheiro",
 "terceiro grau",
 "quarto grau"
 ],
 "d": [
-"segundo grau",
-"quinto grau",
-"cunhado"
+"amigo comum",
+"colega de repartição",
+"segundo grau"
 ]
 },
 {
@@ -859,12 +849,11 @@
 "m": "B",
 "b": [
 "de modo contínuo",
-"dias úteis"
+"não apenas"
 ],
 "d": [
-"de modo intercalado",
-"dias corridos",
-"feriados locais"
+"de modo alternado",
+"somente"
 ]
 },
 {
@@ -885,42 +874,40 @@
 "n": 170,
 "m": "B",
 "b": [
-"Súmula 633",
 "subsidiariamente",
-"cinco anos"
+"cinco anos",
+"Súmula 633 do STJ"
 ],
 "d": [
-"Súmula 473",
-"supletivamente",
-"dez anos"
+"obrigatoriamente",
+"dez anos",
+"Súmula 346 do STF"
 ]
 },
 {
 "n": 173,
 "m": "B",
 "b": [
-"não dispensa",
-"procedimento legal",
+"não dispensa o procedimento legal",
 "legalidade"
 ],
 "d": [
-"autoriza ignorar",
-"rito simplificado",
-"moralidade"
+"autoriza ignorar o procedimento",
+"celeridade",
+"urgência"
 ]
 },
 {
 "n": 174,
 "m": "B",
 "b": [
-"motivado",
-"fatos e fundamentos",
+"deve ser motivado",
 "afeta direitos"
 ],
 "d": [
-"dispensado",
-"atos e pareceres",
-"afeta interesses"
+"pode ser imotivado",
+"é de mero expediente",
+"afeta apenas terceiros"
 ]
 },
 {
@@ -1015,21 +1002,14 @@
 },
 {
 "n": 192,
-"m": "A",
-"r": [
-[
-"consideram-se apenas os dias úteis",
-"contam-se de modo contínuo"
-]
-],
+"m": "B",
 "b": [
-"expressos em dias",
-"de modo contínuo"
+"de modo contínuo",
+"não só"
 ],
 "d": [
-"apenas os dias úteis",
-"de modo intercalado",
-"dias corridos"
+"de modo alternado",
+"somente"
 ]
 },
 {
@@ -1117,13 +1097,12 @@
 "m": "B",
 "b": [
 "dolo",
-"dano presumido",
-"voluntariedade"
+"em todas as modalidades"
 ],
 "d": [
-"dolo específico",
-"dano efetivo",
-"lesividade"
+"culpa grave",
+"apenas na modalidade do art. 9º",
+"negligência"
 ]
 },
 {
@@ -1143,57 +1122,55 @@
 {
 "n": 95,
 "m": "B",
+"t": "Liberar verba pública sem observar as normas e realizar operação financeira sem observância das normas legais lesam o erário; revelar fato sigiloso, propiciando beneficiamento por informação privilegiada, ofende princípios.",
 "b": [
-"Todas respondem",
 "lesam o erário",
 "ofende princípios"
 ],
 "d": [
-"Apenas Gisela responde",
-"enriquecimento ilícito",
-"não configuram improbidade"
+"geram enriquecimento ilícito",
+"ofende o erário"
 ]
 },
 {
 "n": 101,
 "m": "B",
+"t": "Dentre as sanções da Lei de Improbidade Administrativa estão a suspensão dos direitos políticos e a multa civil, mas não a repreensão nem a aposentadoria compulsória.",
 "b": [
 "suspensão dos direitos políticos",
-"multa civil",
-"aposentadoria compulsória"
+"multa civil"
 ],
 "d": [
-"advertência",
-"detenção",
-"demissão a bem do serviço"
+"perda da nacionalidade",
+"multa penal"
 ]
 },
 {
 "n": 102,
 "m": "B",
+"t": "A recusa em declarar bens leva à demissão (art. 13, § 3º), mas não é tipo autônomo de improbidade.",
 "b": [
 "demissão",
-"não é tipo autônomo",
-"taxativo"
+"não é tipo autônomo"
 ],
 "d": [
 "advertência",
-"configura ato autônomo",
-"exemplificativo"
+"multa civil",
+"configura ato autônomo"
 ]
 },
 {
 "n": 108,
 "m": "B",
+"t": "A legitimidade ativa na ação de improbidade é concorrente: além do Ministério Público, a pessoa jurídica interessada pode ajuizar a ação.",
 "b": [
 "concorrente",
-"pessoa jurídica interessada",
-"sem extinção"
+"pessoa jurídica interessada"
 ],
 "d": [
 "exclusiva",
-"Ministério Público",
-"com extinção"
+"Defensoria Pública",
+"qualquer cidadão"
 ]
 },
 {
@@ -1218,15 +1195,14 @@
 {
 "n": 117,
 "m": "B",
+"t": "No processo administrativo federal, antes de decisão desfavorável, o administrado pode formular alegações e apresentar documentos, e não apenas recorrer depois.",
 "b": [
-"Antes de decisão desfavorável",
 "formular alegações",
 "apresentar documentos"
 ],
 "d": [
-"Após a decisão",
-"oferecer recurso",
-"juntar laudos"
+"requerer a anulação do processo",
+"exigir a revogação da decisão"
 ]
 },
 {

@@ -38,6 +38,7 @@ if cmd == 'aplicar':   # junta ver-<slug>-*.json (conferentes), grava só os apr
     ok, rej = set(), []
     for f in sorted(glob.glob(pasta + '/ver-%s-*.json' % slug)):
         d = json.load(open(f, encoding='utf-8')); ok |= set(d['aprovados']); rej += d['reprovados']
+    rej = [r for r in rej if r['n'] not in ok]   # reprovado na 1ª rodada e aprovado depois não conta
     json.dump({'aprovados': sorted(ok)}, open(pasta + '/ap-%s.json' % slug, 'w')); json.dump(rej, open(pasta + '/rej-%s.json' % slug, 'w'), ensure_ascii=False, indent=0)
     r = subprocess.run(G.split() + [slug, '--tolerante', '--aprovados', pasta + '/ap-%s.json' % slug, '--gravar'], capture_output=True, text=True); print('\n'.join(l for l in r.stdout.splitlines() if l.startswith(('ERRO', 'reprov', 'gravado')) or 'novas' in l)); print(r.stderr[-300:])
     print(len(ok), 'aprovados;', len(rej), 'reprovados em', pasta + '/rej-%s.json' % slug)
