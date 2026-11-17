@@ -15,14 +15,14 @@
 {
 "n": 6,
 "m": "B",
+"t": "Favorecer o primeiro emprego das jovens é um objetivo específico; ampliar cursos de formação para absorção no trabalho é uma meta.",
 "b": [
-"primeiro emprego",
-"objetivo específico",
-"é meta"
+"um objetivo específico",
+"uma meta"
 ],
 "d": [
 "duas metas",
-"dois eixos"
+"dois objetivos específicos"
 ]
 },
 {
@@ -60,14 +60,14 @@
 {
 "n": 16,
 "m": "B",
+"t": "Segundo o Anuário Brasileiro de Segurança Pública, o DF registrou aumento de feminicídios, e não queda em todos os indicadores de violência contra as mulheres.",
 "b": [
 "aumento de feminicídios",
-"31%",
 "queda em todos os indicadores"
 ],
 "d": [
 "redução de feminicídios",
-"13%"
+"queda apenas na importunação sexual"
 ]
 },
 {
@@ -196,10 +196,11 @@
 {
 "n": 31,
 "m": "B",
+"t": "O afastamento imediato do agressor do lar, em caso de risco atual ou iminente, é determinado pelo juiz ou, se o município não for sede de comarca, pelo delegado de polícia; não havendo delegado disponível no momento da denúncia, pelo policial.",
 "b": [
-"juiz ou pelo delegado",
-"município sem comarca",
-"não pelo policial"
+"juiz",
+"delegado de polícia",
+"policial"
 ],
 "d": [
 "Ministério Público",
@@ -261,14 +262,14 @@
 {
 "n": 39,
 "m": "B",
+"t": "Impedir a mulher de usar método contraceptivo configura violência sexual, que é forma de violência doméstica e familiar.",
 "b": [
-"Impedir o uso",
-"método contraceptivo",
-"forma de violência doméstica"
+"violência sexual"
 ],
 "d": [
+"violência moral",
 "violência psicológica",
-"violência moral"
+"violência patrimonial"
 ]
 },
 {
@@ -385,14 +386,15 @@
 {
 "n": 57,
 "m": "B",
+"t": "A concessão das medidas protetivas de urgência independe da tipificação penal da violência, e a ofendida é notificada dos atos de ingresso e saída do agressor da prisão.",
 "b": [
 "independe da tipificação penal",
-"ingresso e saída da prisão",
-"MP não precisa se manifestar"
+"notificada"
 ],
 "d": [
-"depende da tipificação penal",
-"audiência das partes"
+"exige tipificação penal",
+"exige prévia manifestação do Ministério Público",
+"dispensada de notificação"
 ]
 },
 {
@@ -487,38 +489,29 @@
 },
 {
 "n": 79,
-"m": "A",
-"r": [
-[
-"tanto às Regiões Administrativas do Distrito Federal quanto aos municípios lindeiros que integram a RIDE (Região Integrada de Desenvolvimento do DF e Entorno)",
-"exclusivamente às Regiões Administrativas do Distrito Federal"
-]
-],
+"m": "B",
+"t": "O II PDPM-DF aplica-se exclusivamente ao território do Distrito Federal, não alcançando a RIDE nem o Entorno.",
 "b": [
-"exclusivamente",
-"Regiões Administrativas do Distrito Federal"
+"exclusivamente ao território do Distrito Federal",
+"nem o Entorno"
 ],
 "d": [
-"também",
-"municípios lindeiros"
+"ao Distrito Federal e à RIDE",
+"também aos municípios lindeiros",
+"inclusive o Entorno"
 ]
 },
 {
 "n": 81,
-"m": "A",
-"r": [
-[
-"elaborado e coordenado administrativamente pelo Comitê de Articulação e Monitoramento (CAM), cabendo ao Conselho dos Direitos da Mulher do Distrito Federal (CDM) exercer de forma restrita o acompanhamento e a avaliação anual",
-"elaborado pelo Conselho dos Direitos da Mulher do Distrito Federal (CDM), cabendo ao Comitê de Articulação e Monitoramento (CAM) exercer o acompanhamento e a avaliação anual"
-]
-],
+"m": "B",
+"t": "O II PDPM-DF é elaborado pelo CDM e monitorado pelo CAM.",
 "b": [
-"elaborado pelo Conselho",
-"cabendo ao Comitê de Articulação"
+"elaborado pelo CDM",
+"monitorado pelo CAM"
 ],
 "d": [
-"elaborado pelo Comitê",
-"cabendo ao Conselho"
+"elaborado pelo CAM",
+"monitorado pelo CDM"
 ]
 },
 {
@@ -634,12 +627,12 @@
 {
 "n": 106,
 "m": "B",
+"t": "O Projeto Terezas, de formação técnico-profissional de mulheres, integra o Eixo 9 do II PDPM-DF, e não o de educação.",
 "b": [
-"Projeto Terezas",
-"Eixo 9",
-"não do Eixo 2"
+"Eixo 9"
 ],
 "d": [
+"Eixo 2",
 "Eixo 6",
 "Eixo 5"
 ]
@@ -708,19 +701,16 @@
 },
 {
 "n": 128,
-"m": "A",
-"r": [
-[
-"condicionada especificamente ao cometimento de atentado grave",
-"independe de atentado grave"
-]
-],
+"m": "B",
+"t": "A violência física independe de atentado grave: basta ofender a integridade ou a saúde corporal da mulher.",
 "b": [
-"independe de atentado grave"
+"independe de atentado grave",
+"integridade ou a saúde corporal"
 ],
 "d": [
 "exige atentado grave",
-"só ocorre com lesão permanente"
+"exige lesão permanente",
+"integridade ou a saúde moral"
 ]
 },
 {
@@ -763,25 +753,16 @@
 },
 {
 "n": 137,
-"m": "A",
-"r": [
-[
-"depende do consentimento expresso ou de representação formal da vítima perante o distrito policial",
-"não depende de representação da vítima"
-],
-[
-", sob o rito procedimental ordinário instituído pela Lei nº 9.099/1995",
-", nem segue o rito da Lei nº 9.099/1995"
-]
-],
+"m": "B",
+"t": "A lesão corporal praticada contra a mulher no âmbito doméstico é de ação penal pública incondicionada, conforme a ADI 4424, e o inquérito não depende de representação da vítima.",
 "b": [
-"não depende de representação",
-"Lei nº 9.099/1995"
+"pública incondicionada",
+"ADI 4424"
 ],
 "d": [
-"exige representação formal",
-"Lei nº 11.340/2006",
-"Lei nº 8.072/1990"
+"pública condicionada",
+"ADI 4277",
+"ADPF 132"
 ]
 },
 {
@@ -893,14 +874,15 @@
 {
 "n": 151,
 "m": "B",
-"t": "A prisão preventiva do agressor só cabe a requerimento do Ministério Público ou por representação da autoridade policial, sem iniciativa do juiz.",
+"t": "A prisão preventiva do agressor pode ser decretada pelo juiz, de ofício, a requerimento do Ministério Público ou por representação da autoridade policial.",
 "b": [
-"a requerimento do Ministério Público",
-"sem iniciativa do juiz"
+"de ofício",
+"Ministério Público",
+"autoridade policial"
 ],
 "d": [
-"de ofício",
-"por requerimento da vítima"
+"Defensoria Pública",
+"ofendida"
 ]
 },
 {
@@ -917,21 +899,16 @@
 },
 {
 "n": 155,
-"m": "A",
-"r": [
-[
-"deverão ser colhidas por meio de gravação audiovisual, e o arquivo digital gerado deve integrar o inquérito de forma sigilosa",
-"serão registradas, preferencialmente, em meio eletrônico ou magnético, e a mídia integra o inquérito"
-]
-],
+"m": "B",
+"t": "No atendimento policial, o depoimento da mulher é registrado, preferencialmente, em meio eletrônico ou magnético, e a degravação e a mídia integram o inquérito.",
 "b": [
 "preferencialmente",
 "meio eletrônico ou magnético"
 ],
 "d": [
 "obrigatoriamente",
-"gravação audiovisual",
-"meio exclusivamente físico"
+"meio exclusivamente físico",
+"papel"
 ]
 },
 {
@@ -1003,15 +980,15 @@
 },
 {
 "n": 166,
-"m": "C",
+"m": "B",
+"t": "O descumprimento de medida protetiva de urgência constitui crime, mesmo que a medida tenha sido deferida pelo juízo cível.",
 "b": [
-"constitui crime",
-"juízo cível"
+"constitui crime"
 ],
 "d": [
-"é mera infração administrativa",
-"juízo de família",
-"juízo criminal"
+"constitui mera infração administrativa",
+"constitui contravenção penal",
+"não constitui crime"
 ]
 },
 {
@@ -1172,86 +1149,88 @@
 },
 {
 "n": 198,
-"m": "A",
-"r": [
-[
-"exclusivamente quando ocorrida no âmbito da unidade doméstica, compreendida como o espaço de convívio permanente de pessoas",
-"quando ocorrida no âmbito da unidade doméstica, da família ou em relação íntima de afeto"
-]
-],
+"m": "B",
+"t": "A violência doméstica e familiar contra a mulher ocorre no âmbito da unidade doméstica, da família e de qualquer relação íntima de afeto, e não apenas na unidade doméstica.",
 "b": [
-"da família",
+"família",
 "relação íntima de afeto"
 ],
 "d": [
-"da vizinhança",
-"relação de trabalho",
-"relação de parentesco"
+"relação de amizade",
+"relação de subordinação funcional"
 ]
 },
 {
 "n": 24,
 "m": "B",
+"t": "A violência doméstica e familiar contra a mulher é forma de violação dos direitos humanos; a injúria configura violência moral e o controle das ações da mulher, violência psicológica.",
 "b": [
 "violação dos direitos humanos",
-"violência moral",
-"violência psicológica"
+"moral",
+"psicológica"
 ],
 "d": [
-"violência física",
-"violência sexual",
-"violência patrimonial"
+"física",
+"patrimonial",
+"sexual"
 ]
 },
 {
 "n": 37,
 "m": "B",
+"t": "Violência moral é calúnia, difamação ou injúria; violência patrimonial é retenção ou destruição de objetos e documentos; impedir o uso de contraceptivo é violência sexual.",
 "b": [
-"cinco itens",
-"art. 7º"
+"moral",
+"patrimonial",
+"sexual"
 ],
 "d": [
-"quatro itens",
-"art. 5º",
-"art. 9º"
+"psicológica",
+"física",
+"institucional"
 ]
 },
 {
 "n": 114,
 "m": "B",
+"t": "O juiz assegura à mulher em situação de violência doméstica a manutenção do vínculo trabalhista por até seis meses, quando necessário o afastamento do local de trabalho, e o agressor ressarce os custos dos dispositivos de segurança destinados ao monitoramento.",
 "b": [
-"II, III e V",
-"seis meses"
+"seis meses",
+"agressor"
 ],
 "d": [
-"I, III e IV",
-"dois anos"
+"um ano",
+"dois anos",
+"Estado"
 ]
 },
 {
 "n": 120,
 "m": "B",
+"t": "A aplicação da Lei Maria da Penha não exige coabitação entre agressor e vítima, e a suspensão condicional do processo da Lei 9.099/1995 não se aplica aos crimes de violência doméstica.",
 "b": [
-"coabitação não é exigida",
-"suspensão condicional do processo",
-"II e III"
+"não exige coabitação",
+"não se aplica"
 ],
 "d": [
-"coabitação é imprescindível",
-"transação penal",
-"I e IV"
+"exige coabitação permanente",
+"é cabível",
+"é obrigatória"
 ]
 },
 {
 "n": 169,
 "m": "B",
+"t": "No atendimento policial, a mulher tem direito a atendimento especializado e ininterrupto, e deve-se evitar a revitimização, vedado o contato direto com o investigado.",
 "b": [
-"itens III e IV",
-"escolta obrigatória"
+"especializado e ininterrupto",
+"revitimização",
+"contato direto"
 ],
 "d": [
-"itens I e II",
-"visita domiciliar"
+"escolta obrigatória",
+"contato intermediado por familiares",
+"atendimento facultativo"
 ]
 }
 ]

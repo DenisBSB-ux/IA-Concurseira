@@ -309,13 +309,15 @@
 {
 "n": 50,
 "m": "B",
+"t": "Em picada de cobra, lava-se o local com água e sabão; torniquete, gelo, corte e sucção estão contraindicados.",
 "b": [
 "água e sabão",
-"torniquete, gelo, corte e sucção"
+"contraindicados"
 ],
 "d": [
-"soro fisiológico",
-"torniquete e gelo"
+"álcool e gaze",
+"recomendados",
+"permitidos"
 ]
 },
 {
@@ -370,13 +372,14 @@
 {
 "n": 57,
 "m": "B",
+"t": "Só a respiração artificial não evita o óbito no choque elétrico com PCR: faltam as compressões e o DEA.",
 "b": [
 "Só a respiração artificial",
-"compressões e o DEA"
+"as compressões e o DEA"
 ],
 "d": [
-"Apenas o resfriamento",
-"a oxigenoterapia"
+"A RCP completa",
+"a hidratação e o garrote"
 ]
 },
 {
