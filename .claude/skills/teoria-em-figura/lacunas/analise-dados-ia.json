@@ -32,14 +32,14 @@
 {
 "n": 14,
 "m": "B",
+"t": "JSON e XML são dados semiestruturados, enquanto texto livre, imagem, áudio e vídeo são dados não estruturados.",
 "b": [
 "semiestruturados",
-"CSV é estruturado",
 "texto livre, imagem, áudio e vídeo"
 ],
 "d": [
-"tabulares",
-"não relacionais"
+"totalmente estruturados",
+"relacionais"
 ]
 },
 {
@@ -356,15 +356,14 @@
 {
 "n": 72,
 "m": "B",
+"t": "O encadeamento de prompts divide tarefas complexas em etapas menores, usando a saída de um prompt como entrada do seguinte.",
 "b": [
 "divide tarefas complexas",
-"entrada do outro",
-"persona"
+"entrada do seguinte"
 ],
 "d": [
 "executa uma única instrução",
-"substitui a persona",
-"dispensa exemplos"
+"resultado final"
 ]
 },
 {
@@ -441,26 +440,16 @@
 },
 {
 "n": 89,
-"m": "A",
-"r": [
-[
-"dados estruturados são aqueles",
-"dados não estruturados são aqueles"
-],
-[
-"dados não estruturados possuem",
-"dados estruturados possuem"
-]
-],
+"m": "B",
+"t": "Dados estruturados possuem formato fixo e são armazenados em tabelas relacionais, ao passo que dados não estruturados não possuem formato fixo e são armazenados em sistemas como bancos NoSQL.",
 "b": [
-"não estruturados",
-"bancos NoSQL",
-"tabelas relacionais"
+"Dados estruturados",
+"tabelas relacionais",
+"bancos NoSQL"
 ],
 "d": [
-"semiestruturados",
-"bancos de grafos",
-"planilhas"
+"bancos relacionais",
+"dados semiestruturados"
 ]
 },
 {
@@ -873,22 +862,17 @@
 },
 {
 "n": 149,
-"m": "A",
-"r": [
-[
-"são conceitos idênticos, referindo-se ambos exclusivamente a distorções presentes nos dados de treinamento de modelos de inteligência artificial",
-"não são conceitos idênticos: os cognitivos referem-se ao raciocínio humano e os algorítmicos a sistemas automatizados"
-]
-],
+"m": "B",
+"t": "Vieses cognitivos e vieses algorítmicos não são conceitos idênticos: os cognitivos são distorções do raciocínio humano, e os algorítmicos são distorções em sistemas automatizados, muitas vezes herdadas dos dados.",
 "b": [
 "não são conceitos idênticos",
 "raciocínio humano",
 "sistemas automatizados"
 ],
 "d": [
-"dados de treinamento",
 "normas jurídicas",
-"conceitos equivalentes"
+"exclusivamente dados de treinamento",
+"conceitos sinônimos"
 ]
 },
 {
@@ -1026,14 +1010,16 @@
 },
 {
 "n": 178,
-"m": "C",
+"m": "B",
+"t": "O Excel 365 reúne Tabelas Dinâmicas, funções avançadas, gráficos e ferramentas de organização que transformam dados brutos em informação útil à decisão.",
 "b": [
 "Tabelas Dinâmicas",
-"dados brutos em informações úteis"
+"funções avançadas"
 ],
 "d": [
-"Tabelas Estáticas",
-"informações inúteis"
+"macros apenas",
+"Tabelas de Dados",
+"funções estáticas"
 ]
 },
 {
@@ -1206,26 +1192,29 @@
 {
 "n": 29,
 "m": "B",
+"t": "O refinamento iterativo traz melhoria contínua e mais precisão; a eficiência reduz a revisão manual, e não a maximiza.",
 "b": [
-"item II erra",
+"melhoria contínua",
+"mais precisão",
 "reduz a revisão manual"
 ],
 "d": [
-"item III erra",
-"maximiza a revisão manual"
+"maximiza a revisão manual",
+"piora a precisão"
 ]
 },
 {
 "n": 151,
 "m": "B",
+"t": "A IA traz diagnósticos mais rápidos e precisos e a ética discute quem responde pelos erros; a IA auxilia os profissionais e não os elimina.",
 "b": [
-"item II é falso",
-"auxilia os profissionais",
-"quem responde pelos erros"
+"mais rápidos e precisos",
+"quem responde pelos erros",
+"auxilia os profissionais"
 ],
 "d": [
-"item III é falso",
-"substitui os profissionais"
+"substitui os profissionais",
+"quem programou a IA é isento"
 ]
 },
 {
@@ -1257,41 +1246,42 @@
 {
 "n": 187,
 "m": "B",
+"t": "Gerar texto com IA sem declarar o uso nem revisar pode ser plágio; usar acriticamente dados enviesados perpetua vieses; a verificação da veracidade cabe também ao usuário final, e não só ao desenvolvedor.",
 "b": [
-"I e II estão certos",
-"III é falso",
+"plágio",
+"perpetua vieses",
 "usuário final"
 ],
 "d": [
-"II e III estão certos",
-"I e III estão certos",
-"desenvolvedor"
+"corrige vieses",
+"órgão regulador",
+"boa prática"
 ]
 },
 {
 "n": 189,
 "m": "B",
+"t": "Boas práticas e códigos de ética reduzem problemas de uso de dados na falta de referência legal; o consentimento não elimina os problemas éticos da inteligência de marketing.",
 "b": [
-"consentimento não elimina os problemas éticos",
 "códigos de ética reduzem problemas",
-"I é falso"
+"consentimento não elimina"
 ],
 "d": [
-"consentimento elimina os problemas éticos",
-"II é falso"
+"consentimento elimina",
+"códigos de ética agravam problemas"
 ]
 },
 {
 "n": 197,
 "m": "B",
+"t": "As respostas da IAG são geradas probabilisticamente, o que exige mais interpretação criteriosa, não menos; apresentar conteúdo de IA como criação exclusivamente humana, sem transparência, é prática não recomendável.",
 "b": [
-"só o item II é falso",
 "mais interpretação criteriosa",
-"I, III e IV"
+"transparência"
 ],
 "d": [
-"só o item III é falso",
-"dispensam interpretação criteriosa"
+"menos interpretação criteriosa",
+"autorização judicial"
 ]
 }
 ]
