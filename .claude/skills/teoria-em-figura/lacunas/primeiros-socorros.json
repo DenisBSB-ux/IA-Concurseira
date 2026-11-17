@@ -1,0 +1,641 @@
+[
+{
+"n": 1,
+"m": "B",
+"b": [
+"segurança da cena",
+"avalia os riscos"
+],
+"d": [
+"avaliação da vítima",
+"aciona o 192"
+]
+},
+{
+"n": 3,
+"m": "B",
+"b": [
+"C-A-B",
+"compressões"
+],
+"d": [
+"B-A-C",
+"C-B-A"
+]
+},
+{
+"n": 5,
+"m": "B",
+"b": [
+"Antes de qualquer atendimento",
+"segurança do local"
+],
+"d": [
+"Após o atendimento inicial",
+"chamada do resgate"
+]
+},
+{
+"n": 7,
+"m": "B",
+"b": [
+"treinada em primeiros socorros",
+"preservar a vida"
+],
+"d": [
+"dispensada de treinamento",
+"evitar o pânico"
+]
+},
+{
+"n": 9,
+"m": "B",
+"b": [
+"leigos",
+"treinamento básico",
+"analisa o ritmo"
+],
+"d": [
+"médicos",
+"curso avançado"
+]
+},
+{
+"n": 11,
+"m": "B",
+"b": [
+"100 a 120 por minuto",
+"pelo menos 5 cm"
+],
+"d": [
+"80 a 100 por minuto",
+"no máximo 3 cm"
+]
+},
+{
+"n": 12,
+"m": "C",
+"b": [
+"sem responder aos estímulos",
+"reanimação cardiopulmonar"
+],
+"d": [
+"tossindo",
+"manobra de Heimlich"
+]
+},
+{
+"n": 13,
+"m": "B",
+"b": [
+"avaliar a segurança",
+"acionar o 192"
+],
+"d": [
+"boca a boca",
+"acionar o 190"
+]
+},
+{
+"n": 14,
+"m": "B",
+"b": [
+"desengasgar",
+"golpes nas costas",
+"esperar sentado"
+],
+"d": [
+"aguardar o socorro",
+"oferecer água"
+]
+},
+{
+"n": 15,
+"m": "B",
+"b": [
+"hemorragia exsanguinante",
+"antes da via aérea"
+],
+"d": [
+"fratura exposta",
+"depois da via aérea"
+]
+},
+{
+"n": 16,
+"m": "A",
+"r": [
+[
+"não deve ser realizada pelo socorrista, pois isso pode agravar a situação",
+"pode e deve ser feita pelo socorrista para reduzir dor e lesões adicionais"
+]
+],
+"b": [
+"pode e deve ser feita",
+"reduzir dor"
+],
+"d": [
+"não deve ser feita",
+"agravar a lesão"
+]
+},
+{
+"n": 17,
+"m": "B",
+"b": [
+"contínuas",
+"30 compressões, 2 ventilações",
+"100 a 120 por minuto"
+],
+"d": [
+"intermitentes",
+"15 compressões, 1 ventilação"
+]
+},
+{
+"n": 19,
+"m": "B",
+"b": [
+"iniciar as compressões",
+"C-A-B"
+],
+"d": [
+"realizar a ventilação",
+"A-B-C"
+]
+},
+{
+"n": 23,
+"m": "B",
+"b": [
+"DEA",
+"compressões de qualidade"
+],
+"d": [
+"intubação orotraqueal",
+"acesso venoso"
+]
+},
+{
+"n": 26,
+"m": "B",
+"t": "Na queimadura, o resfriamento é feito com água corrente em temperatura ambiente e as bolhas não devem ser rompidas.",
+"b": [
+"água corrente",
+"não devem ser rompidas"
+],
+"d": [
+"gelo",
+"devem ser estouradas"
+]
+},
+{
+"n": 27,
+"m": "B",
+"b": [
+"pulso presente",
+"ventilações",
+"ainda na água"
+],
+"d": [
+"pulso ausente",
+"fora da água"
+]
+},
+{
+"n": 28,
+"m": "A",
+"r": [
+[
+"deve ser vigorosamente sacudida para que não desmaie e mantenha a consciência",
+"deve sentar ou deitar com apoio"
+]
+],
+"b": [
+"sentar ou deitar com apoio"
+],
+"d": [
+"permanecer em pé",
+"andar até se sentir melhor"
+]
+},
+{
+"n": 29,
+"m": "B",
+"b": [
+"hemorragia e a hipovolemia",
+"antes das compressões"
+],
+"d": [
+"a via aérea",
+"depois das compressões"
+]
+},
+{
+"n": 33,
+"m": "B",
+"b": [
+"não é arrastada",
+"lesão de coluna"
+],
+"d": [
+"é arrastada com cuidado",
+"lesão de pele"
+]
+},
+{
+"n": 35,
+"m": "B",
+"b": [
+"Ausência de pulso",
+"massagem cardíaca",
+"ao mesmo tempo"
+],
+"d": [
+"Pulso fraco",
+"em seguida"
+]
+},
+{
+"n": 37,
+"m": "B",
+"b": [
+"obsoleto",
+"compressões e ventilação"
+],
+"d": [
+"o mais eficaz",
+"apenas ventilação"
+]
+},
+{
+"n": 41,
+"m": "B",
+"b": [
+"local arejado",
+"não se oferece água"
+],
+"d": [
+"local fechado",
+"oferece-se água"
+]
+},
+{
+"n": 45,
+"m": "B",
+"b": [
+"Pressão direta",
+"elevar o membro",
+"não há fratura"
+],
+"d": [
+"Torniquete",
+"imobilizar o membro"
+]
+},
+{
+"n": 48,
+"m": "B",
+"b": [
+"cortar a corrente",
+"disjuntor ou chave geral",
+"proteger o socorrista"
+],
+"d": [
+"aplicar compressas frias",
+"retirar a vítima com as mãos"
+]
+},
+{
+"n": 50,
+"m": "B",
+"b": [
+"água e sabão",
+"torniquete, gelo, corte e sucção"
+],
+"d": [
+"soro fisiológico",
+"torniquete e gelo"
+]
+},
+{
+"n": 51,
+"m": "B",
+"b": [
+"lesão cervical",
+"imobiliza-se a cabeça e o pescoço"
+],
+"d": [
+"lesão torácica",
+"aplica-se gelo"
+]
+},
+{
+"n": 53,
+"m": "B",
+"b": [
+"pressão direta no ferimento",
+"garrote improvisado"
+],
+"d": [
+"lavagem com água",
+"compressa de gelo"
+]
+},
+{
+"n": 55,
+"m": "B",
+"b": [
+"Palidez, pele fria e sudorese",
+"hipoglicemia"
+],
+"d": [
+"Rubor e pele quente",
+"hiperglicemia"
+]
+},
+{
+"n": 56,
+"m": "B",
+"b": [
+"não se segura a vítima",
+"pano na boca",
+"protege-se a cabeça"
+],
+"d": [
+"segura-se firmemente a vítima",
+"coloca-se um pano"
+]
+},
+{
+"n": 57,
+"m": "B",
+"b": [
+"Só a respiração artificial",
+"compressões e o DEA"
+],
+"d": [
+"Apenas o resfriamento",
+"a oxigenoterapia"
+]
+},
+{
+"n": 61,
+"m": "B",
+"b": [
+"de costas",
+"superfície rígida",
+"centro do tórax"
+],
+"d": [
+"de lado",
+"superfície macia"
+]
+},
+{
+"n": 62,
+"m": "B",
+"b": [
+"acima e abaixo da lesão",
+"talas acolchoadas",
+"nunca endireitar o osso"
+],
+"d": [
+"apenas acima da lesão",
+"talas rígidas sem acolchoamento"
+]
+},
+{
+"n": 65,
+"m": "B",
+"b": [
+"imobiliza-se a articulação",
+"gelo ou compressa fria"
+],
+"d": [
+"massageia-se a articulação",
+"compressa quente"
+]
+},
+{
+"n": 68,
+"m": "A",
+"r": [
+[
+"a pena de detenção ou multa é triplicada, ao passo que, se da omissão resultar morte, a pena é aumentada de metade",
+"a pena de detenção ou multa é aumentada de metade, ao passo que, se da omissão resultar morte, a pena é triplicada"
+]
+],
+"b": [
+"aumentada de metade",
+"triplicada"
+],
+"d": [
+"dobrada",
+"aumentada de um terço"
+]
+},
+{
+"n": 72,
+"m": "B",
+"t": "Na escala AVDI, sem resposta ao estímulo verbal, aplica-se estímulo doloroso priorizando as regiões acima da clavícula.",
+"b": [
+"estímulo doloroso",
+"acima da clavícula"
+],
+"d": [
+"abaixo da clavícula",
+"estímulo tátil"
+]
+},
+{
+"n": 73,
+"m": "A",
+"r": [
+[
+"de apneia",
+"de dispneia"
+],
+[
+"denominada dispneia",
+"denominada apneia"
+]
+],
+"b": [
+"dispneia",
+"apneia"
+],
+"d": [
+"taquipneia",
+"bradipneia"
+]
+},
+{
+"n": 80,
+"m": "B",
+"b": [
+"calcanhar de uma das mãos",
+"logo abaixo da linha intermamilar"
+],
+"d": [
+"ponta dos dedos",
+"logo acima da linha intermamilar"
+]
+},
+{
+"n": 82,
+"m": "B",
+"b": [
+"contraindicada",
+"empurrar o objeto mais fundo",
+"visível"
+],
+"d": [
+"recomendada",
+"liberar a via aérea"
+]
+},
+{
+"n": 84,
+"m": "B",
+"b": [
+"não se retira o pano saturado",
+"sobrepõe-se outro por cima"
+],
+"d": [
+"troca-se o pano saturado",
+"retira-se a pressão"
+]
+},
+{
+"n": 85,
+"m": "A",
+"r": [
+[
+"sendo indicada mesmo em casos de suspeita de fratura ou luxação no membro afetado, pois a gravidade reduz a pressão sanguínea local sem risco adicional",
+"sendo contraindicada na suspeita de fratura ou luxação do membro afetado"
+]
+],
+"b": [
+"contraindicada",
+"fratura ou luxação"
+],
+"d": [
+"recomendada",
+"liberada",
+"entorse leve"
+]
+},
+{
+"n": 89,
+"m": "B",
+"b": [
+"para a frente",
+"pinçadas",
+"5 a 10 minutos"
+],
+"d": [
+"para cima",
+"30 minutos"
+]
+},
+{
+"n": 90,
+"m": "B",
+"b": [
+"lesão de ligamentos",
+"luxação",
+"perda do contato entre as superfícies"
+],
+"d": [
+"fratura óssea",
+"lesão muscular"
+]
+},
+{
+"n": 91,
+"m": "B",
+"b": [
+"mantém-se a posição encontrada",
+"uma articulação acima a uma abaixo"
+],
+"d": [
+"corrige-se a posição",
+"apenas a articulação abaixo"
+]
+},
+{
+"n": 92,
+"m": "B",
+"b": [
+"não se recoloca o osso",
+"pressão ao redor",
+"curativo limpo"
+],
+"d": [
+"recoloca-se o osso",
+"pressão sobre o fragmento"
+]
+},
+{
+"n": 94,
+"m": "B",
+"b": [
+"terceiro grau",
+"terminações nervosas",
+"indolor"
+],
+"d": [
+"segundo grau",
+"a mais dolorosa"
+]
+},
+{
+"n": 95,
+"m": "B",
+"b": [
+"Não se furam",
+"segundo grau"
+],
+"d": [
+"Esvaziam-se",
+"terceiro grau"
+]
+},
+{
+"n": 96,
+"m": "B",
+"b": [
+"água corrente em temperatura ambiente",
+"10 a 20 minutos"
+],
+"d": [
+"água congelada",
+"5 minutos"
+]
+},
+{
+"n": 97,
+"m": "B",
+"b": [
+"não se arranca",
+"corta-se ao redor"
+],
+"d": [
+"arranca-se com um puxão",
+"retira-se por inteiro"
+]
+},
+{
+"n": 99,
+"m": "B",
+"b": [
+"não se provoca vômito",
+"reexpõe o esôfago"
+],
+"d": [
+"induz-se o vômito",
+"protege o esôfago"
+]
+}
+]
