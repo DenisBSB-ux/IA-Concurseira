@@ -40,7 +40,10 @@ for slug, r in R.items():
             if not m: continue
             k = norm(m.group(1))[:50]
             if k in vv or len(m.group(1)) < 14: continue
-            vv.add(k); f = c.get('f', '') or ''; i = f.lower().find(m.group(1).lower())
+            vv.add(k); f = c.get('f', '') or ''
+            _s = re.match(r'^[\s\S]{0,420}?\bjulgu?e(?:m)?\b[^.?!:]*[.?!:]\s*', f, re.I)      # só o item: sem o comando do enunciado
+            if _s and len(f[_s.end():].strip()) >= 25: f = f[_s.end():]
+            i = f.lower().find(m.group(1).lower())
             onde = limpa(re.sub(r'\s*·\s*Lei.*$', '', c.get('ref', '') or ''))[:40]
             if i < 0: sem_ctx.append((limpa(m.group(1)), limpa(m.group(2)), onde)); continue
             if len(f) <= 260:                       # frase curta: aparece inteira (errado em vermelho; correto em amarelo)
