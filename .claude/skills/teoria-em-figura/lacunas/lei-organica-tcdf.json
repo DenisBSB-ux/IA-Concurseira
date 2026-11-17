@@ -28,13 +28,15 @@
 {
 "n": 3,
 "m": "B",
+"t": "A iniciativa do TCDF no processo legislativo sobre sua organização e funcionamento alcança lei complementar, e não só lei ordinária.",
 "b": [
 "lei complementar",
-"não só lei ordinária"
+"organização e funcionamento"
 ],
 "d": [
 "emenda à Lei Orgânica",
-"resolução"
+"resolução",
+"fiscalização e controle"
 ]
 },
 {
@@ -51,20 +53,16 @@
 },
 {
 "n": 6,
-"m": "A",
-"r": [
-[
-"inclusive das nomeações",
-"excetuadas as nomeações"
-]
-],
+"m": "B",
+"t": "O Tribunal aprecia, para fins de registro, a legalidade dos atos de admissão de pessoal e das aposentadorias, reformas e pensões, excetuadas as nomeações para cargo de provimento em comissão.",
 "b": [
-"excetuadas as nomeações",
-"aposentadorias, reformas e pensões"
+"excetuadas",
+"cargo de provimento em comissão"
 ],
 "d": [
-"inclusive das nomeações",
-"somente da administração direta"
+"inclusive",
+"somente da administração direta",
+"cargo de provimento efetivo"
 ]
 },
 {
@@ -141,21 +139,16 @@
 },
 {
 "n": 17,
-"m": "A",
-"r": [
-[
-"fiscalizar exclusivamente a aplicação",
-"fiscalizar, entre outras atribuições, a aplicação"
-]
-],
+"m": "B",
+"t": "O Tribunal de Contas do Distrito Federal fiscaliza, entre outras atribuições, a aplicação de recursos repassados ao Distrito Federal mediante convênio ou acordo, sendo ampla a sua fiscalização.",
 "b": [
 "entre outras atribuições",
-"convênio ou acordo"
+"ampla"
 ],
 "d": [
 "exclusivamente",
 "somente",
-"contrato de gestão"
+"restrita"
 ]
 },
 {
@@ -317,29 +310,30 @@
 {
 "n": 35,
 "m": "B",
+"t": "O TCDF é representado em juízo pela Procuradoria-Geral do Distrito Federal, ressalvada a contratação de serviços técnicos especializados quando necessária; não há vedação.",
 "b": [
-"Procuradoria-Geral",
-"ressalvada a contratação",
+"Procuradoria-Geral do Distrito Federal",
 "não há vedação"
 ],
 "d": [
-"Presidente do Tribunal",
+"Ministério Público de Contas",
 "vedada a contratação",
-"Ministério Público"
+"Advocacia-Geral da União"
 ]
 },
 {
 "n": 36,
 "m": "B",
+"t": "O acesso do Tribunal às informações sobre despesas sigilosas dispensa autorização judicial quando a lei não a exigir; a dispensa não é absoluta.",
 "b": [
 "despesas sigilosas",
-"não depender de autorização judicial",
+"a lei não a exigir",
 "não é absoluta"
 ],
 "d": [
-"despesas ordinárias",
-"exigir sempre autorização judicial",
-"é irrestrita"
+"gastos ordinários",
+"a lei a exigir",
+"ilimitada"
 ]
 },
 {
@@ -378,13 +372,12 @@
 {
 "n": 39,
 "m": "B",
+"t": "O Tribunal realiza auditorias, inclusive operacional, por iniciativa própria ou da Câmara Legislativa do Distrito Federal.",
 "b": [
-"auditoria operacional",
 "iniciativa própria",
 "Câmara Legislativa"
 ],
 "d": [
-"auditoria financeira",
 "requisição do Governador",
 "Ministério Público"
 ]
@@ -392,28 +385,28 @@
 {
 "n": 40,
 "m": "B",
+"t": "A jurisdição do TCDF alcança os dirigentes de empresas estatais do Distrito Federal, pouco importando o regime celetista dos servidores.",
 "b": [
 "dirigentes de empresas estatais",
-"pouco importando",
-"regime celetista"
+"pouco importando"
 ],
 "d": [
 "empresas privadas",
-"salvo se adotarem",
-"regime estatutário"
+"somente se estatutário",
+"entidades sem fins lucrativos"
 ]
 },
 {
 "n": 42,
 "m": "B",
-"t": "Os prazos de impugnação valem no certame e não limitam o controle externo do Tribunal.",
+"t": "Os prazos de impugnação da licitação valem no certame, mas não limitam o controle externo do Tribunal sobre o processo.",
 "b": [
 "valem no certame",
 "não limitam"
 ],
 "d": [
-"valem perante o Tribunal",
-"restringem"
+"vinculam o Tribunal",
+"extinguem"
 ]
 },
 {
@@ -595,15 +588,16 @@
 {
 "n": 60,
 "m": "B",
+"t": "Vagos os cargos de presidente e vice-presidente fora dos sessenta dias finais do mandato, há nova eleição, da qual somente titulares participam, ainda que em licença ou férias.",
 "b": [
 "sessenta dias finais",
 "somente titulares",
 "licença ou férias"
 ],
 "d": [
-"trinta dias finais",
-"também auditores",
-"vacância definitiva"
+"noventa dias finais",
+"titulares e auditores",
+"trinta dias finais"
 ]
 },
 {
@@ -637,14 +631,13 @@
 {
 "n": 65,
 "m": "B",
+"t": "Editais de licitação e contratos são objeto de fiscalização e auditoria, e não de apreciação para fins de registro.",
 "b": [
-"fiscalização e auditoria",
-"apreciação para fins de registro"
+"fiscalização e auditoria"
 ],
 "d": [
-"registro obrigatório",
-"pensões e aposentadorias",
-"apreciação para fins de reexame"
+"julgamento de contas",
+"controle prévio de legalidade"
 ]
 },
 {
@@ -843,14 +836,14 @@
 {
 "n": 104,
 "m": "B",
-"t": "Na vacância do cargo de conselheiro, o preenchimento segue o critério da cadeira cativa, sem exceção quando inexistir representante do MP especial na corte.",
+"t": "Na vacância do cargo de conselheiro de tribunal de contas, o preenchimento segue o critério da cadeira cativa, não havendo exceção quando inexistir representante do MP especial na corte.",
 "b": [
 "cadeira cativa",
-"sem exceção"
+"não havendo exceção"
 ],
 "d": [
 "livre escolha",
-"salvo"
+"ressalvada a exceção"
 ]
 },
 {
@@ -904,13 +897,14 @@
 {
 "n": 113,
 "m": "B",
+"t": "Os auditores do TCDF têm, de forma permanente, as garantias e impedimentos de conselheiro, e não somente quando em substituição.",
 "b": [
 "de forma permanente",
-"não só na substituição"
+"não somente quando em substituição"
 ],
 "d": [
 "apenas na substituição",
-"por designação"
+"de forma eventual"
 ]
 },
 {
@@ -1447,20 +1441,16 @@
 },
 {
 "n": 192,
-"m": "A",
-"r": [
-[
-"expressamente vedado e dispensado de participar da distribuição e do rodízio comum de relatoria",
-"sujeito, como os demais conselheiros, à distribuição e ao rodízio de relatoria"
-]
-],
+"m": "B",
+"t": "O Vice-Presidente do TCDF, diante do acúmulo de tarefas de representação, fica sujeito, como os demais conselheiros, à distribuição e ao rodízio de relatoria de processos de auditoria.",
 "b": [
-"como os demais conselheiros",
+"sujeito",
 "rodízio de relatoria"
 ],
 "d": [
 "dispensado",
-"excluído, ao contrário dos demais conselheiros"
+"excluído",
+"parecer prévio"
 ]
 },
 {
@@ -1895,14 +1885,15 @@
 {
 "n": 191,
 "m": "B",
+"t": "O Presidente do TCDF é eleito pelos Conselheiros para mandato de dois anos.",
 "b": [
-"dois anos",
-"não prevê uma única recondução"
+"Conselheiros",
+"dois anos"
 ],
 "d": [
+"Governador",
 "quatro anos",
-"um ano",
-"permite a recondução"
+"Câmara Legislativa"
 ]
 },
 {
