@@ -349,7 +349,7 @@ function reta7Cartao(b, dia0){
   const pct = Math.min(100, Math.round(100 * feitas / Math.max(1, ses.uids.length)));
   const comp = [ses.nErros ? ses.nErros + ' erros' : '', ses.nMarcadas ? ses.nMarcadas + ' marcadas' : '', ses.nNovas ? ses.nNovas + (ses.nNovas === 1 ? ' nova' : ' novas') : ''].filter(Boolean).join(' + ');
   return `<article class="r7-card${ok ? ' ok' : ''}${STATE.materia === mat ? ' r7-atual' : ''}">
-    <div class="r7-top"><h3>${esc(mat)}</h3>${R7_ATUALIZADAS.includes(reta7SlugResumo(mat)) ? '<span class="r7-atual-selo" title="Resumo por assunto em ordem de relevância e flashcards com o texto da questão">✨ Matéria atualizada</span>' : ''}${ok ? '<span class="r7-feito">✓ feita</span>' : ''}</div>
+    <div class="r7-top"><h3>${esc(mat)}</h3>${R7_ATUALIZADAS.includes(reta7SlugResumo(mat)) ? '<span class="r7-atual-selo" title="Resumo por assunto em ordem de relevância e flashcards com o texto da questão">✨ Matéria atualizada</span>' : ''}${ok ? '<span class="r7-feito" title="Meta do dia cumprida: ' + feitas + ' respostas hoje nesta matéria (a meta é ' + meta + ', cerca de 70% das ' + ses.uids.length + ' questões sugeridas para hoje). Respostas nas lacunas contam.">✓ meta do dia</span>' : ''}</div>
     <div class="r7-acoes">
       ${resumo ? `<span class="r7-ac"><span class="r7-prog" data-r7-prog="${esc(slug)}:r" title="Assuntos do resumo marcados como estudados"><i></i></span><button class="btn r7-res" data-r7-resumo="${esc(mat)}">📄 Resumo</button></span>` : ''}
       ${(typeof treinoDisponivel === 'function' && treinoDisponivel(mat)) ? `<span class="r7-ac"><span class="r7-prog" data-r7-prog="${esc(slug)}:f"><i class="a"></i><i class="b"></i></span><button class="btn r7-res" data-tr-abrir="${esc(mat)}" data-tr-modo="flash">🃏 Flashcards</button></span><span class="r7-ac"><span class="r7-prog" data-r7-prog="${esc(slug)}:l"><i class="a"></i><i class="c"></i></span><button class="btn r7-res" data-tr-abrir="${esc(mat)}" data-tr-modo="lacunas">🧩 Lacunas</button></span>` : ''}</div>
@@ -359,22 +359,22 @@ function reta7Cartao(b, dia0){
 function reta7PreencherProg(raiz){
   const els = Array.from((raiz || document).querySelectorAll('[data-r7-prog]')); if(!els.length) return;
   const por = (a, b) => b ? Math.min(100, Math.round(100 * a / b)) : 0;
-  const rotulo = (el, pct) => {
+  const rotulo = (el, pct, qt) => {
     let l = el.nextElementSibling; if(!l || !l.classList.contains('r7-pct')){ l = document.createElement('b'); l.className = 'r7-pct'; el.after(l); }
-    l.textContent = pct >= 100 ? '✓ 100%' : pct + '%'; l.classList.toggle('ok', pct >= 100); el.classList.toggle('feito', pct >= 100);
+    l.textContent = (pct >= 100 ? '✓ ' : '') + (qt ? qt + ' · ' : '') + pct + '%'; l.classList.toggle('ok', pct >= 100); el.classList.toggle('feito', pct >= 100);
   };
   const pinta = el => {
     const [slug, t] = el.dataset.r7Prog.split(':'), is = el.querySelectorAll('i');
     if(t === 'r'){
       const r = typeof RESUMOS_TCDF !== 'undefined' && RESUMOS_TCDF[slug]; if(!r) return;
       const tot = (r.assuntos || []).length, ok = Object.keys(reta7CheckLer(slug)).filter(k => reta7CheckLer(slug)[k] && Number(k) >= 1 && Number(k) <= tot).length;
-      is[0].style.width = por(ok, tot) + '%'; el.title = ok + ' de ' + tot + ' assuntos estudados'; el.dataset.txt = ok + '/' + tot; rotulo(el, por(ok, tot));
+      is[0].style.width = por(ok, tot) + '%'; el.title = ok + ' de ' + tot + ' assuntos estudados'; el.dataset.txt = ok + '/' + tot; rotulo(el, por(ok, tot), ok + '/' + tot);
     } else {
       const e = typeof TREINO_TCDF !== 'undefined' && TREINO_TCDF[slug] ? reta7EstatTreino(slug) : null; if(!e) return;
       const x = t === 'f' ? e.f : e.l, a = x.ok, b = t === 'f' ? x.rev : x.err;
       is[0].style.width = por(a, x.tot) + '%'; is[1].style.width = por(b, x.tot) + '%';
       el.title = t === 'f' ? a + ' já sei · ' + b + ' revisar · ' + (x.tot - a - b) + ' novos (de ' + x.tot + ')' : a + ' certas · ' + b + ' erradas · ' + (x.tot - a - b) + ' novas (de ' + x.tot + ')';
-      el.dataset.txt = (a + b) + '/' + x.tot; rotulo(el, por(a + b, x.tot));
+      el.dataset.txt = (a + b) + '/' + x.tot; rotulo(el, por(a + b, x.tot), (a + b) + '/' + x.tot);
     }
   };
   els.forEach(el => {

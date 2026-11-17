@@ -2685,3 +2685,6 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 .tr-status.novo{ background:rgba(120,130,150,.22); color:var(--m-mut, var(--mut)); } .tr-status.ok{ background:rgba(46,155,87,.22); color:#2e9b57; } .tr-status.no{ background:rgba(192,57,43,.22); color:#e0584a; }
 .tr-tent{ margin:6px 2px 0; font-size:13px; color:var(--m-mut, var(--mut)); } .tr-tent b{ color:var(--m-ink); }
 .tr-refaz{ margin-top:10px; }
+
+/* v597: quantidade ao lado da % (respondidos / total) */
+.r7-pct{ min-width:92px; white-space:nowrap; }
