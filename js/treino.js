@@ -186,6 +186,12 @@ function treinoInfoHtml(it){
   if(!l1 && !l2) return '';
   return '<span class="tr-info">' + (l1 ? esc(l1) : '') + (l2 ? '<br>' + esc(l2) : '') + '</span>';
 }
+// mostra só o item da questão: tira o comando do enunciado ("À luz …, julgue o item a seguir, relativo a …."); os dados e o hash não mudam
+function treinoSoItem(txt, minimo){
+  const s = String(txt || ''), m = s.match(/^[\s\S]{0,420}?\bjulgu?e(?:m)?\b[^.?!:]*[.?!:]\s*/i);
+  if(!m) return s;
+  const resto = s.slice(m[0].length); return resto.trim().length >= (minimo === undefined ? 25 : minimo) ? resto : s;
+}
 function treinoChaveItem(it, tipo){ return tipo + ':' + it.n + ':' + it.h + (it.k ? ':' + it.k : ''); }
 function treinoMontarFila(){
   const d = TR.dados, slug = TR.slug;
@@ -249,7 +255,7 @@ function treinoGuardarLacuna(){
   TR.mem[treinoChaveItem(it, 'l')] = { slots:TR.slots, banco:TR.banco, checado:TR.checado };
 }
 // botões 🔀 e ↺ Resetar (com o menu Todas / Só revisar·errei): ficam na linha de filtros (flashcards) ou na linha de ações (lacunas)
-function treinoBtnEmbaralhar(cls){ return `<button class="${cls}" data-tr-embaralhar="1" title="Embaralha de novo"><span class="tr-ic" aria-hidden="true">🔀</span></button>`; }
+function treinoBtnEmbaralhar(cls){ return `<button class="${cls}" data-tr-embaralhar="1" title="Embaralha a ordem de novo"><span class="tr-ic" aria-hidden="true">🔀</span>Embaralhar</button>`; }
 function treinoBtnReset(cls){
   const flash = TR.modo === 'flash', tipo = flash ? 'f' : 'l', itens = flash ? TR.dados.flash : TR.dados.lacunas, alvo = flash ? 'rev' : 'err', mm = treinoLer()[TR.slug] || {};
   const nTodas = itens.filter(x => mm[treinoChaveItem(x, tipo)]).length, nAlvo = itens.filter(x => mm[treinoChaveItem(x, tipo)] === alvo).length;
@@ -272,7 +278,7 @@ function treinoDesenhar(){
   const filtros = TR.modo === 'flash'
     ? [['todos', 'Total: ' + (nOk + nRev) + ' / ' + d.flash.length + ' (' + pc(nOk + nRev, d.flash.length) + ')'], ['sei', '✓ Já sei: ' + nOk + ' (' + pc(nOk, d.flash.length) + ')'], ['revisar', '🔁 Revisar: ' + nRev + ' (' + pc(nRev, d.flash.length) + ')']]
     : [['todos', 'Total: ' + (lOk + lErr) + ' / ' + d.lacunas.length + ' (' + pc(lOk + lErr, d.lacunas.length) + ')'], ['certas', '✓ Corretas: ' + lOk + ' (' + pc(lOk, d.lacunas.length) + ')'], ['erradas', '✗ Erradas: ' + lErr + ' (' + pc(lErr, d.lacunas.length) + ')']];
-  const chips = `<div class="tr-filtros">${filtros.map(f => `<button class="${TR.filtro === f[0] ? 'on' : ''}" data-tr-filtro="${f[0]}">${esc(f[1])}</button>`).join('')}<span class="tr-cont" aria-live="polite">${TR.fila.length ? (TR.i + 1) + ' / ' + TR.fila.length : '0'}</span>${TR.modo === 'lacunas' ? '' : treinoBtnEmbaralhar('') + treinoBtnReset('')}</div>`;
+  const chips = `<div class="tr-filtros">${filtros.map(f => `<button class="${TR.filtro === f[0] ? 'on' : ''}" data-tr-filtro="${f[0]}">${esc(f[1])}</button>`).join('')}<span class="tr-cont" aria-live="polite">${TR.fila.length ? (TR.i + 1) + ' / ' + TR.fila.length : '0'}</span></div>`;
   const it = TR.fila[TR.i];
   let corpo;
   if(!it) corpo = `<p class="tr-vazio">${TR.filtro === 'todos' ? 'Nenhum item.' : 'Nada neste filtro. Escolha outro.'}</p>`;
@@ -291,18 +297,18 @@ function treinoHtmlFlash(it){
   const m = treinoMarca(TR.slug, treinoChaveItem(it, 'f'));
   const lado = TR.virado
     ? `<div class="tr-card tr-verso${m === 'ok' ? ' tr-c-ok' : (m === 'rev' ? ' tr-c-no' : '')}" data-tr-virar="1"><span class="tr-tag">Resposta${it.k === 'troca' ? ' · troca típica' : ''}</span>${treinoInfoHtml(it)}${it.g ? `<p class="tr-gab ${/^ERRADO/.test(it.g) ? 'no' : 'ok'}">${esc(it.g)}</p>` : ''}<p class="tr-texto">${esc(it.v)}</p>${it.k === 'troca' && it.x ? `<p class="tr-extra">${esc(it.x)}</p>` : (it.x ? `<p class="tr-extra">${esc(it.x)}</p>` : '')}${ref}</div>`
-    : `<div class="tr-card tr-frente${m === 'ok' ? ' tr-c-ok' : (m === 'rev' ? ' tr-c-no' : '')}" data-tr-virar="1" tabindex="0"><span class="tr-tag">${it.k === 'troca' ? 'Corrija' : (it.k === 'questao' ? 'Questão' : 'Pergunta')}</span>${treinoInfoHtml(it)}<p class="tr-texto${it.k === 'questao' ? ' tr-quest' : ''}">${esc(it.f)}</p><span class="tr-dica">toque ou Espaço para virar</span></div>`;
+    : `<div class="tr-card tr-frente${m === 'ok' ? ' tr-c-ok' : (m === 'rev' ? ' tr-c-no' : '')}" data-tr-virar="1" tabindex="0"><span class="tr-tag">${it.k === 'troca' ? 'Corrija' : (it.k === 'questao' ? 'Questão' : 'Pergunta')}</span>${treinoInfoHtml(it)}<p class="tr-texto${it.k === 'questao' ? ' tr-quest' : ''}">${esc(treinoSoItem(it.f))}</p><span class="tr-dica">toque ou Espaço para virar</span></div>`;
   const ant = `<button class="btn tr-bt" data-tr-nav="-1" ${TR.i === 0 ? 'disabled' : ''}><span class="tr-ic" aria-hidden="true">◀</span>Anterior</button>`;
   const prox = `<button class="btn tr-bt" data-tr-nav="1" ${(TR.i >= TR.fila.length - 1 || !m) ? 'disabled' : ''} title="${m ? '' : 'Responda com Já sei ou Revisar para avançar'}">Próxima<span class="tr-ic" aria-hidden="true">▶</span></button>`;
   const acoes = TR.virado
-    ? `<div class="tr-acoes"><button class="btn tr-bt tr-sei${m === 'ok' ? ' on' : ''}" data-tr-marca="ok"><span class="tr-ic" aria-hidden="true">✅</span>Já sei <small>(1)</small></button><button class="btn tr-bt tr-rev${m === 'rev' ? ' on' : ''}" data-tr-marca="rev"><span class="tr-ic" aria-hidden="true">🔁</span>Revisar <small>(2)</small></button>${ant}${prox}${treinoBtnNaoResp()}</div>`
-    : `<div class="tr-acoes"><button class="btn btn-gold tr-bt" data-tr-virar="1"><span class="tr-ic" aria-hidden="true">🔄</span>Virar</button>${ant}${prox}${treinoBtnNaoResp()}</div>`;
+    ? `<div class="tr-acoes"><button class="btn tr-bt tr-sei${m === 'ok' ? ' on' : ''}" data-tr-marca="ok"><span class="tr-ic" aria-hidden="true">✅</span>Já sei <small>(1)</small></button><button class="btn tr-bt tr-rev${m === 'rev' ? ' on' : ''}" data-tr-marca="rev"><span class="tr-ic" aria-hidden="true">🔁</span>Revisar <small>(2)</small></button>${treinoBtnEmbaralhar('btn tr-bt')}${treinoBtnReset('btn tr-bt')}${ant}${prox}${treinoBtnNaoResp()}</div>`
+    : `<div class="tr-acoes"><button class="btn btn-gold tr-bt" data-tr-virar="1"><span class="tr-ic" aria-hidden="true">🔄</span>Virar</button>${treinoBtnEmbaralhar('btn tr-bt')}${treinoBtnReset('btn tr-bt')}${ant}${prox}${treinoBtnNaoResp()}</div>`;
   return lado + acoes;
 }
 function treinoHtmlLacuna(it){
   let k = 0;
-  const frase = it.p.map(p => {
-    if(p.l === undefined) return esc(p.t);
+  const frase = it.p.map((p, ip) => {
+    if(p.l === undefined) return esc(ip === 0 ? treinoSoItem(p.t, 0) : p.t);
     const i = k++, w = TR.slots[i], cert = TR.checado ? (w && w.w === p.l ? ' ok' : ' no') : '';
     return `<span class="tr-blank${w ? ' cheio' : ''}${cert}" data-tr-blank="${i}" tabindex="0" role="button" aria-label="Espaço ${i + 1}${w ? ': ' + esc(w.w) : ' vazio'}">${w ? esc(w.w) : '＿＿＿＿'}</span>`;
   }).join('');
