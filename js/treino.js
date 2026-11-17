@@ -233,6 +233,17 @@ function treinoSoItem(txt, minimo){
   if(!m) return s;
   const resto = s.slice(m[0].length); return resto.trim().length >= (minimo === undefined ? 25 : minimo) ? resto : s;
 }
+/* quebras de linha "duras" vindas da cópia da prova: no meio da frase viram espaço; ficam as de parágrafo, de alternativa (A) B)…), de lista e as depois de ponto final */
+function treinoJuntaQuebras(txt){
+  const L = String(txt == null ? '' : txt).split('\n'); let out = L[0];
+  for(let i = 1; i < L.length; i++){
+    const cur = L[i], prev = out;
+    const marca = /^\s*(?:[A-Ea-e]\)|[-•*–]\s|\d+[.)]\s|[IVX]+\s*[-–.)]\s)/.test(cur);
+    const fim = /[.:;?!…]\s*$/.test(prev), minus = /^\s*[a-zà-ú]/.test(cur);
+    out += (!cur.trim() || !prev.trim() || marca || (fim && !minus)) ? '\n' + cur : ' ' + cur.replace(/^\s+/, '');
+  }
+  return out;
+}
 function treinoChaveItem(it, tipo){ return tipo + ':' + it.n + ':' + it.h + (it.k ? ':' + it.k : ''); }
 function treinoMontarFila(){
   const d = TR.dados, slug = TR.slug;
@@ -339,7 +350,7 @@ function treinoHtmlFlash(it){
   const m = treinoMarca(TR.slug, treinoChaveItem(it, 'f'));
   const lado = TR.virado
     ? `<div class="tr-card tr-verso${m === 'ok' ? ' tr-c-ok' : (m === 'rev' ? ' tr-c-no' : '')}" data-tr-virar="1"><span class="tr-tag">Resposta${it.k === 'troca' ? ' · troca típica' : ''}</span>${treinoStatusHtml(it, 'f')}${treinoInfoHtml(it)}${it.g ? `<p class="tr-gab ${/^ERRADO/.test(it.g) ? 'no' : 'ok'}">${esc(it.g)}</p>` : ''}<p class="tr-texto">${esc(it.v)}</p>${it.k === 'troca' && it.x ? `<p class="tr-extra">${esc(it.x)}</p>` : (it.x ? `<p class="tr-extra">${esc(it.x)}</p>` : '')}${ref}</div>`
-    : `<div class="tr-card tr-frente${m === 'ok' ? ' tr-c-ok' : (m === 'rev' ? ' tr-c-no' : '')}" data-tr-virar="1" tabindex="0"><span class="tr-tag">${it.k === 'troca' ? 'Corrija' : (it.k === 'questao' ? 'Questão' : 'Pergunta')}</span>${treinoStatusHtml(it, 'f')}${treinoInfoHtml(it)}<p class="tr-texto${it.k === 'questao' ? ' tr-quest' : ''}">${esc(treinoSoItem(it.f))}</p><span class="tr-dica">toque ou Espaço para virar</span></div>`;
+    : `<div class="tr-card tr-frente${m === 'ok' ? ' tr-c-ok' : (m === 'rev' ? ' tr-c-no' : '')}" data-tr-virar="1" tabindex="0"><span class="tr-tag">${it.k === 'troca' ? 'Corrija' : (it.k === 'questao' ? 'Questão' : 'Pergunta')}</span>${treinoStatusHtml(it, 'f')}${treinoInfoHtml(it)}<p class="tr-texto${it.k === 'questao' ? ' tr-quest' : ''}">${esc(treinoJuntaQuebras(treinoSoItem(it.f)))}</p><span class="tr-dica">toque ou Espaço para virar</span></div>`;
   const ant = `<button class="btn tr-bt" data-tr-nav="-1" ${TR.i === 0 ? 'disabled' : ''}><span class="tr-ic" aria-hidden="true">◀</span>Anterior</button>`;
   const prox = `<button class="btn tr-bt" data-tr-nav="1" ${(TR.i >= TR.fila.length - 1 || !m) ? 'disabled' : ''} title="${m ? '' : 'Responda com Já sei ou Revisar para avançar'}">Próxima<span class="tr-ic" aria-hidden="true">▶</span></button>`;
   const acoes = TR.virado
@@ -350,7 +361,12 @@ function treinoHtmlFlash(it){
 function treinoHtmlLacuna(it){
   let k = 0;
   const frase = it.p.map((p, ip) => {
-    if(p.l === undefined) return esc(ip === 0 ? treinoSoItem(p.t, 0) : p.t);
+    if(p.l === undefined){
+      let t = ip === 0 ? treinoSoItem(p.t, 0) : p.t;
+      if(ip > 0) t = t.replace(/^[ \t]*\n[ \t]*/, ' ');                                   // logo depois de um espaço em branco: mesma frase
+      if(it.p[ip + 1] && it.p[ip + 1].l !== undefined) t = t.replace(/[ \t]*\n[ \t]*$/, ' '); // logo antes de um espaço em branco: mesma frase
+      return esc(treinoJuntaQuebras(t));
+    }
     const i = k++, w = TR.slots[i], cert = TR.checado ? (w && w.w === p.l ? ' ok' : ' no') : '';
     return `<span class="tr-blank${w ? ' cheio' : ''}${cert}" data-tr-blank="${i}" tabindex="0" role="button" aria-label="Espaço ${i + 1}${w ? ': ' + esc(w.w) : ' vazio'}">${w ? esc(w.w) : '＿＿＿＿'}</span>`;
   }).join('');
