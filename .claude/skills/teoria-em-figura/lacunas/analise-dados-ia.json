@@ -1,0 +1,1297 @@
+[
+{
+"n": 6,
+"m": "A",
+"r": [
+[
+"quantitativa discreta",
+"qualitativa nominal"
+]
+],
+"b": [
+"qualitativa nominal",
+"identificadores"
+],
+"d": [
+"quantitativa discreta",
+"qualitativa ordinal"
+]
+},
+{
+"n": 7,
+"m": "B",
+"b": [
+"não substitui",
+"validação estatística e técnica"
+],
+"d": [
+"dispensa",
+"reforça"
+]
+},
+{
+"n": 14,
+"m": "B",
+"b": [
+"semiestruturados",
+"CSV é estruturado",
+"texto livre, imagem, áudio e vídeo"
+],
+"d": [
+"tabulares",
+"não relacionais"
+]
+},
+{
+"n": 18,
+"m": "C",
+"b": [
+"compatibilizados",
+"períodos de referência"
+],
+"d": [
+"arredondados",
+"anos fiscais"
+]
+},
+{
+"n": 19,
+"m": "B",
+"b": [
+"instrução ou comando",
+"orientar a resposta"
+],
+"d": [
+"erro do sistema",
+"base de treinamento"
+]
+},
+{
+"n": 20,
+"m": "C",
+"b": [
+"complementar",
+"critérios de cálculo",
+"limitações"
+],
+"d": [
+"substituir",
+"fontes de dados",
+"metas"
+]
+},
+{
+"n": 31,
+"m": "B",
+"b": [
+"sem retreinar o modelo",
+"engenharia de prompt"
+],
+"d": [
+"fine-tuning",
+"alucinação"
+]
+},
+{
+"n": 37,
+"m": "C",
+"b": [
+"estrutura de saída esperada",
+"previsibilidade"
+],
+"d": [
+"tom da resposta",
+"aleatoriedade"
+]
+},
+{
+"n": 41,
+"m": "C",
+"b": [
+"tarefa complexa",
+"saída de um prompt",
+"entrada"
+],
+"d": [
+"tarefa simples",
+"treinamento",
+"prompts maiores"
+]
+},
+{
+"n": 42,
+"m": "C",
+"b": [
+"iniciar em zero",
+"distorce"
+],
+"d": [
+"iniciar no menor valor",
+"preserva"
+]
+},
+{
+"n": 43,
+"m": "B",
+"b": [
+"narrativa lógica",
+"extração de insights"
+],
+"d": [
+"narrativa emocional",
+"redução de custos"
+]
+},
+{
+"n": 44,
+"m": "C",
+"b": [
+"escalas adequadas",
+"rótulos legíveis",
+"elementos visuais desnecessários"
+],
+"d": [
+"escalas truncadas",
+"rótulos ocultos",
+"efeitos tridimensionais"
+]
+},
+{
+"n": 46,
+"m": "B",
+"b": [
+"em 90",
+"base zero",
+"o dobro da outra"
+],
+"d": [
+"em 50",
+"base 100",
+"a metade da outra"
+]
+},
+{
+"n": 47,
+"m": "C",
+"b": [
+"narrativas compreensíveis",
+"tomada de decisão",
+"engajamento"
+],
+"d": [
+"tabelas detalhadas",
+"auditoria",
+"distanciamento"
+]
+},
+{
+"n": 49,
+"m": "B",
+"b": [
+"narrativa baseada em dados",
+"engajar uma audiência",
+"visualizações"
+],
+"d": [
+"relatório estático",
+"reduzir custos",
+"código Python"
+]
+},
+{
+"n": 51,
+"m": "C",
+"b": [
+"contexto",
+"desenvolvimento da análise",
+"chamada à ação"
+],
+"d": [
+"orçamento",
+"revisão técnica",
+"relatório final"
+]
+},
+{
+"n": 52,
+"m": "C",
+"b": [
+"público-alvo",
+"mensagem principal"
+],
+"d": [
+"formato do arquivo",
+"orçamento disponível"
+]
+},
+{
+"n": 53,
+"m": "A",
+"r": [
+[
+"irrelevante",
+"relevante"
+],
+[
+"desde que",
+"ainda que"
+]
+],
+"b": [
+"público-alvo",
+"relevante",
+"ainda que"
+],
+"d": [
+"irrelevante",
+"desde que",
+"orçamento"
+]
+},
+{
+"n": 56,
+"m": "C",
+"b": [
+"período analisado",
+"meta de referência",
+"mudança no procedimento de registro"
+],
+"d": [
+"unidade responsável",
+"média histórica",
+"novo layout"
+]
+},
+{
+"n": 57,
+"m": "C",
+"b": [
+"bases de dados",
+"dashboards",
+"visual e interativa"
+],
+"d": [
+"gráficos isolados",
+"estática e textual",
+"modelos preditivos"
+]
+},
+{
+"n": 65,
+"m": "A",
+"r": [
+[
+"constitui o resultado final apresentado ao tomador de decisão",
+"constitui insumo da análise"
+],
+[
+"equivalente, em finalidade, a",
+"distinto, em finalidade, de"
+]
+],
+"b": [
+"insumo da análise",
+"distinto, em finalidade, de"
+],
+"d": [
+"resultado final",
+"equivalente, em finalidade, a"
+]
+},
+{
+"n": 66,
+"m": "C",
+"b": [
+"extrair os compromissos",
+"tabela de responsáveis e prazos",
+"encadeamento de prompts"
+],
+"d": [
+"excluir os compromissos",
+"few-shot",
+"gráfico de barras"
+]
+},
+{
+"n": 67,
+"m": "C",
+"b": [
+"público-alvo",
+"interatividade",
+"atualização contínua"
+],
+"d": [
+"custo da licença",
+"impressão",
+"atualização mensal"
+]
+},
+{
+"n": 69,
+"m": "B",
+"b": [
+"não estruturados",
+"tabela é ineficiente",
+"Big Data"
+],
+"d": [
+"semiestruturados",
+"tabela é simples",
+"Data Warehouse"
+]
+},
+{
+"n": 70,
+"m": "B",
+"b": [
+"few-shot",
+"sem treinar nem alterar os pesos"
+],
+"d": [
+"zero-shot",
+"fine-tuning",
+"retreinando os pesos"
+]
+},
+{
+"n": 72,
+"m": "B",
+"b": [
+"divide tarefas complexas",
+"entrada do outro",
+"persona"
+],
+"d": [
+"executa uma única instrução",
+"substitui a persona",
+"dispensa exemplos"
+]
+},
+{
+"n": 76,
+"m": "C",
+"b": [
+"apenas argumentos",
+"viés de confirmação",
+"evidências compatíveis"
+],
+"d": [
+"argumentos contrários",
+"viés de ancoragem",
+"evidências contrárias"
+]
+},
+{
+"n": 79,
+"m": "B",
+"b": [
+"dados estruturados",
+"formato tabular"
+],
+"d": [
+"dados semiestruturados",
+"formato livre"
+]
+},
+{
+"n": 81,
+"m": "C",
+"b": [
+"dados estruturados",
+"otimizada",
+"índices"
+],
+"d": [
+"dados não estruturados",
+"prejudicada",
+"tabelas temporárias"
+]
+},
+{
+"n": 83,
+"m": "A",
+"r": [
+[
+"têm formato fixo e podem ser facilmente armazenados",
+"não têm formato fixo e não podem ser facilmente armazenados"
+]
+],
+"b": [
+"não têm formato fixo",
+"não podem ser facilmente armazenados"
+],
+"d": [
+"têm esquema rígido",
+"são nativamente tabulares"
+]
+},
+{
+"n": 84,
+"m": "C",
+"b": [
+"revisão",
+"tratamento automatizado",
+"segredos comercial e industrial"
+],
+"d": [
+"exclusão",
+"tratamento manual",
+"sigilo fiscal"
+]
+},
+{
+"n": 89,
+"m": "A",
+"r": [
+[
+"dados estruturados são aqueles",
+"dados não estruturados são aqueles"
+],
+[
+"dados não estruturados possuem",
+"dados estruturados possuem"
+]
+],
+"b": [
+"não estruturados",
+"bancos NoSQL",
+"tabelas relacionais"
+],
+"d": [
+"semiestruturados",
+"bancos de grafos",
+"planilhas"
+]
+},
+{
+"n": 91,
+"m": "C",
+"b": [
+"estruturados e não estruturados",
+"mais diversificado e complexo"
+],
+"d": [
+"apenas estruturados",
+"mais simples e uniforme"
+]
+},
+{
+"n": 92,
+"m": "B",
+"b": [
+"não mostra a ordem",
+"crescimento de 12 por ano",
+"mantém a média"
+],
+"d": [
+"revela a tendência",
+"crescimento de 24 por ano",
+"altera a média"
+]
+},
+{
+"n": 94,
+"m": "C",
+"b": [
+"critérios adotados",
+"diferenças de tratamento",
+"revisão humana"
+],
+"d": [
+"metas atingidas",
+"custos de licença",
+"auditoria externa"
+]
+},
+{
+"n": 98,
+"m": "B",
+"b": [
+"assimétrica à direita",
+"valor extremo 35",
+"mediana 4,5"
+],
+"d": [
+"assimétrica à esquerda",
+"valor extremo 2",
+"mediana 5"
+]
+},
+{
+"n": 100,
+"m": "B",
+"b": [
+"786 ÷ 5",
+"157,2",
+"maior que a média"
+],
+"d": [
+"786 ÷ 6",
+"125,4",
+"menor que a média"
+]
+},
+{
+"n": 101,
+"m": "C",
+"b": [
+"nominais",
+"sem ordem natural",
+"ordinais"
+],
+"d": [
+"discretos",
+"contínuos",
+"com intervalos fixos"
+]
+},
+{
+"n": 102,
+"m": "B",
+"b": [
+"parte do Q3",
+"= 19"
+],
+"d": [
+"parte do Q1",
+"= 16"
+]
+},
+{
+"n": 104,
+"m": "B",
+"t": "No Power Query, acrescentar consultas (append) empilha os registros de tabelas com a mesma estrutura de colunas, e mesclar consultas (merge) combina tabelas por colunas-chave em comum.",
+"b": [
+"empilha os registros",
+"mesma estrutura de colunas",
+"colunas-chave em comum"
+],
+"d": [
+"cruza os registros",
+"estrutura de colunas distinta",
+"valores calculados"
+]
+},
+{
+"n": 107,
+"m": "C",
+"b": [
+"plotagens e diagramas",
+"dois eixos"
+],
+"d": [
+"tabelas e fórmulas",
+"um único eixo"
+]
+},
+{
+"n": 110,
+"m": "B",
+"b": [
+"condição lógica",
+"A2 ≥ 70",
+"nos demais casos"
+],
+"d": [
+"condição de texto",
+"A2 > 70",
+"quando A2 = 0"
+]
+},
+{
+"n": 112,
+"m": "A",
+"r": [
+[
+"altera a granularidade",
+"não altera a granularidade"
+],
+[
+"consolidando os registros individuais nas categorias criadas",
+"apenas reorganizando a apresentação nas categorias criadas"
+]
+],
+"b": [
+"não altera",
+"reorganizando a apresentação"
+],
+"d": [
+"reduz",
+"consolidando os registros"
+]
+},
+{
+"n": 116,
+"m": "B",
+"b": [
+"maior frequência",
+"20 a 30 dias",
+"75%"
+],
+"d": [
+"menor frequência",
+"10 a 20 dias",
+"50%"
+]
+},
+{
+"n": 118,
+"m": "B",
+"b": [
+"setor B",
+"maior dispersão",
+"CV de 15% contra 4%"
+],
+"d": [
+"setor A",
+"menor dispersão",
+"CV de 4% contra 15%"
+]
+},
+{
+"n": 119,
+"m": "B",
+"b": [
+"gráfico de dispersão",
+"dois eixos"
+],
+"d": [
+"histograma",
+"mapa de calor",
+"mapa de árvores"
+]
+},
+{
+"n": 121,
+"m": "B",
+"b": [
+"mediana",
+"dispersão",
+"valores atípicos"
+],
+"d": [
+"moda",
+"correlação",
+"valores ausentes"
+]
+},
+{
+"n": 122,
+"m": "B",
+"b": [
+"desvio-padrão",
+"variância",
+"1.000²"
+],
+"d": [
+"coeficiente de variação",
+"2.000"
+]
+},
+{
+"n": 125,
+"m": "C",
+"b": [
+"categorias distintas",
+"comprimento proporcional"
+],
+"d": [
+"séries temporais",
+"área proporcional"
+]
+},
+{
+"n": 127,
+"m": "B",
+"b": [
+"categorias discretas",
+"variável contínua",
+"barras coladas"
+],
+"d": [
+"categorias contínuas",
+"variável discreta",
+"barras separadas"
+]
+},
+{
+"n": 131,
+"m": "B",
+"b": [
+"tecnicamente racional",
+"definição da utilidade ou nos dados de treinamento",
+"não irracional"
+],
+"d": [
+"tecnicamente irracional",
+"limitação da IA forte"
+]
+},
+{
+"n": 132,
+"m": "A",
+"r": [
+[
+"“Revisar”, pois a comparação do valor em A2 com 100 é verdadeira",
+"“Manter”, pois a comparação de B2 com “Pago” é falsa"
+]
+],
+"b": [
+"retorna “Manter”",
+"B2 com “Pago” é falsa"
+],
+"d": [
+"retorna FALSO",
+"B2 com “Pago” é verdadeira"
+]
+},
+{
+"n": 137,
+"m": "B",
+"b": [
+"justiça/equidade (fairness)",
+"vieses herdados dos dados históricos de treinamento"
+],
+"d": [
+"transparência",
+"falta de documentação",
+"supervisão humana"
+]
+},
+{
+"n": 139,
+"m": "C",
+"b": [
+"viés de confirmação",
+"confirmem suas hipóteses ou crenças prévias"
+],
+"d": [
+"viés de ancoragem",
+"viés de sobrevivência"
+]
+},
+{
+"n": 140,
+"m": "B",
+"b": [
+"média é 24",
+"média vai a 114"
+],
+"d": [
+"média é 20",
+"média vai a 90"
+]
+},
+{
+"n": 141,
+"m": "C",
+"b": [
+"primeira informação numérica",
+"de forma insuficiente"
+],
+"d": [
+"última informação numérica",
+"de forma excessiva"
+]
+},
+{
+"n": 142,
+"m": "B",
+"b": [
+"30 a menos de 45 dias",
+"frequência 48, a maior",
+"70%"
+],
+"d": [
+"15 a menos de 30 dias",
+"50%",
+"menor frequência"
+]
+},
+{
+"n": 143,
+"m": "C",
+"b": [
+"superestimar a probabilidade",
+"mais facilmente lembrados"
+],
+"d": [
+"subestimar a probabilidade",
+"mais raros"
+]
+},
+{
+"n": 144,
+"m": "B",
+"b": [
+"dispersão absoluta",
+"coeficiente de variação",
+"A varia mais"
+],
+"d": [
+"amplitude",
+"B varia mais"
+]
+},
+{
+"n": 145,
+"m": "C",
+"b": [
+"apenas os casos",
+"ignorando os casos que falharam"
+],
+"d": [
+"apenas os casos que falharam",
+"considerando todos os casos"
+]
+},
+{
+"n": 146,
+"m": "B",
+"b": [
+"AIQ = 28",
+"94",
+"91 não é outlier"
+],
+"d": [
+"AIQ = 26",
+"96 não é outlier",
+"limite = 90"
+]
+},
+{
+"n": 147,
+"m": "C",
+"b": [
+"superestimarem a precisão",
+"subestimando a margem de erro"
+],
+"d": [
+"subestimarem a precisão",
+"superestimando a margem de erro"
+]
+},
+{
+"n": 149,
+"m": "A",
+"r": [
+[
+"são conceitos idênticos, referindo-se ambos exclusivamente a distorções presentes nos dados de treinamento de modelos de inteligência artificial",
+"não são conceitos idênticos: os cognitivos referem-se ao raciocínio humano e os algorítmicos a sistemas automatizados"
+]
+],
+"b": [
+"não são conceitos idênticos",
+"raciocínio humano",
+"sistemas automatizados"
+],
+"d": [
+"dados de treinamento",
+"normas jurídicas",
+"conceitos equivalentes"
+]
+},
+{
+"n": 152,
+"m": "C",
+"b": [
+"três colunas de meses",
+"pares atributo-valor"
+],
+"d": [
+"duas colunas de meses",
+"linhas de resumo"
+]
+},
+{
+"n": 155,
+"m": "C",
+"b": [
+"sem justificativa válida",
+"desvantagens sistemáticas"
+],
+"d": [
+"com justificativa legal",
+"benefícios sistemáticos"
+]
+},
+{
+"n": 160,
+"m": "C",
+"b": [
+"Soma para Média",
+"duração média"
+],
+"d": [
+"Média para Soma",
+"duração total"
+]
+},
+{
+"n": 162,
+"m": "B",
+"b": [
+"dependem dos valores, e não da ordem",
+"não as altera",
+"18 por exercício"
+],
+"d": [
+"dependem da ordem",
+"as reduz",
+"25 por exercício"
+]
+},
+{
+"n": 168,
+"m": "B",
+"b": [
+"AIQ = 36",
+"122",
+"121 não é outlier"
+],
+"d": [
+"AIQ = 38",
+"121 é outlier",
+"104"
+]
+},
+{
+"n": 169,
+"m": "B",
+"b": [
+"Gerar minutas de e-mail",
+"revisar antes de enviar",
+"o humano responde"
+],
+"d": [
+"redigir pareceres",
+"enviar sem revisar",
+"a IA responde"
+]
+},
+{
+"n": 170,
+"m": "B",
+"b": [
+"120 = 0",
+"(−3)² × 25 = 225",
+"correlação é −1"
+],
+"d": [
+"120 = 40",
+"(−3)² × 25 = 75",
+"correlação é +1"
+]
+},
+{
+"n": 171,
+"m": "B",
+"b": [
+"viés algorítmico",
+"desproporções dos dados de treinamento",
+"discriminação sistemática"
+],
+"d": [
+"falta de explicabilidade",
+"alucinação do modelo",
+"violação de privacidade"
+]
+},
+{
+"n": 172,
+"m": "B",
+"b": [
+"20 a menos de 30 dias",
+"a maior frequência",
+"84%"
+],
+"d": [
+"10 a menos de 20 dias",
+"menor frequência",
+"64%"
+]
+},
+{
+"n": 173,
+"m": "B",
+"b": [
+"explicáveis e auditáveis",
+"inovação e direitos dos cidadãos"
+],
+"d": [
+"sancionar financeiramente as empresas",
+"centralizar o controle dos algoritmos",
+"reduzir custos operacionais"
+]
+},
+{
+"n": 178,
+"m": "C",
+"b": [
+"Tabelas Dinâmicas",
+"dados brutos em informações úteis"
+],
+"d": [
+"Tabelas Estáticas",
+"informações inúteis"
+]
+},
+{
+"n": 179,
+"m": "B",
+"b": [
+"Fairness (justiça)",
+"Accountability (responsabilização)",
+"Transparency (transparência)"
+],
+"d": [
+"Freedom (liberdade)",
+"Autonomy (autonomia)",
+"Trust (confiança)"
+]
+},
+{
+"n": 181,
+"m": "B",
+"b": [
+"comando oculto",
+"influenciar indevidamente",
+"riscos do uso inadequado"
+],
+"d": [
+"integração entre sistemas",
+"personalizar a apresentação",
+"enriquecer conteúdo digital"
+]
+},
+{
+"n": 185,
+"m": "B",
+"b": [
+"proteção de dados pessoais",
+"supervisão humana",
+"impacto relevante"
+],
+"d": [
+"supervisão automática",
+"impacto irrelevante"
+]
+},
+{
+"n": 186,
+"m": "B",
+"b": [
+"Office 2007",
+"não armazenam macros VBA",
+"terminados em M"
+],
+"d": [
+"Office 2003",
+"terminados em X",
+"Office 2010"
+]
+},
+{
+"n": 188,
+"m": "B",
+"b": [
+"= 2,0",
+"unilateral à direita",
+"maior que 2%"
+],
+"d": [
+"= 1,0",
+"bilateral",
+"menor que 2%"
+]
+},
+{
+"n": 190,
+"m": "B",
+"b": [
+"P(|Z| ≤ 1)",
+"30,80",
+"maior que 30"
+],
+"d": [
+"P(|Z| ≤ 2)",
+"25,00",
+"menor que 30"
+]
+},
+{
+"n": 191,
+"m": "B",
+"b": [
+"Opacidade dos algoritmos",
+"vieses nos dados",
+"ausência de regulamentação específica"
+],
+"d": [
+"neutralidade dos algoritmos",
+"excesso de regulamentação",
+"dados imparciais"
+]
+},
+{
+"n": 192,
+"m": "B",
+"b": [
+"−1,28",
+"6,92 cm",
+"menor que 7"
+],
+"d": [
+"−0,84",
+"7,50 cm",
+"maior que 7"
+]
+},
+{
+"n": 195,
+"m": "B",
+"b": [
+"dificuldade de entender",
+"interpretar, rastrear e confiar"
+],
+"d": [
+"dificuldade de armazenar",
+"resistir a ataques cibernéticos"
+]
+},
+{
+"n": 196,
+"m": "B",
+"b": [
+"= 0,04",
+"margem é 0,08",
+"80% ± 8%"
+],
+"d": [
+"= 0,4",
+"margem é 0,16",
+"80% ± 16%"
+]
+},
+{
+"n": 199,
+"m": "C",
+"b": [
+"mínimo necessário",
+"pertinentes, proporcionais e não excessivos"
+],
+"d": [
+"máximo possível",
+"excessivos e abrangentes"
+]
+},
+{
+"n": 200,
+"m": "A",
+"r": [
+[
+"são sempre considerados dados pessoais, mesmo que o processo de anonimização não possa ser revertido com esforços razoáveis",
+"não são considerados dados pessoais, salvo se o processo de anonimização puder ser revertido com esforços razoáveis"
+]
+],
+"b": [
+"não são considerados dados pessoais",
+"puder ser revertido com esforços razoáveis"
+],
+"d": [
+"são sempre considerados dados pessoais",
+"não possa ser revertido"
+]
+},
+{
+"n": 29,
+"m": "B",
+"b": [
+"item II erra",
+"reduz a revisão manual"
+],
+"d": [
+"item III erra",
+"maximiza a revisão manual"
+]
+},
+{
+"n": 151,
+"m": "B",
+"b": [
+"item II é falso",
+"auxilia os profissionais",
+"quem responde pelos erros"
+],
+"d": [
+"item III é falso",
+"substitui os profissionais"
+]
+},
+{
+"n": 177,
+"m": "B",
+"b": [
+"não é sinônimo",
+"parcialmente opaca"
+],
+"d": [
+"é equivalente",
+"totalmente transparente"
+]
+},
+{
+"n": 183,
+"m": "B",
+"b": [
+"não consta entre os riscos",
+"direitos autorais",
+"respostas inventadas"
+],
+"d": [
+"é o principal risco",
+"direitos trabalhistas",
+"respostas sempre corretas"
+]
+},
+{
+"n": 187,
+"m": "B",
+"b": [
+"I e II estão certos",
+"III é falso",
+"usuário final"
+],
+"d": [
+"II e III estão certos",
+"I e III estão certos",
+"desenvolvedor"
+]
+},
+{
+"n": 189,
+"m": "B",
+"b": [
+"consentimento não elimina os problemas éticos",
+"códigos de ética reduzem problemas",
+"I é falso"
+],
+"d": [
+"consentimento elimina os problemas éticos",
+"II é falso"
+]
+},
+{
+"n": 197,
+"m": "B",
+"b": [
+"só o item II é falso",
+"mais interpretação criteriosa",
+"I, III e IV"
+],
+"d": [
+"só o item III é falso",
+"dispensam interpretação criteriosa"
+]
+}
+]
