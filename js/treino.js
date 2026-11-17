@@ -387,7 +387,10 @@ function treinoVerificar(){
   const it = TR.fila[TR.i]; if(!it || TR.checado || !TR.slots.every(Boolean)) return;
   const resp = it.p.filter(p => p.l !== undefined).map(p => p.l), ok = resp.every((w, i) => TR.slots[i].w === w);
   TR.checado = true; TR.sessao.tot++; if(ok) TR.sessao.ok++;
-  treinoMarcar(TR.slug, treinoChaveItem(it, 'l'), ok ? 'ok' : 'err'); treinoDesenhar();
+  treinoMarcar(TR.slug, treinoChaveItem(it, 'l'), ok ? 'ok' : 'err');
+  // a lacuna é uma questão da lista: a resposta entra também nas estatísticas gerais (tentativas, acertos, caderno de erros, meta do dia)
+  try{ const uid = treinoUidDe(TR.mat, it.n, it.h); if(uid && typeof registrarResposta === 'function') registrarResposta(TR.mat, uid, ok); }catch(_){}
+  treinoDesenhar();
 }
 function treinoIr(delta){
   if(!TR) return; const n = TR.i + delta; if(n < 0 || n >= TR.fila.length) return;
