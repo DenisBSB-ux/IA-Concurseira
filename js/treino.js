@@ -319,7 +319,7 @@ function treinoDesenhar(){
   const filtros = TR.modo === 'flash'
     ? [['todos', 'Total: ' + (nOk + nRev) + ' / ' + d.flash.length + ' (' + pc(nOk + nRev, d.flash.length) + ')'], ['sei', '✓ Já sei: ' + nOk + ' (' + pc(nOk, d.flash.length) + ')'], ['revisar', '🔁 Revisar: ' + nRev + ' (' + pc(nRev, d.flash.length) + ')']]
     : [['todos', 'Total: ' + (lOk + lErr) + ' / ' + d.lacunas.length + ' (' + pc(lOk + lErr, d.lacunas.length) + ')'], ['certas', '✓ Corretas: ' + lOk + ' (' + pc(lOk, d.lacunas.length) + ')'], ['erradas', '✗ Erradas: ' + lErr + ' (' + pc(lErr, d.lacunas.length) + ')']];
-  const chips = `<div class="tr-filtros">${filtros.map(f => `<button class="${TR.filtro === f[0] ? 'on' : ''}" data-tr-filtro="${f[0]}">${esc(f[1])}</button>`).join('')}<span class="tr-cont" aria-live="polite">${TR.fila.length ? (TR.i + 1) + ' / ' + TR.fila.length : '0'}</span></div>${treinoResumoTentativas()}`;
+  const chips = `<div class="tr-filtros">${filtros.map(f => `<button class="${TR.filtro === f[0] ? 'on' : ''}" data-tr-filtro="${f[0]}">${esc(f[1])}</button>`).join('')}<span class="tr-cont" aria-live="polite">${TR.fila.length ? (TR.i + 1) + ' / ' + TR.fila.length : '0'}</span></div>`;
   const it = TR.fila[TR.i];
   let corpo;
   if(!it) corpo = `<p class="tr-vazio">${TR.filtro === 'todos' ? 'Nenhum item.' : 'Nada neste filtro. Escolha outro.'}</p>`;
