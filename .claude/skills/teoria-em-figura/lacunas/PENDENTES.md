@@ -5,3 +5,4 @@
 - **LGPD/LAI (5):** nº 60 (frase sem antecedente; prazo × distrator), nº 101 (lacuna trivial; "controle social" também é diretriz do art. 3º), nº 117 (frase não corrige o erro do item sobre divulgação nominal; v não cobre), nº 141 (recurso sem contexto), nº 182 (art. 22 da LAI: segredo industrial também completaria).
 - **Análise de Dados e IA (2):** nº 89 (distrator 'bancos relacionais' também completa a frase), nº 178 (distrator 'Tabelas de Dados' também é recurso real).
 - **Constitucional (1):** nº 100 (frase sobre nascido no Brasil de pais estrangeiros, um a serviço do país: hipótese controvertida e não confirmada pela regra v).
+- **Contratos (2):** nº 33 (parentesco até 3º grau com sócios/administradores de contratados; frase sem referente), nº 138 (art. 100 da Lei 14.133: a regra v só nega o prazo de 30 dias úteis e não traz o prazo correto).
