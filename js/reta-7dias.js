@@ -212,7 +212,7 @@ function reta7ErrosHtml(mat, r){
 }
 function reta7AbasAssunto(r, sel, slug, mat){
   const abas = [{ nome:'Visão geral', n:0 }].concat(r.assuntos || []), chk = slug ? reta7CheckLer(slug) : {};
-  return abas.map((a, i) => '<button type="button" data-r7-ass="' + i + '" class="' + (i === sel ? 'on' : '') + (i > 0 && chk[i] ? ' chk' : '') + '" aria-pressed="' + (i === sel) + '">' + (i > 0 && chk[i] ? '✓ ' : '') + esc(a.nome) + (a.pct !== undefined ? '<small>' + a.pct + '%</small>' : (a.n ? '<small>' + a.n + '</small>' : '')) + '</button>').join('') + (mat ? '<button type="button" data-r7-ass="erros" class="errs' + (sel === 'erros' ? ' on' : '') + '" aria-pressed="' + (sel === 'erros') + '">🎯 Resumo dos meus erros</button>' : '');
+  return abas.map((a, i) => '<button type="button" data-r7-ass="' + i + '" class="' + (i === sel ? 'on' : '') + (i > 0 && chk[i] ? ' chk' : '') + '" aria-pressed="' + (i === sel) + '">' + (i > 0 && chk[i] ? '✓ ' : '') + esc(a.nome) + (a.pct !== undefined ? '<small>' + a.pct + '%</small>' : (a.n ? '<small>' + a.n + '</small>' : '')) + '</button>').join('');
 }
 function reta7AbrirResumo(mat){
   const slug = reta7SlugResumo(mat); if(!slug) return;

@@ -64,10 +64,11 @@ function treinoUidDe(mat, n, h){   // número + código do enunciado; se a lista
   return (q || {}).uid || null;
 }
 
-/* ---- zoom do texto das janelas de flashcards e lacunas (lembrado por tipo) ---- */
+/* ---- zoom do texto das janelas de flashcards e lacunas (o mesmo nos dois tipos) ---- */
 const TREINO_ZOOM_KEY = 'tcdf_treino_zoom_v1';
-function treinoZoomLer(modo){ try{ const z = Number((JSON.parse(localStorage.getItem(TREINO_ZOOM_KEY) || '{}') || {})[modo]); return z >= 0.8 && z <= 2 ? z : 1; }catch(_){ return 1; } }
-function treinoZoomGravar(modo, z){ try{ const o = JSON.parse(localStorage.getItem(TREINO_ZOOM_KEY) || '{}') || {}; o[modo] = z; localStorage.setItem(TREINO_ZOOM_KEY, JSON.stringify(o)); }catch(_){} }
+/* zoom único: flash e lacunas usam o mesmo tamanho de letra (o valor antigo de cada tipo é aproveitado uma vez) */
+function treinoZoomLer(modo){ try{ const o = JSON.parse(localStorage.getItem(TREINO_ZOOM_KEY) || '{}') || {}, z = Number(o.todos != null ? o.todos : (o.flash != null ? o.flash : o.lacunas)); return z >= 0.8 && z <= 2 ? z : 1; }catch(_){ return 1; } }
+function treinoZoomGravar(modo, z){ try{ const o = JSON.parse(localStorage.getItem(TREINO_ZOOM_KEY) || '{}') || {}; o.todos = z; localStorage.setItem(TREINO_ZOOM_KEY, JSON.stringify(o)); }catch(_){} }
 /* ---- o que você respondeu fica guardado ao fechar a janela: respostas das lacunas, ordem e posição ---- */
 const TREINO_RESP_KEY = 'tcdf_treino_resp_v1';
 function treinoRespLer(slug, modo){ try{ const o = JSON.parse(localStorage.getItem(TREINO_RESP_KEY) || '{}') || {}; return (o[slug] || {})[modo] || null; }catch(_){ return null; } }
