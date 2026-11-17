@@ -2,13 +2,14 @@
 {
 "n": 1,
 "m": "B",
+"t": "Nas contratações com recursos de cooperação estrangeira, as condições decorrem de acordos internacionais aprovados pelo Congresso Nacional e ratificados pelo Presidente; o presidente sozinho não os aprova.",
 "b": [
 "Congresso Nacional",
 "ratificados pelo Presidente"
 ],
 "d": [
 "Senado Federal",
-"aprovados pelo Presidente"
+"referendados pelo Ministro da Fazenda"
 ]
 },
 {
@@ -74,25 +75,25 @@
 {
 "n": 10,
 "m": "B",
+"t": "O desempenho contratual prévio vem antes do programa de integridade na ordem dos critérios de desempate.",
 "b": [
-"desempenho contratual prévio",
-"programa de integridade"
+"antes"
 ],
 "d": [
-"disputa final",
-"sorteio"
+"depois",
+"junto"
 ]
 },
 {
 "n": 11,
 "m": "B",
+"t": "A Lei 14.133/2021 se aplica expressamente à concessão e permissão de uso de bens públicos, além da alienação e da concessão de direito real de uso.",
 "b": [
-"concessão e permissão de uso de bens públicos",
-"exceção é inventada"
+"concessão e permissão de uso de bens públicos"
 ],
 "d": [
-"concessão de serviço público",
-"exceção legal"
+"cessão de pessoal",
+"parcerias com organizações da sociedade civil"
 ]
 },
 {
@@ -134,13 +135,15 @@
 {
 "n": 23,
 "m": "B",
+"t": "O princípio do planejamento associa-se à substituição da improvisação e do empirismo por métodos planejados; já a motivação exige fundamentos fáticos e jurídicos das decisões.",
 "b": [
-"princípio do planejamento",
+"planejamento",
 "fundamentos fáticos e jurídicos"
 ],
 "d": [
-"princípio da eficiência",
-"parecer técnico"
+"publicidade",
+"segregação de funções",
+"fundamentos políticos e econômicos"
 ]
 },
 {
@@ -158,13 +161,13 @@
 {
 "n": 27,
 "m": "B",
+"t": "O termo de referência para compras e serviços comuns deve conter critérios de medição e de pagamento.",
 "b": [
-"medição e pagamento",
-"adequação orçamentária"
+"critérios de medição e de pagamento"
 ],
 "d": [
-"habilitação jurídica",
-"sanções contratuais"
+"garantia de proposta",
+"minuta de edital"
 ]
 },
 {
@@ -182,13 +185,15 @@
 {
 "n": 33,
 "m": "B",
+"t": "Os atos do processo licitatório são públicos, ressalvadas as informações cujo sigilo seja imprescindível à segurança da sociedade e do Estado.",
 "b": [
-"segurança da sociedade e do Estado",
-"sigilo empresarial"
+"imprescindível",
+"segurança da sociedade e do Estado"
 ],
 "d": [
-"interesse econômico dos concorrentes",
-"segredo industrial"
+"conveniente",
+"interesse comercial dos concorrentes",
+"proteção de segredo industrial"
 ]
 },
 {
@@ -218,13 +223,13 @@
 {
 "n": 41,
 "m": "B",
+"t": "Os parâmetros de pesquisa de preços podem ser adotados de forma combinada ou não, sem vedação à combinação.",
 "b": [
-"de forma combinada ou não",
-"não existe vedação"
+"de forma combinada ou não"
 ],
 "d": [
-"de forma isolada",
-"é vedada a combinação"
+"apenas de forma combinada",
+"apenas um parâmetro por vez"
 ]
 },
 {
@@ -314,13 +319,15 @@
 {
 "n": 59,
 "m": "B",
+"t": "A técnica e preço avalia a qualidade técnica das propostas que superem os requisitos mínimos do edital e só é escolhida quando o ETP demonstrar sua relevância.",
 "b": [
 "superem os requisitos mínimos",
-"não é critério sempre escolhido"
+"ETP"
 ],
 "d": [
-"igualem a média das propostas",
-"é sempre obrigatório"
+"apenas atendam os parâmetros mínimos",
+"parecer jurídico",
+"mapa de riscos"
 ]
 },
 {
@@ -350,13 +357,13 @@
 {
 "n": 63,
 "m": "B",
+"t": "Na terceirização com dedicação exclusiva de mão de obra, a indicação de pessoa nominada para a vaga é ingerência indevida na gestão do contratado, e a maior qualificação da pessoa não a autoriza.",
 "b": [
-"ingerência indevida",
-"maior qualificação"
+"ingerência indevida na gestão do contratado"
 ],
 "d": [
-"poder discricionário",
-"maior experiência"
+"medida de fiscalização regular",
+"poder ordinário do contratante"
 ]
 },
 {
@@ -374,13 +381,13 @@
 {
 "n": 76,
 "m": "B",
+"t": "A regularidade trabalhista é a regularidade perante a Justiça do Trabalho, comprovada pela certidão negativa de débitos trabalhistas (CNDT).",
 "b": [
-"Justiça do Trabalho",
-"CNDT"
+"Justiça do Trabalho"
 ],
 "d": [
-"Justiça Federal",
-"Receita Federal"
+"Receita Federal",
+"Tribunal de Contas"
 ]
 },
 {
@@ -398,25 +405,26 @@
 {
 "n": 86,
 "m": "B",
+"t": "Na dispensa para produtos de pesquisa e desenvolvimento, o limite de valor só se aplica a obras e serviços de engenharia; nos demais objetos não há limite de valor.",
 "b": [
 "obras e serviços de engenharia",
-"ampla"
+"não há limite de valor"
 ],
 "d": [
-"qualquer objeto",
-"restrita"
+"compras e serviços comuns",
+"o limite é o dobro"
 ]
 },
 {
 "n": 88,
 "m": "B",
+"t": "O PMI não atribui direito de preferência ao autor dos estudos, que pode participar da licitação subsequente.",
 "b": [
-"não atribui direito de preferência",
-"nem impede"
+"pode participar"
 ],
 "d": [
-"garante a contratação",
-"veda a participação"
+"fica impedido de participar",
+"deve ser contratado diretamente"
 ]
 },
 {
@@ -434,13 +442,13 @@
 {
 "n": 92,
 "m": "B",
+"t": "As condições do credenciamento são padronizadas e definidas no edital; negociar valores individualmente com cada credenciado quebra essa padronização.",
 "b": [
-"padronizadas e definidas no edital",
-"reajuste individual"
+"padronizadas e definidas no edital"
 ],
 "d": [
-"negociadas com cada credenciado",
-"termo aditivo bilateral"
+"definidas pela autoridade superior em cada contrato",
+"fixadas por sorteio"
 ]
 },
 {
@@ -482,13 +490,14 @@
 {
 "n": 108,
 "m": "B",
+"t": "O credenciamento admite seleção a critério de terceiros, quando a escolha cabe ao próprio usuário do serviço.",
 "b": [
-"próprio usuário do serviço",
-"restringe indevidamente"
+"a critério de terceiros",
+"próprio usuário do serviço"
 ],
 "d": [
-"rodízio entre credenciados",
-"sorteio"
+"por sorteio obrigatório",
+"gestor do contrato"
 ]
 },
 {
@@ -542,13 +551,15 @@
 {
 "n": 125,
 "m": "B",
+"t": "A pré-qualificação seleciona licitantes habilitados e também bens que atendam a exigências técnicas ou de qualidade; não se restringe a fornecedores.",
 "b": [
-"também alcança bens",
-"indevido"
+"também bens",
+"exigências técnicas ou de qualidade"
 ],
 "d": [
-"somente licitantes",
-"permitido"
+"apenas bens",
+"exigências financeiras",
+"exigências fiscais"
 ]
 },
 {
@@ -663,21 +674,16 @@
 },
 {
 "n": 144,
-"m": "A",
-"r": [
-[
-"obrigatoriamente por meio de sorteio, sendo vedada a avaliação de ações de equidade de gênero",
-"por critérios sucessivos de desempate, inclusive a avaliação de ações de equidade entre homens e mulheres"
-]
-],
+"m": "B",
+"t": "No desempate entre propostas, a lei prevê, na ordem, disputa final, desempenho contratual, ações de equidade entre homens e mulheres e programa de integridade; só persistindo o empate há sorteio.",
 "b": [
-"critérios sucessivos",
-"equidade entre homens e mulheres"
+"equidade entre homens e mulheres",
+"programa de integridade"
 ],
 "d": [
-"sorteio",
-"critério único",
-"ordem de chegada"
+"preferência de origem",
+"capacidade econômica",
+"menor preço"
 ]
 },
 {
@@ -697,46 +703,39 @@
 {
 "n": 147,
 "m": "B",
+"t": "Na inexigibilidade para profissional do setor artístico, o empresário exclusivo exige exclusividade permanente e contínua; é afastada a restrita a evento, local ou período específico.",
 "b": [
-"exclusividade permanente e contínua",
-"evento ou local específico"
+"permanente e contínua",
+"evento, local ou período específico"
 ],
 "d": [
-"exclusividade eventual",
-"exclusividade restrita ao edital"
+"temporária e por evento",
+"limitada ao período do contrato"
 ]
 },
 {
 "n": 149,
-"m": "A",
-"r": [
-[
-"estritamente para analisar a habilitação de licitantes, sendo vedada a sua utilização",
-"para selecionar licitantes habilitados e também bens, sendo admitida a sua utilização"
-]
-],
+"m": "B",
+"t": "A pré-qualificação serve para selecionar licitantes habilitados e também bens, sendo admitida a sua utilização para a qualificação técnica de bens que a Administração pretenda adquirir em licitações futuras.",
 "b": [
-"licitantes habilitados e também bens",
-"sendo admitida"
+"licitantes habilitados e também bens"
 ],
 "d": [
-"apenas licitantes",
-"sendo vedada",
-"exclusivamente bens"
+"apenas licitantes habilitados",
+"apenas bens"
 ]
 },
 {
 "n": 158,
 "m": "B",
+"t": "Na concorrência com critério de menor preço, o prazo mínimo para apresentação de propostas é de 8 dias úteis para bens e de 10 dias úteis para serviços comuns e obras comuns de engenharia.",
 "b": [
-"8, 10 ou 25 dias úteis",
-"conforme o objeto",
-"35"
+"8 dias úteis",
+"10 dias úteis"
 ],
 "d": [
 "15 dias úteis",
-"30 dias úteis",
-"60 dias corridos"
+"5 dias úteis"
 ]
 },
 {
@@ -918,36 +917,28 @@
 },
 {
 "n": 186,
-"m": "A",
-"r": [
-[
-"possui natureza jurídica de contrato de fornecimento imediato de bens, gerando para a administração pública o dever de adquirir os itens adjudicados",
-"registra preços para contratações futuras, gerando para a administração pública a faculdade de contratar, sem obrigação de adquirir"
-]
-],
+"m": "B",
+"t": "A ata de registro de preços serve a contratações futuras, gerando para a administração a faculdade de contratar, sem dever de adquirir.",
 "b": [
-"registra preços",
 "contratações futuras",
 "faculdade de contratar"
 ],
 "d": [
-"contrato de fornecimento imediato",
-"dever de adquirir",
-"obrigação de comprar"
+"fornecimento imediato",
+"dever de contratar",
+"obrigação de adquirir"
 ]
 },
 {
 "n": 187,
 "m": "B",
+"t": "Os prazos mínimos de apresentação de propostas na concorrência são contados da data de divulgação do edital, e não do dia útil subsequente.",
 "b": [
-"8, 10 ou 25 dias úteis",
-"conforme o objeto",
-"da data de divulgação do edital"
+"data de divulgação do edital"
 ],
 "d": [
-"15 dias úteis",
-"do dia útil subsequente à divulgação",
-"35 dias úteis"
+"data da sessão pública",
+"data de homologação"
 ]
 },
 {
@@ -971,22 +962,15 @@
 },
 {
 "n": 192,
-"m": "A",
-"r": [
-[
-"constitui ato jurídico imutável, sendo vedada a repactuação ou revisão de seus preços registrados para restabelecimento de equilíbrio econômico-financeiro",
-"admite alteração dos preços registrados, nas condições do edital"
-]
-],
+"m": "B",
+"t": "A Ata de Registro de Preços admite alteração dos preços registrados, nas condições do edital; não é ato imutável.",
 "b": [
-"até um ano",
 "admite alteração",
 "condições do edital"
 ],
 "d": [
-"dois anos",
-"constitui ato imutável",
-"condições do contrato"
+"veda alteração",
+"condições da proposta do licitante"
 ]
 },
 {
@@ -1019,25 +1003,15 @@
 },
 {
 "n": 201,
-"m": "A",
-"r": [
-[
-"constitui modalidade autônoma de licitação",
-"é procedimento auxiliar"
-],
-[
-"em regime de exclusividade mercadológica",
-"de forma paralela e não excludente"
-]
-],
+"m": "B",
+"t": "O credenciamento é procedimento auxiliar da licitação, por meio do qual a administração seleciona parceiros privados para fornecer bens de forma paralela e não excludente.",
 "b": [
 "procedimento auxiliar",
 "paralela e não excludente"
 ],
 "d": [
 "modalidade autônoma",
-"exclusiva e excludente",
-"modalidade de licitação"
+"exclusiva e excludente"
 ]
 },
 {
@@ -1119,13 +1093,8 @@
 },
 {
 "n": 209,
-"m": "A",
-"r": [
-[
-"sendo dispensada a fase de lances verbais ou sucessivos quando realizado em formato eletrônico",
-"mantida a fase de lances mesmo no formato eletrônico"
-]
-],
+"m": "B",
+"t": "O leilão, aplicável à alienação de bens móveis e imóveis da Administração, adota o critério de julgamento por maior lance, mantida a fase de lances mesmo no formato eletrônico.",
 "b": [
 "maior lance",
 "mantida a fase de lances"
@@ -1133,7 +1102,7 @@
 "d": [
 "menor preço",
 "dispensada a fase de lances",
-"técnica e preço"
+"maior desconto"
 ]
 },
 {
@@ -1176,16 +1145,16 @@
 },
 {
 "n": 216,
-"m": "C",
+"m": "B",
+"t": "A adesão de órgão não participante (carona) fica limitada, por órgão, a 50% dos quantitativos registrados para o gerenciador e os participantes.",
 "b": [
-"órgão não participante",
 "50%",
-"órgão gerenciador"
+"o gerenciador e os participantes"
 ],
 "d": [
 "100%",
-"órgão participante",
-"20%"
+"25%",
+"apenas o gerenciador"
 ]
 },
 {
@@ -1323,15 +1292,15 @@
 {
 "n": 29,
 "m": "B",
+"t": "O pregão é a modalidade obrigatória para a aquisição de bens e serviços comuns; o leilão serve à alienação de bens.",
 "b": [
 "pregão",
-"leilão",
 "alienação"
 ],
 "d": [
 "concorrência",
-"concurso",
-"aquisição"
+"diálogo competitivo",
+"locação"
 ]
 },
 {
@@ -1362,30 +1331,30 @@
 },
 {
 "n": 78,
-"m": "C",
+"m": "B",
+"t": "Exige-se do licitante, na habilitação, declaração de cumprimento da reserva de cargos para pessoa com deficiência ou reabilitado da Previdência Social.",
 "b": [
-"regularidade fiscal, social e trabalhista",
-"reserva de cargos",
+"declaração de cumprimento da reserva de cargos",
 "reabilitado da Previdência Social"
 ],
 "d": [
-"habilitação jurídica",
-"reserva de vagas",
-"jovem aprendiz"
+"atestado de capacidade técnica",
+"aposentado por invalidez",
+"menor aprendiz"
 ]
 },
 {
 "n": 90,
 "m": "B",
+"t": "As adesões de não participantes somam, no total, no máximo o dobro do quantitativo registrado; por órgão, o limite é de 50%.",
 "b": [
 "o dobro",
-"quíntuplo",
-"não é livre entre esferas"
+"50%"
 ],
 "d": [
+"o quíntuplo",
 "o triplo",
-"a metade",
-"depende apenas do gerenciador"
+"100%"
 ]
 },
 {
@@ -1444,31 +1413,29 @@
 },
 {
 "n": 117,
-"m": "A",
-"r": [
-[
-"não gera para os licitantes direito a indenização, independentemente de já ter havido homologação do certame",
-"não afasta o dever de indenizar os prejuízos comprovados dos licitantes"
-]
-],
+"m": "B",
+"t": "O motivo determinante para a revogação do processo licitatório deve resultar de fato superveniente devidamente comprovado.",
 "b": [
-"não afasta o dever de indenizar",
-"prejuízos comprovados"
+"fato superveniente",
+"comprovado"
 ],
 "d": [
-"não gera direito a indenização",
-"interesse privado"
+"fato preexistente",
+"presumido",
+"alegado"
 ]
 },
 {
 "n": 122,
-"m": "C",
+"m": "B",
+"t": "Admite-se a dispensa quando não surgirem interessados em licitação realizada há menos de 1 ano, desde que mantidas todas as condições do edital anterior.",
 "b": [
-"licitação anterior",
+"há menos de 1 ano",
 "mantidas todas as condições"
 ],
 "d": [
-"licitação posterior",
+"há mais de 1 ano",
+"há mais de 2 anos",
 "alteradas as condições"
 ]
 },
@@ -1555,12 +1522,13 @@
 {
 "n": 168,
 "m": "B",
+"t": "No credenciamento paralelo e não excludente, o edital de chamamento já define o valor da contratação e as condições padronizadas; em mercados fluidos registram-se as cotações vigentes.",
 "b": [
-"edital de chamamento",
+"paralelo e não excludente",
 "mercados fluidos"
 ],
 "d": [
-"contrato de adesão",
+"com exclusividade",
 "mercados estáveis"
 ]
 },
@@ -1581,13 +1549,13 @@
 {
 "n": 188,
 "m": "B",
+"t": "A desclassificação por desconformidade com as exigências do edital (art. 59, V) exige que o vício seja insanável; o vício corrigível não desclassifica.",
 "b": [
-"desconformidade insanável",
-"vantagem não prevista"
+"insanável"
 ],
 "d": [
-"falha formal",
-"proposta mais cara"
+"meramente formal",
+"de pequena monta"
 ]
 },
 {
