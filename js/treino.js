@@ -217,9 +217,14 @@ function treinoStatusHtml(it, tipo){
 }
 // tentativas e acertos desta matéria neste modo (cada resposta dada, também as repetidas)
 function treinoResumoTentativas(){
-  const tipo = TR.modo === 'lacunas' ? 'l' : 'f', b = treinoNLer()[TR.slug] || {}; let n = 0, a = 0;
-  Object.keys(b).forEach(k => { if(k[0] === tipo){ n += b[k][0] || 0; a += b[k][1] || 0; } });
-  return n ? '<p class="tr-tent">Tentativas: <b>' + n + '</b> · Acertos: <b>' + a + '</b> (' + Math.round(100 * a / n) + '%)</p>' : '';
+  const lac = TR.modo === 'lacunas', tipo = lac ? 'l' : 'f', itens = lac ? TR.dados.lacunas : TR.dados.flash, b = treinoNLer()[TR.slug] || {}, mm = treinoLer()[TR.slug] || {};
+  let n = 0, a = 0;
+  itens.forEach(x => {
+    const k = treinoChaveItem(x, tipo), rec = b[k], m = mm[k];
+    if(rec && rec[0]){ n += rec[0]; a += rec[1] || 0; }
+    else if(m){ n += 1; if(m === 'ok') a += 1; }          // respondida antes de contar tentativas: vale pelo menos uma
+  });
+  return n ? '<p class="tr-tent" title="Cada resposta dada conta, inclusive as repetidas. As respondidas antes desta contagem valem uma tentativa cada.">Respostas dadas (com repetições): <b>' + n + '</b> · Acertos: <b>' + a + '</b> (' + Math.round(100 * a / n) + '%)</p>' : '';
 }
 // mostra só o item da questão: tira o comando do enunciado ("À luz …, julgue o item a seguir, relativo a …."); os dados e o hash não mudam
 function treinoSoItem(txt, minimo){
