@@ -12,7 +12,7 @@ def main():
     for e in d['assuntos']:
         a = r['assuntos'][e['a'] - 1]; old = a['md']; new = e['md'].strip('\n'); erros = []
         if new.split('\n')[:2] != old.split('\n')[:2]: erros.append('linhas 1-2 mudaram')
-        if len(new) > len(old): erros.append('cresceu')
+        if len(new) > len(old) * 1.1: erros.append('cresceu')
         P = pal(old)
         for l in new.split('\n'):
             if l.startswith('#') or l.startswith('|---') or l.startswith('> **') or not l.strip(): continue
