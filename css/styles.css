@@ -2699,3 +2699,10 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
   .tr-acoes .tr-bt, .tr-acoes .btn.tr-bt{ padding:10px 8px; gap:6px; font-size:14px; }
   .tr-modal .tr-acoes .tr-bt, .tr-modal .tr-filtros button, .tr-modal .tr-cont, .tr-modal .tr-reset > button{ font-size:14px; }
 }
+
+/* v600: flash e lacunas com as mesmas letras (texto, fonte, rótulo, respostas e botões) */
+.tr-modal .tr-texto, .tr-modal .tr-frase, .tr-modal .tr-quest{ font-size:calc(19px * var(--tr-zoom, 1)); line-height:1.65; }
+.tr-modal .tr-info, .tr-modal .tr-extra, .tr-modal .tr-fb, .tr-modal .tr-fb b{ font-size:calc(14px * var(--tr-zoom, 1)); line-height:1.5; }
+.tr-modal .tr-fb, .tr-modal .tr-fb b{ font-size:calc(16px * var(--tr-zoom, 1)); }
+.tr-modal .tr-chip{ font-size:calc(17px * var(--tr-zoom, 1)); }
+@media (max-width:520px){ .tr-modal .tr-texto, .tr-modal .tr-frase, .tr-modal .tr-quest{ font-size:calc(17.5px * var(--tr-zoom, 1)); } }
