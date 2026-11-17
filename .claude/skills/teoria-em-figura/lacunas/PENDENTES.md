@@ -6,3 +6,4 @@
 - **Análise de Dados e IA (2):** nº 89 (distrator 'bancos relacionais' também completa a frase), nº 178 (distrator 'Tabelas de Dados' também é recurso real).
 - **Constitucional (1):** nº 100 (frase sobre nascido no Brasil de pais estrangeiros, um a serviço do país: hipótese controvertida e não confirmada pela regra v).
 - **Contratos (2):** nº 33 (parentesco até 3º grau com sócios/administradores de contratados; frase sem referente), nº 138 (art. 100 da Lei 14.133: a regra v só nega o prazo de 30 dias úteis e não traz o prazo correto).
+- **Direito Civil (6):** nº 9 (LINDB art. 4º: analogia, costumes e princípios gerais), nº 39 (erro grosseiro e diligência média; gabarito em conferência), nº 47 (LINDB art. 17: os três bens em conjunto), nº 91 (art. 47 do CC e efeito perante terceiros; gabarito em conferência), nº 136 (usucapião × distratores sinônimos), nº 206 (culpa em sentido amplo × estrito).
