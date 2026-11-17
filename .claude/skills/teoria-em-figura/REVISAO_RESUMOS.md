@@ -49,3 +49,6 @@ Alertas para o usuário (acumulados):
 
 ## Passada de repetições (16/11/2026, pedido do usuário: "há muitas informações praticamente iguais")
 Roteiro: `consolidar_resumo.py` (cada fato uma vez: prioridade 30 s > números > trocas > regras; remove Pegadinhas) + um revisor por matéria (`PROMPT_DEDUP.md`) + `revisar_resumo.py aplicar`. Resultado: de ~2.960 linhas de regra para 1.650; sem seção Pegadinhas. Interface (v586): sem marcação de erros nas abas/visão geral/cartão; assunto estudado em verde claro; aba "🎯 Resumo dos meus erros" (regras por assunto das questões com último resultado errado); filtros do treino só com Todas / Certas / Erros (quantidade e %).
+
+## Resumo objetivo (17/11/2026, pedido do usuário: "há muita informação repetida; resumo objetivo e prático")
+Roteiro: `PROMPT_OBJETIVO.md` (um revisor por matéria/faixa reescreve cada assunto: ⚡ essencial, tabela só com trocas não ditas, "Regras por tema" agrupadas, até 3 macetes) + `aplicar_objetivo.py <slug> <saida.json>` (valida marcas, linhas 1–2, tamanho e que o texto novo vem do antigo). 20 matérias aplicadas (v599); ~643 mil caracteres (antes ~1,0 MB). Alertas dos revisores (tabelas truncadas, 70×75 anos do Conselheiro, '0% das provas' no RJU assunto 10) ficam como estavam.
