@@ -3,10 +3,12 @@
 Cria as lacunas das questões que ainda não têm (js/treino-<slug>.js). Rodar da raiz do repositório.
   --extrair arq.md  grava as questões SEM lacuna (enunciado, regra v, erro→certo x) para o redator
   (sem flag)        valida lacunas/<slug>.json e mostra as frases; --gravar grava no js/treino-<slug>.js
+  --conferir arq.md grava, para o conferente independente, cada frase gerada com o enunciado, o gabarito e a regra v
+  --aprovados a.json só grava os itens listados em {"aprovados":[n,...]} (resultado do conferente); os demais ficam para refazer
   --tolerante       item inválido é pulado e relatado (sem ele, o primeiro erro para tudo)
 Especificação lacunas/<slug>.json: [{n, m:'A'|'B'|'C', r:[[achar, trocar]] (só A), b:[trechos em branco], d:[distratores]}]
  A = frase do enunciado com as trocas r (item errado já corrigido); C = frase do item certo, como está;
- B = regra curta (campo v) da questão (src 'R', rótulo "regra da questão").
+ B = regra curta (campo v) da questão (src 'R', rótulo "regra da questão"); em B, "t" substitui a frase.
 Critérios: cada trecho em branco aparece UMA vez na frase; 1 a 3 lacunas sem sobreposição; distratores diferentes das
 respostas e que NÃO aparecem na frase; nada do que já existe muda."""
 import json, re, sys, hashlib
@@ -27,7 +29,7 @@ novas = []; erros = []
 def montar(s):
     f = flash[s['n']]
     assert f['h'] not in tem, 'já tem lacuna'
-    txt = f['v'] if s['m'] == 'B' else f['f']
+    txt = s['t'] if s.get('t') else (f['v'] if s['m'] == 'B' else f['f'])   # 't' = frase escrita à mão a partir da regra v (itens cuja regra vem como "o trecho X está errado")
     for a, t in s.get('r', []):
         assert txt.count(a) == 1, 'trecho a trocar não achado/único: %s' % a[:40]; txt = txt.replace(a, t)
     assert 1 <= len(s['b']) <= 3, 'precisa de 1 a 3 lacunas'
@@ -51,6 +53,15 @@ for s in spec:
     except (AssertionError, KeyError) as e:
         if '--tolerante' not in sys.argv: raise
         erros.append('#%s: %s' % (s.get('n'), e))
+if '--aprovados' in sys.argv:
+    ok = set(json.load(open(sys.argv[sys.argv.index('--aprovados') + 1], encoding='utf-8'))['aprovados'])
+    fora = [x['n'] for x in novas if x['n'] not in ok]; novas = [x for x in novas if x['n'] in ok]; print('reprovados/fora:', fora)
+if '--conferir' in sys.argv:
+    out = []
+    for x in novas:
+        f = flash[x['n']]; fr = ''.join(('[[' + q['l'] + ']]') if 'l' in q else q['t'] for q in x['p'])
+        out.append('### N=%s | gabarito do item=%s | ref=%s\nENUNCIADO ORIGINAL: %s\nREGRA(v): %s\nERRO→CERTO(x): %s\nFRASE GERADA (respostas entre [[ ]]): %s\nDISTRATORES: %s\n' % (x['n'], f['g'], f.get('ref', ''), f['f'], f.get('v', ''), f.get('x', ''), fr, ' | '.join(x['d'])))
+    open(sys.argv[sys.argv.index('--conferir') + 1], 'w', encoding='utf-8').write('\n'.join(out)); print('conferir:', len(out), 'itens'); sys.exit(0)
 for e in erros: print('ERRO', e)
 print(len(novas), 'novas; total', len(corpo['lacunas']) + len(novas), 'de', len(flash))
 if '--gravar' in sys.argv:

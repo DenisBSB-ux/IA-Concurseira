@@ -1,0 +1,2 @@
+N=64: gabarito em conferência; enunciado diz 'veda-se de forma absoluta' e ref aponta Lei 14.133/2021 (art. 48), mas a regra v trata de nepotismo na IN 5/2017; usei B pela regra v.
+N=9, 14, 21, 23, 25, 29, 32, 38: regra v em formato meta ('o trecho X está errado'); onde B, a frase inclui o trecho errado citado.

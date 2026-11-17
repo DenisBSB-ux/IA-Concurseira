@@ -1,0 +1,959 @@
+[
+{
+"n": 3,
+"m": "B",
+"b": [
+"repactuação",
+"repasse integral",
+"sem diluição"
+],
+"d": [
+"parcial",
+"com diluição"
+]
+},
+{
+"n": 4,
+"m": "C",
+"b": [
+"fiscalização técnica",
+"obrigações previdenciárias, fiscais e trabalhistas"
+],
+"d": [
+"fiscalização setorial",
+"obrigações contratuais e orçamentárias"
+]
+},
+{
+"n": 5,
+"m": "B",
+"b": [
+"extintos ou em extinção",
+"terceirizadas"
+],
+"d": [
+"vedada a terceirização",
+"cargos em comissão"
+]
+},
+{
+"n": 9,
+"m": "B",
+"b": [
+"não há vedação",
+"fiscalizador"
+],
+"d": [
+"é vedado",
+"gestor do contrato"
+],
+"t": "Em contratos da INFRA S.A., não há vedação a que o fiscalizador utilize os dados da pesquisa de preços da IN SEGES/ME n.º 65/2021 como parâmetro para o valor de eventual multa."
+},
+{
+"n": 10,
+"m": "C",
+"b": [
+"Planejamento da Contratação",
+"Seleção do Fornecedor",
+"Gestão do Contrato"
+],
+"d": [
+"Execução do Contrato",
+"Habilitação do Fornecedor"
+]
+},
+{
+"n": 12,
+"m": "A",
+"r": [
+[
+"admite-se que o objeto seja definido como fornecimento de mão de obra, desde que o edital identifique adequadamente as atividades a serem desempenhadas",
+"veda-se definir o objeto como fornecimento de mão de obra"
+]
+],
+"b": [
+"veda-se definir",
+"fornecimento de mão de obra"
+],
+"d": [
+"admite-se definir",
+"locação de equipamentos"
+]
+},
+{
+"n": 14,
+"m": "A",
+"r": [
+[
+"não impede que agentes públicos dirijam diretamente a execução das atividades desses trabalhadores, desde que as determinações estejam relacionadas ao objeto contratado e não envolvam decisões sobre remuneração ou desligamento",
+"impede que agentes públicos dirijam diretamente a execução das atividades desses trabalhadores"
+]
+],
+"b": [
+"impede que agentes públicos",
+"execução das atividades"
+],
+"d": [
+"não impede que",
+"contratação de pessoal"
+]
+},
+{
+"n": 15,
+"m": "B",
+"b": [
+"notificação direta",
+"não é ingerência"
+],
+"d": [
+"poder de mando",
+"configura ingerência"
+]
+},
+{
+"n": 18,
+"m": "A",
+"r": [
+[
+"limita-se à coordenação da fiscalização técnica, não abrangendo a fiscalização administrativa, a fiscalização setorial, a fiscalização pelo público usuário nem os atos relacionados à prorrogação, alteração e reequilíbrio do contrato",
+"compreende a coordenação de todas as fiscalizações e os atos relacionados à prorrogação, alteração e reequilíbrio do contrato"
+]
+],
+"b": [
+"compreende a coordenação",
+"todas as fiscalizações"
+],
+"d": [
+"limita-se à",
+"apenas a fiscalização técnica"
+]
+},
+{
+"n": 21,
+"m": "A",
+"r": [
+[
+"pode ser executado por profissionais não pertencentes aos quadros funcionais da instituição",
+"deve ser executado obrigatoriamente por profissionais pertencentes aos quadros funcionais da instituição"
+]
+],
+"b": [
+"deve ser executado obrigatoriamente",
+"pertencentes aos quadros funcionais"
+],
+"d": [
+"pode ser executado",
+"não pertencentes aos"
+]
+},
+{
+"n": 23,
+"m": "B",
+"b": [
+"vedado vincular-se",
+"somente aos contratos com a administração pública"
+],
+"d": [
+"devem-se vincular",
+"somente aos contratos privados"
+],
+"t": "É vedado vincular-se às disposições de acordos, convenções ou dissídios coletivos que tratem de obrigações e direitos aplicáveis somente aos contratos com a administração pública."
+},
+{
+"n": 24,
+"m": "B",
+"b": [
+"repactuação",
+"intervalo mínimo de um ano"
+],
+"d": [
+"reajuste por índice",
+"intervalo mínimo de seis meses"
+]
+},
+{
+"n": 25,
+"m": "B",
+"b": [
+"setores distintos",
+"unidades desconcentradas"
+],
+"d": [
+"pesquisa de satisfação junto ao usuário",
+"unidades centrais"
+],
+"t": "A fiscalização setorial é o acompanhamento da execução do contrato quando a prestação ocorre em setores distintos ou unidades desconcentradas."
+},
+{
+"n": 26,
+"m": "A",
+"r": [
+[
+"a partir da data em que tiver sido formalizada a última repactuação",
+"a partir da data do fato gerador que deu ensejo à última repactuação"
+]
+],
+"b": [
+"fato gerador",
+"interregno anual"
+],
+"d": [
+"formalização do apostilamento",
+"assinatura do contrato"
+]
+},
+{
+"n": 28,
+"m": "A",
+"r": [
+[
+"demanda celebração de termo aditivo, em respeito ao princípio do formalismo contratual",
+"é formalizada por simples apostilamento, dispensado o termo aditivo"
+]
+],
+"b": [
+"simples apostilamento",
+"dispensado o termo aditivo"
+],
+"d": [
+"novo contrato",
+"demanda celebração"
+]
+},
+{
+"n": 29,
+"m": "B",
+"b": [
+"aspectos técnicos ou administrativos"
+],
+"d": [
+"somente aspectos técnicos",
+"aspectos financeiros"
+],
+"t": "A fiscalização setorial abrange aspectos técnicos ou administrativos."
+},
+{
+"n": 31,
+"m": "B",
+"b": [
+"redimensionado",
+"não produzir os resultados",
+"qualidade mínima"
+],
+"d": [
+"suspenso",
+"mesmo com justificativa"
+]
+},
+{
+"n": 32,
+"m": "B",
+"b": [
+"podem notificar diretamente",
+"sem poder de mando"
+],
+"d": [
+"estão impedidos de notificar",
+"com poder de mando"
+],
+"t": "Na prestação de serviços de recepção e de apoio administrativo, os servidores podem notificar diretamente as tarefas previstas no contrato, sem poder de mando."
+},
+{
+"n": 34,
+"m": "A",
+"r": [
+[
+"são suficientes as cópias dos estudos preliminares, do edital e seus anexos",
+"além dos estudos preliminares, do edital e seus anexos, são necessárias as cópias do contrato, da proposta e da garantia"
+]
+],
+"b": [
+"são necessárias",
+"da proposta e da garantia"
+],
+"d": [
+"são suficientes",
+"do cronograma físico-financeiro"
+]
+},
+{
+"n": 38,
+"m": "B",
+"b": [
+"dispensa",
+"contratações de baixo valor"
+],
+"d": [
+"inafastável",
+"contratações de grande vulto"
+],
+"t": "Admite-se a dispensa dos Estudos Preliminares e do Gerenciamento de Riscos em contratações de baixo valor."
+},
+{
+"n": 39,
+"m": "A",
+"r": [
+[
+"a retenção do valor integral da fatura correspondente daquele mês, independentemente de proporcionalidade sobre o montante inadimplido",
+"a retenção da fatura em valor proporcional ao montante inadimplido"
+]
+],
+"b": [
+"valor proporcional",
+"montante inadimplido"
+],
+"d": [
+"valor integral",
+"fatura inteira"
+]
+},
+{
+"n": 41,
+"m": "A",
+"r": [
+[
+"constitui obrigação de manutenção diária em todos os contratos de prestação de serviços continuados",
+"pode ser exigida conforme a natureza dos serviços, com escala semanal ou mensal"
+]
+],
+"b": [
+"conforme a natureza dos serviços",
+"semanal ou mensal"
+],
+"d": [
+"todos os contratos",
+"escala diária"
+]
+},
+{
+"n": 42,
+"m": "A",
+"r": [
+[
+"a data-base indicada na respectiva Convenção Coletiva de Trabalho da categoria",
+"a data limite para apresentação das propostas constante do ato convocatório"
+]
+],
+"b": [
+"data limite para apresentação das propostas",
+"insumos e custos de mercado"
+],
+"d": [
+"data-base",
+"data da assinatura do contrato"
+]
+},
+{
+"n": 44,
+"m": "A",
+"r": [
+[
+"ato discricionário do fiscal e do gestor, recomendável apenas em contratações de grande vulto ou obras complexas de engenharia",
+"dever do órgão, sempre que a natureza dos serviços exigir"
+]
+],
+"b": [
+"dever do órgão",
+"natureza dos serviços"
+],
+"d": [
+"ato discricionário",
+"grande vulto"
+]
+},
+{
+"n": 46,
+"m": "A",
+"r": [
+[
+"por mero requerimento administrativo digital, dispensando-se a oitiva de sindicatos ou homologações formais externas da quitação",
+"na presença do sindicato da categoria, após comprovada a quitação de todos os encargos"
+]
+],
+"b": [
+"presença do sindicato da categoria",
+"quitação de todos os encargos"
+],
+"d": [
+"mero requerimento administrativo",
+"homologação judicial"
+]
+},
+{
+"n": 47,
+"m": "A",
+"r": [
+[
+"avaliar o objeto nos moldes técnicos estabelecidos, sendo obrigatória em todas as modalidades contratuais de compras e concessões comuns, mesmo naquelas que não envolvem dedicação de mão de obra",
+"acompanhar os aspectos administrativos quanto às obrigações previdenciárias, fiscais e trabalhistas, sendo aplicável aos contratos com dedicação exclusiva de mão de obra"
+]
+],
+"b": [
+"obrigações previdenciárias, fiscais e trabalhistas",
+"dedicação exclusiva de mão de obra"
+],
+"d": [
+"avaliar o objeto",
+"compras e concessões comuns"
+]
+},
+{
+"n": 49,
+"m": "C",
+"b": [
+"mesmo agente público",
+"fiscal técnico",
+"gestor do contrato"
+],
+"d": [
+"ordenador de despesas",
+"autoridade superior"
+]
+},
+{
+"n": 52,
+"m": "B",
+"b": [
+"encaminhar ao gestor",
+"competência do fiscal"
+],
+"d": [
+"determinando diretamente",
+"decidir sozinho"
+],
+"t": "Os fiscais de contratos regidos pela IN nº 5/2017 devem registrar todas as ocorrências em processo ou registro próprio e encaminhar ao gestor o que ultrapassar a competência do fiscal."
+},
+{
+"n": 53,
+"m": "A",
+"r": [
+[
+"poderá, sob",
+"não poderá, sob"
+],
+[
+"determinar de forma direta a concessão de folga geral remunerada",
+"conceder direitos típicos de servidor, como folga geral,"
+]
+],
+"b": [
+"não poderá",
+"direitos típicos de servidor"
+],
+"d": [
+"deverá",
+"folga geral remunerada"
+]
+},
+{
+"n": 54,
+"m": "A",
+"r": [
+[
+"atua de forma compensatória imediata, impedindo que a Administração Pública Federal aplique outras sanções pecuniárias ou restritivas de direito pelo mesmo inadimplemento técnico",
+"não impede outras sanções: na desconformidade contínua aplicam-se também as sanções do edital"
+]
+],
+"b": [
+"não impede outras sanções",
+"sanções do edital"
+],
+"d": [
+"atua de forma compensatória imediata",
+"exclui outras sanções"
+]
+},
+{
+"n": 56,
+"m": "A",
+"r": [
+[
+" e a fim de preservar o sigilo das estratégias de acompanhamento fático da execução contratual",
+""
+],
+[
+"podem se acumular temporariamente sob o mesmo servidor público",
+"não podem se acumular sob o mesmo servidor público, pois o preposto é da contratada e o fiscal é agente público"
+]
+],
+"b": [
+"não podem se acumular",
+"preposto é da contratada"
+],
+"d": [
+"podem se acumular temporariamente",
+"fiscal é da contratada"
+]
+},
+{
+"n": 57,
+"m": "B",
+"b": [
+"reduz postos",
+"materiais inferiores",
+"redimensiona o pagamento"
+],
+"d": [
+"rescinde o contrato",
+"fiscalização administrativa"
+]
+},
+{
+"n": 58,
+"m": "A",
+"r": [
+[
+"devem vedar, sob pena de nulidade absoluta e quebra da igualdade, qualquer participação de sociedades cooperativas no processo de seleção do fornecedor",
+"podem admitir a participação de cooperativas, quando o serviço puder ser executado com autonomia pelos cooperados"
+]
+],
+"b": [
+"podem admitir",
+"autonomia pelos cooperados"
+],
+"d": [
+"devem vedar",
+"nulidade absoluta"
+]
+},
+{
+"n": 59,
+"m": "A",
+"r": [
+[
+"desconsiderar fatores climáticos ou regionais fora do controle do prestador, focando unicamente na média aritmética simples de horas úteis do órgão público",
+"prever os fatores fora do controle do prestador, sem se limitar a uma média simples"
+]
+],
+"b": [
+"prever os fatores",
+"fora do controle do prestador"
+],
+"d": [
+"desconsiderar os fatores",
+"média aritmética simples"
+]
+},
+{
+"n": 60,
+"m": "A",
+"r": [
+[
+"exigência de uso obrigatório em todas as contratações públicas de serviços, inclusive para serviços não continuados de execução imediata por escopo simples",
+"instrumento facultativo, usado se for o caso ou substituído por outro"
+]
+],
+"b": [
+"instrumento facultativo",
+"se for o caso"
+],
+"d": [
+"uso obrigatório",
+"serviços não continuados"
+]
+},
+{
+"n": 62,
+"m": "A",
+"r": [
+[
+"estes foquem nas atividades consideradas de menor relevância técnica para mitigar os riscos de asfixia econômica da empresa",
+"estes recaiam nas atividades mais relevantes ou críticas"
+]
+],
+"b": [
+"mais relevantes ou críticas",
+"proporcionalidade"
+],
+"d": [
+"menor relevância",
+"atividades acessórias"
+]
+},
+{
+"n": 63,
+"m": "A",
+"r": [
+[
+"de forma vinculada a ''imediata'' autuação de processo sancionatório",
+"a autuação de procedimento administrativo específico, sem exigência de imediatidade"
+]
+],
+"b": [
+"procedimento administrativo específico",
+"sem exigência de imediatidade"
+],
+"d": [
+"rescisão contratual imediata",
+"autuação imediata"
+]
+},
+{
+"n": 65,
+"m": "A",
+"r": [
+[
+"proíbe que as funções de fiscalização técnica e fiscalização administrativa sejam acumuladas pelo mesmo agente público, exigindo-se que cada atribuição seja necessariamente atribuída a um servidor exclusivo e distinto para evitar conflito de interesses",
+"admite que as funções de fiscalização técnica e fiscalização administrativa sejam acumuladas por um único servidor, desde que distintas as atividades"
+]
+],
+"b": [
+"admite",
+"um único servidor",
+"desde que distintas as atividades"
+],
+"d": [
+"proíbe",
+"servidor exclusivo e distinto"
+]
+},
+{
+"n": 69,
+"m": "A",
+"r": [
+[
+"prazo indeterminado, sendo vedada a prorrogação do contrato, ainda que justificada,",
+"período predeterminado, admitida a prorrogação do contrato, se justificada,"
+]
+],
+"b": [
+"período predeterminado",
+"admitida a prorrogação"
+],
+"d": [
+"prazo indeterminado",
+"vedada a prorrogação"
+]
+},
+{
+"n": 70,
+"m": "A",
+"r": [
+[
+"pode compartilhar os recursos humanos e materiais de uma contratação para a execução simultânea de outros contratos, desde que haja autorização do fiscal",
+"não compartilha os recursos humanos e materiais de uma contratação com outros contratos"
+]
+],
+"b": [
+"não compartilha",
+"recursos humanos e materiais"
+],
+"d": [
+"pode compartilhar",
+"autorização do fiscal"
+]
+},
+{
+"n": 71,
+"m": "A",
+"r": [
+[
+"cumulativamente a Conta-Depósito Vinculada e o Pagamento pelo Fato Gerador como controles internos",
+"alternativamente a Conta-Depósito Vinculada ou o Pagamento pelo Fato Gerador como controles internos"
+]
+],
+"b": [
+"alternativamente",
+"ou o Pagamento pelo Fato Gerador"
+],
+"d": [
+"cumulativamente",
+"e o Pagamento pelo Fato Gerador"
+]
+},
+{
+"n": 73,
+"m": "A",
+"r": [
+[
+"a nomenclatura livremente definida por cada órgão, sendo dispensada a observância da Classificação Brasileira de Ocupações",
+"a nomenclatura estabelecida na Classificação Brasileira de Ocupações, ou outra que a substitua"
+]
+],
+"b": [
+"Classificação Brasileira de Ocupações",
+"outra que a substitua"
+],
+"d": [
+"livremente definida por cada órgão",
+"norma coletiva"
+]
+},
+{
+"n": 74,
+"m": "C",
+"b": [
+"Não será admitida",
+"não estejam de acordo"
+],
+"d": [
+"Poderá ser admitida",
+"não estejam registrados"
+]
+},
+{
+"n": 77,
+"m": "A",
+"r": [
+[
+"assinatura do contrato pela contratada",
+"homologação do resultado do julgamento"
+]
+],
+"b": [
+"homologação",
+"setor de licitações"
+],
+"d": [
+"assinatura do contrato",
+"publicação do edital"
+]
+},
+{
+"n": 78,
+"m": "A",
+"r": [
+[
+"Cumpre ao setor de licitações a elaboração do Termo de Referência ou Projeto Básico, cabendo ao setor requisitante apenas validar os Estudos Preliminares e o Gerenciamento de Riscos",
+"Cumpre ao setor requisitante a elaboração do Termo de Referência ou Projeto Básico"
+]
+],
+"b": [
+"setor requisitante",
+"Termo de Referência"
+],
+"d": [
+"setor de licitações",
+"assessoria jurídica"
+]
+},
+{
+"n": 80,
+"m": "A",
+"r": [
+[
+"pode ser recusado pelo servidor quando entender não possuir qualificação técnica, por se tratar de ordem manifestamente ilegal",
+"não pode ser recusado pelo servidor, que deve expor suas limitações ao superior"
+]
+],
+"b": [
+"não pode ser recusado",
+"expor suas limitações"
+],
+"d": [
+"admite recusa",
+"ordem manifestamente ilegal"
+]
+},
+{
+"n": 83,
+"m": "A",
+"r": [
+[
+"ficam suspensas até que seja providenciada nova indicação",
+"cabem ao responsável pela indicação ou ao previsto no normativo do órgão até nova indicação"
+]
+],
+"b": [
+"responsável pela indicação",
+"normativo do órgão"
+],
+"d": [
+"ficam suspensas",
+"chefe imediato do fiscal"
+]
+},
+{
+"n": 84,
+"m": "C",
+"b": [
+"ausências",
+"impedimentos eventuais e regulamentares"
+],
+"d": [
+"desligamento definitivo",
+"férias"
+]
+},
+{
+"n": 86,
+"m": "A",
+"r": [
+[
+"em qualquer hipótese, somente a partir da assinatura do apostilamento que os formaliza",
+"como regra geral, a partir do fato gerador da repactuação"
+]
+],
+"b": [
+"como regra geral",
+"fato gerador"
+],
+"d": [
+"em qualquer hipótese",
+"assinatura do apostilamento"
+]
+},
+{
+"n": 87,
+"m": "A",
+"r": [
+[
+"alcançam todos os itens da planilha de custos e formação de preços, ainda que não tenham motivado o pedido, para preservar a isonomia entre as categorias",
+"alcançam exclusivamente os itens que motivaram o pedido, e só quanto à diferença"
+]
+],
+"b": [
+"exclusivamente",
+"itens que motivaram o pedido",
+"só quanto à diferença"
+],
+"d": [
+"todos os itens",
+"integralmente"
+]
+},
+{
+"n": 90,
+"m": "A",
+"r": [
+[
+"é vedado ao órgão ou entidade contratante convocar reuniões periódicas com o preposto, a fim de preservar a autonomia da contratada na execução dos serviços",
+"o órgão ou entidade contratante deve realizar reuniões periódicas com o preposto, para garantir a qualidade da execução e os resultados"
+]
+],
+"b": [
+"deve realizar",
+"reuniões periódicas"
+],
+"d": [
+"é vedado",
+"é facultativo"
+]
+},
+{
+"n": 91,
+"m": "A",
+"r": [
+[
+"promover diretamente a adequação do contrato à produtividade efetivamente realizada, dispensada a comunicação ao setor de licitações",
+"comunicar ao setor de licitações, que promove a adequação do contrato à produtividade efetivamente realizada"
+]
+],
+"b": [
+"comunicar ao setor de licitações",
+"que promove a adequação"
+],
+"d": [
+"promover diretamente",
+"dispensada a comunicação"
+]
+},
+{
+"n": 96,
+"m": "A",
+"r": [
+[
+"devem obrigatoriamente ser organizados em processo de fiscalização autônomo, sob pena de nulidade dos atos praticados",
+"podem ser organizados em processo de fiscalização, sem cominação de nulidade"
+]
+],
+"b": [
+"podem ser organizados",
+"sem cominação de nulidade"
+],
+"d": [
+"devem obrigatoriamente",
+"sob pena de nulidade"
+]
+},
+{
+"n": 2,
+"m": "C",
+"b": [
+"É vedado",
+"ponto facultativo"
+],
+"d": [
+"É facultado",
+"gratificação"
+]
+},
+{
+"n": 7,
+"m": "B",
+"b": [
+"indicadores de resultado",
+"mera locação de mão de obra",
+"mesmo com postos de trabalho"
+],
+"d": [
+"valor global do contrato",
+"subordinação direta"
+]
+},
+{
+"n": 13,
+"m": "B",
+"b": [
+"estudos preliminares",
+"gerenciamento de riscos",
+"termo de referência ou projeto básico"
+],
+"d": [
+"pagamento das faturas",
+"livre negociação"
+]
+},
+{
+"n": 19,
+"m": "B",
+"b": [
+"ao menos",
+"estudos preliminares",
+"termo de referência"
+],
+"d": [
+"no máximo",
+"contrato assinado"
+]
+},
+{
+"n": 27,
+"m": "B",
+"b": [
+"não pode se vincular",
+"acordos, convenções ou dissídios coletivos"
+],
+"d": [
+"vincula-se obrigatoriamente",
+"contratos privados"
+],
+"t": "A Administração não pode se vincular a acordos, convenções ou dissídios coletivos que tratem de direitos aplicáveis somente aos contratos com a Administração Pública."
+},
+{
+"n": 64,
+"m": "B",
+"b": [
+"nepotismo",
+"terceiro grau",
+"direção, chefia ou assessoramento"
+],
+"d": [
+"segundo grau",
+"quarto grau"
+]
+},
+{
+"n": 50,
+"m": "B",
+"b": [
+"verbas rescisórias",
+"salários do mês"
+],
+"d": [
+"encargos previdenciários",
+"tributos federais"
+],
+"t": "A garantia contratual é retida até a comprovação do pagamento das verbas rescisórias, e não dos salários do mês."
+}
+]
