@@ -26,8 +26,8 @@
 {
 "n": 4,
 "m": "B",
+"t": "Sem data fixada, a lei vigora 45 dias depois de oficialmente publicada.",
 "b": [
-"Sem data fixada",
 "45 dias"
 ],
 "d": [
@@ -127,11 +127,13 @@
 {
 "n": 24,
 "m": "B",
+"t": "O domicílio necessário do marítimo é o lugar em que o navio estiver matriculado.",
 "b": [
 "marítimo",
 "o navio estiver matriculado"
 ],
 "d": [
+"militar",
 "o navio estiver ancorado",
 "onde for encontrado"
 ]
@@ -151,27 +153,30 @@
 {
 "n": 26,
 "m": "B",
+"t": "Os bens públicos de uso especial são inalienáveis enquanto conservarem a sua qualificação, ao passo que os dominicais podem ser alienados, observadas as exigências da lei.",
 "b": [
 "uso especial",
 "inalienáveis",
-"dominicais"
+"podem ser alienados"
 ],
 "d": [
-"uso comum do povo",
+"de uso comum e dominicais",
+"livremente disponíveis",
 "imprescritíveis"
 ]
 },
 {
 "n": 28,
 "m": "B",
+"t": "Os bens públicos de qualquer classe não estão sujeitos a usucapião, e o abandono não cria exceção.",
 "b": [
-"qualquer classe",
-"não estão sujeitos a usucapião",
-"abandono"
+"de qualquer classe",
+"não estão sujeitos a usucapião"
 ],
 "d": [
-"bens dominicais",
-"somente os de uso comum"
+"somente os de uso especial",
+"somente os de uso comum",
+"podem ser usucapidos"
 ]
 },
 {
@@ -426,21 +431,16 @@
 },
 {
 "n": 86,
-"m": "A",
-"r": [
-[
-"tal alteração constitui desvio de finalidade que autoriza a desconsideração",
-"tal alteração, por si só, não constitui desvio de finalidade nem autoriza a desconsideração"
-]
-],
+"m": "B",
+"t": "Alterar a finalidade original da atividade econômica não é, por si só, desvio de finalidade, que exige o propósito de lesar credores ou de praticar ilícitos.",
 "b": [
 "por si só",
-"não constitui desvio de finalidade"
+"propósito de lesar credores ou de praticar ilícitos"
 ],
 "d": [
-"necessariamente",
-"caracteriza abuso de direito",
-"confusão patrimonial"
+"em regra",
+"quando houver prejuízo",
+"simples inadimplemento"
 ]
 },
 {
@@ -541,21 +541,16 @@
 },
 {
 "n": 95,
-"m": "A",
-"r": [
-[
-"submetendo-o diretamente ao cartório de registro, sem necessidade de aprovação prévia por qualquer autoridade",
-"submetendo-o à aprovação da autoridade competente"
-]
-],
+"m": "B",
+"t": "O estatuto da fundação deve ser submetido à aprovação da autoridade competente, com recurso ao juiz, e não vai direto a registro.",
 "b": [
-"estatuto da fundação",
-"aprovação da autoridade competente"
+"aprovação da autoridade competente",
+"recurso ao juiz"
 ],
 "d": [
-"cartório de registro",
-"aprovação do Ministério Público",
-"regimento interno"
+"aprovação do Poder Executivo",
+"homologação do Tribunal de Contas",
+"recurso ao Tribunal de Contas"
 ]
 },
 {
@@ -651,16 +646,17 @@
 },
 {
 "n": 106,
-"m": "C",
+"m": "B",
+"t": "O domicílio necessário é imposto pela lei ao incapaz, ao servidor público, ao militar, ao marítimo e ao preso.",
 "b": [
-"domicílio necessário",
+"imposto pela lei",
 "servidor público",
-"não a vontade do indivíduo"
+"preso"
 ],
 "d": [
-"domicílio voluntário",
-"magistrado",
-"a decisão do juiz"
+"escolhido pela parte",
+"comerciante",
+"empresário"
 ]
 },
 {
@@ -683,20 +679,16 @@
 },
 {
 "n": 109,
-"m": "A",
-"r": [
-[
-"o lugar em que ele reside com sua família, ainda que exerça suas funções permanentemente em município diverso",
-"o lugar em que exerce permanentemente suas funções"
-]
-],
+"m": "B",
+"t": "O domicílio do servidor público é o lugar em que exerce permanentemente as funções, e não o de residência da família.",
 "b": [
 "servidor público",
-"exerce permanentemente suas funções"
+"exerce permanentemente as funções"
 ],
 "d": [
-"reside com sua família",
-"militar"
+"preso",
+"incapaz",
+"reside com a família"
 ]
 },
 {
@@ -857,15 +849,15 @@
 {
 "n": 136,
 "m": "B",
+"t": "Nenhum bem público, nem o dominical, está sujeito a usucapião, independentemente de afetação a finalidade pública.",
 "b": [
-"Nenhum bem público",
 "usucapião",
-"independentemente de afetação"
+"independentemente de afetação a finalidade pública"
 ],
 "d": [
-"Apenas o bem dominical",
-"penhora",
-"dependendo de afetação"
+"doação",
+"prescrição aquisitiva ordinária",
+"somente se afetado à finalidade pública"
 ]
 },
 {
@@ -1270,15 +1262,16 @@
 },
 {
 "n": 206,
-"m": "C",
+"m": "B",
+"t": "O ilícito subjetivo do art. 186 do Código Civil compõe-se de dolo e de culpa em sentido estrito (negligência, imprudência e imperícia).",
 "b": [
-"culpa em sentido amplo",
-"ato ilícito subjetivo",
-"art. 186"
+"dolo",
+"culpa em sentido estrito"
 ],
 "d": [
-"responsabilidade objetiva",
-"art. 187"
+"risco",
+"boa-fé",
+"culpa em sentido amplo"
 ]
 },
 {
@@ -1321,14 +1314,16 @@
 },
 {
 "n": 222,
-"m": "C",
+"m": "B",
+"t": "Não corre a prescrição entre ascendentes e descendentes durante o poder familiar, nem entre tutores e tutelados durante a tutela.",
 "b": [
 "poder familiar",
 "tutores e tutelados"
 ],
 "d": [
-"a guarda unilateral",
-"curadores e curatelados"
+"avós e netos maiores",
+"cônjuges separados de fato",
+"maioridade civil"
 ]
 },
 {
@@ -1378,25 +1373,29 @@
 {
 "n": 228,
 "m": "B",
+"t": "A pretensão de hospedeiros e do segurado contra o segurador prescreve em um ano, nos termos do art. 206, §1º, do Código Civil.",
 "b": [
-"Hospedeiros e segurado",
-"um ano"
+"um ano",
+"§1º"
 ],
 "d": [
 "dois anos",
-"cinco anos"
+"três anos",
+"§3º"
 ]
 },
 {
 "n": 9,
 "m": "B",
+"t": "A analogia é método de integração, e a interpretação extensiva é método de interpretação.",
 "b": [
-"método de interpretação",
-"só a analogia"
+"analogia",
+"método de interpretação"
 ],
 "d": [
-"método de integração",
-"também os costumes"
+"costume",
+"equidade",
+"fonte formal do direito"
 ]
 },
 {
@@ -1469,13 +1468,14 @@
 {
 "n": 39,
 "m": "B",
+"t": "O erro grosseiro é o erro manifesto e evidente.",
 "b": [
-"manifesto e evidente",
-"diligência média"
+"manifesto e evidente"
 ],
 "d": [
-"leve e escusável",
-"diligência abaixo da média"
+"escusável",
+"leve",
+"sutil"
 ]
 },
 {
@@ -1517,13 +1517,16 @@
 {
 "n": 47,
 "m": "B",
+"t": "A eficácia de lei, ato ou sentença estrangeira é afastada quando ofendem a soberania nacional, a ordem pública ou os bons costumes, bastando qualquer um deles.",
 "b": [
-"ordem pública, soberania nacional e bons costumes",
-"em conjunto"
+"ordem pública",
+"bons costumes",
+"bastando qualquer um deles"
 ],
 "d": [
-"isoladamente",
-"tratados internacionais"
+"interesse fiscal",
+"boa-fé objetiva",
+"bastando todos em conjunto"
 ]
 },
 {
@@ -1541,14 +1544,14 @@
 {
 "n": 50,
 "m": "B",
+"t": "Pessoas jurídicas de direito público respondem civilmente pelos atos dos agentes, cabendo regresso se houve culpa ou dolo.",
 "b": [
 "respondem civilmente",
-"cabendo regresso",
 "culpa ou dolo"
 ],
 "d": [
-"respondem subsidiariamente",
-"regresso vedado",
+"não respondem",
+"respondem apenas subsidiariamente",
 "apenas dolo"
 ]
 },
@@ -1632,15 +1635,15 @@
 {
 "n": 91,
 "m": "B",
+"t": "O registro público do ato constitutivo declara os poderes de representação dos administradores.",
 "b": [
 "registro público",
-"poderes de representação",
-"terceiros de boa-fé"
+"poderes de representação"
 ],
 "d": [
-"cartório de notas",
-"poderes de gestão",
-"credores quirografários"
+"escritura pública",
+"limites de responsabilidade",
+"ata de assembleia"
 ]
 },
 {
@@ -1694,13 +1697,15 @@
 {
 "n": 135,
 "m": "B",
+"t": "Segundo o Código Civil, os bens públicos são de uso comum do povo, de uso especial ou dominicais.",
 "b": [
-"uso comum, uso especial e dominicais",
-"três categorias"
+"de uso especial",
+"dominicais"
 ],
 "d": [
-"quatro categorias",
-"uso comum e uso privado"
+"de uso restrito",
+"fiscais",
+"de uso privado"
 ]
 },
 {
@@ -1750,14 +1755,16 @@
 {
 "n": 180,
 "m": "B",
+"t": "No estado de perigo o declarante assume obrigação excessivamente onerosa diante de grave dano conhecido pela outra parte.",
 "b": [
-"obrigação onerosa",
+"excessivamente onerosa",
 "grave dano",
 "conhecido pela outra parte"
 ],
 "d": [
-"obrigação gratuita",
-"ignorado pela outra parte"
+"gratuita",
+"dano de menor monta",
+"desconhecido pela outra parte"
 ]
 },
 {
@@ -1803,15 +1810,15 @@
 {
 "n": 187,
 "m": "B",
+"t": "Segundo a Súmula 385 do STJ, não cabe dano moral pela negativação indevida quando há inscrição legítima anterior.",
 "b": [
-"Inscrição legítima anterior",
-"afasta o dano moral",
-"não é automático"
+"Súmula 385",
+"inscrição legítima anterior"
 ],
 "d": [
-"Inscrição ilegítima",
-"gera dano moral",
-"é presumido"
+"Súmula 297",
+"Súmula 227",
+"inscrição posterior"
 ]
 },
 {
@@ -1835,40 +1842,42 @@
 {
 "n": 193,
 "m": "B",
+"t": "Na legítima defesa putativa, se o erro de percepção decorre de negligência, subsiste o dever de reparar.",
 "b": [
 "negligência",
-"subsiste o dever de reparar",
-"não gera isenção automática"
+"subsiste o dever de reparar"
 ],
 "d": [
-"dolo",
-"cessa o dever de reparar"
+"força maior",
+"fica afastado o dever de reparar",
+"dolo"
 ]
 },
 {
 "n": 194,
 "m": "B",
+"t": "Quem, em legítima defesa, atinge terceiro inocente responde perante o terceiro, pois a excludente só vale contra o agressor, contra quem tem regresso.",
 "b": [
-"responde perante o terceiro inocente",
-"só contra o agressor",
+"responde perante o terceiro",
 "regresso"
 ],
 "d": [
-"não responde perante o terceiro",
-"vale contra todos"
+"fica isento perante o terceiro",
+"retenção",
+"indenização em dobro"
 ]
 },
 {
 "n": 202,
 "m": "B",
+"t": "O abuso de direito é aferido pelo excesso objetivo aos fins da norma, e não pela culpa nem pela intenção de prejudicar.",
 "b": [
-"excesso objetivo",
-"pela culpa",
-"intenção de prejudicar"
+"excesso objetivo"
 ],
 "d": [
-"dolo específico",
-"dano patrimonial"
+"gravidade do dano",
+"valor da indenização",
+"extensão do prejuízo"
 ]
 },
 {
@@ -1898,15 +1907,15 @@
 {
 "n": 214,
 "m": "B",
+"t": "O impedimento da prescrição entre cônjuges vale na constância da sociedade conjugal; encerrada esta, o prazo corre.",
 "b": [
-"constância da sociedade conjugal",
-"separados de fato",
-"o prazo pode correr"
+"na constância da sociedade conjugal",
+"o prazo corre"
 ],
 "d": [
-"divórcio definitivo",
-"separação judicial",
-"o prazo não corre"
+"somente após o divórcio definitivo",
+"o prazo não corre",
+"enquanto durar a separação de fato"
 ]
 },
 {
