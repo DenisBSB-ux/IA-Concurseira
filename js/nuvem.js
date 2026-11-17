@@ -666,7 +666,7 @@ function _lsGet(k){ try{ return window.localStorage.getItem(k); }catch(_){ retur
 function _lsSet(k, v){ try{ if(v===null||v===undefined) window.localStorage.removeItem(k); else window.localStorage.setItem(k, v); }catch(_){} }
 /* ---------- progresso da REVISÃO (marcas de flashcards/lacunas, assuntos estudados, registro por dia, dias do plano) ----------
    Nunca se perde: sobe para a nuvem (doc próprio, mescla por união, o que existe aqui vale mais que o remoto), entra no backup e na restauração. */
-const REV_CHAVES = { treino:'tcdf_treino_v1', check:'tcdf_resumo_check_v1', log:'tcdf_treino_log_v1', hist:'tcdf_reta7_hist_v2', ts:'tcdf_rev_ts_v1' };
+const REV_CHAVES = { treino:'tcdf_treino_v1', check:'tcdf_resumo_check_v1', log:'tcdf_treino_log_v1', hist:'tcdf_reta7_hist_v2', ts:'tcdf_rev_ts_v1', tent:'tcdf_treino_n_v1' };
 function revisaoColetar(){
   const o = {}; Object.keys(REV_CHAVES).forEach(k => { try{ o[k] = JSON.parse(localStorage.getItem(REV_CHAVES[k]) || 'null'); }catch(_){ o[k] = null; } });
   return o;
@@ -693,6 +693,19 @@ function revisaoMesclar(r){
     if(alt) gravar(k, loc);
   });
   if(altTs) gravar('ts', tsL);
+  if(r.tent && typeof r.tent === 'object' && !Array.isArray(r.tent)){      // tentativas: vale o maior número de cada questão (nunca diminui ao sincronizar)
+    const loc = (ler('tent') && typeof ler('tent') === 'object') ? ler('tent') : {}; let alt = false;
+    Object.keys(r.tent).forEach(sl => {
+      if(per.has(sl) || !r.tent[sl] || typeof r.tent[sl] !== 'object') return;
+      const l = (loc[sl] = loc[sl] || {});
+      Object.keys(r.tent[sl]).forEach(c => {
+        if(per.has(c) || !Array.isArray(r.tent[sl][c])) return;
+        const lv = l[c] || [0, 0], n = Math.max(lv[0], Number(r.tent[sl][c][0]) || 0), a = Math.max(lv[1], Number(r.tent[sl][c][1]) || 0);
+        if(!l[c] || n !== lv[0] || a !== lv[1]){ l[c] = [n, a]; alt = true; }
+      });
+    });
+    if(alt) gravar('tent', loc);
+  }
   if(Array.isArray(r.log)){
     const loc = Array.isArray(ler('log')) ? ler('log') : [], vistos = new Set(loc.map(x => x.ts + '|' + x.s + '|' + x.t)); let alt = false;
     r.log.forEach(x => { if(x && Number.isFinite(x.ts) && typeof x.s === 'string' && !vistos.has(x.ts + '|' + x.s + '|' + x.t)){ loc.push({ ts:x.ts, s:x.s, t:String(x.t).slice(0, 1), r:String(x.r).slice(0, 4) }); alt = true; } });

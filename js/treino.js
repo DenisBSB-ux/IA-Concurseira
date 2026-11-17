@@ -25,9 +25,19 @@ function treinoAtualizarPaineis(){
     document.querySelectorAll('#r7-graf-corpo').forEach(el => { if(typeof reta7MontarGrafico === 'function') reta7MontarGrafico(el); });
   }catch(_){} }, 250);
 }
+// tentativas por questão (cada resposta dada conta, inclusive as repetidas): { slug: { chave: [tentativas, acertos] } }
+const TREINO_N_KEY = 'tcdf_treino_n_v1';
+function treinoNLer(){ try{ return JSON.parse(localStorage.getItem(TREINO_N_KEY) || '{}') || {}; }catch(_){ return {}; } }
+function treinoNRegistrar(slug, k, ok){
+  try{ const o = treinoNLer(), b = (o[slug] = o[slug] || {}), a = b[k] || [0, 0]; b[k] = [a[0] + 1, a[1] + (ok ? 1 : 0)]; localStorage.setItem(TREINO_N_KEY, JSON.stringify(o)); }catch(_){}
+}
+function treinoNApagar(slug, chaves){
+  try{ const o = treinoNLer(); if(!o[slug]) return; chaves.forEach(k => { delete o[slug][k]; }); localStorage.setItem(TREINO_N_KEY, JSON.stringify(o)); }catch(_){}
+}
 function treinoMarcar(slug, k, v){
   const m = treinoLer(); (m[slug] = m[slug] || {})[k] = v; treinoGravar(m); revTsSet('treino', slug, k); if(typeof sincronizarRevisao === 'function') sincronizarRevisao();
   treinoAtualizarPaineis();
+  if(v) treinoNRegistrar(slug, k, v === 'ok');
   if(v){ try{ const L = JSON.parse(localStorage.getItem(TREINO_LOG_KEY) || '[]') || []; L.push({ ts:Date.now(), s:slug, t:String(k)[0], r:v }); localStorage.setItem(TREINO_LOG_KEY, JSON.stringify(L.slice(-4000))); }catch(_){} }   // registro por dia: alimenta o gráfico da Reta Final
 }
 const TREINO_LOG_KEY = 'tcdf_treino_log_v1';
@@ -197,6 +207,20 @@ function treinoInfoHtml(it){
   if(!l1 && !l2) return '';
   return '<span class="tr-info">' + (l1 ? esc(l1) : '') + (l2 ? '<br>' + esc(l2) : '') + '</span>';
 }
+// situação da questão: nova, ou já respondida (certa/errada) com as tentativas
+function treinoStatusHtml(it, tipo){
+  const k = treinoChaveItem(it, tipo), m = treinoMarca(TR.slug, k), n = ((treinoNLer()[TR.slug] || {})[k]) || [0, 0];
+  if(!m) return '<span class="tr-status novo">● Nova</span>';
+  const rot = tipo === 'l' ? (m === 'ok' ? '✓ Já respondida · certa' : '✗ Já respondida · errada') : (m === 'ok' ? '✓ Já sei' : '🔁 Revisar');
+  const tent = n[0] ? ' · ' + n[0] + (n[0] === 1 ? ' tentativa' : ' tentativas') + ' (' + n[1] + (n[1] === 1 ? ' certa' : ' certas') + ')' : '';
+  return '<span class="tr-status ' + (m === 'ok' ? 'ok' : 'no') + '">' + rot + tent + '</span>';
+}
+// tentativas e acertos desta matéria neste modo (cada resposta dada, também as repetidas)
+function treinoResumoTentativas(){
+  const tipo = TR.modo === 'lacunas' ? 'l' : 'f', b = treinoNLer()[TR.slug] || {}; let n = 0, a = 0;
+  Object.keys(b).forEach(k => { if(k[0] === tipo){ n += b[k][0] || 0; a += b[k][1] || 0; } });
+  return n ? '<p class="tr-tent">Tentativas: <b>' + n + '</b> · Acertos: <b>' + a + '</b> (' + Math.round(100 * a / n) + '%)</p>' : '';
+}
 // mostra só o item da questão: tira o comando do enunciado ("À luz …, julgue o item a seguir, relativo a …."); os dados e o hash não mudam
 function treinoSoItem(txt, minimo){
   const s = String(txt || ''), m = s.match(/^[\s\S]{0,420}?\bjulgu?e(?:m)?\b[^.?!:]*[.?!:]\s*/i);
@@ -289,7 +313,7 @@ function treinoDesenhar(){
   const filtros = TR.modo === 'flash'
     ? [['todos', 'Total: ' + (nOk + nRev) + ' / ' + d.flash.length + ' (' + pc(nOk + nRev, d.flash.length) + ')'], ['sei', '✓ Já sei: ' + nOk + ' (' + pc(nOk, d.flash.length) + ')'], ['revisar', '🔁 Revisar: ' + nRev + ' (' + pc(nRev, d.flash.length) + ')']]
     : [['todos', 'Total: ' + (lOk + lErr) + ' / ' + d.lacunas.length + ' (' + pc(lOk + lErr, d.lacunas.length) + ')'], ['certas', '✓ Corretas: ' + lOk + ' (' + pc(lOk, d.lacunas.length) + ')'], ['erradas', '✗ Erradas: ' + lErr + ' (' + pc(lErr, d.lacunas.length) + ')']];
-  const chips = `<div class="tr-filtros">${filtros.map(f => `<button class="${TR.filtro === f[0] ? 'on' : ''}" data-tr-filtro="${f[0]}">${esc(f[1])}</button>`).join('')}<span class="tr-cont" aria-live="polite">${TR.fila.length ? (TR.i + 1) + ' / ' + TR.fila.length : '0'}</span></div>`;
+  const chips = `<div class="tr-filtros">${filtros.map(f => `<button class="${TR.filtro === f[0] ? 'on' : ''}" data-tr-filtro="${f[0]}">${esc(f[1])}</button>`).join('')}<span class="tr-cont" aria-live="polite">${TR.fila.length ? (TR.i + 1) + ' / ' + TR.fila.length : '0'}</span></div>${treinoResumoTentativas()}`;
   const it = TR.fila[TR.i];
   let corpo;
   if(!it) corpo = `<p class="tr-vazio">${TR.filtro === 'todos' ? 'Nenhum item.' : 'Nada neste filtro. Escolha outro.'}</p>`;
@@ -307,8 +331,8 @@ function treinoHtmlFlash(it){
   const ref = it.ref ? `<span class="tr-ref">${esc(it.ref)}</span>` : '';
   const m = treinoMarca(TR.slug, treinoChaveItem(it, 'f'));
   const lado = TR.virado
-    ? `<div class="tr-card tr-verso${m === 'ok' ? ' tr-c-ok' : (m === 'rev' ? ' tr-c-no' : '')}" data-tr-virar="1"><span class="tr-tag">Resposta${it.k === 'troca' ? ' · troca típica' : ''}</span>${treinoInfoHtml(it)}${it.g ? `<p class="tr-gab ${/^ERRADO/.test(it.g) ? 'no' : 'ok'}">${esc(it.g)}</p>` : ''}<p class="tr-texto">${esc(it.v)}</p>${it.k === 'troca' && it.x ? `<p class="tr-extra">${esc(it.x)}</p>` : (it.x ? `<p class="tr-extra">${esc(it.x)}</p>` : '')}${ref}</div>`
-    : `<div class="tr-card tr-frente${m === 'ok' ? ' tr-c-ok' : (m === 'rev' ? ' tr-c-no' : '')}" data-tr-virar="1" tabindex="0"><span class="tr-tag">${it.k === 'troca' ? 'Corrija' : (it.k === 'questao' ? 'Questão' : 'Pergunta')}</span>${treinoInfoHtml(it)}<p class="tr-texto${it.k === 'questao' ? ' tr-quest' : ''}">${esc(treinoSoItem(it.f))}</p><span class="tr-dica">toque ou Espaço para virar</span></div>`;
+    ? `<div class="tr-card tr-verso${m === 'ok' ? ' tr-c-ok' : (m === 'rev' ? ' tr-c-no' : '')}" data-tr-virar="1"><span class="tr-tag">Resposta${it.k === 'troca' ? ' · troca típica' : ''}</span>${treinoStatusHtml(it, 'f')}${treinoInfoHtml(it)}${it.g ? `<p class="tr-gab ${/^ERRADO/.test(it.g) ? 'no' : 'ok'}">${esc(it.g)}</p>` : ''}<p class="tr-texto">${esc(it.v)}</p>${it.k === 'troca' && it.x ? `<p class="tr-extra">${esc(it.x)}</p>` : (it.x ? `<p class="tr-extra">${esc(it.x)}</p>` : '')}${ref}</div>`
+    : `<div class="tr-card tr-frente${m === 'ok' ? ' tr-c-ok' : (m === 'rev' ? ' tr-c-no' : '')}" data-tr-virar="1" tabindex="0"><span class="tr-tag">${it.k === 'troca' ? 'Corrija' : (it.k === 'questao' ? 'Questão' : 'Pergunta')}</span>${treinoStatusHtml(it, 'f')}${treinoInfoHtml(it)}<p class="tr-texto${it.k === 'questao' ? ' tr-quest' : ''}">${esc(treinoSoItem(it.f))}</p><span class="tr-dica">toque ou Espaço para virar</span></div>`;
   const ant = `<button class="btn tr-bt" data-tr-nav="-1" ${TR.i === 0 ? 'disabled' : ''}><span class="tr-ic" aria-hidden="true">◀</span>Anterior</button>`;
   const prox = `<button class="btn tr-bt" data-tr-nav="1" ${(TR.i >= TR.fila.length - 1 || !m) ? 'disabled' : ''} title="${m ? '' : 'Responda com Já sei ou Revisar para avançar'}">Próxima<span class="tr-ic" aria-hidden="true">▶</span></button>`;
   const acoes = TR.virado
@@ -329,14 +353,14 @@ function treinoHtmlLacuna(it){
   if(TR.checado){
     const todos = it.p.filter(p => p.l !== undefined).every((p, i) => TR.slots[i] && TR.slots[i].w === p.l);
     const resp = it.p.filter(p => p.l !== undefined).map(p => p.l);
-    fb = `<div class="tr-fb ${todos ? 'ok' : 'no'}"><b>${todos ? '✓ Correto!' : '✗ Não foi dessa vez.'}</b>${todos ? '' : ' Resposta: <i>' + esc(resp.join(' · ')) + '</i>.'}${it.ref ? ' <span class="tr-ref">' + esc(it.ref) + '</span>' : ''}${it.exp ? '<p class="tr-extra">' + esc(it.exp) + '</p>' : ''}</div>`;
+    fb = `<div class="tr-fb ${todos ? 'ok' : 'no'}"><b>${todos ? '✓ Correto!' : '✗ Não foi dessa vez.'}</b>${todos ? '' : ' Resposta: <i>' + esc(resp.join(' · ')) + '</i>.'}${it.ref ? ' <span class="tr-ref">' + esc(it.ref) + '</span>' : ''}${it.exp ? '<p class="tr-extra">' + esc(it.exp) + '</p>' : ''}<button type="button" class="btn tr-bt tr-refaz" data-tr-limpar="1">↺ Refazer esta questão</button></div>`;
   }
   const acao = `<button class="btn tr-bt" data-tr-resetar="1" title="Embaralha as palavras de novo e apaga o resultado desta questão"><span class="tr-ic" aria-hidden="true">🔀</span>Embaralhar</button>
       ${treinoBtnReset('btn tr-bt')}
       <button class="btn tr-bt" data-tr-nav="-1" ${TR.i === 0 ? 'disabled' : ''}><span class="tr-ic" aria-hidden="true">◀</span>Anterior</button>
       <button class="btn tr-bt" data-tr-nav="1" ${TR.i >= TR.fila.length - 1 ? 'disabled' : ''}>Próxima<span class="tr-ic" aria-hidden="true">▶</span></button>
       ${treinoBtnNaoResp()}`;
-  return `<div class="tr-card tr-lacuna${TR.checado ? (TR.slots.every((w, i) => w && w.w === it.p.filter(p => p.l !== undefined)[i].l) ? ' tr-c-ok' : ' tr-c-no') : ''}"><span class="tr-tag">Complete arrastando as palavras</span>${treinoInfoHtml(it)}<p class="tr-frase">${frase}</p>
+  return `<div class="tr-card tr-lacuna${TR.checado ? (TR.slots.every((w, i) => w && w.w === it.p.filter(p => p.l !== undefined)[i].l) ? ' tr-c-ok' : ' tr-c-no') : ''}"><span class="tr-tag">Complete arrastando as palavras</span>${treinoStatusHtml(it, 'l')}${treinoInfoHtml(it)}<p class="tr-frase">${frase}</p>
     <div class="tr-banco" aria-label="Banco de palavras">${banco || '<span class="tr-dica">Todas as palavras foram usadas.</span>'}</div></div>${fb}<div class="tr-acoes">${acao}</div>`;
 }
 
@@ -417,6 +441,7 @@ function treinoResetar(escopo){
   const txt = escopo === 'todas' ? 'Apagar TODAS as marcas (' + lista.length + ') ' + (flash ? 'dos flashcards' : 'das lacunas') + ' desta matéria e recomeçar?' : 'Apagar as ' + lista.length + (flash ? ' marcas "Revisar"' : ' marcas de lacunas erradas') + ' e recomeçar?';
   if(!confirm(txt)){ treinoDesenhar(); return; }
   lista.forEach(x => { const k = treinoChaveItem(x, tipo); b[k] = ''; delete TR.mem[k]; revTsSet('treino', slug, k); });
+  treinoNApagar(slug, lista.map(x => treinoChaveItem(x, tipo)));
   treinoGravar(m); if(typeof sincronizarRevisao === 'function') sincronizarRevisao(); treinoAtualizarPaineis();
   TR.filtro = 'todos'; TR.salvo = null; treinoMontarFila(); treinoDesenhar();
 }
