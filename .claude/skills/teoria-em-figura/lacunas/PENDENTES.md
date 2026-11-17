@@ -10,3 +10,5 @@
 - **Lei 14.133 (4):** nº 27 (elementos do planejamento: frase cobre só um dos três), nº 117 (art. 71: revogação e indenização, regra v não é confirmada pela lei), nº 144 (art. 60: desempate e sorteio; frase imprecisa), nº 187 (prazos do art. 55 e contagem no dia útil seguinte do art. 183).
 - **Lei Orgânica do TCDF (1+):** nº 191 (eleição do Presidente e recondução: regra v ambígua); ver também os alertas sobre a idade do Conselheiro (65 × 70) em REVISAO_RESUMOS.md.
 - **LODF (5):** nº 61, 166, 168, 180, 203 (nº 166: o gabarito "sem aprovação da Câmara" contradiz o art. 60, XX, que prevê aprovação prévia da Câmara para o Procurador-Geral — decidir o gabarito).
+- **PDPM (5):** nº 16 (dado do Anuário sem fonte na ref), nº 31 (regra v fala em monitoração eletrônica, o x em afastamento do lar), nº 79 (distrator "também" completa), nº 151 (art. 20 da Lei 11.340 prevê a prisão preventiva de ofício; o gabarito ERRADO e a regra v contrariam o texto legal — decidir o gabarito), nº 169 (frase sem autonomia).
+- **Primeiros Socorros:** completa (100 de 100).
