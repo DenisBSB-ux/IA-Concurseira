@@ -1,0 +1,1572 @@
+[
+{
+"n": 2,
+"m": "A",
+"r": [
+[
+"o Tribunal de Contas da União (TCU)",
+"um órgão do Poder Executivo"
+]
+],
+"b": [
+"um órgão do Poder Executivo"
+],
+"d": [
+"o Tribunal de Contas da União",
+"o Ministério Público",
+"o Poder Judiciário"
+]
+},
+{
+"n": 4,
+"m": "B",
+"b": [
+"dispensa justificativa",
+"vedado",
+"sem sigilo automático"
+],
+"d": [
+"exige justificativa",
+"permitido",
+"tornam o documento sigiloso"
+]
+},
+{
+"n": 5,
+"m": "B",
+"b": [
+"último fundamento",
+"livre desenvolvimento da personalidade",
+"cidadania"
+],
+"d": [
+"primeiro fundamento",
+"livre iniciativa",
+"soberania"
+]
+},
+{
+"n": 7,
+"m": "B",
+"b": [
+"toda pessoa jurídica de direito público ou privado",
+"não se restringe à administração direta"
+],
+"d": [
+"somente as pessoas jurídicas de direito privado",
+"só se aplica a empresas estatais"
+]
+},
+{
+"n": 13,
+"m": "B",
+"b": [
+"pertence ao titular",
+"apenas o trata",
+"sem se tornar dona"
+],
+"d": [
+"pertence à empresa",
+"passa a ser dona",
+"pertence ao controlador"
+]
+},
+{
+"n": 14,
+"m": "A",
+"r": [
+[
+"a primazia da segurança do Estado em detrimento da segurança pessoal",
+"o respeito à privacidade e a autodeterminação informativa, entre outros"
+]
+],
+"b": [
+"respeito à privacidade",
+"autodeterminação informativa"
+],
+"d": [
+"segurança do Estado",
+"soberania nacional",
+"ordem pública"
+]
+},
+{
+"n": 19,
+"m": "B",
+"b": [
+"pessoa natural",
+"exclusivamente particulares e não econômicos",
+"exclusão do alcance da lei"
+],
+"d": [
+"pessoa jurídica",
+"particulares ou econômicos",
+"regra de incidência"
+]
+},
+{
+"n": 20,
+"m": "B",
+"b": [
+"Origem racial",
+"dados sensíveis",
+"proteção reforçada"
+],
+"d": [
+"Renda familiar",
+"dados anonimizados",
+"proteção simplificada"
+]
+},
+{
+"n": 25,
+"m": "B",
+"b": [
+"autodeterminação informativa",
+"defesa do consumidor",
+"liberdade de expressão"
+],
+"d": [
+"soberania nacional",
+"segurança pública",
+"ordem econômica"
+]
+},
+{
+"n": 26,
+"m": "B",
+"b": [
+"Transparência",
+"clara e acessível",
+"facilitada e gratuita"
+],
+"d": [
+"Necessidade",
+"sigilosa e restrita",
+"onerosa e prévia"
+]
+},
+{
+"n": 27,
+"m": "B",
+"b": [
+"Necessidade",
+"mínimo necessário",
+"não excessivos"
+],
+"d": [
+"Finalidade",
+"máximo disponível",
+"amplos e genéricos"
+]
+},
+{
+"n": 30,
+"m": "B",
+"b": [
+"abrangência dos dados",
+"pertinentes, proporcionais e não excessivos",
+"só a retenção"
+],
+"d": [
+"prazo de armazenamento",
+"amplos e ilimitados",
+"só a abrangência"
+]
+},
+{
+"n": 32,
+"m": "B",
+"b": [
+"legítimo interesse",
+"estritamente necessários",
+"transparência"
+],
+"d": [
+"consentimento",
+"amplamente disponíveis",
+"sigilo"
+]
+},
+{
+"n": 34,
+"m": "B",
+"b": [
+"apenas uma das bases legais",
+"obrigação legal",
+"dispensam a autorização"
+],
+"d": [
+"a única base legal",
+"interesse privado",
+"exigem a autorização"
+]
+},
+{
+"n": 37,
+"m": "B",
+"b": [
+"vale para o futuro",
+"ex nunc",
+"ratificado"
+],
+"d": [
+"retroage ao início",
+"ex tunc",
+"anulado"
+]
+},
+{
+"n": 40,
+"m": "B",
+"b": [
+"específicos, explícitos e informados",
+"vedado tratamento posterior incompatível",
+"propósito genérico"
+],
+"d": [
+"genéricos e amplos",
+"admitido tratamento posterior distinto",
+"propósito específico"
+]
+},
+{
+"n": 41,
+"m": "B",
+"b": [
+"não elimina os dados automaticamente",
+"depende de requerimento",
+"obrigação legal e pesquisa"
+],
+"d": [
+"elimina todos os dados de imediato",
+"independe de requerimento",
+"interesse comercial"
+]
+},
+{
+"n": 43,
+"m": "B",
+"b": [
+"sempre que possível",
+"anonimização",
+"preservar a associação"
+],
+"d": [
+"sempre que solicitado",
+"pseudonimização",
+"excluir o registro"
+]
+},
+{
+"n": 44,
+"m": "B",
+"b": [
+"deixa de ser pessoal",
+"a portabilidade não o alcança"
+],
+"d": [
+"segue sendo pessoal",
+"a portabilidade o alcança"
+]
+},
+{
+"n": 45,
+"m": "A",
+"r": [
+[
+"um processo reversível que permita ao gestor público identificar o paciente sempre que houver necessidade administrativa",
+"um processo pelo qual o dado perde a possibilidade de associação, direta ou indireta, ao paciente"
+]
+],
+"b": [
+"perde a possibilidade de associação",
+"direta ou indireta"
+],
+"d": [
+"mantém a possibilidade de associação",
+"apenas direta",
+"somente indireta"
+]
+},
+{
+"n": 47,
+"m": "B",
+"b": [
+"Obrigação legal ou regulatória",
+"dispensa o consentimento",
+"não é absoluta"
+],
+"d": [
+"Interesse comercial",
+"exige o consentimento",
+"é irrestrita"
+]
+},
+{
+"n": 49,
+"m": "B",
+"b": [
+"possível",
+"hipóteses próprias da lei",
+"consentimento específico e destacado"
+],
+"d": [
+"vedado",
+"qualquer hipótese",
+"consentimento tácito"
+]
+},
+{
+"n": 50,
+"m": "B",
+"b": [
+"revertida por meios próprios",
+"esforços razoáveis",
+"volta a ser considerado pessoal"
+],
+"d": [
+"revertida por ordem judicial",
+"esforços extraordinários",
+"permanece anonimizado"
+]
+},
+{
+"n": 52,
+"m": "B",
+"b": [
+"sem consentimento",
+"obrigação legal",
+"tutela da saúde"
+],
+"d": [
+"somente com consentimento",
+"interesse do empregador",
+"tutela patrimonial"
+]
+},
+{
+"n": 53,
+"m": "B",
+"b": [
+"anonimização",
+"sempre que possível",
+"não há dispensa geral"
+],
+"d": [
+"pseudonimização",
+"sempre que solicitado",
+"a dispensa é ampla"
+]
+},
+{
+"n": 54,
+"m": "B",
+"b": [
+"legítimo interesse",
+"dado comum",
+"não consta"
+],
+"d": [
+"consentimento",
+"dado sensível",
+"também consta"
+]
+},
+{
+"n": 56,
+"m": "A",
+"r": [
+[
+"apenas após o consentimento do titular ou de seu responsável legal",
+"também sem consentimento, nas hipóteses legais de dispensa"
+]
+],
+"b": [
+"também sem consentimento",
+"hipóteses legais de dispensa"
+],
+"d": [
+"somente com consentimento",
+"a critério do controlador",
+"hipóteses de conveniência"
+]
+},
+{
+"n": 58,
+"m": "A",
+"r": [
+[
+"de ambos os pais ou todos os responsáveis legais",
+"de pelo menos um dos pais ou do responsável legal"
+]
+],
+"b": [
+"específico e em destaque",
+"pelo menos um dos pais"
+],
+"d": [
+"ambos os pais",
+"genérico e tácito",
+"a criança"
+]
+},
+{
+"n": 59,
+"m": "B",
+"b": [
+"específico e em destaque",
+"pelo menos um dos pais"
+],
+"d": [
+"tácito e genérico",
+"ambos os pais",
+"do próprio estudante"
+]
+},
+{
+"n": 60,
+"m": "B",
+"b": [
+"hipóteses de término do tratamento",
+"tempo máximo único"
+],
+"d": [
+"prazo de cinco anos",
+"prazo mínimo único"
+]
+},
+{
+"n": 64,
+"m": "A",
+"r": [
+[
+"está dispensada de atender às solicitações de acesso e à correção de dados previstas na LGPD",
+"continua obrigada a atender o acesso e a correção de dados"
+],
+[
+"uma vez que o tratamento decorre de obrigação contratual regularmente estabelecido",
+"pois os direitos do titular independem da base legal"
+]
+],
+"b": [
+"continua obrigada",
+"independem da base legal"
+],
+"d": [
+"está dispensada",
+"variam conforme a base legal",
+"somente mediante contrato"
+]
+},
+{
+"n": 65,
+"m": "C",
+"b": [
+"bloqueio",
+"eliminação",
+"desnecessários"
+],
+"d": [
+"portabilidade",
+"retificação",
+"indispensáveis"
+]
+},
+{
+"n": 75,
+"m": "B",
+"b": [
+"o controlador",
+"só o executa",
+"instruções recebidas"
+],
+"d": [
+"o encarregado",
+"também decide",
+"iniciativa própria"
+]
+},
+{
+"n": 76,
+"m": "B",
+"b": [
+"documentação do controlador",
+"canal de comunicação"
+],
+"d": [
+"atribuição do operador",
+"órgão julgador"
+]
+},
+{
+"n": 78,
+"m": "B",
+"b": [
+"competência para decidir",
+"do controlador",
+"apenas realiza o tratamento"
+],
+"d": [
+"competência para fiscalizar",
+"do operador",
+"decide sobre o tratamento"
+]
+},
+{
+"n": 79,
+"m": "B",
+"b": [
+"canal de comunicação",
+"quem decide",
+"o controlador"
+],
+"d": [
+"órgão decisório",
+"quem executa",
+"o operador"
+]
+},
+{
+"n": 81,
+"m": "C",
+"b": [
+"solidariamente",
+"instruções lícitas",
+"ressalvadas as excludentes legais"
+],
+"d": [
+"subsidiariamente",
+"orientações verbais",
+"sem excludentes"
+]
+},
+{
+"n": 82,
+"m": "A",
+"r": [
+[
+"é automática, desde que alegada a violação à legislação de proteção de dados",
+"depende do juiz, se verossímil a alegação, houver hipossuficiência ou prova excessivamente onerosa"
+]
+],
+"b": [
+"depende do juiz",
+"hipossuficiência",
+"prova excessivamente onerosa"
+],
+"d": [
+"é automática",
+"incapacidade civil",
+"prova impossível"
+]
+},
+{
+"n": 83,
+"m": "B",
+"b": [
+"se exime",
+"não houve violação",
+"taxativas"
+],
+"d": [
+"responde sempre",
+"houve dolo",
+"exemplificativas"
+]
+},
+{
+"n": 84,
+"m": "A",
+"r": [
+[
+"não se aplicam",
+"também se aplicam"
+]
+],
+"b": [
+"também se aplicam",
+"legislação pertinente"
+],
+"d": [
+"não se aplicam",
+"apenas subsidiariamente",
+"legislação tributária"
+]
+},
+{
+"n": 87,
+"m": "B",
+"b": [
+"registram as operações de tratamento",
+"medidas de segurança",
+"acessos não autorizados"
+],
+"d": [
+"registram apenas os incidentes",
+"medidas contratuais",
+"acessos autorizados"
+]
+},
+{
+"n": 88,
+"m": "C",
+"b": [
+"medidas de segurança",
+"acessos não autorizados",
+"destruição ou perda"
+],
+"d": [
+"medidas sancionatórias",
+"acessos legítimos",
+"divulgação ou publicidade"
+]
+},
+{
+"n": 89,
+"m": "A",
+"r": [
+[
+"restringem-se aos dados pessoais coletados diretamente pelo controlador, não se estendendo a dados obtidos por outros meios",
+"aplicam-se a todo o conjunto de dados sob controle, independentemente do modo de coleta"
+]
+],
+"b": [
+"todo o conjunto de dados sob controle",
+"independentemente do modo de coleta"
+],
+"d": [
+"apenas dados coletados diretamente",
+"somente dados sensíveis",
+"conforme o modo de coleta"
+]
+},
+{
+"n": 90,
+"m": "A",
+"r": [
+[
+"independentemente da estrutura, da escala e do volume das operações",
+"considerando a estrutura, a escala e o volume das operações"
+]
+],
+"b": [
+"sensibilidade dos dados",
+"considerando",
+"escala"
+],
+"d": [
+"independentemente",
+"localização dos dados",
+"porte do controlador"
+]
+},
+{
+"n": 93,
+"m": "A",
+"r": [
+[
+"não é obrigada a se subordinar",
+"subordina-se"
+]
+],
+"b": [
+"sociedade de economia mista",
+"subordina-se"
+],
+"d": [
+"empresa privada",
+"está dispensada",
+"autarquia"
+]
+},
+{
+"n": 96,
+"m": "C",
+"b": [
+"a regra",
+"exceção",
+"controle social"
+],
+"d": [
+"a exceção",
+"sigilo absoluto",
+"controle judicial"
+]
+},
+{
+"n": 97,
+"m": "A",
+"r": [
+[
+"qualidade da informação coletada na fonte, com o máximo de detalhamento possível, sem modificações",
+"qualidade da informação não modificada, inclusive quanto à origem, trânsito e destino"
+]
+],
+"b": [
+"não modificada",
+"origem, trânsito e destino"
+],
+"d": [
+"coletada na fonte",
+"produzida por sistema",
+"origem e finalidade"
+]
+},
+{
+"n": 98,
+"m": "B",
+"b": [
+"Primariedade",
+"coletada na fonte",
+"máximo de detalhamento"
+],
+"d": [
+"Autenticidade",
+"produzida por sistema",
+"menor detalhamento"
+]
+},
+{
+"n": 99,
+"m": "C",
+"b": [
+"publicidade",
+"sigilo como exceção",
+"independentemente de solicitações"
+],
+"d": [
+"segurança",
+"sigilo como regra",
+"mediante requerimento"
+]
+},
+{
+"n": 101,
+"m": "C",
+"b": [
+"cultura de transparência",
+"uma das diretrizes",
+"procedimentos previstos"
+],
+"d": [
+"cultura de sigilo",
+"a única diretriz",
+"sanções previstas"
+]
+},
+{
+"n": 105,
+"m": "A",
+"r": [
+[
+"é aplicável ao Poder Executivo federal, mas não aos demais poderes e às esferas do governo",
+"é aplicável a União, estados, Distrito Federal e municípios, em todos os Poderes"
+]
+],
+"b": [
+"União, estados, Distrito Federal e municípios",
+"todos os Poderes"
+],
+"d": [
+"Poder Executivo federal",
+"somente a União"
+]
+},
+{
+"n": 107,
+"m": "A",
+"r": [
+[
+"o acesso à informação como exceção, sendo o sigilo a regra",
+"o acesso à informação como regra, sendo o sigilo a exceção"
+]
+],
+"b": [
+"como regra",
+"a exceção"
+],
+"d": [
+"como exceção",
+"a norma"
+]
+},
+{
+"n": 110,
+"m": "A",
+"r": [
+[
+"aplica-se somente à administração pública direta dos Poderes Executivo e Legislativo",
+"aplica-se à administração direta e indireta de todos os Poderes"
+]
+],
+"b": [
+"direta e indireta",
+"todos os Poderes"
+],
+"d": [
+"somente à direta",
+"Executivo e Legislativo"
+]
+},
+{
+"n": 111,
+"m": "B",
+"b": [
+"interesse público",
+"cultura de transparência"
+],
+"d": [
+"interesse privado",
+"sigilo administrativo"
+]
+},
+{
+"n": 113,
+"m": "B",
+"b": [
+"órgãos públicos",
+"informação sigilosa e a pessoal"
+],
+"d": [
+"entidades privadas",
+"apenas a informação sigilosa"
+]
+},
+{
+"n": 114,
+"m": "C",
+"b": [
+"pareceres jurídicos",
+"edição do ato decisório"
+],
+"d": [
+"pareceres técnicos",
+"publicação do ato"
+]
+},
+{
+"n": 116,
+"m": "A",
+"r": [
+[
+"será vedado o acesso a todo o documento, devendo o órgão ou a entidade informar o solicitante sobre a negativa e sua justificativa",
+"será assegurado o acesso à parte não sigilosa, por certidão, extrato ou cópia com ocultação da parte sigilosa"
+]
+],
+"b": [
+"parte não sigilosa",
+"ocultação da parte sigilosa"
+],
+"d": [
+"todo o documento",
+"cópia integral"
+]
+},
+{
+"n": 117,
+"m": "B",
+"b": [
+"entidades privadas",
+"parcela dos recursos recebidos"
+],
+"d": [
+"entidades públicas",
+"totalidade do seu orçamento"
+]
+},
+{
+"n": 122,
+"m": "A",
+"r": [
+[
+"exige a divulgação apenas das despesas já executadas, sendo dispensável a publicação de receitas previstas",
+"exige a divulgação detalhada da execução orçamentária e financeira, incluindo despesas e receitas"
+]
+],
+"b": [
+"execução orçamentária e financeira",
+"despesas e receitas"
+],
+"d": [
+"apenas das despesas",
+"receitas previstas"
+]
+},
+{
+"n": 123,
+"m": "A",
+"r": [
+[
+"desde que apresentadas as devidas motivações",
+"independentemente de motivação"
+]
+],
+"b": [
+"independentemente de motivação",
+"interesse coletivo ou geral"
+],
+"d": [
+"desde que haja motivação",
+"interesse exclusivamente particular"
+]
+},
+{
+"n": 126,
+"m": "C",
+"b": [
+"patrimônio público",
+"recursos públicos"
+],
+"d": [
+"patrimônio privado",
+"contratos sigilosos"
+]
+},
+{
+"n": 128,
+"m": "B",
+"b": [
+"resultado de auditorias",
+"controle interno e externo"
+],
+"d": [
+"rascunhos de auditorias",
+"apenas o controle externo"
+]
+},
+{
+"n": 133,
+"m": "B",
+"b": [
+"os três",
+"resultados de auditorias"
+],
+"d": [
+"apenas dois",
+"pareceres sigilosos"
+]
+},
+{
+"n": 134,
+"m": "A",
+"r": [
+[
+"É condição para a realização do pedido de acesso a informações a apresentação de exposição de motivos",
+"O pedido de acesso a informações exige apenas a identificação do requerente e a especificação da informação"
+]
+],
+"b": [
+"apenas a identificação do requerente",
+"especificação da informação"
+],
+"d": [
+"exposição de motivos",
+"justificativa do interesse"
+]
+},
+{
+"n": 135,
+"m": "B",
+"b": [
+"20 dias",
+"mais 10",
+"justificativa expressa"
+],
+"d": [
+"15 dias",
+"30 dias",
+"mais 20"
+]
+},
+{
+"n": 136,
+"m": "A",
+"r": [
+[
+"deve ser justificado, devendo ser apresentados à administração pública os motivos determinantes da solicitação de informações de interesse público",
+"não precisa ser justificado, sendo vedada a exigência dos motivos determinantes da solicitação"
+]
+],
+"b": [
+"não precisa ser justificado",
+"vedada a exigência"
+],
+"d": [
+"deve ser justificado",
+"facultativa a exigência"
+]
+},
+{
+"n": 137,
+"m": "C",
+"b": [
+"inteiro teor da decisão",
+"negativa de acesso"
+],
+"d": [
+"resumo da decisão",
+"parecer"
+]
+},
+{
+"n": 139,
+"m": "B",
+"b": [
+"gratuito",
+"custo da reprodução de documentos"
+],
+"d": [
+"oneroso",
+"taxa de busca"
+]
+},
+{
+"n": 140,
+"m": "B",
+"b": [
+"identificação e especificação da informação",
+"não podem ser exigidos"
+],
+"d": [
+"identificação e motivação",
+"a critério do órgão"
+]
+},
+{
+"n": 141,
+"m": "A",
+"r": [
+[
+"dirigido à autoridade responsável pela negativa, contudo, se esta não implementar o juízo de reconsideração, ela deverá encaminhar o recurso para a autoridade hierarquicamente superior",
+"dirigido à autoridade hierarquicamente superior à que decidiu"
+]
+],
+"b": [
+"autoridade hierarquicamente superior",
+"à que decidiu"
+],
+"d": [
+"autoridade responsável pela negativa",
+"Ministério Público"
+]
+},
+{
+"n": 143,
+"m": "B",
+"t": "Os pedidos de acesso à informação não precisam ser motivados, mas a recusa indica as razões de fato ou de direito.",
+"b": [
+"não precisam ser motivados",
+"razões de fato ou de direito"
+],
+"d": [
+"devem ser motivados",
+"apenas razões políticas"
+]
+},
+{
+"n": 144,
+"m": "A",
+"r": [
+[
+"Deve ser negado o pedido",
+"Não deve ser negado o pedido"
+],
+[
+"pela sua manipulação",
+"pela sua manipulação, devendo ser oferecida cópia certificada"
+]
+],
+"b": [
+"Não deve ser negado",
+"cópia certificada"
+],
+"d": [
+"Será indeferido",
+"certidão sigilosa"
+]
+},
+{
+"n": 146,
+"m": "B",
+"t": "É garantida ao requerente a gratuidade do serviço de busca e fornecimento de informação, salvo o ressarcimento do custo de reprodução de documentos.",
+"b": [
+"gratuidade",
+"custo de reprodução de documentos"
+],
+"d": [
+"onerosidade",
+"valor de mercado"
+]
+},
+{
+"n": 153,
+"m": "C",
+"b": [
+"agentes públicos legalmente autorizados",
+"100 anos"
+],
+"d": [
+"qualquer interessado",
+"50 anos"
+]
+},
+{
+"n": 154,
+"m": "A",
+"r": [
+[
+"o novo prazo passará a ser contado a partir do momento da redução",
+"o novo prazo manterá como termo inicial a data de produção da informação"
+]
+],
+"b": [
+"termo inicial",
+"data de produção"
+],
+"d": [
+"momento da redução",
+"data do pedido"
+]
+},
+{
+"n": 156,
+"m": "B",
+"b": [
+"100 anos",
+"independentemente de classificação de sigilo",
+"defesa de direitos humanos"
+],
+"d": [
+"50 anos",
+"depende de classificação",
+"segurança do Estado"
+]
+},
+{
+"n": 157,
+"m": "B",
+"b": [
+"três graus",
+"25, 15 e 5 anos"
+],
+"d": [
+"dois graus",
+"30, 20 e 10 anos"
+]
+},
+{
+"n": 158,
+"m": "B",
+"b": [
+"sem consentimento",
+"5 anos"
+],
+"d": [
+"somente com consentimento",
+"10 anos"
+]
+},
+{
+"n": 160,
+"m": "A",
+"r": [
+[
+"pelo prazo máximo de 10 anos após o falecimento da pessoa titular dos dados",
+"pelo prazo máximo de 100 anos a contar da data de produção"
+]
+],
+"b": [
+"100 anos",
+"data de produção"
+],
+"d": [
+"10 anos",
+"falecimento do titular"
+]
+},
+{
+"n": 161,
+"m": "A",
+"r": [
+[
+"50 anos",
+"25 anos"
+]
+],
+"b": [
+"ultrassecreta",
+"25 anos"
+],
+"d": [
+"reservada",
+"50 anos",
+"15 anos"
+]
+},
+{
+"n": 163,
+"m": "A",
+"r": [
+[
+"Todo documento produzido pela administração pública é automaticamente classificado como sigiloso até análise posterior",
+"O documento público é, em regra, de acesso público; o sigilo é exceção e depende de classificação formal"
+]
+],
+"b": [
+"acesso público",
+"classificação formal"
+],
+"d": [
+"sigiloso",
+"análise posterior"
+]
+},
+{
+"n": 172,
+"m": "C",
+"b": [
+"outras leis específicas",
+"podem ser ampliadas"
+],
+"d": [
+"decreto regulamentar",
+"não podem ser ampliadas"
+]
+},
+{
+"n": 173,
+"m": "A",
+"r": [
+[
+"poderão ser objeto de restrição de acesso, com vistas à proteção do direito fundamental à intimidade da vítima",
+"não poderão ser objeto de restrição de acesso"
+]
+],
+"b": [
+"agentes públicos",
+"não poderão ser objeto de restrição"
+],
+"d": [
+"agentes privados",
+"poderão ser restritas por conveniência"
+]
+},
+{
+"n": 174,
+"m": "B",
+"b": [
+"prazo único de 10 anos",
+"25, 15 e 5 anos"
+],
+"d": [
+"prazo único de 5 anos",
+"30, 20 e 10 anos"
+]
+},
+{
+"n": 180,
+"m": "B",
+"b": [
+"temporária",
+"100 anos",
+"exceções legais"
+],
+"d": [
+"permanente",
+"50 anos",
+"vedadas"
+]
+},
+{
+"n": 182,
+"m": "A",
+"r": [
+[
+"Tem caráter exaustivo o rol",
+"Não tem caráter exaustivo o rol"
+]
+],
+"b": [
+"Não tem caráter exaustivo",
+"segredo de justiça"
+],
+"d": [
+"É exaustivo",
+"segredo industrial"
+]
+},
+{
+"n": 183,
+"m": "B",
+"b": [
+"instituições ou altas autoridades",
+"passível de classificação"
+],
+"d": [
+"servidores comuns",
+"livre divulgação"
+]
+},
+{
+"n": 184,
+"m": "A",
+"r": [
+[
+"o tratamento da informação sigilosa visa identificar ou deixar identificáveis as informações relacionadas à pessoa natural",
+"informação pessoal é aquela relacionada à pessoa natural identificada ou identificável"
+]
+],
+"b": [
+"informação pessoal",
+"pessoa natural identificada ou identificável"
+],
+"d": [
+"informação sigilosa",
+"pessoa jurídica"
+]
+},
+{
+"n": 186,
+"m": "A",
+"r": [
+[
+"o período de restrição de acesso a documentos confidenciais é de cinco anos",
+"o prazo máximo de restrição de acesso à informação secreta é de 15 anos"
+]
+],
+"b": [
+"secreta",
+"15 anos"
+],
+"d": [
+"reservada",
+"10 anos",
+"confidencial"
+]
+},
+{
+"n": 187,
+"m": "A",
+"r": [
+[
+"o sigilo pode ser imposto de forma genérica sobre os dados administrativos considerados sensíveis, cabendo ao órgão público classificar de forma ampla e abstrata os documentos como restritos por conveniência",
+"o sigilo exige decisão fundamentada, caso a caso, com assunto, fundamento, prazo e autoridade"
+]
+],
+"b": [
+"decisão fundamentada",
+"caso a caso"
+],
+"d": [
+"ato genérico",
+"conveniência do órgão"
+]
+},
+{
+"n": 188,
+"m": "A",
+"r": [
+[
+"obsta o acesso a todo o documento, uma vez que o sigilo deve prevalecer, para fins de divulgação da informação",
+"não obsta o acesso à parte não sigilosa, com ocultação da parte sob sigilo"
+]
+],
+"b": [
+"não obsta",
+"parte não sigilosa"
+],
+"d": [
+"impede",
+"parte sigilosa"
+]
+},
+{
+"n": 197,
+"m": "B",
+"b": [
+"nome e remuneração do servidor",
+"descontos de caráter pessoal"
+],
+"d": [
+"apenas gastos globais",
+"todos os descontos",
+"nome e endereço"
+]
+},
+{
+"n": 198,
+"m": "B",
+"b": [
+"dolo",
+"anonimizado"
+],
+"d": [
+"culpa",
+"identificado"
+]
+},
+{
+"n": 199,
+"m": "A",
+"r": [
+[
+"ficam desobrigados de realizar a análise de riscos ou de adotar salvaguardas",
+"continuam obrigados a realizar a análise de riscos e a adotar salvaguardas"
+]
+],
+"b": [
+"continuam obrigados",
+"análise de riscos"
+],
+"d": [
+"ficam desobrigados",
+"parecer jurídico"
+]
+},
+{
+"n": 200,
+"m": "A",
+"r": [
+[
+"com seu consentimento tácito",
+"com seu consentimento livre, informado e inequívoco"
+]
+],
+"b": [
+"livre, informado e inequívoco",
+"LGPD"
+],
+"d": [
+"tácito",
+"verbal"
+]
+},
+{
+"n": 201,
+"m": "B",
+"b": [
+"por iniciativa do órgão",
+"atende a pedidos"
+],
+"d": [
+"mediante requerimento",
+"por ordem judicial"
+]
+},
+{
+"n": 202,
+"m": "B",
+"b": [
+"divulgados nos portais",
+"não integra o rol de dados pessoais sensíveis"
+],
+"d": [
+"vedada a divulgação",
+"dado pessoal sensível"
+]
+},
+{
+"n": 1,
+"m": "B",
+"b": [
+"saúde",
+"nome, CPF ou histórico escolar"
+],
+"d": [
+"identificação civil",
+"nome e saúde"
+]
+},
+{
+"n": 11,
+"m": "B",
+"b": [
+"público ou privado",
+"boa-fé e aos princípios da lei"
+],
+"d": [
+"apenas privado",
+"consentimento do titular"
+]
+},
+{
+"n": 12,
+"m": "B",
+"b": [
+"acesso à parte não sigilosa e anonimização",
+"não se elimina"
+],
+"d": [
+"eliminação dos documentos",
+"abertura irrestrita"
+]
+},
+{
+"n": 17,
+"m": "B",
+"b": [
+"origem racial, religião, política, saúde",
+"não identificação civil ou formação"
+],
+"d": [
+"renda, profissão e escolaridade",
+"nome completo e CPF"
+]
+},
+{
+"n": 51,
+"m": "B",
+"b": [
+"prevenção à fraude",
+"legítimo interesse",
+"proteção do crédito"
+],
+"d": [
+"cobrança de dívidas",
+"publicidade comercial",
+"marketing direto"
+]
+},
+{
+"n": 57,
+"m": "B",
+"b": [
+"informação adicional mantida à parte",
+"continua dado pessoal"
+],
+"d": [
+"decisão judicial prévia",
+"deixa de ser dado pessoal",
+"dado público"
+]
+},
+{
+"n": 70,
+"m": "B",
+"b": [
+"convênio ou instrumento congênere",
+"comunicação à ANPD",
+"não é proibida"
+],
+"d": [
+"autorização judicial",
+"pagamento de taxa",
+"é vedada"
+]
+},
+{
+"n": 195,
+"m": "B",
+"b": [
+"Publicidade é a regra",
+"prazos legais",
+"não é independente de prazos"
+],
+"d": [
+"sigilo é a regra",
+"prazos indeterminados",
+"depende só do consentimento"
+]
+}
+]
