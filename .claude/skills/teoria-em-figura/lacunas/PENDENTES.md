@@ -12,3 +12,4 @@
 - **LODF (5):** nº 61, 166, 168, 180, 203 (nº 166: o gabarito "sem aprovação da Câmara" contradiz o art. 60, XX, que prevê aprovação prévia da Câmara para o Procurador-Geral — decidir o gabarito).
 - **PDPM (5):** nº 16 (dado do Anuário sem fonte na ref), nº 31 (regra v fala em monitoração eletrônica, o x em afastamento do lar), nº 79 (distrator "também" completa), nº 151 (art. 20 da Lei 11.340 prevê a prisão preventiva de ofício; o gabarito ERRADO e a regra v contrariam o texto legal — decidir o gabarito), nº 169 (frase sem autonomia).
 - **Primeiros Socorros:** completa (100 de 100).
+- **Previdenciário (2):** nº 62 (limite da paridade: frase sem contexto), nº 130 (art. 40 §15 da CF: regra v diz "entidade fechada ou aberta", o texto vigente fala em entidade fechada de natureza pública — conferir a regra v e o gabarito).
