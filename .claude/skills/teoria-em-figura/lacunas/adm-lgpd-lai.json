@@ -164,14 +164,12 @@
 "n": 30,
 "m": "B",
 "b": [
-"abrangência dos dados",
-"pertinentes, proporcionais e não excessivos",
+"abrangência",
 "só a retenção"
 ],
 "d": [
-"prazo de armazenamento",
-"amplos e ilimitados",
-"só a abrangência"
+"finalidade",
+"só o consentimento"
 ]
 },
 {
@@ -334,6 +332,7 @@
 {
 "n": 52,
 "m": "B",
+"t": "Dado de saúde admite tratamento sem consentimento quando indispensável ao cumprimento de obrigação legal ou à tutela da saúde, nos termos do art. 11, II, da LGPD.",
 "b": [
 "sem consentimento",
 "obrigação legal",
@@ -341,8 +340,8 @@
 ],
 "d": [
 "somente com consentimento",
-"interesse do empregador",
-"tutela patrimonial"
+"interesse legítimo",
+"proteção do crédito"
 ]
 },
 {
@@ -428,12 +427,11 @@
 "n": 60,
 "m": "B",
 "b": [
-"hipóteses de término do tratamento",
-"tempo máximo único"
+"hipóteses de término do tratamento"
 ],
 "d": [
-"prazo de cinco anos",
-"prazo mínimo único"
+"prazo máximo de cinco anos",
+"término apenas por decurso de prazo"
 ]
 },
 {
@@ -502,15 +500,16 @@
 {
 "n": 78,
 "m": "B",
+"t": "A competência para decidir sobre o tratamento de dados pessoais é do controlador; o operador apenas realiza o tratamento por conta dele.",
 "b": [
-"competência para decidir",
+"tratamento de dados pessoais",
 "do controlador",
 "apenas realiza o tratamento"
 ],
 "d": [
-"competência para fiscalizar",
 "do operador",
-"decide sobre o tratamento"
+"da Autoridade Nacional",
+"define as finalidades"
 ]
 },
 {
@@ -651,14 +650,13 @@
 ]
 ],
 "b": [
-"sensibilidade dos dados",
 "considerando",
-"escala"
+"a estrutura, a escala e o volume das operações",
+"sensibilidade dos dados"
 ],
 "d": [
-"independentemente",
-"localização dos dados",
-"porte do controlador"
+"independentemente de",
+"o orçamento do controlador"
 ]
 },
 {
@@ -716,15 +714,15 @@
 {
 "n": 98,
 "m": "B",
+"t": "Primariedade é a qualidade da informação coletada na fonte, com o máximo de detalhamento e sem modificações.",
 "b": [
-"Primariedade",
 "coletada na fonte",
-"máximo de detalhamento"
+"o máximo de detalhamento"
 ],
 "d": [
-"Autenticidade",
-"produzida por sistema",
-"menor detalhamento"
+"recebida de terceiros",
+"o máximo de autenticidade",
+"produzida pelo sistema"
 ]
 },
 {
@@ -746,13 +744,12 @@
 "m": "C",
 "b": [
 "cultura de transparência",
-"uma das diretrizes",
-"procedimentos previstos"
+"uma das diretrizes"
 ],
 "d": [
-"cultura de sigilo",
-"a única diretriz",
-"sanções previstas"
+"controle social",
+"sigilo como regra",
+"uma das exceções"
 ]
 },
 {
@@ -837,12 +834,11 @@
 "n": 114,
 "m": "C",
 "b": [
-"pareceres jurídicos",
 "edição do ato decisório"
 ],
 "d": [
-"pareceres técnicos",
-"publicação do ato"
+"publicação do ato",
+"arquivamento do processo"
 ]
 },
 {
@@ -866,13 +862,16 @@
 {
 "n": 117,
 "m": "B",
+"t": "As entidades privadas que recebem recursos públicos têm o dever de publicidade apenas quanto à parcela dos recursos públicos recebidos e à sua destinação, sem prejuízo das prestações de contas legais.",
 "b": [
-"entidades privadas",
-"parcela dos recursos recebidos"
+"parcela dos recursos públicos recebidos",
+"sua destinação",
+"prestações de contas legais"
 ],
 "d": [
-"entidades públicas",
-"totalidade do seu orçamento"
+"totalidade das receitas",
+"quantitativo de empregados",
+"sigilo fiscal"
 ]
 },
 {
@@ -1035,20 +1034,15 @@
 },
 {
 "n": 141,
-"m": "A",
-"r": [
-[
-"dirigido à autoridade responsável pela negativa, contudo, se esta não implementar o juízo de reconsideração, ela deverá encaminhar o recurso para a autoridade hierarquicamente superior",
-"dirigido à autoridade hierarquicamente superior à que decidiu"
-]
-],
+"m": "B",
+"t": "O recurso é dirigido à autoridade hierarquicamente superior à que exarou a decisão impugnada.",
 "b": [
-"autoridade hierarquicamente superior",
-"à que decidiu"
+"autoridade hierarquicamente superior"
 ],
 "d": [
 "autoridade responsável pela negativa",
-"Ministério Público"
+"autoridade máxima do órgão",
+"Controladoria-Geral"
 ]
 },
 {
@@ -1255,13 +1249,14 @@
 {
 "n": 174,
 "m": "B",
+"t": "Não há prazo único; os prazos máximos de restrição de acesso são de 25, 15 e 5 anos conforme o grau de sigilo.",
 "b": [
-"prazo único de 10 anos",
-"25, 15 e 5 anos"
+"25, 15 e 5 anos",
+"grau de sigilo"
 ],
 "d": [
-"prazo único de 5 anos",
-"30, 20 e 10 anos"
+"30, 20 e 10 anos",
+"data do pedido"
 ]
 },
 {
@@ -1280,20 +1275,14 @@
 },
 {
 "n": 182,
-"m": "A",
-"r": [
-[
-"Tem caráter exaustivo o rol",
-"Não tem caráter exaustivo o rol"
-]
-],
+"m": "B",
 "b": [
-"Não tem caráter exaustivo",
-"segredo de justiça"
+"outras hipóteses legais de sigilo",
+"não é exaustivo"
 ],
 "d": [
-"É exaustivo",
-"segredo industrial"
+"apenas as hipóteses nela previstas",
+"é taxativo"
 ]
 },
 {
@@ -1426,20 +1415,15 @@
 },
 {
 "n": 200,
-"m": "A",
-"r": [
-[
-"com seu consentimento tácito",
-"com seu consentimento livre, informado e inequívoco"
-]
-],
+"m": "B",
 "b": [
 "livre, informado e inequívoco",
-"LGPD"
+"não basta"
 ],
 "d": [
-"tácito",
-"verbal"
+"presumido",
+"implícito",
+"é suficiente"
 ]
 },
 {
@@ -1470,12 +1454,13 @@
 "n": 1,
 "m": "B",
 "b": [
-"saúde",
-"nome, CPF ou histórico escolar"
+"Dado referente à saúde",
+"dado pessoal comum"
 ],
 "d": [
-"identificação civil",
-"nome e saúde"
+"Dado de identificação civil",
+"dado anonimizado",
+"dado sensível"
 ]
 },
 {
@@ -1531,14 +1516,15 @@
 {
 "n": 57,
 "m": "B",
+"t": "O dado pseudonimizado só é associado ao indivíduo mediante informação adicional mantida separadamente pelo controlador e, por isso, continua sendo dado pessoal.",
 "b": [
-"informação adicional mantida à parte",
-"continua dado pessoal"
+"informação adicional mantida separadamente",
+"continua sendo dado pessoal"
 ],
 "d": [
-"decisão judicial prévia",
+"anonimização irreversível",
 "deixa de ser dado pessoal",
-"dado público"
+"consentimento do titular"
 ]
 },
 {
