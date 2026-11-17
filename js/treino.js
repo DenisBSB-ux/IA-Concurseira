@@ -238,7 +238,7 @@ function treinoMontarFila(){
     TR.fila = treinoEmbaralha(l);
   } else {
     let l = d.lacunas.slice();
-    if(TR.filtro === 'erradas') l = l.filter(x => treinoMarca(slug, treinoChaveItem(x, 'l')) === 'err');
+    if(TR.filtro === 'erradas'){ l = l.filter(x => treinoMarca(slug, treinoChaveItem(x, 'l')) === 'err'); l.forEach(x => { const n0 = treinoNovaLacuna(x); n0.refez = true; TR.mem[treinoChaveItem(x, 'l')] = n0; }); }   // erradas: abrem vazias, para treinar de novo
     else if(TR.filtro === 'certas'){ l = l.filter(x => treinoMarca(slug, treinoChaveItem(x, 'l')) === 'ok'); l.forEach(x => { delete TR.mem[treinoChaveItem(x, 'l')]; }); }   // acertadas: reaparecem preenchidas e conferidas
     else if(TR.filtro === 'novos') l = l.filter(x => !treinoMarca(slug, treinoChaveItem(x, 'l')));
     TR.fila = treinoEmbaralha(l);
@@ -275,19 +275,20 @@ function treinoPrepararLacuna(){
   if(TR.modo !== 'lacunas'){ TR.slots = []; TR.banco = []; TR.checado = false; return; }
   const it = TR.fila[TR.i]; if(!it){ TR.slots = []; TR.banco = []; TR.checado = false; return; }
   const k = treinoChaveItem(it, 'l');
-  if(!TR.mem[k]){
-    TR.mem[k] = treinoNovaLacuna(it);
-    if(TR.filtro === 'certas' && treinoMarca(TR.slug, k) === 'ok'){       // já acertada: mostra as respostas no lugar, conferidas
-      const m0 = TR.mem[k], usados = new Set();
-      it.p.filter(p => p.l !== undefined).forEach((p, i) => { const c = m0.banco.find(x => x.w === p.l && !usados.has(x.id)); if(c){ usados.add(c.id); m0.slots[i] = c; } });
-      m0.checado = m0.slots.every(Boolean);
-    }
+  if(!TR.mem[k]) TR.mem[k] = treinoNovaLacuna(it);
+  // questão já respondida (certa ou errada): abre com as palavras no lugar certo, conferida; "Refazer" limpa. No filtro "Erradas" ela abre vazia, para treinar de novo.
+  const m0 = TR.mem[k];
+  if(treinoMarca(TR.slug, k) && TR.filtro !== 'erradas' && !m0.refez && !m0.checado && m0.slots.every(s => !s)){
+    const usados = new Set();
+    it.p.filter(p => p.l !== undefined).forEach((p, i) => { const c = m0.banco.find(x => x.w === p.l && !usados.has(x.id)); if(c){ usados.add(c.id); m0.slots[i] = c; } });
+    m0.checado = m0.slots.every(Boolean); m0.rev = m0.checado;
   }
   const m = TR.mem[k]; TR.slots = m.slots; TR.banco = m.banco; TR.checado = m.checado;
 }
 function treinoGuardarLacuna(){
   if(!TR || TR.modo !== 'lacunas') return; const it = TR.fila[TR.i]; if(!it) return;
-  TR.mem[treinoChaveItem(it, 'l')] = { slots:TR.slots, banco:TR.banco, checado:TR.checado };
+  const k = treinoChaveItem(it, 'l'), ant = TR.mem[k] || {};
+  TR.mem[k] = { slots:TR.slots, banco:TR.banco, checado:TR.checado, rev:!!ant.rev && TR.checado, refez:!!ant.refez };
 }
 // botões 🔀 e ↺ Resetar (com o menu Todas / Só revisar·errei): ficam na linha de filtros (flashcards) ou na linha de ações (lacunas)
 function treinoBtnEmbaralhar(cls){ return `<button class="${cls}" data-tr-embaralhar="1" title="Embaralha a ordem de novo"><span class="tr-ic" aria-hidden="true">🔀</span>Embaralhar</button>`; }
@@ -353,7 +354,8 @@ function treinoHtmlLacuna(it){
   if(TR.checado){
     const todos = it.p.filter(p => p.l !== undefined).every((p, i) => TR.slots[i] && TR.slots[i].w === p.l);
     const resp = it.p.filter(p => p.l !== undefined).map(p => p.l);
-    fb = `<div class="tr-fb ${todos ? 'ok' : 'no'}"><b>${todos ? '✓ Correto!' : '✗ Não foi dessa vez.'}</b>${todos ? '' : ' Resposta: <i>' + esc(resp.join(' · ')) + '</i>.'}${it.ref ? ' <span class="tr-ref">' + esc(it.ref) + '</span>' : ''}${it.exp ? '<p class="tr-extra">' + esc(it.exp) + '</p>' : ''}<button type="button" class="btn tr-bt tr-refaz" data-tr-limpar="1">↺ Refazer esta questão</button></div>`;
+    const revisao = !!(TR.mem[treinoChaveItem(it, 'l')] || {}).rev;
+    fb = `<div class="tr-fb ${todos ? 'ok' : 'no'}"><b>${revisao ? '✓ Resposta correta' : (todos ? '✓ Correto!' : '✗ Não foi dessa vez.')}</b>${todos ? '' : ' Resposta: <i>' + esc(resp.join(' · ')) + '</i>.'}${it.ref ? ' <span class="tr-ref">' + esc(it.ref) + '</span>' : ''}${it.exp ? '<p class="tr-extra">' + esc(it.exp) + '</p>' : ''}<button type="button" class="btn tr-bt tr-refaz" data-tr-limpar="1">↺ Refazer esta questão</button></div>`;
   }
   const acao = `<button class="btn tr-bt" data-tr-resetar="1" title="Embaralha as palavras de novo e apaga o resultado desta questão"><span class="tr-ic" aria-hidden="true">🔀</span>Embaralhar</button>
       ${treinoBtnReset('btn tr-bt')}
@@ -417,8 +419,8 @@ function treinoClique(e){
   if(t.closest('[data-tr-verificar]')){ treinoVerificar(); return; }
   if(t.closest('[data-jan-full]')){ janTelaCheia(t.closest('.r7-modal')); return; }
   if(t.closest('[data-tr-tema]')){ if(typeof alternarTema === 'function') alternarTema(); const atual = TR; TRS.slice().forEach(x => { TR = x; treinoDesenhar(); }); TR = atual; return; }
-  if(t.closest('[data-tr-limpar]')){ TR.menuReset = false; TR.slots.fill(null); TR.checado = false; TR.sel = null; treinoDesenhar(); return; }      // só a questão atual
-  if(t.closest('[data-tr-resetar]')){ const it = TR.fila[TR.i]; if(it){ treinoMarcar(TR.slug, treinoChaveItem(it, 'l'), ''); const n = treinoNovaLacuna(it); TR.mem[treinoChaveItem(it, 'l')] = n; TR.slots = n.slots; TR.banco = n.banco; TR.checado = false; TR.sel = null; treinoDesenhar(); } return; }
+  if(t.closest('[data-tr-limpar]')){ TR.menuReset = false; { const itl = TR.fila[TR.i], mk = itl && TR.mem[treinoChaveItem(itl, 'l')]; if(mk){ mk.refez = true; mk.rev = false; } } TR.slots.fill(null); TR.checado = false; TR.sel = null; treinoDesenhar(); return; }      // só a questão atual
+  if(t.closest('[data-tr-resetar]')){ const it = TR.fila[TR.i]; if(it){ treinoMarcar(TR.slug, treinoChaveItem(it, 'l'), ''); const n = treinoNovaLacuna(it); n.refez = true; TR.mem[treinoChaveItem(it, 'l')] = n; TR.slots = n.slots; TR.banco = n.banco; TR.checado = false; TR.sel = null; treinoDesenhar(); } return; }
   if((el = t.closest('[data-tr-chip]'))){
     if(TR.checado) return; const id = parseInt(el.dataset.trChip, 10), agora = Date.now();
     if(TR.ultChip && TR.ultChip.id === id && agora - TR.ultChip.t < 450){      // duplo toque na palavra: vai para o primeiro espaço em branco
