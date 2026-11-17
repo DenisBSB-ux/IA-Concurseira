@@ -55,14 +55,16 @@
 },
 {
 "n": 7,
-"m": "C",
+"m": "B",
+"t": "O orçamento moderno expressa em dinheiro, para um período definido, o programa de operações do governo e os meios de financiá-lo.",
 "b": [
-"período de tempo definido",
+"período definido",
 "programa de operações do governo"
 ],
 "d": [
-"exercício financeiro",
-"plano de metas do governo"
+"período indeterminado",
+"plano de metas do governo",
+"balanço das contas"
 ]
 },
 {
@@ -86,13 +88,14 @@
 {
 "n": 14,
 "m": "B",
+"t": "A consulta popular não vincula o Legislativo nem retira do Prefeito o poder de veto.",
 "b": [
-"não vincula o Legislativo",
+"não vincula",
 "poder de veto"
 ],
 "d": [
 "vincula integralmente",
-"poder de emenda"
+"dever de sancionar integralmente"
 ]
 },
 {
@@ -347,20 +350,14 @@
 },
 {
 "n": 56,
-"m": "A",
-"r": [
-[
-"sendo aplicável a todas",
-"não sendo aplicável a todas"
-]
-],
+"m": "B",
+"t": "O lançamento é o estágio da receita pública em que se verifica a ocorrência do fato gerador, identifica-se o devedor, determina-se a matéria tributável e calcula-se o montante do tributo devido, não sendo aplicável a todas as espécies de receitas orçamentárias.",
 "b": [
-"não sendo aplicável",
-"fato gerador"
+"não sendo aplicável"
 ],
 "d": [
 "sendo exclusivo dos tributos",
-"fato imponível"
+"sendo exclusivo das taxas"
 ]
 },
 {
@@ -444,13 +441,15 @@
 {
 "n": 64,
 "m": "B",
+"t": "Novo benefício a servidor exige prévia dotação e autorização específica na LDO; a LOA não pode criá-lo sozinha.",
 "b": [
 "prévia dotação",
 "autorização específica na LDO"
 ],
 "d": [
-"autorização específica na LOA",
-"parecer do Tribunal de Contas"
+"autorização genérica na LOA",
+"dispensa de dotação",
+"previsão no PPA"
 ]
 },
 {
@@ -578,8 +577,8 @@
 "m": "A",
 "r": [
 [
-"ainda que sejam provenientes",
-"desde que não provenham"
+"ainda que sejam provenientes de anulação de despesa com serviço da dívida",
+"desde que não provenham de anulação de despesa com serviço da dívida"
 ]
 ],
 "b": [
@@ -588,7 +587,7 @@
 ],
 "d": [
 "ainda que provenham",
-"pessoal e encargos"
+"custeio de saúde"
 ]
 },
 {
@@ -677,46 +676,29 @@
 },
 {
 "n": 99,
-"m": "A",
-"r": [
-[
-"No que se refere à lei orçamentária anual (LOA), julgue o item subsequente. A LOA pode conter ilimitadas dotações com finalidades genéricas",
-"A LOA não pode conter dotações ilimitadas nem com finalidade imprecisa"
-],
-[
-"desde que o detalhamento ocorra por meio de decreto ou medida provisória do Poder Executivo e seja realizado durante a execução orçamentária",
-"e o detalhamento posterior por decreto não sana a vedação"
-]
-],
+"m": "B",
+"t": "A LOA não pode conter dotações ilimitadas nem finalidade imprecisa, e o detalhamento posterior por decreto não sana a vedação.",
 "b": [
 "dotações ilimitadas",
-"não sana a vedação"
+"detalhamento posterior por decreto"
 ],
 "d": [
-"dotações genéricas",
-"medida provisória"
+"dotações específicas",
+"dotações detalhadas",
+"lei complementar"
 ]
 },
 {
 "n": 100,
-"m": "A",
-"r": [
-[
-"Julgue o item que se segue, a respeito da lei de diretrizes orçamentárias (LDO) e de sua aplicação às atividades de uma empresa estatal dependente. Por ser",
-"Por ser"
-],
-[
-"a LDO não pode dispor sobre normas relativas ao controle de custos e à avaliação dos resultados dos programas financiados com recursos dos orçamentos, matéria reservada a lei complementar, conforme previsto na Constituição Federal de 1988",
-"a LDO pode dispor sobre normas relativas ao controle de custos e à avaliação dos resultados dos programas financiados com recursos dos orçamentos"
-]
-],
+"m": "B",
+"t": "A LDO pode dispor sobre normas de controle de custos e avaliação dos resultados dos programas financiados com recursos dos orçamentos.",
 "b": [
 "pode dispor",
 "controle de custos"
 ],
 "d": [
-"deve dispor",
-"metas fiscais"
+"não pode dispor",
+"criação de tributos"
 ]
 },
 {
@@ -770,25 +752,28 @@
 {
 "n": 107,
 "m": "B",
+"t": "O PPA é de iniciativa do presidente da República, cabendo ao Congresso apreciar e emendar o plano.",
 "b": [
 "iniciativa do presidente",
 "apreciar e emendar"
 ],
 "d": [
-"iniciativa do Congresso Nacional",
-"vetar e sancionar"
+"competência exclusiva",
+"apenas a sanção final",
+"iniciativa do Congresso"
 ]
 },
 {
 "n": 108,
 "m": "B",
+"t": "O PPA inclui as despesas correntes decorrentes das de capital; a CF não veda despesas correntes no plano.",
 "b": [
-"inclui no PPA as despesas correntes",
+"inclui",
 "decorrentes das de capital"
 ],
 "d": [
-"dispensa do PPA as despesas correntes",
-"exclui as despesas de capital"
+"exclui",
+"relativas apenas à dívida pública"
 ]
 },
 {
@@ -988,6 +973,7 @@
 {
 "n": 123,
 "m": "B",
+"t": "Pelo princípio da universalidade, a LOA é única e o orçamento do Poder Judiciário não pode ser aprovado em lei separada, apesar da autonomia orçamentária.",
 "b": [
 "a LOA é única",
 "não pode ser aprovado em lei separada"
@@ -1034,25 +1020,15 @@
 },
 {
 "n": 126,
-"m": "A",
-"r": [
-[
-"Considerando aspectos atinentes ao direito financeiro, julgue o seguinte item, com base na Constituição Federal de 1988, na Lei de Responsabilidade Fiscal e na Lei n.º 4.320/1964. ",
-""
-],
-[
-"pode veicular créditos com finalidade imprecisa desde que relativos a superávits de exercícios anteriores",
-"não pode veicular créditos com finalidade imprecisa, nem mesmo de superávits de exercícios anteriores"
-]
-],
+"m": "B",
+"t": "A lei orçamentária não pode veicular créditos com finalidade imprecisa, nem mesmo de superávits de exercícios anteriores.",
 "b": [
 "não pode veicular",
-"finalidade imprecisa",
-"superávits de exercícios anteriores"
+"finalidade imprecisa"
 ],
 "d": [
 "poderá veicular",
-"finalidade genérica"
+"finalidade específica"
 ]
 },
 {
@@ -1310,13 +1286,14 @@
 {
 "n": 151,
 "m": "B",
+"t": "A vedação do art. 42 da LRF (contrair obrigação de despesa sem suficiente disponibilidade de caixa) vale só nos dois últimos quadrimestres do mandato; empenhar em dezembro de 2025, fora desse período, é regular.",
 "b": [
 "dois últimos quadrimestres do mandato",
 "é regular"
 ],
 "d": [
-"dois primeiros quadrimestres",
-"é irregular"
+"dois últimos semestres do mandato",
+"viola a LRF"
 ]
 },
 {
@@ -1334,14 +1311,15 @@
 {
 "n": 154,
 "m": "B",
+"t": "É vedada a transferência voluntária para o ente que deixe de arrecadar os impostos de sua competência constitucional.",
 "b": [
-"efetiva arrecadação",
-"responsabilidade fiscal",
-"transferência voluntária é vedada"
+"vedada",
+"deixe de arrecadar"
 ],
 "d": [
-"previsão de arrecadação",
-"responsabilidade tributária"
+"permitida",
+"facultativa",
+"deixe de contratar servidores"
 ]
 },
 {
@@ -1575,24 +1553,15 @@
 },
 {
 "n": 181,
-"m": "A",
-"r": [
-[
-"Em relação ao Sistema Integrado de Gestão Governamental do GDF (SIGGo), julgue o próximo item. Por força de prerrogativa constitucional, os",
-"Em relação ao Sistema Integrado de Gestão Governamental do GDF (SIGGo), os"
-],
-[
-"possuem acesso irrestrito, inclusive para realização de alterações e registros de lançamentos contábeis, ao sistema SIGGo",
-"possuem acesso apenas no modo consulta ao sistema SIGGo"
-]
-],
+"m": "B",
+"t": "Os deputados distritais e os auditores de controle externo do TCDF têm acesso ao SIGGo e ao seu extrator de dados apenas no modo consulta, sem poder fazer lançamentos.",
 "b": [
 "apenas no modo consulta",
-"deputados distritais eleitos"
+"sem poder fazer lançamentos"
 ],
 "d": [
 "acesso irrestrito",
-"modo de lançamento"
+"modo de alteração dos registros"
 ]
 },
 {
@@ -1691,20 +1660,15 @@
 },
 {
 "n": 191,
-"m": "A",
-"r": [
-[
-"é classificada como Receita Corrente Patrimonial",
-"é classificada como receita de serviços"
-]
-],
+"m": "B",
+"t": "A receita arrecadada pelo uso de rodovias mediante pedágio é classificada como receita de serviços.",
 "b": [
-"receita de serviços",
-"pedágios"
+"receita de serviços"
 ],
 "d": [
-"Receita Patrimonial",
-"receita tributária"
+"receita de capital",
+"receita agropecuária",
+"receita industrial"
 ]
 },
 {
@@ -1739,42 +1703,22 @@
 },
 {
 "n": 195,
-"m": "A",
-"r": [
-[
-"Acerca das receitas e das despesas públicas, julgue o item que se segue. O lançamento",
-"O lançamento"
-],
-[
-"voluntárias ou patrimoniais, que não requerem apuração fiscal",
-"voluntárias ou patrimoniais sem vencimento determinado, que não requerem apuração fiscal"
-]
-],
+"m": "B",
+"t": "Só são objeto de lançamento as rendas com vencimento determinado em lei, regulamento ou contrato.",
 "b": [
-"sem vencimento determinado",
-"não se aplicando tal etapa"
+"com vencimento determinado"
 ],
 "d": [
-"com vencimento determinado",
-"de forma obrigatória"
+"sem vencimento determinado",
+"com vencimento indeterminado"
 ]
 },
 {
 "n": 196,
-"m": "A",
-"r": [
-[
-"Julgue o item a seguir, referente à receita e à despesa públicas. No Brasil, a receita",
-"No Brasil, a receita"
-],
-[
-"antes de passar pelos estágios de lançamento e arrecadação, desde que haja autorização específica na lei orçamentária anual (LOA)",
-"somente depois de arrecadada"
-]
-],
+"m": "B",
+"t": "No Brasil, a receita pública orçamentária só pode pagar despesas depois de arrecadada.",
 "b": [
-"somente depois de arrecadada",
-"pagamento de despesas"
+"depois de arrecadada"
 ],
 "d": [
 "antes da arrecadação",
@@ -1908,16 +1852,10 @@
 },
 {
 "n": 209,
-"m": "A",
-"r": [
-[
-"como receita do exercício no momento da sua inscrição como dívida ativa, garantindo-se a antecipação do registro orçamentário",
-"como receita do exercício em que forem arrecadados"
-]
-],
+"m": "B",
+"t": "Os créditos da fazenda pública devem ser escriturados como receita do exercício em que forem arrecadados.",
 "b": [
-"em que forem arrecadados",
-"independentemente de sua natureza"
+"em que forem arrecadados"
 ],
 "d": [
 "da inscrição como dívida ativa",
@@ -2032,20 +1970,14 @@
 },
 {
 "n": 222,
-"m": "A",
-"r": [
-[
-"deve corresponder exatamente ao somatório dos gastos efetuados com seus servidores ativos",
-"deve corresponder ao somatório dos gastos com ativos, inativos e pensionistas"
-]
-],
+"m": "B",
+"t": "Para fins do limite de gastos com pessoal da LRF, a despesa total com pessoal corresponde ao somatório dos gastos com ativos, inativos e pensionistas.",
 "b": [
-"ativos, inativos e pensionistas",
-"LRF"
+"ativos, inativos e pensionistas"
 ],
 "d": [
-"servidores ativos",
-"apenas comissionados"
+"apenas servidores ativos",
+"ativos e inativos, sem pensionistas"
 ]
 },
 {
@@ -2175,24 +2107,16 @@
 },
 {
 "n": 234,
-"m": "A",
-"r": [
-[
-"A respeito da programação, da execução e do controle dos recursos orçamentários e financeiros, julgue o item a seguir, considerando as fases da despesa pública. O pré-empenho",
-"O pré-empenho"
-],
-[
-"constitui estágio preambular obrigatório do ciclo executivo da despesa, configurando pressuposto de sua validade e eficácia, razão pela qual sua ausência enseja a nulidade absoluta do empenho subsequente, por vício insanável de rito procedimental",
-"não é estágio da despesa"
-]
-],
+"m": "B",
+"t": "O pré-empenho não é estágio da despesa; segundo a Lei 4.320/1964, nenhuma despesa pode ser realizada sem prévio empenho.",
 "b": [
 "não é estágio da despesa",
-"pré-empenho"
+"sem prévio empenho"
 ],
 "d": [
-"estágio preambular obrigatório",
-"estágio facultativo"
+"é estágio obrigatório da despesa",
+"é estágio facultativo da despesa",
+"sem prévio pré-empenho"
 ]
 },
 {
@@ -2345,13 +2269,15 @@
 {
 "n": 251,
 "m": "B",
+"t": "As despesas de exercícios anteriores são despesas orçamentárias do exercício do pagamento e consomem dotação e limite de saque.",
 "b": [
 "despesas orçamentárias",
-"dotação e limite de saque"
+"consomem dotação"
 ],
 "d": [
 "despesas extraorçamentárias",
-"dotação e limite de empenho"
+"dispensam dotação",
+"despesas de restos a pagar"
 ]
 },
 {
@@ -2447,33 +2373,31 @@
 },
 {
 "n": 262,
-"m": "A",
-"r": [
-[
-"não poderá conceder",
-"poderá conceder"
-]
-],
+"m": "B",
+"t": "O ordenador de despesa poderá conceder suprimento de fundos para despesas de caráter sigiloso, com empenho em dotação própria e prestação de contas.",
 "b": [
-"poderá conceder",
-"caráter sigiloso"
+"poderá",
+"caráter sigiloso",
+"prestação de contas"
 ],
 "d": [
-"deverá conceder",
-"caráter ostensivo"
+"não poderá",
+"caráter particular",
+"dispensa de prestação de contas"
 ]
 },
 {
 "n": 264,
 "m": "B",
+"t": "O suprimento de fundos é forma excepcional de execução de despesas que não possam subordinar-se ao processo normal de aplicação.",
 "b": [
 "excepcional",
-"processo normal",
-"não é forma ordinária"
+"processo normal"
 ],
 "d": [
-"obrigatório",
-"contínuo"
+"ordinária",
+"controle externo",
+"obrigatória"
 ]
 },
 {
@@ -2623,24 +2547,16 @@
 },
 {
 "n": 288,
-"m": "A",
-"r": [
-[
-"o órgão central de planejamento e orçamento é a Secretaria de Estado de Fazenda, e o órgão central de administração financeira é a Secretaria de Estado de Planejamento, Orçamento e Gestão",
-"o órgão central de planejamento e orçamento é a Secretaria de Estado de Planejamento, Orçamento e Gestão, e o órgão central de administração financeira é a Secretaria de Estado de Fazenda"
-],
-[
-", havendo inversão de competências em relação à esfera federal",
-""
-]
-],
+"m": "B",
+"t": "No Distrito Federal, segundo o Decreto 32.598/2010, o órgão central de planejamento e orçamento é a Secretaria de Estado de Planejamento, Orçamento e Gestão, e o de administração financeira é a Secretaria de Estado de Fazenda.",
 "b": [
-"Planejamento, Orçamento e Gestão",
+"Secretaria de Estado de Planejamento, Orçamento e Gestão",
 "Secretaria de Estado de Fazenda"
 ],
 "d": [
-"Secretaria de Estado de Economia",
-"Secretaria de Estado de Administração"
+"Secretaria de Estado de Administração Pública",
+"Secretaria de Estado de Obras",
+"Secretaria de Estado de Saúde"
 ]
 },
 {
@@ -2747,25 +2663,29 @@
 {
 "n": 92,
 "m": "B",
+"t": "O atraso na votação da LOA não implica descumprimento dos princípios da publicidade e da transparência.",
 "b": [
-"prazo legislativo",
-"não torna o projeto menos público"
+"não implica",
+"publicidade e da transparência"
 ],
 "d": [
-"princípio da anualidade",
-"torna o projeto sigiloso"
+"acarreta",
+"anualidade"
 ]
 },
 {
 "n": 95,
 "m": "B",
+"t": "Se a LOA não for sancionada até o início do exercício, a execução não fica necessariamente paralisada: admite-se execução provisória, em geral autorizada pela LDO.",
 "b": [
-"não é absoluta",
-"execução provisória"
+"não fica necessariamente paralisada",
+"execução provisória",
+"LDO"
 ],
 "d": [
-"é total",
-"execução definitiva"
+"permanece paralisada até a publicação",
+"execução definitiva",
+"PPA"
 ]
 },
 {
@@ -2806,24 +2726,25 @@
 {
 "n": 149,
 "m": "B",
+"t": "A LDO dispõe sobre o equilíbrio entre receitas e despesas; o limite de pessoal é percentual da RCL; a ARO é proibida no último ano de mandato.",
 "b": [
-"a LDO",
+"LDO",
 "percentual da RCL",
 "último ano de mandato"
 ],
 "d": [
-"a LOA",
-"percentual do PIB",
+"LOA",
+"percentual da receita total",
 "primeiro ano de mandato"
 ]
 },
 {
 "n": 172,
 "m": "B",
+"t": "A transparência exige audiências públicas na elaboração dos planos e da LDO; na receita, divulgar lançamento e recebimento; na despesa, é obrigatório indicar o beneficiário do pagamento.",
 "b": [
 "lançamento e recebimento",
-"obrigatório indicar o beneficiário",
-"não facultado"
+"obrigatório indicar o beneficiário"
 ],
 "d": [
 "apenas o recebimento",
@@ -2832,24 +2753,15 @@
 },
 {
 "n": 175,
-"m": "A",
-"r": [
-[
-"Em relação ao Sistema Integrado de Administração Financeira (SIAFI), julgue o próximo item. Na evolução",
-"Na evolução"
-],
-[
-"dispensando-se o uso de certificação digital ou PassKey",
-"exigindo-se certificação digital ou PassKey"
-]
-],
+"m": "B",
+"t": "O acesso ao SIAFI Operacional exige certificação digital ou PassKey, não bastando CPF e senha individual.",
 "b": [
-"exigindo-se certificação digital ou PassKey",
-"SIAFI Operacional"
+"exige certificação digital ou PassKey",
+"não bastando CPF e senha"
 ],
 "d": [
-"dispensando-se certificação digital",
-"exigindo-se apenas senha"
+"dispensa certificação digital",
+"basta CPF e senha individual"
 ]
 },
 {
@@ -2900,20 +2812,14 @@
 },
 {
 "n": 236,
-"m": "A",
-"r": [
-[
-"Durante análise das contas anuais de determinado órgão federal, o TCU constatou a existência de empenhos não liquidados em 31 de dezembro de 2024, no valor total de R$ 2.500.000, bem como despesas relativas a exercícios anteriores que não foram adequadamente processadas. A administração apresentou justificativas técnicas para a manutenção de parte desses valores como restos a pagar. Com base nessa situação hipotética e na legislação aplicável, julgue o item seguinte. O cancelamento de restos a pagar por insuficiência de dotação orçamentária constitui receita orçamentária do exercício em que ocorrer, devendo ser registrado como receita de capital quando originário de despesas de investimento.",
-"O cancelamento de restos a pagar não constitui nova receita orçamentária."
-]
-],
+"m": "B",
+"t": "O cancelamento de restos a pagar não constitui nova receita orçamentária.",
 "b": [
-"não constitui",
-"nova receita orçamentária"
+"não constitui nova receita orçamentária"
 ],
 "d": [
-"receita de capital",
-"receita corrente"
+"constitui receita orçamentária do exercício",
+"constitui receita de capital"
 ]
 },
 {
@@ -2931,13 +2837,14 @@
 {
 "n": 274,
 "m": "B",
+"t": "O PPA, a LDO e a LOA são apreciados em sessão conjunta do Congresso Nacional, mas os votos de cada Casa são computados separadamente, segundo o regimento comum.",
 "b": [
 "computados separadamente",
 "regimento comum"
 ],
 "d": [
-"computados em conjunto",
-"regimento interno"
+"somados em votação única",
+"regimento interno da Câmara"
 ]
 },
 {
@@ -2966,16 +2873,15 @@
 },
 {
 "n": 287,
-"m": "B",
+"m": "C",
+"t": "O órgão central de orçamento estabelece normas e procedimentos para a elaboração dos orçamentos federais, detalhados no Manual Técnico de Orçamento (MTO).",
 "b": [
-"unidades de orçamento",
 "normas e procedimentos",
-"manual técnico (MTO)"
+"Manual Técnico de Orçamento (MTO)"
 ],
 "d": [
-"unidades de execução",
-"diretrizes e metas",
-"manual operacional (MOF)"
+"metas fiscais",
+"Manual de Contabilidade"
 ]
 },
 {
