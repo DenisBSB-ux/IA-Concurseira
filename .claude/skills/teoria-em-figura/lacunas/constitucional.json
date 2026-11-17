@@ -169,25 +169,16 @@
 },
 {
 "n": 24,
-"m": "A",
-"r": [
-[
-"somente podem ter suas atividades suspensas por decisão judicial transitada em julgado",
-"podem ter suas atividades suspensas por decisão judicial, ainda sem trânsito em julgado"
-],
-[
-"pode ser determinada por decisão judicial ainda passível de recurso",
-"exige decisão judicial transitada em julgado"
-]
-],
+"m": "B",
+"t": "As associações só podem ter suas atividades suspensas por decisão judicial, mesmo sem trânsito em julgado, mas sua dissolução compulsória exige decisão judicial transitada em julgado.",
 "b": [
-"ainda sem trânsito em julgado",
-"exige decisão judicial transitada em julgado"
+"mesmo sem trânsito em julgado",
+"transitada em julgado"
 ],
 "d": [
-"passível de recurso",
+"ato do Ministério Público",
 "decisão administrativa",
-"ato do Ministério Público"
+"apenas após o trânsito em julgado"
 ]
 },
 {
@@ -207,15 +198,15 @@
 {
 "n": 28,
 "m": "B",
+"t": "O nascido no exterior de pai brasileiro ou de mãe brasileira que venha residir no Brasil e optar pela nacionalidade brasileira, depois de atingida a maioridade, é brasileiro nato.",
 "b": [
-"opção",
-"brasileiro nato",
-"naturalizado"
+"depois de atingida a maioridade",
+"brasileiro nato"
 ],
 "d": [
-"quase nacional",
-"estrangeiro",
-"apátrida"
+"brasileiro naturalizado",
+"estrangeiro equiparado",
+"antes de atingida a maioridade"
 ]
 },
 {
@@ -444,34 +435,29 @@
 {
 "n": 100,
 "m": "B",
+"t": "O filho de brasileiros nascido no exterior é brasileiro nato se os pais estavam a serviço do Brasil ou se for registrado em repartição brasileira competente; o nascido no Brasil de pais estrangeiros, um deles a serviço de seu país, não é brasileiro.",
 "b": [
-"pais a serviço do Brasil",
-"registrado em repartição brasileira",
-"Lucas é estrangeiro"
+"a serviço do Brasil",
+"registrado em repartição brasileira"
 ],
 "d": [
-"Lucas é brasileiro nato",
-"Marcos é estrangeiro",
-"pais a passeio no exterior"
+"a serviço de outro país",
+"registrado em cartório estrangeiro",
+"residente no exterior"
 ]
 },
 {
 "n": 108,
-"m": "A",
-"r": [
-[
-"que adquirir outra nacionalidade por naturalização voluntária",
-"que fizer pedido expresso nesse sentido"
-]
-],
+"m": "B",
+"t": "Será declarada a perda da nacionalidade do brasileiro que fizer pedido expresso de perda perante autoridade brasileira competente, ressalvadas as situações que acarretem apatridia.",
 "b": [
-"declarada",
-"pedido expresso"
+"pedido expresso",
+"apatridia"
 ],
 "d": [
-"presumida",
-"naturalização voluntária",
-"decisão do Ministro da Justiça"
+"opção por outra nacionalidade",
+"fixação de residência no exterior",
+"dupla cidadania"
 ]
 },
 {
@@ -531,15 +517,15 @@
 {
 "n": 125,
 "m": "B",
+"t": "Ninguém será submetido a tortura nem a tratamento desumano ou degradante, e a vedação à tortura é norma inderrogável (jus cogens).",
 "b": [
-"tortura",
-"tratamento desumano ou degradante",
+"Ninguém",
 "inderrogável"
 ],
 "d": [
-"prisão civil",
-"relativizável em guerra",
-"trabalho forçado"
+"Somente o preso",
+"relativizável",
+"derrogável em estado de defesa"
 ]
 },
 {
@@ -894,14 +880,15 @@
 {
 "n": 175,
 "m": "B",
+"t": "Direito penal e processual são de competência privativa da União, razão pela qual o decreto estadual não pode regular a extinção da punibilidade.",
 "b": [
 "privativa da União",
-"extinção da punibilidade"
+"penal e processual"
 ],
 "d": [
-"concorrente",
-"privativa dos Estados",
-"prescrição"
+"concorrente da União e dos Estados",
+"comum aos entes federados",
+"administrativo e tributário"
 ]
 },
 {
@@ -1047,14 +1034,15 @@
 {
 "n": 210,
 "m": "B",
+"t": "A sociedade de economia mista exploradora de atividade econômica que distribui dividendos aos acionistas não se submete ao regime de precatórios.",
 "b": [
-"exploradora de atividade econômica",
-"não goza"
+"distribui dividendos",
+"não se submete"
 ],
 "d": [
-"prestadora de serviço público em regime de exclusividade",
-"fica sujeita",
-"sem fins lucrativos"
+"não distribui lucros",
+"submete-se",
+"fica sujeita"
 ]
 },
 {
@@ -1100,15 +1088,16 @@
 },
 {
 "n": 235,
-"m": "C",
+"m": "B",
+"t": "É vedada a edição de medida provisória sobre direito processual civil, mas não sobre direito civil.",
 "b": [
-"direito civil",
+"vedada",
 "direito processual civil"
 ],
 "d": [
-"direito penal",
-"direito processual penal",
-"direito eleitoral"
+"permitida",
+"direito administrativo",
+"direito empresarial"
 ]
 },
 {
@@ -1171,33 +1160,33 @@
 "m": "A",
 "r": [
 [
-"maioria absoluta",
-"dois terços"
+"da maioria absoluta",
+"de dois terços"
 ]
 ],
 "b": [
 "dois terços",
-"perda do cargo",
-"oito anos"
+"perda do cargo"
 ],
 "d": [
 "maioria absoluta",
 "três quintos",
-"cinco anos"
+"suspensão dos direitos políticos"
 ]
 },
 {
 "n": 39,
 "m": "B",
+"t": "A norma constitucional de eficácia contida tem aplicabilidade imediata e pode ser restringida por lei; a de eficácia plena não admite restrição; a programática é de eficácia limitada.",
 "b": [
-"eficácia contida",
+"contida",
 "pode ser restringida",
-"plena não se restringe"
+"limitada"
 ],
 "d": [
-"eficácia limitada",
-"não pode ser restringida",
-"programática é contida"
+"relativa",
+"só pode ser alterada por emenda",
+"absoluta"
 ]
 },
 {
