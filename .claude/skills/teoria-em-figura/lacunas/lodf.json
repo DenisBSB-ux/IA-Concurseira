@@ -159,13 +159,14 @@
 {
 "n": 25,
 "m": "B",
+"t": "Crianças e jovens, interesses coletivos, prioridade às demandas sociais e proteção a vítimas e testemunhas são todos objetivos prioritários do Distrito Federal.",
 "b": [
-"Todas as afirmativas",
-"objetivos prioritários"
+"objetivos prioritários",
+"vítimas e testemunhas"
 ],
 "d": [
-"Apenas duas afirmativas",
-"valores fundamentais"
+"valores fundamentais",
+"autoridades públicas"
 ]
 },
 {
@@ -193,15 +194,14 @@
 {
 "n": 29,
 "m": "B",
+"t": "Pluralismo político é valor fundamental do Distrito Federal; promover a inclusão digital é objetivo prioritário.",
 "b": [
-"Pluralismo político",
 "valor fundamental",
 "objetivo prioritário"
 ],
 "d": [
-"Soberania",
-"princípio geral",
-"fundamento"
+"princípio orçamentário",
+"competência privativa"
 ]
 },
 {
@@ -236,27 +236,26 @@
 {
 "n": 33,
 "m": "B",
+"t": "O direito de petição é assegurado independentemente de pagamento de taxas ou emolumentos.",
 "b": [
-"independentemente de taxas ou emolumentos",
-"duas primeiras assertivas"
+"independentemente de pagamento"
 ],
 "d": [
-"mediante pagamento de taxas",
-"três assertivas"
+"mediante o pagamento",
+"desde que pagas as custas"
 ]
 },
 {
 "n": 35,
 "m": "B",
+"t": "São valores fundamentais do Distrito Federal a plena cidadania e o pluralismo político.",
 "b": [
 "plena cidadania",
-"pluralismo político",
-"ordem pública"
+"pluralismo político"
 ],
 "d": [
 "soberania nacional",
-"livre concorrência",
-"segurança pública"
+"ordem pública"
 ]
 },
 {
@@ -378,13 +377,13 @@
 {
 "n": 63,
 "m": "B",
+"t": "Os administradores regionais ocupam cargo remunerado, por subsídio.",
 "b": [
-"remunerado, por subsídio",
-"natureza voluntária"
+"cargo remunerado, por subsídio"
 ],
 "d": [
-"exercido sem remuneração",
-"múnus gratuito"
+"cargo exercido sem remuneração",
+"cargo de confiança sem subsídio fixo"
 ]
 },
 {
@@ -404,15 +403,15 @@
 {
 "n": 74,
 "m": "B",
+"t": "É vedado ao Distrito Federal recusar fé aos documentos públicos e doar bens imóveis de seu patrimônio sem prévia autorização da Câmara Legislativa.",
 "b": [
-"recusar fé a documentos públicos",
-"sem autorização da Câmara",
-"competências privativas"
+"recusar fé aos documentos públicos",
+"sem prévia autorização"
 ],
 "d": [
-"emitir moeda",
-"com autorização da Câmara",
-"vedações absolutas"
+"dispor sobre serviços funerários",
+"licenciar a construção de qualquer obra",
+"mediante prévia autorização"
 ]
 },
 {
@@ -492,15 +491,14 @@
 {
 "n": 96,
 "m": "B",
+"t": "A alienação de imóvel do Distrito Federal exige licitação, além de prévia avaliação e autorização da Câmara Legislativa.",
 "b": [
 "licitação",
-"compra",
-"prévia avaliação"
+"autorização da Câmara Legislativa"
 ],
 "d": [
-"dispensa",
-"permuta",
-"parecer prévio"
+"dispensa de licitação",
+"autorização do Governador"
 ]
 },
 {
@@ -599,12 +597,12 @@
 {
 "n": 131,
 "m": "B",
+"t": "O veto parcial somente abrangerá texto integral de artigo, parágrafo, inciso ou alínea.",
 "b": [
-"apenas texto integral",
-"dispositivo"
+"texto integral de artigo, parágrafo, inciso ou alínea"
 ],
 "d": [
-"palavras isoladas",
+"palavras isoladas de um artigo",
 "trecho de qualquer extensão"
 ]
 },
@@ -750,20 +748,16 @@
 },
 {
 "n": 168,
-"m": "A",
-"r": [
-[
-"após aprovação do nome pela maioria absoluta dos Deputados Distritais",
-"na forma da lei"
-]
-],
+"m": "B",
+"t": "Cabe ao Governador do Distrito Federal nomear e destituir o Defensor Público-Geral do Distrito Federal, na forma da lei.",
 "b": [
-"Governador",
-"na forma da lei"
+"Governador do Distrito Federal",
+"nomear e destituir"
 ],
 "d": [
 "Presidente da Câmara Legislativa",
-"maioria absoluta dos Deputados Distritais"
+"Procurador-Geral do Distrito Federal",
+"apenas indicar"
 ]
 },
 {
@@ -781,15 +775,13 @@
 {
 "n": 180,
 "m": "B",
+"t": "A segurança pública do Distrito Federal tem por princípio a ênfase no policiamento comunitário.",
 "b": [
-"policiamento comunitário",
-"conselhos comunitários",
-"regiões administrativas"
+"policiamento comunitário"
 ],
 "d": [
 "policiamento ostensivo",
-"conselhos de segurança pública",
-"regiões metropolitanas"
+"policiamento investigativo"
 ]
 },
 {
@@ -896,40 +888,28 @@
 },
 {
 "n": 217,
-"m": "A",
-"r": [
-[
-"exige a realização obrigatória de estudos de impacto ambiental e de vizinhança",
-"exige estudo de impacto ambiental, substituível em áreas pequenas"
-]
-],
+"m": "B",
+"t": "Os projetos de parcelamento do solo no Distrito Federal terão sua aprovação condicionada a apresentação de estudo de impacto ambiental e respectivo relatório, para fins de licenciamento.",
 "b": [
-"estudo de impacto ambiental",
-"substituível em áreas pequenas"
+"estudo de impacto ambiental"
 ],
 "d": [
 "estudo de impacto de vizinhança",
-"obrigatório em todas as áreas"
+"estudo de viabilidade econômica"
 ]
 },
 {
 "n": 219,
-"m": "A",
-"r": [
-[
-"manterá banco de sementes e mudas nativas do Cerrado com vistas à proteção ecológica e reflorestamento de áreas degradadas rurais",
-"estimulará o reflorestamento ecológico em áreas degradadas"
-]
-],
+"m": "B",
+"t": "O Distrito Federal adotará políticas de estímulo ao reflorestamento ecológico em áreas degradadas.",
 "b": [
-"estimulará",
-"reflorestamento ecológico",
+"estímulo ao reflorestamento ecológico",
 "áreas degradadas"
 ],
 "d": [
-"manterá banco de sementes",
-"proibirá",
-"áreas urbanas"
+"manutenção de banco de sementes nativas",
+"fiscalização apenas punitiva",
+"áreas urbanas consolidadas"
 ]
 },
 {
@@ -985,13 +965,13 @@
 {
 "n": 15,
 "m": "B",
+"t": "Um dos objetivos prioritários do Distrito Federal é zelar pelo conjunto urbanístico de Brasília.",
 "b": [
-"conjunto urbanístico de Brasília",
-"objetivo prioritário"
+"conjunto urbanístico de Brasília"
 ],
 "d": [
 "patrimônio rural do Entorno",
-"objetivo secundário"
+"patrimônio industrial do Entorno"
 ]
 },
 {
@@ -1024,14 +1004,13 @@
 {
 "n": 61,
 "m": "B",
+"t": "A remuneração dos Administradores Regionais não poderá ser superior à fixada para os Secretários de Estado do Distrito Federal.",
 "b": [
-"secretário de Estado",
-"não poderá ser superior"
+"Secretários de Estado"
 ],
 "d": [
-"Governador",
-"Deputado Distrital",
-"poderá exceder"
+"Deputados Distritais",
+"Conselheiros do Tribunal de Contas"
 ]
 },
 {
@@ -1061,13 +1040,14 @@
 {
 "n": 166,
 "m": "B",
+"t": "Compete à Câmara Legislativa aprovar previamente a indicação ou destituição do Procurador-Geral do Distrito Federal.",
 "b": [
-"nomeado pelo Governador",
-"aprovação prévia da Câmara Legislativa"
+"aprovar previamente",
+"indicação ou destituição"
 ],
 "d": [
-"eleito pelos membros da carreira",
-"aprovação posterior do Tribunal de Contas"
+"homologar posteriormente",
+"designação ou promoção"
 ]
 },
 {
@@ -1129,14 +1109,15 @@
 {
 "n": 203,
 "m": "B",
+"t": "A política de desenvolvimento rural assegura programas de habitação, educação, saúde e saneamento básico, de modo a garantir a permanência do homem no campo.",
 "b": [
-"infraestrutura e serviços sociais",
-"eletrificação, habitação, educação"
+"habitação, educação, saúde e saneamento básico",
+"permanência do homem no campo"
 ],
 "d": [
-"isenção tributária",
-"monopólio público",
-"desapropriação sumária"
+"segurança pública e transporte urbano",
+"tributação e fiscalização",
+"êxodo rural"
 ]
 },
 {
