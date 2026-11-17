@@ -13,14 +13,15 @@
 },
 {
 "n": 11,
-"m": "C",
+"m": "B",
+"t": "A prorrogação sucessiva de serviços e fornecimentos contínuos, até a vigência máxima decenal, exige previsão no edital e ateste de vantajosidade.",
 "b": [
 "vigência máxima decenal",
-"previsão editalícia expressa"
+"previsão no edital"
 ],
 "d": [
-"prazo de cinco anos",
-"autorização legislativa"
+"vigência máxima de cinco anos",
+"autorização do ordenador de despesas"
 ]
 },
 {
@@ -157,13 +158,13 @@
 {
 "n": 30,
 "m": "B",
+"t": "Pelos danos que causar à Administração ou a terceiros, o contratado responde, e a fiscalização não reduz a responsabilidade do contratado; a lei não prevê responsabilidade solidária da Administração por esses danos.",
 "b": [
-"não reduz a responsabilidade do contratado",
-"responsabilidade solidária da Administração"
+"não reduz a responsabilidade do contratado"
 ],
 "d": [
-"atenua",
-"responsabilidade subsidiária"
+"atenua a responsabilidade do contratado",
+"exclui a responsabilidade do contratado"
 ]
 },
 {
@@ -195,14 +196,14 @@
 {
 "n": 33,
 "m": "B",
+"t": "Além do parentesco até o terceiro grau com sócios ou administradores de contratados habituais, os vínculos técnicos, comerciais, econômicos, financeiros, trabalhistas e civis impedem a designação do fiscal ou gestor, sem exceção para o vínculo estritamente técnico, comercial ou civil.",
 "b": [
 "impedem a designação",
-"trabalhistas",
-"não há exceção"
+"sem exceção"
 ],
 "d": [
 "não impedem a designação",
-"admite-se exceção"
+"com exceção"
 ]
 },
 {
@@ -287,13 +288,15 @@
 {
 "n": 47,
 "m": "B",
+"t": "A aceitação do preposto pela Administração não desonera o contratado da reparação de vícios, defeitos ou incorreções, nem transfere esse encargo ao preposto.",
 "b": [
-"não desonera o contratado",
-"nem transfere a ele"
+"não desonera",
+"ao preposto"
 ],
 "d": [
-"isenta o contratado",
-"transfere ao preposto"
+"exime",
+"ao fiscal do contrato",
+"ao órgão contratante"
 ]
 },
 {
@@ -439,13 +442,15 @@
 {
 "n": 68,
 "m": "B",
+"t": "O impedimento de licitar e contratar dura até 3 anos e vale na Administração direta e indireta do ente que o aplicou.",
 "b": [
 "até 3 anos",
-"no ente que o aplicou"
+"do ente que o aplicou"
 ],
 "d": [
 "até 5 anos",
-"em todos os entes"
+"da União",
+"de todos os entes federativos"
 ]
 },
 {
@@ -490,13 +495,14 @@
 {
 "n": 78,
 "m": "B",
+"t": "A multa por inexecução, ainda que o contrato preveja percentual maior, tem como teto legal 30% do valor do contrato.",
 "b": [
-"35%",
-"teto legal de 30%"
+"30%"
 ],
 "d": [
-"45%",
-"teto legal de 20%"
+"20%",
+"35%",
+"45%"
 ]
 },
 {
@@ -595,12 +601,11 @@
 "m": "B",
 "t": "Na matriz de alocação de riscos, os eventos podem ser atribuídos ao contratante, ao contratado ou de forma compartilhada.",
 "b": [
-"matriz de alocação de riscos",
 "de forma compartilhada"
 ],
 "d": [
-"integralmente ao contratado",
-"matriz de preços"
+"somente ao ente segurador",
+"integralmente ao contratante"
 ]
 },
 {
@@ -632,15 +637,14 @@
 {
 "n": 100,
 "m": "B",
+"t": "A recomposição do equilíbrio econômico-financeiro inicial pode ser feita por acordo entre as partes diante de fato imprevisível que inviabilize a execução, respeitada a repartição objetiva de riscos do contrato.",
 "b": [
-"por acordo",
-"fato imprevisível",
-"repartição de riscos"
+"por acordo entre as partes",
+"repartição objetiva de riscos"
 ],
 "d": [
-"unilateralmente",
-"fato previsível",
-"alocação integral ao contratado"
+"por decisão unilateral da contratada",
+"limite de 25% do valor do contrato"
 ]
 },
 {
@@ -672,13 +676,14 @@
 {
 "n": 106,
 "m": "B",
+"t": "Nos serviços contínuos, aplica-se o reajuste em sentido estrito quando não há dedicação exclusiva ou predominância de mão de obra, e a repactuação quando há.",
 "b": [
 "reajuste em sentido estrito",
-"sem dedicação exclusiva"
+"quando não há dedicação exclusiva"
 ],
 "d": [
-"revisão contratual",
-"com predominância de mão de obra"
+"revisão",
+"quando há dedicação exclusiva"
 ]
 },
 {
@@ -811,13 +816,15 @@
 {
 "n": 124,
 "m": "B",
+"t": "A ocupação provisória, pela Administração, do local, das instalações, dos equipamentos, do material e do pessoal do contratado, quando necessária à continuidade do objeto, exige autorização expressa do ministro de Estado ou do secretário competente.",
 "b": [
 "autorização expressa",
 "ministro de Estado ou do secretário competente"
 ],
 "d": [
 "decisão do gestor do contrato",
-"parecer do controle interno"
+"parecer do fiscal técnico",
+"presidente do tribunal de contas"
 ]
 },
 {
@@ -904,13 +911,14 @@
 {
 "n": 143,
 "m": "B",
+"t": "Podem ser utilizados meios alternativos de resolução de controvérsias, como conciliação, mediação, comitê de resolução de disputas e arbitragem, sem privatividade de autoridade.",
 "b": [
-"meios alternativos de resolução de controvérsias",
-"não são privativos"
+"comitê de resolução de disputas",
+"sem privatividade"
 ],
 "d": [
-"via judicial exclusiva",
-"são exclusivos"
+"tomada de contas especial",
+"com privatividade do Secretário de Estado"
 ]
 },
 {
@@ -935,15 +943,14 @@
 {
 "n": 154,
 "m": "B",
+"t": "A avaliação do desempenho e da qualidade dos serviços prestados pela contratada é feita pela fiscalização do órgão; a contratada apenas toma ciência e pode apresentar justificativa.",
 "b": [
 "fiscalização do órgão",
-"toma ciência",
-"apresentar justificativa"
+"toma ciência"
 ],
 "d": [
 "própria empresa contratada",
-"aprova o resultado",
-"dispensa a fiscalização"
+"comissão de licitação"
 ]
 },
 {
@@ -1003,13 +1010,14 @@
 {
 "n": 162,
 "m": "B",
+"t": "Nos indicadores do Instrumento de Medição de Resultado (IMR), é dever do planejador prever e tratar no cálculo os fatores fora do controle do prestador.",
 "b": [
-"fatores fora do controle do prestador",
-"não proibir"
+"dever do planejador",
+"fatores fora do controle do prestador"
 ],
 "d": [
-"desempenho estritamente fático",
-"vedar"
+"vedado ao planejador",
+"fatores sob controle direto do prestador"
 ]
 },
 {
@@ -1379,13 +1387,15 @@
 {
 "n": 115,
 "m": "B",
+"t": "A alteração unilateral qualitativa do contrato não pode transfigurar o objeto, ainda que respeitado o limite de 25% do valor inicial atualizado.",
 "b": [
-"descaracteriza o objeto",
-"vedada de forma absoluta"
+"transfigurar o objeto",
+"25%"
 ],
 "d": [
-"permitida até 25%",
-"admitida com justificativa"
+"mudar a modalidade de licitação",
+"10%",
+"30%"
 ]
 },
 {
@@ -1440,52 +1450,54 @@
 {
 "n": 138,
 "m": "B",
+"t": "A garantia prestada pelo contratado é liberada ou restituída após a fiel execução do contrato ou após a sua extinção por culpa exclusiva da Administração e, quando em dinheiro, é atualizada monetariamente.",
 "b": [
-"recebimento definitivo",
-"garantia em dinheiro"
+"culpa exclusiva da Administração",
+"atualizada monetariamente"
 ],
 "d": [
-"recebimento provisório",
-"assinatura do contrato",
-"fiança bancária"
+"culpa do contratado",
+"atualizada pela taxa Selic"
 ]
 },
 {
 "n": 144,
 "m": "B",
+"t": "A Súmula 251 do TCU trata da averbação de tempo para aposentadoria, matéria de pessoal, sem relação direta com sanções contratuais.",
 "b": [
 "averbação de tempo para aposentadoria",
 "matéria de pessoal"
 ],
 "d": [
-"reajuste de preços",
-"matéria de licitação"
+"reajuste de preços contratuais",
+"matéria licitatória"
 ]
 },
 {
 "n": 145,
 "m": "B",
+"t": "A Súmula 214 do TCU trata das taxas de inscrição em concursos públicos, receita pública a ser recolhida à Conta Única do Tesouro, e não da equação econômico-financeira dos contratos.",
 "b": [
-"taxas de inscrição em concursos",
-"receita pública"
+"taxas de inscrição em concursos públicos",
+"Conta Única do Tesouro"
 ],
 "d": [
-"garantia contratual",
-"despesa pública",
-"reajuste de preços"
+"reajuste de preços contratuais",
+"conta de cada órgão"
 ]
 },
 {
 "n": 146,
 "m": "B",
+"t": "A Súmula 277 do TCU trata da admissão de pessoal nos conselhos de fiscalização profissional mediante concurso público, sem pertinência com reajuste de preços.",
 "b": [
-"conselhos de fiscalização",
-"concurso"
+"conselhos de fiscalização profissional",
+"concurso público"
 ],
 "d": [
 "tribunais de contas",
-"licitação",
-"equilíbrio econômico"
+"processo seletivo simplificado",
+"livre nomeação"
 ]
 }
 ]
