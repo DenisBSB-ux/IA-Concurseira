@@ -16,8 +16,18 @@ function treinoMarca(slug, k){ return (treinoLer()[slug] || {})[k] || ''; }
 // carimbo (hora) de cada marca: na sincronização entre aparelhos vale a alteração mais recente, inclusive o reset
 const REV_TS_KEY = 'tcdf_rev_ts_v1';
 function revTsSet(tipo, slug, chave, ts){ try{ const o = JSON.parse(localStorage.getItem(REV_TS_KEY) || '{}') || {}; ((o[tipo] = o[tipo] || {})[slug] = o[tipo][slug] || {})[chave] = ts || Date.now(); localStorage.setItem(REV_TS_KEY, JSON.stringify(o)); }catch(_){} }
+// atualiza na hora o que está por trás da janela (barras e % do cartão da matéria, gráfico por dia da Reta Final)
+let _tpTimer = null;
+function treinoAtualizarPaineis(){
+  clearTimeout(_tpTimer);
+  _tpTimer = setTimeout(() => { try{
+    if(typeof reta7PreencherProg === 'function') reta7PreencherProg(document);
+    document.querySelectorAll('#r7-graf-corpo').forEach(el => { if(typeof reta7MontarGrafico === 'function') reta7MontarGrafico(el); });
+  }catch(_){} }, 250);
+}
 function treinoMarcar(slug, k, v){
   const m = treinoLer(); (m[slug] = m[slug] || {})[k] = v; treinoGravar(m); revTsSet('treino', slug, k); if(typeof sincronizarRevisao === 'function') sincronizarRevisao();
+  treinoAtualizarPaineis();
   if(v){ try{ const L = JSON.parse(localStorage.getItem(TREINO_LOG_KEY) || '[]') || []; L.push({ ts:Date.now(), s:slug, t:String(k)[0], r:v }); localStorage.setItem(TREINO_LOG_KEY, JSON.stringify(L.slice(-4000))); }catch(_){} }   // registro por dia: alimenta o gráfico da Reta Final
 }
 const TREINO_LOG_KEY = 'tcdf_treino_log_v1';
@@ -169,6 +179,7 @@ function treinoFechar(){
   if(st.box) st.box.remove();
   const i = TRS.indexOf(st); if(i >= 0) TRS.splice(i, 1);
   TR = TRS.length ? TRS[TRS.length - 1] : null;
+  treinoAtualizarPaineis();
 }
 
 // informações completas da questão (banca, cargo, ano, incidência, tendência, assunto): vêm da própria questão importada no aparelho
@@ -406,7 +417,7 @@ function treinoResetar(escopo){
   const txt = escopo === 'todas' ? 'Apagar TODAS as marcas (' + lista.length + ') ' + (flash ? 'dos flashcards' : 'das lacunas') + ' desta matéria e recomeçar?' : 'Apagar as ' + lista.length + (flash ? ' marcas "Revisar"' : ' marcas de lacunas erradas') + ' e recomeçar?';
   if(!confirm(txt)){ treinoDesenhar(); return; }
   lista.forEach(x => { const k = treinoChaveItem(x, tipo); b[k] = ''; delete TR.mem[k]; revTsSet('treino', slug, k); });
-  treinoGravar(m); if(typeof sincronizarRevisao === 'function') sincronizarRevisao();
+  treinoGravar(m); if(typeof sincronizarRevisao === 'function') sincronizarRevisao(); treinoAtualizarPaineis();
   TR.filtro = 'todos'; TR.salvo = null; treinoMontarFila(); treinoDesenhar();
 }
 function treinoMontarFilaMantendo(){ const it = TR.fila[TR.i]; TR.fila.splice(TR.i, 1); if(TR.i >= TR.fila.length) TR.i = Math.max(0, TR.fila.length - 1); TR.virado = false; }
