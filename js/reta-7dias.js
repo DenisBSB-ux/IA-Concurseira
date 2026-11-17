@@ -350,9 +350,6 @@ function reta7Cartao(b, dia0){
   const comp = [ses.nErros ? ses.nErros + ' erros' : '', ses.nMarcadas ? ses.nMarcadas + ' marcadas' : '', ses.nNovas ? ses.nNovas + (ses.nNovas === 1 ? ' nova' : ' novas') : ''].filter(Boolean).join(' + ');
   return `<article class="r7-card${ok ? ' ok' : ''}${STATE.materia === mat ? ' r7-atual' : ''}">
     <div class="r7-top"><h3>${esc(mat)}</h3>${R7_ATUALIZADAS.includes(reta7SlugResumo(mat)) ? '<span class="r7-atual-selo" title="Resumo por assunto em ordem de relevância e flashcards com o texto da questão">✨ Matéria atualizada</span>' : ''}${ok ? '<span class="r7-feito">✓ feita</span>' : ''}</div>
-    <p class="r7-why">${esc(reta7Porque(s))}</p>
-    <p class="r7-meta"><b>${reta7Fmt(b.min)}</b> · ${ses.uids.length} questões${comp ? ' <span>(' + esc(comp) + ')</span>' : ''}</p>
-    <div class="r7-barra" title="${feitas} respostas hoje nesta matéria"><i style="width:${pct}%"></i></div>
     <div class="r7-acoes">
       ${resumo ? `<span class="r7-ac"><span class="r7-prog" data-r7-prog="${esc(slug)}:r" title="Assuntos do resumo marcados como estudados"><i></i></span><button class="btn r7-res" data-r7-resumo="${esc(mat)}">📄 Resumo</button></span>` : ''}
       ${(typeof treinoDisponivel === 'function' && treinoDisponivel(mat)) ? `<span class="r7-ac"><span class="r7-prog" data-r7-prog="${esc(slug)}:f"><i class="a"></i><i class="b"></i></span><button class="btn r7-res" data-tr-abrir="${esc(mat)}" data-tr-modo="flash">🃏 Flashcards</button></span><span class="r7-ac"><span class="r7-prog" data-r7-prog="${esc(slug)}:l"><i class="a"></i><i class="c"></i></span><button class="btn r7-res" data-tr-abrir="${esc(mat)}" data-tr-modo="lacunas">🧩 Lacunas</button></span>` : ''}</div>

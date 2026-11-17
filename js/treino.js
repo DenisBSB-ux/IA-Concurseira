@@ -254,8 +254,10 @@ function treinoBtnReset(cls){
   const flash = TR.modo === 'flash', tipo = flash ? 'f' : 'l', itens = flash ? TR.dados.flash : TR.dados.lacunas, alvo = flash ? 'rev' : 'err', mm = treinoLer()[TR.slug] || {};
   const nTodas = itens.filter(x => mm[treinoChaveItem(x, tipo)]).length, nAlvo = itens.filter(x => mm[treinoChaveItem(x, tipo)] === alvo).length;
   const pop = TR.menuReset ? `<div class="tr-reset-pop" role="menu"><p class="tr-reset-tit">O que apagar para recomeçar?</p>
+    ${flash ? '' : '<button type="button" role="menuitem" data-tr-limpar="1"><b>🧹 Esta questão</b><small>Limpa as palavras colocadas e o resultado só desta questão.</small></button>'}
     <button type="button" role="menuitem" data-tr-reset="rev" ${nAlvo ? '' : 'disabled'}><b>${flash ? '🔁 Só as marcadas Revisar' : '✗ Só as que errei'} (${nAlvo})</b><small>${flash ? 'Esses cartões voltam a ficar novos.' : 'Essas questões voltam a ficar novas; as certas ficam.'}</small></button>
     <button type="button" role="menuitem" class="perigo" data-tr-reset="todas" ${nTodas ? '' : 'disabled'}><b>↺ Tudo (${nTodas})</b><small>Apaga ${flash ? 'todas as marcas dos flashcards' : 'as respostas certas e erradas'} desta matéria.</small></button>
+    ${flash ? '' : '<button type="button" role="menuitem" data-tr-embaralhar="1"><b>🔀 Ordem das questões</b><small>Mistura a fila de questões de novo.</small></button>'}
     <button type="button" class="fecha" data-tr-reset-menu="1">Cancelar</button></div>` : '';
   return `<span class="tr-reset${cls ? ' up' : ''}"><button class="${cls}" data-tr-reset-menu="1" aria-expanded="${TR.menuReset ? 'true' : 'false'}" title="Apaga as marcas para recomeçar"><span class="tr-ic" aria-hidden="true">↺</span>Resetar</button>${pop}</span>`;
 }
@@ -268,11 +270,9 @@ function treinoDesenhar(){
   const abas = '';
   const pc = (n, tot) => tot ? Math.round(100 * n / tot) + '%' : '0%';
   const filtros = TR.modo === 'flash'
-    ? [['todos', 'Todos ' + d.flash.length + ' · ' + pc(nOk + nRev, d.flash.length) + ' resp.'], ['sei', '✓ Já sei ' + nOk + ' · ' + pc(nOk, d.flash.length)], ['revisar', '🔁 Revisar ' + nRev + ' · ' + pc(nRev, d.flash.length)]]
-    : [['todos', 'Todas ' + d.lacunas.length + ' · ' + pc(lOk + lErr, d.lacunas.length) + ' resp.'], ['certas', '✓ Certas ' + lOk + ' · ' + pc(lOk, d.lacunas.length)], ['erradas', '✗ Erros ' + lErr + ' · ' + pc(lErr, d.lacunas.length)]];
-  const chips = `<div class="tr-filtros">${filtros.map(f => `<button class="${TR.filtro === f[0] ? 'on' : ''}" data-tr-filtro="${f[0]}">${esc(f[1])}</button>`).join('')}<span class="tr-cont" aria-live="polite">${TR.fila.length ? (TR.i + 1) + ' / ' + TR.fila.length : '0'}</span>${TR.modo === 'lacunas'
-      ? '<button data-tr-limpar="1" title="Limpa só as palavras desta questão"><span class="tr-ic" aria-hidden="true">🧹</span> Limpar</button><button data-tr-resetar="1" title="Embaralha as palavras de novo e apaga o resultado desta questão"><span class="tr-ic" aria-hidden="true">🔄</span> Trocar palavras</button>'
-      : treinoBtnEmbaralhar('') + treinoBtnReset('')}</div>`;
+    ? [['todos', 'Total: ' + (nOk + nRev) + ' / ' + d.flash.length + ' (' + pc(nOk + nRev, d.flash.length) + ')'], ['sei', '✓ Já sei: ' + nOk + ' (' + pc(nOk, d.flash.length) + ')'], ['revisar', '🔁 Revisar: ' + nRev + ' (' + pc(nRev, d.flash.length) + ')']]
+    : [['todos', 'Total: ' + (lOk + lErr) + ' / ' + d.lacunas.length + ' (' + pc(lOk + lErr, d.lacunas.length) + ')'], ['certas', '✓ Corretas: ' + lOk + ' (' + pc(lOk, d.lacunas.length) + ')'], ['erradas', '✗ Erradas: ' + lErr + ' (' + pc(lErr, d.lacunas.length) + ')']];
+  const chips = `<div class="tr-filtros">${filtros.map(f => `<button class="${TR.filtro === f[0] ? 'on' : ''}" data-tr-filtro="${f[0]}">${esc(f[1])}</button>`).join('')}<span class="tr-cont" aria-live="polite">${TR.fila.length ? (TR.i + 1) + ' / ' + TR.fila.length : '0'}</span>${TR.modo === 'lacunas' ? '' : treinoBtnEmbaralhar('') + treinoBtnReset('')}</div>`;
   const it = TR.fila[TR.i];
   let corpo;
   if(!it) corpo = `<p class="tr-vazio">${TR.filtro === 'todos' ? 'Nenhum item.' : 'Nada neste filtro. Escolha outro.'}</p>`;
@@ -314,7 +314,7 @@ function treinoHtmlLacuna(it){
     const resp = it.p.filter(p => p.l !== undefined).map(p => p.l);
     fb = `<div class="tr-fb ${todos ? 'ok' : 'no'}"><b>${todos ? '✓ Correto!' : '✗ Não foi dessa vez.'}</b>${todos ? '' : ' Resposta: <i>' + esc(resp.join(' · ')) + '</i>.'}${it.ref ? ' <span class="tr-ref">' + esc(it.ref) + '</span>' : ''}${it.exp ? '<p class="tr-extra">' + esc(it.exp) + '</p>' : ''}</div>`;
   }
-  const acao = `${treinoBtnEmbaralhar('btn tr-bt')}
+  const acao = `<button class="btn tr-bt" data-tr-resetar="1" title="Embaralha as palavras de novo e apaga o resultado desta questão"><span class="tr-ic" aria-hidden="true">🔀</span>Embaralhar</button>
       ${treinoBtnReset('btn tr-bt')}
       <button class="btn tr-bt" data-tr-nav="-1" ${TR.i === 0 ? 'disabled' : ''}><span class="tr-ic" aria-hidden="true">◀</span>Anterior</button>
       <button class="btn tr-bt" data-tr-nav="1" ${TR.i >= TR.fila.length - 1 ? 'disabled' : ''}>Próxima<span class="tr-ic" aria-hidden="true">▶</span></button>
@@ -360,7 +360,7 @@ function treinoClique(e){
   if((el = t.closest('[data-tr-filtro]'))){ TR.filtro = el.dataset.trFiltro; TR.salvo = TR.filtro === 'todos' ? treinoRespLer(TR.slug, TR.modo) : null; treinoMontarFila(); if(TR.salvo === null && TR.filtro === 'todos') TR.salvo = null; treinoDesenhar(); return; }
   if(t.closest('[data-tr-reset-menu]')){ TR.menuReset = !TR.menuReset; treinoDesenhar(); return; }
   if((el = t.closest('[data-tr-reset]'))){ treinoResetar(el.dataset.trReset); return; }
-  if(t.closest('[data-tr-embaralhar]')){ TR.salvo = null; treinoMontarFila(); treinoDesenhar(); return; }
+  if(t.closest('[data-tr-embaralhar]')){ TR.menuReset = false; TR.salvo = null; treinoMontarFila(); treinoDesenhar(); return; }
   if((el = t.closest('[data-tr-zoom]'))){ const z = Math.max(0.8, Math.min(2, Math.round((treinoZoomLer(TR.modo) + 0.1 * parseInt(el.dataset.trZoom, 10)) * 10) / 10)); treinoZoomGravar(TR.modo, z); treinoDesenhar(); return; }
   if(t.closest('[data-tr-naoresp]')){ const j = treinoIdxNaoResp(); if(j >= 0) treinoIr(j - TR.i); return; }
   if((el = t.closest('[data-tr-nav]'))){ treinoIr(parseInt(el.dataset.trNav, 10)); return; }
@@ -373,7 +373,7 @@ function treinoClique(e){
   if(t.closest('[data-tr-verificar]')){ treinoVerificar(); return; }
   if(t.closest('[data-jan-full]')){ janTelaCheia(t.closest('.r7-modal')); return; }
   if(t.closest('[data-tr-tema]')){ if(typeof alternarTema === 'function') alternarTema(); const atual = TR; TRS.slice().forEach(x => { TR = x; treinoDesenhar(); }); TR = atual; return; }
-  if(t.closest('[data-tr-limpar]')){ TR.slots.fill(null); TR.checado = false; TR.sel = null; treinoDesenhar(); return; }      // só a questão atual
+  if(t.closest('[data-tr-limpar]')){ TR.menuReset = false; TR.slots.fill(null); TR.checado = false; TR.sel = null; treinoDesenhar(); return; }      // só a questão atual
   if(t.closest('[data-tr-resetar]')){ const it = TR.fila[TR.i]; if(it){ treinoMarcar(TR.slug, treinoChaveItem(it, 'l'), ''); const n = treinoNovaLacuna(it); TR.mem[treinoChaveItem(it, 'l')] = n; TR.slots = n.slots; TR.banco = n.banco; TR.checado = false; TR.sel = null; treinoDesenhar(); } return; }
   if((el = t.closest('[data-tr-chip]'))){ if(TR.checado) return; const id = parseInt(el.dataset.trChip, 10); TR.sel = TR.sel === id ? null : id; treinoDesenhar(); return; }
   if((el = t.closest('[data-tr-blank]'))){
