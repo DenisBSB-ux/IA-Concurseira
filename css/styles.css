@@ -2688,3 +2688,14 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 
 /* v597: quantidade ao lado da % (respondidos / total) */
 .r7-pct{ min-width:92px; white-space:nowrap; }
+
+/* v598: celular — menu do Resetar não sai da tela; botões de baixo do treino em 3 por linha */
+.tr-reset.up .tr-reset-pop{ left:auto; right:0; max-width:calc(100vw - 32px); }
+@media (max-width:480px){
+  .tr-modal .tr-acoes .tr-bt, .tr-modal .tr-acoes .tr-reset{ flex:1 1 calc(33.3% - 8px); min-width:0; }
+  .tr-modal .tr-acoes .tr-reset > button{ width:100%; }
+  .tr-acoes{ position:relative; } .tr-modal .tr-acoes .tr-reset{ position:static; }
+  .tr-modal .tr-acoes .tr-reset.up .tr-reset-pop{ left:0; right:0; width:auto; max-width:none; top:auto; bottom:calc(100% + 8px); }
+  .tr-acoes .tr-bt, .tr-acoes .btn.tr-bt{ padding:10px 8px; gap:6px; font-size:14px; }
+  .tr-modal .tr-acoes .tr-bt, .tr-modal .tr-filtros button, .tr-modal .tr-cont, .tr-modal .tr-reset > button{ font-size:14px; }
+}
