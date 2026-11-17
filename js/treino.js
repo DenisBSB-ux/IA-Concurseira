@@ -409,7 +409,7 @@ function treinoClique(e){
   let el;
   if(TR.menuReset && !t.closest('.tr-reset')){ TR.menuReset = false; treinoDesenhar(); }
   if((el = t.closest('[data-tr-filtro]'))){ TR.filtro = el.dataset.trFiltro; TR.salvo = TR.filtro === 'todos' ? treinoRespLer(TR.slug, TR.modo) : null; treinoMontarFila(); if(TR.salvo === null && TR.filtro === 'todos') TR.salvo = null; treinoDesenhar(); return; }
-  if(t.closest('[data-tr-reset-menu]')){ TR.menuReset = !TR.menuReset; treinoDesenhar(); return; }
+  if(t.closest('[data-tr-reset-menu]')){ TR.menuReset = !TR.menuReset; treinoDesenhar(); if(TR.menuReset){ setTimeout(function(){ var p=document.querySelector('.tr-reset-pop'); if(p&&p.scrollIntoView) p.scrollIntoView({block:'nearest'}); },30); } return; }
   if((el = t.closest('[data-tr-reset]'))){ treinoResetar(el.dataset.trReset); return; }
   if(t.closest('[data-tr-embaralhar]')){ TR.menuReset = false; TR.salvo = null; treinoMontarFila(); treinoDesenhar(); return; }
   if((el = t.closest('[data-tr-zoom]'))){ const z = Math.max(0.8, Math.min(2, Math.round((treinoZoomLer(TR.modo) + 0.1 * parseInt(el.dataset.trZoom, 10)) * 10) / 10)); treinoZoomGravar(TR.modo, z); treinoDesenhar(); return; }
