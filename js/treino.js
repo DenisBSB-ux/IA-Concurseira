@@ -377,7 +377,7 @@ function treinoHtmlLacuna(it){
     const todos = it.p.filter(p => p.l !== undefined).every((p, i) => TR.slots[i] && TR.slots[i].w === p.l);
     const resp = it.p.filter(p => p.l !== undefined).map(p => p.l);
     const revisao = !!(TR.mem[treinoChaveItem(it, 'l')] || {}).rev;
-    fb = `<div class="tr-fb ${todos ? 'ok' : 'no'}"><b>${revisao ? '✓ Resposta correta' : (todos ? '✓ Correto!' : '✗ Não foi dessa vez.')}</b>${todos ? '' : ' Resposta: <i>' + esc(resp.join(' · ')) + '</i>.'}${it.ref ? ' <span class="tr-ref">' + esc(it.ref) + '</span>' : ''}${it.exp ? '<p class="tr-extra">' + esc(it.exp) + '</p>' : ''}<button type="button" class="btn tr-bt tr-refaz" data-tr-limpar="1">↺ Refazer esta questão</button></div>`;
+    fb = `<div class="tr-fb ${todos ? 'ok' : 'no'}"><div class="tr-fb-txt"><b>${revisao ? '✓ Resposta correta' : (todos ? '✓ Correto!' : '✗ Não foi dessa vez.')}</b>${todos ? '' : ' Resposta: <i>' + esc(resp.join(' · ')) + '</i>.'}${it.ref ? ' <span class="tr-ref">' + esc(it.ref) + '</span>' : ''}${it.exp ? '<p class="tr-extra">' + esc(it.exp) + '</p>' : ''}</div><button type="button" class="btn tr-bt tr-refaz" data-tr-limpar="1">↺ Refazer esta questão</button></div>`;
   }
   const acao = `<button class="btn tr-bt" data-tr-resetar="1" title="Embaralha as palavras de novo e apaga o resultado desta questão"><span class="tr-ic" aria-hidden="true">🔀</span>Embaralhar</button>
       ${treinoBtnReset('btn tr-bt')}
