@@ -13,3 +13,8 @@
 - **PDPM (5):** nº 16 (dado do Anuário sem fonte na ref), nº 31 (regra v fala em monitoração eletrônica, o x em afastamento do lar), nº 79 (distrator "também" completa), nº 151 (art. 20 da Lei 11.340 prevê a prisão preventiva de ofício; o gabarito ERRADO e a regra v contrariam o texto legal — decidir o gabarito), nº 169 (frase sem autonomia).
 - **Primeiros Socorros:** completa (100 de 100).
 - **Previdenciário (2):** nº 62 (limite da paridade: frase sem contexto), nº 130 (art. 40 §15 da CF: regra v diz "entidade fechada ou aberta", o texto vigente fala em entidade fechada de natureza pública — conferir a regra v e o gabarito).
+- **Regimento Interno (2):** nº 100 (sanções do TCDF: frase truncada/confusa), nº 154 (frase sem contexto do TCDF; distrator "órgãos de classe" também completa).
+- **RJU (5):** nº 16 (exercício cumulativo de cargos: frase não confirmada pela regra v; gabarito em conferência), nº 54 (lacunas redundantes), nº 199 (professor com outro cargo: regra v ("de qualquer natureza") contradiz o art. 37, XVI, "b", da CF — decidir regra e gabarito), nº 219 (efeito retroativo de atos: regra v restringe a nomeação, posse e exercício), mais 1 já listada acima.
+- **Conhecimentos do DF (3):** nº 30 (enunciado malformado), nº 53 (domínio fraturado do aquífero: não confirmado), nº 98; ver também os alertas sobre gabaritos "em conferência" (83, 114: "primordial" × "suplementar").
+- **Direito Tributário (2):** nº 72 (função extrafiscal/neutralidade do tributo; gabarito em conferência), nº 235.
+- **Administrativo geral (4):** nº 13 e 18 (professor com outro cargo: o gabarito da banca diz "de qualquer natureza", mas o art. 37, XVI, "b", da CF diz "técnico ou científico" — decidir o gabarito), nº 77, nº 488 (gabarito em conferência).

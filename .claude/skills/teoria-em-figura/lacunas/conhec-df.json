@@ -1,0 +1,1721 @@
+[
+{
+"n": 1,
+"m": "B",
+"b": [
+"compartilhado",
+"União, DF, Goiás, Minas Gerais e municípios integrantes"
+],
+"d": [
+"exclusivo da União",
+"apenas União e DF"
+]
+},
+{
+"n": 2,
+"m": "B",
+"b": [
+"lei complementar federal",
+"dois estados",
+"instituída pelo estado"
+],
+"d": [
+"lei ordinária estadual",
+"três estados",
+"instituída pela União"
+]
+},
+{
+"n": 6,
+"m": "B",
+"b": [
+"maior núcleo",
+"participação relativa menor",
+"Periferia Metropolitana"
+],
+"d": [
+"menor núcleo",
+"participação relativa maior"
+]
+},
+{
+"n": 7,
+"m": "B",
+"b": [
+"coordena, aprova e supervisiona",
+"não tem poder de assumir a execução"
+],
+"d": [
+"executa diretamente",
+"pode substituir as administrações"
+]
+},
+{
+"n": 8,
+"m": "B",
+"b": [
+"delimitação territorial",
+"infraestrutura e geração de empregos"
+],
+"d": [
+"delimitação populacional",
+"saúde e educação"
+]
+},
+{
+"n": 10,
+"m": "B",
+"b": [
+"automática por força da lei",
+"Poder Executivo"
+],
+"d": [
+"depende de autorização",
+"Congresso Nacional"
+]
+},
+{
+"n": 12,
+"m": "B",
+"b": [
+"articular a ação administrativa",
+"Goiás, Minas Gerais"
+],
+"d": [
+"unificar a legislação",
+"Goiás, Tocantins"
+]
+},
+{
+"n": 13,
+"m": "B",
+"b": [
+"três regiões hidrográficas",
+"ultrapassa seus limites"
+],
+"d": [
+"duas regiões hidrográficas",
+"limita-se ao DF"
+]
+},
+{
+"n": 14,
+"m": "B",
+"b": [
+"infraestrutura básica e geração de empregos",
+"saúde, educação e segurança"
+],
+"d": [
+"saúde e educação",
+"segurança pública"
+]
+},
+{
+"n": 15,
+"m": "B",
+"t": "Segundo o Anuário do FBSP, em 2023 as mortes violentas intencionais caíram no Brasil.",
+"b": [
+"caíram"
+],
+"d": [
+"cresceram",
+"ficaram estáveis"
+]
+},
+{
+"n": 20,
+"m": "B",
+"b": [
+"Arinos, Buritis, Cabeceira Grande e Unaí",
+"Cabeceiras e Formosa"
+],
+"d": [
+"Arinos, Formosa, Cabeceira Grande e Unaí",
+"Buritis e Luziânia"
+]
+},
+{
+"n": 21,
+"m": "B",
+"b": [
+"reduz a proporção",
+"envelhece a população"
+],
+"d": [
+"aumenta a proporção",
+"rejuvenesce a população"
+]
+},
+{
+"n": 22,
+"m": "B",
+"t": "Dos municípios da RIDE-DF listados, só Arinos, Buritis, Cabeceira Grande e Unaí são de Minas Gerais; Abadiânia, Barro Alto, Cabeceiras, Formosa, Luziânia e Planaltina são goianos.",
+"b": [
+"Arinos, Buritis, Cabeceira Grande e Unaí",
+"goianos"
+],
+"d": [
+"Abadiânia, Buritis, Formosa e Unaí",
+"mineiros"
+]
+},
+{
+"n": 26,
+"m": "B",
+"b": [
+"infraestrutura",
+"geração de empregos"
+],
+"d": [
+"desenvolvimento integrado",
+"saúde"
+]
+},
+{
+"n": 27,
+"m": "B",
+"b": [
+"se declara indígena",
+"registrou população indígena",
+"não explica"
+],
+"d": [
+"mora em terra indígena",
+"não registrou"
+]
+},
+{
+"n": 33,
+"m": "B",
+"b": [
+"harmonizar",
+"planos regionais de desenvolvimento"
+],
+"d": [
+"revogar",
+"planos diretores municipais"
+]
+},
+{
+"n": 34,
+"m": "B",
+"b": [
+"grilagem e parcelamentos irregulares",
+"desmatamento do Cerrado",
+"pressão sobre mananciais"
+],
+"d": [
+"mineração",
+"reflorestamento",
+"sem impacto ambiental"
+]
+},
+{
+"n": 35,
+"m": "B",
+"b": [
+"passam a integrar",
+"automaticamente"
+],
+"d": [
+"deixam de integrar",
+"mediante autorização"
+]
+},
+{
+"n": 36,
+"m": "B",
+"b": [
+"Descoberto e do São Bartolomeu",
+"maiores pressões",
+"descumprem o zoneamento ambiental"
+],
+"d": [
+"Paranoá e do Corumbá",
+"menores pressões",
+"respeitam o zoneamento ambiental"
+]
+},
+{
+"n": 38,
+"m": "B",
+"b": [
+"assimetrias persistem",
+"maior parte do PIB regional"
+],
+"d": [
+"desigualdades foram eliminadas",
+"metade do PIB regional"
+]
+},
+{
+"n": 39,
+"m": "B",
+"b": [
+"não unificou",
+"cada município mantém sua autonomia normativa"
+],
+"d": [
+"integrou",
+"uniformizou"
+]
+},
+{
+"n": 40,
+"m": "B",
+"b": [
+"serviços públicos comuns ao DF e aos municípios",
+"serviços específicos do DF"
+],
+"d": [
+"serviços públicos exclusivos do DF",
+"serviços federais"
+]
+},
+{
+"n": 42,
+"m": "B",
+"b": [
+"coordena, aprova e supervisiona",
+"sem competência para alocar"
+],
+"d": [
+"executa e gerencia",
+"com competência para alocar"
+]
+},
+{
+"n": 43,
+"m": "B",
+"b": [
+"Cabeceira Grande",
+"Minas Gerais"
+],
+"d": [
+"Cabeceiras",
+"Tocantins"
+]
+},
+{
+"n": 44,
+"m": "B",
+"b": [
+"cinco maiores municípios",
+"todos em Goiás",
+"Unaí"
+],
+"d": [
+"três maiores municípios",
+"todos em Minas Gerais",
+"Arinos"
+]
+},
+{
+"n": 45,
+"m": "B",
+"t": "Cerca de dois terços da população da RIDE-DF (total de cerca de 4,5 milhões) residem no DF, e o terço restante, sobretudo em Goiás.",
+"b": [
+"dois terços",
+"sobretudo em Goiás"
+],
+"d": [
+"metade",
+"sobretudo em Minas Gerais"
+]
+},
+{
+"n": 48,
+"m": "B",
+"b": [
+"Pico do Roncador",
+"Brazlândia"
+],
+"d": [
+"Pico do Descoberto",
+"Planaltina"
+]
+},
+{
+"n": 49,
+"m": "B",
+"b": [
+"Todo o território",
+"bioma Cerrado",
+"sem porções fragmentadas"
+],
+"d": [
+"Parte do território",
+"bioma Caatinga",
+"com porções fragmentadas"
+]
+},
+{
+"n": 51,
+"m": "B",
+"b": [
+"apenas nascentes",
+"baixa disponibilidade hídrica per capita"
+],
+"d": [
+"grandes rios",
+"alta disponibilidade hídrica per capita"
+]
+},
+{
+"n": 53,
+"m": "B",
+"t": "No Distrito Federal, a capacidade de armazenamento de água dos aquíferos não é alta em todo o território.",
+"b": [
+"não é alta",
+"em todo o território"
+],
+"d": [
+"é muito alta",
+"apenas na área urbana"
+]
+},
+{
+"n": 55,
+"m": "B",
+"b": [
+"proteção integral",
+"visitação proibida",
+"educacionais e pesquisa"
+],
+"d": [
+"uso sustentável",
+"visitação livre",
+"turísticos e recreativos"
+]
+},
+{
+"n": 56,
+"m": "B",
+"b": [
+"Parque Nacional de Brasília",
+"abastece parte do DF"
+],
+"d": [
+"Estação Ecológica de Águas Emendadas",
+"abastece todo o DF"
+]
+},
+{
+"n": 57,
+"m": "B",
+"b": [
+"duas estações definidas",
+"polar atlântica",
+"inverno seco"
+],
+"d": [
+"quatro estações definidas",
+"equatorial continental",
+"verão chuvoso"
+]
+},
+{
+"n": 60,
+"m": "B",
+"b": [
+"pobres em nutrientes",
+"baixa fertilidade natural",
+"calagem"
+],
+"d": [
+"ricos em nutrientes",
+"alta fertilidade natural",
+"irrigação"
+]
+},
+{
+"n": 64,
+"m": "B",
+"b": [
+"UDN",
+"principal opositora"
+],
+"d": [
+"PTB",
+"principal apoiadora"
+]
+},
+{
+"n": 76,
+"m": "B",
+"b": [
+"7 de dezembro de 1987",
+"plano urbanístico de Lúcio Costa"
+],
+"d": [
+"21 de abril de 1960",
+"projeto arquitetônico de Oscar Niemeyer"
+]
+},
+{
+"n": 77,
+"m": "B",
+"b": [
+"período colonial",
+"século XIX"
+],
+"d": [
+"período republicano",
+"século XX"
+]
+},
+{
+"n": 79,
+"m": "B",
+"b": [
+"quase só ao Plano Piloto",
+"não o reproduz integralmente"
+],
+"d": [
+"a todo o DF",
+"o reproduz fielmente"
+]
+},
+{
+"n": 82,
+"m": "B",
+"b": [
+"PIB per capita elevado",
+"desigualdade de renda"
+],
+"d": [
+"PIB per capita baixo",
+"homogeneidade de renda"
+]
+},
+{
+"n": 84,
+"m": "B",
+"b": [
+"Lúcio Costa",
+"desordenada",
+"grilagem"
+],
+"d": [
+"Oscar Niemeyer",
+"controlada",
+"tombamento"
+]
+},
+{
+"n": 88,
+"m": "B",
+"b": [
+"alto custo de vida e de moradia",
+"imóveis mais baratos",
+"sobrecarrega"
+],
+"d": [
+"baixo custo de vida e de moradia",
+"imóveis mais caros",
+"desafoga"
+]
+},
+{
+"n": 91,
+"m": "B",
+"b": [
+"Planaltina",
+"Recanto das Emas",
+"dezembro de 2022"
+],
+"d": [
+"Sobradinho",
+"Samambaia",
+"dezembro de 2012"
+]
+},
+{
+"n": 93,
+"m": "B",
+"b": [
+"Câmara do Livro do DF",
+"início do século XXI",
+"lei distrital"
+],
+"d": [
+"Secretaria de Cultura",
+"final do século XX",
+"decreto federal"
+]
+},
+{
+"n": 97,
+"m": "B",
+"b": [
+"dentro do DF",
+"canteiros de obras e acampamentos"
+],
+"d": [
+"fora do DF",
+"fazendas do Entorno"
+]
+},
+{
+"n": 99,
+"m": "B",
+"b": [
+"Estados e Municípios abrangidos",
+"União e do DF",
+"federativa e compartilhada"
+],
+"d": [
+"apenas do DF",
+"apenas da União",
+"centralizada"
+]
+},
+{
+"n": 101,
+"m": "B",
+"b": [
+"diversa",
+"Nordeste e de Minas Gerais"
+],
+"d": [
+"homogênea",
+"Sul e do Sudeste"
+]
+},
+{
+"n": 102,
+"m": "B",
+"b": [
+"bacia do Paraná",
+"5 das 7 bacias",
+"100% Cerrado"
+],
+"d": [
+"bacia do Tocantins",
+"3 das 7 bacias",
+"100% Mata Atlântica"
+]
+},
+{
+"n": 103,
+"m": "B",
+"t": "O DF tem saneamento de destaque: água tratada e esgoto coletado e tratado atendem a maior parte da população urbana.",
+"b": [
+"maior parte"
+],
+"d": [
+"toda a população",
+"apenas metade"
+]
+},
+{
+"n": 104,
+"m": "B",
+"b": [
+"Ceilândia",
+"Niemeyer",
+"cultura nordestina"
+],
+"d": [
+"Taguatinga",
+"Lúcio Costa",
+"cultura indígena"
+]
+},
+{
+"n": 105,
+"m": "B",
+"b": [
+"RAs periféricas e do Entorno",
+"Plano Piloto"
+],
+"d": [
+"Lago Sul",
+"Ceilândia"
+]
+},
+{
+"n": 106,
+"m": "B",
+"b": [
+"33 municípios",
+"12 goianos",
+"recortes distintos"
+],
+"d": [
+"recortes idênticos",
+"27 municípios",
+"8 goianos"
+]
+},
+{
+"n": 108,
+"m": "B",
+"b": [
+"Só o Plano Piloto",
+"espontânea e desordenada"
+],
+"d": [
+"todas as RAs",
+"planejada e ordenada"
+]
+},
+{
+"n": 109,
+"m": "B",
+"b": [
+"não têm prefeitos eleitos",
+"nomeado",
+"Governador do DF"
+],
+"d": [
+"Câmara Legislativa",
+"escolhido pelos moradores",
+"Presidente da República"
+]
+},
+{
+"n": 110,
+"m": "B",
+"b": [
+"núcleo provisório",
+"operários e comércio"
+],
+"d": [
+"núcleo definitivo",
+"funcionários públicos"
+]
+},
+{
+"n": 112,
+"m": "B",
+"b": [
+"1892",
+"14.400 km²",
+"Quadrilátero Cruls"
+],
+"d": [
+"1922",
+"52.000 km²",
+"Quadrilátero Belcher"
+]
+},
+{
+"n": 113,
+"m": "B",
+"b": [
+"não é fixo",
+"35",
+"lei da Câmara Legislativa"
+],
+"d": [
+"31",
+"emenda constitucional",
+"decreto do Governador"
+]
+},
+{
+"n": 115,
+"m": "B",
+"b": [
+"alta tecnologia",
+"milho e soja"
+],
+"d": [
+"baixa tecnologia",
+"arroz e feijão"
+]
+},
+{
+"n": 116,
+"m": "B",
+"b": [
+"forte oposição",
+"UDN nacional",
+"não houve unanimidade"
+],
+"d": [
+"amplo apoio",
+"PTB",
+"unanimidade de apoio"
+]
+},
+{
+"n": 118,
+"m": "B",
+"b": [
+"CAESB",
+"entre os melhores do país"
+],
+"d": [
+"Saneago",
+"entre os piores do país"
+]
+},
+{
+"n": 119,
+"m": "B",
+"t": "Os latossolos do DF têm alta permeabilidade, por serem solos porosos e bem drenados.",
+"b": [
+"alta permeabilidade",
+"porosos e bem drenados"
+],
+"d": [
+"baixa permeabilidade",
+"argilosos e encharcados"
+]
+},
+{
+"n": 121,
+"m": "B",
+"b": [
+"Meta-Síntese",
+"31ª meta",
+"30 originais"
+],
+"d": [
+"Meta-Base",
+"30ª meta",
+"50 originais"
+]
+},
+{
+"n": 122,
+"m": "B",
+"b": [
+"Corumbá IV",
+"compartilhada",
+"Saneago"
+],
+"d": [
+"Descoberto",
+"exclusiva da CAESB",
+"Neoenergia"
+]
+},
+{
+"n": 123,
+"m": "C",
+"b": [
+"COARIDE",
+"compatibilização",
+"planos de desenvolvimento regionais"
+],
+"d": [
+"SUDECO",
+"fiscalização",
+"orçamentos municipais"
+]
+},
+{
+"n": 124,
+"m": "B",
+"b": [
+"100%",
+"segundo maior bioma"
+],
+"d": [
+"60%",
+"terceiro maior bioma"
+]
+},
+{
+"n": 129,
+"m": "B",
+"b": [
+"só viriam após a saturação",
+"polinucleado"
+],
+"d": [
+"desde o início",
+"monocêntrico"
+]
+},
+{
+"n": 130,
+"m": "B",
+"b": [
+"cargo na burocracia e renda",
+"operários de baixa renda"
+],
+"d": [
+"sorteio público",
+"servidores de alta renda"
+]
+},
+{
+"n": 131,
+"m": "B",
+"b": [
+"integração social",
+"reproduz a desigualdade"
+],
+"d": [
+"segregação social",
+"supera a desigualdade"
+]
+},
+{
+"n": 133,
+"m": "B",
+"b": [
+"registram",
+"indígena"
+],
+"d": [
+"não registram",
+"quilombola"
+]
+},
+{
+"n": 134,
+"m": "B",
+"b": [
+"oito",
+"piso"
+],
+"d": [
+"onze",
+"três",
+"teto"
+]
+},
+{
+"n": 135,
+"m": "B",
+"b": [
+"Jardim Botânico",
+"renda média"
+],
+"d": [
+"Paranoá",
+"renda baixa"
+]
+},
+{
+"n": 136,
+"m": "B",
+"t": "No Parque Nacional de Brasília, a proteção integral impede ocupação urbana no interior do parque.",
+"b": [
+"proteção integral",
+"impede ocupação urbana"
+],
+"d": [
+"uso sustentável",
+"permite ocupação urbana"
+]
+},
+{
+"n": 138,
+"m": "B",
+"b": [
+"integra a RIDE",
+"não os 12 municípios"
+],
+"d": [
+"integra a AMB",
+"todos os 12 municípios"
+]
+},
+{
+"n": 139,
+"m": "B",
+"b": [
+"mais de 80%",
+"serviços privados e agropecuária"
+],
+"d": [
+"menos de 50%",
+"indústria pesada"
+]
+},
+{
+"n": 140,
+"m": "B",
+"b": [
+"só pelos municípios listados em lei",
+"não basta"
+],
+"d": [
+"todos os municípios polarizados",
+"é suficiente"
+]
+},
+{
+"n": 143,
+"m": "B",
+"b": [
+"cargo na burocracia civil e militar",
+"estratificada"
+],
+"d": [
+"sorteio entre todas as famílias",
+"igualitária"
+]
+},
+{
+"n": 144,
+"m": "B",
+"b": [
+"Milho e soja",
+"terceiro lugar"
+],
+"d": [
+"Arroz e sorgo",
+"segundo lugar"
+]
+},
+{
+"n": 145,
+"m": "B",
+"b": [
+"compartilhada",
+"Saneago",
+"não foi unilateral"
+],
+"d": [
+"exclusiva",
+"Neoenergia"
+]
+},
+{
+"n": 146,
+"m": "B",
+"b": [
+"33 municípios",
+"12 municípios goianos",
+"não compreendem o mesmo espaço"
+],
+"d": [
+"27 municípios",
+"8 municípios goianos",
+"compreendem espaços idênticos"
+]
+},
+{
+"n": 147,
+"m": "B",
+"b": [
+"maioria",
+"nasceu no próprio DF"
+],
+"d": [
+"minoria",
+"nasceu em outros estados"
+]
+},
+{
+"n": 148,
+"m": "B",
+"t": "Cabeceira Grande é município mineiro; só Cabeceiras pertence a Goiás.",
+"b": [
+"mineiro",
+"Goiás"
+],
+"d": [
+"goiano",
+"Minas Gerais"
+]
+},
+{
+"n": 149,
+"m": "B",
+"b": [
+"goianos",
+"Censo 2022"
+],
+"d": [
+"mineiros",
+"Censo 1991"
+]
+},
+{
+"n": 150,
+"m": "C",
+"b": [
+"cerca de 2/3",
+"estado de Goiás"
+],
+"d": [
+"cerca de 1/3",
+"estado de Minas Gerais"
+]
+},
+{
+"n": 151,
+"m": "B",
+"b": [
+"caiu",
+"inserção da mulher no mercado de trabalho"
+],
+"d": [
+"subiu",
+"baixa escolaridade e renda"
+]
+},
+{
+"n": 153,
+"m": "B",
+"b": [
+"12 municípios goianos",
+"mineiros ficam de fora"
+],
+"d": [
+"33 municípios",
+"goianos e mineiros"
+]
+},
+{
+"n": 154,
+"m": "B",
+"b": [
+"Águas Lindas de Goiás",
+"Novo Gama"
+],
+"d": [
+"Cristalina",
+"Alexânia",
+"Formosa"
+]
+},
+{
+"n": 155,
+"m": "B",
+"b": [
+"proposta técnica",
+"não implantou região metropolitana oficial"
+],
+"d": [
+"lei federal",
+"criou a região metropolitana oficial"
+]
+},
+{
+"n": 156,
+"m": "B",
+"b": [
+"Lúcio Costa",
+"arquiteto dos monumentos"
+],
+"d": [
+"Oscar Niemeyer",
+"Burle Marx"
+]
+},
+{
+"n": 157,
+"m": "B",
+"b": [
+"1986",
+"1990"
+],
+"d": [
+"1982",
+"1994"
+]
+},
+{
+"n": 158,
+"m": "B",
+"b": [
+"fogo na estiagem",
+"expansão urbana"
+],
+"d": [
+"extração mineral",
+"turismo de natureza"
+]
+},
+{
+"n": 162,
+"m": "B",
+"b": [
+"Rio Doce",
+"sete bacias"
+],
+"d": [
+"Rio Preto",
+"dez bacias"
+]
+},
+{
+"n": 165,
+"m": "B",
+"b": [
+"três bacias",
+"Paraná"
+],
+"d": [
+"duas bacias",
+"Amazonas"
+]
+},
+{
+"n": 167,
+"m": "B",
+"b": [
+"duas estações",
+"verão chuvoso e inverno seco"
+],
+"d": [
+"quatro estações",
+"verão seco e inverno chuvoso"
+]
+},
+{
+"n": 170,
+"m": "B",
+"t": "O cinturão verde do DF reúne hortaliças e frutas de polos como Brazlândia e Vargem Bonita, que abastecem a capital.",
+"b": [
+"hortaliças e frutas",
+"abastecem a capital"
+],
+"d": [
+"grãos e pecuária",
+"exportam para o exterior"
+]
+},
+{
+"n": 174,
+"m": "C",
+"b": [
+"admitem atividades econômicas compatíveis",
+"proteção integral"
+],
+"d": [
+"vedam atividades econômicas",
+"uso sustentável"
+]
+},
+{
+"n": 175,
+"m": "B",
+"t": "O DF tem unidades de proteção integral e também de uso sustentável, como a APA do Planalto Central, que admitem atividades compatíveis.",
+"b": [
+"uso sustentável",
+"APA do Planalto Central"
+],
+"d": [
+"uso restrito",
+"Parque Nacional de Brasília"
+]
+},
+{
+"n": 176,
+"m": "B",
+"t": "O DF tem o maior IDH do país, mas um dos maiores índices de Gini: desigualdade entre as RAs.",
+"b": [
+"maior IDH",
+"índices de Gini"
+],
+"d": [
+"menor IDH",
+"índices de analfabetismo"
+]
+},
+{
+"n": 177,
+"m": "B",
+"b": [
+"Ceilândia",
+"parcela minoritária"
+],
+"d": [
+"Taguatinga",
+"maioria absoluta"
+]
+},
+{
+"n": 179,
+"m": "B",
+"t": "Ceilândia é a RA mais populosa do DF.",
+"b": [
+"Ceilândia",
+"mais populosa"
+],
+"d": [
+"Samambaia",
+"Taguatinga",
+"menos populosa"
+]
+},
+{
+"n": 180,
+"m": "B",
+"b": [
+"Lago Sul",
+"SCIA/Estrutural"
+],
+"d": [
+"Ceilândia",
+"Sobradinho"
+]
+},
+{
+"n": 181,
+"m": "B",
+"b": [
+"várias localidades e períodos",
+"não ficam restritas"
+],
+"d": [
+"apenas as mais antigas",
+"ocorrem só em áreas rurais"
+]
+},
+{
+"n": 185,
+"m": "A",
+"r": [
+[
+"nunca enfrentou",
+"já enfrentou"
+],
+[
+"dada a abundância",
+"apesar da abundância"
+]
+],
+"b": [
+"já enfrentou",
+"apesar da abundância"
+],
+"d": [
+"nunca enfrentou",
+"em razão da abundância",
+"jamais sofreu"
+]
+},
+{
+"n": 188,
+"m": "A",
+"r": [
+[
+"ocorreu de forma mais lenta do que o crescimento",
+"ocorreu em ritmo superior ao crescimento"
+]
+],
+"b": [
+"ritmo superior"
+],
+"d": [
+"ritmo inferior",
+"ritmo idêntico",
+"mais lenta"
+]
+},
+{
+"n": 189,
+"m": "B",
+"t": "Águas Lindas de Goiás e Valparaíso de Goiás integram a Periferia Metropolitana de Brasília, ligada ao DF pelo movimento pendular.",
+"b": [
+"Periferia Metropolitana de Brasília",
+"movimento pendular"
+],
+"d": [
+"Núcleo Metropolitano de Brasília",
+"êxodo rural"
+]
+},
+{
+"n": 191,
+"m": "A",
+"r": [
+[
+"impede, sem qualquer exceção, toda e qualquer construção nova",
+"impõe restrições e diretrizes, mas admite construções compatíveis"
+]
+],
+"b": [
+"impõe restrições e diretrizes",
+"admite construções compatíveis"
+],
+"d": [
+"impede toda construção",
+"proíbe qualquer obra",
+"veda construções novas"
+]
+},
+{
+"n": 193,
+"m": "B",
+"t": "Roberto Burle Marx foi o paisagista mestre no uso de vegetação nativa, como nos jardins do Teatro Nacional e da 308 Sul.",
+"b": [
+"Roberto Burle Marx",
+"vegetação nativa"
+],
+"d": [
+"Lúcio Costa",
+"plantas exóticas"
+]
+},
+{
+"n": 194,
+"m": "C",
+"b": [
+"não é dividido em municípios",
+"Regiões Administrativas"
+],
+"d": [
+"Setores Habitacionais",
+"subprefeituras",
+"Territórios Federais"
+]
+},
+{
+"n": 195,
+"m": "A",
+"r": [
+[
+"possuem autonomia política e legislativa própria, de forma semelhante à dos municípios brasileiros",
+"são subdivisões administrativas sem autonomia política e legislativa, ao contrário dos municípios brasileiros"
+]
+],
+"b": [
+"sem autonomia política e legislativa",
+"ao contrário dos municípios"
+],
+"d": [
+"com autonomia política",
+"semelhante à dos Estados",
+"autonomia apenas legislativa"
+]
+},
+{
+"n": 196,
+"m": "C",
+"b": [
+"aumentado",
+"desmembramento de áreas já existentes"
+],
+"d": [
+"diminuído",
+"fusão de áreas",
+"permanecido estável"
+]
+},
+{
+"n": 197,
+"m": "A",
+"r": [
+[
+"governada por um prefeito eleito diretamente pela população local, nos moldes do modelo municipal",
+"administrada por administrador regional nomeado pelo Governador"
+]
+],
+"b": [
+"administrador regional",
+"nomeado pelo Governador"
+],
+"d": [
+"prefeito eleito",
+"eleito pela população local",
+"indicado pela Câmara Legislativa"
+]
+},
+{
+"n": 199,
+"m": "C",
+"b": [
+"candangos",
+"papel central"
+],
+"d": [
+"pioneiros",
+"papel secundário",
+"bandeirantes"
+]
+},
+{
+"n": 202,
+"m": "A",
+"r": [
+[
+"em sua totalidade, na bacia hidrográfica do rio São Francisco",
+"em três bacias: Paraná, São Francisco e Tocantins-Araguaia"
+]
+],
+"b": [
+"três bacias",
+"Paraná",
+"Tocantins-Araguaia"
+],
+"d": [
+"duas bacias",
+"Parnaíba",
+"Amazônica"
+]
+},
+{
+"n": 203,
+"m": "B",
+"t": "O Lago Paranoá é um reservatório artificial represado entre 1957 e 1960, com funções paisagística, de lazer e de energia.",
+"b": [
+"reservatório artificial",
+"1957 e 1960"
+],
+"d": [
+"lago natural",
+"1940 e 1945"
+]
+},
+{
+"n": 4,
+"m": "B",
+"b": [
+"instâncias de apoio",
+"planejamento e à articulação regional"
+],
+"d": [
+"órgãos deliberativos",
+"fiscalização financeira"
+]
+},
+{
+"n": 5,
+"m": "B",
+"b": [
+"Poder Executivo",
+"RIDE, o conselho e o programa"
+],
+"d": [
+"Poder Judiciário",
+"Ministério das Cidades"
+]
+},
+{
+"n": 9,
+"m": "A",
+"r": [
+[
+"implicou a transferência, para esse comitê, da",
+"não implicou transferência da"
+],
+[
+", retirando tal atribuição do COARIDE",
+", que continua com o COARIDE"
+]
+],
+"b": [
+"não implicou transferência",
+"continua com o COARIDE"
+],
+"d": [
+"implicou a transferência",
+"passa ao comitê",
+"foi extinta"
+]
+},
+{
+"n": 24,
+"m": "B",
+"t": "Os recursos que financiam os programas prioritários da RIDE incluem operações de crédito internas e externas, além de dotações da União, do DF, dos estados e dos municípios.",
+"b": [
+"internas e externas"
+],
+"d": [
+"somente internas",
+"somente externas"
+]
+},
+{
+"n": 28,
+"m": "B",
+"b": [
+"comuns ao DF e aos municípios",
+"exclusivos de um ente"
+],
+"d": [
+"exclusivos dos municípios",
+"comuns à União e aos municípios"
+]
+},
+{
+"n": 30,
+"m": "B",
+"t": "Os programas prioritários da RIDE são financiados por dotações da União, do DF, de GO, de MG e dos municípios e por operações de crédito interno e externo, e não por doações privadas ou fundo único.",
+"b": [
+"crédito interno e externo",
+"doações privadas",
+"fundo único"
+],
+"d": [
+"crédito apenas interno",
+"convênios internacionais",
+"Fundo Constitucional"
+]
+},
+{
+"n": 32,
+"m": "B",
+"b": [
+"comuns ao DF e aos municípios",
+"infraestrutura e geração de empregos",
+"apenas saúde e educação"
+],
+"d": [
+"segurança pública e transporte",
+"comuns à União e aos Estados",
+"todos os serviços do DF"
+]
+},
+{
+"n": 41,
+"m": "B",
+"b": [
+"automaticamente",
+"sem depender de conselho ou de municípios"
+],
+"d": [
+"mediante aprovação de dois terços",
+"após oitiva do Conselho Administrativo"
+]
+},
+{
+"n": 72,
+"m": "B",
+"b": [
+"Cidade Livre",
+"Lonalândia",
+"não planejados por Lúcio Costa"
+],
+"d": [
+"Vila Tenório",
+"Cidade de Tábuas",
+"Vila Planalto"
+]
+},
+{
+"n": 83,
+"m": "B",
+"b": [
+"menor escolaridade"
+],
+"d": [
+"maior escolaridade",
+"escolaridade igual"
+]
+},
+{
+"n": 89,
+"m": "B",
+"b": [
+"vedada a divisão do DF em Municípios",
+"sui generis",
+"35 regiões administrativas"
+],
+"d": [
+"autorizada a divisão",
+"ente autônomo",
+"31 regiões administrativas"
+]
+},
+{
+"n": 90,
+"m": "B",
+"b": [
+"depredação de obras de arte",
+"danos a móveis e documentos",
+"incêndio total do STF"
+],
+"d": [
+"saque de armamento",
+"incêndio parcial",
+"bomba na Esplanada"
+]
+},
+{
+"n": 92,
+"m": "B",
+"b": [
+"após a posse de Lula",
+"contestavam o novo governo",
+"não foram pacíficos"
+],
+"d": [
+"antes da posse de Lula",
+"apoiavam o novo governo",
+"foram organizados e ordeiros"
+]
+},
+{
+"n": 98,
+"m": "B",
+"t": "O reservatório de Corumbá IV tem múltiplos usos: energia, água potável, turismo, esportes náuticos e preservação ambiental, e não apenas um.",
+"b": [
+"múltiplos usos"
+],
+"d": [
+"uso único",
+"apenas geração de energia"
+]
+},
+{
+"n": 114,
+"m": "B",
+"b": [
+"lago artificial",
+"século XIX"
+],
+"d": [
+"lago natural",
+"século XX"
+]
+},
+{
+"n": 159,
+"m": "B",
+"b": [
+"mais da metade",
+"fragmentou habitats",
+"não trouxe sustentabilidade"
+],
+"d": [
+"menos da metade",
+"preservou habitats",
+"garantiu sustentabilidade"
+]
+},
+{
+"n": 160,
+"m": "B",
+"t": "Em toneladas dominam os grãos: milho e soja à frente, com sorgo e feijão logo depois.",
+"b": [
+"milho e soja",
+"sorgo e feijão"
+],
+"d": [
+"alface e cebola",
+"café e trigo",
+"girassol e morango"
+]
+},
+{
+"n": 166,
+"m": "B",
+"b": [
+"5.760 km²",
+"Goiás",
+"sudeste com Minas Gerais"
+],
+"d": [
+"7.200 km²",
+"Tocantins",
+"nordeste com a Bahia"
+]
+},
+{
+"n": 184,
+"m": "B",
+"t": "O Sistema Descoberto, em Brazlândia, é o principal reservatório do DF e abastece mais de 60% da população, sob gestão da Caesb.",
+"b": [
+"Sistema Descoberto",
+"60%"
+],
+"d": [
+"Sistema Corumbá",
+"30%",
+"Lago Paranoá"
+]
+}
+]

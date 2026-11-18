@@ -180,34 +180,28 @@
 },
 {
 "n": 37,
-"m": "A",
-"r": [
-[
-"com maior idade",
-"mais antigo no cargo (e, se igual a antiguidade, com o mais idoso)"
-]
-],
+"m": "B",
+"t": "No empate em eleição para presidente do TCDF, o desempate dar-se-á em favor do conselheiro mais antigo no cargo e, se igual a antiguidade, do mais idoso.",
 "b": [
 "mais antigo no cargo",
 "mais idoso"
 ],
 "d": [
-"maior idade",
-"mais novo",
-"sorteio"
+"mais jovem",
+"sorteio",
+"mais novo no cargo"
 ]
 },
 {
 "n": 42,
 "m": "B",
-"t": "Um dos requisitos para a investidura no cargo de conselheiro do TCDF é ter menos de sessenta e cinco anos de idade.",
+"t": "Para a investidura no cargo de conselheiro do TCDF, exige-se ter menos de sessenta e cinco anos de idade.",
 "b": [
-"menos de sessenta e cinco anos",
-"conselheiro do TCDF"
+"menos de sessenta e cinco anos"
 ],
 "d": [
 "menos de setenta anos",
-"mais de trinta e cinco anos"
+"mais de sessenta e cinco anos"
 ]
 },
 {
@@ -300,7 +294,6 @@
 "m": "B",
 "t": "A expedição de certidões requeridas ao TCDF cabe ao presidente do tribunal.",
 "b": [
-"expedição de certidões",
 "presidente do tribunal"
 ],
 "d": [
@@ -337,14 +330,13 @@
 {
 "n": 66,
 "m": "B",
-"t": "Existe no TCDF o cargo de conselheiro de relações institucionais, que exerce as atribuições de zelar pela representação do tribunal perante outras instituições públicas.",
+"t": "Existe no TCDF o cargo de conselheiro de relações institucionais, a quem cabe zelar pela representação do tribunal perante outras instituições públicas.",
 "b": [
-"conselheiro de relações institucionais",
-"representação do tribunal"
+"conselheiro de relações institucionais"
 ],
 "d": [
-"presidente da corte de contas",
-"Corregedor"
+"Corregedor",
+"Ouvidor"
 ]
 },
 {
@@ -428,16 +420,10 @@
 },
 {
 "n": 87,
-"m": "A",
-"r": [
-[
-"ao Presidente do tribunal, ainda que ele não tenha proferido o voto vencedor",
-"ao conselheiro que tenha proferido o voto vencedor"
-]
-],
+"m": "B",
+"t": "Vencido o relator, a redação do acórdão caberá ao conselheiro que tenha proferido o voto vencedor.",
 "b": [
-"redação do acórdão",
-"voto vencedor"
+"conselheiro que tenha proferido o voto vencedor"
 ],
 "d": [
 "Presidente do tribunal",
@@ -818,20 +804,14 @@
 },
 {
 "n": 143,
-"m": "A",
-"r": [
-[
-"possui efeito suspensivo automático, obstaculizando de imediato a execução do acórdão sancionatório e a respectiva inscrição do gestor nos cadastros de inadimplentes da administração pública",
-"não possui efeito suspensivo"
-]
-],
+"m": "B",
+"t": "O recurso de revisão contra decisão definitiva do TCDF em processo de prestação ou tomada de contas não possui efeito suspensivo.",
 "b": [
-"recurso de revisão",
 "não possui efeito suspensivo"
 ],
 "d": [
-"recurso de reconsideração",
-"possui efeito suspensivo automático"
+"possui efeito suspensivo automático",
+"suspende de imediato a execução"
 ]
 },
 {
@@ -951,13 +931,14 @@
 {
 "n": 154,
 "m": "B",
+"t": "A resposta do TCDF à consulta tem caráter normativo e constitui prejulgamento da tese; só podem consultar autoridades legitimadas, não dirigentes de entidades sindicais.",
 "b": [
 "caráter normativo",
-"dirigentes de entidades sindicais"
+"autoridades legitimadas"
 ],
 "d": [
 "caráter meramente consultivo",
-"órgãos de classe"
+"qualquer entidade sindical"
 ]
 },
 {
@@ -1156,20 +1137,16 @@
 },
 {
 "n": 184,
-"m": "A",
-"r": [
-[
-"quaisquer servidores ocupantes de cargos em comissão de assessoria jurídica ou chefia administrativa do órgão interessado",
-"os dirigentes máximos do órgão interessado ou seus substitutos legalmente designados"
-]
-],
+"m": "B",
+"t": "Os pedidos de prorrogação de prazo formulados por autarquias, fundações e órgãos do Complexo Administrativo do Distrito Federal podem ser subscritos pelos dirigentes máximos do órgão interessado ou por seus substitutos legalmente designados.",
 "b": [
 "dirigentes máximos",
 "substitutos legalmente designados"
 ],
 "d": [
-"assessoria jurídica",
-"chefia administrativa"
+"assessores jurídicos",
+"chefes administrativos",
+"quaisquer servidores comissionados"
 ]
 },
 {
@@ -1387,20 +1364,14 @@
 },
 {
 "n": 211,
-"m": "A",
-"r": [
-[
-"a partir do ato formal de sua nomeação publicada no Diário Oficial do DF, antes mesmo do respectivo compromisso de posse",
-"a partir da posse"
-]
-],
+"m": "B",
+"t": "Os Conselheiros do TCDF gozam de vitaliciedade, inamovibilidade e irredutibilidade de subsídios, garantias asseguradas a partir da posse.",
 "b": [
-"inamovibilidade",
 "a partir da posse"
 ],
 "d": [
-"nomeação",
-"aprovação pelo Plenário"
+"a partir da nomeação publicada",
+"a partir da aprovação pelo Plenário"
 ]
 },
 {
@@ -1454,20 +1425,16 @@
 },
 {
 "n": 100,
-"m": "A",
-"r": [
-[
-"e declaração de inidoneidade de licitante fraudador para participar de licitação na administração pública do Distrito Federal",
-"e nenhuma outra sanção"
-]
-],
+"m": "B",
+"t": "O Regimento Interno do TCDF prevê as sanções de multa e de inabilitação para cargo em comissão ou função de confiança, e nenhuma outra sanção.",
 "b": [
-"maioria absoluta",
+"multa",
 "nenhuma outra sanção"
 ],
 "d": [
-"dois terços",
-"declaração de inidoneidade"
+"advertência",
+"suspensão do direito de licitar",
+"qualquer outra sanção"
 ]
 },
 {

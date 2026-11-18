@@ -1,0 +1,1429 @@
+[
+{
+"n": 2,
+"m": "C",
+"b": [
+"trinta dias",
+"cinco dias úteis"
+],
+"d": [
+"quinze dias",
+"dez dias úteis"
+]
+},
+{
+"n": 5,
+"m": "A",
+"r": [
+[
+"deverá ser imediatamente instaurado processo administrativo disciplinar para apuração e regularização de sua situação funcional",
+"deverá ser notificado para optar no prazo de dez dias"
+]
+],
+"b": [
+"notificado para optar",
+"dez dias"
+],
+"d": [
+"cinco dias",
+"instaurado o processo disciplinar"
+]
+},
+{
+"n": 10,
+"m": "B",
+"b": [
+"gozo dos direitos políticos",
+"comprovado na posse"
+],
+"d": [
+"capacidade civil plena",
+"comprovado no concurso"
+]
+},
+{
+"n": 12,
+"m": "B",
+"b": [
+"exonerado",
+"não toma posse"
+],
+"d": [
+"demitido",
+"não é nomeado"
+]
+},
+{
+"n": 14,
+"m": "B",
+"b": [
+"reconduzido, aproveitado ou posto em disponibilidade",
+"reintegração do anterior ocupante"
+],
+"d": [
+"exonerado de ofício",
+"inabilitação em estágio probatório"
+]
+},
+{
+"n": 15,
+"m": "C",
+"b": [
+"posse",
+"requisitos para a investidura"
+],
+"d": [
+"nomeação",
+"exercício"
+]
+},
+{
+"n": 18,
+"m": "B",
+"b": [
+"de ofício",
+"não depende da concordância do servidor",
+"nova investidura"
+],
+"d": [
+"a pedido",
+"exige a concordância do servidor"
+]
+},
+{
+"n": 22,
+"m": "C",
+"b": [
+"recondução",
+"expressamente vedado",
+"efeito retroativo"
+],
+"d": [
+"promoção",
+"expressamente permitido"
+]
+},
+{
+"n": 24,
+"m": "B",
+"b": [
+"semestral",
+"trigésimo mês"
+],
+"d": [
+"anual",
+"quadragésimo mês"
+]
+},
+{
+"n": 25,
+"m": "B",
+"b": [
+"optar pela remuneração de um dos cargos",
+"vedado"
+],
+"d": [
+"acumular as remunerações",
+"permitido"
+]
+},
+{
+"n": 27,
+"m": "A",
+"r": [
+[
+"mesmo que de boa-fé, estará sujeito à sanção de demissão",
+"se provada a má-fé, estará sujeito à sanção de demissão"
+]
+],
+"b": [
+"má-fé",
+"demissão"
+],
+"d": [
+"boa-fé",
+"exoneração"
+]
+},
+{
+"n": 28,
+"m": "C",
+"b": [
+"técnica ou científica",
+"educação superior ou educação profissional"
+],
+"d": [
+"administrativa ou operacional",
+"ensino fundamental"
+]
+},
+{
+"n": 32,
+"m": "B",
+"b": [
+"até três períodos",
+"menos de dez dias"
+],
+"d": [
+"até dois períodos",
+"menos de cinco dias"
+]
+},
+{
+"n": 34,
+"m": "B",
+"b": [
+"por qualquer motivo",
+"setenta e duas horas"
+],
+"d": [
+"apenas se der causa",
+"quarenta e oito horas"
+]
+},
+{
+"n": 38,
+"m": "B",
+"b": [
+"veda a contagem cumulativa",
+"sem exceção para a acumulação lícita"
+],
+"d": [
+"permite a contagem cumulativa",
+"salvo acumulação lícita"
+]
+},
+{
+"n": 39,
+"m": "B",
+"b": [
+"Veda-se",
+"efeito retroativo"
+],
+"d": [
+"Permite-se",
+"efeito prospectivo"
+]
+},
+{
+"n": 40,
+"m": "B",
+"b": [
+"parcela única",
+"setenta e duas horas"
+],
+"d": [
+"parcelas mensais",
+"dez dias"
+]
+},
+{
+"n": 41,
+"m": "A",
+"r": [
+[
+"depende de prévia aprovação em concurso público",
+"não depende de prévia aprovação em concurso público"
+]
+],
+"b": [
+"não depende",
+"concurso público"
+],
+"d": [
+"exige",
+"é vedada"
+]
+},
+{
+"n": 42,
+"m": "B",
+"b": [
+"só do servidor estável",
+"seleção prévia sozinha não basta"
+],
+"d": [
+"de qualquer servidor",
+"seleção prévia é suficiente"
+]
+},
+{
+"n": 45,
+"m": "C",
+"b": [
+"5 dias úteis",
+"da posse"
+],
+"d": [
+"10 dias úteis",
+"da nomeação"
+]
+},
+{
+"n": 48,
+"m": "B",
+"b": [
+"só é concedida",
+"servidor estável"
+],
+"d": [
+"também é concedida",
+"servidor em estágio probatório"
+]
+},
+{
+"n": 49,
+"m": "A",
+"r": [
+[
+"é vedada a cessão desse servidor a outro órgão",
+"é permitida a cessão desse servidor a outro órgão para cargo de natureza especial"
+]
+],
+"b": [
+"permitida",
+"natureza especial"
+],
+"d": [
+"vedada",
+"cargo efetivo"
+]
+},
+{
+"n": 52,
+"m": "B",
+"b": [
+"sete dias consecutivos",
+"incluído o dia da ocorrência"
+],
+"d": [
+"cinco dias consecutivos",
+"excluído o dia da ocorrência"
+]
+},
+{
+"n": 54,
+"m": "B",
+"t": "O abono de ponto pode ser gozado de forma intercalada, sendo permitido o fracionamento do período de cinco dias.",
+"b": [
+"intercalada",
+"permitido o fracionamento"
+],
+"d": [
+"consecutiva",
+"vedado o fracionamento"
+]
+},
+{
+"n": 55,
+"m": "B",
+"b": [
+"veda posse com efeito retroativo",
+"prorrogar o prazo"
+],
+"d": [
+"admite posse retroativa",
+"dispensar o prazo"
+]
+},
+{
+"n": 58,
+"m": "B",
+"b": [
+"atender com presteza",
+"certidões para defesa de direito pessoal"
+],
+"d": [
+"atender com urgência",
+"certidões para defesa de direito coletivo"
+]
+},
+{
+"n": 61,
+"m": "B",
+"b": [
+"cargo resultante da transformação",
+"não impede o retorno"
+],
+"d": [
+"extinção do cargo",
+"inviabiliza o retorno"
+]
+},
+{
+"n": 64,
+"m": "B",
+"b": [
+"insuficiência de provas",
+"nega o fato ou a autoria"
+],
+"d": [
+"ausência de dolo",
+"reconhece a prescrição"
+]
+},
+{
+"n": 65,
+"m": "A",
+"r": [
+[
+"transitada em julgado ou sujeita a recurso a instância superior",
+"transitada em julgado"
+],
+[
+"assegurada ampla defesa",
+"assegurada ampla defesa, ou de avaliação periódica de desempenho"
+]
+],
+"b": [
+"transitada em julgado",
+"avaliação periódica de desempenho"
+],
+"d": [
+"sujeita a recurso",
+"estágio probatório"
+]
+},
+{
+"n": 68,
+"m": "B",
+"b": [
+"com frequência",
+"uma saída isolada não basta"
+],
+"d": [
+"em qualquer ocasião",
+"uma saída isolada basta"
+]
+},
+{
+"n": 70,
+"m": "B",
+"b": [
+"cinco anos",
+"na advertência, três",
+"bons antecedentes não encurtam o prazo"
+],
+"d": [
+"três anos",
+"dez anos",
+"bons antecedentes encurtam o prazo"
+]
+},
+{
+"n": 74,
+"m": "B",
+"b": [
+"sessenta dias",
+"igual prazo"
+],
+"d": [
+"noventa dias",
+"quinze dias"
+]
+},
+{
+"n": 77,
+"m": "B",
+"b": [
+"cargos efetivos",
+"por lei"
+],
+"d": [
+"por portaria",
+"por resolução"
+]
+},
+{
+"n": 80,
+"m": "B",
+"b": [
+"investigativa",
+"arquivamento ou processo disciplinar",
+"sem aplicar pena"
+],
+"d": [
+"punitiva",
+"aplicando penalidade grave"
+]
+},
+{
+"n": 82,
+"m": "B",
+"b": [
+"fim do prazo da defesa escrita",
+"autorização da autoridade instauradora"
+],
+"d": [
+"julgamento do processo",
+"autorização do chefe imediato"
+]
+},
+{
+"n": 87,
+"m": "A",
+"r": [
+[
+"por mais de 40 dias, interpoladamente, no período de 12 meses, ou por mais",
+"por mais"
+]
+],
+"b": [
+"mais de 30 dias consecutivos",
+"abandono do cargo"
+],
+"d": [
+"mais de 60 dias interpolados",
+"mais de 40 dias consecutivos"
+]
+},
+{
+"n": 93,
+"m": "B",
+"t": "Contam como efetivo exercício as férias e a licença médica.",
+"b": [
+"férias",
+"licença médica"
+],
+"d": [
+"licença sem remuneração",
+"suspensão disciplinar"
+]
+},
+{
+"n": 96,
+"m": "C",
+"b": [
+"educação básica",
+"educação superior",
+"incompatibilidade"
+],
+"d": [
+"pós-graduação",
+"educação infantil"
+]
+},
+{
+"n": 98,
+"m": "C",
+"b": [
+"Não são acumuláveis",
+"insalubridade e periculosidade"
+],
+"d": [
+"Podem ser cumulados",
+"insalubridade e adicional noturno"
+]
+},
+{
+"n": 100,
+"m": "C",
+"b": [
+"carreira de execução penal",
+"percentual máximo"
+],
+"d": [
+"carreira de segurança pública",
+"percentual mínimo"
+]
+},
+{
+"n": 107,
+"m": "B",
+"t": "A licença por motivo de doença em pessoa da família é concedida sem prejuízo da remuneração por até cento e oitenta dias no ano; excedido o prazo, é sem remuneração.",
+"b": [
+"cento e oitenta dias",
+"sem remuneração"
+],
+"d": [
+"noventa dias",
+"com remuneração reduzida"
+]
+},
+{
+"n": 116,
+"m": "B",
+"b": [
+"zelar pela economia do material",
+"conservação do patrimônio público"
+],
+"d": [
+"residir na sede do município",
+"manter sigilo de qualquer assunto"
+]
+},
+{
+"n": 122,
+"m": "B",
+"b": [
+"a qualquer tempo",
+"a critério da administração"
+],
+"d": [
+"somente ao final",
+"por decisão judicial"
+]
+},
+{
+"n": 123,
+"m": "B",
+"b": [
+"vantagens pessoais",
+"ficam de fora"
+],
+"d": [
+"vantagens sindicais",
+"ficam incluídos"
+]
+},
+{
+"n": 125,
+"m": "C",
+"b": [
+"dever",
+"economia do material"
+],
+"d": [
+"faculdade",
+"economia de pessoal"
+]
+},
+{
+"n": 127,
+"m": "C",
+"b": [
+"não é afastada",
+"fato não constitui infração penal"
+],
+"d": [
+"é sempre extinta",
+"negue a autoria"
+]
+},
+{
+"n": 129,
+"m": "C",
+"b": [
+"infração disciplinar leve",
+"advertência",
+"suspensão de até 30 dias"
+],
+"d": [
+"infração disciplinar grave",
+"demissão",
+"suspensão de até 90 dias"
+]
+},
+{
+"n": 130,
+"m": "C",
+"b": [
+"permanece",
+"aposentadoria",
+"prazo prescricional"
+],
+"d": [
+"cessa",
+"exoneração",
+"prazo decadencial"
+]
+},
+{
+"n": 134,
+"m": "C",
+"b": [
+"mesmo grupo ou da mesma classe",
+"aspectos fáticos distintos"
+],
+"d": [
+"mesmo órgão ou da mesma carreira",
+"fatos idênticos"
+]
+},
+{
+"n": 140,
+"m": "C",
+"b": [
+"exonerado do cargo",
+"convertida"
+],
+"d": [
+"aposentado",
+"anulada"
+]
+},
+{
+"n": 141,
+"m": "B",
+"b": [
+"não surte efeitos retroativos",
+"sem refazer o período da penalidade cumprida"
+],
+"d": [
+"produz efeitos plenos",
+"refazendo o período cumprido"
+]
+},
+{
+"n": 144,
+"m": "C",
+"b": [
+"mesma pena máxima",
+"suspensão"
+],
+"d": [
+"advertência",
+"demissão",
+"penas distintas"
+]
+},
+{
+"n": 145,
+"m": "A",
+"r": [
+[
+"ele responderá diretamente ao terceiro pelo dano causado",
+"a Fazenda Pública responde ao terceiro, cabendo ação regressiva contra o servidor"
+]
+],
+"b": [
+"Fazenda Pública",
+"ação regressiva"
+],
+"d": [
+"o próprio servidor",
+"ação direta",
+"ação de reintegração"
+]
+},
+{
+"n": 146,
+"m": "C",
+"b": [
+"não poderá",
+"reincidência"
+],
+"d": [
+"deverá",
+"prescrição",
+"maus antecedentes"
+]
+},
+{
+"n": 147,
+"m": "A",
+"r": [
+[
+"prescreverão no mesmo prazo",
+"prescreverão em prazos diferentes (um ano e dois anos)"
+]
+],
+"b": [
+"prazos diferentes",
+"um ano e dois anos"
+],
+"d": [
+"o mesmo prazo",
+"cinco anos",
+"dois e quatro anos"
+]
+},
+{
+"n": 156,
+"m": "B",
+"t": "Recusar-se, sem justificativa, a integrar comissão é infração leve.",
+"b": [
+"leve"
+],
+"d": [
+"média",
+"grave"
+]
+},
+{
+"n": 157,
+"m": "B",
+"t": "A reincidência em infração leve sujeita a suspensão de até trinta dias, não a demissão.",
+"b": [
+"suspensão de até trinta dias"
+],
+"d": [
+"suspensão de até noventa dias",
+"cassação de aposentadoria"
+]
+},
+{
+"n": 161,
+"m": "B",
+"b": [
+"menor gravidade"
+],
+"d": [
+"igual gravidade",
+"mesma natureza"
+]
+},
+{
+"n": 162,
+"m": "B",
+"t": "O servidor responde civil, penal e administrativamente pelos atos praticados no exercício da função, inclusive os omissivos.",
+"b": [
+"penal",
+"inclusive os omissivos"
+],
+"d": [
+"eleitoral",
+"exceto os omissivos"
+]
+},
+{
+"n": 163,
+"m": "B",
+"b": [
+"advertência",
+"destituição de cargo em comissão"
+],
+"d": [
+"multa",
+"rebaixamento de cargo"
+]
+},
+{
+"n": 164,
+"m": "B",
+"b": [
+"infração grave",
+"demissão"
+],
+"d": [
+"infração média",
+"suspensão",
+"infração leve"
+]
+},
+{
+"n": 168,
+"m": "C",
+"b": [
+"sindicância patrimonial",
+"presidente do TCDF"
+],
+"d": [
+"processo disciplinar",
+"Governador",
+"corregedor"
+]
+},
+{
+"n": 169,
+"m": "A",
+"r": [
+[
+"não dispensa a instauração de processo administrativo disciplinar, sob pena de inobservância do devido processo legal",
+"dispensa a instauração de processo administrativo disciplinar"
+]
+],
+"b": [
+"decisão judicial transitada em julgado",
+"dispensa"
+],
+"d": [
+"não dispensa",
+"decisão administrativa",
+"decisão judicial liminar"
+]
+},
+{
+"n": 173,
+"m": "B",
+"b": [
+"não é indispensável",
+"instaura-se direto o processo disciplinar"
+],
+"d": [
+"é obrigatória",
+"exige-se sindicância prévia",
+"arquiva-se o processo"
+]
+},
+{
+"n": 175,
+"m": "C",
+"b": [
+"prazo para a defesa escrita",
+"indeferido"
+],
+"d": [
+"autorizado",
+"prazo para recurso",
+"julgamento"
+]
+},
+{
+"n": 176,
+"m": "B",
+"b": [
+"três servidores estáveis",
+"autoridade competente"
+],
+"d": [
+"cinco servidores",
+"servidores efetivos",
+"chefe do Executivo"
+]
+},
+{
+"n": 177,
+"m": "B",
+"b": [
+"dirigente máximo",
+"demissão e equivalentes"
+],
+"d": [
+"chefe do Executivo",
+"corregedor",
+"advertência e suspensão"
+]
+},
+{
+"n": 178,
+"m": "B",
+"b": [
+"escolaridade igual ou superior",
+"servidor acusado"
+],
+"d": [
+"escolaridade inferior",
+"mesmo nível médio",
+"servidor julgador"
+]
+},
+{
+"n": 179,
+"m": "B",
+"b": [
+"cinco fases",
+"instrução, defesa, relatório"
+],
+"d": [
+"três fases",
+"instauração, inquérito",
+"quatro fases"
+]
+},
+{
+"n": 180,
+"m": "B",
+"t": "O processo administrativo disciplinar para apurar infração punível com demissão deve ser concluído em até sessenta dias, prorrogáveis por igual período.",
+"b": [
+"sessenta dias",
+"prorrogáveis por igual período"
+],
+"d": [
+"noventa dias",
+"improrrogáveis"
+]
+},
+{
+"n": 183,
+"m": "B",
+"b": [
+"vedado deferir exoneração a pedido",
+"prazo da defesa escrita"
+],
+"d": [
+"permitido",
+"instauração do processo",
+"conclusão do inquérito"
+]
+},
+{
+"n": 188,
+"m": "B",
+"b": [
+"incentivos funcionais",
+"medalha e diploma de honra ao mérito"
+],
+"d": [
+"incentivos pecuniários",
+"adicional de produtividade",
+"promoção automática"
+]
+},
+{
+"n": 194,
+"m": "B",
+"b": [
+"servidor público civil",
+"livre associação sindical"
+],
+"d": [
+"servidor militar",
+"livre associação partidária"
+]
+},
+{
+"n": 200,
+"m": "A",
+"r": [
+[
+"restringe-se aos cargos de provimento efetivo dos órgãos da administração direta, não incidindo",
+"estende-se a empregos e funções da administração indireta, incidindo"
+]
+],
+"b": [
+"estende-se",
+"administração indireta",
+"incidindo"
+],
+"d": [
+"restringe-se",
+"administração direta",
+"não incidindo"
+]
+},
+{
+"n": 207,
+"m": "B",
+"t": "Além da sentença transitada em julgado e do processo administrativo, o servidor estável perde o cargo mediante procedimento de avaliação periódica de desempenho, assegurada ampla defesa.",
+"b": [
+"avaliação periódica de desempenho"
+],
+"d": [
+"estágio probatório",
+"avaliação especial de desempenho"
+]
+},
+{
+"n": 208,
+"m": "C",
+"b": [
+"reintegrado",
+"sem direito a indenização",
+"remuneração proporcional ao tempo de serviço"
+],
+"d": [
+"readmitido",
+"com direito a indenização",
+"remuneração integral"
+]
+},
+{
+"n": 209,
+"m": "C",
+"b": [
+"sigiloso",
+"exclusivamente investigativo",
+"nenhuma sanção disciplinar"
+],
+"d": [
+"público",
+"também punitivo",
+"sanção de advertência"
+]
+},
+{
+"n": 213,
+"m": "B",
+"t": "Concluída a sindicância patrimonial, a comissão deverá elaborar relatório concluindo pelo arquivamento ou pela instauração de processo disciplinar.",
+"b": [
+"elaborar relatório",
+"arquivamento",
+"processo disciplinar"
+],
+"d": [
+"aplicar a pena de demissão",
+"sobrestamento",
+"tomada de contas especial"
+]
+},
+{
+"n": 217,
+"m": "A",
+"r": [
+[
+"de forma integral no mês, independentemente da quantidade de dias em que durar o afastamento do titular",
+"na proporção dos dias de efetiva substituição"
+]
+],
+"b": [
+"na proporção dos dias",
+"efetiva substituição"
+],
+"d": [
+"de forma integral",
+"valor integral do mês",
+"metade do valor"
+]
+},
+{
+"n": 222,
+"m": "A",
+"r": [
+[
+"a todos os servidores ativos da administração direta e indireta, abrangendo inclusive",
+"aos servidores ocupantes de cargo efetivo, excluídos"
+]
+],
+"b": [
+"cargo efetivo",
+"excluídos"
+],
+"d": [
+"cargo em comissão",
+"abrangendo",
+"todos os servidores ativos"
+]
+},
+{
+"n": 223,
+"m": "A",
+"r": [
+[
+"restrita aos atendimentos prestados diretamente pelo Sistema Único de Saúde (SUS), vedado o credenciamento de redes médicas particulares",
+"prestada pelo SUS, pelo órgão, por rede privada credenciada, por ressarcimento ou por autogestão"
+]
+],
+"b": [
+"rede privada credenciada",
+"autogestão"
+],
+"d": [
+"exclusivamente pelo SUS",
+"convênio federal",
+"rede própria"
+]
+},
+{
+"n": 225,
+"m": "B",
+"t": "A readaptação decorre de redução da capacidade laboral comprovada em inspeção médica, não de gestação ou lactação.",
+"b": [
+"redução da capacidade laboral",
+"inspeção médica"
+],
+"d": [
+"aumento da capacidade laboral",
+"avaliação de desempenho"
+]
+},
+{
+"n": 233,
+"m": "B",
+"b": [
+"livre associação sindical",
+"substituto processual"
+],
+"d": [
+"livre associação partidária",
+"assistente simples"
+]
+},
+{
+"n": 235,
+"m": "A",
+"r": [
+[
+"unicamente o cônjuge, o companheiro e os filhos, vedada a inclusão de dependentes econômicos sob qualquer pretexto",
+"também o cônjuge, o companheiro e os filhos, incluídos os dependentes econômicos conforme a legislação do imposto de renda"
+]
+],
+"b": [
+"dependentes econômicos",
+"legislação do imposto de renda"
+],
+"d": [
+"dependentes previdenciários",
+"legislação civil",
+"legislação trabalhista"
+]
+},
+{
+"n": 236,
+"m": "C",
+"b": [
+"Lei federal nº 8.112/1990",
+"Lei Complementar Distrital nº 840/2011"
+],
+"d": [
+"Lei federal nº 8.666/1993",
+"Lei Orgânica do DF",
+"Lei Complementar Distrital nº 769/2008"
+]
+},
+{
+"n": 238,
+"m": "C",
+"b": [
+"décimo terceiro salário",
+"gratificação natalícia"
+],
+"d": [
+"abono de permanência",
+"férias",
+"gratificação de produtividade"
+]
+},
+{
+"n": 16,
+"m": "B",
+"t": "O substituto exerce cumulativamente as atribuições do cargo de que é titular com as do cargo ou função do substituído, sem prejuízo da remuneração a que fizer jus pela substituição.",
+"b": [
+"cumulativamente",
+"remuneração"
+],
+"d": [
+"alternadamente",
+"exclusivamente",
+"aposentadoria"
+]
+},
+{
+"n": 21,
+"m": "B",
+"b": [
+"não afasta",
+"teste de aptidão física"
+],
+"d": [
+"dispensa",
+"prova de títulos",
+"avaliação psicológica"
+]
+},
+{
+"n": 47,
+"m": "B",
+"b": [
+"proibido nomear",
+"inelegibilidade",
+"legislação eleitoral"
+],
+"d": [
+"facultado nomear",
+"incompatibilidade",
+"legislação penal"
+]
+},
+{
+"n": 50,
+"m": "B",
+"b": [
+"mandato classista",
+"efetivo exercício",
+"órgão de lotação"
+],
+"d": [
+"mandato eletivo",
+"estágio probatório",
+"sindicato"
+]
+},
+{
+"n": 106,
+"m": "B",
+"b": [
+"180 dias",
+"contados do dia do parto"
+],
+"d": [
+"120 dias",
+"90 dias",
+"contados da concepção"
+]
+},
+{
+"n": 108,
+"m": "B",
+"b": [
+"sem requerimento prévio",
+"indenizatório",
+"sem incidência de imposto de renda"
+],
+"d": [
+"com requerimento prévio",
+"remuneratório",
+"com incidência de imposto de renda"
+]
+},
+{
+"n": 110,
+"m": "B",
+"b": [
+"não é obrigado",
+"remuneração do cargo público"
+],
+"d": [
+"deve obrigatoriamente",
+"soldo militar",
+"pensão especial"
+]
+},
+{
+"n": 111,
+"m": "B",
+"b": [
+"órgão ou entidade cessionária",
+"salvo as exceções legais"
+],
+"d": [
+"órgão cedente",
+"rateio igualitário",
+"sem qualquer exceção"
+]
+},
+{
+"n": 136,
+"m": "B",
+"b": [
+"desídia",
+"grupo I",
+"médias"
+],
+"d": [
+"abandono de cargo",
+"grupo II",
+"leves"
+]
+},
+{
+"n": 143,
+"m": "B",
+"b": [
+"cumulativamente",
+"cinco requisitos",
+"isento de sanção"
+],
+"d": [
+"alternativamente",
+"três requisitos",
+"apenas advertido"
+]
+},
+{
+"n": 171,
+"m": "B",
+"b": [
+"sessenta dias",
+"sem prejuízo da remuneração"
+],
+"d": [
+"noventa dias",
+"quinze dias",
+"com suspensão da remuneração"
+]
+},
+{
+"n": 174,
+"m": "B",
+"b": [
+"vedado conceder férias",
+"exercício provisório"
+],
+"d": [
+"permitido conceder férias",
+"remoção de ofício",
+"cessão a outro órgão"
+]
+},
+{
+"n": 199,
+"m": "B",
+"t": "A acumulação remunerada de cargos públicos é permitida, havendo compatibilidade de horários, para o professor com outro cargo técnico ou científico.",
+"b": [
+"técnico ou científico",
+"compatibilidade de horários"
+],
+"d": [
+"de qualquer natureza",
+"administrativo",
+"autorização do chefe"
+]
+},
+{
+"n": 214,
+"m": "C",
+"b": [
+"denúncia anônima",
+"investigação preliminar reservada"
+],
+"d": [
+"representação identificada",
+"inquérito policial",
+"investigação pública"
+]
+},
+{
+"n": 219,
+"m": "B",
+"t": "A chefia imediata não poderá editar ato de designação de substituição com efeitos retroativos, mesmo por força maior.",
+"b": [
+"não poderá editar",
+"efeitos retroativos"
+],
+"d": [
+"deverá editar",
+"efeitos futuros"
+]
+},
+{
+"n": 227,
+"m": "C",
+"b": [
+"junta médica oficial",
+"cargo público de origem"
+],
+"d": [
+"perícia particular",
+"cargo de lotação"
+]
+},
+{
+"n": 229,
+"m": "B",
+"b": [
+"cotas individualizadas",
+"partes rigorosamente iguais"
+],
+"d": [
+"cota única",
+"partes proporcionais à idade"
+]
+},
+{
+"n": 237,
+"m": "B",
+"b": [
+"não traz",
+"Lei nº 2.834/2001"
+],
+"d": [
+"prevê expressamente",
+"Lei nº 9.784/1999"
+]
+},
+{
+"n": 239,
+"m": "B",
+"b": [
+"até sua adequação",
+"sem exigir conflito expresso"
+],
+"d": [
+"por tempo indeterminado",
+"somente com revogação expressa"
+]
+},
+{
+"n": 241,
+"m": "B",
+"t": "O art. 100 prevê a gratificação por encargo de curso ou concurso ao servidor estável em atividade que atua em caráter eventual.",
+"b": [
+"servidor estável em atividade"
+],
+"d": [
+"servidor aposentado",
+"servidor temporário"
+]
+}
+]

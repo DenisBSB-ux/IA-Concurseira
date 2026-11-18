@@ -1,0 +1,3258 @@
+[
+{
+"n": 1,
+"m": "B",
+"b": [
+"recebem recursos para pessoal ou custeio",
+"sujeitam-se ao teto"
+],
+"d": [
+"recebem recursos de capital",
+"não se sujeitam ao teto"
+]
+},
+{
+"n": 2,
+"m": "B",
+"b": [
+"quanto à legalidade",
+"só o mérito"
+],
+"d": [
+"quanto ao mérito",
+"só a legalidade"
+]
+},
+{
+"n": 3,
+"m": "B",
+"b": [
+"regime próprio e de militares",
+"cargos em comissão",
+"RGPS"
+],
+"d": [
+"regime geral e de militares",
+"cargos efetivos",
+"funções técnicas"
+]
+},
+{
+"n": 4,
+"m": "B",
+"t": "Os precedentes do STF sem efeito vinculante não obrigam a administração a rever de ofício os atos conflitantes; a jurisprudência é fonte secundária e orientadora.",
+"b": [
+"não obrigam",
+"fonte secundária e orientadora"
+],
+"d": [
+"vinculam obrigatoriamente",
+"fonte primária e vinculante"
+]
+},
+{
+"n": 5,
+"m": "B",
+"b": [
+"precedência sobre os demais setores administrativos",
+"competência e jurisdição"
+],
+"d": [
+"igualdade perante os demais setores administrativos",
+"competência e hierarquia"
+]
+},
+{
+"n": 8,
+"m": "B",
+"t": "A imperatividade não é característica comum a todos os atos administrativos, não alcançando os atos enunciativos e negociais, como certidões e licenças.",
+"b": [
+"não é característica comum",
+"enunciativos e negociais"
+],
+"d": [
+"é característica exclusiva",
+"atos punitivos e normativos"
+]
+},
+{
+"n": 9,
+"m": "B",
+"b": [
+"lei específica",
+"critérios das gratificações"
+],
+"d": [
+"decreto",
+"portaria",
+"medida provisória"
+]
+},
+{
+"n": 10,
+"m": "B",
+"b": [
+"competência não exclusiva",
+"forma não essencial",
+"não lesarem o interesse público nem terceiros"
+],
+"d": [
+"competência exclusiva",
+"forma essencial",
+"ainda que lesem terceiros"
+]
+},
+{
+"n": 13,
+"m": "B",
+"t": "Admite-se a acumulação de um cargo de professor com outro técnico ou científico, havendo compatibilidade de horários e respeitado o teto.",
+"b": [
+"técnico ou científico",
+"compatibilidade de horários"
+],
+"d": [
+"administrativo ou operacional",
+"dedicação exclusiva",
+"cargo em comissão"
+]
+},
+{
+"n": 14,
+"m": "B",
+"t": "Remoção usada para punir o servidor por críticas à chefia padece de vício quanto à finalidade, insanável por convalidação, ainda que apresentada nova motivação.",
+"b": [
+"quanto à finalidade",
+"insanável por convalidação"
+],
+"d": [
+"quanto ao motivo",
+"convalidável com nova motivação"
+]
+},
+{
+"n": 15,
+"m": "B",
+"t": "O servidor público investido no mandato de prefeito é obrigatoriamente afastado do cargo, podendo apenas optar pela remuneração.",
+"b": [
+"obrigatoriamente afastado do cargo",
+"optar pela remuneração"
+],
+"d": [
+"mantido no cargo",
+"acumular as remunerações",
+"afastado sem remuneração"
+]
+},
+{
+"n": 18,
+"m": "B",
+"t": "Pode haver acumulação de um cargo de professor com outro técnico ou científico, desde que haja compatibilidade de horários.",
+"b": [
+"técnico ou científico",
+"compatibilidade de horários"
+],
+"d": [
+"administrativo ou operacional",
+"dedicação exclusiva",
+"cargo em comissão"
+]
+},
+{
+"n": 20,
+"m": "B",
+"t": "O controle judicial do PAD limita-se à regularidade do procedimento e à legalidade do ato, sem incursão no mérito administrativo, salvo sanção manifestamente desproporcional.",
+"b": [
+"regularidade do procedimento",
+"mérito administrativo",
+"sanção manifestamente desproporcional"
+],
+"d": [
+"quórum da comissão",
+"prazo prescricional",
+"sanção prevista em lei"
+]
+},
+{
+"n": 23,
+"m": "B",
+"t": "Ascensão funcional e transferência não são admitidas em nenhum ente da Federação.",
+"b": [
+"não são admitidas",
+"nenhum ente da Federação"
+],
+"d": [
+"admitidas por lei estadual",
+"apenas o ente federal"
+]
+},
+{
+"n": 26,
+"m": "B",
+"t": "O controle de legalidade não incide sobre a oportunidade e a conveniência do ato, e a administração o exerce por meio da anulação, nos termos do art. 53 da Lei 9.784.",
+"b": [
+"oportunidade e a conveniência",
+"anulação"
+],
+"d": [
+"competência do agente",
+"revogação",
+"convalidação"
+]
+},
+{
+"n": 27,
+"m": "B",
+"b": [
+"cada vínculo isoladamente",
+"Tema 377"
+],
+"d": [
+"a remuneração global",
+"Tema 480",
+"Súmula 339"
+]
+},
+{
+"n": 35,
+"m": "B",
+"t": "Ao apreciar processo administrativo disciplinar, o Judiciário controla apenas a legalidade e não pode substituir a Administração na conveniência da sanção.",
+"b": [
+"apenas a legalidade",
+"não pode substituir"
+],
+"d": [
+"também a conveniência",
+"pode escolher outra penalidade"
+]
+},
+{
+"n": 38,
+"m": "A",
+"r": [
+[
+"quanto ao tempo, podendo ser prévio, concomitante ou subsequente, conforme o momento em que o gestor decide agir",
+"quanto à iniciativa, e não quanto ao tempo (prévio, concomitante ou subsequente)"
+]
+],
+"b": [
+"quanto à iniciativa",
+"não quanto ao tempo"
+],
+"d": [
+"quanto ao objeto",
+"quanto à extensão"
+]
+},
+{
+"n": 45,
+"m": "B",
+"t": "A delegação do poder de polícia a pessoa jurídica de direito privado da Administração indireta é feita somente por lei, e não por contrato administrativo.",
+"b": [
+"somente por lei",
+"não por contrato administrativo"
+],
+"d": [
+"por decreto",
+"por convênio",
+"por ato infralegal"
+]
+},
+{
+"n": 50,
+"m": "B",
+"t": "O Poder Judiciário controla os atos administrativos apenas quanto à legalidade, não podendo substituir a decisão administrativa por outra que considere mais adequada.",
+"b": [
+"apenas quanto à legalidade",
+"não podendo substituir"
+],
+"d": [
+"legalidade e mérito",
+"podendo rever a conveniência"
+]
+},
+{
+"n": 54,
+"m": "B",
+"t": "O Congresso Nacional pode sustar atos normativos do Poder Executivo que exorbitem do poder regulamentar sem depender de parecer prévio do TCU.",
+"b": [
+"Congresso Nacional",
+"sem depender de parecer prévio do TCU"
+],
+"d": [
+"Senado Federal",
+"mediante parecer prévio do TCU"
+]
+},
+{
+"n": 55,
+"m": "B",
+"t": "A presença de símbolo religioso em prédio público, com finalidade de manifestação da tradição cultural da sociedade brasileira, não viola o princípio da impessoalidade administrativa.",
+"b": [
+"não viola",
+"tradição cultural"
+],
+"d": [
+"afronta",
+"propaganda religiosa",
+"proselitismo político"
+]
+},
+{
+"n": 57,
+"m": "A",
+"r": [
+[
+"exclusiva do Poder Judiciário",
+"do Congresso Nacional (sustação) e também do Poder Judiciário"
+]
+],
+"b": [
+"Congresso Nacional",
+"sustação"
+],
+"d": [
+"Senado Federal",
+"anulação",
+"TCU"
+]
+},
+{
+"n": 58,
+"m": "B",
+"t": "O direito de regresso do Estado contra o agente exige a demonstração de dolo ou culpa, não bastando a condenação do ente público na ação indenizatória.",
+"b": [
+"exige a demonstração de dolo ou culpa",
+"não bastando a condenação"
+],
+"d": [
+"dispensa dolo ou culpa",
+"basta a condenação do Estado"
+]
+},
+{
+"n": 64,
+"m": "B",
+"b": [
+"dever específico de proteção",
+"objetivamente"
+],
+"d": [
+"dever genérico de segurança",
+"subjetivamente"
+]
+},
+{
+"n": 66,
+"m": "B",
+"b": [
+"objetiva",
+"ação de regresso"
+],
+"d": [
+"subjetiva",
+"ação civil pública"
+]
+},
+{
+"n": 67,
+"m": "B",
+"b": [
+"TCU julga",
+"Presidente da República"
+],
+"d": [
+"Congresso Nacional julga",
+"Ministro da Fazenda"
+]
+},
+{
+"n": 73,
+"m": "B",
+"b": [
+"jurisdição una",
+"só o Judiciário",
+"coisa julgada"
+],
+"d": [
+"contencioso administrativo",
+"dualidade de jurisdição",
+"o Tribunal de Contas"
+]
+},
+{
+"n": 74,
+"m": "B",
+"t": "O controle jurisdicional da administração pública é exercido pelo Poder Judiciário, que controla a legalidade do ato administrativo, não podendo a avaliação judicial substituir a análise de oportunidade e conveniência do gestor.",
+"b": [
+"controla a legalidade",
+"não podendo a avaliação judicial substituir"
+],
+"d": [
+"reexamina o mérito",
+"substitui livremente o gestor"
+]
+},
+{
+"n": 75,
+"m": "B",
+"t": "Os serviços uti singuli são prestados a usuários determinados e remunerados mediante taxa ou tarifa, enquanto os serviços indivisíveis, prestados à coletividade indistintamente, são custeados pela receita geral de impostos.",
+"b": [
+"uti singuli",
+"receita geral de impostos"
+],
+"d": [
+"uti universi",
+"uti civis",
+"contribuição de melhoria"
+]
+},
+{
+"n": 77,
+"m": "B",
+"t": "A Lei 8.987/1995 veda o início da interrupção do serviço por inadimplemento na sexta-feira, ainda que haja prévio aviso.",
+"b": [
+"veda",
+"sexta-feira"
+],
+"d": [
+"autoriza",
+"quarta-feira",
+"terça-feira"
+]
+},
+{
+"n": 78,
+"m": "B",
+"b": [
+"modelo francês",
+"dualidade de jurisdição"
+],
+"d": [
+"modelo inglês",
+"jurisdição una"
+]
+},
+{
+"n": 82,
+"m": "B",
+"b": [
+"legalidade e legitimidade",
+"mérito administrativo",
+"não pode ser substituído"
+],
+"d": [
+"legalidade e mérito",
+"ato vinculado",
+"pode ser refeito pelo juiz"
+]
+},
+{
+"n": 83,
+"m": "B",
+"t": "A caducidade decorre de inadimplemento imputável à concessionária e pode ser declarada pelo poder concedente por decreto, enquanto a encampação corresponde à retomada do serviço fundada em interesse público e depende de prévia autorização legislativa específica.",
+"b": [
+"caducidade",
+"encampação"
+],
+"d": [
+"reversão",
+"anulação",
+"rescisão"
+]
+},
+{
+"n": 86,
+"m": "B",
+"b": [
+"empresa líder",
+"solidariamente"
+],
+"d": [
+"empresa de maior capital",
+"subsidiariamente"
+]
+},
+{
+"n": 88,
+"m": "B",
+"b": [
+"ordenador de despesas",
+"prestar contas",
+"perda, extravio ou irregularidade"
+],
+"d": [
+"agente de arrecadação",
+"dispensado de contas"
+]
+},
+{
+"n": 90,
+"m": "B",
+"t": "Se o órgão não atende o prazo, o Tribunal de Contas susta o ato por conta própria, sem autorização do Poder Legislativo, apenas comunicando a decisão.",
+"b": [
+"susta o ato",
+"sem autorização do Poder Legislativo"
+],
+"d": [
+"propõe a sustação",
+"depende de autorização do Poder Legislativo"
+]
+},
+{
+"n": 91,
+"m": "B",
+"t": "No sistema de jurisdição una, cabe exclusivamente ao Judiciário o julgamento definitivo de lides com a administração, inclusive as decisões do TCU, que não fazem coisa julgada material.",
+"b": [
+"exclusivamente ao Judiciário",
+"não fazem coisa julgada material"
+],
+"d": [
+"ao Tribunal de Contas",
+"têm força de coisa julgada material"
+]
+},
+{
+"n": 92,
+"m": "B",
+"b": [
+"Poder Legislativo",
+"noventa dias"
+],
+"d": [
+"Poder Executivo",
+"sessenta dias",
+"trinta dias"
+]
+},
+{
+"n": 93,
+"m": "B",
+"b": [
+"inconveniente ou inoportuno",
+"ex nunc"
+],
+"d": [
+"ilegal ou viciado",
+"efeitos retroativos"
+]
+},
+{
+"n": 96,
+"m": "B",
+"t": "O débito fixado por Tribunal de Contas não torna imprescritível a pretensão de ressarcimento ao erário, que continua sujeita à prescrição.",
+"b": [
+"não torna imprescritível"
+],
+"d": [
+"torna perpétua",
+"extingue",
+"converte em imprescritível"
+]
+},
+{
+"n": 97,
+"m": "B",
+"t": "Atos administrativos são atos exclusivamente de direito público, que produzem efeitos jurídicos conforme previsto no próprio ato ou em lei.",
+"b": [
+"exclusivamente de direito público",
+"previsto no próprio ato ou em lei"
+],
+"d": [
+"de direito privado e público",
+"trinta dias após a publicação"
+]
+},
+{
+"n": 99,
+"m": "B",
+"b": [
+"situação de fato ou de direito",
+"não se confunde com a motivação"
+],
+"d": [
+"resultado prático do ato",
+"equivale à motivação"
+]
+},
+{
+"n": 100,
+"m": "B",
+"b": [
+"não impede",
+"tomada de contas especial",
+"sem posterior julgamento do Legislativo"
+],
+"d": [
+"condiciona a condenação",
+"contas de governo",
+"depende de julgamento do Legislativo"
+]
+},
+{
+"n": 103,
+"m": "B",
+"b": [
+"objeto",
+"efeito jurídico imediato"
+],
+"d": [
+"finalidade",
+"motivo",
+"forma"
+]
+},
+{
+"n": 104,
+"m": "B",
+"b": [
+"obrigatória",
+"vinculado ou discricionário"
+],
+"d": [
+"dispensável",
+"apenas discricionário"
+]
+},
+{
+"n": 109,
+"m": "B",
+"b": [
+"vinculação, não hierarquia",
+"finalístico"
+],
+"d": [
+"subordinação hierárquica",
+"controle hierárquico"
+]
+},
+{
+"n": 110,
+"m": "B",
+"b": [
+"imperatividade",
+"ausente",
+"licenças e autorizações"
+],
+"d": [
+"autoexecutoriedade",
+"presente",
+"multas e interdições"
+]
+},
+{
+"n": 111,
+"m": "B",
+"b": [
+"qualquer forma societária",
+"S.A.",
+"capital público e privado"
+],
+"d": [
+"somente S.A.",
+"sociedade limitada",
+"capital exclusivamente público"
+]
+},
+{
+"n": 114,
+"m": "C",
+"b": [
+"regime jurídico-administrativo",
+"prerrogativas do poder público",
+"autoexecutoriedade"
+],
+"d": [
+"regime de direito privado",
+"sujeições do poder público",
+"proporcionalidade"
+]
+},
+{
+"n": 115,
+"m": "B",
+"t": "Os dirigentes de agências reguladoras têm mandato fixo, perdido por renúncia, condenação judicial transitada em julgado ou pena demissória em processo disciplinar, e não por perda da confiança da autoridade que os nomeou.",
+"b": [
+"mandato fixo",
+"e não por perda da confiança"
+],
+"d": [
+"mandato precário",
+"também por perda da confiança"
+]
+},
+{
+"n": 116,
+"m": "C",
+"b": [
+"unilateral, precário e discricionário",
+"utilização de bem público"
+],
+"d": [
+"vinculado e definitivo",
+"contrato administrativo"
+]
+},
+{
+"n": 119,
+"m": "B",
+"t": "A licença é ato administrativo vinculado que reconhece o direito do particular ao exercício de determinada atividade.",
+"b": [
+"vinculado"
+],
+"d": [
+"discricionário",
+"precário"
+]
+},
+{
+"n": 120,
+"m": "B",
+"t": "A licença constitui ato administrativo vinculado classificado como ato negocial.",
+"b": [
+"vinculado",
+"ato negocial"
+],
+"d": [
+"discricionário",
+"ato de império"
+]
+},
+{
+"n": 131,
+"m": "B",
+"t": "Ato ilegal deve ser anulado, e não revogado; a revogação é para ato válido, por conveniência e oportunidade.",
+"b": [
+"anulado",
+"conveniência e oportunidade"
+],
+"d": [
+"convalidado",
+"cassado",
+"legalidade e nulidade"
+]
+},
+{
+"n": 135,
+"m": "B",
+"t": "A anulação do ato administrativo, quando fundada em ilegalidade, produz efeitos ex tunc, desfazendo, em regra, os efeitos jurídicos anteriormente produzidos.",
+"b": [
+"ex tunc",
+"desfazendo"
+],
+"d": [
+"ex nunc",
+"preservando"
+]
+},
+{
+"n": 136,
+"m": "B",
+"t": "O Poder Judiciário pode anular atos administrativos discricionários quando constatar que a decisão violou os princípios da razoabilidade e da proporcionalidade.",
+"b": [
+"anular"
+],
+"d": [
+"revogar",
+"convalidar"
+]
+},
+{
+"n": 141,
+"m": "B",
+"b": [
+"primeiro escalão",
+"agentes políticos"
+],
+"d": [
+"segundo escalão",
+"agentes honoríficos"
+]
+},
+{
+"n": 142,
+"m": "B",
+"b": [
+"agentes honoríficos",
+"particulares em colaboração"
+],
+"d": [
+"agentes políticos",
+"servidores públicos"
+]
+},
+{
+"n": 144,
+"m": "B",
+"b": [
+"por tempo determinado",
+"prevista em lei",
+"excepcional interesse público"
+],
+"d": [
+"por prazo indeterminado",
+"prevista em decreto",
+"interesse público ordinário"
+]
+},
+{
+"n": 147,
+"m": "B",
+"b": [
+"livre nomeação e exoneração",
+"sem concurso",
+"direção, chefia ou assessoramento"
+],
+"d": [
+"nomeação por concurso",
+"execução de atividades técnicas",
+"estabilidade"
+]
+},
+{
+"n": 149,
+"m": "B",
+"b": [
+"cientistas estrangeiros",
+"universidades",
+"nacionalidade brasileira"
+],
+"d": [
+"militares estrangeiros",
+"tribunais de contas",
+"naturalização"
+]
+},
+{
+"n": 150,
+"m": "B",
+"t": "A cumulação de dois cargos públicos prevista na Constituição para profissionais da saúde abrange todos os profissionais de saúde com profissões regulamentadas.",
+"b": [
+"todos os profissionais de saúde",
+"profissões regulamentadas"
+],
+"d": [
+"apenas médicos",
+"profissões privativas de médico"
+]
+},
+{
+"n": 153,
+"m": "B",
+"b": [
+"36 meses",
+"três anos",
+"exonerado ou reconduzido"
+],
+"d": [
+"24 meses",
+"dois anos",
+"demitido"
+]
+},
+{
+"n": 154,
+"m": "B",
+"t": "O servidor em estágio probatório só pode ser exonerado ou demitido mediante apuração com ampla defesa e demais formalidades legais.",
+"b": [
+"apuração com ampla defesa"
+],
+"d": [
+"ato discricionário imotivado",
+"simples conveniência administrativa"
+]
+},
+{
+"n": 158,
+"m": "B",
+"b": [
+"erro da Administração",
+"boa-fé",
+"não precisa devolver"
+],
+"d": [
+"erro do servidor",
+"má-fé",
+"deve devolver"
+]
+},
+{
+"n": 159,
+"m": "C",
+"b": [
+"regularidade do procedimento",
+"mérito administrativo",
+"flagrante ilegalidade"
+],
+"d": [
+"oportunidade e conveniência",
+"ampla revisão do mérito"
+]
+},
+{
+"n": 161,
+"m": "B",
+"b": [
+"pode demitir",
+"sem esperar condenação judicial prévia"
+],
+"d": [
+"depende do Judiciário",
+"só após condenação judicial"
+]
+},
+{
+"n": 162,
+"m": "B",
+"t": "O cargo em comissão é de livre nomeação e exoneração, independendo de concurso público.",
+"b": [
+"livre nomeação e exoneração",
+"independendo de concurso público"
+],
+"d": [
+"aprovação prévia em concurso",
+"estabilidade após três anos"
+]
+},
+{
+"n": 163,
+"m": "B",
+"t": "No exercício do poder regulamentar, o chefe do Poder Executivo edita atos normativos secundários, sem poder inovar na ordem jurídica.",
+"b": [
+"secundários",
+"sem poder inovar"
+],
+"d": [
+"primários",
+"inovar livremente"
+]
+},
+{
+"n": 165,
+"m": "B",
+"b": [
+"privativamente",
+"decretos e regulamentos",
+"fiel execução das leis"
+],
+"d": [
+"concorrentemente",
+"portarias e instruções",
+"criação de órgãos"
+]
+},
+{
+"n": 166,
+"m": "B",
+"b": [
+"poder hierárquico",
+"revisão dos atos"
+],
+"d": [
+"poder disciplinar",
+"poder regulamentar"
+]
+},
+{
+"n": 168,
+"m": "C",
+"b": [
+"avocar competências",
+"não seja proibida por lei"
+],
+"d": [
+"delegar competências",
+"depender de autorização judicial"
+]
+},
+{
+"n": 170,
+"m": "B",
+"b": [
+"poder disciplinar",
+"vínculo específico"
+],
+"d": [
+"poder de polícia",
+"vínculo genérico"
+]
+},
+{
+"n": 175,
+"m": "B",
+"b": [
+"poder de polícia",
+"limita direitos individuais"
+],
+"d": [
+"poder regulamentar",
+"poder hierárquico",
+"amplia direitos"
+]
+},
+{
+"n": 180,
+"m": "B",
+"t": "O poder de polícia administrativa caracteriza-se pela prerrogativa do Estado de restringir, condicionar ou limitar o exercício de direitos e atividades individuais em benefício da coletividade, tendo como atributos a discricionariedade, a autoexecutoriedade e a imperatividade.",
+"b": [
+"restringir, condicionar ou limitar",
+"discricionariedade, a autoexecutoriedade e a imperatividade"
+],
+"d": [
+"ampliar e conceder",
+"vinculação, a bilateralidade e a gratuidade"
+]
+},
+{
+"n": 183,
+"m": "B",
+"t": "Por decorrer da supremacia do interesse público, o poder de polícia não dispensa motivação, proporcionalidade nem controle judicial, quando exercido por autoridade administrativa competente.",
+"b": [
+"não dispensa motivação",
+"controle judicial"
+],
+"d": [
+"isenta de motivação",
+"controle político"
+]
+},
+{
+"n": 184,
+"m": "B",
+"b": [
+"desvio de poder",
+"tinha competência",
+"finalidade alheia ao interesse público"
+],
+"d": [
+"excesso de poder",
+"não tinha competência",
+"finalidade legal"
+]
+},
+{
+"n": 185,
+"m": "B",
+"b": [
+"desvio de finalidade",
+"elemento finalidade",
+"invalidação"
+],
+"d": [
+"vício de competência",
+"elemento forma",
+"convalidação"
+]
+},
+{
+"n": 186,
+"m": "B",
+"t": "A requisição de servidor exige necessidade administrativa relevante e não pode ser usada de forma permanente para suprir falta estrutural de pessoal.",
+"b": [
+"necessidade administrativa relevante",
+"não pode ser usada de forma permanente"
+],
+"d": [
+"mera conveniência do órgão",
+"pode ser usada como rotina"
+]
+},
+{
+"n": 189,
+"m": "B",
+"b": [
+"prerrogativas e restrições",
+"ausentes nas relações entre particulares"
+],
+"d": [
+"apenas prerrogativas",
+"comuns às relações privadas"
+]
+},
+{
+"n": 192,
+"m": "B",
+"t": "A legalidade, para o agente público, significa fazer apenas o que a lei autoriza.",
+"b": [
+"agente público",
+"apenas o que a lei autoriza"
+],
+"d": [
+"administrado",
+"tudo o que a lei não proíbe"
+]
+},
+{
+"n": 193,
+"m": "B",
+"b": [
+"educativo, informativo ou de orientação social",
+"promoção pessoal"
+],
+"d": [
+"caráter publicitário e comercial",
+"promoção institucional"
+]
+},
+{
+"n": 198,
+"m": "B",
+"b": [
+"prestadoras de serviço público",
+"direito de regresso",
+"dolo ou culpa"
+],
+"d": [
+"exploradoras de atividade econômica",
+"direito de retenção",
+"apenas dolo"
+]
+},
+{
+"n": 199,
+"m": "B",
+"b": [
+"adequação, necessidade e proporcionalidade em sentido estrito",
+"atuação vinculada"
+],
+"d": [
+"legalidade, impessoalidade e eficiência",
+"apenas a atuação discricionária"
+]
+},
+{
+"n": 201,
+"m": "B",
+"b": [
+"motivação",
+"sem constar do rol constitucional"
+],
+"d": [
+"publicidade",
+"por constar expressamente"
+]
+},
+{
+"n": 202,
+"m": "B",
+"t": "O princípio da legalidade, voltado à administração pública, impõe ao administrador público o dever de seguir estritamente os ditames da lei.",
+"b": [
+"legalidade",
+"seguir estritamente os ditames da lei"
+],
+"d": [
+"moralidade",
+"fazer tudo que a lei não proíbe"
+]
+},
+{
+"n": 203,
+"m": "B",
+"t": "A publicidade é princípio expresso na Constituição Federal de 1988, sendo dever do administrador público zelar pela transparência e pela publicidade de seus atos.",
+"b": [
+"expresso",
+"Constituição Federal de 1988"
+],
+"d": [
+"implícito",
+"legislação infraconstitucional"
+]
+},
+{
+"n": 205,
+"m": "B",
+"b": [
+"razoabilidade",
+"descompasso entre meios e fins",
+"proibição de excesso"
+],
+"d": [
+"impessoalidade",
+"proibição de proteção deficiente",
+"adequação entre meios e fins"
+]
+},
+{
+"n": 206,
+"m": "B",
+"b": [
+"poder de império",
+"não é absoluta",
+"limites da lei"
+],
+"d": [
+"poder regulamentar",
+"prevalece sempre",
+"limites do mérito"
+]
+},
+{
+"n": 207,
+"m": "B",
+"t": "A administração pública se submete a princípios explícitos e implícitos, sendo permitida a utilização de princípios implícitos.",
+"b": [
+"explícitos e implícitos",
+"permitida"
+],
+"d": [
+"somente explícitos",
+"vedada"
+]
+},
+{
+"n": 211,
+"m": "B",
+"b": [
+"implícito",
+"legalidade, impessoalidade, moralidade, publicidade e eficiência"
+],
+"d": [
+"explícito",
+"legalidade, impessoalidade, moralidade, razoabilidade e eficiência"
+]
+},
+{
+"n": 212,
+"m": "B",
+"b": [
+"24 meses",
+"moralidade e a impessoalidade",
+"renovações sucessivas"
+],
+"d": [
+"12 meses",
+"eficiência e a economicidade",
+"contratações diretas"
+]
+},
+{
+"n": 213,
+"m": "B",
+"b": [
+"dano direto e imediato",
+"nexo causal"
+],
+"d": [
+"equivalência das condições",
+"culpa anônima"
+]
+},
+{
+"n": 215,
+"m": "B",
+"b": [
+"objetiva",
+"risco administrativo",
+"ação, dano e nexo de causalidade"
+],
+"d": [
+"subjetiva",
+"risco integral",
+"apenas o dano"
+]
+},
+{
+"n": 217,
+"m": "B",
+"t": "A responsabilidade civil do Estado no Brasil é objetiva, fundada na teoria do risco administrativo, cabendo demonstrar conduta, dano e nexo de causalidade.",
+"b": [
+"risco administrativo",
+"conduta, dano e nexo de causalidade"
+],
+"d": [
+"risco integral",
+"apenas o dano"
+]
+},
+{
+"n": 224,
+"m": "B",
+"t": "No caso de ilícito praticado por agente público contra terceiro, a ação de indenização por danos materiais deve ser ajuizada diretamente contra o Estado, que tem o direito de regresso contra o servidor em caso de culpa ou dolo.",
+"b": [
+"diretamente contra o Estado",
+"direito de regresso",
+"culpa ou dolo"
+],
+"d": [
+"diretamente contra o servidor",
+"direito de retenção",
+"apenas dolo"
+]
+},
+{
+"n": 228,
+"m": "B",
+"t": "A aferição da responsabilidade civil do Estado admite o sistema de compensação de culpas, de modo que, se tiver havido participação da pessoa lesada no evento que lhe ocasionou danos, o dever do Estado em reparar os prejuízos deve ser atenuado.",
+"b": [
+"compensação de culpas",
+"atenuado"
+],
+"d": [
+"culpa exclusiva",
+"excluído"
+]
+},
+{
+"n": 231,
+"m": "B",
+"b": [
+"subjetiva",
+"culpa anônima",
+"funcionou mal ou tardiamente"
+],
+"d": [
+"objetiva",
+"risco integral",
+"funcionou apenas parcialmente"
+]
+},
+{
+"n": 232,
+"m": "B",
+"t": "A responsabilidade civil do Estado também se configura por ato omissivo, e não apenas pela ação do agente.",
+"b": [
+"por ato omissivo",
+"não apenas pela ação do agente"
+],
+"d": [
+"somente por ato comissivo",
+"exclusivamente pela ação"
+]
+},
+{
+"n": 235,
+"m": "B",
+"b": [
+"responde objetivamente",
+"inconclusiva"
+],
+"d": [
+"subjetivamente",
+"apenas com prova de culpa",
+"inexistente"
+]
+},
+{
+"n": 238,
+"m": "B",
+"b": [
+"não executa",
+"impróprio"
+],
+"d": [
+"derivado",
+"uti universi",
+"delegado"
+]
+},
+{
+"n": 239,
+"m": "B",
+"b": [
+"uti singuli",
+"individual e direta",
+"usuários determinados"
+],
+"d": [
+"uti universi",
+"coletiva e indivisível",
+"toda a coletividade"
+]
+},
+{
+"n": 243,
+"m": "B",
+"b": [
+"interrupção em emergência",
+"prévio aviso",
+"não exige gratuidade"
+],
+"d": [
+"impõe gratuidade",
+"sem aviso prévio",
+"nunca admite interrupção"
+]
+},
+{
+"n": 244,
+"m": "B",
+"t": "A generalidade do serviço público exige atender a todos sem discriminação, vedando selecionar usuários por renda ou afinidade política.",
+"b": [
+"sem discriminação",
+"renda ou afinidade política"
+],
+"d": [
+"mediante prévia triagem",
+"com preferência a quem paga",
+"ordem de chegada"
+]
+},
+{
+"n": 245,
+"m": "B",
+"t": "O ministério é unidade da administração direta sem personalidade jurídica própria.",
+"b": [
+"administração direta",
+"sem personalidade jurídica própria"
+],
+"d": [
+"administração indireta",
+"com personalidade jurídica de direito público",
+"autarquia"
+]
+},
+{
+"n": 247,
+"m": "B",
+"b": [
+"órgãos sem personalidade jurídica própria",
+"teoria do órgão"
+],
+"d": [
+"entidades com personalidade jurídica",
+"teoria da representação",
+"autarquias"
+]
+},
+{
+"n": 252,
+"m": "B",
+"t": "A lei apenas autoriza a instituição da empresa pública; só a autarquia é criada por lei.",
+"b": [
+"apenas autoriza",
+"só a autarquia"
+],
+"d": [
+"cria diretamente",
+"só a sociedade de economia mista",
+"somente a fundação"
+]
+},
+{
+"n": 255,
+"m": "B",
+"b": [
+"direito público",
+"criada por lei",
+"administração indireta"
+],
+"d": [
+"direito privado",
+"autorizada por lei",
+"administração direta"
+]
+},
+{
+"n": 256,
+"m": "B",
+"b": [
+"administração indireta",
+"autorizada por lei",
+"direito privado"
+],
+"d": [
+"administração direta",
+"criada por lei",
+"direito público"
+]
+},
+{
+"n": 258,
+"m": "B",
+"b": [
+"administração indireta",
+"direito privado",
+"não significa direito público"
+],
+"d": [
+"administração direta",
+"autonomia política",
+"sempre direito público"
+]
+},
+{
+"n": 260,
+"m": "A",
+"r": [
+[
+"prescinde de autorização legislativa específica se o ente federativo detiver o controle acionário e a entidade atuar em conformidade com o interesse público",
+"exige autorização legislativa específica ainda que o ente federativo detenha o controle acionário"
+]
+],
+"b": [
+"exige",
+"autorização legislativa específica",
+"controle acionário"
+],
+"d": [
+"prescinde de",
+"lei complementar",
+"decreto"
+]
+},
+{
+"n": 263,
+"m": "B",
+"b": [
+"integram a indireta",
+"direito público (fundação autárquica)",
+"direito privado"
+],
+"d": [
+"administração direta",
+"somente direito privado",
+"vontade do gestor"
+]
+},
+{
+"n": 264,
+"m": "B",
+"t": "As entidades da administração indireta têm autonomia administrativa e exercem competências administrativas sujeitas a controle do ente que as instituiu.",
+"b": [
+"autonomia administrativa",
+"sujeitas a controle"
+],
+"d": [
+"autonomia política",
+"independentemente de controle",
+"competências legislativas"
+]
+},
+{
+"n": 265,
+"m": "B",
+"b": [
+"Só a autarquia",
+"apenas autoriza"
+],
+"d": [
+"Também a empresa pública",
+"cria diretamente",
+"Todas as entidades"
+]
+},
+{
+"n": 267,
+"m": "B",
+"t": "O IBGE é fundação pública federal, entidade com personalidade própria integrante da administração indireta.",
+"b": [
+"fundação pública federal",
+"administração indireta"
+],
+"d": [
+"órgão público",
+"administração direta",
+"empresa estatal"
+]
+},
+{
+"n": 270,
+"m": "B",
+"b": [
+"direito privado",
+"derrogações de direito público",
+"regime híbrido"
+],
+"d": [
+"regime integralmente privado",
+"autonomia política",
+"regime estatutário"
+]
+},
+{
+"n": 271,
+"m": "B",
+"b": [
+"direito público",
+"lei específica",
+"controle finalístico"
+],
+"d": [
+"direito privado",
+"autorização legislativa",
+"controle hierárquico"
+]
+},
+{
+"n": 279,
+"m": "B",
+"b": [
+"agência executiva",
+"não altera sua personalidade",
+"contrato de gestão"
+],
+"d": [
+"organização social",
+"termo de parceria",
+"convênio"
+]
+},
+{
+"n": 281,
+"m": "A",
+"r": [
+[
+"direito público",
+"direito privado"
+],
+[
+"criadas mediante publicação de",
+"instituídas após autorização em"
+]
+],
+"b": [
+"direito privado",
+"instituídas após autorização"
+],
+"d": [
+"direito público",
+"criadas mediante publicação",
+"autarquias"
+]
+},
+{
+"n": 285,
+"m": "B",
+"b": [
+"direito privado",
+"integram a indireta",
+"autorização legislativa"
+],
+"d": [
+"direito público",
+"integram a direta",
+"criação por lei"
+]
+},
+{
+"n": 286,
+"m": "C",
+"b": [
+"personalidade jurídica própria",
+"desobrigue",
+"princípios constitucionais"
+],
+"d": [
+"personalidade de direito privado",
+"autonomia política",
+"regulamentos próprios"
+]
+},
+{
+"n": 287,
+"m": "B",
+"b": [
+"criada por lei específica",
+"autorizada por lei",
+"princípios administrativos"
+],
+"d": [
+"autorizada por decreto",
+"criada por lei complementar",
+"regime de direito público"
+]
+},
+{
+"n": 288,
+"m": "B",
+"b": [
+"atividade-meio",
+"não configura",
+"descentralização em sentido estrito"
+],
+"d": [
+"atividade-fim",
+"desconcentração",
+"delegação"
+]
+},
+{
+"n": 289,
+"m": "B",
+"b": [
+"desconcentração",
+"mesma pessoa jurídica",
+"não descentralização"
+],
+"d": [
+"delegação",
+"outra pessoa jurídica",
+"outorga"
+]
+},
+{
+"n": 290,
+"m": "B",
+"b": [
+"desconcentração",
+"mesma pessoa jurídica",
+"órgãos hierarquizados"
+],
+"d": [
+"descentralização",
+"outra pessoa jurídica",
+"entidades autônomas"
+]
+},
+{
+"n": 292,
+"m": "B",
+"b": [
+"órgãos despersonalizados",
+"desconcentração"
+],
+"d": [
+"pessoas jurídicas",
+"descentralização",
+"delegação"
+]
+},
+{
+"n": 293,
+"m": "B",
+"b": [
+"desconcentração",
+"entidade da indireta",
+"descentralização"
+],
+"d": [
+"delegação",
+"órgão da direta",
+"concessão"
+]
+},
+{
+"n": 295,
+"m": "B",
+"b": [
+"organização social",
+"contrato de gestão"
+],
+"d": [
+"agência executiva",
+"termo de parceria",
+"convênio"
+]
+},
+{
+"n": 296,
+"m": "B",
+"b": [
+"não podem",
+"OSCIP",
+"terceiro setor"
+],
+"d": [
+"organização social",
+"segundo setor",
+"sempre devem"
+]
+},
+{
+"n": 297,
+"m": "B",
+"t": "O contrato de gestão pode ser firmado entre o poder público e entidades da administração indireta e organizações sociais.",
+"b": [
+"pode ser firmado",
+"organizações sociais"
+],
+"d": [
+"só admite ser firmado",
+"entidades privadas em geral",
+"empresas privadas"
+]
+},
+{
+"n": 298,
+"m": "B",
+"b": [
+"termo de parceria",
+"contrato de gestão"
+],
+"d": [
+"convênio",
+"acordo de cooperação técnica",
+"contrato administrativo"
+]
+},
+{
+"n": 299,
+"m": "B",
+"b": [
+"recursos públicos",
+"direito administrativo"
+],
+"d": [
+"recursos privados",
+"direito civil",
+"direito empresarial"
+]
+},
+{
+"n": 300,
+"m": "B",
+"b": [
+"não pode ser qualificada",
+"OSCIP",
+"entidades estatais"
+],
+"d": [
+"organização social",
+"entidades privadas",
+"livremente se qualifica"
+]
+},
+{
+"n": 305,
+"m": "B",
+"b": [
+"Administração Científica",
+"tarefas",
+"padronização e especialização"
+],
+"d": [
+"Teoria das Relações Humanas",
+"grupos informais",
+"motivação"
+]
+},
+{
+"n": 306,
+"m": "B",
+"b": [
+"direção",
+"três níveis"
+],
+"d": [
+"controle",
+"apenas dois níveis",
+"planejamento"
+]
+},
+{
+"n": 307,
+"m": "B",
+"b": [
+"Alocar pessoal e recursos",
+"organização",
+"define os meios"
+],
+"d": [
+"direção",
+"controle",
+"Definir metas e objetivos"
+]
+},
+{
+"n": 308,
+"m": "B",
+"b": [
+"relações humanas",
+"fatores psicossociais",
+"grupos informais"
+],
+"d": [
+"administração científica",
+"fatores técnicos",
+"hierarquia formal"
+]
+},
+{
+"n": 309,
+"m": "B",
+"t": "Os processos organizacionais são apenas em parte estruturados e previsíveis, conforme o nível de complexidade e o ambiente decisório.",
+"b": [
+"em parte",
+"conforme o nível de complexidade"
+],
+"d": [
+"integralmente",
+"independentemente do nível de complexidade",
+"sempre"
+]
+},
+{
+"n": 311,
+"m": "C",
+"b": [
+"Amplitude do controle",
+"especialização do trabalho",
+"formalização"
+],
+"d": [
+"cultura organizacional",
+"sistema de recompensas",
+"estratégia"
+]
+},
+{
+"n": 312,
+"m": "B",
+"b": [
+"fatores sociais",
+"grupos informais",
+"incentivos econômicos"
+],
+"d": [
+"fatores técnicos",
+"estrutura formal",
+"métodos padronizados"
+]
+},
+{
+"n": 313,
+"m": "B",
+"b": [
+"cíclico e interdependente",
+"tratar isoladamente"
+],
+"d": [
+"linear e independente",
+"tratar integradamente",
+"fixo e estático"
+]
+},
+{
+"n": 314,
+"m": "B",
+"b": [
+"superou",
+"trabalhador passivo",
+"motivação, liderança, decisão e conflito"
+],
+"d": [
+"manteve",
+"trabalhador autônomo",
+"estrutura formal e hierarquia"
+]
+},
+{
+"n": 315,
+"m": "A",
+"r": [
+[
+"denominada direção",
+"denominada organização"
+]
+],
+"b": [
+"denominada organização",
+"arrumar e distribuir"
+],
+"d": [
+"denominada direção",
+"denominada controle",
+"denominada planejamento"
+]
+},
+{
+"n": 316,
+"m": "B",
+"b": [
+"abordagem comportamental",
+"indivíduo e dos grupos",
+"motivação, liderança, decisão e conflito"
+],
+"d": [
+"abordagem sistêmica",
+"estrutura formal",
+"tarefas e métodos"
+]
+},
+{
+"n": 317,
+"m": "A",
+"r": [
+[
+"denominada direção",
+"denominada planejamento"
+]
+],
+"b": [
+"definição dos objetivos",
+"denominada planejamento"
+],
+"d": [
+"denominada direção",
+"denominada controle",
+"denominada organização"
+]
+},
+{
+"n": 318,
+"m": "B",
+"b": [
+"sistema aberto",
+"partes interdependentes",
+"entradas e saídas"
+],
+"d": [
+"sistema fechado",
+"partes independentes",
+"metas e resultados"
+]
+},
+{
+"n": 319,
+"m": "A",
+"r": [
+[
+"função de direção",
+"função de organização"
+]
+],
+"b": [
+"função de organização",
+"atribuir tarefas e responsabilidades"
+],
+"d": [
+"função de direção",
+"função de controle",
+"função de planejamento"
+]
+},
+{
+"n": 321,
+"m": "B",
+"b": [
+"planejamento",
+"estratégico, tático e operacional"
+],
+"d": [
+"controle",
+"estratégico e financeiro",
+"direção"
+]
+},
+{
+"n": 323,
+"m": "B",
+"b": [
+"desenho organizacional",
+"estrutura mais adequada"
+],
+"d": [
+"planejamento estratégico",
+"estrutura padrão única",
+"cultura organizacional"
+]
+},
+{
+"n": 324,
+"m": "B",
+"b": [
+"rejeita estruturas universais",
+"depende de variáveis situacionais"
+],
+"d": [
+"adota estruturas padronizadas",
+"independe do contexto"
+]
+},
+{
+"n": 326,
+"m": "B",
+"t": "Para a Contingência, o desenho organizacional depende do contexto (ambiente, tecnologia, tamanho, estratégia); estruturas mecanicistas nem sempre são superiores às orgânicas.",
+"b": [
+"nem sempre são superiores",
+"depende do contexto"
+],
+"d": [
+"são sempre superiores",
+"independe do ambiente"
+]
+},
+{
+"n": 328,
+"m": "B",
+"b": [
+"dependem",
+"tecnologia, porte e pessoas"
+],
+"d": [
+"não se relacionam a variáveis",
+"estratégia, tamanho e cargos"
+]
+},
+{
+"n": 329,
+"m": "B",
+"b": [
+"não substitui",
+"separação constitucional dos Poderes"
+],
+"d": [
+"substitui integralmente",
+"separação administrativa das funções"
+]
+},
+{
+"n": 330,
+"m": "B",
+"b": [
+"coexistem em traços",
+"não substitui a separação dos Poderes"
+],
+"d": [
+"se excluem mutuamente",
+"elimina os Poderes"
+]
+},
+{
+"n": 331,
+"m": "C",
+"b": [
+"única forma ótima",
+"ambiente externo",
+"tecnologia empregada"
+],
+"d": [
+"melhor forma universal",
+"porte da organização",
+"legislação vigente"
+]
+},
+{
+"n": 332,
+"m": "B",
+"t": "O modelo gerencial enfatiza resultados, mas mantém os princípios da legalidade e da impessoalidade e os controles formais sobre a atuação estatal.",
+"b": [
+"mantém",
+"legalidade e da impessoalidade"
+],
+"d": [
+"elimina",
+"ineficiência e informalidade",
+"dispensa"
+]
+},
+{
+"n": 333,
+"m": "B",
+"b": [
+"dominação racional-legal",
+"impessoalidade"
+],
+"d": [
+"dominação carismática",
+"dominação tradicional",
+"pessoalidade das relações"
+]
+},
+{
+"n": 334,
+"m": "B",
+"b": [
+"disfunção burocrática",
+"inversão de meios e fins"
+],
+"d": [
+"virtude burocrática",
+"inversão de poderes",
+"racionalidade formal"
+]
+},
+{
+"n": 335,
+"m": "B",
+"b": [
+"capacidade política",
+"capacidade técnica e gerencial"
+],
+"d": [
+"capacidade fiscal",
+"capacidade jurídica e normativa"
+]
+},
+{
+"n": 336,
+"m": "B",
+"b": [
+"gestão",
+"avalia, direciona e monitora"
+],
+"d": [
+"alta administração",
+"executa e arrecada"
+]
+},
+{
+"n": 338,
+"m": "C",
+"b": [
+"enfoque contingencial",
+"exógenas ou não controláveis"
+],
+"d": [
+"enfoque sistêmico",
+"endógenas e controláveis"
+]
+},
+{
+"n": 339,
+"m": "B",
+"b": [
+"Fraqueza interna",
+"oportunidade externa",
+"melhoria ou crescimento"
+],
+"d": [
+"Força interna",
+"ameaça externa",
+"manutenção ou sobrevivência"
+]
+},
+{
+"n": 341,
+"m": "B",
+"b": [
+"urgência",
+"potencial de agravamento"
+],
+"d": [
+"gravidade",
+"prazo de tolerância"
+]
+},
+{
+"n": 342,
+"m": "B",
+"b": [
+"tendência",
+"velocidade ou a probabilidade"
+],
+"d": [
+"urgência",
+"gravidade",
+"impacto atual"
+]
+},
+{
+"n": 344,
+"m": "B",
+"t": "A competição é ênfase da nova gestão pública; a nova governança privilegia colaboração e redes.",
+"b": [
+"nova gestão pública",
+"colaboração e redes"
+],
+"d": [
+"administração burocrática",
+"competição e mercado"
+]
+},
+{
+"n": 345,
+"m": "B",
+"b": [
+"falta de transparência",
+"ambiente favorável"
+],
+"d": [
+"excesso de controle",
+"ambiente desfavorável",
+"maior publicidade"
+]
+},
+{
+"n": 346,
+"m": "B",
+"b": [
+"swimlanes",
+"participantes e responsabilidades"
+],
+"d": [
+"conectores de fluxo",
+"eventos e gateways"
+]
+},
+{
+"n": 348,
+"m": "B",
+"t": "Na BPMN 2.0, o gateway inclusivo pode acionar um, vários ou todos os caminhos de saída; o exclusivo direciona o fluxo para um único caminho.",
+"b": [
+"inclusivo",
+"um, vários ou todos os caminhos"
+],
+"d": [
+"paralelo",
+"apenas um caminho",
+"baseado em eventos"
+]
+},
+{
+"n": 350,
+"m": "B",
+"b": [
+"poder coercitivo",
+"posição hierárquica"
+],
+"d": [
+"poder de recompensa",
+"carisma pessoal"
+]
+},
+{
+"n": 352,
+"m": "B",
+"t": "Na Teoria de Fiedler, em situações de controle moderado, o líder centrado no relacionamento interpessoal é mais eficaz; o orientado para tarefas rende mais nos extremos.",
+"b": [
+"controle moderado",
+"centrado no relacionamento interpessoal"
+],
+"d": [
+"controle elevado",
+"centrado na produção"
+]
+},
+{
+"n": 354,
+"m": "B",
+"b": [
+"What",
+"objeto da ação"
+],
+"d": [
+"Why",
+"Where",
+"finalidade da ação"
+]
+},
+{
+"n": 357,
+"m": "B",
+"b": [
+"padroniza-se o que funcionou",
+"corrigem-se as falhas"
+],
+"d": [
+"reinicia-se o planejamento",
+"ignoram-se as falhas"
+]
+},
+{
+"n": 358,
+"m": "A",
+"r": [
+[
+"o mecanismo de controle compreende a definição",
+"o mecanismo de estratégia compreende a definição"
+],
+[
+"o mecanismo de estratégia compreende os processos",
+"o mecanismo de controle compreende os processos"
+]
+],
+"b": [
+"mecanismo de estratégia",
+"mecanismo de controle"
+],
+"d": [
+"mecanismo de gestão",
+"mecanismo de liderança"
+]
+},
+{
+"n": 360,
+"m": "B",
+"b": [
+"mobilização integrada",
+"formação própria"
+],
+"d": [
+"soma isolada",
+"formação única"
+]
+},
+{
+"n": 366,
+"m": "B",
+"t": "Quanto maior a amplitude de controle, menos níveis hierárquicos e estrutura mais achatada; amplitude menor gera mais níveis e pirâmide alta.",
+"b": [
+"menos níveis hierárquicos",
+"mais achatada"
+],
+"d": [
+"mais níveis hierárquicos",
+"mais alta",
+"mais verticalizada"
+]
+},
+{
+"n": 370,
+"m": "B",
+"t": "Promover a simplificação administrativa pela priorização dos serviços prestados por meio eletrônico é uma diretriz da governança pública, e não um princípio.",
+"b": [
+"diretriz",
+"não um princípio"
+],
+"d": [
+"objetivo",
+"fundamento",
+"mecanismo"
+]
+},
+{
+"n": 374,
+"m": "B",
+"t": "O controle social alcança todo o ciclo das políticas públicas, e a fiscalização da execução orçamentária é competência também da sociedade, e não só dos órgãos de controle.",
+"b": [
+"todo o ciclo das políticas públicas",
+"também da sociedade"
+],
+"d": [
+"apenas a formulação",
+"exclusiva dos órgãos de controle"
+]
+},
+{
+"n": 376,
+"m": "B",
+"b": [
+"prestar contas",
+"impor sanções e correções"
+],
+"d": [
+"cobrar tributos",
+"dispensar correções"
+]
+},
+{
+"n": 379,
+"m": "B",
+"t": "Na administração pública patrimonialista, o cidadão é considerado súdito, sem direitos plenos.",
+"b": [
+"patrimonialista",
+"súdito, sem direitos plenos"
+],
+"d": [
+"gerencial",
+"contribuinte e cliente"
+]
+},
+{
+"n": 382,
+"m": "B",
+"b": [
+"disfunções que a afastam do cidadão",
+"direitos universais"
+],
+"d": [
+"maior proximidade do cidadão",
+"direitos restritos"
+]
+},
+{
+"n": 384,
+"m": "B",
+"t": "A análise SWOT mapeia oportunidades e ameaças, relacionadas à dimensão externa, e forças e fraquezas, relacionadas à dimensão interna da organização.",
+"b": [
+"dimensão externa",
+"dimensão interna"
+],
+"d": [
+"dimensão estratégica",
+"dimensão operacional"
+]
+},
+{
+"n": 387,
+"m": "B",
+"t": "Nos serviços não exclusivos, a reforma do serviço civil reduziu o controle de processos e ampliou a autonomia gerencial.",
+"b": [
+"reduziu o controle de processos",
+"ampliou a autonomia gerencial"
+],
+"d": [
+"reforçou o controle de processos",
+"restringiu a autonomia gerencial"
+]
+},
+{
+"n": 389,
+"m": "B",
+"t": "No paradigma pós-burocrático, a maior autonomia gerencial não implica redução da responsabilização e do controle: muda-se o controle de processos para resultados.",
+"b": [
+"não implica redução",
+"de processos para resultados"
+],
+"d": [
+"acarreta eliminação",
+"de resultados para processos"
+]
+},
+{
+"n": 390,
+"m": "B",
+"b": [
+"descentralização",
+"horizontalização"
+],
+"d": [
+"concentração de funções",
+"verticalização",
+"hierarquização"
+]
+},
+{
+"n": 391,
+"m": "B",
+"b": [
+"base da cadeia",
+"resultado final no topo"
+],
+"d": [
+"topo da cadeia",
+"meio da cadeia",
+"ponto de partida isolado"
+]
+},
+{
+"n": 406,
+"m": "C",
+"b": [
+"centraliza a tomada de decisões",
+"liderança autocrática"
+],
+"d": [
+"delega a tomada de decisões",
+"liderança democrática",
+"liderança liberal"
+]
+},
+{
+"n": 411,
+"m": "B",
+"t": "A redefinição de responsabilidades e a realocação de recursos mostram a dependência da função de organização em relação às diretrizes do planejamento.",
+"b": [
+"dependência",
+"diretrizes do planejamento"
+],
+"d": [
+"independência",
+"indiferença",
+"diretrizes da execução"
+]
+},
+{
+"n": 413,
+"m": "B",
+"t": "Em uma análise SWOT, a eficácia da logística interna é uma força e a queda da taxa de juros de mercado é uma oportunidade.",
+"b": [
+"uma força",
+"uma oportunidade"
+],
+"d": [
+"uma fraqueza",
+"uma ameaça"
+]
+},
+{
+"n": 414,
+"m": "B",
+"t": "Na matriz SWOT, o surgimento de novas tecnologias de automação no setor é fator externo e deve ser classificado como oportunidade ou ameaça; força e fraqueza são categorias internas.",
+"b": [
+"fator externo",
+"oportunidade ou ameaça"
+],
+"d": [
+"fator interno",
+"força ou fraqueza"
+]
+},
+{
+"n": 416,
+"m": "B",
+"b": [
+"em conjunto e de forma consensual",
+"só uma das etapas"
+],
+"d": [
+"pelo gerente e comunicados ao avaliado",
+"a única etapa"
+]
+},
+{
+"n": 420,
+"m": "C",
+"b": [
+"três níveis",
+"estratégico, tático e operacional"
+],
+"d": [
+"dois níveis",
+"estratégico e institucional"
+]
+},
+{
+"n": 422,
+"m": "A",
+"r": [
+[
+"orientar os subordinados sobre como executar as tarefas diárias e em comunicar-lhes novas metas",
+"verificar o desempenho e compará-lo com os padrões e em corrigir os desvios"
+]
+],
+"b": [
+"verificar o desempenho",
+"corrigir os desvios"
+],
+"d": [
+"orientar os subordinados",
+"comunicar novas metas"
+]
+},
+{
+"n": 430,
+"m": "A",
+"r": [
+[
+"Subprocessos são os conjuntos",
+"Processos são os conjuntos"
+]
+],
+"b": [
+"Processos",
+"desmembradas em tarefas"
+],
+"d": [
+"Subprocessos",
+"Projetos",
+"desmembradas em subprocessos"
+]
+},
+{
+"n": 432,
+"m": "A",
+"r": [
+[
+"refere-se apenas a escrever o que deve ser feito",
+"abrange modelagem, indicadores, regras, riscos e responsáveis"
+]
+],
+"b": [
+"abrange modelagem",
+"riscos e responsáveis"
+],
+"d": [
+"restringe-se a",
+"custos e prazos",
+"limita-se a fluxogramas"
+]
+},
+{
+"n": 434,
+"m": "A",
+"r": [
+[
+"A descentralização é",
+"A centralização é"
+]
+],
+"b": [
+"centralização",
+"ambientes estáveis e previsíveis"
+],
+"d": [
+"descentralização",
+"ambientes dinâmicos e instáveis"
+]
+},
+{
+"n": 443,
+"m": "B",
+"t": "O líder cria segurança psicológica e confiança e canaliza o conflito de ideias para o comprometimento e a responsabilidade recíproca.",
+"b": [
+"segurança psicológica",
+"responsabilidade recíproca"
+],
+"d": [
+"rigidez hierárquica",
+"responsabilidade individual"
+]
+},
+{
+"n": 446,
+"m": "B",
+"t": "Na liderança situacional, o estilo diretivo serve a liderados de baixa competência e confiança, e a alta maturidade pede delegar.",
+"b": [
+"diretivo",
+"baixa competência e confiança"
+],
+"d": [
+"participativo",
+"alta competência e confiança"
+]
+},
+{
+"n": 447,
+"m": "A",
+"r": [
+[
+"manter o mesmo comportamento de apoio para todos os colaboradores a ele subordinados, sejam eles experientes ou não",
+"ajustar o estilo à maturidade de cada colaborador"
+]
+],
+"b": [
+"ajustar o estilo",
+"maturidade de cada colaborador"
+],
+"d": [
+"manter o mesmo estilo",
+"experiência de todos os colaboradores"
+]
+},
+{
+"n": 449,
+"m": "B",
+"t": "O líder transacional apela aos interesses pessoais dos subordinados e estabelece relações de troca com eles; o transformacional os inspira a transcender interesses pessoais.",
+"b": [
+"transacional",
+"relações de troca"
+],
+"d": [
+"laissez-faire",
+"relações de dependência",
+"autocrático"
+]
+},
+{
+"n": 451,
+"m": "B",
+"t": "O controle por retroação não é superior ao controle preventivo, que atua antes da ocorrência do evento.",
+"b": [
+"não é superior",
+"antes da ocorrência do evento"
+],
+"d": [
+"é tecnicamente superior",
+"após a ocorrência do evento"
+]
+},
+{
+"n": 459,
+"m": "B",
+"t": "Os fatores externos, como recompensas financeiras, previnem a insatisfação, mas não sustentam o engajamento de longo prazo, papel da motivação intrínseca.",
+"b": [
+"não sustentam o engajamento de longo prazo",
+"motivação intrínseca"
+],
+"d": [
+"são as principais fontes de engajamento",
+"motivação extrínseca"
+]
+},
+{
+"n": 463,
+"m": "B",
+"t": "Na governança em rede o cidadão é ativo e coprodutor, exige controle e acesso à informação.",
+"b": [
+"ativo e coprodutor",
+"controle e acesso à informação"
+],
+"d": [
+"consumidor passivo",
+"transparência secundária"
+]
+},
+{
+"n": 464,
+"m": "B",
+"t": "Conselhos e orçamento participativo conferem poder fiscalizatório à sociedade, sendo controle social e accountability societal.",
+"b": [
+"poder fiscalizatório",
+"controle social e accountability societal"
+],
+"d": [
+"mera legitimação",
+"accountability horizontal"
+]
+},
+{
+"n": 466,
+"m": "A",
+"r": [
+[
+"a sociedade está plenamente capacitada para consumir e absorver as informações disponibilizadas nos portais de transparência",
+"os dados são apenas publicados, sem que a sociedade os compreenda"
+]
+],
+"b": [
+"apenas publicados",
+"sem que a sociedade os compreenda"
+],
+"d": [
+"plenamente capacitada",
+"amplamente compreendidos"
+]
+},
+{
+"n": 467,
+"m": "A",
+"r": [
+[
+"exclusivamente a accountability horizontal",
+"sobretudo a accountability vertical"
+]
+],
+"b": [
+"sobretudo",
+"accountability vertical"
+],
+"d": [
+"exclusivamente",
+"accountability horizontal"
+]
+},
+{
+"n": 470,
+"m": "B",
+"t": "A transparência permite à sociedade e aos órgãos de controle acompanhar e avaliar o uso dos recursos públicos.",
+"b": [
+"sociedade e aos órgãos de controle",
+"acompanhar e avaliar"
+],
+"d": [
+"apenas aos órgãos de controle",
+"somente arquivar"
+]
+},
+{
+"n": 473,
+"m": "B",
+"t": "A administração pública burocrática tem méritos, como a contenção de abusos, apesar da rigidez.",
+"b": [
+"méritos",
+"contenção de abusos"
+],
+"d": [
+"desprovido de qualidades",
+"falta de controle de abusos"
+]
+},
+{
+"n": 474,
+"m": "B",
+"t": "As políticas setoriais vieram em reformas posteriores; a primeira reforma administrativa cuidou das atividades-meio.",
+"b": [
+"reformas posteriores",
+"atividades-meio"
+],
+"d": [
+"reforma de 1995",
+"atividades-fim"
+]
+},
+{
+"n": 476,
+"m": "A",
+"r": [
+[
+"predominantemente políticos",
+"técnicos e meritocráticos"
+],
+[
+"rigidez absoluta das carreiras",
+"flexibilidade das carreiras"
+],
+[
+"ausência de mecanismos",
+"presença de mecanismos"
+]
+],
+"b": [
+"técnicos e meritocráticos",
+"flexibilidade das carreiras",
+"presença de mecanismos"
+],
+"d": [
+"predominantemente políticos",
+"rigidez absoluta",
+"ausência de mecanismos"
+]
+},
+{
+"n": 477,
+"m": "A",
+"r": [
+[
+"transferência integral da propriedade de serviços não exclusivos para a iniciativa privada, visando à obtenção de lucro e à total desoneração do ente público quanto à regulação dessas atividades",
+"publicização dos serviços não exclusivos, que passaram ao setor público não estatal"
+]
+],
+"b": [
+"publicização",
+"setor público não estatal"
+],
+"d": [
+"privatização integral",
+"iniciativa privada"
+]
+},
+{
+"n": 478,
+"m": "A",
+"r": [
+[
+"pontual, realizada ao final de cada exercício fiscal para validar o alcance dos objetivos",
+"contínua, realizada durante a execução para acompanhar o alcance dos objetivos"
+],
+[
+"dispensando ações",
+"permitindo ações"
+]
+],
+"b": [
+"contínua",
+"permitindo ações de redirecionamento de curso"
+],
+"d": [
+"pontual",
+"dispensando ações de redirecionamento de curso"
+]
+},
+{
+"n": 479,
+"m": "B",
+"t": "Os objetivos estratégicos têm foco institucional e de longo prazo; o cotidiano operacional é orientado pelos objetivos operacionais.",
+"b": [
+"foco institucional e de longo prazo",
+"objetivos operacionais"
+],
+"d": [
+"foco departamental e de curto prazo",
+"objetivos táticos"
+]
+},
+{
+"n": 481,
+"m": "B",
+"t": "O planejamento estratégico deve contemplar a análise do ambiente externo, identificando oportunidades e ameaças presentes no cenário mercadológico.",
+"b": [
+"ambiente externo",
+"oportunidades e ameaças"
+],
+"d": [
+"ambiente interno",
+"forças e ameaças"
+]
+},
+{
+"n": 484,
+"m": "A",
+"r": [
+[
+"restringe-se à avaliação de indicadores financeiros",
+"abrange fatores amplos e qualitativos, não só financeiros"
+]
+],
+"b": [
+"amplos e qualitativos",
+"não só financeiros"
+],
+"d": [
+"restringe-se",
+"apenas quantitativos"
+]
+},
+{
+"n": 485,
+"m": "A",
+"r": [
+[
+"restrita e focada, centra-se em questões sob controle da organização e visa identificar seus pontos fortes e fracos",
+"ampla, foge ao controle da organização e visa identificar oportunidades e ameaças"
+]
+],
+"b": [
+"foge ao controle da organização",
+"oportunidades e ameaças"
+],
+"d": [
+"está sob controle da organização",
+"pontos fortes e fracos"
+]
+},
+{
+"n": 490,
+"m": "B",
+"t": "A adjudicação de licitação é uma atividade dentro do processo de compras, em geral de apoio.",
+"b": [
+"atividade",
+"processo de compras"
+],
+"d": [
+"macroprocesso",
+"tarefa"
+]
+},
+{
+"n": 493,
+"m": "A",
+"r": [
+[
+"governança hierárquica",
+"governança em rede"
+]
+],
+"b": [
+"governança em rede",
+"horizontais e interdependentes"
+],
+"d": [
+"governança hierárquica",
+"verticais e subordinadas"
+]
+},
+{
+"n": 495,
+"m": "B",
+"t": "Análise de riscos é compreender a natureza do risco e determinar seu nível, para subsidiar avaliação e tratamento.",
+"b": [
+"natureza do risco",
+"determinar seu nível"
+],
+"d": [
+"causa do risco",
+"identificar sua origem"
+]
+},
+{
+"n": 496,
+"m": "B",
+"t": "Denúncias informais não bastam para o exercício da fiscalização pelos cidadãos; o controle social depende da transparência pública.",
+"b": [
+"não bastam",
+"depende da transparência pública"
+],
+"d": [
+"são suficientes",
+"dispensa a transparência pública"
+]
+},
+{
+"n": 497,
+"m": "B",
+"t": "O controle de processos tende a liberar as pessoas de tarefas repetitivas.",
+"b": [
+"liberar as pessoas",
+"tarefas repetitivas"
+],
+"d": [
+"tornar o trabalho mecânico",
+"rotinas criativas"
+]
+},
+{
+"n": 500,
+"m": "B",
+"t": "A principal característica da liderança técnica é o conhecimento técnico do líder; o caráter autoritário é da liderança autocrática.",
+"b": [
+"conhecimento técnico do líder",
+"liderança autocrática"
+],
+"d": [
+"caráter autoritário do líder",
+"liderança liberal"
+]
+},
+{
+"n": 52,
+"m": "B",
+"t": "O pedido escrito de informações a Ministro de Estado tem recusa ou não atendimento em trinta dias como crime de responsabilidade.",
+"b": [
+"Ministro de Estado",
+"trinta dias"
+],
+"d": [
+"Presidente da República",
+"quinze dias"
+]
+},
+{
+"n": 152,
+"m": "B",
+"t": "Efetividade é atributo do cargo, estabilidade é garantia do servidor e vitaliciedade é garantia própria de certas carreiras, como a dos ministros e conselheiros dos tribunais de contas.",
+"b": [
+"atributo do cargo",
+"garantia do servidor"
+],
+"d": [
+"atributo do servidor",
+"garantia do cargo",
+"garantia da carreira"
+]
+},
+{
+"n": 242,
+"m": "B",
+"t": "Continuidade, modicidade tarifária, universalidade e eficiência são princípios do regime jurídico do serviço público.",
+"b": [
+"modicidade tarifária",
+"universalidade"
+],
+"d": [
+"lucratividade",
+"sigilo",
+"livre concorrência"
+]
+},
+{
+"n": 253,
+"m": "B",
+"t": "A personalidade das fundações públicas de direito privado nasce do registro dos atos constitutivos, mas elas seguem o regime privado derrogado pelo direito público.",
+"b": [
+"registro dos atos constitutivos",
+"regime privado derrogado pelo direito público"
+],
+"d": [
+"lei específica",
+"regime exclusivamente privado"
+]
+},
+{
+"n": 327,
+"m": "B",
+"t": "O planejamento desenha as atividades e fixa os resultados a obter, e não a organização nem o controle.",
+"b": [
+"planejamento",
+"fixa os resultados a obter"
+],
+"d": [
+"direção",
+"avalia os resultados obtidos"
+]
+},
+{
+"n": 356,
+"m": "B",
+"t": "Integram o rol de princípios capacidade de resposta, integridade e confiabilidade; não entra monitoramento do desempenho.",
+"b": [
+"capacidade de resposta, integridade e confiabilidade",
+"monitoramento do desempenho"
+],
+"d": [
+"eficiência e economicidade",
+"meritocracia e inovação"
+]
+},
+{
+"n": 359,
+"m": "B",
+"t": "São princípios accountability (prestação de contas e responsabilidade) e transparência; gestão de risco e código de conduta são práticas.",
+"b": [
+"transparência",
+"gestão de risco e código de conduta"
+],
+"d": [
+"legalidade",
+"controle e fiscalização"
+]
+},
+{
+"n": 367,
+"m": "B",
+"t": "Entre os princípios estão capacidade de resposta, integridade e transparência, e não meritocracia, eficiência ou sustentabilidade.",
+"b": [
+"capacidade de resposta, integridade e transparência",
+"meritocracia, eficiência ou sustentabilidade"
+],
+"d": [
+"eficiência, estabilidade política e neutralidade orçamentária",
+"capacidade de resposta e integridade"
+]
+},
+{
+"n": 369,
+"m": "A",
+"r": [
+[
+"recursos e ideias, respectivamente",
+"ideias e recursos, respectivamente"
+]
+],
+"b": [
+"ideias e recursos"
+],
+"d": [
+"recursos e ideias",
+"pessoas e metas"
+]
+},
+{
+"n": 372,
+"m": "B",
+"t": "A alta administração deve manter sistema de gestão de riscos e controles internos de forma sistemática, estruturada e oportuna, nos termos do art. 17 do Decreto 9.203/2017.",
+"b": [
+"sistemática, estruturada e oportuna",
+"art. 17"
+],
+"d": [
+"eventual e informal",
+"assistemática e pontual",
+"art. 3º"
+]
+},
+{
+"n": 401,
+"m": "B",
+"t": "O planejamento tático desdobra a estratégia em metas de médio prazo por área de resultado, e não estratégico nem operacional.",
+"b": [
+"tático",
+"metas de médio prazo"
+],
+"d": [
+"contingencial",
+"metas de longo prazo"
+]
+},
+{
+"n": 425,
+"m": "B",
+"t": "A cadeia de valor foca nas atividades que agregam valor ao produto final; o mapeamento de processos é aplicado em nível tático e operacional, não estratégico.",
+"b": [
+"tático e operacional",
+"atividades que agregam valor"
+],
+"d": [
+"puramente estratégico",
+"atividades de suporte"
+]
+},
+{
+"n": 469,
+"m": "B",
+"t": "As perspectivas originais do BSC são finanças, clientes, processos internos e aprendizado e crescimento; SMART e KPI não são perspectivas.",
+"b": [
+"aprendizado e crescimento",
+"SMART e KPI"
+],
+"d": [
+"inovação e sustentabilidade",
+"SMART e metas"
+]
+},
+{
+"n": 472,
+"m": "B",
+"t": "O modelo racional-legal (Weber) traz regras e procedimentos formais, hierarquia e impessoalidade; resultados e flexibilidade são do gerencial.",
+"b": [
+"regras e procedimentos formais",
+"gerencial"
+],
+"d": [
+"inovação e foco em resultados",
+"patrimonialista"
+]
+},
+{
+"n": 488,
+"m": "B",
+"t": "As variáveis referentes à mobilização e à alocação de recursos não estão atreladas à dimensão institucional.",
+"b": [
+"não estão atreladas"
+],
+"d": [
+"estão vinculadas",
+"são exclusivas"
+]
+}
+]
