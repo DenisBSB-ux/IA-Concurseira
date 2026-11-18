@@ -233,9 +233,21 @@ function treinoResumoTentativas(){
 }
 // mostra só o item da questão: tira o comando do enunciado ("À luz …, julgue o item a seguir, relativo a …."); os dados e o hash não mudam
 function treinoSoItem(txt, minimo){
-  const s = String(txt || ''), m = s.match(/^[\s\S]{0,420}?\bjulgu?e(?:m)?\b[^.?!:]*[.?!:]\s*/i);
-  if(!m) return s;
-  const resto = s.slice(m[0].length); return resto.trim().length >= (minimo === undefined ? 25 : minimo) ? resto : s;
+  // tira o comando ("Julgue o item seguinte, com base em … (Lei n.º 12.527/2011)."): o fim do comando é um ponto/!/?/: de FIM DE FRASE (não o "n.º", "art. 5º" etc.)
+  const s = String(txt || '').replace(/^\s*(?:\d+\)\s*)+/, ''), m = s.match(/\bjulgu?e(?:m)?\b/i);   // sobras de numeração da cópia no começo ("297) 298) …")
+  if(!m || m.index > 600) return s;
+  let fim = -1;
+  for(let j = m.index + m[0].length; j < s.length; j++){
+    const ch = s[j];
+    if(ch !== '.' && ch !== '?' && ch !== '!' && ch !== ':' && ch !== ';') continue;
+    const prox = s.slice(j + 1);
+    if(ch === '.' && /\p{L}/u.test(s[j - 1] || '') && /^\p{Lu}/u.test(prox)){ fim = j; break; }   // "…de acordo com a CF.A condenação" (sem espaço)
+    if(ch === '.' || ch === ';'){ if(/^\s+(?:[\p{Lu}"“(]|\d+\))/u.test(prox) || /^\s*$/.test(prox)){ fim = j; break; } }
+    else if(/^\s/.test(prox) || prox === ''){ fim = j; break; }
+  }
+  if(fim < 0) return s;
+  const resto = s.slice(fim + 1).replace(/^\s+/, '').replace(/^(?:\d+\)\s*)+/, '');   // sobras de numeração da cópia ("105) 106) …")
+  return resto.trim().length >= (minimo === undefined ? 25 : minimo) ? resto : s;
 }
 /* quebras de linha "duras" vindas da cópia da prova: no meio da frase viram espaço; ficam as de parágrafo, de alternativa (A) B)…), de lista e as depois de ponto final */
 function treinoJuntaQuebras(txt){
@@ -248,6 +260,7 @@ function treinoJuntaQuebras(txt){
   }
   return out;
 }
+
 function treinoChaveItem(it, tipo){ return tipo + ':' + it.n + ':' + it.h + (it.k ? ':' + it.k : ''); }
 function treinoMontarFila(){
   const d = TR.dados, slug = TR.slug;
