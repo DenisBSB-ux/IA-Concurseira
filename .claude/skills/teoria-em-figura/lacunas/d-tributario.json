@@ -1,0 +1,2405 @@
+[
+{
+"n": 1,
+"m": "B",
+"b": [
+"só para entes, autarquias e fundações",
+"construção jurisprudencial"
+],
+"d": [
+"todas as estatais",
+"previsão expressa da lei"
+]
+},
+{
+"n": 3,
+"m": "A",
+"r": [
+[
+"deve ser excluído",
+"deve ser incluído"
+]
+],
+"b": [
+"deve ser incluído",
+"seguro, de frete e de outros encargos"
+],
+"d": [
+"deve ser excluído",
+"deve ser diferido"
+]
+},
+{
+"n": 4,
+"m": "B",
+"b": [
+"afasta a incidência do ICMS",
+"petróleo, lubrificantes e combustíveis derivados"
+],
+"d": [
+"prevê a incidência do ICMS",
+"energia elétrica"
+]
+},
+{
+"n": 5,
+"m": "B",
+"b": [
+"dentro de cada imposto",
+"não há crédito cruzado"
+],
+"d": [
+"entre impostos de mesmo ente",
+"crédito integral automático"
+]
+},
+{
+"n": 7,
+"m": "A",
+"r": [
+[
+"ISS, tributo de competência municipal",
+"ICMS, tributo de competência estadual e distrital"
+]
+],
+"b": [
+"ICMS",
+"estadual e distrital"
+],
+"d": [
+"ISS",
+"competência municipal",
+"IPI"
+]
+},
+{
+"n": 12,
+"m": "B",
+"t": "A progressividade tributária não implica violação ao princípio da neutralidade econômica, pois é instrumento de justiça fiscal.",
+"b": [
+"não implica violação",
+"justiça fiscal"
+],
+"d": [
+"gera violação",
+"regressividade"
+]
+},
+{
+"n": 13,
+"m": "B",
+"b": [
+"renda ou gasto",
+"mera natureza indireta"
+],
+"d": [
+"patrimônio",
+"alíquota nominal"
+]
+},
+{
+"n": 16,
+"m": "B",
+"b": [
+"repartição constitucional de competências",
+"isonomia tributária"
+],
+"d": [
+"capacidade contributiva",
+"legalidade"
+]
+},
+{
+"n": 18,
+"m": "A",
+"r": [
+[
+"A regressividade",
+"A progressividade"
+]
+],
+"b": [
+"progressividade",
+"grau de utilização da terra"
+],
+"d": [
+"regressividade",
+"seletividade"
+]
+},
+{
+"n": 19,
+"m": "B",
+"b": [
+"imposto da União",
+"fiscalizá-lo e cobrá-lo por opção"
+],
+"d": [
+"imposto municipal",
+"cobrança obrigatória"
+]
+},
+{
+"n": 20,
+"m": "B",
+"b": [
+"também com tributos reais",
+"IPTU"
+],
+"d": [
+"somente com tributos pessoais",
+"ITR"
+]
+},
+{
+"n": 21,
+"m": "B",
+"b": [
+"exclui",
+"sanção de ato ilícito"
+],
+"d": [
+"abrange",
+"contraprestação de serviço"
+]
+},
+{
+"n": 27,
+"m": "B",
+"b": [
+"estadual e distrital",
+"ITBI"
+],
+"d": [
+"federal",
+"IPTU"
+]
+},
+{
+"n": 28,
+"m": "B",
+"b": [
+"local do estabelecimento prestador",
+"exceção legal"
+],
+"d": [
+"local da tomada do serviço",
+"regra geral"
+]
+},
+{
+"n": 29,
+"m": "A",
+"r": [
+[
+"não é admitida",
+"é admitida"
+]
+],
+"b": [
+"extrafiscal",
+"é admitida"
+],
+"d": [
+"não é admitida",
+"vedada"
+]
+},
+{
+"n": 30,
+"m": "B",
+"b": [
+"receita patrimonial",
+"bem da União"
+],
+"d": [
+"taxa",
+"tributo vinculado"
+]
+},
+{
+"n": 31,
+"m": "B",
+"b": [
+"aposentado",
+"podem ser progressivas"
+],
+"d": [
+"é isento",
+"são fixas"
+]
+},
+{
+"n": 33,
+"m": "B",
+"b": [
+"multa, juros e correção",
+"não dá direito à restituição"
+],
+"d": [
+"apenas a multa",
+"a cobrança do principal"
+]
+},
+{
+"n": 34,
+"m": "B",
+"b": [
+"Custas e taxa judiciária",
+"cumulativamente"
+],
+"d": [
+"alternativamente",
+"bis in idem"
+]
+},
+{
+"n": 35,
+"m": "B",
+"b": [
+"apenas impostos",
+"taxas e contribuição de melhoria"
+],
+"d": [
+"todos os tributos",
+"empréstimos compulsórios"
+]
+},
+{
+"n": 37,
+"m": "B",
+"t": "A Constituição não prevê exceção à desapropriação com títulos da dívida pública.",
+"b": [
+"não prevê exceção",
+"títulos da dívida pública"
+],
+"d": [
+"admite exceção",
+"precatórios"
+]
+},
+{
+"n": 39,
+"m": "A",
+"r": [
+[
+"não se aplica",
+"se aplica"
+]
+],
+"b": [
+"se aplica",
+"deixe de defini-lo como infração"
+],
+"d": [
+"não se aplica",
+"seja definitivamente julgado"
+]
+},
+{
+"n": 40,
+"m": "B",
+"b": [
+"fato gerador",
+"destinação legal da arrecadação"
+],
+"d": [
+"denominação adotada pela lei",
+"base de cálculo"
+]
+},
+{
+"n": 50,
+"m": "A",
+"r": [
+[
+"deve ser observada",
+"não deve ser observada"
+]
+],
+"b": [
+"não deve ser observada",
+"imposto de renda"
+],
+"d": [
+"é exigida",
+"IPI"
+]
+},
+{
+"n": 56,
+"m": "B",
+"b": [
+"EC 132/2023",
+"sistemas de monitoramento"
+],
+"d": [
+"EC 103/2019",
+"serviços de limpeza urbana"
+]
+},
+{
+"n": 58,
+"m": "A",
+"r": [
+[
+"dos municípios",
+"dos estados e do Distrito Federal"
+]
+],
+"b": [
+"IPVA",
+"dos estados e do Distrito Federal"
+],
+"d": [
+"municípios",
+"União"
+]
+},
+{
+"n": 60,
+"m": "B",
+"b": [
+"poder de polícia",
+"não apenas de serviço público específico"
+],
+"d": [
+"capacidade contributiva",
+"exclusivamente de serviço público"
+]
+},
+{
+"n": 62,
+"m": "B",
+"b": [
+"apenas impostos",
+"não todas as espécies tributárias"
+],
+"d": [
+"todos os tributos",
+"apenas taxas"
+]
+},
+{
+"n": 68,
+"m": "B",
+"b": [
+"indelegável",
+"arrecadar ou fiscalizar"
+],
+"d": [
+"transferível por lei ordinária",
+"apenas arrecadar"
+]
+},
+{
+"n": 74,
+"m": "B",
+"b": [
+"fato gerador",
+"determinante"
+],
+"d": [
+"denominação",
+"destinação do produto"
+]
+},
+{
+"n": 79,
+"m": "B",
+"b": [
+"indelegável",
+"capacidade tributária ativa"
+],
+"d": [
+"capacidade tributária passiva",
+"competência legislativa"
+]
+},
+{
+"n": 82,
+"m": "A",
+"r": [
+[
+"o fator arrecadatório de receitas aos cofres públicos",
+"a intervenção na economia"
+]
+],
+"b": [
+"extrafiscalidade",
+"intervenção na economia"
+],
+"d": [
+"parafiscalidade",
+"arrecadação de receitas"
+]
+},
+{
+"n": 84,
+"m": "B",
+"b": [
+"não vinculados",
+"taxas e contribuições"
+],
+"d": [
+"restituíveis",
+"impostos e empréstimos compulsórios"
+]
+},
+{
+"n": 87,
+"m": "A",
+"r": [
+[
+"uma atuação estatal específica, diretamente referida ao contribuinte",
+"uma situação independente de atuação estatal específica"
+]
+],
+"b": [
+"situação independente",
+"atuação estatal específica"
+],
+"d": [
+"serviço público divisível",
+"obra pública"
+]
+},
+{
+"n": 93,
+"m": "B",
+"b": [
+"própria Constituição",
+"normas gerais"
+],
+"d": [
+"legislação ordinária",
+"regras específicas"
+]
+},
+{
+"n": 94,
+"m": "A",
+"r": [
+[
+"O imposto é uma exação vinculada dependente de uma contraprestação estatal",
+"O imposto é uma exação não vinculada, independente de contraprestação estatal"
+]
+],
+"b": [
+"não vinculada",
+"independente de contraprestação estatal"
+],
+"d": [
+"vinculada a serviço público",
+"exigida só de beneficiários"
+]
+},
+{
+"n": 95,
+"m": "B",
+"b": [
+"entidade delegada",
+"suas próprias finalidades"
+],
+"d": [
+"ente instituidor",
+"encargos de terceiros"
+]
+},
+{
+"n": 97,
+"m": "A",
+"r": [
+[
+"É vedado cometimento",
+"Não é vedado o cometimento"
+]
+],
+"b": [
+"Não é vedado",
+"pessoa jurídica de direito privado"
+],
+"d": [
+"É proibido",
+"pessoa jurídica de direito público"
+]
+},
+{
+"n": 98,
+"m": "B",
+"b": [
+"indelegável",
+"capacidade tributária ativa"
+],
+"d": [
+"transferível",
+"capacidade tributária passiva"
+]
+},
+{
+"n": 101,
+"m": "A",
+"r": [
+[
+"a incidência de taxas",
+"apenas a incidência de impostos"
+]
+],
+"b": [
+"apenas a incidência de impostos",
+"administração pública direta"
+],
+"d": [
+"taxas",
+"contribuições"
+]
+},
+{
+"n": 103,
+"m": "B",
+"b": [
+"também se submete à noventena",
+"1º de janeiro"
+],
+"d": [
+"30 dias",
+"1º de abril"
+]
+},
+{
+"n": 105,
+"m": "A",
+"r": [
+[
+"não exigem",
+"exigem"
+]
+],
+"b": [
+"exigem",
+"anterioridades anual e nonagesimal"
+],
+"d": [
+"não exigem",
+"anterioridade apenas anual"
+]
+},
+{
+"n": 106,
+"m": "B",
+"b": [
+"admite exceções",
+"ISS na exportação de serviços"
+],
+"d": [
+"é absoluta",
+"ICMS na importação"
+]
+},
+{
+"n": 108,
+"m": "A",
+"r": [
+[
+"seja o capital",
+"não seja o capital"
+]
+],
+"b": [
+"taxa",
+"não seja o capital das empresas"
+],
+"d": [
+"seja o faturamento",
+"imposto"
+]
+},
+{
+"n": 112,
+"m": "B",
+"t": "Nem todas as competências tributárias previstas no texto constitucional foram implementadas, como o imposto sobre grandes fortunas.",
+"b": [
+"Nem todas",
+"grandes fortunas"
+],
+"d": [
+"Apenas algumas",
+"produtos industrializados"
+]
+},
+{
+"n": 113,
+"m": "A",
+"r": [
+[
+"não alcança os livros eletrônicos, em razão da regra hermenêutica que determina a interpretação restritiva de favores fiscais",
+"alcança os livros eletrônicos, em razão da finalidade da imunidade"
+]
+],
+"b": [
+"alcança os livros eletrônicos",
+"finalidade da imunidade"
+],
+"d": [
+"não alcança",
+"interpretação restritiva"
+]
+},
+{
+"n": 114,
+"m": "A",
+"r": [
+[
+"O INPI não faz jus",
+"O INPI faz jus"
+],
+[
+"uma vez que constitui autarquia federal com personalidade jurídica distinta da dos órgãos da administração direta da União",
+"uma vez que constitui autarquia federal, a que a imunidade se estende"
+]
+],
+"b": [
+"faz jus",
+"autarquia federal"
+],
+"d": [
+"não faz jus",
+"empresa pública"
+]
+},
+{
+"n": 116,
+"m": "B",
+"b": [
+"STF",
+"não alcança fundações públicas"
+],
+"d": [
+"TCU",
+"alcança todas as entidades"
+]
+},
+{
+"n": 120,
+"m": "B",
+"t": "A denominação adotada pelo legislador é irrelevante para a definição da natureza jurídica específica do tributo, dado que esta decorre do fato gerador.",
+"b": [
+"irrelevante",
+"fato gerador"
+],
+"d": [
+"decisiva",
+"destinação da arrecadação"
+]
+},
+{
+"n": 122,
+"m": "B",
+"b": [
+"sanção de ato ilícito",
+"Multa de polícia"
+],
+"d": [
+"tributo",
+"contraprestação de serviço"
+]
+},
+{
+"n": 123,
+"m": "A",
+"r": [
+[
+"tributo proporcional",
+"tributo progressivo"
+]
+],
+"b": [
+"progressivo"
+],
+"d": [
+"regressivo",
+"neutro"
+]
+},
+{
+"n": 124,
+"m": "C",
+"b": [
+"lucro real",
+"adições e exclusões"
+],
+"d": [
+"lucro presumido",
+"lucro arbitrado"
+]
+},
+{
+"n": 125,
+"m": "A",
+"r": [
+[
+"O IPTU e o ITCMD são impostos municipais que incidem sobre a propriedade",
+"O IPTU é imposto municipal que incide sobre a propriedade e o ITCMD é imposto estadual que incide sobre a transmissão"
+]
+],
+"b": [
+"estadual",
+"transmissão"
+],
+"d": [
+"federal",
+"circulação"
+]
+},
+{
+"n": 128,
+"m": "A",
+"r": [
+[
+"devido ao município de residência do doador",
+"devido ao Estado, ou ao Distrito Federal, do domicílio do doador"
+]
+],
+"b": [
+"Estado, ou ao Distrito Federal",
+"domicílio do doador"
+],
+"d": [
+"Município",
+"União"
+]
+},
+{
+"n": 130,
+"m": "A",
+"r": [
+[
+"ao município da situação do bem ou ao Distrito Federal",
+"ao Estado da situação do bem ou ao Distrito Federal"
+]
+],
+"b": [
+"Estado",
+"situação do bem"
+],
+"d": [
+"Município",
+"União"
+]
+},
+{
+"n": 131,
+"m": "B",
+"b": [
+"progressivo",
+"valor do quinhão"
+],
+"d": [
+"proporcional",
+"regressivo"
+]
+},
+{
+"n": 136,
+"m": "B",
+"b": [
+"exceção",
+"por ato do Executivo",
+"de imediato"
+],
+"d": [
+"regra",
+"Legislativo",
+"noventa dias"
+]
+},
+{
+"n": 138,
+"m": "A",
+"r": [
+[
+"são os impostos sobre a importação e sobre a exportação",
+"são os impostos sobre a importação, sobre a exportação e sobre operações financeiras"
+]
+],
+"b": [
+"operações financeiras",
+"exportação"
+],
+"d": [
+"renda",
+"produtos industrializados"
+]
+},
+{
+"n": 140,
+"m": "A",
+"r": [
+[
+"Assim como os impostos, as taxas deverão ser graduadas em conformidade com a capacidade econômica do contribuinte",
+"Somente os impostos deverão ser graduados em conformidade com a capacidade econômica do contribuinte"
+]
+],
+"b": [
+"Somente os impostos",
+"capacidade econômica"
+],
+"d": [
+"impostos e taxas",
+"capacidade contributiva"
+]
+},
+{
+"n": 142,
+"m": "B",
+"t": "O Distrito Federal só pode instituir contribuição para o custeio do regime próprio de previdência de seus servidores.",
+"b": [
+"regime próprio de previdência",
+"seus servidores"
+],
+"d": [
+"seguridade social",
+"faturamento das empresas"
+]
+},
+{
+"n": 143,
+"m": "A",
+"r": [
+[
+"La União",
+"A União"
+],
+[
+"as contribuições de melhoria, assim como as contribuições sociais,",
+"os impostos,"
+]
+],
+"b": [
+"os impostos",
+"capacidade contributiva"
+],
+"d": [
+"as taxas",
+"custo do serviço"
+]
+},
+{
+"n": 144,
+"m": "B",
+"t": "Em caso de iminência de guerra externa, a União pode instituir impostos extraordinários.",
+"b": [
+"iminência de guerra externa",
+"impostos extraordinários"
+],
+"d": [
+"taxas extraordinárias",
+"Estados"
+]
+},
+{
+"n": 146,
+"m": "B",
+"t": "Quem compra para revender não é consumidor final, por isso não se deve o ICMS diferencial de alíquota.",
+"b": [
+"não é consumidor final",
+"ICMS diferencial de alíquota"
+],
+"d": [
+"IPI",
+"ITCMD"
+]
+},
+{
+"n": 148,
+"m": "A",
+"r": [
+[
+"poderão ter",
+"não poderão ter"
+]
+],
+"b": [
+"não poderão",
+"base de cálculo própria de impostos"
+],
+"d": [
+"deverão",
+"é facultado"
+]
+},
+{
+"n": 149,
+"m": "B",
+"t": "Um imposto e uma taxa não podem ter a mesma base de cálculo.",
+"b": [
+"não podem",
+"mesma base de cálculo"
+],
+"d": [
+"devem",
+"é facultado"
+]
+},
+{
+"n": 150,
+"m": "B",
+"t": "A taxa é o tributo cobrado em contraprestação a serviço público específico e divisível.",
+"b": [
+"contraprestação",
+"específico e divisível"
+],
+"d": [
+"custear qualquer serviço público",
+"geral e indivisível"
+]
+},
+{
+"n": 151,
+"m": "A",
+"r": [
+[
+"Somente os municípios e o Distrito Federal poderão",
+"A União, os estados, o Distrito Federal e os municípios poderão"
+]
+],
+"b": [
+"os estados",
+"valorização imobiliária"
+],
+"d": [
+"somente os municípios",
+"valorização patrimonial"
+]
+},
+{
+"n": 156,
+"m": "B",
+"b": [
+"ICMS destacado",
+"não integra"
+],
+"d": [
+"compõe",
+"ISS"
+]
+},
+{
+"n": 157,
+"m": "B",
+"t": "A empresa vendedora não deve contribuição de intervenção no domínio econômico (CIDE) genérica.",
+"b": [
+"não deve",
+"genérica"
+],
+"d": [
+"deve sempre",
+"específica"
+]
+},
+{
+"n": 159,
+"m": "A",
+"r": [
+[
+"devem ser feitas por espécie de produto de importado",
+"não precisam ser feitas por espécie de produto importado"
+]
+],
+"b": [
+"não precisam",
+"espécie de produto importado"
+],
+"d": [
+"devem",
+"cabem somente"
+]
+},
+{
+"n": 160,
+"m": "A",
+"r": [
+[
+"Tanto a União quanto os estados e os municípios podem instituir contribuições de intervenção no domínio econômico, sendo cada ente limitado, todavia, à sua área de atuação",
+"Somente a União pode instituir contribuições de intervenção no domínio econômico"
+]
+],
+"b": [
+"Somente a União",
+"intervenção no domínio econômico"
+],
+"d": [
+"Estados e Municípios",
+"Distrito Federal"
+]
+},
+{
+"n": 162,
+"m": "B",
+"t": "A uniformidade geográfica obriga somente a União; Estados, DF e Municípios são proibidos de discriminar por procedência ou destino.",
+"b": [
+"somente a União",
+"procedência ou destino"
+],
+"d": [
+"também os Municípios",
+"renda ou patrimônio"
+]
+},
+{
+"n": 164,
+"m": "A",
+"r": [
+[
+"contribui para a seletividade",
+"não tem relação com a seletividade"
+]
+],
+"b": [
+"não tem relação",
+"seletividade"
+],
+"d": [
+"contribui",
+"reforça"
+]
+},
+{
+"n": 165,
+"m": "A",
+"r": [
+[
+"entre contribuintes que ganhem salários significativamente diferentes",
+"entre contribuintes em situação equivalente"
+]
+],
+"b": [
+"situação equivalente",
+"isonomia tributária"
+],
+"d": [
+"salários diferentes",
+"capacidade distinta"
+]
+},
+{
+"n": 168,
+"m": "A",
+"r": [
+[
+"sem a necessidade de aprovação de lei pelo Poder Legislativo",
+"dentro das condições e dos limites estabelecidos em lei"
+]
+],
+"b": [
+"Poder Executivo",
+"limites estabelecidos em lei"
+],
+"d": [
+"Poder Legislativo",
+"sem lei"
+]
+},
+{
+"n": 169,
+"m": "C",
+"b": [
+"indiretos",
+"regressivos"
+],
+"d": [
+"progressivos",
+"proporcionais",
+"sobre a renda"
+]
+},
+{
+"n": 172,
+"m": "A",
+"r": [
+[
+"é incompatível com",
+"é compatível com"
+]
+],
+"b": [
+"compatível",
+"alíquotas de imposto progressivas"
+],
+"d": [
+"incompatível",
+"regressivas"
+]
+},
+{
+"n": 173,
+"m": "A",
+"r": [
+[
+"só produzirá efeitos no exercício financeiro seguinte se houver sido convertido em lei até o último dia do ano em que foi editado",
+"produzirá efeitos sem aguardar o exercício financeiro seguinte"
+]
+],
+"b": [
+"sem aguardar",
+"exercício financeiro seguinte"
+],
+"d": [
+"somente após",
+"conversão em lei"
+]
+},
+{
+"n": 174,
+"m": "A",
+"r": [
+[
+"exige apenas que conste, no estatuto dessas instituições, que sua natureza jurídica é sem fins lucrativos",
+"exige, além de constar no estatuto dessas instituições que sua natureza jurídica é sem fins lucrativos, o cumprimento dos requisitos legais"
+]
+],
+"b": [
+"além de constar no estatuto",
+"requisitos legais"
+],
+"d": [
+"apenas",
+"somente o estatuto"
+]
+},
+{
+"n": 176,
+"m": "A",
+"r": [
+[
+"terá direito",
+"não terá direito"
+]
+],
+"b": [
+"não terá direito",
+"distribuir lucros"
+],
+"d": [
+"fará jus",
+"terá direito parcial"
+]
+},
+{
+"n": 178,
+"m": "B",
+"t": "A imunidade alcança o livro, e não a empresa que o publica, que não é imune ao imposto de renda.",
+"b": [
+"o livro, e não a empresa",
+"imposto de renda"
+],
+"d": [
+"a empresa, e não o livro",
+"imposto de importação"
+]
+},
+{
+"n": 184,
+"m": "C",
+"b": [
+"estado do Rio de Janeiro",
+"na fonte"
+],
+"d": [
+"Municípios",
+"Distrito Federal"
+]
+},
+{
+"n": 185,
+"m": "A",
+"r": [
+[
+"É vedado",
+"É permitido"
+]
+],
+"b": [
+"É permitido",
+"Fundos de Participação"
+],
+"d": [
+"É vedado",
+"É obrigatório"
+]
+},
+{
+"n": 186,
+"m": "B",
+"b": [
+"50%",
+"25%",
+"Municípios"
+],
+"d": [
+"40%",
+"20%",
+"Estados"
+]
+},
+{
+"n": 188,
+"m": "B",
+"t": "As normas gerais de direito tributário exigem lei complementar, não podendo ser estabelecidas por ato do Poder Executivo com força de lei material.",
+"b": [
+"lei complementar",
+"Poder Executivo"
+],
+"d": [
+"lei ordinária",
+"decreto"
+]
+},
+{
+"n": 189,
+"m": "A",
+"r": [
+[
+"competência residual",
+"competência expressa"
+]
+],
+"b": [
+"competência expressa",
+"lei complementar"
+],
+"d": [
+"competência residual",
+"lei ordinária"
+]
+},
+{
+"n": 194,
+"m": "C",
+"b": [
+"não se confunde",
+"ato ilícito"
+],
+"d": [
+"equivale",
+"ato lícito"
+]
+},
+{
+"n": 195,
+"m": "B",
+"b": [
+"órgão pagador",
+"retém"
+],
+"d": [
+"Receita Federal",
+"banco"
+]
+},
+{
+"n": 196,
+"m": "A",
+"r": [
+[
+"ficam sujeitos",
+"não ficam sujeitos"
+]
+],
+"b": [
+"não ficam sujeitos",
+"Simples Nacional"
+],
+"d": [
+"são submetidos",
+"estão sujeitos"
+]
+},
+{
+"n": 198,
+"m": "B",
+"t": "O IPI é seletivo, em função da essencialidade, e não cumulativo, compensando-se o montante cobrado nas etapas anteriores, e não incide sobre produtos industrializados destinados ao exterior.",
+"b": [
+"não cumulativo",
+"não incide"
+],
+"d": [
+"cumulatividade",
+"é possível a incidência"
+]
+},
+{
+"n": 199,
+"m": "A",
+"r": [
+[
+"tal negócio será objeto do imposto sobre a transmissão de bens imóveis, o qual, por sua vez, é de competência municipal",
+"tal negócio será objeto do imposto sobre transmissão causa mortis e doação, o qual, por sua vez, é de competência estadual"
+]
+],
+"b": [
+"causa mortis e doação",
+"estadual"
+],
+"d": [
+"transmissão de bens imóveis",
+"municipal"
+]
+},
+{
+"n": 202,
+"m": "A",
+"r": [
+[
+"não precisa ser apreciado",
+"precisa ser apreciado"
+]
+],
+"b": [
+"precisa ser apreciado",
+"Congresso Nacional"
+],
+"d": [
+"não precisa ser apreciado",
+"Senado Federal"
+]
+},
+{
+"n": 204,
+"m": "B",
+"b": [
+"não dividido em Municípios",
+"cumulativamente"
+],
+"d": [
+"Estados",
+"residualmente"
+]
+},
+{
+"n": 205,
+"m": "A",
+"r": [
+[
+"sendo delegável inclusive para pessoas privadas",
+"sendo indelegável, salvo as funções de arrecadar ou fiscalizar entre pessoas de direito público"
+]
+],
+"b": [
+"indelegável",
+"pessoas de direito público"
+],
+"d": [
+"livremente delegável",
+"pessoas de direito privado"
+]
+},
+{
+"n": 206,
+"m": "A",
+"r": [
+[
+"o que proíbe o ente competente",
+"o que não impede o ente competente"
+]
+],
+"b": [
+"não impede",
+"arrecadar e fiscalizar"
+],
+"d": [
+"proíbe",
+"veda"
+]
+},
+{
+"n": 207,
+"m": "B",
+"t": "O não exercício da competência tributária não a transfere a outro ente, e os Municípios não podem criar o tributo do Estado.",
+"b": [
+"não a transfere",
+"não podem criar"
+],
+"d": [
+"transfere provisoriamente",
+"podem criar até que o Estado o crie"
+]
+},
+{
+"n": 208,
+"m": "A",
+"r": [
+[
+"proíbe que o ente competente transfira funções de arrecadação de tributos ao setor privado",
+"admite cometer ao setor privado o encargo de arrecadar tributos"
+]
+],
+"b": [
+"admite",
+"encargo de arrecadar"
+],
+"d": [
+"proíbe",
+"encargo de legislar"
+]
+},
+{
+"n": 209,
+"m": "A",
+"r": [
+[
+"delegáveis a uma pessoa jurídica de direito privado, desde que o ente público renuncie expressamente a esta função nos termos do Código Tributário Nacional, porém tal atribuição pode ser revogada a qualquer momento por quem a conceder",
+"delegáveis a outra pessoa jurídica de direito público, nos termos do Código Tributário Nacional, podendo tal atribuição ser revogada a qualquer momento por quem a conceder"
+]
+],
+"b": [
+"direito público",
+"revogada a qualquer momento"
+],
+"d": [
+"direito privado",
+"em caráter irrevogável"
+]
+},
+{
+"n": 210,
+"m": "B",
+"t": "Impostos e taxas são espécies de tributo, mas a multa não é tributo, pois é sanção de ato ilícito.",
+"b": [
+"multa não é tributo",
+"sanção de ato ilícito"
+],
+"d": [
+"multa é tributo",
+"sanção de ato lícito"
+]
+},
+{
+"n": 213,
+"m": "C",
+"b": [
+"STF",
+"livros digitais"
+],
+"d": [
+"STJ",
+"livros impressos"
+]
+},
+{
+"n": 214,
+"m": "A",
+"r": [
+[
+"delegação de competência tributária",
+"apenas delegação das funções de arrecadar ou fiscalizar"
+]
+],
+"b": [
+"apenas delegação",
+"arrecadar ou fiscalizar"
+],
+"d": [
+"competência tributária",
+"legislar"
+]
+},
+{
+"n": 215,
+"m": "B",
+"b": [
+"medida provisória",
+"também pode"
+],
+"d": [
+"não pode",
+"lei complementar"
+]
+},
+{
+"n": 216,
+"m": "A",
+"r": [
+[
+"desde que o poder público comprove a realização de investimentos públicos com os valores arrecadados",
+"desde que o serviço específico e divisível esteja posto à sua disposição"
+]
+],
+"b": [
+"específico e divisível",
+"posto à sua disposição"
+],
+"d": [
+"investimentos públicos",
+"efetivamente utilizado"
+]
+},
+{
+"n": 224,
+"m": "A",
+"r": [
+[
+"não mais subsiste na Constituição Federal de 1988 como espécie tributária, por força de emenda constitucional superveniente",
+"continua previsto na Constituição Federal de 1988 como espécie tributária"
+]
+],
+"b": [
+"continua previsto",
+"espécie tributária"
+],
+"d": [
+"foi extinto",
+"contribuição especial"
+]
+},
+{
+"n": 225,
+"m": "A",
+"r": [
+[
+"20% são devidos aos estados e ao Distrito Federal (DF)",
+"não há essa partilha de 20% aos estados e ao Distrito Federal (DF), restrita ao imposto residual"
+]
+],
+"b": [
+"não há essa partilha",
+"imposto residual"
+],
+"d": [
+"imposto de importação",
+"30%"
+]
+},
+{
+"n": 226,
+"m": "A",
+"r": [
+[
+"tendo em vista um potencial serviço público a ser prestado de forma divisível ao contribuinte",
+"tendo em vista o exercício efetivo do poder de polícia"
+]
+],
+"b": [
+"exercício efetivo"
+],
+"d": [
+"potencial utilização",
+"serviço público específico"
+]
+},
+{
+"n": 228,
+"m": "A",
+"r": [
+[
+"em razão da imunidade recíproca assegurada pelo texto constitucional",
+"apesar da imunidade recíproca, que alcança só impostos"
+],
+[
+"não são obrigados",
+"são obrigados"
+]
+],
+"b": [
+"só impostos",
+"são obrigados"
+],
+"d": [
+"impostos e taxas",
+"não são obrigados"
+]
+},
+{
+"n": 229,
+"m": "A",
+"r": [
+[
+"agiu regularmente o Estado, pois a imunidade para os serviços de telecomunicações não contempla o ICMS",
+"não agiu regularmente o Estado, pois a radiodifusão de recepção livre e gratuita não sofre incidência do ICMS"
+]
+],
+"b": [
+"recepção livre e gratuita",
+"não sofre incidência"
+],
+"d": [
+"telecomunicações",
+"paga pelo usuário"
+]
+},
+{
+"n": 235,
+"m": "B",
+"b": [
+"só impostos",
+"imunidade recíproca"
+],
+"d": [
+"taxas",
+"contribuições"
+]
+},
+{
+"n": 236,
+"m": "A",
+"r": [
+[
+"uma competência legislativa residual",
+"uma competência tributária residual, restrita a impostos novos e novas contribuições da seguridade"
+]
+],
+"b": [
+"competência tributária residual",
+"impostos novos"
+],
+"d": [
+"legislativa residual",
+"impostos já existentes"
+]
+},
+{
+"n": 237,
+"m": "B",
+"t": "O serviço de iluminação pública, por ser geral e indivisível, não pode ser custeado por taxa, mas por contribuição.",
+"b": [
+"geral e indivisível",
+"contribuição"
+],
+"d": [
+"imposto",
+"taxa de serviço"
+]
+},
+{
+"n": 238,
+"m": "B",
+"t": "O ente federado não possui imunidade recíproca quanto à contribuição de iluminação pública, que não é imposto.",
+"b": [
+"não possui imunidade recíproca",
+"não é imposto"
+],
+"d": [
+"taxa",
+"empréstimo compulsório"
+]
+},
+{
+"n": 239,
+"m": "B",
+"b": [
+"noventa dias",
+"não ser de seguridade social"
+],
+"d": [
+"cento e oitenta dias",
+"trinta dias"
+]
+},
+{
+"n": 243,
+"m": "A",
+"r": [
+[
+"não pode exigir",
+"pode exigir"
+],
+[
+"em virtude da imunidade tributária recíproca existente entre os entes de direito público interno",
+"pois a imunidade recíproca alcança apenas impostos"
+]
+],
+"b": [
+"pode exigir",
+"apenas impostos"
+],
+"d": [
+"vedada a exigência",
+"somente contribuições"
+]
+},
+{
+"n": 244,
+"m": "A",
+"r": [
+[
+"do imposto sobre grandes fortunas",
+"do imposto sobre exportação"
+]
+],
+"b": [
+"importação de produtos estrangeiros",
+"imposto sobre exportação"
+],
+"d": [
+"grandes fortunas",
+"imposto sobre propriedade territorial rural"
+]
+},
+{
+"n": 251,
+"m": "A",
+"r": [
+[
+"isenção tributária recíproca",
+"imunidade tributária recíproca"
+]
+],
+"b": [
+"imunidade tributária recíproca",
+"fundações"
+],
+"d": [
+"isenção tributária",
+"autarquias"
+]
+},
+{
+"n": 254,
+"m": "A",
+"r": [
+[
+"aplica-se unicamente aos impostos, não se estendendo às taxas e às contribuições de melhoria",
+"aplica-se a todos os tributos, inclusive às taxas e às contribuições de melhoria"
+]
+],
+"b": [
+"todos os tributos",
+"taxas"
+],
+"d": [
+"unicamente aos impostos",
+"apenas aos tributos diretos"
+]
+},
+{
+"n": 256,
+"m": "A",
+"r": [
+[
+"é apenas em razão do valor, localização e uso do imóvel, sendo inadmitida a progressividade no tempo",
+"é em razão do valor, localização e uso do imóvel e também no tempo"
+]
+],
+"b": [
+"localização e uso",
+"também no tempo"
+],
+"d": [
+"apenas",
+"somente no tempo"
+]
+},
+{
+"n": 260,
+"m": "A",
+"r": [
+[
+"não podendo ser objeto",
+"podendo ser objeto"
+]
+],
+"b": [
+"podendo ser objeto",
+"mandado de segurança e em ação popular"
+],
+"d": [
+"não podendo",
+"habeas corpus"
+]
+},
+{
+"n": 261,
+"m": "A",
+"r": [
+[
+"além de necessitar de conversão em lei antes de surtir efeitos",
+"sem necessidade de conversão em lei para surtir efeitos"
+]
+],
+"b": [
+"noventa dias",
+"sem necessidade de conversão"
+],
+"d": [
+"cento e oitenta dias",
+"necessitar de conversão"
+]
+},
+{
+"n": 262,
+"m": "A",
+"r": [
+[
+"ele não precisará pagar o imposto sobre propriedade territorial rural (ITR)",
+"ele só não pagará o ITR se explorar a gleba e não possuir outro imóvel"
+]
+],
+"b": [
+"só não pagará",
+"explorar a gleba"
+],
+"d": [
+"sempre estará isento",
+"residir no imóvel"
+]
+},
+{
+"n": 263,
+"m": "A",
+"r": [
+[
+"criação de uma taxa para financiar",
+"criação de imposto, e não de taxa, para financiar"
+]
+],
+"b": [
+"imposto, e não de taxa",
+"segurança pública"
+],
+"d": [
+"taxa de serviço",
+"contribuição de melhoria"
+]
+},
+{
+"n": 264,
+"m": "A",
+"r": [
+[
+"um imposto criado com a Constituição da República de 1988, podendo ser instituído",
+"um tributo próprio, e não um imposto, já previsto antes da Constituição da República de 1988, podendo ser instituída"
+]
+],
+"b": [
+"tributo próprio",
+"já previsto antes"
+],
+"d": [
+"imposto criado",
+"tributo residual"
+]
+},
+{
+"n": 265,
+"m": "A",
+"r": [
+[
+"é indelegável por se constituir em uma prerrogativa política exclusiva das entidades políticas",
+"é delegável, ao contrário da competência tributária"
+]
+],
+"b": [
+"delegável",
+"competência tributária"
+],
+"d": [
+"indelegável",
+"capacidade política"
+]
+},
+{
+"n": 266,
+"m": "B",
+"b": [
+"IRRF",
+"fica com o Estado"
+],
+"d": [
+"fica com a União",
+"IOF"
+]
+},
+{
+"n": 271,
+"m": "A",
+"r": [
+[
+"somente podem ser instituídas mediante lei complementar",
+"podem ser instituídas mediante lei ordinária"
+]
+],
+"b": [
+"lei ordinária",
+"domínio econômico"
+],
+"d": [
+"lei complementar",
+"medida provisória"
+]
+},
+{
+"n": 273,
+"m": "A",
+"r": [
+[
+"por meio de leis ordinárias editadas por cada Estado e Município de forma individualizada, as quais deverão observar as diretrizes nacionais estabelecidas por lei complementar",
+"por meio de lei complementar nacional, com alíquota própria fixada por cada ente"
+]
+],
+"b": [
+"lei complementar nacional",
+"alíquota própria"
+],
+"d": [
+"leis ordinárias",
+"decreto"
+]
+},
+{
+"n": 274,
+"m": "A",
+"r": [
+[
+"presidido de forma permanente por representante indicado pelo Poder Executivo Federal, garantindo a integração com a arrecadação da CBS",
+"presidido de forma alternada entre o conjunto dos Estados e o conjunto dos Municípios"
+]
+],
+"b": [
+"forma alternada",
+"conjunto dos Municípios"
+],
+"d": [
+"forma permanente",
+"Poder Executivo Federal"
+]
+},
+{
+"n": 275,
+"m": "A",
+"r": [
+[
+"poderá incidir sobre as exportações de commodities minerais e agrícolas brasileiras, visando desencorajar a desindustrialização do país",
+"não incide sobre as exportações"
+]
+],
+"b": [
+"não incide",
+"exportações"
+],
+"d": [
+"poderá incidir",
+"importações"
+]
+},
+{
+"n": 278,
+"m": "A",
+"r": [
+[
+"dispensando-se a existência de lei municipal anterior sobre o assunto",
+"observados os critérios estabelecidos em lei municipal anterior"
+]
+],
+"b": [
+"decreto",
+"lei municipal anterior"
+],
+"d": [
+"dispensando-se a existência",
+"lei estadual"
+]
+},
+{
+"n": 279,
+"m": "B",
+"b": [
+"0,1%",
+"Comitê Gestor"
+],
+"d": [
+"0,5%",
+"Tesouro Nacional"
+]
+},
+{
+"n": 282,
+"m": "A",
+"r": [
+[
+"não incide se a entidade religiosa for mera locatária do bem imóvel, aplicando-se apenas se for a proprietária registral do bem",
+"incide também quando a entidade religiosa for mera locatária do bem imóvel"
+]
+],
+"b": [
+"incide também",
+"mera locatária"
+],
+"d": [
+"proprietária registral",
+"não incide"
+]
+},
+{
+"n": 284,
+"m": "A",
+"r": [
+[
+"determinou a extinção do Imposto sobre a Transmissão de Bens Imóveis (ITBI) de competência municipal, integrando as transações imobiliárias sob o escopo de incidência única do IBS",
+"manteve o Imposto sobre a Transmissão de Bens Imóveis (ITBI) de competência municipal"
+]
+],
+"b": [
+"manteve",
+"ITBI"
+],
+"d": [
+"extinção",
+"IPTU"
+]
+},
+{
+"n": 285,
+"m": "C",
+"b": [
+"simplicidade",
+"cooperação",
+"defesa do meio ambiente"
+],
+"d": [
+"eficiência",
+"anterioridade"
+]
+},
+{
+"n": 289,
+"m": "C",
+"b": [
+"31 de dezembro de 2032",
+"1º de janeiro de 2033"
+],
+"d": [
+"31 de dezembro de 2030",
+"1º de janeiro de 2029"
+]
+},
+{
+"n": 290,
+"m": "A",
+"r": [
+[
+"poderá incidir sobre as operações de circulação de energia elétrica e serviços de telecomunicações, por se tratarem de setores que geram alta pegada de carbono",
+"não incide sobre as operações com energia elétrica e serviços de telecomunicações"
+]
+],
+"b": [
+"não incide",
+"energia elétrica"
+],
+"d": [
+"poderá incidir",
+"combustíveis"
+]
+},
+{
+"n": 292,
+"m": "A",
+"r": [
+[
+"será encaminhada de imediato ao Ministério Público, independentemente de a pessoa física ou jurídica ser excluída do parcelamento",
+"somente será encaminhada ao Ministério Público após a exclusão da pessoa física ou jurídica do parcelamento"
+]
+],
+"b": [
+"representação fiscal para fins penais",
+"após a exclusão"
+],
+"d": [
+"de imediato",
+"após o trânsito em julgado"
+]
+},
+{
+"n": 6,
+"m": "C",
+"b": [
+"nota fiscal",
+"ICMS",
+"salvo exceções previstas em lei"
+],
+"d": [
+"IOF",
+"IPI"
+]
+},
+{
+"n": 23,
+"m": "C",
+"b": [
+"multiplicação",
+"por fora"
+],
+"d": [
+"divisão",
+"por dentro"
+]
+},
+{
+"n": 25,
+"m": "A",
+"r": [
+[
+"Tributos diretos tendem a ser regressivos",
+"Tributos indiretos tendem a ser regressivos"
+]
+],
+"b": [
+"indiretos",
+"regressivos"
+],
+"d": [
+"progressivos",
+"proporcionais"
+]
+},
+{
+"n": 47,
+"m": "A",
+"r": [
+[
+"configura, por si só, indesejável atitude com natureza confiscatória, vedada pelo princípio constitucional do não confisco, mesmo que",
+"não configura, por si só, atitude com natureza confiscatória, desde que"
+]
+],
+"b": [
+"não configura",
+"capacidade contributiva"
+],
+"d": [
+"sempre configura",
+"legalidade estrita"
+]
+},
+{
+"n": 72,
+"m": "B",
+"b": [
+"extrafiscal",
+"não são neutros"
+],
+"d": [
+"arrecadatório",
+"regressivos"
+]
+},
+{
+"n": 115,
+"m": "C",
+"b": [
+"ICMS importação",
+"finalidade essencial"
+],
+"d": [
+"IPVA",
+"finalidade secundária"
+]
+},
+{
+"n": 145,
+"m": "A",
+"r": [
+[
+"incidirá sobre a operação o imposto sobre a transmissão de bens imóveis (ITBI)",
+"incidirá o ITBI sobre a parte onerosa e o ITCMD sobre a diferença doada"
+]
+],
+"b": [
+"parte onerosa",
+"ITCMD"
+],
+"d": [
+"IPTU",
+"ISS"
+]
+},
+{
+"n": 147,
+"m": "C",
+"b": [
+"ICMS",
+"importado",
+"instituição filantrópica"
+],
+"d": [
+"ISS",
+"exportado"
+]
+},
+{
+"n": 166,
+"m": "A",
+"r": [
+[
+"sem que, necessariamente, considere a capacidade contributiva dos indivíduos",
+"considerando a capacidade contributiva dos indivíduos"
+]
+],
+"b": [
+"considerando",
+"capacidade contributiva"
+],
+"d": [
+"ignorando",
+"patrimônio dos indivíduos"
+]
+},
+{
+"n": 180,
+"m": "C",
+"b": [
+"certidões em repartições públicas",
+"pagamento de taxas"
+],
+"d": [
+"impostos",
+"contribuições"
+]
+},
+{
+"n": 182,
+"m": "C",
+"b": [
+"expressamente interpretativas",
+"nova penalidade"
+],
+"d": [
+"expressamente revogadoras",
+"nova isenção"
+]
+},
+{
+"n": 192,
+"m": "C",
+"b": [
+"mesma hierarquia das leis ordinárias",
+"antes ou depois deles"
+],
+"d": [
+"hierarquia constitucional",
+"somente antes deles"
+]
+},
+{
+"n": 219,
+"m": "C",
+"b": [
+"não confisco",
+"300%"
+],
+"d": [
+"100%",
+"legalidade"
+]
+},
+{
+"n": 222,
+"m": "B",
+"b": [
+"não surpresa do contribuinte",
+"lei orçamentária"
+],
+"d": [
+"isonomia tributária",
+"capacidade contributiva",
+"lei de diretrizes"
+]
+},
+{
+"n": 242,
+"m": "B",
+"b": [
+"aspectos essenciais",
+"âmbito territorial",
+"presumido"
+],
+"d": [
+"âmbito temporal",
+"expressamente previsto",
+"base de cálculo"
+]
+},
+{
+"n": 246,
+"m": "B",
+"b": [
+"lei ordinária",
+"locatário",
+"lei complementar"
+],
+"d": [
+"lei delegada",
+"proprietário",
+"resolução do Senado"
+]
+},
+{
+"n": 250,
+"m": "B",
+"b": [
+"medida provisória",
+"força de lei",
+"lei específica"
+],
+"d": [
+"decreto",
+"lei complementar",
+"resolução"
+]
+},
+{
+"n": 296,
+"m": "A",
+"r": [
+[
+"no mínimo, sessenta dias",
+"no mínimo, noventa dias"
+]
+],
+"b": [
+"inaptas",
+"noventa dias"
+],
+"d": [
+"sessenta dias",
+"cento e oitenta dias",
+"trinta dias"
+]
+},
+{
+"n": 298,
+"m": "A",
+"r": [
+[
+"nove por cento",
+"um por cento"
+]
+],
+"b": [
+"um por cento",
+"órgãos da administração pública federal"
+],
+"d": [
+"nove por cento",
+"cinco por cento",
+"quinze por cento"
+]
+},
+{
+"n": 301,
+"m": "A",
+"r": [
+[
+"vencidos há mais de um ano, independentemente de iniciados os procedimentos judiciais para o seu recebimento ou o arresto das garantias",
+"vencidos há mais de dois anos e desde que iniciados e mantidos os procedimentos judiciais para o seu recebimento ou o arresto das garantias"
+]
+],
+"b": [
+"mais de dois anos",
+"iniciados e mantidos"
+],
+"d": [
+"um ano",
+"cinco anos",
+"independentemente de iniciados"
+]
+}
+]

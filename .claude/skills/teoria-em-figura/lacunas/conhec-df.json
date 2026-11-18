@@ -113,13 +113,13 @@
 {
 "n": 15,
 "m": "B",
+"t": "Segundo o Anuário do FBSP, em 2023 as mortes violentas intencionais caíram no Brasil.",
 "b": [
-"caíram",
-"no país"
+"caíram"
 ],
 "d": [
 "cresceram",
-"no DF"
+"ficaram estáveis"
 ]
 },
 {
@@ -149,13 +149,14 @@
 {
 "n": 22,
 "m": "B",
+"t": "Dos municípios da RIDE-DF listados, só Arinos, Buritis, Cabeceira Grande e Unaí são de Minas Gerais; Abadiânia, Barro Alto, Cabeceiras, Formosa, Luziânia e Planaltina são goianos.",
 "b": [
 "Arinos, Buritis, Cabeceira Grande e Unaí",
-"mineiros"
+"goianos"
 ],
 "d": [
 "Abadiânia, Buritis, Formosa e Unaí",
-"tocantinenses"
+"mineiros"
 ]
 },
 {
@@ -312,14 +313,13 @@
 {
 "n": 45,
 "m": "B",
+"t": "Cerca de dois terços da população da RIDE-DF (total de cerca de 4,5 milhões) residem no DF, e o terço restante, sobretudo em Goiás.",
 "b": [
 "dois terços",
-"4,5 milhões",
 "sobretudo em Goiás"
 ],
 "d": [
 "metade",
-"2 milhões",
 "sobretudo em Minas Gerais"
 ]
 },
@@ -364,13 +364,14 @@
 {
 "n": 53,
 "m": "B",
+"t": "No Distrito Federal, a capacidade de armazenamento de água dos aquíferos não é alta em todo o território.",
 "b": [
-"fraturado",
-"não é alta em todo o território"
+"não é alta",
+"em todo o território"
 ],
 "d": [
-"cárstico",
-"é ilimitada"
+"é muito alta",
+"apenas na área urbana"
 ]
 },
 {
@@ -598,15 +599,13 @@
 {
 "n": 103,
 "m": "B",
+"t": "O DF tem saneamento de destaque: água tratada e esgoto coletado e tratado atendem a maior parte da população urbana.",
 "b": [
-"água tratada",
-"esgoto coletado e tratado",
 "maior parte"
 ],
 "d": [
-"água bruta",
-"esgoto sem tratamento",
-"minoria"
+"toda a população",
+"apenas metade"
 ]
 },
 {
@@ -1008,13 +1007,14 @@
 {
 "n": 148,
 "m": "B",
+"t": "Cabeceira Grande é município mineiro; só Cabeceiras pertence a Goiás.",
 "b": [
-"Minas Gerais",
-"Cabeceiras pertence a Goiás"
+"mineiro",
+"Goiás"
 ],
 "d": [
-"Bahia",
-"Tocantins"
+"goiano",
+"Minas Gerais"
 ]
 },
 {
@@ -1165,13 +1165,14 @@
 {
 "n": 170,
 "m": "B",
+"t": "O cinturão verde do DF reúne hortaliças e frutas de polos como Brazlândia e Vargem Bonita, que abastecem a capital.",
 "b": [
 "hortaliças e frutas",
-"Brazlândia"
+"abastecem a capital"
 ],
 "d": [
 "grãos e pecuária",
-"Sobradinho"
+"exportam para o exterior"
 ]
 },
 {
@@ -1202,13 +1203,14 @@
 {
 "n": 176,
 "m": "B",
+"t": "O DF tem o maior IDH do país, mas um dos maiores índices de Gini: desigualdade entre as RAs.",
 "b": [
 "maior IDH",
 "índices de Gini"
 ],
 "d": [
 "menor IDH",
-"taxas de analfabetismo"
+"índices de analfabetismo"
 ]
 },
 {
@@ -1226,12 +1228,14 @@
 {
 "n": 179,
 "m": "B",
+"t": "Ceilândia é a RA mais populosa do DF.",
 "b": [
 "Ceilândia",
 "mais populosa"
 ],
 "d": [
-"Gama",
+"Samambaia",
+"Taguatinga",
 "menos populosa"
 ]
 },
@@ -1302,16 +1306,15 @@
 },
 {
 "n": 189,
-"m": "C",
+"m": "B",
+"t": "Águas Lindas de Goiás e Valparaíso de Goiás integram a Periferia Metropolitana de Brasília, ligada ao DF pelo movimento pendular.",
 "b": [
-"Valparaíso de Goiás",
-"maior população",
-"mercado de trabalho do DF"
+"Periferia Metropolitana de Brasília",
+"movimento pendular"
 ],
 "d": [
-"Luziânia",
-"menor população",
-"mercado agrícola de Goiás"
+"Núcleo Metropolitano de Brasília",
+"êxodo rural"
 ]
 },
 {
@@ -1335,15 +1338,15 @@
 },
 {
 "n": 193,
-"m": "C",
+"m": "B",
+"t": "Roberto Burle Marx foi o paisagista mestre no uso de vegetação nativa, como nos jardins do Teatro Nacional e da 308 Sul.",
 "b": [
 "Roberto Burle Marx",
-"Esplanada dos Ministérios"
+"vegetação nativa"
 ],
 "d": [
-"Oscar Niemeyer",
 "Lúcio Costa",
-"Praça dos Três Poderes"
+"plantas exóticas"
 ]
 },
 {
@@ -1445,15 +1448,15 @@
 },
 {
 "n": 203,
-"m": "C",
+"m": "B",
+"t": "O Lago Paranoá é um reservatório artificial represado entre 1957 e 1960, com funções paisagística, de lazer e de energia.",
 "b": [
 "reservatório artificial",
-"regulação climática local"
+"1957 e 1960"
 ],
 "d": [
 "lago natural",
-"navegação comercial",
-"produção de energia"
+"1940 e 1945"
 ]
 },
 {
@@ -1506,14 +1509,13 @@
 {
 "n": 24,
 "m": "B",
+"t": "Os recursos que financiam os programas prioritários da RIDE incluem operações de crédito internas e externas, além de dotações da União, do DF, dos estados e dos municípios.",
 "b": [
-"externo e interno",
-"só internas"
+"internas e externas"
 ],
 "d": [
-"apenas externo",
-"somente federal",
-"só externas"
+"somente internas",
+"somente externas"
 ]
 },
 {
@@ -1531,14 +1533,15 @@
 {
 "n": 30,
 "m": "B",
+"t": "Os programas prioritários da RIDE são financiados por dotações da União, do DF, de GO, de MG e dos municípios e por operações de crédito interno e externo, e não por doações privadas ou fundo único.",
 "b": [
 "crédito interno e externo",
 "doações privadas",
 "fundo único"
 ],
 "d": [
-"apenas crédito interno",
-"dotações exclusivamente federais",
+"crédito apenas interno",
+"convênios internacionais",
 "Fundo Constitucional"
 ]
 },
@@ -1586,12 +1589,11 @@
 "n": 83,
 "m": "B",
 "b": [
-"movimento pendular",
 "menor escolaridade"
 ],
 "d": [
 "maior escolaridade",
-"menor intensidade"
+"escolaridade igual"
 ]
 },
 {
@@ -1639,15 +1641,13 @@
 {
 "n": 98,
 "m": "B",
+"t": "O reservatório de Corumbá IV tem múltiplos usos: energia, água potável, turismo, esportes náuticos e preservação ambiental, e não apenas um.",
 "b": [
-"múltiplos usos",
-"esportes náuticos",
-"só depois da usina"
+"múltiplos usos"
 ],
 "d": [
 "uso único",
-"irrigação de lavouras",
-"antes da usina"
+"apenas geração de energia"
 ]
 },
 {
@@ -1655,13 +1655,11 @@
 "m": "B",
 "b": [
 "lago artificial",
-"século XIX",
-"abastecimento suplementar"
+"século XIX"
 ],
 "d": [
 "lago natural",
-"século XVIII",
-"abastecimento primordial"
+"século XX"
 ]
 },
 {
@@ -1681,14 +1679,14 @@
 {
 "n": 160,
 "m": "B",
+"t": "Em toneladas dominam os grãos: milho e soja à frente, com sorgo e feijão logo depois.",
 "b": [
 "milho e soja",
-"sorgo e feijão",
-"café e trigo"
+"sorgo e feijão"
 ],
 "d": [
 "alface e cebola",
-"mandioca e chuchu",
+"café e trigo",
 "girassol e morango"
 ]
 },
@@ -1708,15 +1706,16 @@
 },
 {
 "n": 184,
-"m": "C",
+"m": "B",
+"t": "O Sistema Descoberto, em Brazlândia, é o principal reservatório do DF e abastece mais de 60% da população, sob gestão da Caesb.",
 "b": [
 "Sistema Descoberto",
-"abastecimento de água"
+"60%"
 ],
 "d": [
-"Sistema Santa Maria",
-"geração de energia",
-"Sistema Paranoá"
+"Sistema Corumbá",
+"30%",
+"Lago Paranoá"
 ]
 }
 ]
