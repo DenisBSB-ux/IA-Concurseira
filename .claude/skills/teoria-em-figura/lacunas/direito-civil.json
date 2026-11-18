@@ -1,0 +1,1985 @@
+[
+{
+"n": 1,
+"m": "B",
+"b": [
+"não afasta",
+"dificuldades reais do gestor"
+],
+"d": [
+"autoriza afastar",
+"dispensa"
+]
+},
+{
+"n": 3,
+"m": "B",
+"b": [
+"motivo único ou principal",
+"não implicar recusa à aplicação da lei"
+],
+"d": [
+"motivo acidental",
+"implicar dispensa da lei"
+]
+},
+{
+"n": 4,
+"m": "B",
+"t": "Sem data fixada, a lei vigora 45 dias depois de oficialmente publicada.",
+"b": [
+"45 dias"
+],
+"d": [
+"30 dias",
+"90 dias",
+"60 dias"
+]
+},
+{
+"n": 6,
+"m": "B",
+"b": [
+"consequências práticas",
+"valores jurídicos abstratos"
+],
+"d": [
+"interesses políticos",
+"precedentes administrativos"
+]
+},
+{
+"n": 7,
+"m": "A",
+"r": [
+[
+"razão pela qual os costumes não são considerados uma fonte do direito",
+"sem prejuízo de os costumes serem fonte subsidiária do direito"
+]
+],
+"b": [
+"costumes",
+"fonte subsidiária"
+],
+"d": [
+"fonte principal",
+"fonte exclusiva"
+]
+},
+{
+"n": 8,
+"m": "A",
+"r": [
+[
+"apenas os direitos que o titular já tenha efetivamente exercido antes do advento da lei nova",
+"também os direitos que o titular possa exercer"
+]
+],
+"b": [
+"também os direitos",
+"possa exercer"
+],
+"d": [
+"apenas os direitos",
+"já tenha exercido"
+]
+},
+{
+"n": 10,
+"m": "B",
+"b": [
+"relativamente incapaz",
+"apenas os menores de dezesseis anos"
+],
+"d": [
+"absolutamente incapaz",
+"menores de dezoito anos"
+]
+},
+{
+"n": 14,
+"m": "B",
+"b": [
+"não autoriza",
+"desvio de finalidade",
+"confusão patrimonial"
+],
+"d": [
+"basta para autorizar",
+"culpa grave",
+"fraude contratual"
+]
+},
+{
+"n": 16,
+"m": "B",
+"b": [
+"medida judicial",
+"Tribunal de Contas",
+"não a aplica diretamente"
+],
+"d": [
+"medida administrativa",
+"Controladoria-Geral",
+"Ministério Público"
+]
+},
+{
+"n": 24,
+"m": "B",
+"t": "O domicílio necessário do marítimo é o lugar em que o navio estiver matriculado.",
+"b": [
+"marítimo",
+"o navio estiver matriculado"
+],
+"d": [
+"militar",
+"o navio estiver ancorado",
+"onde for encontrado"
+]
+},
+{
+"n": 25,
+"m": "B",
+"b": [
+"não revogam lei",
+"outra lei a modifique ou revogue"
+],
+"d": [
+"revogam tacitamente a lei",
+"decurso de dez anos"
+]
+},
+{
+"n": 26,
+"m": "B",
+"t": "Os bens públicos de uso especial são inalienáveis enquanto conservarem a sua qualificação, ao passo que os dominicais podem ser alienados, observadas as exigências da lei.",
+"b": [
+"uso especial",
+"inalienáveis",
+"podem ser alienados"
+],
+"d": [
+"de uso comum e dominicais",
+"livremente disponíveis",
+"imprescritíveis"
+]
+},
+{
+"n": 28,
+"m": "B",
+"t": "Os bens públicos de qualquer classe não estão sujeitos a usucapião, e o abandono não cria exceção.",
+"b": [
+"de qualquer classe",
+"não estão sujeitos a usucapião"
+],
+"d": [
+"somente os de uso especial",
+"somente os de uso comum",
+"podem ser usucapidos"
+]
+},
+{
+"n": 29,
+"m": "C",
+"b": [
+"estatuto pessoal",
+"lei estrangeira"
+],
+"d": [
+"estatuto real",
+"lei nacional",
+"estatuto formal"
+]
+},
+{
+"n": 30,
+"m": "B",
+"b": [
+"acessória",
+"titular do solo",
+"salvo contrato em contrário"
+],
+"d": [
+"autônoma",
+"concessionário",
+"Poder Público"
+]
+},
+{
+"n": 36,
+"m": "B",
+"b": [
+"anulável",
+"nulidade relativa"
+],
+"d": [
+"nulo de pleno direito",
+"nulidade absoluta"
+]
+},
+{
+"n": 38,
+"m": "B",
+"b": [
+"ambas as partes",
+"nenhuma pode alegá-lo",
+"mesmo com prejuízo maior"
+],
+"d": [
+"apenas uma das partes",
+"a mais prejudicada pode alegá-lo",
+"salvo prejuízo maior"
+]
+},
+{
+"n": 43,
+"m": "C",
+"b": [
+"efeito imediato e geral",
+"já consumado",
+"ao tempo em que se efetuou"
+],
+"d": [
+"efeito retroativo",
+"pendente de execução",
+"ao tempo da decisão judicial"
+]
+},
+{
+"n": 45,
+"m": "A",
+"r": [
+[
+"deve-se considerar eventual remissão feita por essa lei a uma terceira legislação, adotando-se o instituto do reenvio (renvoi)",
+"não se considera qualquer remissão feita por essa lei a outra lei, vedando-se o reenvio (renvoi)"
+]
+],
+"b": [
+"não se considera qualquer remissão",
+"vedando-se o reenvio"
+],
+"d": [
+"considera-se a remissão",
+"admitindo-se o reenvio"
+]
+},
+{
+"n": 53,
+"m": "A",
+"r": [
+[
+"a faixa etária e a existência de deficiência mental deixaram de ser consideradas critérios",
+"a existência de deficiência mental deixou de ser considerada critério"
+]
+],
+"b": [
+"deficiência mental",
+"deixou de ser considerada critério"
+],
+"d": [
+"faixa etária",
+"deixaram de ser consideradas"
+]
+},
+{
+"n": 59,
+"m": "C",
+"b": [
+"legislação",
+"irrenunciável e intransmissível"
+],
+"d": [
+"vontade das partes",
+"decisão judicial",
+"absolutamente indisponível"
+]
+},
+{
+"n": 60,
+"m": "A",
+"r": [
+[
+"Somente têm legitimidade",
+"Têm legitimidade"
+],
+[
+"o cônjuge, o ascendente e o descendente",
+"o cônjuge sobrevivente, qualquer parente em linha reta ou colateral até o quarto grau"
+]
+],
+"b": [
+"qualquer parente em linha reta",
+"quarto grau"
+],
+"d": [
+"segundo grau",
+"terceiro grau"
+]
+},
+{
+"n": 65,
+"m": "B",
+"b": [
+"só pode ser requerida",
+"esgotadas as buscas e averiguações"
+],
+"d": [
+"dispensadas as buscas",
+"iniciadas as buscas"
+]
+},
+{
+"n": 67,
+"m": "B",
+"b": [
+"estado em que se acharem",
+"sem responder pela deterioração"
+],
+"d": [
+"valor de mercado",
+"indenização integral",
+"estado original"
+]
+},
+{
+"n": 68,
+"m": "A",
+"r": [
+[
+"denominada capacidade de fato, que se distingue da capacidade de direito",
+"denominada capacidade de direito, que se distingue da capacidade de fato"
+]
+],
+"b": [
+"capacidade de direito",
+"capacidade de fato"
+],
+"d": [
+"capacidade processual",
+"capacidade eleitoral"
+]
+},
+{
+"n": 73,
+"m": "A",
+"r": [
+[
+"ainda que essa pessoa tenha deixado procurador com poderes suficientes",
+"se essa pessoa não tiver deixado procurador com poderes suficientes"
+]
+],
+"b": [
+"não tiver deixado procurador",
+"poderes suficientes"
+],
+"d": [
+"ainda que tenha deixado procurador",
+"poderes limitados"
+]
+},
+{
+"n": 76,
+"m": "A",
+"r": [
+[
+"está limitada aos que sejam sócios da pessoa jurídica",
+"alcança também os que não sejam sócios, quando beneficiados pelo abuso"
+]
+],
+"b": [
+"alcança também",
+"não sejam sócios",
+"beneficiados pelo abuso"
+],
+"d": [
+"está limitada",
+"apenas os sócios fundadores",
+"prejudicados pelo abuso"
+]
+},
+{
+"n": 80,
+"m": "A",
+"r": [
+[
+"não podendo o estatuto estabelecer categorias de associados com vantagens ou direitos especiais",
+"podendo o estatuto instituir categorias de associados com vantagens especiais"
+]
+],
+"b": [
+"podendo o estatuto instituir",
+"vantagens especiais"
+],
+"d": [
+"vedado ao estatuto instituir",
+"direitos idênticos"
+]
+},
+{
+"n": 83,
+"m": "B",
+"b": [
+"requerimento da parte",
+"Ministério Público",
+"de ofício"
+],
+"d": [
+"iniciativa do juiz",
+"Defensoria Pública"
+]
+},
+{
+"n": 86,
+"m": "B",
+"t": "Alterar a finalidade original da atividade econômica não é, por si só, desvio de finalidade, que exige o propósito de lesar credores ou de praticar ilícitos.",
+"b": [
+"por si só",
+"propósito de lesar credores ou de praticar ilícitos"
+],
+"d": [
+"em regra",
+"quando houver prejuízo",
+"simples inadimplemento"
+]
+},
+{
+"n": 89,
+"m": "A",
+"r": [
+[
+"outra fundação com finalidade de conservação do meio ambiente e promoção de desenvolvimento sustentável",
+"outra fundação que se proponha a fim igual ou semelhante"
+]
+],
+"b": [
+"incorporados",
+"fim igual ou semelhante"
+],
+"d": [
+"distribuídos",
+"fim diverso"
+]
+},
+{
+"n": 90,
+"m": "A",
+"r": [
+[
+"ainda que sem a presença do requisito de abuso da personalidade jurídica",
+"desde que presente o requisito de abuso da personalidade jurídica"
+]
+],
+"b": [
+"desde que presente",
+"desvio de finalidade",
+"confusão patrimonial"
+],
+"d": [
+"ainda que ausente",
+"culpa grave",
+"fraude fiscal"
+]
+},
+{
+"n": 92,
+"m": "A",
+"r": [
+[
+"sendo essa extensão condicionada à comprovação de finalidade lucrativa da entidade",
+"independentemente de finalidade lucrativa da entidade"
+]
+],
+"b": [
+"no que couber",
+"independentemente de finalidade lucrativa"
+],
+"d": [
+"somente se houver",
+"sem exceção"
+]
+},
+{
+"n": 93,
+"m": "A",
+"r": [
+[
+"existem, entre os associados, direitos e obrigações recíprocos decorrentes da própria natureza contratual do vínculo associativo",
+"não há, entre os associados, direitos e obrigações recíprocos"
+]
+],
+"b": [
+"não há",
+"direitos e obrigações recíprocos"
+],
+"d": [
+"existem",
+"há solidariedade"
+]
+},
+{
+"n": 94,
+"m": "A",
+"r": [
+[
+"exclusivamente por escritura pública",
+"por escritura pública ou testamento"
+],
+[
+", sendo vedado à fundação ser constituída por testamento",
+""
+]
+],
+"b": [
+"escritura pública ou testamento",
+"bens livres"
+],
+"d": [
+"exclusivamente por escritura",
+"bens gravados"
+]
+},
+{
+"n": 95,
+"m": "B",
+"t": "O estatuto da fundação deve ser submetido à aprovação da autoridade competente, com recurso ao juiz, e não vai direto a registro.",
+"b": [
+"aprovação da autoridade competente",
+"recurso ao juiz"
+],
+"d": [
+"aprovação do Poder Executivo",
+"homologação do Tribunal de Contas",
+"recurso ao Tribunal de Contas"
+]
+},
+{
+"n": 96,
+"m": "A",
+"r": [
+[
+"revertendo-se o patrimônio remanescente aos antigos administradores, na proporção de suas contribuições",
+"incorporando-se o patrimônio a outra fundação de fim igual ou semelhante"
+]
+],
+"b": [
+"Ministério Público ou qualquer interessado",
+"incorporando-se o patrimônio",
+"fim igual ou semelhante"
+],
+"d": [
+"Defensoria Pública",
+"revertendo-se",
+"fim diverso"
+]
+},
+{
+"n": 98,
+"m": "B",
+"b": [
+"várias residências",
+"alternadamente",
+"qualquer delas"
+],
+"d": [
+"uma única residência",
+"simultaneamente",
+"apenas a mais antiga"
+]
+},
+{
+"n": 100,
+"m": "C",
+"b": [
+"residência com ânimo definitivo",
+"mera permanência física prolongada"
+],
+"d": [
+"residência temporária",
+"a sede dos negócios",
+"tempo de permanência"
+]
+},
+{
+"n": 101,
+"m": "C",
+"b": [
+"relações concernentes à profissão",
+"lugar onde esta é exercida"
+],
+"d": [
+"relações de família",
+"local de residência"
+]
+},
+{
+"n": 102,
+"m": "A",
+"r": [
+[
+"apenas o local onde ele mais permanecer será considerado domicílio profissional para todas as relações de trabalho",
+"cada local de exercício será considerado domicílio para as relações que lhe correspondem"
+]
+],
+"b": [
+"cada local de exercício",
+"relações que lhe correspondem"
+],
+"d": [
+"apenas o local de maior permanência",
+"todas as relações de trabalho"
+]
+},
+{
+"n": 105,
+"m": "C",
+"b": [
+"administração municipal",
+"diretorias e administrações",
+"elegerem em seus estatutos"
+],
+"d": [
+"Câmara Municipal",
+"sede do Estado",
+"lugar da constituição"
+]
+},
+{
+"n": 106,
+"m": "B",
+"t": "O domicílio necessário é imposto pela lei ao incapaz, ao servidor público, ao militar, ao marítimo e ao preso.",
+"b": [
+"imposto pela lei",
+"servidor público",
+"preso"
+],
+"d": [
+"escolhido pela parte",
+"comerciante",
+"empresário"
+]
+},
+{
+"n": 108,
+"m": "A",
+"r": [
+[
+"o domicílio necessário é sempre o local onde ele estiver fisicamente instalado no momento, e não a sede de qualquer comando superior",
+"o domicílio é a sede do comando a que estiver imediatamente subordinado"
+]
+],
+"b": [
+"sede do comando",
+"imediatamente subordinado"
+],
+"d": [
+"local onde estiver instalado",
+"hierarquicamente superior"
+]
+},
+{
+"n": 109,
+"m": "B",
+"t": "O domicílio do servidor público é o lugar em que exerce permanentemente as funções, e não o de residência da família.",
+"b": [
+"servidor público",
+"exerce permanentemente as funções"
+],
+"d": [
+"preso",
+"incapaz",
+"reside com a família"
+]
+},
+{
+"n": 112,
+"m": "B",
+"b": [
+"Município",
+"lugar da administração municipal"
+],
+"d": [
+"Estado",
+"capital federal"
+]
+},
+{
+"n": 116,
+"m": "A",
+"r": [
+[
+"sempre o do juiz responsável por sua interdição, e não o de seu representante ou assistente",
+"o do seu representante ou assistente"
+]
+],
+"b": [
+"incapaz",
+"representante ou assistente"
+],
+"d": [
+"militar",
+"juiz da interdição"
+]
+},
+{
+"n": 117,
+"m": "A",
+"r": [
+[
+"a cidade de São Paulo, por concentrar o maior número de órgãos federais do país",
+"o Distrito Federal"
+]
+],
+"b": [
+"União",
+"Distrito Federal"
+],
+"d": [
+"cidade de São Paulo",
+"cidade do Rio de Janeiro",
+"Estado de Goiás"
+]
+},
+{
+"n": 118,
+"m": "A",
+"r": [
+[
+"pode ser presumido unicamente pelo tempo de permanência da pessoa em determinado local, independentemente de quaisquer outras circunstâncias",
+"não pode ser presumido unicamente pelo tempo de permanência da pessoa em determinado local"
+]
+],
+"b": [
+"não pode ser presumido",
+"tempo de permanência"
+],
+"d": [
+"é sempre presumido",
+"local de nascimento"
+]
+},
+{
+"n": 119,
+"m": "A",
+"r": [
+[
+"é sempre a cidade onde a entidade foi originalmente fundada, independentemente do que dispuser o respectivo estatuto",
+"é o lugar onde funcionam as diretorias e administrações, ou onde o estatuto ou ato constitutivo elegerem domicílio especial"
+]
+],
+"b": [
+"diretorias e administrações",
+"estatuto ou ato constitutivo"
+],
+"d": [
+"cidade de fundação",
+"assembleia geral"
+]
+},
+{
+"n": 120,
+"m": "C",
+"b": [
+"o local onde ele serve",
+"Marinha ou da Aeronáutica",
+"sede do comando"
+],
+"d": [
+"Exército e da Polícia Militar",
+"sede do batalhão"
+]
+},
+{
+"n": 121,
+"m": "A",
+"r": [
+[
+"só produz efeitos se o contrato for celebrado por escritura pública, sendo inválida em contrato particular",
+"produz efeitos desde que o contrato seja escrito, sendo válida em contrato particular"
+]
+],
+"b": [
+"desde que o contrato seja escrito",
+"válida em contrato particular"
+],
+"d": [
+"somente se por escritura pública",
+"inválida em contrato particular"
+]
+},
+{
+"n": 125,
+"m": "B",
+"b": [
+"pertença",
+"no silêncio do contrato",
+"não acompanha o bem principal"
+],
+"d": [
+"parte integrante",
+"por força de lei"
+]
+},
+{
+"n": 130,
+"m": "C",
+"b": [
+"fungíveis",
+"mesma espécie, qualidade e quantidade",
+"incompatível com bens imóveis"
+],
+"d": [
+"consumíveis",
+"mesma origem e finalidade"
+]
+},
+{
+"n": 131,
+"m": "B",
+"b": [
+"também consumíveis",
+"destinados à alienação",
+"a classificação a eles se aplica"
+],
+"d": [
+"bens imóveis",
+"apenas consumíveis"
+]
+},
+{
+"n": 136,
+"m": "B",
+"t": "Nenhum bem público, nem o dominical, está sujeito a usucapião, independentemente de afetação a finalidade pública.",
+"b": [
+"usucapião",
+"independentemente de afetação a finalidade pública"
+],
+"d": [
+"doação",
+"prescrição aquisitiva ordinária",
+"somente se afetado à finalidade pública"
+]
+},
+{
+"n": 139,
+"m": "C",
+"b": [
+"universalidade de fato",
+"destinação unitária",
+"negociação de peças isoladas"
+],
+"d": [
+"universalidade de direito",
+"destinação múltipla",
+"somente em conjunto"
+]
+},
+{
+"n": 141,
+"m": "C",
+"b": [
+"Estado estrangeiro",
+"bem particular"
+],
+"d": [
+"bem dominical",
+"bem de uso especial"
+]
+},
+{
+"n": 142,
+"m": "A",
+"r": [
+[
+"pode vender livremente esse imóvel, bastando para tanto simples autorização por decreto, sem necessidade de qualquer outra formalidade",
+"só pode vender esse imóvel após a desafetação e com as formalidades legais, não bastando simples decreto"
+]
+],
+"b": [
+"após a desafetação",
+"formalidades legais",
+"não bastando simples decreto"
+],
+"d": [
+"mediante simples decreto",
+"sem desafetação",
+"licitação dispensada"
+]
+},
+{
+"n": 148,
+"m": "C",
+"b": [
+"bem fungível",
+"bem consumível",
+"destinação à alienação"
+],
+"d": [
+"bem infungível",
+"bem inconsumível",
+"bem principal"
+]
+},
+{
+"n": 154,
+"m": "C",
+"b": [
+"ilícita",
+"de todo o efeito"
+],
+"d": [
+"inexistente",
+"de parte do efeito",
+"resolutiva"
+]
+},
+{
+"n": 156,
+"m": "B",
+"b": [
+"Dolo bilateral",
+"nenhuma pode alegá-lo",
+"reclamar indenização"
+],
+"d": [
+"Dolo de terceiro",
+"ambas podem alegá-lo",
+"apenas a vítima"
+]
+},
+{
+"n": 157,
+"m": "A",
+"r": [
+[
+"é anulável em qualquer hipótese, restando ao prejudicado apenas a possibilidade de exigir",
+"só é anulável se a parte beneficiada sabia ou devia saber do dolo; do contrário, o negócio subsiste, restando ao prejudicado exigir"
+]
+],
+"b": [
+"só é anulável",
+"sabia ou devia saber",
+"perdas e danos"
+],
+"d": [
+"em qualquer hipótese",
+"sabia e aprovou",
+"restituição em dobro"
+]
+},
+{
+"n": 158,
+"m": "A",
+"r": [
+[
+"responderá civilmente pela totalidade da obrigação e de forma solidária com o representante pelo proveito que obteve",
+"responderá civilmente até a importância do proveito que obteve"
+]
+],
+"b": [
+"representante legal",
+"até a importância do proveito"
+],
+"d": [
+"representante convencional",
+"pela totalidade da obrigação",
+"solidária"
+]
+},
+{
+"n": 159,
+"m": "A",
+"r": [
+[
+"não se configurando o defeito quando a pessoa a ser salva não pertença a seu núcleo familiar",
+"cabendo ao juiz decidir, conforme as circunstâncias, se há estado de perigo quando a pessoa a ser salva não pertença a seu núcleo familiar"
+]
+],
+"b": [
+"cabendo ao juiz decidir",
+"conforme as circunstâncias"
+],
+"d": [
+"não se configurando o defeito",
+"o Ministério Público"
+]
+},
+{
+"n": 160,
+"m": "C",
+"b": [
+"premente necessidade ou por inexperiência",
+"manifestamente desproporcional",
+"revisão equitativa"
+],
+"d": [
+"dolo ou coação",
+"levemente desproporcional",
+"rescisão automática"
+]
+},
+{
+"n": 164,
+"m": "C",
+"b": [
+"convenção das partes",
+"escritura pública",
+"mesmo quando a lei dispensa"
+],
+"d": [
+"determinação judicial",
+"instrumento particular",
+"somente quando a lei exige"
+]
+},
+{
+"n": 170,
+"m": "C",
+"b": [
+"pelos interessados",
+"exclusivamente aos que a alegarem",
+"solidariedade ou de indivisibilidade"
+],
+"d": [
+"de ofício pelo juiz",
+"a todos os envolvidos"
+]
+},
+{
+"n": 171,
+"m": "C",
+"b": [
+"boa-fé e os usos do lugar",
+"diversas daquelas previstas em lei"
+],
+"d": [
+"idênticas às previstas em lei",
+"equidade e a jurisprudência"
+]
+},
+{
+"n": 172,
+"m": "A",
+"r": [
+[
+"independe da",
+"depende da"
+]
+],
+"b": [
+"depende da confirmação",
+"comportamento posterior das partes"
+],
+"d": [
+"independe da confirmação",
+"conduta anterior das partes"
+]
+},
+{
+"n": 174,
+"m": "A",
+"r": [
+[
+"é dispensável que ele seja",
+"é necessário que ele seja"
+]
+],
+"b": [
+"é necessário",
+"perceptível por pessoa de diligência normal"
+],
+"d": [
+"é dispensável",
+"perceptível por qualquer pessoa",
+"diligência extraordinária"
+]
+},
+{
+"n": 177,
+"m": "C",
+"b": [
+"iminente e considerável",
+"um familiar"
+],
+"d": [
+"remoto e incerto",
+"um desconhecido"
+]
+},
+{
+"n": 179,
+"m": "C",
+"b": [
+"tivesse ou devesse ter conhecimento",
+"anulável",
+"solidariamente"
+],
+"d": [
+"nulo",
+"subsidiariamente"
+]
+},
+{
+"n": 185,
+"m": "C",
+"b": [
+"autoriza a acumulação",
+"mesmo fato originário"
+],
+"d": [
+"veda a acumulação",
+"fatos distintos"
+]
+},
+{
+"n": 186,
+"m": "A",
+"r": [
+[
+"afasta de plano o dever civil de indenização, em razão da excludente de ilicitude do estado de necessidade",
+"não afasta o dever civil de indenizar o terceiro inocente, ainda que presente a excludente de ilicitude do estado de necessidade"
+]
+],
+"b": [
+"não afasta",
+"terceiro inocente"
+],
+"d": [
+"afasta de plano",
+"o próprio agente"
+]
+},
+{
+"n": 188,
+"m": "C",
+"b": [
+"atos jurídicos lícitos",
+"no que couber"
+],
+"d": [
+"atos ilícitos",
+"integralmente"
+]
+},
+{
+"n": 189,
+"m": "C",
+"b": [
+"ação ou omissão voluntária",
+"irrelevante",
+"exclusivamente de natureza moral"
+],
+"d": [
+"indispensável",
+"natureza patrimonial"
+]
+},
+{
+"n": 190,
+"m": "C",
+"b": [
+"legítima defesa",
+"exercício regular de um direito"
+],
+"d": [
+"mera liberalidade",
+"abuso de um direito"
+]
+},
+{
+"n": 191,
+"m": "B",
+"b": [
+"subsidiária e equitativa",
+"obrigação ou meios"
+],
+"d": [
+"solidária e integral",
+"sempre"
+]
+},
+{
+"n": 197,
+"m": "C",
+"b": [
+"omissão voluntária",
+"negligência ou imprudência",
+"tanto quanto a ação comissiva"
+],
+"d": [
+"omissão involuntária",
+"menos que a ação comissiva",
+"dolo eventual"
+]
+},
+{
+"n": 198,
+"m": "C",
+"b": [
+"excede manifestamente",
+"fim econômico ou social",
+"abuso de direito"
+],
+"d": [
+"exerce regularmente",
+"fim político ou religioso",
+"exercício regular de direito"
+]
+},
+{
+"n": 199,
+"m": "A",
+"r": [
+[
+"Ainda que existisse",
+"Existindo"
+],
+[
+"permanece lícita, bastando que",
+"deixa de ser lícita, ainda que"
+]
+],
+"b": [
+"Existindo alternativa menos gravosa",
+"deixa de ser lícita"
+],
+"d": [
+"Inexistindo alternativa menos gravosa",
+"permanece lícita"
+]
+},
+{
+"n": 201,
+"m": "B",
+"b": [
+"culpa de terceiro",
+"ação regressiva"
+],
+"d": [
+"culpa do próprio agente",
+"ação rescisória"
+]
+},
+{
+"n": 206,
+"m": "B",
+"t": "O ilícito subjetivo do art. 186 do Código Civil compõe-se de dolo e de culpa em sentido estrito (negligência, imprudência e imperícia).",
+"b": [
+"dolo",
+"culpa em sentido estrito"
+],
+"d": [
+"risco",
+"boa-fé",
+"culpa em sentido amplo"
+]
+},
+{
+"n": 210,
+"m": "C",
+"b": [
+"um único evento idôneo",
+"reiniciado por inteiro"
+],
+"d": [
+"dois eventos sucessivos",
+"retomado pela metade"
+]
+},
+{
+"n": 216,
+"m": "B",
+"b": [
+"depois de consumada",
+"decadência legal",
+"é nula"
+],
+"d": [
+"antes de consumada",
+"é válida"
+]
+},
+{
+"n": 217,
+"m": "C",
+"b": [
+"expressa ou tácita",
+"depois que a prescrição se consumar",
+"fatos incompatíveis"
+],
+"d": [
+"apenas expressa",
+"antes que a prescrição se consume"
+]
+},
+{
+"n": 222,
+"m": "B",
+"t": "Não corre a prescrição entre ascendentes e descendentes durante o poder familiar, nem entre tutores e tutelados durante a tutela.",
+"b": [
+"poder familiar",
+"tutores e tutelados"
+],
+"d": [
+"avós e netos maiores",
+"cônjuges separados de fato",
+"maioridade civil"
+]
+},
+{
+"n": 225,
+"m": "A",
+"r": [
+[
+"a prescrição correrá normalmente na esfera cível, independentemente do andamento do processo penal",
+"a prescrição não correrá antes da sentença penal definitiva"
+]
+],
+"b": [
+"não correrá",
+"sentença penal definitiva"
+],
+"d": [
+"correrá normalmente",
+"recebimento da denúncia"
+]
+},
+{
+"n": 226,
+"m": "C",
+"b": [
+"protesto cambial",
+"interrupção da prescrição"
+],
+"d": [
+"suspensão da prescrição",
+"notificação extrajudicial"
+]
+},
+{
+"n": 227,
+"m": "C",
+"b": [
+"três anos",
+"aluguéis",
+"enriquecimento sem causa"
+],
+"d": [
+"cinco anos",
+"dois anos",
+"pensão alimentícia"
+]
+},
+{
+"n": 228,
+"m": "B",
+"t": "A pretensão de hospedeiros e do segurado contra o segurador prescreve em um ano, nos termos do art. 206, §1º, do Código Civil.",
+"b": [
+"um ano",
+"§1º"
+],
+"d": [
+"dois anos",
+"três anos",
+"§3º"
+]
+},
+{
+"n": 9,
+"m": "B",
+"t": "A analogia é método de integração, e a interpretação extensiva é método de interpretação.",
+"b": [
+"analogia",
+"método de interpretação"
+],
+"d": [
+"costume",
+"equidade",
+"fonte formal do direito"
+]
+},
+{
+"n": 11,
+"m": "A",
+"r": [
+[
+"devendo obedecer estritamente a essa ordem preferencial de aplicação",
+"sem ordem preferencial estrita de aplicação"
+]
+],
+"b": [
+"analogia, os costumes e os princípios gerais",
+"sem ordem preferencial estrita"
+],
+"d": [
+"equidade e a doutrina",
+"com ordem preferencial estrita"
+]
+},
+{
+"n": 12,
+"m": "B",
+"b": [
+"mera redução",
+"não gera, por si só, incapacidade",
+"relativa"
+],
+"d": [
+"absoluta",
+"grave redução"
+]
+},
+{
+"n": 17,
+"m": "A",
+"r": [
+[
+"razão pela qual a referida motivação não pode ser",
+"podendo a referida motivação ser"
+]
+],
+"b": [
+"declaração de concordância",
+"notas técnicas ou pareceres"
+],
+"d": [
+"declaração de discordância",
+"laudos periciais"
+]
+},
+{
+"n": 33,
+"m": "A",
+"r": [
+[
+"com a exclusão do dia da publicação e a inclusão do dia do vencimento",
+"com a inclusão do dia da publicação e do último dia do prazo"
+]
+],
+"b": [
+"inclusão do dia da publicação",
+"último dia do prazo"
+],
+"d": [
+"exclusão do dia da publicação",
+"primeiro dia útil"
+]
+},
+{
+"n": 39,
+"m": "B",
+"t": "O erro grosseiro é o erro manifesto e evidente.",
+"b": [
+"manifesto e evidente"
+],
+"d": [
+"escusável",
+"leve",
+"sutil"
+]
+},
+{
+"n": 40,
+"m": "B",
+"b": [
+"excede manifestamente",
+"sem exigir culpa",
+"fim econômico ou social"
+],
+"d": [
+"exerce regularmente",
+"exigindo dolo",
+"fim político ou religioso"
+]
+},
+{
+"n": 44,
+"m": "A",
+"r": [
+[
+"regulam a perda do direito potestativo de anular um ato jurídico",
+"regulam a extinção da pretensão de exigir uma prestação em juízo"
+],
+[
+"referem-se à extinção da pretensão de exigir uma prestação em juízo devido à inércia do titular do direito ao longo do tempo",
+"referem-se à perda do direito potestativo"
+]
+],
+"b": [
+"extinção da pretensão",
+"perda do direito potestativo"
+],
+"d": [
+"extinção do direito potestativo",
+"perda da pretensão"
+]
+},
+{
+"n": 47,
+"m": "B",
+"t": "A eficácia de lei, ato ou sentença estrangeira é afastada quando ofendem a soberania nacional, a ordem pública ou os bons costumes, bastando qualquer um deles.",
+"b": [
+"ordem pública",
+"bons costumes",
+"bastando qualquer um deles"
+],
+"d": [
+"interesse fiscal",
+"boa-fé objetiva",
+"bastando todos em conjunto"
+]
+},
+{
+"n": 49,
+"m": "B",
+"b": [
+"incompatível com a Constituição",
+"caso a caso"
+],
+"d": [
+"garantido pela Constituição",
+"por lei específica"
+]
+},
+{
+"n": 50,
+"m": "B",
+"t": "Pessoas jurídicas de direito público respondem civilmente pelos atos dos agentes, cabendo regresso se houve culpa ou dolo.",
+"b": [
+"respondem civilmente",
+"culpa ou dolo"
+],
+"d": [
+"não respondem",
+"respondem apenas subsidiariamente",
+"apenas dolo"
+]
+},
+{
+"n": 57,
+"m": "B",
+"b": [
+"voluntária e injustificada",
+"frutos e rendimentos",
+"sucessor provisório"
+],
+"d": [
+"sucessor definitivo",
+"Ministério Público",
+"bens imóveis"
+]
+},
+{
+"n": 62,
+"m": "A",
+"r": [
+[
+"como direito autônomo, não constituindo parte integrante do direito à imagem ou do direito à identidade pessoal",
+"como parte integrante do direito à imagem e do direito à identidade pessoal"
+]
+],
+"b": [
+"parte integrante",
+"imagem",
+"identidade pessoal"
+],
+"d": [
+"direito autônomo",
+"honra",
+"direito à privacidade"
+]
+},
+{
+"n": 63,
+"m": "A",
+"r": [
+[
+"depende de provas que demonstrem efetivo prejuízo",
+"independe de prova do prejuízo"
+]
+],
+"b": [
+"fins econômicos ou comerciais",
+"independe de prova do prejuízo"
+],
+"d": [
+"exige prova do prejuízo",
+"exige prova do lucro obtido"
+]
+},
+{
+"n": 64,
+"m": "C",
+"b": [
+"STF",
+"prescinde de autorização prévia"
+],
+"d": [
+"STJ",
+"exige autorização prévia"
+]
+},
+{
+"n": 75,
+"m": "B",
+"b": [
+"sem efetiva contraprestação",
+"salvo valor proporcionalmente insignificante",
+"confusão patrimonial"
+],
+"d": [
+"desvio de finalidade",
+"grupo econômico"
+]
+},
+{
+"n": 91,
+"m": "B",
+"t": "O registro público do ato constitutivo declara os poderes de representação dos administradores.",
+"b": [
+"registro público",
+"poderes de representação"
+],
+"d": [
+"escritura pública",
+"limites de responsabilidade",
+"ata de assembleia"
+]
+},
+{
+"n": 97,
+"m": "C",
+"b": [
+"local de sua sede",
+"não tiver sido contraída em nenhuma delas"
+],
+"d": [
+"local de seu administrador",
+"foro do credor"
+]
+},
+{
+"n": 123,
+"m": "B",
+"b": [
+"direito público interno",
+"autarquias"
+],
+"d": [
+"direito privado",
+"empresas públicas"
+]
+},
+{
+"n": 127,
+"m": "B",
+"b": [
+"produtos",
+"esgota a substância da jazida"
+],
+"d": [
+"frutos industriais",
+"pertenças"
+]
+},
+{
+"n": 132,
+"m": "B",
+"b": [
+"complexo de relações jurídicas",
+"herança e a massa falida"
+],
+"d": [
+"conjunto de coisas singulares",
+"universalidade de fato"
+]
+},
+{
+"n": 135,
+"m": "B",
+"t": "Segundo o Código Civil, os bens públicos são de uso comum do povo, de uso especial ou dominicais.",
+"b": [
+"de uso especial",
+"dominicais"
+],
+"d": [
+"de uso restrito",
+"fiscais",
+"de uso privado"
+]
+},
+{
+"n": 138,
+"m": "B",
+"b": [
+"facilita o uso",
+"sem ser indispensável",
+"benfeitoria útil"
+],
+"d": [
+"benfeitoria necessária",
+"benfeitoria voluptuária",
+"pertença"
+]
+},
+{
+"n": 147,
+"m": "A",
+"r": [
+[
+"universalidade de fato, pois resulta da organização voluntária do próprio devedor",
+"universalidade de direito, pois decorre da lei"
+]
+],
+"b": [
+"universalidade de direito",
+"decorre da lei"
+],
+"d": [
+"universalidade de fato",
+"vontade do devedor"
+]
+},
+{
+"n": 169,
+"m": "C",
+"b": [
+"inexistência de ação judicial em curso",
+"na pendência de demanda"
+],
+"d": [
+"decisão transitada em julgado",
+"citação válida do devedor"
+]
+},
+{
+"n": 180,
+"m": "B",
+"t": "No estado de perigo o declarante assume obrigação excessivamente onerosa diante de grave dano conhecido pela outra parte.",
+"b": [
+"excessivamente onerosa",
+"grave dano",
+"conhecido pela outra parte"
+],
+"d": [
+"gratuita",
+"dano de menor monta",
+"desconhecido pela outra parte"
+]
+},
+{
+"n": 181,
+"m": "A",
+"r": [
+[
+"independe do ajuizamento de ação judicial própria, podendo ser declarada incidentemente em sede de embargos de terceiro",
+"depende de ação própria (pauliana), sem declaração incidental em embargos de terceiro"
+]
+],
+"b": [
+"depende de ação própria",
+"pauliana",
+"embargos de terceiro"
+],
+"d": [
+"independe de ação própria",
+"ação rescisória",
+"embargos à execução"
+]
+},
+{
+"n": 184,
+"m": "A",
+"r": [
+[
+"exige-se a demonstração de dolo ou intenção deliberada do agente de prejudicar terceiros",
+"não se exige dolo nem culpa, basta o excesso manifesto no exercício do direito"
+]
+],
+"b": [
+"art. 187",
+"não se exige dolo nem culpa",
+"excesso manifesto"
+],
+"d": [
+"art. 186",
+"exige-se dolo",
+"excesso culposo"
+]
+},
+{
+"n": 187,
+"m": "B",
+"t": "Segundo a Súmula 385 do STJ, não cabe dano moral pela negativação indevida quando há inscrição legítima anterior.",
+"b": [
+"Súmula 385",
+"inscrição legítima anterior"
+],
+"d": [
+"Súmula 297",
+"Súmula 227",
+"inscrição posterior"
+]
+},
+{
+"n": 192,
+"m": "A",
+"r": [
+[
+"ilícito de natureza subjetiva, exigindo comprovação de dolo",
+"ilícito de natureza objetiva, que dispensa culpa e dolo"
+]
+],
+"b": [
+"natureza objetiva",
+"dispensa culpa e dolo"
+],
+"d": [
+"natureza subjetiva",
+"exige culpa ou dolo"
+]
+},
+{
+"n": 193,
+"m": "B",
+"t": "Na legítima defesa putativa, se o erro de percepção decorre de negligência, subsiste o dever de reparar.",
+"b": [
+"negligência",
+"subsiste o dever de reparar"
+],
+"d": [
+"força maior",
+"fica afastado o dever de reparar",
+"dolo"
+]
+},
+{
+"n": 194,
+"m": "B",
+"t": "Quem, em legítima defesa, atinge terceiro inocente responde perante o terceiro, pois a excludente só vale contra o agressor, contra quem tem regresso.",
+"b": [
+"responde perante o terceiro",
+"regresso"
+],
+"d": [
+"fica isento perante o terceiro",
+"retenção",
+"indenização em dobro"
+]
+},
+{
+"n": 202,
+"m": "B",
+"t": "O abuso de direito é aferido pelo excesso objetivo aos fins da norma, e não pela culpa nem pela intenção de prejudicar.",
+"b": [
+"excesso objetivo"
+],
+"d": [
+"gravidade do dano",
+"valor da indenização",
+"extensão do prejuízo"
+]
+},
+{
+"n": 203,
+"m": "C",
+"b": [
+"erro de percepção plenamente justificável",
+"boa-fé"
+],
+"d": [
+"erro de direito inescusável",
+"má-fé"
+]
+},
+{
+"n": 204,
+"m": "C",
+"b": [
+"responda civilmente perante o terceiro inocente",
+"direito de regresso"
+],
+"d": [
+"isento perante o terceiro",
+"direito de retenção"
+]
+},
+{
+"n": 214,
+"m": "B",
+"t": "O impedimento da prescrição entre cônjuges vale na constância da sociedade conjugal; encerrada esta, o prazo corre.",
+"b": [
+"na constância da sociedade conjugal",
+"o prazo corre"
+],
+"d": [
+"somente após o divórcio definitivo",
+"o prazo não corre",
+"enquanto durar a separação de fato"
+]
+},
+{
+"n": 218,
+"m": "C",
+"b": [
+"companheiros em união estável",
+"STJ"
+],
+"d": [
+"namorados",
+"STF"
+]
+},
+{
+"n": 219,
+"m": "B",
+"b": [
+"decadência legal",
+"a convencional",
+"cabendo à parte alegá-la"
+],
+"d": [
+"decadência convencional",
+"Ministério Público",
+"depende de pedido"
+]
+},
+{
+"n": 231,
+"m": "C",
+"b": [
+"motivos inerentes ao próprio mecanismo da Justiça",
+"não justifica"
+],
+"d": [
+"culpa do autor",
+"prejudica o autor"
+]
+},
+{
+"n": 232,
+"m": "B",
+"b": [
+"pretensão executiva",
+"mesmo prazo",
+"ação de conhecimento"
+],
+"d": [
+"prazo maior",
+"ação cautelar"
+]
+},
+{
+"n": 233,
+"m": "B",
+"b": [
+"danos ocultos",
+"ciência inequívoca da lesão e da autoria",
+"não da violação"
+],
+"d": [
+"danos aparentes",
+"data do ato ilícito"
+]
+}
+]

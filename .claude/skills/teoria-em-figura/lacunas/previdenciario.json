@@ -1,0 +1,1829 @@
+[
+{
+"n": 1,
+"m": "B",
+"b": [
+"contributiva",
+"filiação obrigatória"
+],
+"d": [
+"gratuita",
+"facultativa"
+]
+},
+{
+"n": 2,
+"m": "B",
+"t": "A gestão da seguridade social é quadripartite, com participação dos trabalhadores, dos empregadores, dos aposentados e do Governo nos órgãos colegiados.",
+"b": [
+"quadripartite",
+"aposentados"
+],
+"d": [
+"tripartite",
+"estudantes",
+"consumidores"
+]
+},
+{
+"n": 3,
+"m": "B",
+"b": [
+"riscos sociais prioritários",
+"maior proteção"
+],
+"d": [
+"menor custo",
+"todos os riscos"
+]
+},
+{
+"n": 4,
+"m": "B",
+"b": [
+"noventa dias",
+"exercício seguinte"
+],
+"d": [
+"cento e oitenta dias",
+"um ano"
+]
+},
+{
+"n": 7,
+"m": "B",
+"b": [
+"irredutibilidade",
+"não se confunde",
+"critérios legais"
+],
+"d": [
+"equivalência",
+"é idêntica ao",
+"critérios constitucionais"
+]
+},
+{
+"n": 9,
+"m": "B",
+"b": [
+"segurados obrigatórios",
+"universalidade"
+],
+"d": [
+"segurados facultativos",
+"seletividade"
+]
+},
+{
+"n": 13,
+"m": "B",
+"b": [
+"Seletividade e distributividade",
+"objetivos"
+],
+"d": [
+"Universalidade e uniformidade",
+"fundamentos"
+]
+},
+{
+"n": 15,
+"m": "B",
+"b": [
+"conjunto integrado de ações",
+"poderes públicos e da sociedade",
+"saúde, previdência e assistência"
+],
+"d": [
+"conjunto isolado de benefícios",
+"iniciativa exclusiva do Estado"
+]
+},
+{
+"n": 16,
+"m": "B",
+"b": [
+"12 meses",
+"24",
+"120 contribuições"
+],
+"d": [
+"6 meses",
+"36",
+"60 contribuições"
+]
+},
+{
+"n": 18,
+"m": "B",
+"t": "O ocupante exclusivamente de cargo em comissão vincula-se ao Regime Geral de Previdência Social (RGPS).",
+"b": [
+"exclusivamente de cargo em comissão",
+"Regime Geral de Previdência Social (RGPS)"
+],
+"d": [
+"cargo efetivo",
+"Regime Próprio de Previdência Social (RPPS)"
+]
+},
+{
+"n": 19,
+"m": "B",
+"b": [
+"desemprego involuntário",
+"encargos de família",
+"reclusão ou morte"
+],
+"d": [
+"desemprego voluntário",
+"encargos tributários",
+"licença-prêmio"
+]
+},
+{
+"n": 20,
+"m": "B",
+"b": [
+"60%",
+"2% por ano",
+"20 anos"
+],
+"d": [
+"100%",
+"5% por ano",
+"25 anos"
+]
+},
+{
+"n": 21,
+"m": "B",
+"b": [
+"reduz a vulnerabilidade",
+"concursos de prognósticos"
+],
+"d": [
+"aumenta a vulnerabilidade",
+"exportações"
+]
+},
+{
+"n": 22,
+"m": "B",
+"b": [
+"segurado obrigatório",
+"contribuinte individual"
+],
+"d": [
+"segurado facultativo",
+"segurado especial"
+]
+},
+{
+"n": 23,
+"m": "B",
+"b": [
+"não abre exceção",
+"baixa renda"
+],
+"d": [
+"admite exceção",
+"alta renda"
+]
+},
+{
+"n": 24,
+"m": "B",
+"b": [
+"36 meses",
+"mais de 120 contribuições",
+"desempregado"
+],
+"d": [
+"24 meses",
+"mais de 180 contribuições",
+"aposentado"
+]
+},
+{
+"n": 25,
+"m": "B",
+"b": [
+"integram",
+"receitas da seguridade"
+],
+"d": [
+"estão excluídas das",
+"receitas da União"
+]
+},
+{
+"n": 26,
+"m": "B",
+"b": [
+"não integra",
+"legislação específica",
+"só o salário"
+],
+"d": [
+"é equiparada ao salário",
+"legislação tributária",
+"o salário e a participação"
+]
+},
+{
+"n": 28,
+"m": "B",
+"b": [
+"doze contribuições",
+"dispensada",
+"acidente de qualquer natureza ou causa"
+],
+"d": [
+"seis contribuições",
+"exigida",
+"doença comum"
+]
+},
+{
+"n": 32,
+"m": "B",
+"b": [
+"contributiva",
+"filiação obrigatória",
+"salário mínimo"
+],
+"d": [
+"gratuita",
+"filiação facultativa",
+"teto do RGPS"
+]
+},
+{
+"n": 35,
+"m": "B",
+"b": [
+"rubricas contábeis específicas",
+"caráter contributivo da previdência"
+],
+"d": [
+"contribuição de todas as áreas",
+"orçamento único"
+]
+},
+{
+"n": 36,
+"m": "B",
+"t": "A invalidez deve ser anterior ao óbito do instituidor, e a Súmula 340 do STJ determina a aplicação da lei vigente na data do óbito.",
+"b": [
+"anterior ao óbito",
+"Súmula 340",
+"lei vigente na data do óbito"
+],
+"d": [
+"posterior ao óbito",
+"Súmula 359",
+"lei vigente na data do requerimento"
+]
+},
+{
+"n": 38,
+"m": "B",
+"b": [
+"chegada do processo ao Tribunal de Contas",
+"não da publicação do ato"
+],
+"d": [
+"concessão da aposentadoria",
+"protocolo do pedido"
+]
+},
+{
+"n": 41,
+"m": "B",
+"b": [
+"obrigatória",
+"sem faculdade"
+],
+"d": [
+"facultativa",
+"opcional"
+]
+},
+{
+"n": 42,
+"m": "B",
+"b": [
+"por cada cargo de forma autônoma",
+"dois cargos efetivos"
+],
+"d": [
+"pela soma das remunerações",
+"três cargos efetivos",
+"teto do RGPS"
+]
+},
+{
+"n": 43,
+"m": "B",
+"b": [
+"segurado obrigatório",
+"outra atividade do RGPS"
+],
+"d": [
+"segurado facultativo",
+"dispensado do RGPS"
+]
+},
+{
+"n": 45,
+"m": "B",
+"b": [
+"filiação facultativa",
+"não é segurado obrigatório"
+],
+"d": [
+"filiação compulsória",
+"é segurado especial"
+]
+},
+{
+"n": 46,
+"m": "B",
+"b": [
+"lei do ente federativo",
+"sem fixar cinco anos"
+],
+"d": [
+"lei complementar federal",
+"fixando dois anos"
+]
+},
+{
+"n": 47,
+"m": "B",
+"b": [
+"assistencial",
+"não mantém",
+"previdenciário"
+],
+"d": [
+"contributivo",
+"acidentário",
+"garante"
+]
+},
+{
+"n": 48,
+"m": "B",
+"b": [
+"compensação financeira",
+"contagem recíproca"
+],
+"d": [
+"dispensa de compensação",
+"contagem fictícia"
+]
+},
+{
+"n": 52,
+"m": "B",
+"b": [
+"declaração do segurado",
+"dependência econômica",
+"tutelado"
+],
+"d": [
+"decisão judicial",
+"dependência afetiva",
+"curatelado"
+]
+},
+{
+"n": 54,
+"m": "B",
+"t": "A circunscrição do IPREV/DF abrange também os membros e servidores do Tribunal de Contas do Distrito Federal, sem exclusão.",
+"b": [
+"abrange também",
+"Tribunal de Contas do Distrito Federal",
+"sem exclusão"
+],
+"d": [
+"afasta",
+"Tribunal de Justiça do Distrito Federal",
+"somente o Executivo"
+]
+},
+{
+"n": 57,
+"m": "B",
+"t": "A perda definitiva da qualidade de dependente pelo acusado de tentativa de homicídio qualificado do segurado exige condenação transitada em julgado; a denúncia não basta.",
+"b": [
+"qualidade de dependente",
+"condenação transitada em julgado"
+],
+"d": [
+"condição de segurado",
+"sentença de primeira instância",
+"prisão preventiva"
+]
+},
+{
+"n": 59,
+"m": "B",
+"b": [
+"não vale",
+"contribuinte individual",
+"facultativo"
+],
+"d": [
+"é admitida",
+"segurado empregado",
+"segurado especial"
+]
+},
+{
+"n": 60,
+"m": "B",
+"b": [
+"teto a do participante",
+"plano de custeio"
+],
+"d": [
+"piso a do participante",
+"regulamento da patrocinadora",
+"dobro da do participante"
+]
+},
+{
+"n": 61,
+"m": "B",
+"b": [
+"direta, indireta e fundacional",
+"empresa"
+],
+"d": [
+"somente a direta",
+"entidade filantrópica"
+]
+},
+{
+"n": 62,
+"m": "B",
+"t": "A contribuição normal do patrocinador de entidade fechada de previdência complementar pública não pode superar a do participante, nem com justificativa atuarial.",
+"b": [
+"patrocinador",
+"não pode superar"
+],
+"d": [
+"instituidor",
+"poderá exceder"
+]
+},
+{
+"n": 63,
+"m": "B",
+"b": [
+"sem finalidade lucrativa",
+"pessoa ou família"
+],
+"d": [
+"com finalidade lucrativa",
+"empresa individual"
+]
+},
+{
+"n": 64,
+"m": "B",
+"b": [
+"complementar e facultativa",
+"não substitutiva nem obrigatória"
+],
+"d": [
+"substitutiva e obrigatória",
+"complementar e compulsória"
+]
+},
+{
+"n": 65,
+"m": "B",
+"b": [
+"não tem direito",
+"salário-família",
+"reabilitação profissional"
+],
+"d": [
+"faz jus a todas",
+"auxílio-acidente",
+"pensão por morte"
+]
+},
+{
+"n": 66,
+"m": "B",
+"b": [
+"não pode filiar-se",
+"facultativo"
+],
+"d": [
+"está autorizado a ingressar",
+"contribuinte individual",
+"empregado"
+]
+},
+{
+"n": 70,
+"m": "B",
+"b": [
+"dispensam carência",
+"12 contribuições"
+],
+"d": [
+"exigem carência",
+"24 contribuições",
+"36 contribuições"
+]
+},
+{
+"n": 73,
+"m": "B",
+"b": [
+"incapacidade permanente",
+"insuscetível de readaptação",
+"não bastam"
+],
+"d": [
+"incapacidade temporária",
+"passível de readaptação",
+"são suficientes"
+]
+},
+{
+"n": 74,
+"m": "B",
+"t": "Doença ou lesão anterior à filiação não confere direito à aposentadoria por incapacidade permanente, salvo quando a incapacidade sobrevier por motivo de progressão ou agravamento.",
+"b": [
+"anterior à filiação",
+"salvo quando",
+"progressão ou agravamento"
+],
+"d": [
+"posterior à filiação",
+"nem mesmo quando",
+"recuperação"
+]
+},
+{
+"n": 76,
+"m": "B",
+"b": [
+"25 anos",
+"vinte"
+],
+"d": [
+"15 anos",
+"trinta"
+]
+},
+{
+"n": 77,
+"m": "B",
+"b": [
+"grau de deficiência",
+"tempo de contribuição"
+],
+"d": [
+"idade mínima",
+"renda familiar"
+]
+},
+{
+"n": 78,
+"m": "B",
+"t": "A comprovação da deficiência do segurado exige avaliação formal pelo INSS, e a prova testemunhal não a dispensa.",
+"b": [
+"avaliação formal",
+"INSS"
+],
+"d": [
+"declaração do empregador",
+"laudo particular",
+"Ministério da Saúde"
+]
+},
+{
+"n": 79,
+"m": "B",
+"b": [
+"100%",
+"sem variar com o grau"
+],
+"d": [
+"70%",
+"variando com o grau"
+]
+},
+{
+"n": 80,
+"m": "B",
+"b": [
+"primeira avaliação",
+"data provável do início da deficiência"
+],
+"d": [
+"última avaliação",
+"data do requerimento"
+]
+},
+{
+"n": 81,
+"m": "B",
+"b": [
+"dispensa carência",
+"tem direito"
+],
+"d": [
+"exige carência",
+"perde o direito"
+]
+},
+{
+"n": 83,
+"m": "B",
+"b": [
+"anteriores a 1997",
+"jurisprudência"
+],
+"d": [
+"posteriores a 1997",
+"lei complementar"
+]
+},
+{
+"n": 85,
+"m": "B",
+"b": [
+"não está",
+"empregado, doméstico, avulso e especial"
+],
+"d": [
+"segurado facultativo",
+"todos os segurados"
+]
+},
+{
+"n": 87,
+"m": "B",
+"b": [
+"seis anos",
+"80%",
+"21 anos"
+],
+"d": [
+"quatro anos",
+"100%",
+"18 anos"
+]
+},
+{
+"n": 92,
+"m": "C",
+"b": [
+"privadas do uso da razão",
+"local e no horário de trabalho"
+],
+"d": [
+"fora do local de trabalho",
+"atos dolosos da própria vítima"
+]
+},
+{
+"n": 93,
+"m": "B",
+"t": "A lesão do trabalhador decorrente de incêndio causado por raio, hipótese de caso fortuito ou força maior, é considerada acidente de trabalho.",
+"b": [
+"caso fortuito ou força maior",
+"é considerada"
+],
+"d": [
+"culpa exclusiva da vítima",
+"não é considerada",
+"dolo do empregado"
+]
+},
+{
+"n": 96,
+"m": "B",
+"b": [
+"nexo técnico",
+"condições especiais do trabalho"
+],
+"d": [
+"nexo causal civil",
+"culpa do empregador"
+]
+},
+{
+"n": 98,
+"m": "B",
+"b": [
+"não afastam",
+"dispensa sem justa causa"
+],
+"d": [
+"impedem",
+"pedido de demissão",
+"dispensa a pedido"
+]
+},
+{
+"n": 100,
+"m": "B",
+"t": "O aposentado que segue trabalhando não faz jus a nenhuma prestação em decorrência da atividade, salvo salário-família e reabilitação profissional, quando empregado.",
+"b": [
+"salário-família e reabilitação profissional",
+"quando empregado"
+],
+"d": [
+"pensão por morte",
+"auxílio por incapacidade temporária e salário-maternidade",
+"quando contribuinte individual"
+]
+},
+{
+"n": 103,
+"m": "B",
+"b": [
+"RGPS",
+"cargo efetivo",
+"igualmente público"
+],
+"d": [
+"previdência privada",
+"previdência complementar"
+]
+},
+{
+"n": 104,
+"m": "B",
+"b": [
+"concomitante",
+"não se aproveita"
+],
+"d": [
+"pode ser aproveitado",
+"contagem em dobro"
+]
+},
+{
+"n": 106,
+"m": "B",
+"b": [
+"supre a falta de documento",
+"testemunhas e documentos",
+"INSS"
+],
+"d": [
+"Poder Judiciário",
+"apenas documentos",
+"Ministério Público"
+]
+},
+{
+"n": 108,
+"m": "C",
+"b": [
+"independe de percepção",
+"auxílio-acidente"
+],
+"d": [
+"está condicionada",
+"auxílio-doença"
+]
+},
+{
+"n": 110,
+"m": "B",
+"t": "As diárias para viagens, até 50% da remuneração mensal, não integram o salário de contribuição; o excedente integra.",
+"b": [
+"50%",
+"não integram"
+],
+"d": [
+"30%",
+"compõem",
+"25%"
+]
+},
+{
+"n": 117,
+"m": "A",
+"r": [
+[
+"cobertas pelas receitas de contribuições correntes no mesmo exercício financeiro, sendo vedada a formação de reservas ou fundos previdenciários",
+"planejadas a longo prazo, sendo admitida a formação de reservas e fundos previdenciários"
+]
+],
+"b": [
+"longo prazo",
+"admitida a formação de reservas"
+],
+"d": [
+"mesmo exercício financeiro",
+"vedada a formação"
+]
+},
+{
+"n": 118,
+"m": "B",
+"t": "O RPPS dos servidores efetivos observará critérios que preservem o equilíbrio financeiro e atuarial, sendo vedados requisitos ou critérios diferenciados para a concessão de aposentadoria, salvo os previstos na Constituição.",
+"b": [
+"vedados",
+"previstos na Constituição"
+],
+"d": [
+"permitidos",
+"previstos em decreto",
+"previstos em lei ordinária"
+]
+},
+{
+"n": 119,
+"m": "B",
+"b": [
+"contributivo e solidário",
+"aposentados e pensionistas"
+],
+"d": [
+"facultativo e subsidiário",
+"apenas servidores ativos"
+]
+},
+{
+"n": 120,
+"m": "C",
+"b": [
+"reajustamento",
+"em caráter permanente",
+"valor real"
+],
+"d": [
+"revisão",
+"em caráter temporário",
+"valor nominal"
+]
+},
+{
+"n": 121,
+"m": "B",
+"b": [
+"preservar o valor real",
+"sem revisão automática"
+],
+"d": [
+"paridade plena",
+"aumento anual obrigatório"
+]
+},
+{
+"n": 122,
+"m": "A",
+"r": [
+[
+"pode optar por permanecer no regime geral de previdência social (RGPS), desde que manifeste vontade expressa e que haja previsão em lei estadual específica",
+"não pode optar pelo RGPS; a filiação ao RPPS é obrigatória"
+]
+],
+"b": [
+"não pode optar",
+"obrigatória"
+],
+"d": [
+"pode escolher",
+"facultativa"
+]
+},
+{
+"n": 124,
+"m": "B",
+"b": [
+"também aposentados e pensionistas",
+"não só servidores ativos"
+],
+"d": [
+"somente aposentados",
+"apenas servidores ativos"
+]
+},
+{
+"n": 125,
+"m": "B",
+"b": [
+"só pode",
+"contribuição definida"
+],
+"d": [
+"benefício definido",
+"contribuição variável"
+]
+},
+{
+"n": 128,
+"m": "C",
+"b": [
+"RGPS",
+"cargo em comissão",
+"emprego público"
+],
+"d": [
+"RPPS",
+"cargo efetivo"
+]
+},
+{
+"n": 129,
+"m": "B",
+"b": [
+"só servidores efetivos e militares",
+"sem liberdade"
+],
+"d": [
+"qualquer agente público",
+"com liberdade"
+]
+},
+{
+"n": 130,
+"m": "B",
+"t": "A previdência complementar dos servidores efetivos é efetivada por intermédio de entidade fechada de previdência complementar, de natureza pública.",
+"b": [
+"entidade fechada",
+"natureza pública"
+],
+"d": [
+"entidade aberta",
+"natureza privada",
+"regime próprio de previdência"
+]
+},
+{
+"n": 134,
+"m": "B",
+"b": [
+"continua contribuindo",
+"acima do teto"
+],
+"d": [
+"fica isento",
+"abaixo do teto"
+]
+},
+{
+"n": 136,
+"m": "B",
+"b": [
+"prévia e expressa opção",
+"não de forma obrigatória"
+],
+"d": [
+"automaticamente",
+"decisão do ente"
+]
+},
+{
+"n": 137,
+"m": "C",
+"b": [
+"lei complementar federal",
+"extinção do RPPS"
+],
+"d": [
+"lei ordinária estadual",
+"emenda constitucional"
+]
+},
+{
+"n": 140,
+"m": "B",
+"t": "É vedado o pagamento de benefícios por consórcio entre municípios; o ente que institui regime próprio deve ter número mínimo de segurados.",
+"b": [
+"vedado",
+"número mínimo de segurados"
+],
+"d": [
+"facultado",
+"número máximo",
+"permitido"
+]
+},
+{
+"n": 143,
+"m": "B",
+"b": [
+"contribuição facultativa",
+"não tem contrapartida"
+],
+"d": [
+"contribuição obrigatória",
+"contrapartida paritária"
+]
+},
+{
+"n": 146,
+"m": "B",
+"b": [
+"sessenta contribuições mensais",
+"fim do vínculo"
+],
+"d": [
+"cento e vinte contribuições",
+"manutenção do vínculo"
+]
+},
+{
+"n": 147,
+"m": "B",
+"b": [
+"participantes, inclusive assistidos",
+"não excede",
+"sem contrapartida"
+],
+"d": [
+"apenas do patrocinador",
+"pode exceder",
+"com contrapartida"
+]
+},
+{
+"n": 149,
+"m": "A",
+"r": [
+[
+"prescinde de disciplina por lei complementar, podendo ser inteiramente regulado por atos internos das entidades que administram os planos",
+"é regulado por lei complementar, não se limitando a atos internos das entidades que administram os planos"
+]
+],
+"b": [
+"lei complementar",
+"não se limitando"
+],
+"d": [
+"lei ordinária",
+"podendo se limitar"
+]
+},
+{
+"n": 150,
+"m": "B",
+"b": [
+"cessação do vínculo",
+"não podem passar pelo participante"
+],
+"d": [
+"manutenção do vínculo",
+"podem transitar pela conta do participante"
+]
+},
+{
+"n": 151,
+"m": "A",
+"r": [
+[
+"sendo vedada, entretanto, a portabilidade para plano de benefício de entidade fechada",
+"sendo admitida também a portabilidade para plano de entidade fechada"
+]
+],
+"b": [
+"admitida também",
+"entidade fechada"
+],
+"d": [
+"vedada",
+"entidade pública"
+]
+},
+{
+"n": 153,
+"m": "C",
+"b": [
+"obrigatoriamente",
+"todos os empregados"
+],
+"d": [
+"facultativamente",
+"apenas dirigentes"
+]
+},
+{
+"n": 157,
+"m": "A",
+"r": [
+[
+"durante o vínculo empregatício com o patrocinador",
+"após a cessação do vínculo empregatício com o patrocinador"
+]
+],
+"b": [
+"após a cessação",
+"vínculo empregatício"
+],
+"d": [
+"durante",
+"vínculo societário"
+]
+},
+{
+"n": 158,
+"m": "A",
+"r": [
+[
+"reserva especial, para garantia de benefícios",
+"reserva de contingência, para garantia de benefícios"
+],
+[
+"reserva de contingência, para revisão do plano de benefícios",
+"reserva especial, para revisão do plano de benefícios"
+]
+],
+"b": [
+"reserva de contingência",
+"reserva especial"
+],
+"d": [
+"reserva matemática",
+"reserva técnica"
+]
+},
+{
+"n": 159,
+"m": "C",
+"b": [
+"responderão civilmente",
+"avaliadores de gestão"
+],
+"d": [
+"responderão penalmente",
+"fiscais do órgão regulador"
+]
+},
+{
+"n": 161,
+"m": "B",
+"b": [
+"limite da contingência",
+"reserva especial"
+],
+"d": [
+"reserva matemática",
+"distribuição aos participantes"
+]
+},
+{
+"n": 166,
+"m": "C",
+"b": [
+"benefícios programados",
+"não programados"
+],
+"d": [
+"benefícios vitalícios",
+"apenas os programados"
+]
+},
+{
+"n": 167,
+"m": "B",
+"t": "O plano de benefícios de previdência complementar do servidor efetivo é somente na modalidade de contribuição definida, e a fiscalização estatal não dispensa a supervisão do patrocinador.",
+"b": [
+"contribuição definida",
+"supervisão do patrocinador"
+],
+"d": [
+"benefício definido",
+"contribuição variável",
+"fiscalização exclusiva do Estado"
+]
+},
+{
+"n": 170,
+"m": "B",
+"b": [
+"autorização específica",
+"resseguro",
+"multiplano"
+],
+"d": [
+"autonomia plena",
+"registro cartorial"
+]
+},
+{
+"n": 171,
+"m": "B",
+"t": "No RPPS/DF, a aposentadoria por invalidez decorrente de doença mental é paga ao próprio segurado, sem exigência de termo de curatela, pois o dispositivo que a impunha foi declarado inconstitucional.",
+"b": [
+"ao próprio segurado",
+"sem exigência"
+],
+"d": [
+"somente ao curador",
+"com exigência",
+"ao cônjuge"
+]
+},
+{
+"n": 173,
+"m": "B",
+"t": "Os ocupantes de cargo em comissão e de emprego público do DF não integram o RPPS e ficam vinculados ao RGPS.",
+"b": [
+"emprego público",
+"RGPS"
+],
+"d": [
+"cargo efetivo",
+"regime próprio da União",
+"cargo vitalício"
+]
+},
+{
+"n": 177,
+"m": "B",
+"b": [
+"mantém a filiação",
+"prazos legais",
+"efetivo exercício"
+],
+"d": [
+"perde a filiação",
+"prazos regulamentares",
+"tempo de serviço"
+]
+},
+{
+"n": 178,
+"m": "B",
+"b": [
+"cônjuge ou filho menor de 21 anos",
+"pais e irmãos"
+],
+"d": [
+"18 anos",
+"pais e avós",
+"tios"
+]
+},
+{
+"n": 184,
+"m": "A",
+"r": [
+[
+"não incide sobre o décimo terceiro salário nem sobre o adicional de férias",
+"incide sobre o décimo terceiro salário, mas não sobre o adicional de férias"
+]
+],
+"b": [
+"incide sobre o décimo terceiro salário",
+"não sobre o adicional de férias"
+],
+"d": [
+"não incide sobre o décimo terceiro",
+"incide sobre o adicional de férias"
+]
+},
+{
+"n": 189,
+"m": "A",
+"r": [
+[
+"depende de prévia e expressa autorização do Governador do Distrito Federal",
+"independe de autorização do Governador do Distrito Federal"
+]
+],
+"b": [
+"independe de autorização",
+"Governador do Distrito Federal"
+],
+"d": [
+"exige prévia autorização",
+"Câmara Legislativa"
+]
+},
+{
+"n": 190,
+"m": "A",
+"r": [
+[
+"é igual à contribuição normal descontada",
+"é o dobro da contribuição normal descontada"
+]
+],
+"b": [
+"o dobro",
+"contribuição normal"
+],
+"d": [
+"igual",
+"o triplo"
+]
+},
+{
+"n": 191,
+"m": "B",
+"b": [
+"não deve contrapartida",
+"irretratável",
+"não gera devolução"
+],
+"d": [
+"deve devolução proporcional",
+"revogável",
+"gera direito à devolução"
+]
+},
+{
+"n": 195,
+"m": "B",
+"b": [
+"remuneração do cargo efetivo",
+"diárias, ajuda de custo e auxílio-alimentação"
+],
+"d": [
+"remuneração total",
+"férias e décimo terceiro"
+]
+},
+{
+"n": 196,
+"m": "B",
+"b": [
+"parte do segurado",
+"também a patronal"
+],
+"d": [
+"apenas a do segurado",
+"somente a parte patronal"
+]
+},
+{
+"n": 197,
+"m": "B",
+"b": [
+"só aposentadorias e pensão por morte",
+"não compõem o rol"
+],
+"d": [
+"aposentadorias, pensão e auxílio-doença",
+"integram o rol"
+]
+},
+{
+"n": 198,
+"m": "B",
+"b": [
+"autarquia em regime especial",
+"gestora única do RPPS/DF"
+],
+"d": [
+"fundação pública",
+"gestora concorrente do RPPS/DF"
+]
+},
+{
+"n": 203,
+"m": "B",
+"b": [
+"até 31 de março de 2022",
+"irretratável e irrevogável"
+],
+"d": [
+"a qualquer tempo",
+"31 de dezembro de 2022"
+]
+},
+{
+"n": 208,
+"m": "B",
+"b": [
+"instituto obrigatório",
+"interrompe as contribuições",
+"benefício futuro"
+],
+"d": [
+"instituto facultativo",
+"benefício imediato"
+]
+},
+{
+"n": 212,
+"m": "B",
+"b": [
+"nomeada e exonerada",
+"Conselho Deliberativo"
+],
+"d": [
+"eleita pelos participantes",
+"Conselho Fiscal"
+]
+},
+{
+"n": 214,
+"m": "B",
+"b": [
+"cancela a inscrição",
+"não prevê restabelecimento automático"
+],
+"d": [
+"suspende a inscrição",
+"assegura o restabelecimento imediato"
+]
+},
+{
+"n": 217,
+"m": "B",
+"t": "As receitas previdenciárias do Iprev/DF só podem custear benefícios previdenciários, sendo vedado destiná-las livremente a outras finalidades.",
+"b": [
+"benefícios previdenciários",
+"vedado"
+],
+"d": [
+"ações de saúde dos servidores",
+"permitido",
+"assistência social básica"
+]
+},
+{
+"n": 220,
+"m": "B",
+"t": "Os Conselhos Deliberativo e Fiscal do Iprev/DF têm composição paritária entre representantes do governo e dos segurados.",
+"b": [
+"paritária"
+],
+"d": [
+"majoritária do governo",
+"exclusivamente indicada pelo Governador"
+]
+},
+{
+"n": 222,
+"m": "B",
+"b": [
+"comprovação documental",
+"sem fixar a escritura pública"
+],
+"d": [
+"declaração verbal",
+"exigindo a escritura pública"
+]
+},
+{
+"n": 228,
+"m": "B",
+"t": "Na previdência complementar do DF, o décimo terceiro salário integra a base de contribuição, mas o adicional de férias fica fora dela.",
+"b": [
+"adicional de férias",
+"fica fora"
+],
+"d": [
+"vencimento básico",
+"salário-base",
+"integra também"
+]
+},
+{
+"n": 232,
+"m": "B",
+"b": [
+"contribuições vertidas pelo participante",
+"custeio administrativo",
+"cota do patrocinador"
+],
+"d": [
+"contribuições do patrocinador",
+"taxa de carregamento",
+"cota do participante"
+]
+},
+{
+"n": 5,
+"m": "B",
+"b": [
+"seletividade e distributividade",
+"diversidade da base de financiamento",
+"competência exclusiva da União"
+],
+"d": [
+"irredutibilidade e pessoalidade",
+"contributividade exclusiva",
+"competência exclusiva dos Estados"
+]
+},
+{
+"n": 11,
+"m": "B",
+"b": [
+"uniformidade e equivalência",
+"participação no custeio"
+],
+"d": [
+"seletividade e distributividade",
+"diversidade da base"
+]
+},
+{
+"n": 33,
+"m": "B",
+"b": [
+"salário de contribuição",
+"incide contribuição previdenciária"
+],
+"d": [
+"verba indenizatória",
+"não incide contribuição"
+]
+},
+{
+"n": 34,
+"m": "B",
+"t": "O servidor contratado por tempo determinado no DF vincula-se ao Regime Geral como segurado empregado, não como contribuinte individual.",
+"b": [
+"segurado empregado",
+"Regime Geral"
+],
+"d": [
+"segurado facultativo",
+"segurado especial",
+"regime próprio"
+]
+},
+{
+"n": 37,
+"m": "B",
+"b": [
+"início da previdência",
+"aposentadoria por invalidez",
+"contribuições sociais"
+],
+"d": [
+"início da assistência social",
+"aposentadoria por tempo de serviço",
+"impostos gerais"
+]
+},
+{
+"n": 51,
+"m": "B",
+"t": "O ministro de confissão religiosa é contribuinte individual, o vereador sem regime próprio é segurado empregado, e o militar da ativa, vinculado a regime próprio, não pode se filiar ao RGPS como facultativo.",
+"b": [
+"contribuinte individual",
+"segurado empregado"
+],
+"d": [
+"segurado especial",
+"trabalhador avulso",
+"empregado doméstico"
+]
+},
+{
+"n": 58,
+"m": "B",
+"b": [
+"fora do RPPS dos servidores civis",
+"lei específica",
+"Forças Armadas"
+],
+"d": [
+"dentro do RPPS dos servidores civis",
+"decreto distrital",
+"Polícia Federal"
+]
+},
+{
+"n": 91,
+"m": "A",
+"r": [
+[
+"a doença profissional e a doença do trabalho desencadeadas ou adquiridas em função das condições especiais em que o trabalho é realizado",
+"a doença profissional, do exercício de trabalho peculiar a determinada atividade, e a doença do trabalho, das condições especiais em que o trabalho é realizado"
+]
+],
+"b": [
+"trabalho peculiar a determinada atividade",
+"condições especiais"
+],
+"d": [
+"trabalho comum a qualquer atividade",
+"condições habituais"
+]
+},
+{
+"n": 97,
+"m": "B",
+"t": "O FAP pode reduzir em até 50% ou aumentar em até 100% a alíquota de risco ambiental da contribuição da empresa.",
+"b": [
+"50%",
+"100%"
+],
+"d": [
+"30%",
+"25%",
+"200%"
+]
+},
+{
+"n": 99,
+"m": "B",
+"b": [
+"fundo contábil de natureza financeira",
+"ministério do trabalho"
+],
+"d": [
+"fundo de natureza orçamentária",
+"ministério da fazenda"
+]
+},
+{
+"n": 101,
+"m": "B",
+"b": [
+"segurado e dependente",
+"certas aposentadorias"
+],
+"d": [
+"apenas o segurado",
+"pensões e auxílios"
+]
+},
+{
+"n": 105,
+"m": "B",
+"t": "Na reavaliação da pessoa com deficiência para manutenção do vínculo em ações afirmativas, o médico assistente do SUS pode emitir laudo atestando a persistência da deficiência.",
+"b": [
+"pode emitir",
+"médico assistente do SUS"
+],
+"d": [
+"não pode emitir",
+"empregador",
+"fiscal do trabalho"
+]
+},
+{
+"n": 111,
+"m": "B",
+"t": "A contribuição do segurado empregado incide sobre as parcelas remuneratórias, como décimo terceiro salário e adicionais de periculosidade e insalubridade, e não sobre verbas indenizatórias.",
+"b": [
+"décimo terceiro salário",
+"adicionais de periculosidade e insalubridade"
+],
+"d": [
+"FGTS",
+"indenização de férias",
+"licença-prêmio indenizada"
+]
+},
+{
+"n": 112,
+"m": "B",
+"t": "Na cessão de mão de obra, a tomadora de serviços retém 11% do valor bruto da nota fiscal e recolhe em nome da cedente.",
+"b": [
+"cessão de mão de obra",
+"11%",
+"valor bruto"
+],
+"d": [
+"prestação de serviço eventual",
+"valor líquido",
+"20%"
+]
+},
+{
+"n": 114,
+"m": "B",
+"b": [
+"Justiça do Trabalho",
+"de ofício"
+],
+"d": [
+"Justiça Comum",
+"por provocação da Procuradoria"
+]
+},
+{
+"n": 138,
+"m": "B",
+"b": [
+"autônomo e complementar",
+"não há contagem recíproca"
+],
+"d": [
+"subsidiário e obrigatório",
+"há contagem recíproca com compensação"
+]
+},
+{
+"n": 141,
+"m": "B",
+"t": "No RPPS, o abono de permanência não é computado para efeito de concessão de benefício, e a filiação do servidor titular de cargo efetivo é obrigatória.",
+"b": [
+"titular de cargo efetivo",
+"obrigatória"
+],
+"d": [
+"servidores comissionados",
+"empregados públicos",
+"facultativa"
+]
+},
+{
+"n": 148,
+"m": "B",
+"b": [
+"saldo da conta individual",
+"benefício definido"
+],
+"d": [
+"valor atuarial projetado",
+"contribuição variável"
+]
+},
+{
+"n": 162,
+"m": "B",
+"b": [
+"três exercícios consecutivos",
+"revisão obrigatória do plano"
+],
+"d": [
+"dois exercícios consecutivos",
+"distribuição facultativa de benefícios"
+]
+},
+{
+"n": 205,
+"m": "B",
+"t": "Os planos de benefícios da previdência complementar dos servidores públicos do DF são ofertados somente na modalidade de contribuição definida.",
+"b": [
+"somente",
+"contribuição definida"
+],
+"d": [
+"benefício definido",
+"contribuição variável",
+"preferencialmente"
+]
+},
+{
+"n": 209,
+"m": "B",
+"t": "O participante que opta pelo resgate perde o direito de realizar a portabilidade, pois resgate e portabilidade são institutos alternativos.",
+"b": [
+"perde o direito de realizar a portabilidade",
+"alternativos"
+],
+"d": [
+"mantém o direito de realizar a portabilidade",
+"cumulativos",
+"complementares"
+]
+},
+{
+"n": 211,
+"m": "B",
+"b": [
+"enviado ao TCDF",
+"homologação",
+"ato complexo"
+],
+"d": [
+"enviado à Câmara Legislativa",
+"registro prévio",
+"ato simples"
+]
+},
+{
+"n": 224,
+"m": "B",
+"b": [
+"personalidade de direito privado",
+"patrimonial e de gestão de pessoal"
+],
+"d": [
+"personalidade de direito público",
+"financeira e orçamentária"
+]
+},
+{
+"n": 230,
+"m": "B",
+"t": "A DF-PREVICOM pode firmar convênio de adesão para servidores efetivos dos municípios da RIDE, e não de Estados e municípios em geral.",
+"b": [
+"servidores efetivos",
+"municípios da RIDE"
+],
+"d": [
+"servidores comissionados",
+"municípios de todo o país",
+"militares"
+]
+}
+]

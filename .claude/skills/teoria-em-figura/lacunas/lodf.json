@@ -1,0 +1,1154 @@
+[
+{
+"n": 2,
+"m": "A",
+"r": [
+[
+"desde que tenha ocorrido o pagamento de taxas ou emolumentos, ou de garantia de instância",
+"independentemente de pagamento de taxas ou emolumentos, ou de garantia de instância"
+]
+],
+"b": [
+"independentemente de pagamento",
+"taxas ou emolumentos"
+],
+"d": [
+"somente após o pagamento",
+"tributos e multas"
+]
+},
+{
+"n": 3,
+"m": "B",
+"b": [
+"Plena cidadania",
+"valor fundamental",
+"objetivos prioritários"
+],
+"d": [
+"Soberania nacional",
+"princípio geral"
+]
+},
+{
+"n": 7,
+"m": "B",
+"b": [
+"fechado",
+"plena cidadania",
+"livre iniciativa"
+],
+"d": [
+"aberto",
+"soberania",
+"ordem pública"
+]
+},
+{
+"n": 8,
+"m": "C",
+"b": [
+"território",
+"domínio e jurisdição"
+],
+"d": [
+"domínio da União",
+"controle militar"
+]
+},
+{
+"n": 9,
+"m": "C",
+"b": [
+"preventivas",
+"objetivos prioritários"
+],
+"d": [
+"repressivas",
+"valores fundamentais"
+]
+},
+{
+"n": 10,
+"m": "A",
+"r": [
+[
+"centralização administrativa",
+"descentralização administrativa"
+]
+],
+"b": [
+"Regiões Administrativas",
+"descentralização administrativa"
+],
+"d": [
+"concentração de poder",
+"unificação administrativa"
+]
+},
+{
+"n": 12,
+"m": "C",
+"b": [
+"privativamente",
+"tarifas e preços públicos"
+],
+"d": [
+"concorrentemente com a União",
+"impostos e taxas"
+]
+},
+{
+"n": 16,
+"m": "C",
+"b": [
+"participação popular",
+"transparência",
+"interesse público"
+],
+"d": [
+"autotutela",
+"hierarquia funcional"
+]
+},
+{
+"n": 18,
+"m": "B",
+"b": [
+"Desembargadores do TJDFT",
+"subsídio mensal, em espécie"
+],
+"d": [
+"Deputados Distritais",
+"Governador do Distrito Federal"
+]
+},
+{
+"n": 20,
+"m": "A",
+"r": [
+[
+"os auditores do",
+"os Conselheiros do"
+]
+],
+"b": [
+"declaração pública anual",
+"Conselheiros"
+],
+"d": [
+"auditores",
+"assessores",
+"Procuradores"
+]
+},
+{
+"n": 23,
+"m": "B",
+"b": [
+"autonomia federativa",
+"objetivos prioritários",
+"são sociais"
+],
+"d": [
+"soberania nacional",
+"princípios gerais",
+"econômicos"
+]
+},
+{
+"n": 25,
+"m": "B",
+"t": "Crianças e jovens, interesses coletivos, prioridade às demandas sociais e proteção a vítimas e testemunhas são todos objetivos prioritários do Distrito Federal.",
+"b": [
+"objetivos prioritários",
+"vítimas e testemunhas"
+],
+"d": [
+"valores fundamentais",
+"autoridades públicas"
+]
+},
+{
+"n": 26,
+"m": "A",
+"r": [
+[
+"mensalmente, no Diário Oficial",
+"trimestralmente, no Diário Oficial"
+],
+[
+"trimestralmente, nos respectivos sítios",
+"mensalmente, nos respectivos sítios"
+]
+],
+"b": [
+"trimestralmente, no Diário Oficial",
+"mensalmente, nos respectivos sítios"
+],
+"d": [
+"semestralmente",
+"anualmente"
+]
+},
+{
+"n": 29,
+"m": "B",
+"t": "Pluralismo político é valor fundamental do Distrito Federal; promover a inclusão digital é objetivo prioritário.",
+"b": [
+"valor fundamental",
+"objetivo prioritário"
+],
+"d": [
+"princípio orçamentário",
+"competência privativa"
+]
+},
+{
+"n": 30,
+"m": "B",
+"t": "A emenda à Lei Orgânica é vedada na vigência de intervenção federal, estado de defesa ou estado de sítio.",
+"b": [
+"vedada",
+"intervenção federal",
+"estado de sítio"
+],
+"d": [
+"permitida",
+"estado de calamidade",
+"estado de emergência"
+]
+},
+{
+"n": 32,
+"m": "C",
+"b": [
+"cidadãos",
+"Defensoria Pública",
+"apenas nas matérias especificadas"
+],
+"d": [
+"Ministério Público",
+"Procuradoria-Geral",
+"em qualquer matéria"
+]
+},
+{
+"n": 33,
+"m": "B",
+"t": "O direito de petição é assegurado independentemente de pagamento de taxas ou emolumentos.",
+"b": [
+"independentemente de pagamento"
+],
+"d": [
+"mediante o pagamento",
+"desde que pagas as custas"
+]
+},
+{
+"n": 35,
+"m": "B",
+"t": "São valores fundamentais do Distrito Federal a plena cidadania e o pluralismo político.",
+"b": [
+"plena cidadania",
+"pluralismo político"
+],
+"d": [
+"soberania nacional",
+"ordem pública"
+]
+},
+{
+"n": 40,
+"m": "B",
+"t": "O julgamento das contas dos administradores, inclusive da mesa diretora da Câmara Legislativa, cabe ao Tribunal de Contas, e emenda à Lei Orgânica não o transfere.",
+"b": [
+"Tribunal de Contas",
+"não o transfere"
+],
+"d": [
+"Poder Judiciário",
+"Ministério Público",
+"emenda pode transferi-lo"
+]
+},
+{
+"n": 41,
+"m": "B",
+"b": [
+"domínio e jurisdição",
+"hino",
+"direto e secreto"
+],
+"d": [
+"domínio da União",
+"selo",
+"indireto e facultativo"
+]
+},
+{
+"n": 42,
+"m": "B",
+"t": "O Distrito Federal tem a titularidade do ICMS, IPVA, ITCD, IPTU, ISS e ITBI, sem o imposto sobre grandes fortunas, que é da União.",
+"b": [
+"sem o imposto sobre grandes fortunas",
+"da União"
+],
+"d": [
+"com o imposto sobre grandes fortunas",
+"do próprio DF"
+]
+},
+{
+"n": 45,
+"m": "B",
+"b": [
+"bandeira, hino e brasão",
+"não consta"
+],
+"d": [
+"bandeira, hino e armas",
+"também consta"
+]
+},
+{
+"n": 47,
+"m": "B",
+"b": [
+"sede do governo",
+"integração com o entorno",
+"só bandeira, hino e brasão"
+],
+"d": [
+"sede da União",
+"isolamento do entorno",
+"bandeira, armas, hino e brasão"
+]
+},
+{
+"n": 51,
+"m": "B",
+"t": "A criação de Regiões Administrativas exige maioria absoluta e institui, automaticamente, o conselho tutelar da nova região.",
+"b": [
+"maioria absoluta",
+"conselho tutelar"
+],
+"d": [
+"maioria simples",
+"conselho comunitário"
+]
+},
+{
+"n": 58,
+"m": "B",
+"b": [
+"órgãos da estrutura do DF",
+"sem autonomia própria"
+],
+"d": [
+"entes autônomos",
+"com autonomia própria"
+]
+},
+{
+"n": 59,
+"m": "B",
+"b": [
+"maioria absoluta",
+"não é preciso emendar"
+],
+"d": [
+"maioria simples",
+"é indispensável emendar"
+]
+},
+{
+"n": 62,
+"m": "B",
+"b": [
+"não pode",
+"divisões administrativas internas"
+],
+"d": [
+"deve",
+"entes federativos autônomos"
+]
+},
+{
+"n": 63,
+"m": "B",
+"t": "Os administradores regionais ocupam cargo remunerado, por subsídio.",
+"b": [
+"cargo remunerado, por subsídio"
+],
+"d": [
+"cargo exercido sem remuneração",
+"cargo de confiança sem subsídio fixo"
+]
+},
+{
+"n": 71,
+"m": "C",
+"b": [
+"concorrentemente com a União",
+"direito tributário",
+"orçamento"
+],
+"d": [
+"privativamente",
+"direito penal",
+"direito civil"
+]
+},
+{
+"n": 74,
+"m": "B",
+"t": "É vedado ao Distrito Federal recusar fé aos documentos públicos e doar bens imóveis de seu patrimônio sem prévia autorização da Câmara Legislativa.",
+"b": [
+"recusar fé aos documentos públicos",
+"sem prévia autorização"
+],
+"d": [
+"dispor sobre serviços funerários",
+"licenciar a construção de qualquer obra",
+"mediante prévia autorização"
+]
+},
+{
+"n": 76,
+"m": "A",
+"r": [
+[
+"é absolutamente vedada, não se admitindo exceções, sob pena de imediata nulidade do ato e responsabilização civil do gestor",
+"é vedada sem expressa autorização da Câmara Legislativa, sob pena de nulidade do ato"
+]
+],
+"b": [
+"sem expressa autorização da Câmara Legislativa",
+"nulidade"
+],
+"d": [
+"autorização do Tribunal de Contas",
+"anulabilidade"
+]
+},
+{
+"n": 77,
+"m": "B",
+"b": [
+"direta e indireta",
+"participação popular",
+"transparência"
+],
+"d": [
+"apenas direta",
+"controle social",
+"hierarquia"
+]
+},
+{
+"n": 84,
+"m": "B",
+"b": [
+"taxas de poder de polícia",
+"exceção",
+"auditoria tributária"
+],
+"d": [
+"impostos",
+"regra geral",
+"auditoria fiscal"
+]
+},
+{
+"n": 85,
+"m": "B",
+"b": [
+"funções adequadas",
+"sem prejuízo",
+"demais vantagens"
+],
+"d": [
+"jornada reduzida",
+"com prejuízo",
+"vantagens proporcionais"
+]
+},
+{
+"n": 91,
+"m": "B",
+"b": [
+"reconduzido",
+"sem direito a indenização",
+"disponibilidade"
+],
+"d": [
+"demitido",
+"com direito a indenização",
+"exonerado"
+]
+},
+{
+"n": 96,
+"m": "B",
+"t": "A alienação de imóvel do Distrito Federal exige licitação, além de prévia avaliação e autorização da Câmara Legislativa.",
+"b": [
+"licitação",
+"autorização da Câmara Legislativa"
+],
+"d": [
+"dispensa de licitação",
+"autorização do Governador"
+]
+},
+{
+"n": 99,
+"m": "B",
+"b": [
+"ceder o uso",
+"comodato",
+"autorização legislativa"
+],
+"d": [
+"nomear servidores",
+"arrendamento",
+"decreto do Governador"
+]
+},
+{
+"n": 100,
+"m": "A",
+"r": [
+[
+"por ato administrativo discricionário do Governador, desde que devidamente justificada a desnecessidade pública do bem",
+"por lei específica, após ampla audiência da população interessada"
+]
+],
+"b": [
+"lei específica",
+"ampla audiência da população"
+],
+"d": [
+"ato discricionário",
+"consulta interna"
+]
+},
+{
+"n": 104,
+"m": "B",
+"b": [
+"Jazidas e recursos minerais",
+"não são bens do DF",
+"União"
+],
+"d": [
+"Terras devolutas",
+"constituem bens do DF",
+"Estado"
+]
+},
+{
+"n": 118,
+"m": "A",
+"r": [
+[
+"da maioria absoluta dos Deputados Distritais",
+"de dois terços dos Deputados Distritais"
+]
+],
+"b": [
+"dois terços",
+"admissão da denúncia"
+],
+"d": [
+"maioria absoluta",
+"três quintos",
+"maioria simples"
+]
+},
+{
+"n": 126,
+"m": "B",
+"b": [
+"um terço dos deputados",
+"administrações regionais",
+"rol é fechado"
+],
+"d": [
+"maioria absoluta dos deputados",
+"conselhos comunitários",
+"rol é exemplificativo"
+]
+},
+{
+"n": 130,
+"m": "B",
+"b": [
+"inconstitucionalidade",
+"quinze dias úteis",
+"quarenta e oito horas"
+],
+"d": [
+"ilegalidade formal",
+"trinta dias úteis",
+"setenta e duas horas"
+]
+},
+{
+"n": 131,
+"m": "B",
+"t": "O veto parcial somente abrangerá texto integral de artigo, parágrafo, inciso ou alínea.",
+"b": [
+"texto integral de artigo, parágrafo, inciso ou alínea"
+],
+"d": [
+"palavras isoladas de um artigo",
+"trecho de qualquer extensão"
+]
+},
+{
+"n": 134,
+"m": "B",
+"b": [
+"não se aumenta despesa",
+"leis orçamentárias",
+"indicar recursos"
+],
+"d": [
+"pode-se aumentar despesa",
+"leis ordinárias",
+"dispensar recursos"
+]
+},
+{
+"n": 136,
+"m": "A",
+"r": [
+[
+"julgar as contas anuais",
+"apreciar, mediante parecer prévio, as contas anuais"
+],
+[
+"apreciar as contas dos demais",
+"julgar as contas dos demais"
+]
+],
+"b": [
+"apreciar, mediante parecer prévio",
+"julgar as contas dos demais"
+],
+"d": [
+"julgar definitivamente",
+"apenas apreciar"
+]
+},
+{
+"n": 137,
+"m": "B",
+"b": [
+"concessão inicial",
+"melhorias posteriores",
+"fundamento do ato"
+],
+"d": [
+"revisão periódica",
+"nomeações em comissão",
+"valor do benefício"
+]
+},
+{
+"n": 140,
+"m": "B",
+"b": [
+"não exige",
+"sediada no DF",
+"dez anos"
+],
+"d": [
+"impõe",
+"sediada em Brasília",
+"cinco anos"
+]
+},
+{
+"n": 147,
+"m": "B",
+"b": [
+"Presidente da Câmara Legislativa",
+"Tribunal de Justiça"
+],
+"d": [
+"Presidente do Senado Federal",
+"Tribunal de Contas"
+]
+},
+{
+"n": 149,
+"m": "B",
+"b": [
+"competência privativa",
+"comando superior",
+"promover seus oficiais"
+],
+"d": [
+"competência concorrente",
+"comando operacional",
+"reformar seus oficiais"
+]
+},
+{
+"n": 162,
+"m": "C",
+"b": [
+"nomeação",
+"Secretário de Estado",
+"Administrador Regional"
+],
+"d": [
+"exoneração",
+"Conselheiro do Tribunal",
+"Deputado Distrital"
+]
+},
+{
+"n": 163,
+"m": "B",
+"b": [
+"na posse e também no término do mandato",
+"não há dispensa"
+],
+"d": [
+"somente no término do mandato",
+"facultativa"
+]
+},
+{
+"n": 164,
+"m": "B",
+"b": [
+"Câmara Legislativa",
+"Superior Tribunal de Justiça"
+],
+"d": [
+"Supremo Tribunal Federal",
+"Tribunal de Contas"
+]
+},
+{
+"n": 167,
+"m": "B",
+"b": [
+"funcional e administrativa",
+"inamovibilidade"
+],
+"d": [
+"apenas funcional",
+"irredutibilidade de subsídio"
+]
+},
+{
+"n": 168,
+"m": "B",
+"t": "Cabe ao Governador do Distrito Federal nomear e destituir o Defensor Público-Geral do Distrito Federal, na forma da lei.",
+"b": [
+"Governador do Distrito Federal",
+"nomear e destituir"
+],
+"d": [
+"Presidente da Câmara Legislativa",
+"Procurador-Geral do Distrito Federal",
+"apenas indicar"
+]
+},
+{
+"n": 173,
+"m": "B",
+"b": [
+"quadro funcional do respectivo instituto",
+"não de quaisquer servidores"
+],
+"d": [
+"livre escolha do Governador",
+"quadro da Secretaria de Segurança"
+]
+},
+{
+"n": 180,
+"m": "B",
+"t": "A segurança pública do Distrito Federal tem por princípio a ênfase no policiamento comunitário.",
+"b": [
+"policiamento comunitário"
+],
+"d": [
+"policiamento ostensivo",
+"policiamento investigativo"
+]
+},
+{
+"n": 183,
+"m": "B",
+"b": [
+"perigosa e de risco contínuo",
+"vantagens previstas em lei"
+],
+"d": [
+"meramente administrativa",
+"vantagens automáticas"
+]
+},
+{
+"n": 184,
+"m": "B",
+"b": [
+"órgão subordinado",
+"sem autonomia financeira própria",
+"orçamento geral"
+],
+"d": [
+"órgão autônomo",
+"autonomia financeira plena",
+"orçamento próprio"
+]
+},
+{
+"n": 198,
+"m": "A",
+"r": [
+[
+"sendo este último imperativo e vinculante para os setores público e privado",
+"sendo este determinativo para o setor público e indicativo para o setor privado"
+]
+],
+"b": [
+"determinativo para o setor público",
+"indicativo para o setor privado"
+],
+"d": [
+"imperativo e vinculante",
+"meramente consultivo",
+"facultativo"
+]
+},
+{
+"n": 200,
+"m": "B",
+"b": [
+"PDOT",
+"macrozoneamento",
+"uso e ocupação do solo urbano"
+],
+"d": [
+"PPA",
+"LDO",
+"zoneamento agrícola"
+]
+},
+{
+"n": 208,
+"m": "B",
+"b": [
+"deliberação dos Estados e do DF",
+"lei complementar federal"
+],
+"d": [
+"autorização do Congresso Nacional",
+"lei ordinária distrital",
+"resolução do Senado"
+]
+},
+{
+"n": 212,
+"m": "A",
+"r": [
+[
+"independe de qualquer autorização legislativa ou indicação de recursos correspondentes",
+"depende de prévia autorização legislativa e de indicação dos recursos correspondentes"
+]
+],
+"b": [
+"depende de prévia autorização legislativa",
+"indicação dos recursos correspondentes"
+],
+"d": [
+"independe de autorização legislativa",
+"comunicação posterior ao Tribunal de Contas"
+]
+},
+{
+"n": 216,
+"m": "B",
+"b": [
+"exige concurso",
+"necessidade excepcional definida em lei"
+],
+"d": [
+"dispensa concurso",
+"livre nomeação"
+]
+},
+{
+"n": 217,
+"m": "B",
+"t": "Os projetos de parcelamento do solo no Distrito Federal terão sua aprovação condicionada a apresentação de estudo de impacto ambiental e respectivo relatório, para fins de licenciamento.",
+"b": [
+"estudo de impacto ambiental"
+],
+"d": [
+"estudo de impacto de vizinhança",
+"estudo de viabilidade econômica"
+]
+},
+{
+"n": 219,
+"m": "B",
+"t": "O Distrito Federal adotará políticas de estímulo ao reflorestamento ecológico em áreas degradadas.",
+"b": [
+"estímulo ao reflorestamento ecológico",
+"áreas degradadas"
+],
+"d": [
+"manutenção de banco de sementes nativas",
+"fiscalização apenas punitiva",
+"áreas urbanas consolidadas"
+]
+},
+{
+"n": 220,
+"m": "A",
+"r": [
+[
+"prevê a instituição",
+"não prevê a instituição"
+]
+],
+"b": [
+"não prevê a instituição",
+"taxa turística de circulação"
+],
+"d": [
+"autoriza a cobrança",
+"pedágio urbano"
+]
+},
+{
+"n": 221,
+"m": "B",
+"b": [
+"sistema produtivo do DF",
+"meio ambiente"
+],
+"d": [
+"pesquisa básica pura",
+"setor financeiro"
+]
+},
+{
+"n": 222,
+"m": "A",
+"r": [
+[
+"sem exceção de qualquer imposto",
+"ressalvada a fixação da base de cálculo do IPVA e do IPTU"
+]
+],
+"b": [
+"noventa dias",
+"ressalvada a fixação da base de cálculo",
+"IPVA e do IPTU"
+],
+"d": [
+"trinta dias",
+"ressalvada a alteração de alíquotas",
+"ITCD e do ICMS"
+]
+},
+{
+"n": 15,
+"m": "B",
+"t": "Um dos objetivos prioritários do Distrito Federal é zelar pelo conjunto urbanístico de Brasília.",
+"b": [
+"conjunto urbanístico de Brasília"
+],
+"d": [
+"patrimônio rural do Entorno",
+"patrimônio industrial do Entorno"
+]
+},
+{
+"n": 19,
+"m": "B",
+"t": "A LODF reproduz os princípios fundamentais, com as devidas adaptações à posição federativa do DF, sem reproduzir a quase totalidade dos direitos e garantias fundamentais da Constituição Federal.",
+"b": [
+"princípios fundamentais",
+"sem reproduzir",
+"direitos e garantias fundamentais"
+],
+"d": [
+"reproduzindo",
+"a totalidade",
+"deveres fundamentais"
+]
+},
+{
+"n": 55,
+"m": "B",
+"b": [
+"aconselha e fiscaliza",
+"não delibera nem edita normas"
+],
+"d": [
+"delibera e normatiza",
+"decide e fiscaliza"
+]
+},
+{
+"n": 61,
+"m": "B",
+"t": "A remuneração dos Administradores Regionais não poderá ser superior à fixada para os Secretários de Estado do Distrito Federal.",
+"b": [
+"Secretários de Estado"
+],
+"d": [
+"Deputados Distritais",
+"Conselheiros do Tribunal de Contas"
+]
+},
+{
+"n": 87,
+"m": "B",
+"b": [
+"organizados em carreira",
+"subsídio"
+],
+"d": [
+"vencimento básico",
+"ocupantes de cargo em comissão"
+]
+},
+{
+"n": 152,
+"m": "B",
+"b": [
+"na posse e no término do mandato",
+"não em um só momento"
+],
+"d": [
+"apenas na posse",
+"facultativa"
+]
+},
+{
+"n": 166,
+"m": "B",
+"t": "Compete à Câmara Legislativa aprovar previamente a indicação ou destituição do Procurador-Geral do Distrito Federal.",
+"b": [
+"aprovar previamente",
+"indicação ou destituição"
+],
+"d": [
+"homologar posteriormente",
+"designação ou promoção"
+]
+},
+{
+"n": 188,
+"m": "B",
+"b": [
+"IPTU",
+"imposto municipal",
+"cumular competências"
+],
+"d": [
+"IOF",
+"imposto federal",
+"dispensar competências"
+]
+},
+{
+"n": 189,
+"m": "B",
+"b": [
+"plano plurianual",
+"por região administrativa",
+"despesas de capital"
+],
+"d": [
+"lei orçamentária anual",
+"por órgão",
+"despesas correntes"
+]
+},
+{
+"n": 190,
+"m": "B",
+"b": [
+"LDO",
+"lei orçamentária anual",
+"legislação tributária"
+],
+"d": [
+"plano plurianual",
+"lei de responsabilidade fiscal",
+"legislação trabalhista"
+]
+},
+{
+"n": 201,
+"m": "B",
+"b": [
+"por exceção",
+"segurança nacional",
+"relevante interesse coletivo"
+],
+"d": [
+"como regra geral",
+"defesa civil",
+"relevante interesse financeiro"
+]
+},
+{
+"n": 203,
+"m": "B",
+"t": "A política de desenvolvimento rural assegura programas de habitação, educação, saúde e saneamento básico, de modo a garantir a permanência do homem no campo.",
+"b": [
+"habitação, educação, saúde e saneamento básico",
+"permanência do homem no campo"
+],
+"d": [
+"segurança pública e transporte urbano",
+"tributação e fiscalização",
+"êxodo rural"
+]
+},
+{
+"n": 204,
+"m": "B",
+"b": [
+"fundação de apoio à pesquisa",
+"dotação mínima própria"
+],
+"d": [
+"autarquia de fomento",
+"dotação discricionária"
+]
+},
+{
+"n": 223,
+"m": "A",
+"r": [
+[
+"ao projeto de lei de diretrizes orçamentárias (LDO)",
+"ao projeto de lei orçamentária anual (LOA)"
+]
+],
+"b": [
+"lei orçamentária anual",
+"anulação de despesas",
+"juros e encargos da dívida pública"
+],
+"d": [
+"lei de diretrizes orçamentárias",
+"plano plurianual"
+]
+}
+]
