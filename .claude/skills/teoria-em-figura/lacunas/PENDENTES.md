@@ -18,3 +18,7 @@
 - **Conhecimentos do DF (3):** nº 30 (enunciado malformado), nº 53 (domínio fraturado do aquífero: não confirmado), nº 98; ver também os alertas sobre gabaritos "em conferência" (83, 114: "primordial" × "suplementar").
 - **Direito Tributário (2):** nº 72 (função extrafiscal/neutralidade do tributo; gabarito em conferência), nº 235.
 - **Administrativo geral (4):** nº 13 e 18 (professor com outro cargo: o gabarito da banca diz "de qualquer natureza", mas o art. 37, XVI, "b", da CF diz "técnico ou científico" — decidir o gabarito), nº 77, nº 488 (gabarito em conferência).
+
+## Atualização (18/11/2026)
+- Resolvidas com lacuna (gabarito mantido, CF vigente: art. 37, XVI, "b", EC 138/2025; art. 40, § 15, EC 103/2019): Administrativo geral nº 13 e 18, RJU nº 199, Previdenciário nº 130.
+- PDPM nº 151 e LODF nº 166: lacuna criada com a frase literal/neutra do texto legal; o GABARITO NÃO FOI ALTERADO e a decisão continua em aberto (art. 20 da Lei 11.340 traz "de ofício"; art. 60, XX, da LODF exige aprovação prévia da Câmara).

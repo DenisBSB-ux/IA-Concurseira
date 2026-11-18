@@ -103,20 +103,6 @@
 ]
 },
 {
-"n": 13,
-"m": "B",
-"t": "Admite-se a acumulação de um cargo de professor com outro técnico ou científico, havendo compatibilidade de horários e respeitado o teto.",
-"b": [
-"técnico ou científico",
-"compatibilidade de horários"
-],
-"d": [
-"administrativo ou operacional",
-"dedicação exclusiva",
-"cargo em comissão"
-]
-},
-{
 "n": 14,
 "m": "B",
 "t": "Remoção usada para punir o servidor por críticas à chefia padece de vício quanto à finalidade, insanável por convalidação, ainda que apresentada nova motivação.",
@@ -141,20 +127,6 @@
 "mantido no cargo",
 "acumular as remunerações",
 "afastado sem remuneração"
-]
-},
-{
-"n": 18,
-"m": "B",
-"t": "Pode haver acumulação de um cargo de professor com outro técnico ou científico, desde que haja compatibilidade de horários.",
-"b": [
-"técnico ou científico",
-"compatibilidade de horários"
-],
-"d": [
-"administrativo ou operacional",
-"dedicação exclusiva",
-"cargo em comissão"
 ]
 },
 {
@@ -3253,6 +3225,32 @@
 "d": [
 "estão vinculadas",
 "são exclusivas"
+]
+},
+{
+"n": 13,
+"m": "B",
+"t": "A CF admite a acumulação remunerada de um cargo de professor com outro de qualquer natureza, desde que haja compatibilidade de horários e seja respeitado o teto constitucional.",
+"b": [
+"outro de qualquer natureza",
+"compatibilidade de horários"
+],
+"d": [
+"outro técnico ou científico",
+"dois cargos de professor"
+]
+},
+{
+"n": 18,
+"m": "B",
+"t": "Pode haver acumulação remunerada de um cargo de professor com outro de qualquer natureza, desde que haja compatibilidade de horários.",
+"b": [
+"outro de qualquer natureza",
+"compatibilidade de horários"
+],
+"d": [
+"outro técnico ou científico",
+"dois cargos privativos de saúde"
 ]
 }
 ]
