@@ -1202,20 +1202,6 @@
 ]
 },
 {
-"n": 183,
-"m": "B",
-"b": [
-"não consta entre os riscos",
-"direitos autorais",
-"respostas inventadas"
-],
-"d": [
-"é o principal risco",
-"direitos trabalhistas",
-"respostas sempre corretas"
-]
-},
-{
 "n": 187,
 "m": "B",
 "t": "Gerar texto com IA sem declarar o uso nem revisar pode ser plágio; usar acriticamente dados enviesados perpetua vieses; a verificação da veracidade cabe também ao usuário final, e não só ao desenvolvedor.",
@@ -1284,6 +1270,21 @@
 "Tabelas Estáticas",
 "dados criptografados",
 "backup em nuvem"
+]
+},
+{
+"n": 183,
+"m": "B",
+"t": "Entre os riscos da IA generativa estão a falha de segurança da informação, a interpretação incorreta dos dados, a violação de direitos autorais e as respostas inventadas; incentivar soluções locais de IA não está entre eles.",
+"b": [
+"direitos autorais",
+"respostas inventadas",
+"não está entre eles"
+],
+"d": [
+"direitos trabalhistas",
+"respostas sempre corretas",
+"é o principal risco"
 ]
 }
 ]
