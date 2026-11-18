@@ -439,20 +439,6 @@
 ]
 },
 {
-"n": 89,
-"m": "B",
-"t": "Dados estruturados possuem formato fixo e são armazenados em tabelas relacionais, ao passo que dados não estruturados não possuem formato fixo e são armazenados em sistemas como bancos NoSQL.",
-"b": [
-"Dados estruturados",
-"tabelas relacionais",
-"bancos NoSQL"
-],
-"d": [
-"bancos relacionais",
-"dados semiestruturados"
-]
-},
-{
 "n": 91,
 "m": "C",
 "b": [
@@ -1009,20 +995,6 @@
 ]
 },
 {
-"n": 178,
-"m": "B",
-"t": "O Excel 365 reúne Tabelas Dinâmicas, funções avançadas, gráficos e ferramentas de organização que transformam dados brutos em informação útil à decisão.",
-"b": [
-"Tabelas Dinâmicas",
-"funções avançadas"
-],
-"d": [
-"macros apenas",
-"Tabelas de Dados",
-"funções estáticas"
-]
-},
-{
 "n": 179,
 "m": "B",
 "b": [
@@ -1282,6 +1254,36 @@
 "d": [
 "menos interpretação criteriosa",
 "autorização judicial"
+]
+},
+{
+"n": 89,
+"m": "B",
+"t": "Dados não estruturados não possuem formato fixo e são armazenados em bancos NoSQL, ao passo que dados estruturados possuem formato rígido e são armazenados em tabelas relacionais.",
+"b": [
+"formato rígido",
+"tabelas relacionais",
+"Dados não estruturados"
+],
+"d": [
+"formato flexível",
+"arquivos de log",
+"Dados semiestruturados"
+]
+},
+{
+"n": 178,
+"m": "B",
+"t": "O Microsoft Excel 365 reúne recursos de análise de dados, como Tabelas Dinâmicas, funções avançadas e gráficos, que transformam dados brutos em informações úteis para a tomada de decisão.",
+"b": [
+"Tabelas Dinâmicas",
+"dados brutos",
+"tomada de decisão"
+],
+"d": [
+"Tabelas Estáticas",
+"dados criptografados",
+"backup em nuvem"
 ]
 }
 ]

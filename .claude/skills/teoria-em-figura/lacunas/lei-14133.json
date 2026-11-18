@@ -159,18 +159,6 @@
 ]
 },
 {
-"n": 27,
-"m": "B",
-"t": "O termo de referência para compras e serviços comuns deve conter critérios de medição e de pagamento.",
-"b": [
-"critérios de medição e de pagamento"
-],
-"d": [
-"garantia de proposta",
-"minuta de edital"
-]
-},
-{
 "n": 31,
 "m": "B",
 "b": [
@@ -673,20 +661,6 @@
 ]
 },
 {
-"n": 144,
-"m": "B",
-"t": "No desempate entre propostas, a lei prevê, na ordem, disputa final, desempenho contratual, ações de equidade entre homens e mulheres e programa de integridade; só persistindo o empate há sorteio.",
-"b": [
-"equidade entre homens e mulheres",
-"programa de integridade"
-],
-"d": [
-"preferência de origem",
-"capacidade econômica",
-"menor preço"
-]
-},
-{
 "n": 146,
 "m": "B",
 "b": [
@@ -927,18 +901,6 @@
 "fornecimento imediato",
 "dever de contratar",
 "obrigação de adquirir"
-]
-},
-{
-"n": 187,
-"m": "B",
-"t": "Os prazos mínimos de apresentação de propostas na concorrência são contados da data de divulgação do edital, e não do dia útil subsequente.",
-"b": [
-"data de divulgação do edital"
-],
-"d": [
-"data da sessão pública",
-"data de homologação"
 ]
 },
 {
@@ -1412,20 +1374,6 @@
 ]
 },
 {
-"n": 117,
-"m": "B",
-"t": "O motivo determinante para a revogação do processo licitatório deve resultar de fato superveniente devidamente comprovado.",
-"b": [
-"fato superveniente",
-"comprovado"
-],
-"d": [
-"fato preexistente",
-"presumido",
-"alegado"
-]
-},
-{
 "n": 122,
 "m": "B",
 "t": "Admite-se a dispensa quando não surgirem interessados em licitação realizada há menos de 1 ano, desde que mantidas todas as condições do edital anterior.",
@@ -1610,6 +1558,58 @@
 "d": [
 "triplo",
 "metade"
+]
+},
+{
+"n": 27,
+"m": "B",
+"t": "Nos termos do art. 6º, XXIII, da Lei 14.133/2021, o termo de referência deve conter, entre outros elementos, critérios de medição e de pagamento, forma e critérios de seleção do fornecedor e adequação orçamentária.",
+"b": [
+"critérios de medição e de pagamento",
+"adequação orçamentária"
+],
+"d": [
+"minuta do contrato",
+"projeto executivo"
+]
+},
+{
+"n": 144,
+"m": "B",
+"t": "Nos termos do art. 60 da Lei 14.133/2021, em caso de empate entre duas ou mais propostas, serão utilizados critérios de desempate, nesta ordem, iniciando-se pela disputa final, com avaliação posterior do desempenho contratual prévio, das ações de equidade entre homens e mulheres e do programa de integridade.",
+"b": [
+"disputa final",
+"ações de equidade entre homens e mulheres"
+],
+"d": [
+"sorteio",
+"menor preço"
+]
+},
+{
+"n": 187,
+"m": "B",
+"t": "Nos termos do art. 55, I, a, da Lei 14.133/2021, o prazo mínimo para apresentação de propostas na aquisição de bens, quando adotado o critério de menor preço ou maior desconto, é de 8 dias úteis contados da data de divulgação do edital.",
+"b": [
+"8 dias úteis",
+"data de divulgação do edital"
+],
+"d": [
+"15 dias úteis",
+"dia útil subsequente"
+]
+},
+{
+"n": 117,
+"m": "B",
+"t": "Nos termos do art. 71, § 2º, da Lei 14.133/2021, o motivo determinante para a revogação do processo licitatório deverá ser resultante de fato superveniente devidamente comprovado.",
+"b": [
+"revogação",
+"fato superveniente devidamente comprovado"
+],
+"d": [
+"anulação",
+"fato previsível"
 ]
 }
 ]

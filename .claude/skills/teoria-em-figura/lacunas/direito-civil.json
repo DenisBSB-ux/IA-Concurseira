@@ -847,20 +847,6 @@
 ]
 },
 {
-"n": 136,
-"m": "B",
-"t": "Nenhum bem público, nem o dominical, está sujeito a usucapião, independentemente de afetação a finalidade pública.",
-"b": [
-"usucapião",
-"independentemente de afetação a finalidade pública"
-],
-"d": [
-"doação",
-"prescrição aquisitiva ordinária",
-"somente se afetado à finalidade pública"
-]
-},
-{
 "n": 139,
 "m": "C",
 "b": [
@@ -1261,20 +1247,6 @@
 ]
 },
 {
-"n": 206,
-"m": "B",
-"t": "O ilícito subjetivo do art. 186 do Código Civil compõe-se de dolo e de culpa em sentido estrito (negligência, imprudência e imperícia).",
-"b": [
-"dolo",
-"culpa em sentido estrito"
-],
-"d": [
-"risco",
-"boa-fé",
-"culpa em sentido amplo"
-]
-},
-{
 "n": 210,
 "m": "C",
 "b": [
@@ -1385,20 +1357,6 @@
 ]
 },
 {
-"n": 9,
-"m": "B",
-"t": "A analogia é método de integração, e a interpretação extensiva é método de interpretação.",
-"b": [
-"analogia",
-"método de interpretação"
-],
-"d": [
-"costume",
-"equidade",
-"fonte formal do direito"
-]
-},
-{
 "n": 11,
 "m": "A",
 "r": [
@@ -1466,19 +1424,6 @@
 ]
 },
 {
-"n": 39,
-"m": "B",
-"t": "O erro grosseiro é o erro manifesto e evidente.",
-"b": [
-"manifesto e evidente"
-],
-"d": [
-"escusável",
-"leve",
-"sutil"
-]
-},
-{
 "n": 40,
 "m": "B",
 "b": [
@@ -1512,21 +1457,6 @@
 "d": [
 "extinção do direito potestativo",
 "perda da pretensão"
-]
-},
-{
-"n": 47,
-"m": "B",
-"t": "A eficácia de lei, ato ou sentença estrangeira é afastada quando ofendem a soberania nacional, a ordem pública ou os bons costumes, bastando qualquer um deles.",
-"b": [
-"ordem pública",
-"bons costumes",
-"bastando qualquer um deles"
-],
-"d": [
-"interesse fiscal",
-"boa-fé objetiva",
-"bastando todos em conjunto"
 ]
 },
 {
@@ -1630,20 +1560,6 @@
 "d": [
 "desvio de finalidade",
 "grupo econômico"
-]
-},
-{
-"n": 91,
-"m": "B",
-"t": "O registro público do ato constitutivo declara os poderes de representação dos administradores.",
-"b": [
-"registro público",
-"poderes de representação"
-],
-"d": [
-"escritura pública",
-"limites de responsabilidade",
-"ata de assembleia"
 ]
 },
 {
@@ -1980,6 +1896,84 @@
 "d": [
 "danos aparentes",
 "data do ato ilícito"
+]
+},
+{
+"n": 136,
+"m": "B",
+"t": "Nos termos do art. 102 do Código Civil, os bens públicos não estão sujeitos a usucapião.",
+"b": [
+"não estão sujeitos",
+"usucapião"
+],
+"d": [
+"podem ser adquiridos",
+"desapropriação"
+]
+},
+{
+"n": 206,
+"m": "B",
+"t": "Nos termos do art. 186 do Código Civil, aquele que, por ação ou omissão voluntária, negligência ou imprudência, violar direito e causar dano a outrem, ainda que exclusivamente moral, comete ato ilícito.",
+"b": [
+"omissão voluntária, negligência ou imprudência",
+"ainda que exclusivamente moral"
+],
+"d": [
+"somente por ação dolosa",
+"apenas dano material"
+]
+},
+{
+"n": 9,
+"m": "B",
+"t": "Nos termos do art. 4º da LINDB, quando a lei for omissa, o juiz decidirá o caso de acordo com a analogia, os costumes e os princípios gerais de direito.",
+"b": [
+"analogia, os costumes e os princípios gerais de direito",
+"omissa"
+],
+"d": [
+"interpretação extensiva e a equidade",
+"obscura"
+]
+},
+{
+"n": 39,
+"m": "B",
+"t": "Nos termos do art. 28 da LINDB, o agente público responderá pessoalmente por suas decisões ou opiniões técnicas em caso de dolo ou erro grosseiro.",
+"b": [
+"pessoalmente",
+"dolo ou erro grosseiro"
+],
+"d": [
+"subsidiariamente",
+"culpa leve"
+]
+},
+{
+"n": 47,
+"m": "B",
+"t": "Nos termos do art. 17 da LINDB, as leis, atos e sentenças de outro país não terão eficácia no Brasil quando ofenderem a soberania nacional, a ordem pública e os bons costumes.",
+"b": [
+"soberania nacional, a ordem pública e os bons costumes",
+"não terão eficácia"
+],
+"d": [
+"soberania nacional, exclusivamente",
+"têm eficácia plena"
+]
+},
+{
+"n": 91,
+"m": "B",
+"t": "Nos termos do art. 47 do Código Civil, obrigam a pessoa jurídica os atos dos administradores, exercidos nos limites de seus poderes definidos no ato constitutivo.",
+"b": [
+"atos dos administradores",
+"limites de seus poderes"
+],
+"d": [
+"atos dos sócios",
+"poderes presumidos"
 ]
 }
 ]

@@ -1883,20 +1883,6 @@
 ]
 },
 {
-"n": 191,
-"m": "B",
-"t": "O Presidente do TCDF é eleito pelos Conselheiros para mandato de dois anos.",
-"b": [
-"Conselheiros",
-"dois anos"
-],
-"d": [
-"Governador",
-"quatro anos",
-"Câmara Legislativa"
-]
-},
-{
 "n": 84,
 "m": "B",
 "b": [
@@ -1921,6 +1907,21 @@
 "deverá prestar apoio administrativo",
 "art. 77, parágrafo único",
 "quadro de carreira"
+]
+},
+{
+"n": 191,
+"m": "B",
+"t": "Os Conselheiros elegem o Presidente do Tribunal para mandato de 2 anos, com início em 1º de janeiro dos anos ímpares.",
+"b": [
+"mandato de 2 anos",
+"anos ímpares",
+"Conselheiros"
+],
+"d": [
+"mandato de 4 anos",
+"anos pares",
+"Governador"
 ]
 }
 ]

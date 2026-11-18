@@ -931,19 +931,6 @@
 "t": "A Administração não pode se vincular a acordos, convenções ou dissídios coletivos que tratem de direitos aplicáveis somente aos contratos com a Administração Pública."
 },
 {
-"n": 64,
-"m": "B",
-"b": [
-"nepotismo",
-"terceiro grau",
-"direção, chefia ou assessoramento"
-],
-"d": [
-"segundo grau",
-"quarto grau"
-]
-},
-{
 "n": 50,
 "m": "B",
 "b": [
@@ -955,5 +942,20 @@
 "tributos federais"
 ],
 "t": "A garantia contratual é retida até a comprovação do pagamento das verbas rescisórias, e não dos salários do mês."
+},
+{
+"n": 64,
+"m": "B",
+"t": "Durante a vigência do contrato, é vedado ao contratado contratar cônjuge, companheiro ou parente em linha reta, colateral ou por afinidade, até o terceiro grau, de dirigente do órgão ou entidade contratante ou de agente público que atue na fiscalização ou na gestão do contrato.",
+"b": [
+"Durante a vigência do contrato",
+"até o terceiro grau",
+"dirigente do órgão ou entidade contratante"
+],
+"d": [
+"Após o encerramento do contrato",
+"até o segundo grau",
+"empregado terceirizado"
+]
 }
 ]

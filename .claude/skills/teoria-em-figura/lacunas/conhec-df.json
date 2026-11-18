@@ -362,19 +362,6 @@
 ]
 },
 {
-"n": 53,
-"m": "B",
-"t": "No Distrito Federal, a capacidade de armazenamento de água dos aquíferos não é alta em todo o território.",
-"b": [
-"não é alta",
-"em todo o território"
-],
-"d": [
-"é muito alta",
-"apenas na área urbana"
-]
-},
-{
 "n": 55,
 "m": "B",
 "b": [
@@ -1531,21 +1518,6 @@
 ]
 },
 {
-"n": 30,
-"m": "B",
-"t": "Os programas prioritários da RIDE são financiados por dotações da União, do DF, de GO, de MG e dos municípios e por operações de crédito interno e externo, e não por doações privadas ou fundo único.",
-"b": [
-"crédito interno e externo",
-"doações privadas",
-"fundo único"
-],
-"d": [
-"crédito apenas interno",
-"convênios internacionais",
-"Fundo Constitucional"
-]
-},
-{
 "n": 32,
 "m": "B",
 "b": [
@@ -1639,18 +1611,6 @@
 ]
 },
 {
-"n": 98,
-"m": "B",
-"t": "O reservatório de Corumbá IV tem múltiplos usos: energia, água potável, turismo, esportes náuticos e preservação ambiental, e não apenas um.",
-"b": [
-"múltiplos usos"
-],
-"d": [
-"uso único",
-"apenas geração de energia"
-]
-},
-{
 "n": 114,
 "m": "B",
 "b": [
@@ -1716,6 +1676,48 @@
 "Sistema Corumbá",
 "30%",
 "Lago Paranoá"
+]
+},
+{
+"n": 53,
+"m": "B",
+"t": "No Distrito Federal predominam os aquíferos do domínio fraturado, e a capacidade de armazenamento de água não é alta em todo o território.",
+"b": [
+"domínio fraturado",
+"não é alta"
+],
+"d": [
+"domínio poroso",
+"domínio cárstico",
+"é uniformemente elevada"
+]
+},
+{
+"n": 30,
+"m": "B",
+"t": "Os programas e projetos prioritários da Ride, com ênfase em infraestrutura básica e geração de empregos, são financiados com recursos orçamentários da União, do Distrito Federal, de Goiás, de Minas Gerais e dos Municípios abrangidos, e com operações de crédito externas e internas.",
+"b": [
+"Goiás, de Minas Gerais",
+"operações de crédito externas e internas"
+],
+"d": [
+"doações privadas",
+"Fundo Constitucional do Distrito Federal",
+"convênios internacionais"
+]
+},
+{
+"n": 98,
+"m": "B",
+"t": "O reservatório de Corumbá IV tem múltiplos usos, incluindo produção de energia elétrica, fornecimento de água potável, turismo, esportes náuticos e preservação ambiental.",
+"b": [
+"múltiplos usos",
+"produção de energia elétrica"
+],
+"d": [
+"uso exclusivo",
+"irrigação de lavouras",
+"navegação comercial"
 ]
 }
 ]
