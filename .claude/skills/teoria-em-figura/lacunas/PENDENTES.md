@@ -16,3 +16,4 @@
 - **Regimento Interno (2):** nº 100 (sanções do TCDF: frase truncada/confusa), nº 154 (frase sem contexto do TCDF; distrator "órgãos de classe" também completa).
 - **RJU (5):** nº 16 (exercício cumulativo de cargos: frase não confirmada pela regra v; gabarito em conferência), nº 54 (lacunas redundantes), nº 199 (professor com outro cargo: regra v ("de qualquer natureza") contradiz o art. 37, XVI, "b", da CF — decidir regra e gabarito), nº 219 (efeito retroativo de atos: regra v restringe a nomeação, posse e exercício), mais 1 já listada acima.
 - **Conhecimentos do DF (3):** nº 30 (enunciado malformado), nº 53 (domínio fraturado do aquífero: não confirmado), nº 98; ver também os alertas sobre gabaritos "em conferência" (83, 114: "primordial" × "suplementar").
+- **Direito Tributário (2):** nº 72 (função extrafiscal/neutralidade do tributo; gabarito em conferência), nº 235.
