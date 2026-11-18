@@ -2713,3 +2713,7 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 .tr-modal .tr-fb .tr-refaz{ flex:0 0 auto; width:auto; margin:0; }
 .tr-modal .tr-fb, .tr-modal .tr-fb b, .tr-modal .tr-fb .tr-ref{ font-size:calc(14px * var(--tr-zoom, 1)); }
 .tr-modal .tr-fb .tr-extra{ font-size:calc(12px * var(--tr-zoom, 1)); margin:4px 0 0; }
+/* v608: botões de ação do treino (Refazer, Embaralhar, Resetar, Anterior, Próxima, Virar…) com letra 4 pontos menor */
+.tr-modal .tr-acoes .tr-bt, .tr-modal .tr-acoes .btn.tr-bt, .tr-modal .tr-acoes .tr-reset > button, .tr-modal .tr-refaz, .tr-modal .tr-fb .tr-refaz{ font-size:11px; }
+.tr-modal .tr-bt .tr-ic{ font-size:13px; }
+@media (max-width:480px){ .tr-modal .tr-acoes .tr-bt, .tr-modal .tr-acoes .btn.tr-bt, .tr-modal .tr-acoes .tr-reset > button, .tr-modal .tr-refaz{ font-size:10px; } .tr-modal .tr-bt .tr-ic{ font-size:12px; } }
