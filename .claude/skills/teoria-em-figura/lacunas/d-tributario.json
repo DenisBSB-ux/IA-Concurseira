@@ -1612,18 +1612,6 @@
 ]
 },
 {
-"n": 235,
-"m": "B",
-"t": "A imunidade recíproca cobre só impostos, não alcançando taxas nem contribuições.",
-"b": [
-"só impostos"
-],
-"d": [
-"impostos e taxas",
-"impostos, taxas e contribuições"
-]
-},
-{
 "n": 236,
 "m": "A",
 "r": [
@@ -2127,19 +2115,6 @@
 ]
 },
 {
-"n": 72,
-"m": "B",
-"t": "Um imposto incidente sobre o valor de um patrimônio não é neutro, pois pode ter caráter extrafiscal, como o IPTU.",
-"b": [
-"não é neutro",
-"extrafiscal"
-],
-"d": [
-"sempre é neutro",
-"regressivo"
-]
-},
-{
 "n": 115,
 "m": "C",
 "b": [
@@ -2359,6 +2334,32 @@
 "um ano",
 "cinco anos",
 "independentemente de iniciados"
+]
+},
+{
+"n": 235,
+"m": "B",
+"t": "Nos termos do art. 150, VI, a, da CF, é vedado instituir impostos sobre patrimônio, renda ou serviços, uns dos outros.",
+"b": [
+"impostos",
+"patrimônio, renda ou serviços"
+],
+"d": [
+"taxas",
+"contribuições"
+]
+},
+{
+"n": 72,
+"m": "B",
+"t": "Nos termos do art. 156-A, § 1º, da CF, o imposto sobre bens e serviços de competência compartilhada (IBS) será informado pelo princípio da neutralidade.",
+"b": [
+"neutralidade",
+"bens e serviços"
+],
+"d": [
+"extrafiscalidade",
+"patrimônio"
 ]
 }
 ]

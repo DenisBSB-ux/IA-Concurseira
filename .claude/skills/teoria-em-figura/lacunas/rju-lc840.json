@@ -302,19 +302,6 @@
 ]
 },
 {
-"n": 54,
-"m": "B",
-"t": "O abono de ponto pode ser gozado de forma intercalada, sendo permitido o fracionamento do período de cinco dias.",
-"b": [
-"intercalada",
-"permitido o fracionamento"
-],
-"d": [
-"consecutiva",
-"vedado o fracionamento"
-]
-},
-{
 "n": 55,
 "m": "B",
 "b": [
@@ -1009,20 +996,6 @@
 ]
 },
 {
-"n": 209,
-"m": "C",
-"b": [
-"sigiloso",
-"exclusivamente investigativo",
-"nenhuma sanção disciplinar"
-],
-"d": [
-"público",
-"também punitivo",
-"sanção de advertência"
-]
-},
-{
 "n": 213,
 "m": "B",
 "t": "Concluída a sindicância patrimonial, a comissão deverá elaborar relatório concluindo pelo arquivamento ou pela instauração de processo disciplinar.",
@@ -1162,20 +1135,6 @@
 "abono de permanência",
 "férias",
 "gratificação de produtividade"
-]
-},
-{
-"n": 16,
-"m": "B",
-"t": "O substituto exerce cumulativamente as atribuições do cargo de que é titular com as do cargo ou função do substituído, sem prejuízo da remuneração a que fizer jus pela substituição.",
-"b": [
-"cumulativamente",
-"remuneração"
-],
-"d": [
-"alternadamente",
-"exclusivamente",
-"aposentadoria"
 ]
 },
 {
@@ -1340,19 +1299,6 @@
 ]
 },
 {
-"n": 219,
-"m": "B",
-"t": "A chefia imediata não poderá editar ato de designação de substituição com efeitos retroativos, mesmo por força maior.",
-"b": [
-"não poderá editar",
-"efeitos retroativos"
-],
-"d": [
-"deverá editar",
-"efeitos futuros"
-]
-},
-{
 "n": 227,
 "m": "C",
 "b": [
@@ -1423,6 +1369,61 @@
 "d": [
 "outro técnico ou científico",
 "outro privativo de saúde"
+]
+},
+{
+"n": 54,
+"m": "B",
+"t": "O servidor que não tiver falta injustificada no ano anterior faz jus ao abono de ponto de cinco dias, cujo gozo pode ser em dias intercalados.",
+"b": [
+"cinco dias",
+"pode ser em dias intercalados"
+],
+"d": [
+"dez dias",
+"só em dias consecutivos"
+]
+},
+{
+"n": 209,
+"m": "B",
+"t": "A sindicância patrimonial constitui-se de procedimento sigiloso com caráter exclusivamente investigativo.",
+"b": [
+"sigiloso",
+"exclusivamente investigativo"
+],
+"d": [
+"público",
+"punitivo",
+"disciplinar e sancionador"
+]
+},
+{
+"n": 16,
+"m": "B",
+"t": "O substituto de ocupante de cargo ou função de direção ou chefia deve assumir automaticamente o exercício do cargo nas ausências do titular, fazendo jus aos vencimentos pagos na proporção dos dias de efetiva substituição.",
+"b": [
+"automaticamente",
+"proporção dos dias de efetiva substituição"
+],
+"d": [
+"mediante nova nomeação",
+"integralidade do mês",
+"somente após portaria"
+]
+},
+{
+"n": 219,
+"m": "B",
+"t": "É vedado editar atos de nomeação, posse ou exercício com efeito retroativo.",
+"b": [
+"vedado",
+"efeito retroativo"
+],
+"d": [
+"facultado",
+"efeito ex nunc",
+"mero efeito declaratório"
 ]
 }
 ]

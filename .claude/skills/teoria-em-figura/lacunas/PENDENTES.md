@@ -1,24 +1,18 @@
-# Questões que ficaram sem lacuna (reprovadas em 2 rodadas pelo conferente) — decisão do usuário / revisão da resolução
+# Questões que ficaram sem lacuna (4.399 de 4.412 têm lacuna)
 
-- **IN 5/2017:** nº 64 (gabarito "em conferência"; ref cita Lei 14.133 e a regra v trata de nepotismo na IN).
-- **AFO (5):** nº 92 (publicidade × anualidade; distrator ambíguo), nº 191 (natureza do pedágio: taxa × receita de serviços, controvertida), nº 195 (art. 52 da Lei 4.320: lançamento de impostos diretos e demais rendas com vencimento determinado; regra v incompleta), nº 236 (art. 38 da Lei 4.320: anulação de despesa após o exercício; regra v conflita com o texto), nº 287 (MTO e órgão central de orçamento: regra v não confirmada pelo texto).
-- **LGPD/LAI (5):** nº 60 (frase sem antecedente; prazo × distrator), nº 101 (lacuna trivial; "controle social" também é diretriz do art. 3º), nº 117 (frase não corrige o erro do item sobre divulgação nominal; v não cobre), nº 141 (recurso sem contexto), nº 182 (art. 22 da LAI: segredo industrial também completaria).
-- **Análise de Dados e IA (2):** nº 89 (distrator 'bancos relacionais' também completa a frase), nº 178 (distrator 'Tabelas de Dados' também é recurso real).
-- **Constitucional (1):** nº 100 (frase sobre nascido no Brasil de pais estrangeiros, um a serviço do país: hipótese controvertida e não confirmada pela regra v).
-- **Contratos (2):** nº 33 (parentesco até 3º grau com sócios/administradores de contratados; frase sem referente), nº 138 (art. 100 da Lei 14.133: a regra v só nega o prazo de 30 dias úteis e não traz o prazo correto).
-- **Direito Civil (6):** nº 9 (LINDB art. 4º: analogia, costumes e princípios gerais), nº 39 (erro grosseiro e diligência média; gabarito em conferência), nº 47 (LINDB art. 17: os três bens em conjunto), nº 91 (art. 47 do CC e efeito perante terceiros; gabarito em conferência), nº 136 (usucapião × distratores sinônimos), nº 206 (culpa em sentido amplo × estrito).
-- **Lei 14.133 (4):** nº 27 (elementos do planejamento: frase cobre só um dos três), nº 117 (art. 71: revogação e indenização, regra v não é confirmada pela lei), nº 144 (art. 60: desempate e sorteio; frase imprecisa), nº 187 (prazos do art. 55 e contagem no dia útil seguinte do art. 183).
-- **Lei Orgânica do TCDF (1+):** nº 191 (eleição do Presidente e recondução: regra v ambígua); ver também os alertas sobre a idade do Conselheiro (65 × 70) em REVISAO_RESUMOS.md.
-- **LODF (5):** nº 61, 166, 168, 180, 203 (nº 166: o gabarito "sem aprovação da Câmara" contradiz o art. 60, XX, que prevê aprovação prévia da Câmara para o Procurador-Geral — decidir o gabarito).
-- **PDPM (5):** nº 16 (dado do Anuário sem fonte na ref), nº 31 (regra v fala em monitoração eletrônica, o x em afastamento do lar), nº 79 (distrator "também" completa), nº 151 (art. 20 da Lei 11.340 prevê a prisão preventiva de ofício; o gabarito ERRADO e a regra v contrariam o texto legal — decidir o gabarito), nº 169 (frase sem autonomia).
-- **Primeiros Socorros:** completa (100 de 100).
-- **Previdenciário (2):** nº 62 (limite da paridade: frase sem contexto), nº 130 (art. 40 §15 da CF: regra v diz "entidade fechada ou aberta", o texto vigente fala em entidade fechada de natureza pública — conferir a regra v e o gabarito).
-- **Regimento Interno (2):** nº 100 (sanções do TCDF: frase truncada/confusa), nº 154 (frase sem contexto do TCDF; distrator "órgãos de classe" também completa).
-- **RJU (5):** nº 16 (exercício cumulativo de cargos: frase não confirmada pela regra v; gabarito em conferência), nº 54 (lacunas redundantes), nº 199 (professor com outro cargo: regra v ("de qualquer natureza") contradiz o art. 37, XVI, "b", da CF — decidir regra e gabarito), nº 219 (efeito retroativo de atos: regra v restringe a nomeação, posse e exercício), mais 1 já listada acima.
-- **Conhecimentos do DF (3):** nº 30 (enunciado malformado), nº 53 (domínio fraturado do aquífero: não confirmado), nº 98; ver também os alertas sobre gabaritos "em conferência" (83, 114: "primordial" × "suplementar").
-- **Direito Tributário (2):** nº 72 (função extrafiscal/neutralidade do tributo; gabarito em conferência), nº 235.
-- **Administrativo geral (4):** nº 13 e 18 (professor com outro cargo: o gabarito da banca diz "de qualquer natureza", mas o art. 37, XVI, "b", da CF diz "técnico ou científico" — decidir o gabarito), nº 77, nº 488 (gabarito em conferência).
+Resolvidas na 3ª rodada (18/11/2026): as demais, com a frase escrita a partir do texto oficial da lei (js/*-texto.js) e conferida por conferente independente. Restam 13, todas por falta de fonte ou por a lacuna não conseguir testar o ponto do item:
 
-## Atualização (18/11/2026)
-- Resolvidas com lacuna (gabarito mantido, CF vigente: art. 37, XVI, "b", EC 138/2025; art. 40, § 15, EC 103/2019): Administrativo geral nº 13 e 18, RJU nº 199, Previdenciário nº 130.
-- PDPM nº 151 e LODF nº 166: lacuna criada com a frase literal/neutra do texto legal; o GABARITO NÃO FOI ALTERADO e a decisão continua em aberto (art. 20 da Lei 11.340 traz "de ofício"; art. 60, XX, da LODF exige aprovação prévia da Câmara).
+- **Administrativo geral nº 77:** Lei 8.987/1995 (corte de serviço por inadimplemento) não está no projeto; a frase não pôde ser conferida.
+- **Administrativo geral nº 488:** gabarito "em conferência"; a regra v só nega a associação, sem afirmar a dimensão correta.
+- **Análise de Dados e IA nº 89:** o distrator "dados semiestruturados" também completa a frase.
+- **Análise de Dados e IA nº 178:** sem fonte no projeto.
+- **Conhecimentos do DF nº 53 e 98:** sem dispositivo no projeto (ref vazia); só a regra v como fonte.
+- **Direito Civil nº 9:** LINDB art. 4º (analogia, costumes, princípios gerais); a lacuna não testa a classificação cobrada.
+- **Direito Civil nº 39 e 91:** gabarito "em conferência" (erro grosseiro / diligência média; art. 47 do CC e terceiros de boa-fé).
+- **Lei 14.133 nº 117:** a regra v fala em dever de indenizar na revogação, que o art. 71 não prevê.
+- **LODF nº 180:** o erro do item está no Conselho de Representantes Comunitários (art. 12 da LODF); a lacuna "ênfase" é trivial.
+- **PDPM nº 16 e 79:** sem dispositivo no projeto; só a regra v como fonte.
+
+## Gabaritos em conflito com o texto legal (decisão do usuário; gabaritos NÃO alterados)
+- **PDPM nº 151** (art. 20 da Lei 11.340 traz "de ofício") e **LODF nº 166** (art. 60, XX, exige aprovação prévia da Câmara): lacuna criada com a frase literal/neutra do texto legal.
+- Administrativo geral nº 13 e 18, RJU nº 199 e Previdenciário nº 130: sem conflito (CF vigente: EC 138/2025 e EC 103/2019); lacunas criadas.

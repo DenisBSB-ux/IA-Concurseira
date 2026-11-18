@@ -747,20 +747,6 @@
 ]
 },
 {
-"n": 168,
-"m": "B",
-"t": "Cabe ao Governador do Distrito Federal nomear e destituir o Defensor Público-Geral do Distrito Federal, na forma da lei.",
-"b": [
-"Governador do Distrito Federal",
-"nomear e destituir"
-],
-"d": [
-"Presidente da Câmara Legislativa",
-"Procurador-Geral do Distrito Federal",
-"apenas indicar"
-]
-},
-{
 "n": 173,
 "m": "B",
 "b": [
@@ -770,18 +756,6 @@
 "d": [
 "livre escolha do Governador",
 "quadro da Secretaria de Segurança"
-]
-},
-{
-"n": 180,
-"m": "B",
-"t": "A segurança pública do Distrito Federal tem por princípio a ênfase no policiamento comunitário.",
-"b": [
-"policiamento comunitário"
-],
-"d": [
-"policiamento ostensivo",
-"policiamento investigativo"
 ]
 },
 {
@@ -1002,18 +976,6 @@
 ]
 },
 {
-"n": 61,
-"m": "B",
-"t": "A remuneração dos Administradores Regionais não poderá ser superior à fixada para os Secretários de Estado do Distrito Federal.",
-"b": [
-"Secretários de Estado"
-],
-"d": [
-"Deputados Distritais",
-"Conselheiros do Tribunal de Contas"
-]
-},
-{
 "n": 87,
 "m": "B",
 "b": [
@@ -1094,20 +1056,6 @@
 ]
 },
 {
-"n": 203,
-"m": "B",
-"t": "A política de desenvolvimento rural assegura programas de habitação, educação, saúde e saneamento básico, de modo a garantir a permanência do homem no campo.",
-"b": [
-"habitação, educação, saúde e saneamento básico",
-"permanência do homem no campo"
-],
-"d": [
-"segurança pública e transporte urbano",
-"tributação e fiscalização",
-"êxodo rural"
-]
-},
-{
 "n": 204,
 "m": "B",
 "b": [
@@ -1149,6 +1097,62 @@
 "d": [
 "sabatinar por maioria absoluta",
 "nomeação definitiva"
+]
+},
+{
+"n": 168,
+"m": "B",
+"t": "Compete privativamente ao Governador nomear e destituir o Defensor Público-Geral do Distrito Federal, na forma da lei.",
+"b": [
+"nomear e destituir",
+"na forma da lei"
+],
+"d": [
+"somente indicar",
+"por maioria absoluta dos Deputados Distritais",
+"nos termos do regimento"
+]
+},
+{
+"n": 180,
+"m": "B",
+"t": "A segurança pública do Distrito Federal é exercida com base, entre outros princípios, na ênfase no policiamento comunitário.",
+"b": [
+"ênfase",
+"policiamento comunitário"
+],
+"d": [
+"exclusividade",
+"policiamento ostensivo",
+"patrulhamento federal"
+]
+},
+{
+"n": 61,
+"m": "B",
+"t": "A remuneração dos Administradores Regionais não poderá ser superior à fixada para os Secretários de Estado do Distrito Federal.",
+"b": [
+"não poderá ser superior",
+"Secretários de Estado"
+],
+"d": [
+"deverá ser o dobro",
+"Deputados Distritais",
+"Chefes de Gabinete"
+]
+},
+{
+"n": 203,
+"m": "B",
+"t": "A política de desenvolvimento rural do Distrito Federal assegura programas de habitação, educação, saúde e saneamento básico, de modo a garantir a permanência do homem no campo.",
+"b": [
+"habitação, educação, saúde e saneamento básico",
+"permanência do homem no campo"
+],
+"d": [
+"isenção tributária vitalícia",
+"monopólio público de grãos",
+"desapropriação sem indenização"
 ]
 }
 ]

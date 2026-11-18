@@ -194,19 +194,6 @@
 ]
 },
 {
-"n": 33,
-"m": "B",
-"t": "Além do parentesco até o terceiro grau com sócios ou administradores de contratados habituais, os vínculos técnicos, comerciais, econômicos, financeiros, trabalhistas e civis impedem a designação do fiscal ou gestor, sem exceção para o vínculo estritamente técnico, comercial ou civil.",
-"b": [
-"impedem a designação",
-"sem exceção"
-],
-"d": [
-"não impedem a designação",
-"com exceção"
-]
-},
-{
 "n": 35,
 "m": "B",
 "b": [
@@ -1448,19 +1435,6 @@
 ]
 },
 {
-"n": 138,
-"m": "B",
-"t": "A garantia prestada pelo contratado é liberada ou restituída após a fiel execução do contrato ou após a sua extinção por culpa exclusiva da Administração e, quando em dinheiro, é atualizada monetariamente.",
-"b": [
-"culpa exclusiva da Administração",
-"atualizada monetariamente"
-],
-"d": [
-"culpa do contratado",
-"atualizada pela taxa Selic"
-]
-},
-{
 "n": 144,
 "m": "B",
 "t": "A Súmula 251 do TCU trata da averbação de tempo para aposentadoria, matéria de pessoal, sem relação direta com sanções contratuais.",
@@ -1498,6 +1472,33 @@
 "tribunais de contas",
 "processo seletivo simplificado",
 "livre nomeação"
+]
+},
+{
+"n": 33,
+"m": "B",
+"t": "Nos termos do art. 12, III, do Decreto 44.330/2023, o agente público designado não pode ser cônjuge ou companheiro de licitantes ou contratados habituais, nem ter com eles vínculo de parentesco, colateral ou por afinidade, até o terceiro grau, ou de natureza técnica, comercial, econômica, financeira, trabalhista e civil.",
+"b": [
+"até o terceiro grau",
+"técnica, comercial, econômica, financeira, trabalhista e civil"
+],
+"d": [
+"até o segundo grau",
+"exclusivamente de parentesco"
+]
+},
+{
+"n": 138,
+"m": "B",
+"t": "Nos termos do art. 100 da Lei 14.133/2021, a garantia prestada pelo contratado será liberada ou restituída após a fiel execução do contrato ou após a sua extinção por culpa exclusiva da Administração e, quando em dinheiro, atualizada monetariamente.",
+"b": [
+"fiel execução do contrato",
+"culpa exclusiva da Administração",
+"atualizada monetariamente"
+],
+"d": [
+"culpa concorrente das partes",
+"sem atualização monetária"
 ]
 }
 ]

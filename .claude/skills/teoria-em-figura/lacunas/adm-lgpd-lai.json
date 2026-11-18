@@ -424,17 +424,6 @@
 ]
 },
 {
-"n": 60,
-"m": "B",
-"b": [
-"hipóteses de término do tratamento"
-],
-"d": [
-"prazo máximo de cinco anos",
-"término apenas por decurso de prazo"
-]
-},
-{
 "n": 64,
 "m": "A",
 "r": [
@@ -740,19 +729,6 @@
 ]
 },
 {
-"n": 101,
-"m": "C",
-"b": [
-"cultura de transparência",
-"uma das diretrizes"
-],
-"d": [
-"controle social",
-"sigilo como regra",
-"uma das exceções"
-]
-},
-{
 "n": 105,
 "m": "A",
 "r": [
@@ -857,21 +833,6 @@
 "d": [
 "todo o documento",
 "cópia integral"
-]
-},
-{
-"n": 117,
-"m": "B",
-"t": "As entidades privadas que recebem recursos públicos têm o dever de publicidade apenas quanto à parcela dos recursos públicos recebidos e à sua destinação, sem prejuízo das prestações de contas legais.",
-"b": [
-"parcela dos recursos públicos recebidos",
-"sua destinação",
-"prestações de contas legais"
-],
-"d": [
-"totalidade das receitas",
-"quantitativo de empregados",
-"sigilo fiscal"
 ]
 },
 {
@@ -1030,19 +991,6 @@
 "d": [
 "identificação e motivação",
 "a critério do órgão"
-]
-},
-{
-"n": 141,
-"m": "B",
-"t": "O recurso é dirigido à autoridade hierarquicamente superior à que exarou a decisão impugnada.",
-"b": [
-"autoridade hierarquicamente superior"
-],
-"d": [
-"autoridade responsável pela negativa",
-"autoridade máxima do órgão",
-"Controladoria-Geral"
 ]
 },
 {
@@ -1271,18 +1219,6 @@
 "permanente",
 "50 anos",
 "vedadas"
-]
-},
-{
-"n": 182,
-"m": "B",
-"b": [
-"outras hipóteses legais de sigilo",
-"não é exaustivo"
-],
-"d": [
-"apenas as hipóteses nela previstas",
-"é taxativo"
 ]
 },
 {
@@ -1553,6 +1489,79 @@
 "sigilo é a regra",
 "prazos indeterminados",
 "depende só do consentimento"
+]
+},
+{
+"n": 60,
+"m": "B",
+"t": "O término do tratamento de dados pessoais ocorrerá quando a finalidade for alcançada, ao fim do período de tratamento, por comunicação do titular ou por determinação da autoridade nacional, quando houver violação à Lei.",
+"b": [
+"finalidade for alcançada",
+"fim do período de tratamento",
+"autoridade nacional"
+],
+"d": [
+"prazo máximo de cinco anos",
+"Poder Judiciário",
+"controlador"
+]
+},
+{
+"n": 101,
+"m": "B",
+"t": "O fomento ao desenvolvimento da cultura de transparência na administração pública é uma das diretrizes dos procedimentos previstos na Lei de Acesso à Informação.",
+"b": [
+"cultura de transparência",
+"diretrizes"
+],
+"d": [
+"cultura de sigilo",
+"vedações",
+"controle hierárquico"
+]
+},
+{
+"n": 117,
+"m": "B",
+"t": "A publicidade a que se submetem as entidades privadas sem fins lucrativos que recebem recursos públicos refere-se à parcela dos recursos públicos recebidos e à sua destinação, sem prejuízo das prestações de contas a que estejam legalmente obrigadas.",
+"b": [
+"parcela dos recursos públicos recebidos",
+"sem fins lucrativos",
+"prestações de contas"
+],
+"d": [
+"totalidade do orçamento",
+"com fins lucrativos",
+"sigilo fiscal"
+]
+},
+{
+"n": 141,
+"m": "B",
+"t": "No caso de indeferimento de acesso a informações, o interessado poderá interpor recurso no prazo de 10 (dez) dias, dirigido à autoridade hierarquicamente superior à que exarou a decisão impugnada, que deverá se manifestar em 5 (cinco) dias.",
+"b": [
+"10 (dez) dias",
+"hierarquicamente superior",
+"5 (cinco) dias"
+],
+"d": [
+"15 (quinze) dias",
+"30 (trinta) dias",
+"responsável pela negativa"
+]
+},
+{
+"n": 182,
+"m": "B",
+"t": "O disposto na Lei de Acesso à Informação não exclui as demais hipóteses legais de sigilo e de segredo de justiça.",
+"b": [
+"não exclui",
+"segredo de justiça"
+],
+"d": [
+"substitui",
+"esgota",
+"segredo de Estado"
 ]
 }
 ]

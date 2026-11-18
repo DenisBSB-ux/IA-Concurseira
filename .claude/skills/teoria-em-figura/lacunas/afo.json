@@ -1659,19 +1659,6 @@
 ]
 },
 {
-"n": 191,
-"m": "B",
-"t": "A receita arrecadada pelo uso de rodovias mediante pedágio é classificada como receita de serviços.",
-"b": [
-"receita de serviços"
-],
-"d": [
-"receita de capital",
-"receita agropecuária",
-"receita industrial"
-]
-},
-{
 "n": 193,
 "m": "A",
 "r": [
@@ -1699,18 +1686,6 @@
 "d": [
 "emite empenho",
 "conta vinculada"
-]
-},
-{
-"n": 195,
-"m": "B",
-"t": "Só são objeto de lançamento as rendas com vencimento determinado em lei, regulamento ou contrato.",
-"b": [
-"com vencimento determinado"
-],
-"d": [
-"sem vencimento determinado",
-"com vencimento indeterminado"
 ]
 },
 {
@@ -2661,19 +2636,6 @@
 ]
 },
 {
-"n": 92,
-"m": "B",
-"t": "O atraso na votação da LOA não implica descumprimento dos princípios da publicidade e da transparência.",
-"b": [
-"não implica",
-"publicidade e da transparência"
-],
-"d": [
-"acarreta",
-"anualidade"
-]
-},
-{
 "n": 95,
 "m": "B",
 "t": "Se a LOA não for sancionada até o início do exercício, a execução não fica necessariamente paralisada: admite-se execução provisória, em geral autorizada pela LDO.",
@@ -2811,18 +2773,6 @@
 ]
 },
 {
-"n": 236,
-"m": "B",
-"t": "O cancelamento de restos a pagar não constitui nova receita orçamentária.",
-"b": [
-"não constitui nova receita orçamentária"
-],
-"d": [
-"constitui receita orçamentária do exercício",
-"constitui receita de capital"
-]
-},
-{
 "n": 257,
 "m": "B",
 "b": [
@@ -2872,19 +2822,6 @@
 ]
 },
 {
-"n": 287,
-"m": "C",
-"t": "O órgão central de orçamento estabelece normas e procedimentos para a elaboração dos orçamentos federais, detalhados no Manual Técnico de Orçamento (MTO).",
-"b": [
-"normas e procedimentos",
-"Manual Técnico de Orçamento (MTO)"
-],
-"d": [
-"metas fiscais",
-"Manual de Contabilidade"
-]
-},
-{
 "n": 289,
 "m": "C",
 "b": [
@@ -2895,6 +2832,71 @@
 "d": [
 "órgão setorial",
 "proposta consolidada"
+]
+},
+{
+"n": 191,
+"m": "B",
+"t": "Nos termos do art. 11, § 1º, da Lei 4.320/1964, são Receitas Correntes as receitas tributária, de contribuições, patrimonial, agropecuária, industrial, de serviços e outras.",
+"b": [
+"agropecuária, industrial, de serviços",
+"Receitas Correntes"
+],
+"d": [
+"patrimonial, de capital",
+"Receitas de Capital"
+]
+},
+{
+"n": 195,
+"m": "B",
+"t": "Nos termos do art. 52 da Lei 4.320/1964, são objeto de lançamento os impostos diretos e quaisquer outras rendas com vencimento determinado em lei, regulamento ou contrato.",
+"b": [
+"impostos diretos",
+"vencimento determinado"
+],
+"d": [
+"transferências voluntárias",
+"vencimento indeterminado"
+]
+},
+{
+"n": 92,
+"m": "B",
+"t": "Nos termos do art. 165, § 9º, I, da CF, cabe à lei complementar dispor sobre o exercício financeiro, a vigência, os prazos, a elaboração e a organização do plano plurianual, da LDO e da LOA.",
+"b": [
+"lei complementar",
+"exercício financeiro"
+],
+"d": [
+"lei ordinária",
+"decreto"
+]
+},
+{
+"n": 236,
+"m": "B",
+"t": "Nos termos do art. 38 da Lei 4.320/1964, reverte à dotação a importância de despesa anulada no exercício; quando a anulação ocorrer após o encerramento deste, considerar-se-á receita do ano em que se efetivar.",
+"b": [
+"reverte à dotação",
+"receita do ano em que se efetivar"
+],
+"d": [
+"constitui receita de capital",
+"receita do exercício anterior"
+]
+},
+{
+"n": 287,
+"m": "B",
+"t": "Nos termos do art. 8º, II, da Lei 10.180/2001, compete às unidades responsáveis pelas atividades de orçamento estabelecer normas e procedimentos necessários à elaboração e à implementação dos orçamentos federais, harmonizando-os com o plano plurianual.",
+"b": [
+"estabelecer normas e procedimentos",
+"plano plurianual"
+],
+"d": [
+"apenas executar os orçamentos",
+"lei de diretrizes orçamentárias"
 ]
 }
 ]

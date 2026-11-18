@@ -379,20 +379,6 @@
 ]
 },
 {
-"n": 77,
-"m": "B",
-"t": "A Lei 8.987/1995 veda o início da interrupção do serviço por inadimplemento na sexta-feira, ainda que haja prévio aviso.",
-"b": [
-"veda",
-"sexta-feira"
-],
-"d": [
-"autoriza",
-"quarta-feira",
-"terça-feira"
-]
-},
-{
 "n": 78,
 "m": "B",
 "b": [
@@ -3216,18 +3202,6 @@
 ]
 },
 {
-"n": 488,
-"m": "B",
-"t": "As variáveis referentes à mobilização e à alocação de recursos não estão atreladas à dimensão institucional.",
-"b": [
-"não estão atreladas"
-],
-"d": [
-"estão vinculadas",
-"são exclusivas"
-]
-},
-{
 "n": 13,
 "m": "B",
 "t": "A CF admite a acumulação remunerada de um cargo de professor com outro de qualquer natureza, desde que haja compatibilidade de horários e seja respeitado o teto constitucional.",
@@ -3251,6 +3225,33 @@
 "d": [
 "outro técnico ou científico",
 "dois cargos privativos de saúde"
+]
+},
+{
+"n": 77,
+"m": "B",
+"t": "A interrupção do serviço por inadimplemento do usuário, após prévio aviso, não poderá iniciar-se na sexta-feira, no sábado ou no domingo, nem em feriado nacional ou do ente federativo.",
+"b": [
+"não poderá iniciar-se",
+"sexta-feira, no sábado ou no domingo"
+],
+"d": [
+"poderá ser iniciada",
+"segunda-feira",
+"quarta-feira"
+]
+},
+{
+"n": 488,
+"m": "B",
+"t": "Na avaliação de nível técnico-setorial, as variáveis referentes à mobilização e à alocação de recursos não estão atreladas à dimensão institucional.",
+"b": [
+"não estão atreladas",
+"dimensão institucional"
+],
+"d": [
+"pertencem à dimensão de governança",
+"são indiferentes à dimensão institucional"
 ]
 }
 ]

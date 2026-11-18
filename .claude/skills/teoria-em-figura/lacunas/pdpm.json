@@ -58,19 +58,6 @@
 ]
 },
 {
-"n": 16,
-"m": "B",
-"t": "Segundo o Anuário Brasileiro de Segurança Pública, o DF registrou aumento de feminicídios, e não queda em todos os indicadores de violência contra as mulheres.",
-"b": [
-"aumento de feminicídios",
-"queda em todos os indicadores"
-],
-"d": [
-"redução de feminicídios",
-"queda apenas na importunação sexual"
-]
-},
-{
 "n": 17,
 "m": "C",
 "b": [
@@ -191,20 +178,6 @@
 "d": [
 "cria três níveis",
 "de modo taxativo"
-]
-},
-{
-"n": 31,
-"m": "B",
-"t": "O afastamento imediato do agressor do lar, em caso de risco atual ou iminente, é determinado pelo juiz ou, se o município não for sede de comarca, pelo delegado de polícia; não havendo delegado disponível no momento da denúncia, pelo policial.",
-"b": [
-"juiz",
-"delegado de polícia",
-"policial"
-],
-"d": [
-"Ministério Público",
-"oficial de justiça"
 ]
 },
 {
@@ -485,20 +458,6 @@
 "d": [
 "obrigação",
 "viaturas policiais"
-]
-},
-{
-"n": 79,
-"m": "B",
-"t": "O II PDPM-DF aplica-se exclusivamente ao território do Distrito Federal, não alcançando a RIDE nem o Entorno.",
-"b": [
-"exclusivamente ao território do Distrito Federal",
-"nem o Entorno"
-],
-"d": [
-"ao Distrito Federal e à RIDE",
-"também aos municípios lindeiros",
-"inclusive o Entorno"
 ]
 },
 {
@@ -1185,21 +1144,6 @@
 ]
 },
 {
-"n": 169,
-"m": "B",
-"t": "No atendimento policial, a mulher tem direito a atendimento especializado e ininterrupto, e deve-se evitar a revitimização, vedado o contato direto com o investigado.",
-"b": [
-"especializado e ininterrupto",
-"revitimização",
-"contato direto"
-],
-"d": [
-"escolta obrigatória",
-"contato intermediado por familiares",
-"atendimento facultativo"
-]
-},
-{
 "n": 191,
 "m": "B",
 "t": "A prisão preventiva do agressor, nos casos da Lei Maria da Penha, pode ser decretada pelo juiz, a requerimento do Ministério Público ou mediante representação da autoridade policial.",
@@ -1223,6 +1167,62 @@
 "d": [
 "Só na fase do processo",
 "requerimento do querelante"
+]
+},
+{
+"n": 16,
+"m": "B",
+"t": "O Anuário registrou aumento de feminicídios no DF (cerca de 31%), de modo que não houve redução em todos os indicadores de violência contra as mulheres.",
+"b": [
+"aumento de feminicídios",
+"cerca de 31%"
+],
+"d": [
+"queda de feminicídios",
+"cerca de 13%",
+"cerca de 21%"
+]
+},
+{
+"n": 31,
+"m": "B",
+"t": "Verificado risco atual ou iminente à vida ou à integridade da mulher, o agressor será imediatamente submetido à monitoração eletrônica pela autoridade judicial ou, quando o Município não for sede de comarca, pelo delegado de polícia.",
+"b": [
+"autoridade judicial",
+"delegado de polícia",
+"sede de comarca"
+],
+"d": [
+"policial militar",
+"promotor de justiça",
+"sede de tribunal"
+]
+},
+{
+"n": 79,
+"m": "B",
+"t": "O II PDPM-DF aplica-se exclusivamente ao território do Distrito Federal, não alcançando a RIDE nem o Entorno.",
+"b": [
+"exclusivamente",
+"não alcançando a RIDE"
+],
+"d": [
+"também",
+"abrangendo a RIDE"
+]
+},
+{
+"n": 169,
+"m": "B",
+"t": "É direito da mulher em situação de violência doméstica o atendimento policial e pericial especializado e ininterrupto, e a inquirição deve observar a não revitimização da depoente, evitando sucessivas inquirições sobre o mesmo fato nos âmbitos criminal, cível e administrativo.",
+"b": [
+"especializado e ininterrupto",
+"não revitimização"
+],
+"d": [
+"facultativo e eventual",
+"escolta policial obrigatória",
+"contato intermediado"
 ]
 }
 ]

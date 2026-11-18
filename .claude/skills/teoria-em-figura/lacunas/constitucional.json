@@ -433,20 +433,6 @@
 ]
 },
 {
-"n": 100,
-"m": "B",
-"t": "O filho de brasileiros nascido no exterior é brasileiro nato se os pais estavam a serviço do Brasil ou se for registrado em repartição brasileira competente; o nascido no Brasil de pais estrangeiros, um deles a serviço de seu país, não é brasileiro.",
-"b": [
-"a serviço do Brasil",
-"registrado em repartição brasileira"
-],
-"d": [
-"a serviço de outro país",
-"registrado em cartório estrangeiro",
-"residente no exterior"
-]
-},
-{
 "n": 108,
 "m": "B",
 "t": "Será declarada a perda da nacionalidade do brasileiro que fizer pedido expresso de perda perante autoridade brasileira competente, ressalvadas as situações que acarretem apatridia.",
@@ -1323,6 +1309,20 @@
 "por vencimentos",
 "parcelas variáveis",
 "permitida gratificação"
+]
+},
+{
+"n": 100,
+"m": "B",
+"t": "São brasileiros natos os nascidos no estrangeiro, de pai brasileiro ou mãe brasileira, desde que qualquer deles esteja a serviço da República Federativa do Brasil.",
+"b": [
+"pai brasileiro ou mãe brasileira",
+"a serviço da República Federativa do Brasil"
+],
+"d": [
+"a passeio no exterior",
+"pai ou mãe estrangeiros",
+"a serviço de organização privada"
 ]
 }
 ]

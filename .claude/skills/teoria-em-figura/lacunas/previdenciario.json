@@ -468,19 +468,6 @@
 ]
 },
 {
-"n": 62,
-"m": "B",
-"t": "A contribuição normal do patrocinador de entidade fechada de previdência complementar pública não pode superar a do participante, nem com justificativa atuarial.",
-"b": [
-"patrocinador",
-"não pode superar"
-],
-"d": [
-"instituidor",
-"poderá exceder"
-]
-},
-{
 "n": 63,
 "m": "B",
 "b": [
@@ -1823,6 +1810,21 @@
 "d": [
 "somente entidade fechada de natureza pública",
 "a própria autarquia previdenciária"
+]
+},
+{
+"n": 62,
+"m": "B",
+"t": "A contribuição normal do patrocinador para plano de benefícios, em hipótese alguma, excederá a do participante.",
+"b": [
+"em hipótese alguma",
+"patrocinador",
+"do participante"
+],
+"d": [
+"salvo cálculo atuarial",
+"ente federativo",
+"do assistido"
 ]
 }
 ]
