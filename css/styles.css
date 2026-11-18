@@ -2717,3 +2717,10 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 .tr-modal .tr-acoes .tr-bt, .tr-modal .tr-acoes .btn.tr-bt, .tr-modal .tr-acoes .tr-reset > button, .tr-modal .tr-refaz, .tr-modal .tr-fb .tr-refaz{ font-size:11px; }
 .tr-modal .tr-bt .tr-ic{ font-size:13px; }
 @media (max-width:480px){ .tr-modal .tr-acoes .tr-bt, .tr-modal .tr-acoes .btn.tr-bt, .tr-modal .tr-acoes .tr-reset > button, .tr-modal .tr-refaz{ font-size:10px; } .tr-modal .tr-bt .tr-ic{ font-size:12px; } }
+/* v609: filtros do treino (Total / Corretas / Erradas) com a mesma letra dos botões; certas em verde, erradas em vermelho */
+.tr-modal .tr-filtros button, .tr-modal .tr-cont{ font-size:11px; }
+@media (max-width:480px){ .tr-modal .tr-filtros button, .tr-modal .tr-cont{ font-size:10px; } }
+.tr-modal .tr-filtros button[data-tr-filtro="certas"], .tr-modal .tr-filtros button[data-tr-filtro="sei"]{ color:var(--m-ok); border-color:var(--m-ok-bd, var(--m-ok)); }
+.tr-modal .tr-filtros button[data-tr-filtro="erradas"], .tr-modal .tr-filtros button[data-tr-filtro="revisar"]{ color:var(--m-no); border-color:var(--m-no-bd, var(--m-no)); }
+.tr-modal .tr-filtros button[data-tr-filtro="certas"].on, .tr-modal .tr-filtros button[data-tr-filtro="sei"].on{ background:var(--m-ok-bg); box-shadow:0 0 0 2px var(--m-ok-bd, var(--m-ok)); }
+.tr-modal .tr-filtros button[data-tr-filtro="erradas"].on, .tr-modal .tr-filtros button[data-tr-filtro="revisar"].on{ background:var(--m-no-bg); box-shadow:0 0 0 2px var(--m-no-bd, var(--m-no)); }
