@@ -32,13 +32,14 @@
 {
 "n": 4,
 "m": "B",
+"t": "A Constituição afasta a incidência do ICMS nas operações interestaduais com petróleo, lubrificantes e combustíveis derivados.",
 "b": [
-"afasta a incidência do ICMS",
-"petróleo, lubrificantes e combustíveis derivados"
+"afasta a incidência",
+"operações interestaduais"
 ],
 "d": [
-"prevê a incidência do ICMS",
-"energia elétrica"
+"autoriza a incidência",
+"operações internas"
 ]
 },
 {
@@ -142,13 +143,15 @@
 {
 "n": 20,
 "m": "B",
+"t": "A progressividade é compatível também com tributos reais, como o IPTU.",
 "b": [
 "também com tributos reais",
 "IPTU"
 ],
 "d": [
-"somente com tributos pessoais",
-"ITR"
+"apenas com tributos pessoais",
+"IPVA",
+"ICMS"
 ]
 },
 {
@@ -244,13 +247,14 @@
 {
 "n": 34,
 "m": "B",
+"t": "Custas e taxa judiciária podem ser cobradas cumulativamente, sem configurar bis in idem.",
 "b": [
-"Custas e taxa judiciária",
-"cumulativamente"
+"cumulativamente",
+"bis in idem"
 ],
 "d": [
 "alternativamente",
-"bis in idem"
+"bitributação"
 ]
 },
 {
@@ -268,14 +272,14 @@
 {
 "n": 37,
 "m": "B",
-"t": "A Constituição não prevê exceção à desapropriação com títulos da dívida pública.",
+"t": "Na desapropriação com pagamento em títulos da dívida pública (art. 182, § 4º, III), não há exceção quando a dívida de IPTU supera o valor do imóvel.",
 "b": [
-"não prevê exceção",
+"não há exceção",
 "títulos da dívida pública"
 ],
 "d": [
-"admite exceção",
-"precatórios"
+"é admitida exceção",
+"dinheiro à vista"
 ]
 },
 {
@@ -299,13 +303,14 @@
 {
 "n": 40,
 "m": "B",
+"t": "A natureza jurídica específica do tributo é determinada pelo fato gerador, sendo irrelevante a destinação legal do produto da arrecadação.",
 "b": [
 "fato gerador",
-"destinação legal da arrecadação"
+"destinação legal do produto da arrecadação"
 ],
 "d": [
-"denominação adotada pela lei",
-"base de cálculo"
+"base de cálculo",
+"alíquota aplicada"
 ]
 },
 {
@@ -508,20 +513,16 @@
 },
 {
 "n": 97,
-"m": "A",
-"r": [
-[
-"É vedado cometimento",
-"Não é vedado o cometimento"
-]
-],
+"m": "B",
+"t": "Confiar a arrecadação de tributo a pessoa jurídica de direito privado, como os bancos, não é delegação de competência e é admitido.",
 "b": [
-"Não é vedado",
-"pessoa jurídica de direito privado"
+"pessoa jurídica de direito privado",
+"não é delegação de competência"
 ],
 "d": [
-"É proibido",
-"pessoa jurídica de direito público"
+"pessoa natural",
+"apenas pessoa jurídica de direito público",
+"constitui delegação de competência"
 ]
 },
 {
@@ -723,14 +724,15 @@
 },
 {
 "n": 124,
-"m": "C",
+"m": "B",
+"t": "Em determinada empresa optante pelo lucro real, para fins de apuração da base de cálculo do IRPJ e da contribuição social sobre o lucro líquido, há que se conhecer a composição das receitas e despesas para fins de cálculo do lucro tributável em função das adições e exclusões previstas na legislação ao lucro apurado contabilmente.",
 "b": [
-"lucro real",
-"adições e exclusões"
+"adições e exclusões",
+"lucro apurado contabilmente"
 ],
 "d": [
-"lucro presumido",
-"lucro arbitrado"
+"deduções e compensações",
+"lucro presumido"
 ]
 },
 {
@@ -833,33 +835,29 @@
 },
 {
 "n": 140,
-"m": "A",
-"r": [
-[
-"Assim como os impostos, as taxas deverão ser graduadas em conformidade com a capacidade econômica do contribuinte",
-"Somente os impostos deverão ser graduados em conformidade com a capacidade econômica do contribuinte"
-]
-],
+"m": "B",
+"t": "Somente os impostos deverão ser graduados em conformidade com a capacidade econômica do contribuinte.",
 "b": [
 "Somente os impostos",
 "capacidade econômica"
 ],
 "d": [
-"impostos e taxas",
-"capacidade contributiva"
+"Também as taxas",
+"custo do serviço",
+"benefício recebido"
 ]
 },
 {
 "n": 142,
 "m": "B",
-"t": "O Distrito Federal só pode instituir contribuição para o custeio do regime próprio de previdência de seus servidores.",
+"t": "O Distrito Federal não pode instituir contribuição social sobre o faturamento das empresas, que é de competência da União (PIS/COFINS).",
 "b": [
-"regime próprio de previdência",
-"seus servidores"
+"não pode",
+"competência da União"
 ],
 "d": [
-"seguridade social",
-"faturamento das empresas"
+"poderá",
+"competência dos municípios"
 ]
 },
 {
@@ -956,20 +954,15 @@
 },
 {
 "n": 151,
-"m": "A",
-"r": [
-[
-"Somente os municípios e o Distrito Federal poderão",
-"A União, os estados, o Distrito Federal e os municípios poderão"
-]
-],
+"m": "B",
+"t": "A União, os estados, o Distrito Federal e os municípios poderão instituir contribuição de melhoria em razão de obra pública que comporte valorização imobiliária.",
 "b": [
-"os estados",
-"valorização imobiliária"
+"A União, os estados, o Distrito Federal e os municípios",
+"obra pública"
 ],
 "d": [
-"somente os municípios",
-"valorização patrimonial"
+"Somente os municípios e o Distrito Federal",
+"serviço público"
 ]
 },
 {
@@ -987,14 +980,14 @@
 {
 "n": 157,
 "m": "B",
-"t": "A empresa vendedora não deve contribuição de intervenção no domínio econômico (CIDE) genérica.",
+"t": "Não existe CIDE genérica de 10% sobre a venda de mercadorias; a CIDE só é devida onde lei específica a instituiu.",
 "b": [
-"não deve",
-"genérica"
+"Não existe",
+"onde lei específica a instituiu"
 ],
 "d": [
-"deve sempre",
-"específica"
+"Incide",
+"em toda venda interestadual"
 ]
 },
 {
@@ -1151,20 +1144,15 @@
 },
 {
 "n": 174,
-"m": "A",
-"r": [
-[
-"exige apenas que conste, no estatuto dessas instituições, que sua natureza jurídica é sem fins lucrativos",
-"exige, além de constar no estatuto dessas instituições que sua natureza jurídica é sem fins lucrativos, o cumprimento dos requisitos legais"
-]
-],
+"m": "B",
+"t": "Para o gozo da imunidade, a CF exige não apenas que conste no estatuto a natureza sem fins lucrativos, mas também o cumprimento dos requisitos legais.",
 "b": [
-"além de constar no estatuto",
-"requisitos legais"
+"não apenas",
+"o cumprimento dos requisitos legais"
 ],
 "d": [
-"apenas",
-"somente o estatuto"
+"somente",
+"a dispensa dos requisitos legais"
 ]
 },
 {
@@ -1572,19 +1560,15 @@
 },
 {
 "n": 226,
-"m": "A",
-"r": [
-[
-"tendo em vista um potencial serviço público a ser prestado de forma divisível ao contribuinte",
-"tendo em vista o exercício efetivo do poder de polícia"
-]
-],
+"m": "B",
+"t": "A taxa de polícia é instituída em razão do exercício regular do poder de polícia, sem depender de serviço público potencial.",
 "b": [
-"exercício efetivo"
+"exercício regular",
+"sem depender de serviço público potencial"
 ],
 "d": [
-"potencial utilização",
-"serviço público específico"
+"exercício eventual",
+"dependendo de serviço público potencial"
 ]
 },
 {
@@ -1630,13 +1614,13 @@
 {
 "n": 235,
 "m": "B",
+"t": "A imunidade recíproca cobre só impostos, não alcançando taxas nem contribuições.",
 "b": [
-"só impostos",
-"imunidade recíproca"
+"só impostos"
 ],
 "d": [
-"taxas",
-"contribuições"
+"impostos e taxas",
+"impostos, taxas e contribuições"
 ]
 },
 {
@@ -1673,14 +1657,14 @@
 {
 "n": 238,
 "m": "B",
-"t": "O ente federado não possui imunidade recíproca quanto à contribuição de iluminação pública, que não é imposto.",
+"t": "O ente federado não possui imunidade recíproca quanto à contribuição, porque a imunidade alcança apenas impostos.",
 "b": [
-"não possui imunidade recíproca",
-"não é imposto"
+"não possui",
+"apenas impostos"
 ],
 "d": [
-"taxa",
-"empréstimo compulsório"
+"mantém",
+"também taxas e contribuições"
 ]
 },
 {
@@ -1737,20 +1721,15 @@
 },
 {
 "n": 251,
-"m": "A",
-"r": [
-[
-"isenção tributária recíproca",
-"imunidade tributária recíproca"
-]
-],
+"m": "B",
+"t": "Prédio de propriedade da União não pode ser tributado com IPTU por força do princípio da imunidade tributária recíproca, que se estende também às fundações instituídas e mantidas pelo poder público.",
 "b": [
 "imunidade tributária recíproca",
 "fundações"
 ],
 "d": [
-"isenção tributária",
-"autarquias"
+"isenção tributária recíproca",
+"empresas privadas"
 ]
 },
 {
@@ -1911,20 +1890,14 @@
 },
 {
 "n": 271,
-"m": "A",
-"r": [
-[
-"somente podem ser instituídas mediante lei complementar",
-"podem ser instituídas mediante lei ordinária"
-]
-],
+"m": "B",
+"t": "As contribuições de intervenção no domínio econômico e de interesse de categorias profissionais ou econômicas são instituídas por lei ordinária, não exigindo lei complementar.",
 "b": [
-"lei ordinária",
-"domínio econômico"
+"lei ordinária"
 ],
 "d": [
-"lei complementar",
-"medida provisória"
+"decreto",
+"resolução do Senado"
 ]
 },
 {
@@ -2013,38 +1986,27 @@
 },
 {
 "n": 282,
-"m": "A",
-"r": [
-[
-"não incide se a entidade religiosa for mera locatária do bem imóvel, aplicando-se apenas se for a proprietária registral do bem",
-"incide também quando a entidade religiosa for mera locatária do bem imóvel"
-]
-],
+"m": "B",
+"t": "A imunidade de IPTU sobre os templos alcança também a entidade religiosa que for mera locatária do imóvel.",
 "b": [
-"incide também",
-"mera locatária"
+"alcança também"
 ],
 "d": [
-"proprietária registral",
-"não incide"
+"não alcança",
+"alcança apenas"
 ]
 },
 {
 "n": 284,
-"m": "A",
-"r": [
-[
-"determinou a extinção do Imposto sobre a Transmissão de Bens Imóveis (ITBI) de competência municipal, integrando as transações imobiliárias sob o escopo de incidência única do IBS",
-"manteve o Imposto sobre a Transmissão de Bens Imóveis (ITBI) de competência municipal"
-]
-],
+"m": "B",
+"t": "A Reforma Tributária manteve o ITBI de competência municipal, substituindo, entre outros, o ICMS e o ISS pelo IBS.",
 "b": [
 "manteve",
-"ITBI"
+"ICMS e o ISS"
 ],
 "d": [
-"extinção",
-"IPTU"
+"extinguiu",
+"IPTU e o ITBI"
 ]
 },
 {
@@ -2092,15 +2054,10 @@
 },
 {
 "n": 292,
-"m": "A",
-"r": [
-[
-"será encaminhada de imediato ao Ministério Público, independentemente de a pessoa física ou jurídica ser excluída do parcelamento",
-"somente será encaminhada ao Ministério Público após a exclusão da pessoa física ou jurídica do parcelamento"
-]
-],
+"m": "B",
+"t": "Concedido o parcelamento do crédito tributário, a representação fiscal para fins penais somente será encaminhada ao Ministério Público após a exclusão da pessoa do parcelamento.",
 "b": [
-"representação fiscal para fins penais",
+"somente",
 "após a exclusão"
 ],
 "d": [
@@ -2172,13 +2129,14 @@
 {
 "n": 72,
 "m": "B",
+"t": "Um imposto incidente sobre o valor de um patrimônio não é neutro, pois pode ter caráter extrafiscal, como o IPTU.",
 "b": [
-"extrafiscal",
-"não são neutros"
+"não é neutro",
+"extrafiscal"
 ],
 "d": [
-"arrecadatório",
-"regressivos"
+"sempre é neutro",
+"regressivo"
 ]
 },
 {
@@ -2280,14 +2238,15 @@
 },
 {
 "n": 219,
-"m": "C",
+"m": "B",
+"t": "O princípio do não confisco alcança também as multas: multa de 300% sobre o valor da mercadoria, por falta de nota fiscal, pode ser considerada confiscatória.",
 "b": [
 "não confisco",
 "300%"
 ],
 "d": [
-"100%",
-"legalidade"
+"capacidade contributiva",
+"20%"
 ]
 },
 {
