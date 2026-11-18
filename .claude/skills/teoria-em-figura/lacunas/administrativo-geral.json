@@ -105,15 +105,15 @@
 {
 "n": 13,
 "m": "B",
+"t": "Admite-se a acumulação de um cargo de professor com outro técnico ou científico, havendo compatibilidade de horários e respeitado o teto.",
 "b": [
-"professor com outro de qualquer natureza",
-"compatibilidade de horários",
-"teto"
+"técnico ou científico",
+"compatibilidade de horários"
 ],
 "d": [
-"dois cargos técnicos",
-"qualquer carga horária",
-"limite de idade"
+"administrativo ou operacional",
+"dedicação exclusiva",
+"cargo em comissão"
 ]
 },
 {
@@ -132,38 +132,44 @@
 {
 "n": 15,
 "m": "B",
+"t": "O servidor público investido no mandato de prefeito é obrigatoriamente afastado do cargo, podendo apenas optar pela remuneração.",
 "b": [
 "obrigatoriamente afastado do cargo",
 "optar pela remuneração"
 ],
 "d": [
-"permanece no cargo",
-"acumular as remunerações"
+"mantido no cargo",
+"acumular as remunerações",
+"afastado sem remuneração"
 ]
 },
 {
 "n": 18,
 "m": "B",
+"t": "Pode haver acumulação de um cargo de professor com outro técnico ou científico, desde que haja compatibilidade de horários.",
 "b": [
-"professor com outro de qualquer natureza",
+"técnico ou científico",
 "compatibilidade de horários"
 ],
 "d": [
-"outro cargo técnico apenas",
-"qualquer carga horária"
+"administrativo ou operacional",
+"dedicação exclusiva",
+"cargo em comissão"
 ]
 },
 {
 "n": 20,
 "m": "B",
+"t": "O controle judicial do PAD limita-se à regularidade do procedimento e à legalidade do ato, sem incursão no mérito administrativo, salvo sanção manifestamente desproporcional.",
 "b": [
 "regularidade do procedimento",
-"salvo flagrante ilegalidade",
-"manifestamente desproporcional"
+"mérito administrativo",
+"sanção manifestamente desproporcional"
 ],
 "d": [
-"conveniência da sanção",
-"exceto prazo prescricional"
+"quórum da comissão",
+"prazo prescricional",
+"sanção prevista em lei"
 ]
 },
 {
@@ -182,14 +188,15 @@
 {
 "n": 26,
 "m": "B",
-"t": "O controle de legalidade incide sobre a conformidade do ato com a lei e é exercido, em regra, pela própria administração pública por meio da anulação.",
+"t": "O controle de legalidade não incide sobre a oportunidade e a conveniência do ato, e a administração o exerce por meio da anulação, nos termos do art. 53 da Lei 9.784.",
 "b": [
-"conformidade do ato com a lei",
+"oportunidade e a conveniência",
 "anulação"
 ],
 "d": [
-"oportunidade e conveniência",
-"revogação"
+"competência do agente",
+"revogação",
+"convalidação"
 ]
 },
 {
@@ -282,12 +289,12 @@
 "t": "A presença de símbolo religioso em prédio público, com finalidade de manifestação da tradição cultural da sociedade brasileira, não viola o princípio da impessoalidade administrativa.",
 "b": [
 "não viola",
-"impessoalidade"
+"tradição cultural"
 ],
 "d": [
-"ofende",
-"laicidade",
-"moralidade"
+"afronta",
+"propaganda religiosa",
+"proselitismo político"
 ]
 },
 {
@@ -388,28 +395,29 @@
 {
 "n": 75,
 "m": "B",
-"t": "Segundo a classificação de Hely Lopes Meirelles, serviços uti singuli são os prestados a usuários determinados, com utilização individualmente mensurável, remunerados mediante taxa ou tarifa, enquanto os uti universi são indivisíveis, prestados à coletividade indistintamente e custeados pela receita geral de impostos.",
+"t": "Os serviços uti singuli são prestados a usuários determinados e remunerados mediante taxa ou tarifa, enquanto os serviços indivisíveis, prestados à coletividade indistintamente, são custeados pela receita geral de impostos.",
 "b": [
 "uti singuli",
-"uti universi"
+"receita geral de impostos"
 ],
 "d": [
+"uti universi",
 "uti civis",
-"uti cives"
+"contribuição de melhoria"
 ]
 },
 {
 "n": 77,
 "m": "B",
-"t": "O inadimplemento e o prévio aviso não autorizam que a interrupção do serviço seja iniciada em sexta-feira, dia vedado pela lei.",
+"t": "A Lei 8.987/1995 veda o início da interrupção do serviço por inadimplemento na sexta-feira, ainda que haja prévio aviso.",
 "b": [
-"não autorizam",
+"veda",
 "sexta-feira"
 ],
 "d": [
-"dispensam qualquer aviso",
-"segunda-feira",
-"feriado"
+"autoriza",
+"quarta-feira",
+"terça-feira"
 ]
 },
 {
@@ -531,13 +539,14 @@
 {
 "n": 96,
 "m": "B",
+"t": "O débito fixado por Tribunal de Contas não torna imprescritível a pretensão de ressarcimento ao erário, que continua sujeita à prescrição.",
 "b": [
-"não torna imprescritível",
-"se sujeita à prescrição"
+"não torna imprescritível"
 ],
 "d": [
-"é imprescritível por natureza",
-"afasta a prescrição"
+"torna perpétua",
+"extingue",
+"converte em imprescritível"
 ]
 },
 {
@@ -688,8 +697,7 @@
 "m": "B",
 "t": "A licença é ato administrativo vinculado que reconhece o direito do particular ao exercício de determinada atividade.",
 "b": [
-"vinculado",
-"reconhece o direito do particular"
+"vinculado"
 ],
 "d": [
 "discricionário",
@@ -739,10 +747,9 @@
 {
 "n": 136,
 "m": "B",
-"t": "O Poder Judiciário pode anular atos administrativos discricionários quando constatar que a decisão administrativa violou os princípios da razoabilidade e da proporcionalidade.",
+"t": "O Poder Judiciário pode anular atos administrativos discricionários quando constatar que a decisão violou os princípios da razoabilidade e da proporcionalidade.",
 "b": [
-"anular",
-"violou os princípios da razoabilidade"
+"anular"
 ],
 "d": [
 "revogar",
@@ -847,12 +854,11 @@
 "m": "B",
 "t": "O servidor em estágio probatório só pode ser exonerado ou demitido mediante apuração com ampla defesa e demais formalidades legais.",
 "b": [
-"mediante apuração com ampla defesa",
-"formalidades legais"
+"apuração com ampla defesa"
 ],
 "d": [
-"sem necessidade de inquérito",
-"por simples despacho"
+"ato discricionário imotivado",
+"simples conveniência administrativa"
 ]
 },
 {
@@ -1369,15 +1375,15 @@
 {
 "n": 244,
 "m": "B",
+"t": "A generalidade do serviço público exige atender a todos sem discriminação, vedando selecionar usuários por renda ou afinidade política.",
 "b": [
-"V, V, F, V",
 "sem discriminação",
 "renda ou afinidade política"
 ],
 "d": [
-"V, F, V, F",
-"com critério de renda",
-"apenas parte dos usuários"
+"mediante prévia triagem",
+"com preferência a quem paga",
+"ordem de chegada"
 ]
 },
 {
@@ -1527,15 +1533,15 @@
 {
 "n": 267,
 "m": "B",
+"t": "O IBGE é fundação pública federal, entidade com personalidade própria integrante da administração indireta.",
 "b": [
 "fundação pública federal",
-"personalidade própria",
-"órgãos"
+"administração indireta"
 ],
 "d": [
-"autarquia federal",
+"órgão público",
 "administração direta",
-"empresas públicas"
+"empresa estatal"
 ]
 },
 {
@@ -1853,15 +1859,15 @@
 {
 "n": 309,
 "m": "B",
+"t": "Os processos organizacionais são apenas em parte estruturados e previsíveis, conforme o nível de complexidade e o ambiente decisório.",
 "b": [
-"não estruturados",
-"adaptativos",
-"ambientes complexos"
+"em parte",
+"conforme o nível de complexidade"
 ],
 "d": [
-"totalmente previsíveis",
-"rotineiros",
-"ambientes estáveis"
+"integralmente",
+"independentemente do nível de complexidade",
+"sempre"
 ]
 },
 {
@@ -2108,15 +2114,15 @@
 {
 "n": 332,
 "m": "B",
+"t": "O modelo gerencial enfatiza resultados, mas mantém os princípios da legalidade e da impessoalidade e os controles formais sobre a atuação estatal.",
 "b": [
-"sem eliminar",
-"legalidade e impessoalidade",
-"controles formais"
+"mantém",
+"legalidade e da impessoalidade"
 ],
 "d": [
-"eliminando",
-"eficiência e economicidade",
-"controles informais"
+"elimina",
+"ineficiência e informalidade",
+"dispensa"
 ]
 },
 {
@@ -2358,14 +2364,16 @@
 },
 {
 "n": 366,
-"m": "C",
+"m": "B",
+"t": "Quanto maior a amplitude de controle, menos níveis hierárquicos e estrutura mais achatada; amplitude menor gera mais níveis e pirâmide alta.",
 "b": [
-"inversamente",
-"menor número de níveis"
+"menos níveis hierárquicos",
+"mais achatada"
 ],
 "d": [
-"diretamente",
-"maior número de níveis"
+"mais níveis hierárquicos",
+"mais alta",
+"mais verticalizada"
 ]
 },
 {
@@ -3062,31 +3070,29 @@
 {
 "n": 152,
 "m": "B",
-"t": "Efetividade é atributo do cargo, estabilidade é garantia do servidor e vitaliciedade é garantia própria de certas carreiras; os quatro itens estão certos.",
+"t": "Efetividade é atributo do cargo, estabilidade é garantia do servidor e vitaliciedade é garantia própria de certas carreiras, como a dos ministros e conselheiros dos tribunais de contas.",
 "b": [
 "atributo do cargo",
-"garantia do servidor",
-"os quatro itens estão certos"
+"garantia do servidor"
 ],
 "d": [
 "atributo do servidor",
 "garantia do cargo",
-"apenas dois itens estão certos"
+"garantia da carreira"
 ]
 },
 {
 "n": 242,
 "m": "B",
-"t": "Os quatro itens são princípios do serviço público: continuidade, modicidade tarifária, universalidade e eficiência na prestação.",
+"t": "Continuidade, modicidade tarifária, universalidade e eficiência são princípios do regime jurídico do serviço público.",
 "b": [
-"Os quatro itens",
 "modicidade tarifária",
 "universalidade"
 ],
 "d": [
-"Apenas três itens",
-"modicidade fiscal",
-"especialidade"
+"lucratividade",
+"sigilo",
+"livre concorrência"
 ]
 },
 {
@@ -3174,14 +3180,15 @@
 {
 "n": 372,
 "m": "B",
-"t": "Definição e princípios estão certos, mas o sistema de gestão de riscos deve ser sistemático, estruturado e oportuno, e não assistemático.",
+"t": "A alta administração deve manter sistema de gestão de riscos e controles internos de forma sistemática, estruturada e oportuna, nos termos do art. 17 do Decreto 9.203/2017.",
 "b": [
-"sistemático, estruturado e oportuno",
-"assistemático"
+"sistemática, estruturada e oportuna",
+"art. 17"
 ],
 "d": [
-"facultativo e informal",
-"eventual"
+"eventual e informal",
+"assistemática e pontual",
+"art. 3º"
 ]
 },
 {
@@ -3239,14 +3246,13 @@
 {
 "n": 488,
 "m": "B",
-"t": "Na avaliação de nível técnico-setorial, as variáveis referentes à mobilização e à alocação de recursos não estão atreladas à dimensão institucional.",
+"t": "As variáveis referentes à mobilização e à alocação de recursos não estão atreladas à dimensão institucional.",
 "b": [
-"não estão atreladas",
-"dimensão institucional"
+"não estão atreladas"
 ],
 "d": [
-"estão sempre vinculadas",
-"dimensão de governança"
+"estão vinculadas",
+"são exclusivas"
 ]
 }
 ]
