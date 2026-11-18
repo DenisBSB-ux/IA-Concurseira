@@ -2724,3 +2724,6 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 .tr-modal .tr-filtros button[data-tr-filtro="erradas"], .tr-modal .tr-filtros button[data-tr-filtro="revisar"]{ color:var(--m-no); border-color:var(--m-no-bd, var(--m-no)); }
 .tr-modal .tr-filtros button[data-tr-filtro="certas"].on, .tr-modal .tr-filtros button[data-tr-filtro="sei"].on{ background:var(--m-ok-bg); box-shadow:0 0 0 2px var(--m-ok-bd, var(--m-ok)); }
 .tr-modal .tr-filtros button[data-tr-filtro="erradas"].on, .tr-modal .tr-filtros button[data-tr-filtro="revisar"].on{ background:var(--m-no-bg); box-shadow:0 0 0 2px var(--m-no-bd, var(--m-no)); }
+/* v610: palavras do banco (chips) com a mesma letra dos botões */
+.tr-modal .tr-chip{ font-size:11px; padding:6px 14px; }
+@media (max-width:480px){ .tr-modal .tr-chip{ font-size:10px; padding:6px 12px; } }
