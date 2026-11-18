@@ -1327,20 +1327,6 @@
 ]
 },
 {
-"n": 199,
-"m": "B",
-"t": "A acumulação remunerada de cargos públicos é permitida, havendo compatibilidade de horários, para o professor com outro cargo técnico ou científico.",
-"b": [
-"técnico ou científico",
-"compatibilidade de horários"
-],
-"d": [
-"de qualquer natureza",
-"administrativo",
-"autorização do chefe"
-]
-},
-{
 "n": 214,
 "m": "C",
 "b": [
@@ -1424,6 +1410,19 @@
 "d": [
 "servidor aposentado",
 "servidor temporário"
+]
+},
+{
+"n": 199,
+"m": "B",
+"t": "Desde que haja compatibilidade de horários, é possível acumular um cargo de professor com outro de qualquer natureza.",
+"b": [
+"outro de qualquer natureza",
+"compatibilidade de horários"
+],
+"d": [
+"outro técnico ou científico",
+"outro privativo de saúde"
 ]
 }
 ]

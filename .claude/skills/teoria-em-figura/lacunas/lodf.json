@@ -1038,19 +1038,6 @@
 ]
 },
 {
-"n": 166,
-"m": "B",
-"t": "Compete à Câmara Legislativa aprovar previamente a indicação ou destituição do Procurador-Geral do Distrito Federal.",
-"b": [
-"aprovar previamente",
-"indicação ou destituição"
-],
-"d": [
-"homologar posteriormente",
-"designação ou promoção"
-]
-},
-{
 "n": 188,
 "m": "B",
 "b": [
@@ -1149,6 +1136,19 @@
 "d": [
 "lei de diretrizes orçamentárias",
 "plano plurianual"
+]
+},
+{
+"n": 166,
+"m": "B",
+"t": "Compete à Câmara Legislativa aprovar previamente a indicação ou destituição do Procurador-Geral do Distrito Federal.",
+"b": [
+"aprovar previamente",
+"indicação ou destituição"
+],
+"d": [
+"sabatinar por maioria absoluta",
+"nomeação definitiva"
 ]
 }
 ]

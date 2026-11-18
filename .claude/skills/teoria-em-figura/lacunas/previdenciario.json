@@ -953,20 +953,6 @@
 ]
 },
 {
-"n": 130,
-"m": "B",
-"t": "A previdência complementar dos servidores efetivos é efetivada por intermédio de entidade fechada de previdência complementar, de natureza pública.",
-"b": [
-"entidade fechada",
-"natureza pública"
-],
-"d": [
-"entidade aberta",
-"natureza privada",
-"regime próprio de previdência"
-]
-},
-{
 "n": 134,
 "m": "B",
 "b": [
@@ -1824,6 +1810,19 @@
 "servidores comissionados",
 "municípios de todo o país",
 "militares"
+]
+},
+{
+"n": 130,
+"m": "B",
+"t": "A previdência complementar do servidor é efetivada por entidade fechada ou aberta de previdência complementar, e não por entidade criada pelo regime próprio.",
+"b": [
+"entidade fechada ou aberta",
+"criada pelo regime próprio"
+],
+"d": [
+"somente entidade fechada de natureza pública",
+"a própria autarquia previdenciária"
 ]
 }
 ]

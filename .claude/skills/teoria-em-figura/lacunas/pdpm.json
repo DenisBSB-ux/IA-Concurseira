@@ -872,20 +872,6 @@
 ]
 },
 {
-"n": 151,
-"m": "B",
-"t": "A prisão preventiva do agressor pode ser decretada pelo juiz, de ofício, a requerimento do Ministério Público ou por representação da autoridade policial.",
-"b": [
-"de ofício",
-"Ministério Público",
-"autoridade policial"
-],
-"d": [
-"Defensoria Pública",
-"ofendida"
-]
-},
-{
 "n": 152,
 "m": "B",
 "b": [
@@ -1114,26 +1100,6 @@
 ]
 },
 {
-"n": 191,
-"m": "A",
-"r": [
-[
-"somente pode ser decretada mediante representação do Ministério Público, sendo vedado ao juiz decretá-la de ofício",
-"pode ser decretada pelo juiz, a requerimento do Ministério Público ou por representação da autoridade policial"
-]
-],
-"b": [
-"pelo juiz",
-"a requerimento do Ministério Público",
-"representação da autoridade policial"
-],
-"d": [
-"pelo delegado",
-"de ofício apenas",
-"por requerimento da vítima"
-]
-},
-{
 "n": 192,
 "m": "C",
 "b": [
@@ -1231,6 +1197,32 @@
 "escolta obrigatória",
 "contato intermediado por familiares",
 "atendimento facultativo"
+]
+},
+{
+"n": 191,
+"m": "B",
+"t": "A prisão preventiva do agressor, nos casos da Lei Maria da Penha, pode ser decretada pelo juiz, a requerimento do Ministério Público ou mediante representação da autoridade policial.",
+"b": [
+"a requerimento do Ministério Público",
+"representação da autoridade policial"
+],
+"d": [
+"requerimento do querelante",
+"representação da vítima"
+]
+},
+{
+"n": 151,
+"m": "B",
+"t": "Em qualquer fase do inquérito policial ou da instrução criminal, caberá a prisão preventiva do agressor, decretada pelo juiz, a requerimento do Ministério Público ou mediante representação da autoridade policial.",
+"b": [
+"Em qualquer fase",
+"a requerimento do Ministério Público"
+],
+"d": [
+"Só na fase do processo",
+"requerimento do querelante"
 ]
 }
 ]
