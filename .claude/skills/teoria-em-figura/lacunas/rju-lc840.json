@@ -304,13 +304,14 @@
 {
 "n": 54,
 "m": "B",
+"t": "O abono de ponto pode ser gozado de forma intercalada, sendo permitido o fracionamento do período de cinco dias.",
 "b": [
-"dias intercalados",
-"a vedação não existe"
+"intercalada",
+"permitido o fracionamento"
 ],
 "d": [
-"dias consecutivos",
-"a vedação é expressa"
+"consecutiva",
+"vedado o fracionamento"
 ]
 },
 {
@@ -479,13 +480,14 @@
 {
 "n": 93,
 "m": "B",
+"t": "Contam como efetivo exercício as férias e a licença médica.",
 "b": [
-"férias e a licença médica",
-"não constam da lista"
+"férias",
+"licença médica"
 ],
 "d": [
-"férias e a licença maternidade",
-"são computadas em dobro"
+"licença sem remuneração",
+"suspensão disciplinar"
 ]
 },
 {
@@ -528,13 +530,14 @@
 {
 "n": 107,
 "m": "B",
+"t": "A licença por motivo de doença em pessoa da família é concedida sem prejuízo da remuneração por até cento e oitenta dias no ano; excedido o prazo, é sem remuneração.",
 "b": [
 "cento e oitenta dias",
-"só além disso"
+"sem remuneração"
 ],
 "d": [
-"sessenta dias",
-"cento e vinte dias"
+"noventa dias",
+"com remuneração reduzida"
 ]
 },
 {
@@ -728,65 +731,61 @@
 {
 "n": 156,
 "m": "B",
+"t": "Recusar-se, sem justificativa, a integrar comissão é infração leve.",
 "b": [
-"sem justificativa",
-"infração leve"
+"leve"
 ],
 "d": [
-"infração grave",
-"infração média"
+"média",
+"grave"
 ]
 },
 {
 "n": 157,
 "m": "B",
+"t": "A reincidência em infração leve sujeita a suspensão de até trinta dias, não a demissão.",
 "b": [
-"suspensão de até trinta dias",
-"demissão"
+"suspensão de até trinta dias"
 ],
 "d": [
 "suspensão de até noventa dias",
-"advertência",
-"destituição"
+"cassação de aposentadoria"
 ]
 },
 {
 "n": 161,
 "m": "B",
 "b": [
-"menor gravidade",
-"absorvida"
+"menor gravidade"
 ],
 "d": [
-"média gravidade",
-"somada",
-"cumulativa"
+"igual gravidade",
+"mesma natureza"
 ]
 },
 {
 "n": 162,
 "m": "B",
+"t": "O servidor responde civil, penal e administrativamente pelos atos praticados no exercício da função, inclusive os omissivos.",
 "b": [
-"penalmente",
-"sem exclusão dos omissivos"
+"penal",
+"inclusive os omissivos"
 ],
 "d": [
-"civilmente",
-"somente por atos comissivos",
-"apenas administrativamente"
+"eleitoral",
+"exceto os omissivos"
 ]
 },
 {
 "n": 163,
 "m": "B",
 "b": [
-"suspensão",
+"advertência",
 "destituição de cargo em comissão"
 ],
 "d": [
 "multa",
-"cassação de aposentadoria",
-"remoção compulsória"
+"rebaixamento de cargo"
 ]
 },
 {
@@ -915,14 +914,14 @@
 {
 "n": 180,
 "m": "B",
+"t": "O processo administrativo disciplinar para apurar infração punível com demissão deve ser concluído em até sessenta dias, prorrogáveis por igual período.",
 "b": [
-"até sessenta dias",
-"prorrogável por igual período"
+"sessenta dias",
+"prorrogáveis por igual período"
 ],
 "d": [
-"até trinta dias",
 "noventa dias",
-"vedada a prorrogação"
+"improrrogáveis"
 ]
 },
 {
@@ -986,14 +985,13 @@
 {
 "n": 207,
 "m": "B",
+"t": "Além da sentença transitada em julgado e do processo administrativo, o servidor estável perde o cargo mediante procedimento de avaliação periódica de desempenho, assegurada ampla defesa.",
 "b": [
-"avaliação periódica de desempenho",
-"perda do cargo"
+"avaliação periódica de desempenho"
 ],
 "d": [
 "estágio probatório",
-"pedido de exoneração",
-"processo de sindicância"
+"avaliação especial de desempenho"
 ]
 },
 {
@@ -1026,13 +1024,8 @@
 },
 {
 "n": 213,
-"m": "A",
-"r": [
-[
-"aplicar de imediato a pena de demissão por escrito, em razão da gravidade da conduta",
-"elaborar relatório concluindo pelo arquivamento ou pela instauração de processo disciplinar"
-]
-],
+"m": "B",
+"t": "Concluída a sindicância patrimonial, a comissão deverá elaborar relatório concluindo pelo arquivamento ou pela instauração de processo disciplinar.",
 "b": [
 "elaborar relatório",
 "arquivamento",
@@ -1040,8 +1033,8 @@
 ],
 "d": [
 "aplicar a pena de demissão",
-"remeter ao Governador",
-"suspensão preventiva"
+"sobrestamento",
+"tomada de contas especial"
 ]
 },
 {
@@ -1104,14 +1097,14 @@
 {
 "n": 225,
 "m": "B",
+"t": "A readaptação decorre de redução da capacidade laboral comprovada em inspeção médica, não de gestação ou lactação.",
 "b": [
 "redução da capacidade laboral",
-"gestação ou lactação"
+"inspeção médica"
 ],
 "d": [
-"falta de assiduidade",
-"necessidade do serviço",
-"doença grave"
+"aumento da capacidade laboral",
+"avaliação de desempenho"
 ]
 },
 {
@@ -1174,14 +1167,15 @@
 {
 "n": 16,
 "m": "B",
+"t": "O substituto exerce cumulativamente as atribuições do cargo de que é titular com as do cargo ou função do substituído, sem prejuízo da remuneração a que fizer jus pela substituição.",
 "b": [
-"assume automaticamente",
-"proporcionais aos dias de substituição"
+"cumulativamente",
+"remuneração"
 ],
 "d": [
-"assume mediante nova nomeação",
-"vencimentos integrais do mês",
-"assume facultativamente"
+"alternadamente",
+"exclusivamente",
+"aposentadoria"
 ]
 },
 {
@@ -1335,14 +1329,15 @@
 {
 "n": 199,
 "m": "B",
+"t": "A acumulação remunerada de cargos públicos é permitida, havendo compatibilidade de horários, para o professor com outro cargo técnico ou científico.",
 "b": [
-"professor",
-"qualquer natureza"
+"técnico ou científico",
+"compatibilidade de horários"
 ],
 "d": [
-"médico",
-"natureza técnica",
-"dois cargos privativos"
+"de qualquer natureza",
+"administrativo",
+"autorização do chefe"
 ]
 },
 {
@@ -1360,21 +1355,15 @@
 },
 {
 "n": 219,
-"m": "A",
-"r": [
-[
-"poderá editar",
-"não poderá editar"
-]
-],
+"m": "B",
+"t": "A chefia imediata não poderá editar ato de designação de substituição com efeitos retroativos, mesmo por força maior.",
 "b": [
 "não poderá editar",
-"força maior"
+"efeitos retroativos"
 ],
 "d": [
 "deverá editar",
-"está autorizada a editar",
-"caso fortuito"
+"efeitos futuros"
 ]
 },
 {
@@ -1428,13 +1417,13 @@
 {
 "n": 241,
 "m": "B",
+"t": "O art. 100 prevê a gratificação por encargo de curso ou concurso ao servidor estável em atividade que atua em caráter eventual.",
 "b": [
-"servidor estável",
-"o aposentado não está previsto"
+"servidor estável em atividade"
 ],
 "d": [
 "servidor aposentado",
-"qualquer servidor público"
+"servidor temporário"
 ]
 }
 ]
