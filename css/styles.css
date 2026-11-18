@@ -2727,3 +2727,15 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 /* v610: palavras do banco (chips) com a mesma letra dos botões */
 .tr-modal .tr-chip{ font-size:11px; padding:6px 14px; }
 @media (max-width:480px){ .tr-modal .tr-chip{ font-size:10px; padding:6px 12px; } }
+
+/* v613: modo foco (limpo): só a questão, o banco de palavras e os botões essenciais */
+.tr-modal .tr-foco-bt{ min-width:44px; min-height:44px; border-radius:13px; border:1px solid var(--m-bd); background:var(--m-soft); color:var(--m-ink); font-size:18px; cursor:pointer; }
+.tr-modal .tr-foco-bt.on{ background:var(--m-acc); color:#1b1608; border-color:var(--m-acc); }
+.tr-modal.tr-foco .tr-sub, .tr-modal.tr-foco .tr-zoom, .tr-modal.tr-foco .tr-full, .tr-modal.tr-foco .tr-tema,
+.tr-modal.tr-foco .tr-filtros > button, .tr-modal.tr-foco .tr-status, .tr-modal.tr-foco .tr-tent, .tr-modal.tr-foco .tr-info, .tr-modal.tr-foco .tr-dica, .tr-modal.tr-foco .tr-tag,
+.tr-modal.tr-foco .tr-acoes [data-tr-embaralhar], .tr-modal.tr-foco .tr-acoes [data-tr-resetar], .tr-modal.tr-foco .tr-acoes .tr-reset, .tr-modal.tr-foco .tr-acoes .tr-last{ display:none !important; }
+.tr-modal.tr-foco .tr-topo h2{ font-size:15px; margin:0; opacity:.75; }
+.tr-modal.tr-foco .tr-filtros{ margin:0 0 4px; justify-content:center; }
+.tr-modal.tr-foco .tr-cont{ border:0; min-height:0; padding:0; background:none; }
+.tr-modal.tr-foco .tr-ferr{ gap:8px; }
+.tr-modal.tr-foco .tr-card{ border-width:1px; }

@@ -66,6 +66,10 @@ function treinoUidDe(mat, n, h){   // número + código do enunciado; se a lista
 
 /* ---- zoom do texto das janelas de flashcards e lacunas (o mesmo nos dois tipos) ---- */
 const TREINO_ZOOM_KEY = 'tcdf_treino_zoom_v1';
+/* modo foco: janela limpa, só a questão e os botões essenciais (lembrado) */
+const TREINO_FOCO_KEY = 'tcdf_treino_foco_v1';
+function treinoFocoLer(){ try{ return localStorage.getItem(TREINO_FOCO_KEY) === '1'; }catch(_){ return false; } }
+function treinoFocoGravar(v){ try{ localStorage.setItem(TREINO_FOCO_KEY, v ? '1' : '0'); }catch(_){} }
 /* zoom único: flash e lacunas usam o mesmo tamanho de letra (o valor antigo de cada tipo é aproveitado uma vez) */
 function treinoZoomLer(modo){ try{ const o = JSON.parse(localStorage.getItem(TREINO_ZOOM_KEY) || '{}') || {}, z = Number(o.todos != null ? o.todos : (o.flash != null ? o.flash : o.lacunas)); return z >= 0.8 && z <= 2 ? z : 1; }catch(_){ return 1; } }
 function treinoZoomGravar(modo, z){ try{ const o = JSON.parse(localStorage.getItem(TREINO_ZOOM_KEY) || '{}') || {}; o.todos = z; localStorage.setItem(TREINO_ZOOM_KEY, JSON.stringify(o)); }catch(_){} }
@@ -340,9 +344,10 @@ function treinoDesenhar(){
   const fim = TR.fila.length ? `${TR.i + 1} / ${TR.fila.length}` : '0';
   const stat = TR.modo === 'flash' ? `✓ ${nOk} sei · 🔁 ${nRev} revisar` : `✓ ${lOk} certas · ✗ ${lErr} erradas · sessão ${TR.sessao.ok}/${TR.sessao.tot}`;
   const fixos = [...box.querySelectorAll('.jan-barra, .jan-grip')]; box.innerHTML = `<div class="r7-modal-caixa tr-caixa">
-    <div class="tr-topo"><div class="tr-cab"><h2>${TR.modo === 'lacunas' ? '🧩 Lacunas' : '🃏 Flashcards'} · ${esc(d.nome)}</h2><div class="tr-ferr"><span class="tr-zoom" role="group" aria-label="Zoom do texto"><button data-tr-zoom="-1" title="Diminuir o texto" aria-label="Diminuir o texto">A−</button><b>${Math.round(treinoZoomLer(TR.modo) * 100)}%</b><button data-tr-zoom="1" title="Aumentar o texto" aria-label="Aumentar o texto">A+</button></span><button class="tr-full" data-jan-full="1" aria-label="Tela cheia" title="Tela cheia (Esc para sair)">⛶</button><button class="tr-tema" data-tr-tema="1" aria-label="Alternar tema claro e escuro" title="Tema claro/escuro">${document.body.classList.contains('theme-light') ? '🌙' : '☀️'}</button><button class="r7-modal-x" aria-label="Fechar" data-tr-fechar="1">✕</button></div></div><p class="tr-sub">Gerado só das questões da lista · ${esc(stat)}</p>${abas}${chips}</div>
+    <div class="tr-topo"><div class="tr-cab"><h2>${TR.modo === 'lacunas' ? '🧩 Lacunas' : '🃏 Flashcards'} · ${esc(d.nome)}</h2><div class="tr-ferr"><span class="tr-zoom" role="group" aria-label="Zoom do texto"><button data-tr-zoom="-1" title="Diminuir o texto" aria-label="Diminuir o texto">A−</button><b>${Math.round(treinoZoomLer(TR.modo) * 100)}%</b><button data-tr-zoom="1" title="Aumentar o texto" aria-label="Aumentar o texto">A+</button></span><button class="tr-foco-bt${treinoFocoLer() ? ' on' : ''}" data-tr-foco="1" aria-pressed="${treinoFocoLer() ? 'true' : 'false'}" aria-label="Modo foco" title="Modo foco: só a questão e os botões essenciais">🎯</button><button class="tr-full" data-jan-full="1" aria-label="Tela cheia" title="Tela cheia (Esc para sair)">⛶</button><button class="tr-tema" data-tr-tema="1" aria-label="Alternar tema claro e escuro" title="Tema claro/escuro">${document.body.classList.contains('theme-light') ? '🌙' : '☀️'}</button><button class="r7-modal-x" aria-label="Fechar" data-tr-fechar="1">✕</button></div></div><p class="tr-sub">Gerado só das questões da lista · ${esc(stat)}</p>${abas}${chips}</div>
     <div class="tr-corpo">${corpo}</div></div>`;
   box.style.setProperty('--tr-zoom', treinoZoomLer(TR.modo));
+  box.classList.toggle('tr-foco', treinoFocoLer());
   fixos.forEach(f => { if(f.classList.contains('jan-barra')) box.insertBefore(f, box.firstChild); else box.appendChild(f); });
 }
 function treinoHtmlFlash(it){
@@ -439,6 +444,7 @@ function treinoClique(e){
     if(uid){ treinoFechar(); retaAbrirQuiz(mat, [uid], 'Treino · ' + mat); } return;
   }
   if(t.closest('[data-tr-verificar]')){ treinoVerificar(); return; }
+  if(t.closest('[data-tr-foco]')){ treinoFocoGravar(!treinoFocoLer()); treinoDesenhar(); return; }
   if(t.closest('[data-jan-full]')){ janTelaCheia(t.closest('.r7-modal')); return; }
   if(t.closest('[data-tr-tema]')){ if(typeof alternarTema === 'function') alternarTema(); const atual = TR; TRS.slice().forEach(x => { TR = x; treinoDesenhar(); }); TR = atual; return; }
   if(t.closest('[data-tr-limpar]')){ TR.menuReset = false; { const itl = TR.fila[TR.i], mk = itl && TR.mem[treinoChaveItem(itl, 'l')]; if(mk){ mk.refez = true; mk.rev = false; } } TR.slots.fill(null); TR.checado = false; TR.sel = null; treinoDesenhar(); return; }      // só a questão atual
