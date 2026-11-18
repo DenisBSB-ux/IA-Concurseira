@@ -1,26 +1,364 @@
 [
-{"n":2,"m":"B","b":["servidores efetivos ou empregados públicos permanentes","excepcionalmente","justificativa fundamentada"],"d":["sempre","livre nomeação"]},
-{"n":3,"m":"B","b":["autoridade máxima do órgão","três membros"],"d":["cinco membros","chefe de gabinete"]},
-{"n":5,"m":"B","b":["não se vincula","direitos não previstos em lei"],"d":["está vinculada","obrigações fiscais"]},
-{"n":6,"m":"A","r":[["deve ser composta exclusivamente por agentes pertencentes aos quadros da Administração Pública, sendo vedada a participação de terceiros contratados","pode ser composta por terceiros contratados, observadas as vedações legais"]],"b":["terceiros contratados","observadas as vedações legais"],"d":["exclusivamente por agentes públicos","vedações do edital"]},
-{"n":7,"m":"A","r":[["submetem-se integralmente ao regime de licitações e contratações estabelecido no referido Decreto Distrital","não estão abrangidas pelo referido Decreto Distrital, regendo-se pela Lei 13.303/2016"]],"b":["não estão abrangidas","Lei 13.303/2016"],"d":["Lei 14.133/2021","submetem-se integralmente"]},
-{"n":10,"m":"A","r":[["até o segundo grau, sendo permitida a designação se o parentesco for de terceiro grau","até o terceiro grau"]],"b":["colateral ou por afinidade","terceiro grau"],"d":["segundo grau","parentesco em linha reta"]},
-{"n":13,"m":"B","b":["um mês","prorrogável uma vez por igual período"],"d":["quinze dias","dez dias úteis"]},
-{"n":14,"m":"B","b":["subsidiar a elaboração da lei orçamentária","não há vedação"],"d":["contratações correntes","vedado o seu uso"]},
-{"n":15,"m":"A","r":[["admitindo-se a delegação de tal atribuição aos subsecretários de administração geral para garantir a celeridade administrativa","vedada a delegação dessa atribuição"]],"b":["ordenadores de despesa","vedada a delegação"],"d":["admitida a delegação","subsecretários de administração geral"]},
-{"n":16,"m":"C","b":["R$ 8.000,00","manutenção de veículos automotores"],"d":["R$ 80.000,00","manutenção de imóveis"]},
-{"n":23,"m":"B","b":["resultado aferido","mera disponibilização de mão de obra"],"d":["valor total contratado","metas financeiras"]},
-{"n":24,"m":"B","b":["técnicos ou administrativos","unidades desconcentradas"],"d":["puramente financeiros","unidades centrais"]},
-{"n":27,"m":"C","b":["fiscal administrativo","apostilamentos"],"d":["fiscal técnico","fiscal setorial"]},
-{"n":28,"m":"B","b":["não exime o fiscal","limites das informações recebidas"],"d":["isenta o fiscal","responsabilidade solidária"]},
-{"n":30,"m":"B","b":["30 dias","improrrogável"],"d":["60 dias","prorrogável uma vez"]},
-{"n":33,"m":"A","r":[["o que impede, contudo, a anulação imediata da respectiva nota de empenho, que é considerada ato financeiro perfeito e autônomo","sem prejuízo da eventual anulação da nota de empenho ou da rescisão do contrato"]],"b":["sanções administrativas","anulação da nota de empenho"],"d":["o que impede, contudo,","pagamento da nota de empenho"]},
-{"n":34,"m":"C","b":["setor inteiro","de forma motivada"],"d":["servidor externo","por simples despacho"]},
-{"n":36,"m":"A","r":[["devendo o valor estimado ser obrigatoriamente definido com base no menor preço aferido em consulta simplificada","devendo o valor estimado ser definido pelo melhor preço aferido pelos parâmetros do regulamento"]],"b":["melhor preço","parâmetros do regulamento"],"d":["menor preço","consulta simplificada"]},
-{"n":37,"m":"C","b":["um preço de cada parâmetro","justificativa formal"],"d":["três preços","parecer jurídico"]},
-{"n":38,"m":"A","r":[["corresponderá necessariamente à mediana simples de notas fiscais de venda interestadual encontradas","corresponderá ao valor médio das notas fiscais do Distrito Federal encontradas"]],"b":["valor médio","notas fiscais do Distrito Federal"],"d":["mediana simples","venda interestadual"]},
-{"n":41,"m":"C","b":["previamente catalogadas","Procurador-Geral do Distrito Federal"],"d":["Governador do Distrito Federal","Controlador-Geral"]},
-{"n":42,"m":"A","r":[["fica dispensado da designação de preposto no local de execução de serviços, haja vista a natureza simplificada e não-exclusiva desse tipo de contratação","deve indicar e manter preposto, aceito pela contratante, para representá-lo na execução do contrato"]],"b":["indicar e manter preposto","aceito pela contratante"],"d":["fica dispensado de preposto","nomeado pela contratante"]},
-{"n":43,"m":"A","r":[["consiste nas atividades de coordenação das fiscalizações técnica e administrativa, com a atribuição de dar o ateste financeiro definitivo das medições e formalizar a aplicação de sanções","consiste no acompanhamento da execução, nos aspectos técnicos ou administrativos, em setores distintos ou unidades desconcentradas"]],"b":["acompanhamento da execução","unidades desconcentradas"],"d":["coordenação das fiscalizações","ateste financeiro definitivo"]},
-{"n":49,"m":"A","r":[["devendo ele próprio conduzir o respectivo processo instruindo e decidindo a dosimetria de multas administrativas aplicáveis","sendo o processo conduzido pela comissão de responsabilização ou pelo agente ou setor competente"]],"b":["tomar providências para a formalização","comissão de responsabilização"],"d":["o próprio gestor","o fiscal técnico"]}
+{
+"n": 2,
+"m": "B",
+"b": [
+"servidores efetivos ou empregados públicos permanentes",
+"excepcionalmente",
+"justificativa fundamentada"
+],
+"d": [
+"sempre",
+"livre nomeação"
+]
+},
+{
+"n": 3,
+"m": "B",
+"b": [
+"autoridade máxima do órgão",
+"três membros"
+],
+"d": [
+"cinco membros",
+"chefe de gabinete"
+]
+},
+{
+"n": 5,
+"m": "B",
+"b": [
+"não se vincula",
+"direitos não previstos em lei"
+],
+"d": [
+"está vinculada",
+"obrigações fiscais"
+]
+},
+{
+"n": 6,
+"m": "A",
+"r": [
+[
+"deve ser composta exclusivamente por agentes pertencentes aos quadros da Administração Pública, sendo vedada a participação de terceiros contratados",
+"pode ser composta por terceiros contratados, observadas as vedações legais"
+]
+],
+"b": [
+"terceiros contratados",
+"observadas as vedações legais"
+],
+"d": [
+"exclusivamente por agentes públicos",
+"vedações do edital"
+]
+},
+{
+"n": 7,
+"m": "A",
+"r": [
+[
+"submetem-se integralmente ao regime de licitações e contratações estabelecido no referido Decreto Distrital",
+"não estão abrangidas pelo referido Decreto Distrital, regendo-se pela Lei 13.303/2016"
+]
+],
+"b": [
+"não estão abrangidas",
+"Lei 13.303/2016"
+],
+"d": [
+"Lei 14.133/2021",
+"submetem-se integralmente"
+]
+},
+{
+"n": 10,
+"m": "A",
+"r": [
+[
+"até o segundo grau, sendo permitida a designação se o parentesco for de terceiro grau",
+"até o terceiro grau"
+]
+],
+"b": [
+"colateral ou por afinidade",
+"terceiro grau"
+],
+"d": [
+"segundo grau",
+"parentesco em linha reta"
+]
+},
+{
+"n": 13,
+"m": "B",
+"b": [
+"um mês",
+"prorrogável uma vez por igual período"
+],
+"d": [
+"quinze dias",
+"dez dias úteis"
+]
+},
+{
+"n": 14,
+"m": "B",
+"b": [
+"subsidiar a elaboração da lei orçamentária",
+"não há vedação"
+],
+"d": [
+"contratações correntes",
+"vedado o seu uso"
+]
+},
+{
+"n": 15,
+"m": "A",
+"r": [
+[
+"admitindo-se a delegação de tal atribuição aos subsecretários de administração geral para garantir a celeridade administrativa",
+"vedada a delegação dessa atribuição"
+]
+],
+"b": [
+"ordenadores de despesa",
+"vedada a delegação"
+],
+"d": [
+"admitida a delegação",
+"subsecretários de administração geral"
+]
+},
+{
+"n": 16,
+"m": "C",
+"b": [
+"R$ 8.000,00",
+"manutenção de veículos automotores"
+],
+"d": [
+"R$ 80.000,00",
+"manutenção de imóveis"
+]
+},
+{
+"n": 23,
+"m": "B",
+"b": [
+"resultado aferido",
+"mera disponibilização de mão de obra"
+],
+"d": [
+"valor total contratado",
+"metas financeiras"
+]
+},
+{
+"n": 24,
+"m": "B",
+"b": [
+"técnicos ou administrativos",
+"unidades desconcentradas"
+],
+"d": [
+"puramente financeiros",
+"unidades centrais"
+]
+},
+{
+"n": 27,
+"m": "C",
+"b": [
+"fiscal administrativo",
+"apostilamentos"
+],
+"d": [
+"fiscal técnico",
+"fiscal setorial"
+]
+},
+{
+"n": 28,
+"m": "B",
+"b": [
+"não exime o fiscal",
+"limites das informações recebidas"
+],
+"d": [
+"isenta o fiscal",
+"responsabilidade solidária"
+]
+},
+{
+"n": 30,
+"m": "B",
+"b": [
+"30 dias",
+"improrrogável"
+],
+"d": [
+"60 dias",
+"prorrogável uma vez"
+]
+},
+{
+"n": 33,
+"m": "A",
+"r": [
+[
+"o que impede, contudo, a anulação imediata da respectiva nota de empenho, que é considerada ato financeiro perfeito e autônomo",
+"sem prejuízo da eventual anulação da nota de empenho ou da rescisão do contrato"
+]
+],
+"b": [
+"sanções administrativas",
+"anulação da nota de empenho"
+],
+"d": [
+"o que impede, contudo,",
+"pagamento da nota de empenho"
+]
+},
+{
+"n": 34,
+"m": "C",
+"b": [
+"setor inteiro",
+"de forma motivada"
+],
+"d": [
+"servidor externo",
+"por simples despacho"
+]
+},
+{
+"n": 36,
+"m": "A",
+"r": [
+[
+"devendo o valor estimado ser obrigatoriamente definido com base no menor preço aferido em consulta simplificada",
+"devendo o valor estimado ser definido pelo melhor preço aferido pelos parâmetros do regulamento"
+]
+],
+"b": [
+"melhor preço",
+"parâmetros do regulamento"
+],
+"d": [
+"menor preço",
+"consulta simplificada"
+]
+},
+{
+"n": 37,
+"m": "C",
+"b": [
+"um preço de cada parâmetro",
+"justificativa formal"
+],
+"d": [
+"três preços",
+"parecer jurídico"
+]
+},
+{
+"n": 38,
+"m": "A",
+"r": [
+[
+"corresponderá necessariamente à mediana simples de notas fiscais de venda interestadual encontradas",
+"corresponderá ao valor médio das notas fiscais do Distrito Federal encontradas"
+]
+],
+"b": [
+"valor médio",
+"notas fiscais do Distrito Federal"
+],
+"d": [
+"mediana simples",
+"venda interestadual"
+]
+},
+{
+"n": 41,
+"m": "C",
+"b": [
+"previamente catalogadas",
+"Procurador-Geral do Distrito Federal"
+],
+"d": [
+"Governador do Distrito Federal",
+"Controlador-Geral"
+]
+},
+{
+"n": 42,
+"m": "A",
+"r": [
+[
+"fica dispensado da designação de preposto no local de execução de serviços, haja vista a natureza simplificada e não-exclusiva desse tipo de contratação",
+"deve indicar e manter preposto, aceito pela contratante, para representá-lo na execução do contrato"
+]
+],
+"b": [
+"indicar e manter preposto",
+"aceito pela contratante"
+],
+"d": [
+"fica dispensado de preposto",
+"nomeado pela contratante"
+]
+},
+{
+"n": 43,
+"m": "A",
+"r": [
+[
+"consiste nas atividades de coordenação das fiscalizações técnica e administrativa, com a atribuição de dar o ateste financeiro definitivo das medições e formalizar a aplicação de sanções",
+"consiste no acompanhamento da execução, nos aspectos técnicos ou administrativos, em setores distintos ou unidades desconcentradas"
+]
+],
+"b": [
+"acompanhamento da execução",
+"unidades desconcentradas"
+],
+"d": [
+"coordenação das fiscalizações",
+"ateste financeiro definitivo"
+]
+},
+{
+"n": 49,
+"m": "A",
+"r": [
+[
+"devendo ele próprio conduzir o respectivo processo instruindo e decidindo a dosimetria de multas administrativas aplicáveis",
+"sendo o processo conduzido pela comissão de responsabilização ou pelo agente ou setor competente"
+]
+],
+"b": [
+"tomar providências para a formalização",
+"comissão de responsabilização"
+],
+"d": [
+"o próprio gestor",
+"o fiscal técnico"
+]
+},
+{
+"n": 17,
+"m": "B",
+"t": "A Administração Pública Direta e Indireta do Distrito Federal, excetuadas as empresas estatais independentes, adotará a regulamentação editada pela União sobre as contratações de bens e serviços de tecnologia da informação.",
+"b": [
+"empresas estatais independentes",
+"regulamentação editada pela União"
+],
+"d": [
+"autarquias e fundações",
+"regulamentação editada pelo Distrito Federal"
+]
+}
 ]
