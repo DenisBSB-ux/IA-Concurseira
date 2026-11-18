@@ -14,3 +14,4 @@
 - **Primeiros Socorros:** completa (100 de 100).
 - **Previdenciário (2):** nº 62 (limite da paridade: frase sem contexto), nº 130 (art. 40 §15 da CF: regra v diz "entidade fechada ou aberta", o texto vigente fala em entidade fechada de natureza pública — conferir a regra v e o gabarito).
 - **Regimento Interno (2):** nº 100 (sanções do TCDF: frase truncada/confusa), nº 154 (frase sem contexto do TCDF; distrator "órgãos de classe" também completa).
+- **RJU (5):** nº 16 (exercício cumulativo de cargos: frase não confirmada pela regra v; gabarito em conferência), nº 54 (lacunas redundantes), nº 199 (professor com outro cargo: regra v ("de qualquer natureza") contradiz o art. 37, XVI, "b", da CF — decidir regra e gabarito), nº 219 (efeito retroativo de atos: regra v restringe a nomeação, posse e exercício), mais 1 já listada acima.
