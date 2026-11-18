@@ -2706,3 +2706,10 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 .tr-modal .tr-fb, .tr-modal .tr-fb b{ font-size:calc(16px * var(--tr-zoom, 1)); }
 .tr-modal .tr-chip{ font-size:calc(17px * var(--tr-zoom, 1)); }
 @media (max-width:520px){ .tr-modal .tr-texto, .tr-modal .tr-frase, .tr-modal .tr-quest{ font-size:calc(17.5px * var(--tr-zoom, 1)); } }
+
+/* v607: feedback da lacuna: texto e botão "Refazer" lado a lado; letras 2 pontos menores */
+.tr-modal .tr-fb{ display:flex; align-items:center; gap:12px 16px; flex-wrap:wrap; }
+.tr-modal .tr-fb .tr-fb-txt{ flex:1 1 260px; min-width:0; }
+.tr-modal .tr-fb .tr-refaz{ flex:0 0 auto; width:auto; margin:0; }
+.tr-modal .tr-fb, .tr-modal .tr-fb b, .tr-modal .tr-fb .tr-ref{ font-size:calc(14px * var(--tr-zoom, 1)); }
+.tr-modal .tr-fb .tr-extra{ font-size:calc(12px * var(--tr-zoom, 1)); margin:4px 0 0; }
