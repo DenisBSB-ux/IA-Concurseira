@@ -2753,3 +2753,14 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 @media (max-width:560px){ .conc-grade{ grid-template-columns:1fr; } }
 .conc-ta[hidden]{ display:none; }
 .conc-up .side-action-btn,.conc-acoes .side-action-btn{ width:auto; }
+
+.conc-cab{ display:flex; justify-content:space-between; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:8px; }
+.conc-tab{ width:100%; border-collapse:collapse; font-size:12.5px; }
+.conc-tab th,.conc-tab td{ border-bottom:1px solid var(--paper-line); padding:6px 8px; text-align:left; vertical-align:top; }
+.conc-lst{ display:inline-block; margin:2px 0; }
+.conc-linha{ padding:4px 0; border-bottom:1px solid var(--paper-line); }
+.conc-op{ display:flex; gap:8px; align-items:center; padding:8px 4px; border-bottom:1px solid var(--paper-line); cursor:pointer; }
+.conc-op span{ flex:1; }
+.conc-sel{ font:inherit; font-size:13px; padding:6px 8px; border:1px solid var(--paper-line); border-radius:6px; background:transparent; color:inherit; }
+.conc-resumo{ margin:8px 0; }
+.conc-fora{ margin-top:10px; }

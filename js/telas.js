@@ -243,6 +243,7 @@ function render(){
     return;
   }
   ensureMateriaSelecionada();
+  if(typeof concursoPerguntaInicial==='function') concursoPerguntaInicial();
   document.body.classList.toggle('focus-mode', !!STATE.focusMode);
   root.innerHTML = `
     ${STATE.focusMode ? '' : renderLetterhead()}
@@ -896,6 +897,8 @@ function provaContagemHtml(){
     <div class="prova-conta">${PROVA_TCDF.semData ? 'Data da prova a definir' : txt}</div>
     ${PROVA_TCDF.link ? `<a class="prova-link" href="${esc(PROVA_TCDF.link)}" target="_blank" rel="noopener noreferrer">${CONCURSO.padrao ? 'Cespe: edital e avisos' : esc(CONCURSO.banca||'Edital e avisos')+': edital e avisos'} ↗</a>` : ''}
     <button type="button" class="prova-det-btn" data-prova-detalhes="1">Detalhes do edital</button>
+    <button type="button" class="prova-det-btn" data-conc-plano="1" title="Compara as matérias do cargo com as listas que você já tem">📋 Plano do cargo</button>
+    <button type="button" class="prova-det-btn" data-conc-escolher="1" title="Escolher outro concurso ou cargo">🎯 Concurso e cargo</button>
     <button type="button" class="prova-det-btn" data-conc-abrir="1" title="Carrega o PDF do edital e adapta o site ao concurso">📄 Carregar edital</button>
   </div>`;
 }
