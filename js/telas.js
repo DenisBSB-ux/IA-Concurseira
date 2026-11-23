@@ -800,11 +800,12 @@ function renderLetterhead(){
   return `
   <div class="letterhead">
     <div class="seal">
-      <img class="seal-logo" src="img/logo-ia-concurseira.png" alt="IA Concurseira">
-      <div>
-        <h1 class="title">${esc(tituloExibido)} <span class="version-tag" title="Versão do código carregada agora — se tiver dúvida se está atualizado, confira aqui">${esc(window.__TCDF_BUILD__.versao)}</span> ${countBadge}</h1>
+      <div class="seal-col"><img class="seal-logo" src="img/logo-ia-concurseira.png" alt="IA Concurseira"><span class="version-tag" title="Versão do código carregada agora — se tiver dúvida se está atualizado, confira aqui">${esc(window.__TCDF_BUILD__.versao)}</span></div>
+      <div class="seal-txt">
+        <h1 class="title sr-only">${esc(tituloExibido)} ${countBadge}</h1>
         <div class="eyebrow conc-inst">${esc(CONFIG.eyebrow)}</div>
         ${(typeof CONCURSO!=='undefined' && CONCURSO.cargo) ? `<div class="subtitle conc-sub" title="${esc(CONCURSO.nome||'')}">${(()=>{ const pt = String(CONCURSO.cargo).split(' — '); return pt.length>1 ? `<span class="cs-base">${esc(pt.slice(0,-1).join(' — '))}</span><span class="cs-sep">·</span><span class="cs-area">${esc(pt[pt.length-1])}</span>` : `<span class="cs-area">${esc(pt[0])}</span>`; })()}</div>` : ''}
+        ${(typeof CONCURSO!=='undefined' && CONCURSO.banca) ? `<div class="subtitle conc-banca">Banca: <b>${esc(CONCURSO.banca)}</b></div>` : ''}
         ${totalVisivel ? '' : '<div class="subtitle">Nenhuma questão carregada ainda. Importe um arquivo .txt para começar.</div>'}
       </div>
     </div>
