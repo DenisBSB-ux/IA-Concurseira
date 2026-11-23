@@ -29,6 +29,13 @@ function concursoGravarDB(){
   concursoCarregar();
   try{ if(typeof sincronizarRevisao === 'function') sincronizarRevisao(); }catch(_){}
 }
+/* concursos que valem para o usuário: os da conta (sobrepõem) + os embutidos na plataforma */
+function concursosTodos(){
+  const emb = (typeof CONCURSOS_EMBUTIDOS !== 'undefined' && Array.isArray(CONCURSOS_EMBUTIDOS)) ? CONCURSOS_EMBUTIDOS : [];
+  const ids = new Set(CONC_DB.lista.map(x => x.id));
+  return CONC_DB.lista.concat(emb.filter(x => !ids.has(x.id)));
+}
+function concursoEhEmbutido(id){ return (typeof CONCURSOS_EMBUTIDOS !== 'undefined') && CONCURSOS_EMBUTIDOS.some(x => x.id === id); }
 function concursoMateriasDoCargo(c, cargo){
   const cg = (c.cargos || []).find(x => x.nome === cargo);
   const out = []; (c.comuns || []).concat(cg ? cg.materias || [] : []).forEach(m => { if(m && !out.includes(m)) out.push(m); });
@@ -36,12 +43,12 @@ function concursoMateriasDoCargo(c, cargo){
 }
 function concursoCarregar(){
   CONC_DB = concursoLerDB();
-  const c = CONC_DB.lista.find(x => x.id === CONC_DB.ativo);
+  const c = concursosTodos().find(x => x.id === CONC_DB.ativo);
   if(!c || CONC_DB.ativo === 'padrao') CONCURSO = Object.assign({}, CONCURSO_PADRAO);
   else{
     const cargo = (c.cargos || []).some(x => x.nome === CONC_DB.cargo) ? CONC_DB.cargo : ((c.cargos || [])[0] || {}).nome || c.cargo || '';
     const cgo = (c.cargos || []).find(x => x.nome === cargo) || {};
-    CONCURSO = Object.assign({}, CONCURSO_PADRAO, c, { padrao: false, cargo, materias: concursoMateriasDoCargo(c, cargo), qtd: Object.assign({}, c.qtdComuns || {}, cgo.qtd || {}) });
+    CONCURSO = Object.assign({}, CONCURSO_PADRAO, c, { padrao: false, cargo, materias: concursoMateriasDoCargo(c, cargo), qtd: Object.assign({}, c.qtdComuns || {}, cgo.qtd || {}), itensCargo: cgo.itens || [] });
   }
   concursoAplicar();
 }
@@ -313,7 +320,7 @@ function concursoAbrir(){
   const el = concursoModal(); const corpo = document.getElementById('concurso-corpo');
   el.dataset.obrig = ''; el.querySelector('.lei-barra strong').textContent = 'Carregar edital do concurso';
   corpo.onclick = null; corpo.onchange = null; delete corpo.dataset.sel;
-  const base = CONC_DB.lista.find(x => x.id === CONC_DB.ativo) || {}; concursoRascunhoDe(CONCURSO.padrao ? {} : base);
+  const base = concursosTodos().find(x => x.id === CONC_DB.ativo) || {}; concursoRascunhoDe(CONCURSO.padrao ? {} : base);
   corpo.innerHTML = concursoForm(CONCURSO.padrao ? CONCURSO_PADRAO : Object.assign({}, CONCURSO, base));
   el.hidden = false;
 }
@@ -349,7 +356,7 @@ document.addEventListener('change', async e => {
 /* ---------- textos que dependem do concurso ---------- */
 function concursoDetalhesHtml(){
   const c = CONCURSO, li = (r, v) => v ? `<li><b>${esc(r)}:</b> ${esc(v)}</li>` : '';
-  return `<ul>${li('Concurso', c.nome)}${li('Órgão', c.orgao)}${li('Cargo', c.cargo)}${li('Banca', c.banca)}${li('Data da prova', PROVA_TCDF.rotulo)}${li('Remuneração inicial', c.remuneracao)}${li('Vagas', c.vagas)}${(c.itens || []).map(p => li(p[0], p[1])).join('')}</ul>
+  return `<ul>${li('Concurso', c.nome)}${li('Órgão', c.orgao)}${li('Cargo', c.cargo)}${li('Banca', c.banca)}${li('Data da prova', PROVA_TCDF.rotulo)}${li('Remuneração inicial', c.remuneracao)}${li('Vagas', c.vagas)}${(c.itens || []).map(p => li(p[0], p[1])).join('')}${(c.itensCargo || []).map(p => li(p[0] + ' (cargo)', p[1])).join('')}</ul>
     ${(c.materias || []).length ? `<div class="prova-sub">Matérias do edital</div><ul>${c.materias.map(m => `<li>${esc(m)}</li>`).join('')}</ul>` : ''}
     <small>Dados lidos do edital: confira no documento oficial${c.link ? ' (link na barra lateral)' : ''}.</small>`;
 }
@@ -496,13 +503,13 @@ function concursoEscolherAbrir(){
   const m = concursoModal(); const corpo = document.getElementById('concurso-corpo');
   m.dataset.obrig = CONC_DB.escolhido ? '' : '1';
   m.querySelector('.lei-barra strong').textContent = CONC_DB.escolhido ? 'Escolha o concurso e o cargo' : 'Escolha a instituição e o cargo para começar';
-  const todos = [CONCURSO_PADRAO].concat(CONC_DB.lista);
+  const todos = [CONCURSO_PADRAO].concat(concursosTodos());
   const ativo = CONC_DB.ativo || 'padrao';
   const cargosDe = id => { const c = todos.find(x => x.id === id); return c && c.id !== 'padrao' ? (c.cargos || []) : []; };
   const html = () => {
     const sel = corpo.dataset.sel || ativo;
     const cs = cargosDe(sel);
-    return `<div class="conc-esc">${todos.map(c => `<label class="conc-op"><input type="radio" name="conc-esc" value="${esc(c.id)}" ${c.id === sel ? 'checked' : ''}> <span><b>${esc(c.nome)}</b><br><small>${esc(c.orgao || '')}${c.banca ? ' · ' + esc(c.banca) : ''}${c.rotulo ? ' · prova ' + esc(c.rotulo) : ''}</small></span>${c.id !== 'padrao' ? `<button type="button" class="prova-det-btn" data-conc-excluir="${esc(c.id)}" title="Remove este concurso da lista">🗑</button>` : ''}</label>`).join('')}</div>
+    return `<div class="conc-esc">${todos.map(c => `<label class="conc-op"><input type="radio" name="conc-esc" value="${esc(c.id)}" ${c.id === sel ? 'checked' : ''}> <span><b>${esc(c.nome)}</b><br><small>${esc(c.orgao || '')}${c.banca ? ' · ' + esc(c.banca) : ''}${c.rotulo ? ' · prova ' + esc(c.rotulo) : ''}</small></span>${(c.id !== 'padrao' && (!concursoEhEmbutido(c.id) || CONC_DB.lista.some(x => x.id === c.id))) ? `<button type="button" class="prova-det-btn" data-conc-excluir="${esc(c.id)}" title="Remove este concurso da lista">🗑</button>` : ''}</label>`).join('')}</div>
       ${cs.length ? `<label class="conc-l"><span>Cargo</span><select id="conc-esc-cargo" class="conc-sel">${cs.map(x => `<option ${x.nome === CONC_DB.cargo && sel === ativo ? 'selected' : ''}>${esc(x.nome)}</option>`).join('')}</select></label>` : (sel !== 'padrao' ? '<small>Este concurso não tem cargos cadastrados: use Carregar edital para completar.</small>' : '')}
       <div class="conc-acoes"><button type="button" class="side-action-btn compact" data-conc-ir="1">✔ Estudar este</button><button type="button" class="side-action-btn compact" data-conc-abrir="1">＋ Novo concurso (carregar edital)</button></div>`;
   };
