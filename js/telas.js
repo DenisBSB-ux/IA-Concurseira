@@ -728,7 +728,7 @@ function renderLetterhead(){
       <div>
         <div class="eyebrow">${esc(CONFIG.eyebrow)}</div>
         <h1 class="title">${esc(tituloExibido)} <span class="version-tag" title="Versão do código carregada agora — se tiver dúvida se está atualizado, confira aqui">${esc(window.__TCDF_BUILD__.versao)}</span> ${countBadge}</h1>
-        ${(typeof CONCURSO!=='undefined' && !CONCURSO.padrao) ? `<div class="subtitle conc-sub">${esc(CONCURSO.nome)}${CONCURSO.cargo?' · '+esc(CONCURSO.cargo):''}</div>` : ''}
+        ${(typeof CONCURSO!=='undefined' && !CONCURSO.padrao) ? `<div class="subtitle conc-sub">${esc(CONCURSO.nome)}${CONCURSO.cargo?' · '+esc(String(CONCURSO.cargo).split(' — ').pop()):''}</div>` : ''}
         ${totalVisivel ? '' : '<div class="subtitle">Nenhuma questão carregada ainda. Importe um arquivo .txt para começar.</div>'}
       </div>
     </div>
