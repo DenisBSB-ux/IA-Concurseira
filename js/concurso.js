@@ -40,7 +40,8 @@ function concursoCarregar(){
   if(!c || CONC_DB.ativo === 'padrao') CONCURSO = Object.assign({}, CONCURSO_PADRAO);
   else{
     const cargo = (c.cargos || []).some(x => x.nome === CONC_DB.cargo) ? CONC_DB.cargo : ((c.cargos || [])[0] || {}).nome || c.cargo || '';
-    CONCURSO = Object.assign({}, CONCURSO_PADRAO, c, { padrao: false, cargo, materias: concursoMateriasDoCargo(c, cargo) });
+    const cgo = (c.cargos || []).find(x => x.nome === cargo) || {};
+    CONCURSO = Object.assign({}, CONCURSO_PADRAO, c, { padrao: false, cargo, materias: concursoMateriasDoCargo(c, cargo), qtd: Object.assign({}, c.qtdComuns || {}, cgo.qtd || {}) });
   }
   concursoAplicar();
 }
@@ -70,8 +71,11 @@ function concursoAplicar(){
 }
 
 /* ---------- extração do edital (heurística; o usuário confere antes de aplicar) ---------- */
-const CONC_BANCAS = ['Cebraspe', 'CESPE', 'FGV', 'FCC', 'Vunesp', 'IBFC', 'Quadrix', 'IDECAN', 'AOCP', 'Cesgranrio', 'Fundatec', 'Consulplan', 'IADES', 'IDIB', 'FEPESE', 'Instituto Access', 'Selecon', 'Objetiva Concursos', 'Funcab', 'FUNRIO', 'Instituto Mais', 'Avalia', 'Legalle', 'CEV-UFC', 'Nucepe'];
+const CONC_BANCAS = ['Cebraspe', 'CESPE', 'FGV', 'FCC', 'Vunesp', 'IBFC', 'Quadrix', 'IDECAN', 'AOCP', 'Cesgranrio', 'Fundatec', 'Consulplan', 'IADES', 'IDIB', 'FEPESE', 'Instituto Access', 'Instituto ACCESS', 'Selecon', 'Objetiva Concursos', 'Funcab', 'FUNRIO', 'Instituto Mais', 'Avalia', 'Legalle', 'CEV-UFC', 'Nucepe'];
 const CONC_MESES = { janeiro: 1, fevereiro: 2, 'março': 3, marco: 3, abril: 4, maio: 5, junho: 6, julho: 7, agosto: 8, setembro: 9, outubro: 10, novembro: 11, dezembro: 12 };
+function concTitulo(t){
+  return String(t).toLowerCase().replace(/\s+/g, ' ').trim().split(' ').map((w, i) => (i && /^(de|da|do|das|dos|e|à|a|o|em|para)$/.test(w)) ? w : w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
 function concPad(n){ return String(n).padStart(2, '0'); }
 function concDatasDoTexto(t){
   const out = []; let m;
@@ -80,6 +84,56 @@ function concDatasDoTexto(t){
   const r2 = /\b(\d{1,2})\s*(?:º|°)?\s+de\s+(janeiro|fevereiro|mar[çc]o|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)\s+de\s+(\d{4})\b/gi;
   while((m = r2.exec(t))) out.push({ i: m.index, d: `${m[3]}-${concPad(CONC_MESES[m[2].toLowerCase()])}-${concPad(m[1])}`, s: m[0] });
   return out.filter(x => { const o = concursoDataObj(x.d); return o && o.getMonth() + 1 === +x.d.slice(5, 7); }).sort((a, b) => a.i - b.i);
+}
+/* Formato comum dos editais: Anexo I com "Matéria: 1 ..." por cargo + quadro de questões por matéria (item "Da prova objetiva") */
+function editalEstruturado(linhas){
+  const ini = linhas.map((l, i) => /^ANEXO I\s*[–-]\s*DO CONTE[ÚU]DO PROGRAM/i.test(l) ? i : -1).filter(i => i >= 0).pop();
+  if(ini == null) return null;
+  let fim = linhas.findIndex((l, i) => i > ini && /^ANEXO II\b/i.test(l)); if(fim < 0) fim = linhas.length;
+  const comuns = [], cargos = []; let modo = null, atual = null;
+  const reCg = /^Cargo\s+\d+\s*:\s*(.+)$/i, reMat = /^([A-ZÀ-Ú][^:]{2,110}?):\s*1\s+\S/;
+  for(let i = ini + 1; i < fim; i++){
+    const l = linhas[i];
+    if(/^Conhecimentos\s+B[áa]sicos/i.test(l)){ modo = 'comum'; continue; }
+    if(/^Conhecimentos\s+Espec[ií]ficos/i.test(l)){ modo = 'cargo'; continue; }
+    const mc = reCg.exec(l);
+    if(mc){ atual = { nome: mc[1].replace(/\s+[-–—]\s*(?:[ÁA]rea|Especialidade(?:\/[ÁA]rea)?)\s*:\s*/i, ' — ').replace(/\s+/g, ' ').trim(), materias: [], qtd: {} }; cargos.push(atual); modo = 'cargo'; continue; }
+    const mm = reMat.exec(l);
+    if(mm && !/^cargo\b/i.test(mm[1])){ const nome = mm[1].replace(/\s+-\s+/g, '-').replace(/\s+/g, ' ').trim(); const alvo = (modo === 'cargo' && atual) ? atual.materias : comuns; if(!alvo.includes(nome)) alvo.push(nome); }
+  }
+  if(comuns.length + cargos.reduce((a, c) => a + c.materias.length, 0) < 3) return null;
+  // quadro de questões por matéria (o nome pode quebrar em 2-3 linhas, antes ou depois dos números)
+  const qtdComuns = {}, reRow = /^(?:(.*?)\s+)?(\d{1,3})\s+(\d{1,2})\s+(\d{1,3}\s?,\s?\d)$/;
+  const iq = linhas.findIndex(l => /^\d*\.?\s*DA PROVA OBJETIVA/i.test(l) && !/^1\./.test(l));
+  const brutos = new Map();    // alvo -> { nome-da-tabela: questões }
+  if(iq >= 0){
+    let alvo = qtdComuns, buf = [], ult = null;
+    const prep = { test: x => /(^|[^A-Za-zÀ-ú])(d[oae]s?|e|n[ºo°]|em|para|a|o)$/i.test(x) };
+    for(let i = iq; i < linhas.length; i++){
+      const l = linhas[i];
+      if(/^\d+\.\d+\.\s*(DOS? CRIT[ÉE]RIOS|DOS? GABARITOS)/i.test(l) || /^11\.\s/.test(l)) break;
+      if(/^\d+\.\d+\.\s*A prova objetiva ser[áa] corrigida/i.test(l)) break;
+      const cab = (l + ' ' + (linhas[i + 1] || '')).match(/Para o cargo.{0,160}?(?:Especialidade(?:\/[ÁA]rea)?|[ÁA]rea)\s*:\s*([^,]+?)(?:,|\sa por[cç][aã]o)/i);
+      if(/Para o cargo/i.test(l) && cab){ const k = concNorm(cab[1].replace(/[-–—]\s*[ÁA]rea\s*:/i, '-')); const cg = cargos.find(c => concNorm(c.nome).includes(k)); alvo = cg ? cg.qtd : {}; buf = []; ult = null; continue; }
+      if(/^(Disciplina|[ÁA]rea de Conhec|N[úu]mero de|Quest[õo]es$|Peso$|Total de|Pontos$|Realiza[cç][aã]o|P[áa]gina|DEFENSORIA|CONCURSO P|EDITAL N)/i.test(l)) continue;
+      const mr = reRow.exec(l);
+      if(mr){
+        let nome = (mr[1] || '').trim();
+        if(buf.length && (!nome || /^[\d(a-zà-ú]/.test(nome) || prep.test(buf[buf.length - 1]))) nome = (buf.join(' ') + ' ' + nome).trim();
+        buf = [];
+        if(!nome || /^(total|conhecimentos espec|conhecimentos b)/i.test(nome)){ ult = null; continue; }
+        const dest = alvo === qtdComuns ? qtdComuns : alvo; dest[nome] = +mr[2]; ult = { dest, nome }; continue;
+      }
+      if(ult && prep.test(ult.nome) && l.length < 60 && !/^\d+\.\d+/.test(l)){ const q = ult.dest[ult.nome]; delete ult.dest[ult.nome]; ult.nome += ' ' + l; ult.dest[ult.nome] = q; ult = null; continue; }
+      ult = null;
+      if(l.length < 110 && !/^\d+\.\d+/.test(l) && !/:$/.test(l)){ buf.push(l); if(buf.length > 3) buf.shift(); } else buf = [];
+    }
+    // religa os nomes do quadro aos nomes do Anexo I (comparação sem espaços/acentos)
+    const k2 = x => concNorm(x).replace(/\s+/g, '');
+    const religa = (dest, mats) => { Object.keys(dest).forEach(n => { const m = mats.find(x => k2(x) === k2(n)); if(m && m !== n){ dest[m] = dest[n]; delete dest[n]; } }); };
+    religa(qtdComuns, comuns); cargos.forEach(c => religa(c.qtd, c.materias));
+  }
+  return { comuns, cargos, qtdComuns };
 }
 function editalExtrair(texto){
   const t = String(texto || '').replace(/\r/g, '').replace(/[ \t]+/g, ' ');
@@ -91,7 +145,7 @@ function editalExtrair(texto){
   if(lOrg) r.orgao = lOrg.replace(/\s+/g, ' ').replace(/[.;:]+$/, '');
   if(!r.orgao){ const m = /(?:pelo|pela|do|da)\s+((?:Tribunal|Prefeitura|C[âa]mara|Assembleia|Minist[ée]rio|Secretaria|Instituto|Universidade|Defensoria|Procuradoria|Conselho|Banco)[^,.;\n]{3,80})/i.exec(t); if(m) r.orgao = m[1].trim(); }
   // banca (a mais citada)
-  let melhor = 0; CONC_BANCAS.forEach(b => { const n = (t.match(new RegExp('\\b' + b.replace(/[-]/g, '\\-') + '\\b', 'gi')) || []).length; if(n > melhor){ melhor = n; r.banca = b === 'CESPE' ? 'Cebraspe' : b; } });
+  let melhor = 0; CONC_BANCAS.forEach(b => { const multi = /\s/.test(b); const n = (t.match(new RegExp('\\b(?:' + b.replace(/[-]/g, '\\-') + '|' + b.toUpperCase().replace(/[-]/g, '\\-') + ')\\b', multi ? 'gi' : 'g')) || []).length; if(n > melhor){ melhor = n; r.banca = b === 'CESPE' ? 'Cebraspe' : b; } });
   // cargo
   const mCargo = /(?:cargo|cargos?\s*:|emprego|fun[cç][aã]o)\s*[:\-–]?\s*((?:Analista|T[ée]cnico|Auditor|Agente|Professor|Escriv[ãa]o|Delegado|Procurador|Defensor|Oficial|Assistente|M[ée]dico|Engenheiro|Advogado|Perito|Fiscal|Inspetor|Especialista|Soldado)[^\n.;]{0,110})/i.exec(t);
   if(mCargo) r.cargo = mCargo[1].replace(/\s+/g, ' ').trim();
@@ -100,7 +154,9 @@ function editalExtrair(texto){
   const sigla = (r.orgao.match(/\b[A-ZÁÉÍÓÚ]{2,8}\b/) || [''])[0];
   const ano = (t.match(/\b(20[2-3]\d)\b/) || [''])[1];
   r.nome = (lNome ? lNome.replace(/^edital\s*(n[ºo°.]*\s*[\d/.-]+)?\s*[-–—:]*\s*/i, '').replace(/\s+/g, ' ') : '') || [r.orgao, ano].filter(Boolean).join(' ');
-  if(/^concurso p[úu]blico\s+(para|destinado)/i.test(r.nome) && r.cargo) r.nome = `${r.cargo} — ${r.orgao || ''} ${ano}`.replace(/\s+/g, ' ').trim();
+  const lTit = linhas.slice(0, 12).find(l => /^concurso p[úu]blico para\s+(?!o provimento)/i.test(l));
+  if(lTit){ const sg = ((r.orgao || '').match(/[-–]\s*([A-Z]{2,10})\s*$/) || [])[1] || ''; r.nome = (sg ? sg + ' — ' : '') + concTitulo(lTit.replace(/^concurso p[úu]blico para\s+/i, '')); }
+  else if(/^concurso p[úu]blico\s+(para|destinado)/i.test(r.nome) && r.cargo) r.nome = `${r.cargo} — ${r.orgao || ''} ${ano}`.replace(/\s+/g, ' ').trim();
   if(/^concurso p[úu]blico\.?$/i.test(r.nome.trim()) || r.nome.trim().length < 12) r.nome = [r.orgao, ano].filter(Boolean).join(' ') || r.nome;
   if(r.nome.length > 120) r.nome = r.nome.slice(0, 117) + '…';
   // remuneração
@@ -109,12 +165,16 @@ function editalExtrair(texto){
   // vagas
   const mVag = /(\d{1,4})\s*\(?[a-zçãé ]{0,30}\)?\s*vagas?\b[^.\n]{0,60}/i.exec(t);
   if(mVag) r.vagas = mVag[0].replace(/\s+/g, ' ').trim().slice(0, 100);
+  const mVt = /Provimento Imediato\s+(\d+)\s+Cadastro de Reserva\s+(\d+)/i.exec(t); if(mVt) r.vagas = `${mVt[1]} imediatas e ${mVt[2]} de cadastro de reserva`;
   // data da prova: a data mais próxima de "prova objetiva"; senão, a primeira data com a palavra "prova"
   const datas = concDatasDoTexto(t); let alvo = null;
   const posProva = []; const rp = /prova\s+objetiva|provas?\s+(?:objetiva|escrita|discursiva)|aplica[cç][aã]o\s+das?\s+provas?/gi; let mp;
   while((mp = rp.exec(t))) posProva.push(mp.index);
   let distMin = 1e9;
   datas.forEach(dt => posProva.forEach(p => { const d = dt.i - p; if(d >= -40 && d < 260 && Math.abs(d) < distMin){ distMin = Math.abs(d); alvo = dt; } }));
+  // cronograma: "Realização das provas ... dd/mm/aaaa" (vale a última ocorrência, a do cronograma)
+  { const rr = /Realiza[cç][aã]o d[aeo]s?\s+provas?[\s\S]{0,260}?(\d{1,2}\s*\/\s*\d{1,2}\s*\/\s*\d{4})/gi; let mr, ult = null; while((mr = rr.exec(t))) ult = mr;
+    if(ult){ const ach = datas.find(d => d.s.replace(/\s+/g, '') === ult[1].replace(/\s+/g, '') && d.i >= ult.index); if(ach) alvo = ach; } }
   if(!alvo) alvo = datas[0] || null;
   if(alvo){
     r.data = alvo.d;
@@ -122,10 +182,10 @@ function editalExtrair(texto){
     const per = /manh[ãa]/.test(trecho) ? ' (manhã)' : (/tarde/.test(trecho) ? ' (tarde)' : '');
     const hr = /\b(\d{1,2})\s*h(?:\s*(\d{2}))?\b/.exec(trecho);
     r.rotulo = alvo.s.includes('/') ? alvo.s.replace(/\b(\d)\//, '0$1/') : concursoDataObj(alvo.d).toLocaleDateString('pt-BR');
-    r.rotulo += per || (hr ? ` (${hr[1]}h${hr[2] || ''})` : '');
+    r.rotulo += per || (hr ? ` (${hr[1]}h${hr[2] || ''})` : (/prova objetiva[^.]{0,160}turno da manh[ãa]/i.test(t) ? ' (manhã)' : ''));
   }
   // link
-  const mLink = /https?:\/\/[^\s)>\]"]+/i.exec(t); if(mLink) r.link = mLink[0].replace(/[.,;]+$/, '');
+  const mLink = /(?:https?:\/\/|www\.)[^\s)>\]"]+/i.exec(t); if(mLink) r.link = (/^www\./i.test(mLink[0]) ? 'https://' : '') + mLink[0].replace(/[.,;]+$/, '');
   // cargos e matérias: cada "CARGO ...: X" abre um bloco; matérias antes do primeiro cargo (ou sem cargo) são comuns
   const reMat = /^(direito|l[íi]ngua|racioc[íi]nio|inform[áa]tica|matem[áa]tica|contabilidade|administra[cç][aã]o|auditoria|economia|estat[íi]stica|legisla[cç][aã]o|ci[êe]ncia|realidade|atualidades|regimento|[ée]tica|geografia|hist[óo]ria|portugu[êe]s|ingl[êe]s|gest[aã]o|finan[cç]as|licita|controle|tecnologia|banco de dados|an[áa]lise|engenharia|pol[íi]ticas|seguran[cç]a|arquivologia|biologia|f[íi]sica|qu[íi]mica|conhecimentos (do|da|de) |sa[úu]de|educa[cç][aã]o|pedagogia|enfermagem|medicina|odontologia|psicologia|servi[cç]o social|redes|sistemas|programa[cç][aã]o|processo|execu[cç][aã]o|crimin|penal|civil|tribut|previd|trabalho|empresarial|ambiental|urban|elei|human|noções|no[cç][õo]es|raciocinio)/i;
   const reCargo = /^(?:cargo|emprego|cargo\/especialidade|cargo\/[áa]rea)\s*(?:n?[º°o.]?\s*\d+)?\s*[:\-–—]\s*(.{4,120})$/i;
@@ -148,13 +208,18 @@ function editalExtrair(texto){
     if(!alvo.includes(lim) && !comuns.includes(lim)) alvo.push(lim);
   });
   r.cargos = cargos.slice(0, 30); r.comuns = comuns.slice(0, 40); r.materias = comuns.slice(0, 40);
-  if(!r.cargo && cargos[0]) r.cargo = cargos[0].nome;
+  const est = editalEstruturado(linhas);
+  if(est){ r.cargos = est.cargos; r.comuns = est.comuns; r.materias = est.comuns; r.qtdComuns = est.qtdComuns; }
+  r.qtdComuns = r.qtdComuns || {};
+  if(est && r.cargos[0]) r.cargo = r.cargos[0].nome; else if(!r.cargo && r.cargos[0]) r.cargo = r.cargos[0].nome;
   // itens soltos úteis
-  const add = (rot, re) => { const m = re.exec(t); if(m) r.itens.push([rot, m[0].replace(/\s+/g, ' ').trim().slice(0, 160)]); };
-  add('Requisito', /(?:requisito|escolaridade|forma[cç][aã]o)[^\n]{0,20}:\s*[^\n.]{5,140}/i);
-  add('Objetiva', /\d{2,3}\s*(?:\([^)]*\)\s*)?(?:quest[õo]es|itens)[^\n.]{0,120}/i);
+  const add = (rot, re) => { const m = re.exec(t); if(m) r.itens.push([rot, m[0].replace(/\s+/g, ' ').trim().slice(0, 260)]); };
+  add('Requisito', /requisito:\s*[^.]{5,260}/i);
+  const mTot = /\bTotal\s+(\d{2,3})\s+-\s+[\d.,]+/.exec(t); if(mTot) r.itens.push(['Objetiva', `${mTot[1]} questões de múltipla escolha`]);
+  add('Duração da objetiva', /prova objetiva ter[áa] dura[cç][aã]o[^.]{5,120}/i);
+  add('Discursiva', /prova discursiva ter[áa] dura[cç][aã]o[^.]{5,120}/i);
   add('Inscrições', /inscri[cç][õo]es[^\n]{0,30}(?:de|at[ée]|das?)\s*\d{1,2}[^\n.]{0,80}/i);
-  add('Validade', /validade[^\n]{0,60}(?:\d+\s*\(?[a-zç]*\)?\s*(?:anos?|meses))[^\n.]{0,50}/i);
+  add('Validade', /prazo de validade[^.]{5,160}/i);
   return r;
 }
 async function editalLerArquivo(file){
@@ -165,7 +230,7 @@ async function editalLerArquivo(file){
     let txt = ''; const max = Math.min(pdf.numPages, 120);
     for(let i = 1; i <= max; i++){
       const c = await (await pdf.getPage(i)).getTextContent(); let y = null, lin = '';
-      c.items.forEach(it => { const yy = it.transform[5]; if(y !== null && Math.abs(yy - y) > 2){ txt += lin.trim() + '\n'; lin = ''; } y = yy; lin += it.str + ' '; });
+      let fimX = null; c.items.forEach(it => { const yy = it.transform[5], xx = it.transform[4]; if(y !== null && Math.abs(yy - y) > 2){ txt += lin.trim() + '\n'; lin = ''; fimX = null; } y = yy; lin += ((fimX !== null && xx - fimX < 1.5) ? '' : (lin ? ' ' : '')) + it.str; fimX = xx + (it.width || 0); });
       txt += lin.trim() + '\n';
     }
     return txt;
@@ -229,9 +294,12 @@ function concursoForm(c){
 function concursoLerForm(){
   const g = id => ((document.getElementById('conc-' + id) || {}).value || '').trim();
   return { nome: g('nome'), orgao: g('orgao'), cargo: g('cargo'), banca: g('banca'), data: g('data'), rotulo: g('rotulo'), remuneracao: g('remuneracao'), vagas: g('vagas'), link: g('link'),
-    cargos: concursoCargosDeTexto(g('cargos')).cargos, comuns: concursoCargosDeTexto(g('cargos')).comuns, materias: concursoCargosDeTexto(g('cargos')).comuns, itens: concursoItensDeTexto(g('itens')) };
+    cargos: concursoCargosDeTexto(g('cargos')).cargos.map(x => Object.assign(x, { qtd: concRascunho.qtd[x.nome] || {} })), qtdComuns: concRascunho.qtdComuns, comuns: concursoCargosDeTexto(g('cargos')).comuns, materias: concursoCargosDeTexto(g('cargos')).comuns, itens: concursoItensDeTexto(g('itens')) };
 }
+let concRascunho = { qtdComuns: {}, qtd: {} };
+function concursoRascunhoDe(c){ concRascunho = { qtdComuns: Object.assign({}, c.qtdComuns || {}), qtd: {} }; (c.cargos || []).forEach(x => { concRascunho.qtd[x.nome] = Object.assign({}, x.qtd || {}); }); }
 function concursoPreencher(r){
+  if(r.cargos){ concursoRascunhoDe(r); }
   Object.keys(r).forEach(k => { if(k === 'cargos' || k === 'comuns' || k === 'materias') return; const el = document.getElementById('conc-' + k); if(!el) return; el.value = Array.isArray(r[k]) ? (k === 'itens' ? concursoItensTexto({ itens: r[k] }) : r[k].join('\n')) : (r[k] || el.value); });
   const ec = document.getElementById('conc-cargos'); if(ec && (r.cargos || r.comuns)) ec.value = concursoCargosTexto(r);
 }
@@ -245,7 +313,8 @@ function concursoAbrir(){
   const el = concursoModal(); const corpo = document.getElementById('concurso-corpo');
   el.dataset.obrig = ''; el.querySelector('.lei-barra strong').textContent = 'Carregar edital do concurso';
   corpo.onclick = null; corpo.onchange = null; delete corpo.dataset.sel;
-  corpo.innerHTML = concursoForm(CONCURSO.padrao ? CONCURSO_PADRAO : CONCURSO);
+  const base = CONC_DB.lista.find(x => x.id === CONC_DB.ativo) || {}; concursoRascunhoDe(CONCURSO.padrao ? {} : base);
+  corpo.innerHTML = concursoForm(CONCURSO.padrao ? CONCURSO_PADRAO : Object.assign({}, CONCURSO, base));
   el.hidden = false;
 }
 document.addEventListener('click', e => {
@@ -318,7 +387,7 @@ const CONC_CATALOGO = [
   { slug: 'adm-lgpd-lai', nome: 'Adm: LGPD + LAI', n: 203, dir: ['lgpd', 'protecao de dados', 'acesso a informacao', 'lei de acesso'], rel: ['direito administrativo'] },
   { slug: 'afo', nome: 'AFO', n: 300, dir: ['orcamento', 'financas publicas', 'administracao financeira', 'afo', 'responsabilidade fiscal', 'lrf', 'contabilidade publica'], rel: [] },
   { slug: 'analise-dados-ia', nome: 'Análise de Dados e IA', n: 200, dir: ['analise de dados', 'inteligencia artificial', 'ciencia de dados', 'estatistica', 'business intelligence'], rel: ['informatica', 'tecnologia da informacao'] },
-  { slug: 'conhec-df', nome: 'Conhecimentos do DF', n: 203, dir: ['conhecimentos do distrito federal', 'realidade do distrito federal', 'historia do distrito federal', 'geografia do distrito federal', 'atualidades do distrito federal', 'conhecimentos do df'], rel: ['distrito federal'] },
+  { slug: 'conhec-df', nome: 'Conhecimentos do DF', n: 203, dir: ['conhecimentos do distrito federal', 'realidade do distrito federal', 'historia do distrito federal', 'geografia do distrito federal', 'atualidades do distrito federal', 'conhecimentos do df', 'acerca do distrito federal', 'politica para mulheres'], rel: ['distrito federal'] },
   { slug: 'contratos', nome: 'Gestão e Fiscalização de Contratos', n: 200, dir: ['gestao de contratos', 'fiscalizacao de contratos', 'contratos administrativos'], rel: ['licitacoes'] },
   { slug: 'd-tributario', nome: 'Direito Tributário', n: 300, dir: ['tributario', 'tributos', 'codigo tributario'], rel: ['financas publicas'] },
   { slug: 'decreto-44330', nome: 'Decreto 44.330', n: 53, dir: ['44.330', '44330'], rel: [] },
@@ -344,13 +413,15 @@ function concursoCompararMateria(m){
   const t = ' ' + concNorm(m) + ' '; const dir = [], rel = [];
   CONC_CATALOGO.forEach(e => {
     const has = k => { const kk = concNorm(k); return t.includes(' ' + kk + ' ') || (kk.length > 5 && t.includes(kk)); };
-    if(e.dir.some(has)) dir.push(e); else if(e.rel.some(has)) rel.push(e);
+    const ti = t.includes('tecnologia da informacao');      // contratos de TI: aproveita só em parte a lista de contratos gerais
+    if(e.dir.some(has) && !(ti && e.slug === 'contratos')) dir.push(e); else if(e.rel.some(has) || (ti && e.slug === 'contratos' && e.dir.some(has))) rel.push(e);
   });
-  return { diretas: dir, relacionadas: rel };
+  return { diretas: dir, relacionadas: dir.length ? [] : rel };
 }
 function concursoComparar(c){
   const mats = c.padrao ? [] : (c.materias || []);
-  const linhas = mats.map(m => ({ materia: m, ...concursoCompararMateria(m) }));
+  const qt = c.qtd || {}, qn = {}; Object.keys(qt).forEach(k => { qn[concNorm(k)] = qt[k]; });
+  const linhas = mats.map(m => ({ materia: m, peso: qn[concNorm(m)] || 0, ...concursoCompararMateria(m) }));
   const usados = new Set(); linhas.forEach(l => l.diretas.concat(l.relacionadas).forEach(e => usados.add(e.slug)));
   return { linhas, usados, cobertas: linhas.filter(l => l.diretas.length).length, parciais: linhas.filter(l => !l.diretas.length && l.relacionadas.length).length, semLista: linhas.filter(l => !l.diretas.length && !l.relacionadas.length) };
 }
@@ -364,7 +435,10 @@ function concursoAbrirMateriaQuestoes(slug){
 }
 function concursoCompat(c){
   const cmp = concursoComparar(c || CONCURSO), n = cmp.linhas.length;
-  return { cmp, n, pct: n ? Math.round((cmp.cobertas + 0.5 * cmp.parciais) / n * 100) : 0 };
+  const comPeso = cmp.linhas.some(l => l.peso > 0), w = l => comPeso ? (l.peso || 0) : 1;
+  const tot = cmp.linhas.reduce((a, l) => a + w(l), 0);
+  const ok = cmp.linhas.reduce((a, l) => a + w(l) * (l.diretas.length ? 1 : (l.relacionadas.length ? 0.5 : 0)), 0);
+  return { cmp, n, comPeso, totalQuestoes: tot, pct: tot ? Math.round(ok / tot * 100) : 0 };
 }
 /* marca nas matérias da base: ★ cobrada no cargo, ◐ relacionada */
 function concursoMarca(nomeMateria){
@@ -386,13 +460,13 @@ function concursoPlanoHtml(){
   h += `<div class="conc-cargo-sel">Cargo: <b>${esc(c.cargo || '(não informado)')}</b></div>`;
   if(!cmp.linhas.length) return h + `<p>Este cargo ainda não tem matérias cadastradas. Abra <b>Carregar edital</b> e preencha "Cargos e matérias".</p><button type="button" class="side-action-btn compact" data-conc-abrir="1">📄 Carregar/editar edital</button>`;
   const cp = concursoCompat(c);
-  h += `<div class="conc-compat"><div class="conc-compat-t">Compatibilidade da base com o cargo: <b>${cp.pct}%</b></div><div class="conc-barra"><i style="width:${cp.pct}%"></i></div></div>`;
+  h += `<div class="conc-compat"><div class="conc-compat-t">Compatibilidade da base com o cargo: <b>${cp.pct}%</b>${cp.comPeso ? ` <small>(ponderada pelas ${cp.totalQuestoes} questões da prova)</small>` : ''}</div><div class="conc-barra"><i style="width:${cp.pct}%"></i></div></div>`;
   h += `<p class="conc-resumo">✅ <b>${cmp.cobertas}</b> de ${cmp.linhas.length} matérias com lista pronta · 🟡 <b>${cmp.parciais}</b> parcial · ❌ <b>${cmp.semLista.length}</b> sem lista</p>`;
-  h += `<table class="conc-tab"><thead><tr><th>Matéria do edital</th><th>Situação</th><th>Listas que você já tem</th></tr></thead><tbody>`;
+  h += `<table class="conc-tab"><thead><tr><th>Matéria do edital</th>${cp.comPeso ? '<th>Questões</th>' : ''}<th>Situação</th><th>Listas que você já tem</th></tr></thead><tbody>`;
   cmp.linhas.forEach(l => {
     const st = l.diretas.length ? '✅ coberta' : (l.relacionadas.length ? '🟡 parcial' : '❌ sem lista');
     const lst = l.diretas.concat(l.relacionadas).map(btn).join('<br>') || '<small>Importar um .md desta matéria (aba Importar)</small>';
-    h += `<tr class="${l.diretas.length ? 'conc-ok' : (l.relacionadas.length ? 'conc-par' : 'conc-sem')}"><td>${esc(l.materia)}</td><td>${st}</td><td>${lst}</td></tr>`;
+    h += `<tr class="${l.diretas.length ? 'conc-ok' : (l.relacionadas.length ? 'conc-par' : 'conc-sem')}"><td>${esc(l.materia)}</td>${cp.comPeso ? `<td>${l.peso || '—'}</td>` : ''}<td>${st}</td><td>${lst}</td></tr>`;
   });
   h += `</tbody></table>`;
   const fora = CONC_CATALOGO.filter(e => !cmp.usados.has(e.slug));
