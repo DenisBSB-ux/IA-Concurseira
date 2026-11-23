@@ -47,7 +47,8 @@ function attachHandlers(){
   const btnToggleMateriaMenu = document.getElementById('btn-toggle-materia-menu');
   if(btnToggleMateriaMenu) btnToggleMateriaMenu.addEventListener('click', ()=>{ STATE.materiaMenuAberto = !STATE.materiaMenuAberto; render(); });
   root.querySelectorAll('[data-macro-materia]').forEach(el=>{
-    el.addEventListener('click', ()=>{
+    el.addEventListener('click', ev=>{
+      if(ev.target.closest && ev.target.closest('[data-apostilas-mat]')) return;      // link das apostilas: tratado à parte
       // salva o simulado ativo antes de trocar de matéria
       if(STATE.quiz) salvarQuizEmAndamento();
       const novaMateria = el.dataset.macroMateria;

@@ -2923,3 +2923,12 @@ body.theme-light .cx-mat-s.ok{ color:#1e7d43; } body.theme-light .cx-mat-s.par{ 
 body.theme-light .letterhead .subtitle.conc-banca{ color:#5a6472; } body.theme-light .conc-banca b{ color:#1d1f22; }
 .letterhead .seal{ max-width:100%; min-width:0; }
 @media (max-width:560px){ .letterhead .subtitle.conc-sub{ font-size:11.5px; } .conc-sub .cs-sep{ margin:0 4px; } .letterhead .eyebrow.conc-inst{ font-size:11.5px; } }
+
+/* v644 — aba Matérias (apostilas em PDF) e link nas estatísticas */
+.ap-link{ font:inherit; font-size:11px; font-weight:700; margin-left:6px; padding:1px 8px; border-radius:10px; border:1px solid currentColor; background:transparent; color:inherit; cursor:pointer; opacity:.85; white-space:nowrap; } .ap-link:hover{ opacity:1; }
+.ap-aba{ max-width:860px; } .ap-h{ margin:0 0 4px; font-size:20px; } .ap-sub{ margin:0 0 10px; font-size:13px; opacity:.8; }
+.ap-busca{ width:100%; font:inherit; font-size:14px; padding:8px 12px; margin:0 0 12px; border:1px solid var(--paper-line); border-radius:8px; background:transparent; color:inherit; box-sizing:border-box; }
+.ap-grupo{ border:1px solid var(--paper-line); border-radius:10px; padding:10px 14px; margin-bottom:10px; } .ap-grupo.foco{ border-color:#2b5fa8; box-shadow:0 0 0 1px #2b5fa8 inset; background:rgba(43,95,168,.08); }
+.ap-grupo h4{ margin:0 0 6px; font-size:15px; } .ap-grupo h4 small{ font-weight:400; opacity:.65; margin-left:6px; }
+.ap-grupo ul{ list-style:none; margin:0; padding:0; } .ap-grupo li{ padding:5px 0; border-top:1px solid var(--paper-line); font-size:13.5px; } .ap-grupo li:first-child{ border-top:0; }
+.ap-grupo a{ color:inherit; text-decoration:underline; text-underline-offset:2px; } .ap-grupo li small{ opacity:.6; margin-left:6px; }
