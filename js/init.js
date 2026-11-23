@@ -97,7 +97,7 @@ setTimeout(verificarNovaVersao, 20000);
   setInterval(()=>{ try{ sincronizacaoAutomatica(); }catch(_){} }, 60000);
   window.addEventListener('offline', ()=>{ try{ atualizarLinhaSync(); atualizarIndicadorNuvem(); }catch(_){} });
   window.addEventListener('online', ()=>{ try{ atualizarLinhaSync(); atualizarIndicadorNuvem(); if(typeof sincronizacaoAtiva==='function' && sincronizacaoAtiva()) pushToCloud(); }catch(_){} });
-  // cópia automática diária do progresso (últimos 14 dias), logo depois de abrir, sem atrasar a primeira tela
+  // cópia automática diária do progresso (só a última fica guardada), logo depois de abrir, sem atrasar a primeira tela
   setTimeout(()=>{ try{ carregarSnapshots().then(()=>snapshotDiario()); }catch(_){} }, 4000);
   setTimeout(()=>{ try{ backupArquivoAutomatico(); }catch(_){} }, 15000);   // arquivo de backup do dia (ver nuvem.js)
   setInterval(()=>{ try{ snapshotDiario(); backupArquivoAutomatico(); }catch(_){} }, 6*3600*1000);
