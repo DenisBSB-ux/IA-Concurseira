@@ -132,7 +132,14 @@ try{
           email: usuario.email || '',
           nome: usuario.displayName || (usuario.email || '').split('@')[0] || 'conta Google',
         } : null;
-        if(usuario && usuario.uid!==uidAntes) vincularContaGoogle();
+        if(usuario && usuario.uid!==uidAntes){
+          vincularContaGoogle();
+          // mostra algo NA HORA (a vinculação com a nuvem pode levar segundos): tela de escolha do concurso, ou aviso de carregamento
+          try{
+            if(APP_INICIADO) render();
+            else if(root) root.innerHTML = '<div style="padding:60px;text-align:center;color:#a9b6cc;font-family:var(--font-mono);font-size:13px;">Entrando na sua conta…</div>';
+          }catch(_){}
+        }
         else if(!usuario && uidAntes && !SAINDO_DA_CONTA){
           // saiu por outro caminho (outra aba, sessão expirada): o aparelho
           // também não pode ficar com os dados dessa conta
