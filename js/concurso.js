@@ -11,7 +11,7 @@ const CONCURSO_PADRAO = {
   remuneracao: 'R$ 14.990,41', vagas: '10 imediatas e cadastro de reserva', itens: [], materias: [], cargos: [], comuns: [], ts: 0
 };
 let CONCURSO = Object.assign({}, CONCURSO_PADRAO);
-let CONC_DB = { lista: [], ativo: 'padrao', cargo: '', ts: 0 };
+let CONC_DB = { lista: [], ativo: 'padrao', cargo: '', escolhido: false, ts: 0 };
 const PROVA_TCDF = { data: new Date(2026, 10, 22), rotulo: CONCURSO_PADRAO.rotulo, link: CONCURSO_PADRAO.link };
 
 function concursoLerDB(){
@@ -46,15 +46,15 @@ function concursoCarregar(){
 }
 /* salva (ou atualiza) um concurso da lista e o torna o ativo; null volta ao TCDF */
 function concursoSalvar(c){
-  if(!c){ CONC_DB.ativo = 'padrao'; CONC_DB.cargo = ''; return concursoGravarDB(); }
+  if(!c){ CONC_DB.ativo = 'padrao'; CONC_DB.cargo = ''; CONC_DB.escolhido = true; return concursoGravarDB(); }
   const id = c.id || ('c_' + Date.now().toString(36));
   const novo = Object.assign({}, c, { id, padrao: false });
   const i = CONC_DB.lista.findIndex(x => x.id === id);
   if(i >= 0) CONC_DB.lista[i] = novo; else CONC_DB.lista.push(novo);
   CONC_DB.ativo = id; CONC_DB.cargo = ((novo.cargos || [])[0] || {}).nome || '';
-  concursoGravarDB();
+  concursoGravarDB();      // a escolha (obrigatória) só vale quando o usuário confirma em "Estudar este"
 }
-function concursoEscolher(id, cargo){ CONC_DB.ativo = id; CONC_DB.cargo = cargo || ''; concursoGravarDB(); }
+function concursoEscolher(id, cargo){ CONC_DB.ativo = id; CONC_DB.cargo = cargo || ''; CONC_DB.escolhido = true; concursoGravarDB(); }
 function concursoExcluir(id){ CONC_DB.lista = CONC_DB.lista.filter(x => x.id !== id); if(CONC_DB.ativo === id){ CONC_DB.ativo = 'padrao'; CONC_DB.cargo = ''; } concursoGravarDB(); }
 function concursoDataObj(iso){
   const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || ''); return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null;
@@ -66,7 +66,7 @@ function concursoAplicar(){
   PROVA_TCDF.link = c.link || '';
   PROVA_TCDF.semData = !d;
   try{ CONFIG.eyebrow = c.orgao || ''; CONFIG.footer = c.padrao ? 'PROCESSO Nº LO-TCDF/2026 · MATERIAL DE ESTUDO PRIVADO' : 'MATERIAL DE ESTUDO PRIVADO · ' + String(c.nome || '').toUpperCase(); }catch(_){}
-  try{ document.title = 'IA Concurseira'; }catch(_){}
+  try{ document.title = c.padrao ? 'IA Concurseira' : 'IA Concurseira · ' + (c.orgao || c.nome); }catch(_){}
 }
 
 /* ---------- extração do edital (heurística; o usuário confere antes de aplicar) ---------- */
@@ -195,8 +195,8 @@ function concursoModal(){
   if(!el){
     el = document.createElement('div'); el.id = 'concurso-modal'; el.className = 'lei-modal'; el.hidden = true;
     el.innerHTML = `<div class="lei-caixa prova-caixa conc-caixa" role="dialog" aria-label="Carregar edital"><div class="lei-barra"><strong>Carregar edital do concurso</strong><button type="button" class="btn-ui" data-conc-fechar="1" title="Fechar">✕</button></div><div class="lei-corpo" id="concurso-corpo"></div></div>`;
-    el.addEventListener('mousedown', e => { if(e.target === el) el.hidden = true; });
-    document.addEventListener('keydown', e => { if(e.key === 'Escape' && !el.hidden) el.hidden = true; });
+    el.addEventListener('mousedown', e => { if(e.target === el && el.dataset.obrig !== '1') el.hidden = true; });
+    document.addEventListener('keydown', e => { if(e.key === 'Escape' && !el.hidden && el.dataset.obrig !== '1') el.hidden = true; });
     document.body.appendChild(el);
   }
   return el;
@@ -243,7 +243,7 @@ async function concursoProcessarTexto(txt, st){
 }
 function concursoAbrir(){
   const el = concursoModal(); const corpo = document.getElementById('concurso-corpo');
-  el.querySelector('.lei-barra strong').textContent = 'Carregar edital do concurso';
+  el.dataset.obrig = ''; el.querySelector('.lei-barra strong').textContent = 'Carregar edital do concurso';
   corpo.onclick = null; corpo.onchange = null; delete corpo.dataset.sel;
   corpo.innerHTML = concursoForm(CONCURSO.padrao ? CONCURSO_PADRAO : CONCURSO);
   el.hidden = false;
@@ -253,7 +253,7 @@ document.addEventListener('click', e => {
   if(t.hasAttribute('data-conc-abrir')) return concursoAbrir();
   if(t.hasAttribute('data-conc-escolher')) return concursoEscolherAbrir();
   if(t.hasAttribute('data-conc-plano')) return concursoPlanoAbrir();
-  if(t.hasAttribute('data-conc-fechar')) { concursoModal().hidden = true; return; }
+  if(t.hasAttribute('data-conc-fechar')) { const mm = concursoModal(); if(mm.dataset.obrig === '1') return; mm.hidden = true; if(!CONC_DB.escolhido) concursoEscolherAbrir(); return; }
   if(t.hasAttribute('data-conc-colar')){
     const ta = document.getElementById('conc-colado'); ta.hidden = false; ta.focus();
     if(!ta._ok){ ta._ok = 1; ta.addEventListener('input', () => { clearTimeout(ta._t); ta._t = setTimeout(() => concursoProcessarTexto(ta.value, document.getElementById('conc-status')), 500); }); }
@@ -266,7 +266,7 @@ document.addEventListener('click', e => {
   if(t.hasAttribute('data-conc-aplicar')){
     const c = concursoLerForm();
     if(!c.nome){ const s = document.getElementById('conc-status'); if(s) s.textContent = 'Informe pelo menos o nome do concurso.'; return; }
-    concursoSalvar(c); concursoModal().hidden = true; if(typeof render === 'function') render(); concursoPlanoAbrir();
+    concursoSalvar(c); concursoModal().hidden = true; if(typeof render === 'function') render(); concursoEscolherAbrir();      // confirma o cargo
   }
 });
 document.addEventListener('change', async e => {
@@ -362,6 +362,19 @@ function concursoAbrirMateriaQuestoes(slug){
   const el = document.getElementById('concurso-plano'); if(el) el.hidden = true;
   if(typeof render === 'function') render(); return true;
 }
+function concursoCompat(c){
+  const cmp = concursoComparar(c || CONCURSO), n = cmp.linhas.length;
+  return { cmp, n, pct: n ? Math.round((cmp.cobertas + 0.5 * cmp.parciais) / n * 100) : 0 };
+}
+/* marca nas matérias da base: ★ cobrada no cargo, ◐ relacionada */
+function concursoMarca(nomeMateria){
+  if(CONCURSO.padrao) return '';
+  const cmp = concursoComparar(CONCURSO); const nm = concNorm(nomeMateria);
+  const e = CONC_CATALOGO.find(x => { const cn = concNorm(concCatNome(x.slug)); return cn === nm || cn.includes(nm) || nm.includes(cn); });
+  if(!e) return '';
+  const dir = cmp.linhas.some(l => l.diretas.includes(e)), rel = cmp.linhas.some(l => l.relacionadas.includes(e));
+  return dir ? ' <span class="conc-star" title="Cobrada no seu cargo">★</span>' : (rel ? ' <span class="conc-star rel" title="Relacionada a uma matéria do seu cargo">◐</span>' : ' <span class="conc-star off" title="Não cobrada no seu cargo">·</span>');
+}
 function concursoPlanoHtml(){
   const c = CONCURSO, cmp = concursoComparar(c);
   const btn = e => `<span class="conc-lst"><b>${esc(concCatNome(e.slug))}</b> <small>${concCatQtd(e)} questões</small> <button type="button" class="prova-det-btn" data-conc-resumo="${esc(concCatNome(e.slug))}">📖 Resumo</button> <button type="button" class="prova-det-btn" data-conc-quest="${esc(e.slug)}">📝 Questões</button></span>`;
@@ -372,12 +385,14 @@ function concursoPlanoHtml(){
   }
   h += `<div class="conc-cargo-sel">Cargo: <b>${esc(c.cargo || '(não informado)')}</b></div>`;
   if(!cmp.linhas.length) return h + `<p>Este cargo ainda não tem matérias cadastradas. Abra <b>Carregar edital</b> e preencha "Cargos e matérias".</p><button type="button" class="side-action-btn compact" data-conc-abrir="1">📄 Carregar/editar edital</button>`;
+  const cp = concursoCompat(c);
+  h += `<div class="conc-compat"><div class="conc-compat-t">Compatibilidade da base com o cargo: <b>${cp.pct}%</b></div><div class="conc-barra"><i style="width:${cp.pct}%"></i></div></div>`;
   h += `<p class="conc-resumo">✅ <b>${cmp.cobertas}</b> de ${cmp.linhas.length} matérias com lista pronta · 🟡 <b>${cmp.parciais}</b> parcial · ❌ <b>${cmp.semLista.length}</b> sem lista</p>`;
   h += `<table class="conc-tab"><thead><tr><th>Matéria do edital</th><th>Situação</th><th>Listas que você já tem</th></tr></thead><tbody>`;
   cmp.linhas.forEach(l => {
     const st = l.diretas.length ? '✅ coberta' : (l.relacionadas.length ? '🟡 parcial' : '❌ sem lista');
     const lst = l.diretas.concat(l.relacionadas).map(btn).join('<br>') || '<small>Importar um .md desta matéria (aba Importar)</small>';
-    h += `<tr><td>${esc(l.materia)}</td><td>${st}</td><td>${lst}</td></tr>`;
+    h += `<tr class="${l.diretas.length ? 'conc-ok' : (l.relacionadas.length ? 'conc-par' : 'conc-sem')}"><td>${esc(l.materia)}</td><td>${st}</td><td>${lst}</td></tr>`;
   });
   h += `</tbody></table>`;
   const fora = CONC_CATALOGO.filter(e => !cmp.usados.has(e.slug));
@@ -405,7 +420,8 @@ function concursoPlanoAbrir(){
 /* ---------- escolher concurso e cargo (aparece após o login e pelo botão do cartão da prova) ---------- */
 function concursoEscolherAbrir(){
   const m = concursoModal(); const corpo = document.getElementById('concurso-corpo');
-  m.querySelector('.lei-barra strong').textContent = 'Escolha o concurso e o cargo';
+  m.dataset.obrig = CONC_DB.escolhido ? '' : '1';
+  m.querySelector('.lei-barra strong').textContent = CONC_DB.escolhido ? 'Escolha o concurso e o cargo' : 'Escolha a instituição e o cargo para começar';
   const todos = [CONCURSO_PADRAO].concat(CONC_DB.lista);
   const ativo = CONC_DB.ativo || 'padrao';
   const cargosDe = id => { const c = todos.find(x => x.id === id); return c && c.id !== 'padrao' ? (c.cargos || []) : []; };
@@ -423,18 +439,17 @@ function concursoEscolherAbrir(){
     if(ex){ e.preventDefault(); if(confirm('Remover este concurso da lista?')){ concursoExcluir(ex.dataset.concExcluir); corpo.dataset.sel = 'padrao'; corpo.innerHTML = html(); if(typeof render === 'function') render(); } return; }
     if(e.target.closest && e.target.closest('[data-conc-ir]')){
       const id = corpo.dataset.sel || 'padrao'; const cg = (document.getElementById('conc-esc-cargo') || {}).value || '';
-      try{ localStorage.setItem('ia_conc_escolha_vista', '1'); }catch(_){}
-      concursoEscolher(id, cg); m.hidden = true; if(typeof render === 'function') render();
+      if(id !== 'padrao' && !cg && cargosDe(id).length){ alert('Escolha o cargo.'); return; }
+      concursoEscolher(id, cg); m.dataset.obrig = ''; m.hidden = true; if(typeof render === 'function') render();
       if(id !== 'padrao') concursoPlanoAbrir();
     }
   };
 }
-/* a primeira vez após o login, pergunta qual concurso/cargo estudar */
+/* após o login a escolha da instituição e do cargo é obrigatória (vale para a conta; sincroniza pela nuvem) */
 function concursoPerguntaInicial(){
-  let visto = null; try{ visto = localStorage.getItem('ia_conc_escolha_vista'); }catch(_){}
-  if(visto || CONC_DB.lista.length === 0) return;      // sem outros concursos cadastrados não há o que escolher
-  try{ localStorage.setItem('ia_conc_escolha_vista', '1'); }catch(_){}
-  setTimeout(concursoEscolherAbrir, 600);
+  if(CONC_DB.escolhido) return;
+  const m = document.getElementById('concurso-modal'); if(m && !m.hidden) return;
+  setTimeout(() => { if(!CONC_DB.escolhido){ const mm = document.getElementById('concurso-modal'); if(!mm || mm.hidden) concursoEscolherAbrir(); } }, 300);
 }
 
 concursoCarregar();
