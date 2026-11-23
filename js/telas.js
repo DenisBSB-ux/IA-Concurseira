@@ -903,15 +903,11 @@ function provaContagemHtml(){
   const dias = provaDias();
   const txt = dias>1 ? `Faltam <b>${dias} dias</b>` : (dias===1 ? 'Falta <b>1 dia</b>' : (dias===0 ? '<b>A prova é hoje!</b>' : 'Prova realizada'));
   return `<div class="prova-info">
-    <div class="prova-rot">${CONCURSO.padrao ? 'Prova objetiva (manhã) e Discursiva (tarde)' : esc(CONCURSO.nome)}</div>
+    ${CONCURSO.padrao ? '<div class="prova-rot">Prova objetiva (manhã) e Discursiva (tarde)</div>' : ''}
     <div class="prova-data">${esc(PROVA_TCDF.rotulo)}</div>
     ${CONCURSO.padrao ? '' : `<div class="prova-conta">Base × cargo: <b>${concursoCompat().pct}%</b> compatível</div>`}
     <div class="prova-conta">${PROVA_TCDF.semData ? 'Data da prova a definir' : txt}</div>
     ${PROVA_TCDF.link ? `<a class="prova-link" href="${esc(PROVA_TCDF.link)}" target="_blank" rel="noopener noreferrer">${CONCURSO.padrao ? 'Cespe: edital e avisos' : esc(CONCURSO.banca||'Edital e avisos')+': edital e avisos'} ↗</a>` : ''}
-    <button type="button" class="prova-det-btn" data-prova-detalhes="1">Detalhes do edital</button>
-    <button type="button" class="prova-det-btn" data-conc-plano="1" title="Compara as matérias do cargo com as listas que você já tem">📋 Plano do cargo</button>
-    <button type="button" class="prova-det-btn" data-conc-escolher="1" title="Escolher outro concurso ou cargo">🎯 Concurso e cargo</button>
-    <button type="button" class="prova-det-btn" data-conc-abrir="1" title="Carrega o PDF do edital e adapta o site ao concurso">📄 Carregar edital</button>
   </div>`;
 }
 function renderSyncSidebarBlock(){
