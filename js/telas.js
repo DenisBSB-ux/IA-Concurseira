@@ -714,7 +714,7 @@ function renderLetterhead(){
   const s = computeSnapshot();
   const totalVisivel = ALL_QUESTIONS.filter(q=>!q.duplicataOculta).length;
   const countBadge = '';
-  const tituloExibido = 'TCDF Plataforma';
+  const tituloExibido = 'IA Concurseira';
   const escopoTema = (STATE.materia && STATE.tema!=='todos') ? `<div class="escopo-aviso">📍 estatísticas filtradas por assunto: <b>${esc(STATE.tema)}</b> — <a href="#" id="link-limpar-assunto-header">ver a matéria inteira</a></div>` : '';
   return `
   <div class="letterhead">
