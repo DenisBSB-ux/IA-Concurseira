@@ -1562,10 +1562,10 @@ function diasDesdeUltimoBackupArquivo(){
   try{ const t = parseInt(localStorage.getItem(ULTIMO_BACKUP_ARQUIVO_KEY)||'0',10); return t ? Math.floor((Date.now()-t)/86400000) : null; }catch(_){ return null; }
 }
 
-/* ---- cópias automáticas no aparelho (últimos 7 dias) ----
-   Uma por dia (últimos 14 dias), guardadas no próprio armazenamento do navegador. "Recuperar" MESCLA a cópia no progresso atual (nunca apaga nada). */
+/* ---- cópia automática no aparelho (só a última) ----
+   Uma cópia por dia, mas só a mais recente fica guardada (para não pesar no navegador nem na nuvem), no próprio armazenamento do navegador. "Recuperar" MESCLA a cópia no progresso atual (nunca apaga nada). */
 const SNAPSHOTS_KEY = 'tcdf-snapshots';
-const SNAPSHOTS_MAX = 5;
+const SNAPSHOTS_MAX = 1;
 let SNAPSHOTS = [];   // [{ ts, progress: string(JSON), edicoes, gabaritos }]
 // guarda só as n cópias automáticas mais recentes (cada uma repete o progresso inteiro e ocupa muito espaço)
 async function reduzirSnapshots(n){
@@ -1578,6 +1578,7 @@ async function reduzirSnapshots(n){
 async function carregarSnapshots(){
   try{ const r = await storageGet(SNAPSHOTS_KEY); SNAPSHOTS = (r && r.value) ? JSON.parse(r.value) : []; if(!Array.isArray(SNAPSHOTS)) SNAPSHOTS = []; }
   catch(_){ SNAPSHOTS = []; }
+  if(SNAPSHOTS.length > SNAPSHOTS_MAX){ SNAPSHOTS = SNAPSHOTS.slice(-SNAPSHOTS_MAX); try{ await storageSet(SNAPSHOTS_KEY, JSON.stringify(SNAPSHOTS)); }catch(_){} }   // cópias antigas já guardadas: fica só a última
   return SNAPSHOTS;
 }
 

@@ -298,7 +298,7 @@ async function liberarEspacoNavegador(){
   if(_liberando) return []; _liberando = true; const feito = [];
   try{ if(typeof caches !== 'undefined'){ const ks = await caches.keys(); for(const k of ks) await caches.delete(k); if(ks.length) feito.push('cache offline'); } }catch(_){}
   try{ if(await limparLocalStorageRedundante() > 0) feito.push('cópias antigas'); }catch(_){}
-  try{ if(typeof reduzirSnapshots === 'function' && await reduzirSnapshots(3)) feito.push('cópias automáticas antigas'); }catch(_){}
+  try{ if(typeof reduzirSnapshots === 'function' && await reduzirSnapshots(1)) feito.push('cópias automáticas antigas'); }catch(_){}
   _liberando = false; return feito;
 }
 // cópias grandes do localStorage (versões antigas) que já existem no IndexedDB não servem para nada: o app lê o IndexedDB primeiro

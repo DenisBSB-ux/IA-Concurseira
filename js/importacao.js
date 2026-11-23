@@ -97,7 +97,7 @@ function renderBackupCard(){
     <input type="file" id="file-input-progresso" accept=".json,application/json" style="display:none;">
     <label style="display:flex;gap:8px;align-items:center;font-size:12.5px;margin:10px 0 4px;cursor:pointer;"><input type="checkbox" id="chk-backup-arquivo-auto" ${(typeof backupArquivoAutoLigado==='function' ? backupArquivoAutoLigado() : true) ? 'checked' : ''}> Baixar o arquivo de backup automaticamente todo dia (na primeira abertura do dia)</label>
     ${log ? (log.ok ? `<div class="side-status ok">✓ ${esc(log.msg||'backup importado')}</div>` : `<div class="side-status err">${esc(log.error||'')}</div>`) : ''}
-    <h4 style="font-size:13px;margin:14px 0 6px;">Cópias automáticas neste aparelho (últimos 14 dias, uma por dia)</h4>
+    <h4 style="font-size:13px;margin:14px 0 6px;">Última cópia automática neste aparelho (só a mais recente é mantida)</h4>
     ${snaps.length ? snaps.map(sn=>`<div style="display:flex;gap:8px;align-items:center;font-size:12.5px;margin:4px 0;">
       <span style="flex:1;">${esc(new Date(sn.ts).toLocaleString('pt-BR'))}</span>
       <button class="btn-outline btn-sm" data-snap-recuperar="${Number(sn.ts)}" title="Mescla esta cópia no progresso atual (nada é apagado)">Recuperar</button>
