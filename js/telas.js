@@ -199,7 +199,7 @@ function setLocalTab(materiaKey, tab){
 }
 
 function ensureMateriaSelecionada(){
-  const materias = materiasDisponiveis();
+  const materias = (typeof materiasDoPerfil==='function') ? materiasDoPerfil() : materiasDisponiveis();
   if(!STATE.materia || !materias.includes(STATE.materia)){
     STATE.materia = materias[0] || null;
     STATE.tema = 'todos';
@@ -558,14 +558,16 @@ function faixaCorPctBase(pct, respondidas){
 // do card
 
 function renderEstatisticasPorMateria(){
-  const materias = materiasDisponiveis();
-  if(materias.length<2) return ''; // com 1 matéria só, isso duplicaria o card grande de cima
+  const materias = materiasDoPerfil();
+  const adapt = concursoListaAdaptada(materiasDisponiveis());
+  const foraVisivel = concursoForaVisivel();
+  if(materias.length<2 && !(adapt.adapta && (adapt.faltantes.length || adapt.ocultas.length))) return ''; // com 1 matéria só, isso duplicaria o card grande de cima
   const linhas = materias.map(m=>{
     const s = computeSnapshotMateria(m);
     const respondidas = s.ac + s.erradas;
     const q = quizGeralDe(m);
     const temSimuladoEmAndamento = !!q;
-    return { nome: m, acertos: s.ac, erros: s.erradas, pct: s.taxa, respondidas, total: s.totalPontuavel, ativa: m===STATE.materia, temSimuladoEmAndamento, ultimaRespostaTs: s.ultimaRespostaTs };
+    return { nome: m, acertos: s.ac, erros: s.erradas, pct: s.taxa, respondidas, total: s.totalPontuavel, ativa: m===STATE.materia, temSimuladoEmAndamento, ultimaRespostaTs: s.ultimaRespostaTs, foraDoCargo: adapt.adapta && adapt.ocultas.includes(m) };
   }).sort((a,b)=>{
     // matéria 100% respondida (Respondidas === Total) fica sempre no topo,
     // independentemente da ordenação ativa (A–Z ou Última resposta)
@@ -578,12 +580,16 @@ function renderEstatisticasPorMateria(){
     else { const d = a.nome.localeCompare(b.nome,'pt-BR') * f; if(d) return d; }
     return a.nome.localeCompare(b.nome,'pt-BR');
   });
+  // matérias do edital que ainda não têm lista: entram na lista geral, destacadas, no topo
+  const faltam = adapt.faltantes.map(f => ({ nome: f.materia, faltante: true, peso: f.peso, acertos: 0, erros: 0, pct: 0, respondidas: 0, total: 0, ativa: false }));
+  linhas.unshift(...faltam);
   const estiloCelula = 'font-size:13px;font-weight:400;font-family:inherit;line-height:1.4;';
   const atividade = computeAtividadeDiariaGeral();
   return `
   <div class="card-block" style="margin-top:22px;">
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
       <h3 style="margin:0;color:inherit;font-size:22px;">📈 Estatísticas por matéria</h3>
+      ${adapt.adapta ? `<div class="conc-adapt"><span>Lista adaptada ao cargo: <b>${adapt.visiveis.length}</b> da base${adapt.faltantes.length ? ` · <b class="conc-falta-n">${adapt.faltantes.length}</b> do edital sem lista` : ''}</span>${adapt.ocultas.length ? ` <button type="button" class="prova-det-btn" data-conc-fora="1">${foraVisivel ? 'Ocultar' : 'Mostrar'} ${adapt.ocultas.length} fora do cargo</button>` : ''}</div>` : ''}
     </div>
     <div class="resumo-dia">
       <div class="resumo-esq">
@@ -646,6 +652,11 @@ function renderTabelaEstatisticas(linhas, estiloCelula){
       <div style="width:90px;text-align:right;">${thOrd('ultima','Atualização')}</div>
     </div>
     ${linhas.map((l,i)=>{
+      if(l.faltante) return `<div class="bar-row conc-faltante" style="flex-wrap:wrap;align-items:center;gap:10px;padding:8px 10px 8px 12px;margin-bottom:6px;${estiloCelula}">
+        <div style="width:18px;">⚠️</div><div style="width:26px;">${i+1}</div>
+        <div class="name" style="flex:1;font-weight:700;">${esc(l.nome)} <span class="conc-tag-falta">FALTA LISTA</span></div>
+        <div style="color:inherit;opacity:.8;font-size:12px;">${l.peso ? l.peso+' questões na prova' : 'cobrada no edital'}</div>
+        <button type="button" class="prova-det-btn" data-conc-importar="1" title="Importar o .md desta matéria">Importar lista</button></div>`;
       // matéria concluída (100% respondida) = azul, independentemente do % de acerto
       const concluida = l.total>0 && l.respondidas>=l.total;
       const cor = concluida ? corDoTema({ bg:'#dbeafe', fg:'#1e4f8f', fgForte:'#173e72' }) : faixaCorPct(l.pct, l.respondidas);
@@ -657,7 +668,7 @@ function renderTabelaEstatisticas(linhas, estiloCelula){
         <button type="button" class="mat-seta" data-toggle-mat="${esc(l.nome)}" title="Distribuição por assunto" aria-label="Distribuição por assunto de ${esc(l.nome)}" style="width:18px;color:${cor.fgForte};">${COMPOSICAO_ABERTOS.has('mat:'+l.nome)?'▴':'▾'}</button>
         <div style="width:26px;${estiloCelula}color:${cor.fg};">${l.ativa?'▸':i+1}</div>
         <div class="name" style="cursor:pointer;flex:1;${estiloCelula}color:${cor.fgForte};font-weight:${l.ativa?800:600};display:flex;align-items:center;gap:6px;" data-macro-materia="${esc(l.nome)}">
-          <span>${esc(l.nome)}${typeof concursoMarca==='function'?concursoMarca(l.nome):''}${l.ativa?' <span style="font-size:10px;font-weight:600;opacity:.75;">(selecionada)</span>':''}</span>
+          <span>${esc(l.nome)}${l.foraDoCargo ? ' <span class="conc-tag-fora">fora do cargo</span>' : (typeof concursoMarca==='function'?concursoMarca(l.nome):'')}${l.ativa?' <span style="font-size:10px;font-weight:600;opacity:.75;">(selecionada)</span>':''}</span>
           ${l.ativa ? `<button data-continuar-materia="${esc(l.nome)}" style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;border:1px solid ${cor.fgForte};background:transparent;color:${cor.fgForte};cursor:pointer;white-space:nowrap;">▶ Continuar</button>` : ''}
           ${l.ativa ? `<button class="js-config" title="Configurar simulado: quantidade, ordem e filtros" aria-label="Configurar simulado" style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;border:1px solid ${cor.fgForte};background:transparent;color:${cor.fgForte};cursor:pointer;line-height:1.3;">⚙</button>` : ''}
         </div>
@@ -742,9 +753,9 @@ function renderLetterhead(){
       ${(()=>{
         // total geral (todas as matérias juntas) no mesmo formato de texto do resto
         // do cabeçalho
-        if(materiasDisponiveis().length<2) return '';
+        if(materiasDoPerfil().length<2) return '';
         let totalAcertos=0, totalErros=0, totalGeral=0;
-        materiasDisponiveis().forEach(m=>{
+        materiasDoPerfil().forEach(m=>{
           const sm = computeSnapshotMateria(m);
           totalAcertos += sm.ac; totalErros += sm.erradas; totalGeral += sm.totalPontuavel;
         });

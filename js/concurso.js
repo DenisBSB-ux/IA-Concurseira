@@ -388,31 +388,32 @@ function concursoMotivacao(dias){
 
 /* ---------- comparação do cargo com as listas que já existem ---------- */
 const CONC_CATALOGO = [
-  { slug: 'constitucional', nome: 'Direito Constitucional', n: 250, dir: ['constitucional', 'constituicao'], rel: [] },
-  { slug: 'administrativo-geral', nome: 'Administrativo (geral)', n: 500, dir: ['direito administrativo', 'administracao publica', 'atos administrativos', 'poderes administrativos'], rel: ['administrativo'] },
-  { slug: 'adm-8429', nome: 'Adm: Lei 8.429, 9.784 e 2.834', n: 200, dir: ['improbidade', 'processo administrativo', '8.429', '9.784', '2.834'], rel: ['direito administrativo'] },
-  { slug: 'adm-lgpd-lai', nome: 'Adm: LGPD + LAI', n: 203, dir: ['lgpd', 'protecao de dados', 'acesso a informacao', 'lei de acesso'], rel: ['direito administrativo'] },
-  { slug: 'afo', nome: 'AFO', n: 300, dir: ['orcamento', 'financas publicas', 'administracao financeira', 'afo', 'responsabilidade fiscal', 'lrf', 'contabilidade publica'], rel: [] },
-  { slug: 'analise-dados-ia', nome: 'Análise de Dados e IA', n: 200, dir: ['analise de dados', 'inteligencia artificial', 'ciencia de dados', 'estatistica', 'business intelligence'], rel: ['informatica', 'tecnologia da informacao'] },
-  { slug: 'conhec-df', nome: 'Conhecimentos do DF', n: 203, dir: ['conhecimentos do distrito federal', 'realidade do distrito federal', 'historia do distrito federal', 'geografia do distrito federal', 'atualidades do distrito federal', 'conhecimentos do df', 'acerca do distrito federal', 'politica para mulheres'], rel: ['distrito federal'] },
-  { slug: 'contratos', nome: 'Gestão e Fiscalização de Contratos', n: 200, dir: ['gestao de contratos', 'fiscalizacao de contratos', 'contratos administrativos'], rel: ['licitacoes'] },
-  { slug: 'd-tributario', nome: 'Direito Tributário', n: 300, dir: ['tributario', 'tributos', 'codigo tributario'], rel: ['financas publicas'] },
-  { slug: 'decreto-44330', nome: 'Decreto 44.330', n: 53, dir: ['44.330', '44330'], rel: [] },
-  { slug: 'direito-civil', nome: 'Direito Civil', n: 233, dir: ['direito civil', 'codigo civil'], rel: [] },
-  { slug: 'in5', nome: 'IN nº 5', n: 100, dir: ['instrucao normativa 5', 'instrucao normativa n 5', 'in 5', 'in n 5', 'terceirizacao'], rel: ['contratos'] },
-  { slug: 'lei-14133', nome: 'Lei 14.133/2021 (Licitações)', n: 232, dir: ['14.133', 'licitacoes', 'licitacao', 'licitacoes e contratos'], rel: ['contratos administrativos'] },
-  { slug: 'lei-organica-tcdf', nome: 'Lei Orgânica do TCDF (LC 1/1994)', n: 225, dir: ['lei organica do tcdf', 'lei organica do tribunal de contas', 'lc 1/1994'], rel: ['controle externo', 'tribunal de contas'] },
-  { slug: 'lodf', nome: 'LODF', n: 224, dir: ['lei organica do distrito federal', 'lodf', 'lei organica do df'], rel: ['distrito federal'] },
-  { slug: 'pdpm', nome: 'PDPM / Mulheres (Lei Maria da Penha)', n: 200, dir: ['maria da penha', 'violencia domestica', 'politicas para mulheres', 'pdpm'], rel: ['mulher', 'genero'] },
-  { slug: 'previdenciario', nome: 'Previdenciário', n: 233, dir: ['previdenciario', 'seguridade social', 'previdencia'], rel: [] },
-  { slug: 'primeiros-socorros', nome: 'Primeiros Socorros', n: 100, dir: ['primeiros socorros'], rel: [] },
-  { slug: 'reg-interno', nome: 'Regimento Interno do TCDF', n: 215, dir: ['regimento interno'], rel: ['tribunal de contas', 'controle externo'] },
-  { slug: 'rju-lc840', nome: 'RJU (LC 840/2011)', n: 241, dir: ['840', 'regime juridico dos servidores', 'estatuto dos servidores', 'servidores civis'], rel: ['servidores publicos'] }
+  { slug: 'constitucional', mat: 'Constitucional', nome: 'Direito Constitucional', n: 250, dir: ['constitucional', 'constituicao'], rel: [] },
+  { slug: 'administrativo-geral', mat: 'Administrativo (geral)', mat2: ['Adm Geral & Pub'], nome: 'Administrativo (geral)', n: 500, dir: ['direito administrativo', 'administracao publica', 'atos administrativos', 'poderes administrativos'], rel: ['administrativo'] },
+  { slug: 'adm-8429', mat: 'Adm (Lei nº 8.429; nº 9.784; nº 2.834)', nome: 'Adm: Lei 8.429, 9.784 e 2.834', n: 200, dir: ['improbidade', 'processo administrativo', '8.429', '9.784', '2.834'], rel: ['direito administrativo'] },
+  { slug: 'adm-lgpd-lai', mat: 'Adm (LGPD + LAI)', nome: 'Adm: LGPD + LAI', n: 203, dir: ['lgpd', 'protecao de dados', 'acesso a informacao', 'lei de acesso'], rel: ['direito administrativo'] },
+  { slug: 'afo', mat: 'AFO', nome: 'AFO', n: 300, dir: ['orcamento', 'financas publicas', 'administracao financeira', 'afo', 'responsabilidade fiscal', 'lrf', 'contabilidade publica'], rel: [] },
+  { slug: 'analise-dados-ia', mat: 'Analise Dados IA', nome: 'Análise de Dados e IA', n: 200, dir: ['analise de dados', 'inteligencia artificial', 'ciencia de dados', 'estatistica', 'business intelligence'], rel: ['informatica', 'tecnologia da informacao'] },
+  { slug: 'conhec-df', mat: 'Conhec. DF', nome: 'Conhecimentos do DF', n: 203, dir: ['conhecimentos do distrito federal', 'realidade do distrito federal', 'historia do distrito federal', 'geografia do distrito federal', 'atualidades do distrito federal', 'conhecimentos do df', 'acerca do distrito federal', 'politica para mulheres'], rel: ['distrito federal'] },
+  { slug: 'contratos', mat: 'Contratos', nome: 'Gestão e Fiscalização de Contratos', n: 200, dir: ['gestao de contratos', 'fiscalizacao de contratos', 'contratos administrativos'], rel: ['licitacoes'] },
+  { slug: 'd-tributario', mat: 'D.Tributário', nome: 'Direito Tributário', n: 300, dir: ['tributario', 'tributos', 'codigo tributario'], rel: ['financas publicas'] },
+  { slug: 'decreto-44330', mat: 'Decreto 44.330', nome: 'Decreto 44.330', n: 53, dir: ['44.330', '44330'], rel: [] },
+  { slug: 'direito-civil', mat: 'Direito Civil', nome: 'Direito Civil', n: 233, dir: ['direito civil', 'codigo civil'], rel: [] },
+  { slug: 'in5', mat: 'IN nº 5', nome: 'IN nº 5', n: 100, dir: ['instrucao normativa 5', 'instrucao normativa n 5', 'in 5', 'in n 5', 'terceirizacao'], rel: ['contratos'] },
+  { slug: 'lei-14133', mat: 'Lei 14.133 220', nome: 'Lei 14.133/2021 (Licitações)', n: 232, dir: ['14.133', 'licitacoes', 'licitacao', 'licitacoes e contratos'], rel: ['contratos administrativos'] },
+  { slug: 'lei-organica-tcdf', mat: 'Lei Orgânica do TCDF', nome: 'Lei Orgânica do TCDF (LC 1/1994)', n: 225, dir: ['lei organica do tcdf', 'lei organica do tribunal de contas', 'lc 1/1994'], rel: ['controle externo', 'tribunal de contas'] },
+  { slug: 'lodf', mat: 'LODF', nome: 'LODF', n: 224, dir: ['lei organica do distrito federal', 'lodf', 'lei organica do df'], rel: ['distrito federal'] },
+  { slug: 'pdpm', mat: 'PDPM Mulheres', nome: 'PDPM / Mulheres (Lei Maria da Penha)', n: 200, dir: ['maria da penha', 'violencia domestica', 'politicas para mulheres', 'pdpm'], rel: ['mulher', 'genero'] },
+  { slug: 'previdenciario', mat: 'Previdenciário', nome: 'Previdenciário', n: 233, dir: ['previdenciario', 'seguridade social', 'previdencia'], rel: [] },
+  { slug: 'primeiros-socorros', mat: 'Primeiros Socorros', nome: 'Primeiros Socorros', n: 100, dir: ['primeiros socorros'], rel: [] },
+  { slug: 'reg-interno', mat: 'Reg. Interno', nome: 'Regimento Interno do TCDF', n: 215, dir: ['regimento interno'], rel: ['tribunal de contas', 'controle externo'] },
+  { slug: 'rju-lc840', mat: 'RJU LC840', nome: 'RJU (LC 840/2011)', n: 241, dir: ['840', 'regime juridico dos servidores', 'estatuto dos servidores', 'servidores civis'], rel: ['servidores publicos'] }
 ];
 function concNorm(t){ return String(t || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9./ ]+/g, ' ').replace(/\s+/g, ' ').trim(); }
 function concCatNome(slug){ try{ const e = CONC_CATALOGO.find(x => x.slug === slug); return (typeof RESUMOS_TCDF !== 'undefined' && (RESUMOS_TCDF[slug] || {}).nome) || (e && e.nome) || slug; }catch(_){ return slug; } }
+function concEntradaDaMateria(nome){ const nm = concNorm(nome); return CONC_CATALOGO.find(x => concNorm(x.mat) === nm || (x.mat2 || []).some(y => concNorm(y) === nm)) || null; }
 function concCatQtd(e){
-  try{ const nm = concNorm(concCatNome(e.slug)); const n = ALL_QUESTIONS.filter(q => !q.duplicataOculta && concNorm(q.materia) === nm).length; if(n) return n; }catch(_){}
+  try{ const nm = concNorm(e.mat); const n = ALL_QUESTIONS.filter(q => !q.duplicataOculta && concNorm(q.materia) === nm).length; if(n) return n; }catch(_){}
   return e.n;
 }
 /* retorna { diretas:[entradas], relacionadas:[entradas] } para uma matéria do edital */
@@ -423,18 +424,18 @@ function concursoCompararMateria(m){
     const ti = t.includes('tecnologia da informacao');      // contratos de TI: aproveita só em parte a lista de contratos gerais
     if(e.dir.some(has) && !(ti && e.slug === 'contratos')) dir.push(e); else if(e.rel.some(has) || (ti && e.slug === 'contratos' && e.dir.some(has))) rel.push(e);
   });
-  return { diretas: dir, relacionadas: dir.length ? [] : rel };
+  return { diretas: dir, relacionadas: dir.length ? [] : rel, vizinhas: rel };      // vizinhas: relacionadas que só mantêm a lista visível
 }
 function concursoComparar(c){
   const mats = c.padrao ? [] : (c.materias || []);
   const qt = c.qtd || {}, qn = {}; Object.keys(qt).forEach(k => { qn[concNorm(k)] = qt[k]; });
   const linhas = mats.map(m => ({ materia: m, peso: qn[concNorm(m)] || 0, ...concursoCompararMateria(m) }));
-  const usados = new Set(); linhas.forEach(l => l.diretas.concat(l.relacionadas).forEach(e => usados.add(e.slug)));
+  const usados = new Set(); linhas.forEach(l => l.diretas.concat(l.relacionadas, l.vizinhas || []).forEach(e => usados.add(e.slug)));
   return { linhas, usados, cobertas: linhas.filter(l => l.diretas.length).length, parciais: linhas.filter(l => !l.diretas.length && l.relacionadas.length).length, semLista: linhas.filter(l => !l.diretas.length && !l.relacionadas.length) };
 }
 function concursoAbrirMateriaQuestoes(slug){
-  const nm = concNorm(concCatNome(slug));
-  const m = (typeof materiasDisponiveis === 'function' ? materiasDisponiveis() : []).find(x => concNorm(x) === nm) || (typeof materiasDisponiveis === 'function' ? materiasDisponiveis() : []).find(x => nm.includes(concNorm(x)) || concNorm(x).includes(nm));
+  const e = CONC_CATALOGO.find(x => x.slug === slug); if(!e) return false;
+  const m = (typeof materiasDisponiveis === 'function' ? materiasDisponiveis() : []).find(x => concNorm(x) === concNorm(e.mat));
   if(!m) return false;
   STATE.materia = m; STATE.tema = 'todos'; STATE.viewImportar = false; STATE.viewAuditoria = false;
   const el = document.getElementById('concurso-plano'); if(el) el.hidden = true;
@@ -450,8 +451,8 @@ function concursoCompat(c){
 /* marca nas matérias da base: ★ cobrada no cargo, ◐ relacionada */
 function concursoMarca(nomeMateria){
   if(CONCURSO.padrao) return '';
-  const cmp = concursoComparar(CONCURSO); const nm = concNorm(nomeMateria);
-  const e = CONC_CATALOGO.find(x => { const cn = concNorm(concCatNome(x.slug)); return cn === nm || cn.includes(nm) || nm.includes(cn); });
+  const cmp = concursoComparar(CONCURSO);
+  const e = concEntradaDaMateria(nomeMateria);
   if(!e) return '';
   const dir = cmp.linhas.some(l => l.diretas.includes(e)), rel = cmp.linhas.some(l => l.relacionadas.includes(e));
   return dir ? ' <span class="conc-star" title="Cobrada no seu cargo">★</span>' : (rel ? ' <span class="conc-star rel" title="Relacionada a uma matéria do seu cargo">◐</span>' : ' <span class="conc-star off" title="Não cobrada no seu cargo">·</span>');
@@ -583,4 +584,35 @@ function concursoAposSync(){
   if(!CONC_DB.escolhido) return;
   try{ if(typeof render === 'function' && APP_INICIADO) render(); }catch(_){}
 }
+
+/* ---------- lista de matérias adaptada ao cargo ---------- */
+function concursoForaVisivel(){ try{ return sessionStorage.getItem('ia_conc_fora') === '1'; }catch(_){ return false; } }
+function concursoMateriaNoCargo(nome, cmp){
+  const nm = concNorm(nome);
+  const e = concEntradaDaMateria(nome);
+  if(e) return cmp.usados.has(e.slug);
+  // lista importada por você que não é uma das 20 da base: fica se o nome bater com alguma matéria do edital
+  return cmp.linhas.some(l => { const ln = concNorm(l.materia); return ln.includes(nm) || nm.includes(ln); });
+}
+/* para o cargo ativo: quais matérias da base ficam visíveis, quais saem e quais do edital ainda não têm lista */
+function concursoListaAdaptada(nomes){
+  if(CONCURSO.padrao || !(CONCURSO.materias || []).length) return { adapta: false, visiveis: nomes, ocultas: [], faltantes: [] };
+  const cmp = concursoComparar(CONCURSO);
+  const visiveis = [], ocultas = [];
+  nomes.forEach(n => (concursoMateriaNoCargo(n, cmp) ? visiveis : ocultas).push(n));
+  const faltantes = cmp.semLista.map(l => ({ materia: l.materia, peso: l.peso || 0 }));
+  return { adapta: true, visiveis, ocultas, faltantes };
+}
+/* matérias que contam no perfil (estatísticas, cabeçalho): as do cargo; com "mostrar fora do cargo" ligado, todas */
+function materiasDoPerfil(){
+  const todas = materiasDisponiveis();
+  const a = concursoListaAdaptada(todas);
+  return (a.adapta && !concursoForaVisivel()) ? a.visiveis : todas;
+}
+document.addEventListener('click', e => {
+  const t = e.target.closest && e.target.closest('[data-conc-fora],[data-conc-importar]'); if(!t) return;
+  if(t.hasAttribute('data-conc-fora')){ try{ sessionStorage.setItem('ia_conc_fora', concursoForaVisivel() ? '0' : '1'); }catch(_){} if(typeof render === 'function') render(); return; }
+  if(t.hasAttribute('data-conc-importar')){ STATE.viewImportar = true; STATE.viewAuditoria = false; STATE.importLog = null; if(typeof render === 'function') render(); }
+});
+
 concursoCarregar();
