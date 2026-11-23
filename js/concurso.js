@@ -51,6 +51,7 @@ function concursoCarregar(){
     CONCURSO = Object.assign({}, CONCURSO_PADRAO, c, { padrao: false, cargo, materias: concursoMateriasDoCargo(c, cargo), qtd: Object.assign({}, c.qtdComuns || {}, cgo.qtd || {}), itensCargo: cgo.itens || [], topicos: Object.assign({}, c.topicosComuns || {}, cgo.topicos || {}) });
   }
   concursoAplicar();
+  try{ if(typeof marcarDuplicatas === 'function' && typeof ALL_QUESTIONS !== 'undefined' && ALL_QUESTIONS.length) marcarDuplicatas(); }catch(_){}
 }
 /* salva (ou atualiza) um concurso da lista e o torna o ativo; null volta ao TCDF */
 function concursoSalvar(c){
@@ -110,7 +111,7 @@ function editalTopicos(txt){
     while((ms = reSub.exec(seg))) cortes.push(ms.index + (ms[0][0] === ' ' ? 1 : 0));
     let titulo = (cortes.length ? seg.slice(0, cortes[0]) : seg).trim();
     const p = titulo.indexOf('. '); if(p > 25 && !cortes.length) titulo = titulo.slice(0, p);
-    titulo = titulo.replace(/[.;:\s]+$/, ''); if(titulo.length > 150) titulo = titulo.slice(0, 147) + '…';
+    titulo = titulo.replace(/[.;:\s]+$/, '');
     const subs = cortes.map((c, j) => seg.slice(c, j + 1 < cortes.length ? cortes[j + 1] : seg.length).trim().replace(/[.;\s]+$/, ''));
     return { n: mk.n, t: titulo, subs };
   }).filter(x => x.t);
@@ -639,8 +640,78 @@ function materiasDoPerfil(){
 }
 document.addEventListener('click', e => {
   const t = e.target.closest && e.target.closest('[data-conc-fora],[data-conc-importar]'); if(!t) return;
-  if(t.hasAttribute('data-conc-fora')){ try{ sessionStorage.setItem('ia_conc_fora', concursoForaVisivel() ? '0' : '1'); }catch(_){} if(typeof render === 'function') render(); return; }
+  if(t.hasAttribute('data-conc-fora')){ try{ sessionStorage.setItem('ia_conc_fora', concursoForaVisivel() ? '0' : '1'); }catch(_){} try{ marcarDuplicatas(); }catch(_){} if(typeof render === 'function') render(); return; }
   if(t.hasAttribute('data-conc-importar')){ STATE.viewImportar = true; STATE.viewAuditoria = false; STATE.importLog = null; if(typeof render === 'function') render(); }
 });
+
+
+/* ---------- assuntos estritos do edital nas listas prontas ---------- */
+const CONC_STOP = new Set('para sobre entre como pela pelo pelas pelos dessa desse desta deste suas seus esta este essa esse numa numa mais menos todos todas cada dentro apos ante ate com sem sob por uma uns umas que dos das nos nas aos'.split(' '));
+const CONC_GENERICAS = new Set(['const', 'distr', 'feder', 'norma', 'artig', 'reali', 'gerai', 'conce', 'aspec', 'disposicoes']);
+const CONC_SIN = { sangr: 'hemor', sangu: 'hemor' };
+const CONC_ALIAS = [[/\blindb\b/gi, ' lei de introducao as normas do direito brasileiro '], [/\blrf\b/gi, ' lei de responsabilidade fiscal '], [/\blgpd\b/gi, ' lei geral de protecao de dados '], [/\bcpc\b/gi, ' codigo de processo civil ']];
+function concCurto(t, n){ t = String(t || ''); n = n || 150; return t.length > n ? t.slice(0, n - 1) + '…' : t; }
+function concStems(txt){
+  let t0 = String(txt || ''); CONC_ALIAS.forEach(([re, to]) => { t0 = t0.replace(re, to); });
+  const out = new Set(); (t0.match(/\b\d{1,3}(?:\.\d{3})?\/\d{4}\b/g) || []).forEach(n => out.add('n:' + n.replace(/\./g, '')));      // número da lei: 101/2000, 6.404/1976
+  t0.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\(arts?\.[^)]*\)/g, ' ').split(/[^a-z]+/).forEach(w => {
+    if(w.length < 4 || CONC_STOP.has(w)) return; let st = w.slice(0, 5); if(CONC_SIN[st]) out.add(CONC_SIN[st]); if(!CONC_GENERICAS.has(st)) out.add(st);
+  });
+  return out;
+}
+function concIntervalos(txt){      // "arts. 53 a 124", "arts. 114 a 116", "art. 5º"
+  const r = []; let m; const re = /arts?\.\s*(\d+)[ºo°]?(?:\s*(?:a|ao|até)\s*(\d+)[ºo°]?)?/gi;
+  while((m = re.exec(String(txt || '')))) r.push([+m[1], +(m[2] || m[1])]);
+  return r;
+}
+/* o assunto da lista (tema) consta em algum dos tópicos do edital? */
+function concursoTemaCasa(tema, itens){
+  const ts = concStems(tema), ti = concIntervalos(tema);
+  return itens.some(it => {
+    if(ti.length && concIntervalos(it.texto).some(a => ti.some(b => a[0] <= b[1] && b[0] <= a[1]))) return true;
+    for(const w of ts) if(it.stems.has(w)) return true;
+    return false;
+  });
+}
+let _concAnaliseCache = null;
+function concursoAnaliseAssuntos(){
+  if(CONCURSO.padrao || !(CONCURSO.materias || []).length) return null;
+  const chave = [CONC_DB.ativo, CONC_DB.cargo, ALL_QUESTIONS.length].join('|');
+  if(_concAnaliseCache && _concAnaliseCache.chave === chave) return _concAnaliseCache.v;
+  const cmp = concursoComparar(CONCURSO), tp = CONCURSO.topicos || {};
+  const temasPorMateria = {}; ALL_QUESTIONS.forEach(q => { (temasPorMateria[q.materia] = temasPorMateria[q.materia] || new Set()).add(q.tema || 'Geral'); });
+  const filtro = {};      // matéria da base -> { permitidos:Set, faltam:[...] }
+  CONC_CATALOGO.forEach(e => {
+    const linhas = cmp.linhas.filter(l => l.diretas.includes(e) && (tp[l.materia] || []).length);
+    if(!linhas.length) return;                                   // lista só relacionada (ou sem tópicos no edital): não filtra
+    const nomes = [e.mat].concat(e.mat2 || []);
+    const temas = new Set(); nomes.forEach(n => (temasPorMateria[n] || new Set()).forEach(t => temas.add(t)));
+    const itens = [];
+    linhas.forEach(l => tp[l.materia].forEach(x => { const texto = x.t + ' ' + (x.subs || []).join(' '); itens.push({ materia: l.materia, n: x.n, t: x.t, texto, stems: concStems(texto) }); }));
+    const permitidos = new Set([...temas].filter(t => concursoTemaCasa(t, itens)));
+    filtro[e.mat] = { permitidos, todos: temas, itens, nomes };
+    (e.mat2 || []).forEach(n => { filtro[n] = filtro[e.mat]; });
+  });
+  // tópicos do edital que NENHUMA lista ligada à matéria cobre (diretas, relacionadas e vizinhas somam a cobertura)
+  const cobertos = new Set();
+  cmp.linhas.forEach(l => {
+    const its = tp[l.materia] || []; if(!its.length || !l.diretas.length) return;
+    const temas = new Set(); l.diretas.concat(l.relacionadas, l.vizinhas || []).forEach(e => [e.mat].concat(e.mat2 || []).forEach(n => (temasPorMateria[n] || new Set()).forEach(t => temas.add(t))));
+    its.forEach(x => { const texto = x.t + ' ' + (x.subs || []).join(' '), it = { texto, stems: concStems(texto) }; if([...temas].some(t => concursoTemaCasa(t, [it]))) cobertos.add(l.materia + '|' + x.n); });
+  });
+  Object.keys(filtro).forEach(k => { const f = filtro[k]; f.faltam = f.itens.filter(it => !cobertos.has(it.materia + '|' + it.n)).map(it => ({ materia: it.materia, n: it.n, t: it.t })); });
+  _concAnaliseCache = { chave, v: filtro };
+  return filtro;
+}
+function concursoMarcarForaDoCargo(){
+  ALL_QUESTIONS.forEach(q => { q.foraAssunto = false; });
+  const f = concursoAnaliseAssuntos(); if(!f || concursoForaVisivel()) return;
+  ALL_QUESTIONS.forEach(q => { const a = f[q.materia]; if(a && !a.permitidos.has(q.tema || 'Geral')){ q.foraAssunto = true; q.duplicataOculta = true; } });
+}
+function concursoAssuntosDe(matBase){ const f = concursoAnaliseAssuntos(); return f ? (f[matBase] || null) : null; }
+function concursoChipFaltam(matBase){
+  const a = concursoAssuntosDe(matBase); if(!a || !a.faltam.length) return '';
+  return ` <span class="conc-tag-falta" title="Assuntos do edital sem questões nesta lista: ${esc(a.faltam.map(x => x.n + ' ' + x.t).join(' | ').slice(0, 400))}">faltam ${a.faltam.length} assunto${a.faltam.length > 1 ? 's' : ''}</span>`;
+}
 
 concursoCarregar();

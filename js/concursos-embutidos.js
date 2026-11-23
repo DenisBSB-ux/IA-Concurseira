@@ -431,7 +431,7 @@ const CONCURSOS_EMBUTIDOS = [
       },
       {
        "n": 16,
-       "t": "Lei Federal nº 6.015/1973 – Registros Públicos: registro civil das pessoas naturais; retificação de registro; averbações; reconhecimento de paterni…",
+       "t": "Lei Federal nº 6.015/1973 – Registros Públicos: registro civil das pessoas naturais; retificação de registro; averbações; reconhecimento de paternidade; usucapião extrajudicial",
        "subs": []
       }
      ],
@@ -1458,7 +1458,7 @@ const CONCURSOS_EMBUTIDOS = [
      "Normas Institucionais da Defensoria Pública e da Defensoria Pública do Distrito Federal": [
       {
        "n": 1,
-       "t": "Histórico da assistência jurídica no Brasil e no Distrito Federal: do Centro de Assistência Judiciária – CEAJUR à Defensoria Pública do Distrito Fe…",
+       "t": "Histórico da assistência jurídica no Brasil e no Distrito Federal: do Centro de Assistência Judiciária – CEAJUR à Defensoria Pública do Distrito Federal",
        "subs": [
         "1.1 Emendas Constitucionais nº 45/2004, nº 69/2012, nº 74/2013 e nº 80/2014; art. 98 do Ato das Disposições Constitucionais Transitórias",
         "1.2 Emenda à Lei Orgânica do Distrito Federal nº 61/2012"
@@ -1482,7 +1482,7 @@ const CONCURSOS_EMBUTIDOS = [
       },
       {
        "n": 4,
-       "t": "A Defensoria Pública como instituição permanente, essencial à função jurisdicional do Estado; o Defensor Público como instrumento de transformação …",
+       "t": "A Defensoria Pública como instituição permanente, essencial à função jurisdicional do Estado; o Defensor Público como instrumento de transformação social; a Defensoria Pública como instituição essencial à conciliação",
        "subs": [
         "4.1 Lei Complementar Federal nº 80/1994, com as alterações das Leis Complementares Federais nº 98/1999 e nº 132/2009",
         "4.2 Funções institucionais; educação em direitos; atuação extrajudicial"
@@ -1498,7 +1498,7 @@ const CONCURSOS_EMBUTIDOS = [
       },
       {
        "n": 6,
-       "t": "O Defensor Público e a natureza da representação do assistido em juízo; direitos dos assistidos; a Defensoria Pública e o patrocínio de pessoas jur…",
+       "t": "O Defensor Público e a natureza da representação do assistido em juízo; direitos dos assistidos; a Defensoria Pública e o patrocínio de pessoas jurídicas",
        "subs": [
         "6.1 A atuação da da sociedade civil. 8 A Defensoria Pública e a Advocacia: distinções fundamentais (Lei Complementar Federal nº 80/1994 e Lei Federal nº 8.906/1994, e suas alterações). 9 Legislação institucional distrital: Lei Distrital nº 4.516/2010 – Carreira de Apoio à Assistência Judiciária; Lei Complementar Distrital nº 828/2010 e suas alterações; Lei Complementar Distrital nº 908/2016; Lei Complementar Distrital nº 980/2020, com as alterações da Lei Complementar Distrital nº 1.042/2024 – Política de Atendimento Integrado e atendimento itinerante; Lei Complementar Distrital nº 1.071/2026 – Escola Superior da Defensoria Pública do Distrito Federal. 10 Normas infralegais: Resolução do Conselho Superior da Defensoria Pública do Distrito Federal nº 224, de 3 de julho de 2020, que disciplina as atribuições das Defensorias de atuação inicial, das Defensorias de atuação junto a unidades jurisdicionais e das Defensorias do Núcleo de Assistência Jurídica do Segundo Grau e Tribunais Superiores; Resolução do Conselho Superior da Defensoria Pública do Distrito Federal nº 271, de 22 de maio de 2023, que regulamenta as hipóteses de atuação institucional para a prestação de assistência jurídica destinada à proteção e à defesa de interesses individuais. (*) As Resoluções do Conselho Superior da Defensoria Pública do Distrito Federal estão disponíveis em: https://www.defensoria.df.gov.br/legislacao/resolucoes-do-conselho-superior/ (**) A Lei Orgânica do Distrito Federal e a Lei Complementar Distrital nº 828/2010 serão abordadas com maior nível de aprofundamento no conteúdo de Conhecimentos Específicos do Cargo 1: Analista de Apoio à Assistência Judiciária – Área: Direito e Legislação, em comparação com a abordagem prevista em Conhecimentos Básicos"
        ]
@@ -1857,7 +1857,7 @@ const CONCURSOS_EMBUTIDOS = [
       },
       {
        "n": 11,
-       "t": "NBC TSP Estrutura Conceitual – Estrutura Conceitual para Elaboração e Divulgação de Informação Contábil de Propósito Geral pelas Entidades do Setor…",
+       "t": "NBC TSP Estrutura Conceitual – Estrutura Conceitual para Elaboração e Divulgação de Informação Contábil de Propósito Geral pelas Entidades do Setor Público",
        "subs": []
       },
       {
@@ -3408,7 +3408,7 @@ const CONCURSOS_EMBUTIDOS = [
    "Conhecimentos Acerca do Distrito Federal e da Política para Mulheres": [
     {
      "n": 1,
-     "t": "Domínio de tópicos atuais e relevantes acerca da realidade étnica, social, histórica, geográfica, cultural, política e econômica do Distrito Federa…",
+     "t": "Domínio de tópicos atuais e relevantes acerca da realidade étnica, social, histórica, geográfica, cultural, política e econômica do Distrito Federal e da Região Integrada de Desenvolvimento do Distrito Federal e Entorno (RIDE) (Lei Complementar Federal nº 94/1998 e Decreto Federal nº 7.469/2011)",
      "subs": []
     },
     {
@@ -3418,7 +3418,7 @@ const CONCURSOS_EMBUTIDOS = [
     },
     {
      "n": 3,
-     "t": "Lei Distrital nº 7.462/2024: políticas de proteção à mulher e de igualdade de gênero no âmbito da administração pública direta, autárquica e fundac…",
+     "t": "Lei Distrital nº 7.462/2024: políticas de proteção à mulher e de igualdade de gênero no âmbito da administração pública direta, autárquica e fundacional do Distrito Federal",
      "subs": []
     }
    ],

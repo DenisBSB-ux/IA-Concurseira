@@ -2836,3 +2836,5 @@ body:not(.theme-light) .pv-link{ color:var(--gold-bright); }
 .conc-tag-fora{ display:inline-block; margin-left:4px; padding:1px 7px; border-radius:10px; border:1px solid currentColor; font-size:10px; font-weight:700; opacity:.75; }
 
 .sync-clicavel{ cursor:pointer; } .sync-clicavel:hover{ text-decoration:underline; }
+
+.conc-assuntos-falta{ margin-top:6px; } .conc-assunto-falta{ background:rgba(224,177,58,.14); border:1px dashed #e0b13a; border-radius:4px; padding:4px 6px; margin-bottom:4px; }

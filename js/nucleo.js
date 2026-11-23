@@ -350,6 +350,7 @@ function marcarDuplicatas(){
       lista.forEach((q,i)=>{ if(i>0) q.duplicataOculta = true; });
     });
   });
+  try{ if(typeof concursoMarcarForaDoCargo === 'function') concursoMarcarForaDoCargo(); }catch(e){ console.warn('Filtro de assuntos do cargo', e); }      // assuntos fora do edital do cargo ficam ocultos
 }
 /* edição manual órfã: o uid é "matéria-número" e o número muda entre arquivos; uma edição antiga (guardada no aparelho ou na nuvem)
    cairia em OUTRA questão e mostraria o enunciado, a resolução ou o resumo de uma questão diferente. A edição só vale se o enunciado

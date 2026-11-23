@@ -656,7 +656,7 @@ function renderTabelaEstatisticas(linhas, estiloCelula){
         // matéria do edital sem lista: mesma estrutura das demais (seta, número, assuntos do edital), destacada
         const tp = ((typeof CONCURSO!=='undefined' && CONCURSO.topicos) || {})[l.nome] || [], kf = 'fal:' + l.nome;
         const assuntosF = tp.length ? tp.map(x => `<details class="composicao-det" data-comp-tema="${esc(kf + '||' + x.n)}" ${COMPOSICAO_ABERTOS.has(kf + '||' + x.n) ? 'open' : ''}>
-            <summary class="bar-row composicao-linha" title="${esc(x.t)}"><div class="name">${x.n} ${esc(x.t)}</div><div class="bar-track"><div class="bar-fill" style="width:0%;"></div></div><div class="pct">0</div></summary>
+            <summary class="bar-row composicao-linha" title="${esc(x.t)}"><div class="name">${x.n} ${esc(concCurto(x.t))}</div><div class="bar-track"><div class="bar-fill" style="width:0%;"></div></div><div class="pct">0</div></summary>
             <div class="composicao-arts">${(x.subs || []).map(sb => `<div class="composicao-art-vazio">${esc(sb)}</div>`).join('') || '<div class="composicao-art-vazio">Sem subitens no edital.</div>'}</div></details>`).join('')
           : '<div class="composicao-art-vazio">Conteúdo conforme o edital (assuntos não identificados no texto).</div>';
         return `<div class="bar-row conc-faltante" style="flex-wrap:wrap;align-items:center;padding:8px 10px 8px 12px;margin-bottom:6px;${estiloCelula}">
@@ -681,7 +681,7 @@ function renderTabelaEstatisticas(linhas, estiloCelula){
         <button type="button" class="mat-seta" data-toggle-mat="${esc(l.nome)}" title="Distribuição por assunto" aria-label="Distribuição por assunto de ${esc(l.nome)}" style="width:18px;color:${cor.fgForte};">${COMPOSICAO_ABERTOS.has('mat:'+l.nome)?'▴':'▾'}</button>
         <div style="width:26px;${estiloCelula}color:${cor.fg};">${l.ativa?'▸':i+1}</div>
         <div class="name" style="cursor:pointer;flex:1;${estiloCelula}color:${cor.fgForte};font-weight:${l.ativa?800:600};display:flex;align-items:center;gap:6px;" data-macro-materia="${esc(l.nome)}">
-          <span>${esc(l.nome)}${l.foraDoCargo ? ' <span class="conc-tag-fora">fora do cargo</span>' : (typeof concursoMarca==='function'?concursoMarca(l.nome):'')}${l.ativa?' <span style="font-size:10px;font-weight:600;opacity:.75;">(selecionada)</span>':''}</span>
+          <span>${esc(l.nome)}${l.foraDoCargo ? ' <span class="conc-tag-fora">fora do cargo</span>' : (typeof concursoMarca==='function'?concursoMarca(l.nome):'')}${(!l.foraDoCargo && typeof concursoChipFaltam==='function') ? concursoChipFaltam(l.nome) : ''}${l.ativa?' <span style="font-size:10px;font-weight:600;opacity:.75;">(selecionada)</span>':''}</span>
           ${l.ativa ? `<button data-continuar-materia="${esc(l.nome)}" style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;border:1px solid ${cor.fgForte};background:transparent;color:${cor.fgForte};cursor:pointer;white-space:nowrap;">▶ Continuar</button>` : ''}
           ${l.ativa ? `<button class="js-config" title="Configurar simulado: quantidade, ordem e filtros" aria-label="Configurar simulado" style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;border:1px solid ${cor.fgForte};background:transparent;color:${cor.fgForte};cursor:pointer;line-height:1.3;">⚙</button>` : ''}
         </div>
@@ -1417,15 +1417,18 @@ function distribuicaoAssuntosMateriaHtml(m){
   qs.forEach(q=>{ const t = q.tema||'Geral'; cont[t] = (cont[t]||0)+1; });
   const temas = temasDisponiveis(m).filter(t=>cont[t]);
   Object.keys(cont).forEach(t=>{ if(!temas.includes(t)) temas.push(t); });
-  if(!temas.length) return '<div class="composicao-art-vazio">Nenhuma questão nesta matéria.</div>';
+  // lista adaptada ao cargo: assuntos do edital que ainda não têm questões nesta lista ficam em destaque
+  const an = (typeof concursoAssuntosDe==='function') ? concursoAssuntosDe(m) : null;
+  const faltamHtml = (an && an.faltam.length) ? `<div class="conc-assuntos-falta">${an.faltam.map(x=>`<div class="bar-row composicao-linha conc-assunto-falta" title="Assunto do edital sem questões nesta lista"><div class="name">⚠️ ${x.n} ${esc(concCurto(x.t))} <span class="conc-tag-falta">FALTA</span></div><div class="bar-track"><div class="bar-fill" style="width:0%;"></div></div><div class="pct">0</div></div>`).join('')}</div>` : '';
+  if(!temas.length) return '<div class="composicao-art-vazio">Nenhuma questão nesta matéria.</div>' + faltamHtml;
   const max = Math.max(...Object.values(cont));
   return temas.map(t=>{
     const k = 'ass:'+m+'||'+t;
     return `<details class="composicao-det" data-comp-tema="${esc(k)}" ${COMPOSICAO_ABERTOS.has(k)?'open':''}>
-      <summary class="bar-row composicao-linha" title="${esc(t)}"><div class="name">${esc(t)}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.max(4, Math.round(cont[t]*100/max))}%;"></div></div><div class="pct">${cont[t]} <button type="button" class="btn-treinar-tema" data-treinar-tema="1" title="Estudar só as questões deste assunto">▶</button></div></summary>
+      <summary class="bar-row composicao-linha" title="${esc(t)}"><div class="name">${esc(t)}${(an && !an.permitidos.has(t)) ? ' <span class="conc-tag-fora">fora do edital</span>' : ''}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.max(4, Math.round(cont[t]*100/max))}%;"></div></div><div class="pct">${cont[t]} <button type="button" class="btn-treinar-tema" data-treinar-tema="1" title="Estudar só as questões deste assunto">▶</button></div></summary>
       <div class="composicao-arts">${COMPOSICAO_ABERTOS.has(k)?detalharArtigosDoAssunto(m,t):''}</div>
     </details>`;
-  }).join('');
+  }).join('') + faltamHtml;
 }
 // artigos de um assunto; matérias que citam a mesma norma (ex.: Lei 14.133 em Licitações, Contratos, IN 5, Decreto 44.330)
 // têm os artigos somados em conjunto (questões, acertos e erros)
