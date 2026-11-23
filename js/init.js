@@ -85,6 +85,7 @@ document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState=
 setTimeout(verificarNovaVersao, 20000);
 (async function init(){
   root.innerHTML = `<div style="padding:60px;text-align:center;color:#a9b6cc;font-family:var(--font-mono);font-size:13px;">Carregando processo…</div>`;
+  try{ if(typeof precisaLogin==='function' && precisaLogin()) render(); }catch(_){}      // tela de login já, sem esperar a carga dos dados
   try{ await loadProgress(); }catch(e){
     console.error('Falha ao carregar o progresso — iniciando com estado vazio (nada foi apagado do armazenamento)', e);
     try{ if(typeof PROGRESS==='undefined' || !PROGRESS) PROGRESS = {}; }catch(_){}

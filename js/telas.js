@@ -224,7 +224,9 @@ function renderTelaLogin(){
   }else{
     conteudo = `<h2>Entre para continuar</h2>
       <p>Use sua conta Google para acessar as questões e salvar seu progresso em qualquer aparelho.</p>
-      <button class="btn btn-primary" id="btn-login-google" style="font-size:15px;padding:10px 22px;">🔐 Entrar com Google</button>`;
+      <button class="btn btn-primary" id="btn-login-google" ${LOGIN_EM_ANDAMENTO?'disabled':''} style="font-size:15px;padding:10px 22px;">${LOGIN_EM_ANDAMENTO?'Abrindo o Google…':'🔐 Entrar com Google'}</button>
+      ${LOGIN_ERRO?`<p class="login-erro" role="alert" style="color:#ff8a80;font-size:13px;margin:12px 0 0;">${esc(LOGIN_ERRO)}</p>`:''}
+      <p style="margin:12px 0 0;font-size:12px;"><a href="#" id="btn-login-redirect" style="opacity:.8;">Entrar de outro jeito (sem janela extra)</a></p>`;
   }
   return `<div class="tela-login"><div class="tela-login-caixa">
     <img class="seal-logo" src="img/logo-ia-concurseira.png" alt="IA Concurseira" style="margin:0 auto 10px;display:block;">
@@ -237,7 +239,9 @@ function render(){
     document.body.classList.remove('focus-mode');
     root.innerHTML = renderTelaLogin();
     const btn = document.getElementById('btn-login-google');
-    if(btn) btn.addEventListener('click', entrarComGoogle);
+    if(btn) btn.addEventListener('click', ()=>entrarComGoogle());
+    const btnRed = document.getElementById('btn-login-redirect');
+    if(btnRed) btnRed.addEventListener('click', e=>{ e.preventDefault(); entrarComGoogle(true); });
     const btnRecarregar = document.getElementById('btn-login-recarregar');
     if(btnRecarregar) btnRecarregar.addEventListener('click', ()=> location.reload());
     return;

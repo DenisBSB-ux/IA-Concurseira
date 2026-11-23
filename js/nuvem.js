@@ -114,6 +114,8 @@ let fbDb = null;
 let fbAuth = null;
 let USUARIO_ATUAL = null; // { uid, email } quando logado com Google
 let APP_INICIADO = false;
+let LOGIN_ERRO = '';      // última falha de login, mostrada na própria tela de login
+let LOGIN_EM_ANDAMENTO = false;
 let AUTH_RESOLVIDO = false; // o Firebase já disse se há conta logada
 try{
   if(typeof firebase !== 'undefined' && FIREBASE_CONFIG && FIREBASE_CONFIG.apiKey){
@@ -139,9 +141,9 @@ try{
           (copia ? storageSet('tcdf-backup-pre-logout', copia).catch(()=>{}) : Promise.resolve())
             .then(()=>limparDadosDoUsuarioNoAparelho()).then(()=>{ if(APP_INICIADO) render(); });
         }
-        else if(APP_INICIADO) render();
+        else if(APP_INICIADO || !usuario) render();      // sem conta: mostra o login já, sem esperar o resto carregar
       });
-      fbAuth.getRedirectResult().catch(e=>console.warn('Falha no login por redirecionamento', e));
+      fbAuth.getRedirectResult().catch(e=>{ console.warn('Falha no login por redirecionamento', e); LOGIN_ERRO = 'Não foi possível concluir o login: ' + motivoErroAuth(e); try{ if(!USUARIO_ATUAL) render(); }catch(_){} });
     }
   }
 }catch(e){ console.warn('Firebase indisponível nesta sessão.', e); }
@@ -201,18 +203,29 @@ async function vincularContaGoogle(){
 function comDono(dados){
   return USUARIO_ATUAL ? { ...dados, dono: USUARIO_ATUAL.uid } : dados;
 }
-async function entrarComGoogle(){
-  if(!fbAuth) return;
+function appInstaladoStandalone(){
+  try{ return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true; }catch(_){ return false; }
+}
+async function entrarComGoogle(forcarRedirect){
+  if(!fbAuth || LOGIN_EM_ANDAMENTO) return;
   const provedor = new firebase.auth.GoogleAuthProvider();
+  provedor.setCustomParameters({ prompt: 'select_account' });
+  LOGIN_ERRO = ''; LOGIN_EM_ANDAMENTO = true; try{ render(); }catch(_){}
+  const porRedirect = async () => { LOGIN_EM_ANDAMENTO = false; await fbAuth.signInWithRedirect(provedor); };
   try{
+    // app instalado (tela inicial do celular): a janela de login costuma não voltar; vai direto por redirecionamento
+    if(forcarRedirect === true || appInstaladoStandalone()){ await porRedirect(); return; }
     await fbAuth.signInWithPopup(provedor);
   }catch(e){
-    if(e && (e.code==='auth/popup-blocked' || e.code==='auth/operation-not-supported-in-this-environment')){
-      await fbAuth.signInWithRedirect(provedor);
-      return;
+    const cod = e && e.code;
+    if(cod==='auth/popup-blocked' || cod==='auth/operation-not-supported-in-this-environment'){
+      try{ await porRedirect(); return; }catch(e2){ LOGIN_ERRO = 'Não foi possível entrar: ' + motivoErroAuth(e2); }
     }
-    if(e && e.code==='auth/popup-closed-by-user') return;
-    alert('Não foi possível entrar: ' + motivoErroAuth(e));
+    else if(cod==='auth/popup-closed-by-user' || cod==='auth/cancelled-popup-request') LOGIN_ERRO = 'A janela de login foi fechada antes de terminar. Toque em "Entrar com Google" e conclua a escolha da conta. Se a janela não abre ou fecha sozinha, use "Entrar de outro jeito".';
+    else LOGIN_ERRO = 'Não foi possível entrar: ' + motivoErroAuth(e);
+  }finally{
+    LOGIN_EM_ANDAMENTO = false;
+    try{ if(!USUARIO_ATUAL) render(); }catch(_){}
   }
 }
 // Sair: primeiro envia pra nuvem o que ainda estiver pendente (ainda logado,
