@@ -7,7 +7,7 @@ const CONCURSOS_EMBUTIDOS = [
   "cargo": "Analista de Apoio à Assistência Judiciária — Direito e Legislação",
   "banca": "Instituto ACCESS",
   "data": "2027-02-21",
-  "rotulo": "21/02/2027 (manhã)",
+  "rotulo": "21/02/2027 (objetiva de manhã, discursiva à tarde)",
   "link": "https://www.access.org.br",
   "remuneracao": "R$ 11.514,95",
   "vagas": "7 imediatas e 700 de cadastro de reserva",
