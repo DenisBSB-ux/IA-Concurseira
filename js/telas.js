@@ -647,7 +647,7 @@ function renderTabelaEstatisticas(linhas, estiloCelula){
         <button type="button" class="mat-seta" data-toggle-mat="${esc(l.nome)}" title="Distribuição por assunto" aria-label="Distribuição por assunto de ${esc(l.nome)}" style="width:18px;color:${cor.fgForte};">${COMPOSICAO_ABERTOS.has('mat:'+l.nome)?'▴':'▾'}</button>
         <div style="width:26px;${estiloCelula}color:${cor.fg};">${l.ativa?'▸':i+1}</div>
         <div class="name" style="cursor:pointer;flex:1;${estiloCelula}color:${cor.fgForte};font-weight:${l.ativa?800:600};display:flex;align-items:center;gap:6px;" data-macro-materia="${esc(l.nome)}">
-          <span>${esc(l.nome)}${l.ativa?' <span style="font-size:10px;font-weight:600;opacity:.75;">(selecionada)</span>':''}</span>
+          <span>${esc(l.nome)}${typeof concursoMarca==='function'?concursoMarca(l.nome):''}${l.ativa?' <span style="font-size:10px;font-weight:600;opacity:.75;">(selecionada)</span>':''}</span>
           ${l.ativa ? `<button data-continuar-materia="${esc(l.nome)}" style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;border:1px solid ${cor.fgForte};background:transparent;color:${cor.fgForte};cursor:pointer;white-space:nowrap;">▶ Continuar</button>` : ''}
           ${l.ativa ? `<button class="js-config" title="Configurar simulado: quantidade, ordem e filtros" aria-label="Configurar simulado" style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;border:1px solid ${cor.fgForte};background:transparent;color:${cor.fgForte};cursor:pointer;line-height:1.3;">⚙</button>` : ''}
         </div>
@@ -724,6 +724,7 @@ function renderLetterhead(){
       <div>
         <div class="eyebrow">${esc(CONFIG.eyebrow)}</div>
         <h1 class="title">${esc(tituloExibido)} <span class="version-tag" title="Versão do código carregada agora — se tiver dúvida se está atualizado, confira aqui">${esc(window.__TCDF_BUILD__.versao)}</span> ${countBadge}</h1>
+        ${(typeof CONCURSO!=='undefined' && !CONCURSO.padrao) ? `<div class="subtitle conc-sub">${esc(CONCURSO.nome)}${CONCURSO.cargo?' · '+esc(CONCURSO.cargo):''}</div>` : ''}
         ${totalVisivel ? '' : '<div class="subtitle">Nenhuma questão carregada ainda. Importe um arquivo .txt para começar.</div>'}
       </div>
     </div>
@@ -894,6 +895,7 @@ function provaContagemHtml(){
   return `<div class="prova-info">
     <div class="prova-rot">${CONCURSO.padrao ? 'Prova objetiva (manhã) e Discursiva (tarde)' : esc(CONCURSO.nome)}</div>
     <div class="prova-data">${esc(PROVA_TCDF.rotulo)}</div>
+    ${CONCURSO.padrao ? '' : `<div class="prova-conta">Base × cargo: <b>${concursoCompat().pct}%</b> compatível</div>`}
     <div class="prova-conta">${PROVA_TCDF.semData ? 'Data da prova a definir' : txt}</div>
     ${PROVA_TCDF.link ? `<a class="prova-link" href="${esc(PROVA_TCDF.link)}" target="_blank" rel="noopener noreferrer">${CONCURSO.padrao ? 'Cespe: edital e avisos' : esc(CONCURSO.banca||'Edital e avisos')+': edital e avisos'} ↗</a>` : ''}
     <button type="button" class="prova-det-btn" data-prova-detalhes="1">Detalhes do edital</button>

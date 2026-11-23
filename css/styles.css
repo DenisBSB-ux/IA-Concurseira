@@ -2764,3 +2764,10 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 .conc-sel{ font:inherit; font-size:13px; padding:6px 8px; border:1px solid var(--paper-line); border-radius:6px; background:transparent; color:inherit; }
 .conc-resumo{ margin:8px 0; }
 .conc-fora{ margin-top:10px; }
+
+#concurso-modal[data-obrig="1"] [data-conc-fechar]{ display:none; }
+.conc-star{ font-size:11px; color:#e0b13a; } .conc-star.rel{ color:#d0902a; } .conc-star.off{ opacity:.35; }
+.conc-compat{ margin:8px 0; } .conc-barra{ height:10px; border-radius:6px; background:rgba(128,128,128,.25); overflow:hidden; margin-top:4px; }
+.conc-barra i{ display:block; height:100%; background:linear-gradient(90deg,#d94f4f,#e0b13a,#3fb36b); }
+.conc-tab tr.conc-ok td:first-child{ border-left:4px solid #3fb36b; } .conc-tab tr.conc-par td:first-child{ border-left:4px solid #e0b13a; } .conc-tab tr.conc-sem td:first-child{ border-left:4px solid #d94f4f; }
+.conc-sub{ font-size:12px; opacity:.85; }
