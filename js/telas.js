@@ -227,7 +227,7 @@ function renderTelaLogin(){
       <button class="btn btn-primary" id="btn-login-google" style="font-size:15px;padding:10px 22px;">🔐 Entrar com Google</button>`;
   }
   return `<div class="tela-login"><div class="tela-login-caixa">
-    <img class="seal-logo" src="img/logo-tcdf.png" alt="TCDF" style="margin:0 auto 10px;display:block;">
+    <img class="seal-logo" src="img/logo-ia-concurseira.png" alt="IA Concurseira" style="margin:0 auto 10px;display:block;">
     <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.7;margin-bottom:14px;">${esc(CONFIG.title||'')}</div>
     ${conteudo}
   </div></div>`;
@@ -719,7 +719,7 @@ function renderLetterhead(){
   return `
   <div class="letterhead">
     <div class="seal">
-      <img class="seal-logo" src="img/logo-tcdf.png" alt="TCDF">
+      <img class="seal-logo" src="img/logo-ia-concurseira.png" alt="IA Concurseira">
       <div>
         <div class="eyebrow">${esc(CONFIG.eyebrow)}</div>
         <h1 class="title">${esc(tituloExibido)} <span class="version-tag" title="Versão do código carregada agora — se tiver dúvida se está atualizado, confira aqui">${esc(window.__TCDF_BUILD__.versao)}</span> ${countBadge}</h1>
@@ -784,8 +784,7 @@ function renderContaBlock(){
   return `${syncUsuarioHtml()}
     <button class="side-action-btn compact" id="btn-sair-google">Encerrar sessão</button>`;
 }
-// data da prova e contagem regressiva (concurso TCDF 2026, Analista — Cebraspe)
-const PROVA_TCDF = { data:new Date(2026,10,22), rotulo:'22/11/2026 (manhã)', link:'https://www.cebraspe.org.br/concursos/TC_DF_26_ANALISTA' };
+// data da prova e contagem regressiva: ver js/concurso.js (PROVA_TCDF, concurso ativo)
 // uma mensagem de motivação por dia (muda a cada dia da contagem regressiva)
 const MOTIVACAO_PROVA = [
   "R$ 14.990,41 de remuneração inicial: cada questão de hoje te aproxima disso.",
@@ -828,6 +827,7 @@ const MOTIVACAO_PROVA = [
   "Último fôlego: revisão leve, mente tranquila."
 ];
 function motivacaoDoDia(dias){
+  if(typeof CONCURSO!=='undefined' && !CONCURSO.padrao) return concursoMotivacao(dias);
   if(dias<0) return 'Prova realizada. Obrigado pelo esforço: o resultado vem do que você construiu.';
   if(dias===0) return 'É hoje! Respire fundo, leia com calma e confie no seu preparo.';
   if(dias===1) return 'Amanhã é o dia. Revise de leve, durma cedo e confie no que estudou.';
@@ -839,6 +839,7 @@ function provaDias(){
   return Math.round((PROVA_TCDF.data - hoje)/86400000);
 }
 function provaDetalhesHtml(){
+  if(typeof CONCURSO!=='undefined' && !CONCURSO.padrao) return concursoDetalhesHtml();
   return `
       <ul>
         <li><b>Cargo:</b> Analista Administrativo de Controle Externo, Área de Gestão (Serviços Técnico-Administrativos)</li>
@@ -890,11 +891,12 @@ function provaContagemHtml(){
   const dias = provaDias();
   const txt = dias>1 ? `Faltam <b>${dias} dias</b>` : (dias===1 ? 'Falta <b>1 dia</b>' : (dias===0 ? '<b>A prova é hoje!</b>' : 'Prova realizada'));
   return `<div class="prova-info">
-    <div class="prova-rot">Prova objetiva (manhã) e Discursiva (tarde)</div>
-    <div class="prova-data">${PROVA_TCDF.rotulo}</div>
-    <div class="prova-conta">${txt}</div>
-    <a class="prova-link" href="${PROVA_TCDF.link}" target="_blank" rel="noopener noreferrer">Cespe: edital e avisos ↗</a>
+    <div class="prova-rot">${CONCURSO.padrao ? 'Prova objetiva (manhã) e Discursiva (tarde)' : esc(CONCURSO.nome)}</div>
+    <div class="prova-data">${esc(PROVA_TCDF.rotulo)}</div>
+    <div class="prova-conta">${PROVA_TCDF.semData ? 'Data da prova a definir' : txt}</div>
+    ${PROVA_TCDF.link ? `<a class="prova-link" href="${esc(PROVA_TCDF.link)}" target="_blank" rel="noopener noreferrer">${CONCURSO.padrao ? 'Cespe: edital e avisos' : esc(CONCURSO.banca||'Edital e avisos')+': edital e avisos'} ↗</a>` : ''}
     <button type="button" class="prova-det-btn" data-prova-detalhes="1">Detalhes do edital</button>
+    <button type="button" class="prova-det-btn" data-conc-abrir="1" title="Carrega o PDF do edital e adapta o site ao concurso">📄 Carregar edital</button>
   </div>`;
 }
 function renderSyncSidebarBlock(){

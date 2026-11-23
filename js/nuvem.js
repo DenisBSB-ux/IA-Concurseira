@@ -666,7 +666,7 @@ function _lsGet(k){ try{ return window.localStorage.getItem(k); }catch(_){ retur
 function _lsSet(k, v){ try{ if(v===null||v===undefined) window.localStorage.removeItem(k); else window.localStorage.setItem(k, v); }catch(_){} }
 /* ---------- progresso da REVISÃO (marcas de flashcards/lacunas, assuntos estudados, registro por dia, dias do plano) ----------
    Nunca se perde: sobe para a nuvem (doc próprio, mescla por união, o que existe aqui vale mais que o remoto), entra no backup e na restauração. */
-const REV_CHAVES = { treino:'tcdf_treino_v1', check:'tcdf_resumo_check_v1', log:'tcdf_treino_log_v1', hist:'tcdf_reta7_hist_v2', ts:'tcdf_rev_ts_v1', tent:'tcdf_treino_n_v1' };
+const REV_CHAVES = { treino:'tcdf_treino_v1', check:'tcdf_resumo_check_v1', log:'tcdf_treino_log_v1', hist:'tcdf_reta7_hist_v2', ts:'tcdf_rev_ts_v1', tent:'tcdf_treino_n_v1', conc:'ia_concurso_v1' };
 function revisaoColetar(){
   const o = {}; Object.keys(REV_CHAVES).forEach(k => { try{ o[k] = JSON.parse(localStorage.getItem(REV_CHAVES[k]) || 'null'); }catch(_){ o[k] = null; } });
   return o;
@@ -693,6 +693,9 @@ function revisaoMesclar(r){
     if(alt) gravar(k, loc);
   });
   if(altTs) gravar('ts', tsL);
+  if(r.conc && typeof r.conc === 'object' && !Array.isArray(r.conc) && Number(r.conc.ts) > ((ler('conc') || {}).ts || 0)){   // concurso ativo: vale o mais recente
+    gravar('conc', r.conc); try{ if(typeof concursoCarregar === 'function') concursoCarregar(); }catch(_){}
+  }
   if(r.tent && typeof r.tent === 'object' && !Array.isArray(r.tent)){      // tentativas: vale o maior número de cada questão (nunca diminui ao sincronizar)
     const loc = (ler('tent') && typeof ler('tent') === 'object') ? ler('tent') : {}; let alt = false;
     Object.keys(r.tent).forEach(sl => {

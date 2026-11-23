@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="IA Concurseira">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b3fd9"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient>
+    <linearGradient id="ac" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe27a"/><stop offset="1" stop-color="#ffb23d"/></linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- livro aberto -->
+  <path d="M256 392c-34-26-78-34-124-30V190c46-4 90 4 124 30z" fill="#fff"/>
+  <path d="M256 392c34-26 78-34 124-30V190c-46-4-90 4-124 30z" fill="#e8e6ff"/>
+  <path d="M256 220v172" stroke="#3b3fd9" stroke-width="6" opacity=".35"/>
+  <!-- marca de certo -->
+  <path d="M172 276l30 30 56-64" fill="none" stroke="#3b3fd9" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- faísca (IA) -->
+  <path d="M352 80c6 40 22 56 62 62-40 6-56 22-62 62-6-40-22-56-62-62 40-6 56-22 62-62z" fill="url(#ac)"/>
+  <path d="M158 96c3 18 10 25 28 28-18 3-25 10-28 28-3-18-10-25-28-28 18-3 25-10 28-28z" fill="#fff" opacity=".85"/>
+</svg>

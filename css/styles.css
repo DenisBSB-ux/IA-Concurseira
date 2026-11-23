@@ -1642,7 +1642,7 @@ body::before{
 body:not(.theme-light)::before{ opacity:.12; filter:grayscale(1) brightness(.85); }
 body::after{
   content:''; position:fixed; right:28px; bottom:22px; width:200px; height:200px; z-index:-1; pointer-events:none;
-  background:url('../img/logo-tcdf.png') center / contain no-repeat; opacity:.04; border-radius:24px;
+  background:url('../img/logo-ia-concurseira.png') center / contain no-repeat; opacity:.04; border-radius:24px;
 }
 @media (max-width:720px){ body::after{ width:120px; height:120px; right:12px; bottom:10px; } }
 
@@ -2739,3 +2739,17 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 .tr-modal.tr-foco .tr-cont{ border:0; min-height:0; padding:0; background:none; }
 .tr-modal.tr-foco .tr-ferr{ gap:8px; }
 .tr-modal.tr-foco .tr-card{ border-width:1px; }
+
+/* v618 — carregar edital */
+.conc-caixa{ max-width:720px; }
+.conc-up{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:8px; }
+.conc-arq{ cursor:pointer; display:inline-block; }
+.conc-st{ font-size:12px; opacity:.8; }
+.conc-grade{ display:grid; grid-template-columns:1fr 1fr; gap:8px 12px; margin:8px 0; }
+.conc-l{ display:flex; flex-direction:column; gap:3px; font-size:12px; margin-bottom:6px; }
+.conc-l input,.conc-ta{ font:inherit; font-size:13px; padding:6px 8px; border:1px solid var(--paper-line); border-radius:6px; background:transparent; color:inherit; width:100%; box-sizing:border-box; }
+.conc-ta{ display:block; margin-bottom:6px; }
+.conc-acoes{ display:flex; gap:8px; margin:10px 0; flex-wrap:wrap; }
+@media (max-width:560px){ .conc-grade{ grid-template-columns:1fr; } }
+.conc-ta[hidden]{ display:none; }
+.conc-up .side-action-btn,.conc-acoes .side-action-btn{ width:auto; }
