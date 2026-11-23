@@ -17,7 +17,7 @@ const CONCURSOS_EMBUTIDOS = [
     "Nº 1 – DPDF, de 26/10/2026 (consolidado; retificado pelo Edital nº 2, de 10/11/2026)"
    ],
    [
-    "Remuneração inicial",
+    "Composição da remuneração",
     "vencimento básico R$ 8.731,96 + Gratificação Judiciária R$ 600,00 + GADP R$ 2.182,99"
    ],
    [
