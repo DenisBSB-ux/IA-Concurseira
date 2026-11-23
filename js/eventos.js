@@ -108,6 +108,8 @@ function attachHandlers(){
   if(btnInstalarApp) btnInstalarApp.addEventListener('click', ()=>instalarApp());
   const btnSyncAgora = document.getElementById('btn-sync-agora');
   if(btnSyncAgora) btnSyncAgora.addEventListener('click', ()=>sincronizarAgora());
+  const linhaSync = document.getElementById('sync-status-el');
+  if(linhaSync){ linhaSync.addEventListener('click', ()=>sincronizarAgora()); linhaSync.addEventListener('keydown', e=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); sincronizarAgora(); } }); }
   const btnEntrarGoogle = document.getElementById('btn-entrar-google');
   if(btnEntrarGoogle) btnEntrarGoogle.addEventListener('click', entrarComGoogle);
   const btnEntrarGoogleBanner = document.getElementById('btn-entrar-google-banner');

@@ -608,7 +608,7 @@ function textoLinhaSync(){
   if(!ts) return { classe:(st&&st.type)||'', html: esc(st ? st.msg : 'sincronizando…') };
   const min = Math.floor((Date.now()-ts)/60000), hh = new Date(ts).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
   const rel = min<1 ? 'agora' : (min<60 ? 'há '+min+' min' : (min<1440 ? 'há '+Math.floor(min/60)+' h' : 'há '+Math.floor(min/1440)+' d'));
-  return { classe:'ok', html:'🟢 Sincronizado ' + rel + ' <small>(' + hh + ')</small>' };
+  return { classe:'ok', html:'Sincronizado ' + rel + ' <small>(' + hh + ')</small>' };
 }
 function atualizarLinhaSync(){
   const el = document.getElementById('sync-status-el'); if(!el) return;

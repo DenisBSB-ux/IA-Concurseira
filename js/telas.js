@@ -805,7 +805,7 @@ function renderContaBlock(){
   }
   // o UID fica só no title (passar o mouse) — é o valor usado em firestore.rules
   return `${syncUsuarioHtml()}
-    <button class="side-action-btn compact" id="btn-sair-google">Encerrar sessão</button>`;
+    <button class="side-action-btn compact" id="btn-sair-google">Logout (sair)</button>`;
 }
 // data da prova e contagem regressiva: ver js/concurso.js (PROVA_TCDF, concurso ativo)
 // uma mensagem de motivação por dia (muda a cada dia da contagem regressiva)
@@ -943,16 +943,15 @@ function renderSyncSidebarBlock(){
   const statusDetalhe = STATE.syncStatus ? STATE.syncStatus.detalhe : '';
   return `<div class="sidebar-block"><div class="sb-pad sync-block compact">
     ${syncUsuarioHtml()}
-    <div class="sync-linha ${textoLinhaSync().classe}" id="sync-status-el" role="status" aria-live="polite"><span class="sync-dot"></span>${textoLinhaSync().html}</div>
+    <div class="sync-linha sync-clicavel ${textoLinhaSync().classe}" id="sync-status-el" role="button" tabindex="0" title="Clique para atualizar agora (envia o pendente e busca o que mudou em outros aparelhos)" aria-live="polite"><span class="sync-dot"></span>${textoLinhaSync().html}</div>
     ${(typeof appInstalado==='function' && !appInstalado()) ? (window.__PROMPT_INSTALAR ? '<button class="side-action-btn compact" id="btn-instalar-app" title="Instala a plataforma como um aplicativo neste aparelho (abre em janela própria e atualiza sozinho)">📲 Instalar o app</button>' : (ehIOS() ? '<div class="side-status detail">📲 Para instalar no iPhone/iPad: toque em Compartilhar e em "Adicionar à Tela de Início".</div>' : '')) : ''}
-    <button class="side-action-btn compact" id="btn-sync-agora" title="Envia o que estiver pendente e busca o que mudou em outros aparelhos">↻ Sincronizar agora</button>
     ${statusDetalhe ? `<div class="side-status detail">${esc(statusDetalhe)}</div>` : ''}
     ${ALERTAS_SOBRESCRITA_NUVEM.length>0 ? `<div class="side-status err" style="margin-top:6px;">
       ⚠ ${ALERTAS_SOBRESCRITA_NUVEM.length} possível sobrescrita detectada — outro dispositivo publicou depois da sua última sincronização.
       <button class="side-action-btn compact" id="btn-ver-alertas-sobrescrita" style="margin-top:4px;">Ver detalhes</button>
       <button class="side-action-btn compact" id="btn-dispensar-alertas-sobrescrita" style="margin-top:4px;">Dispensar</button>
     </div>` : ''}
-    <button class="side-action-btn compact" id="btn-sair-google">Encerrar sessão</button>
+    <button class="side-action-btn compact" id="btn-sair-google">Logout (sair)</button>
     ${provaContagemHtml()}
   </div></div>`;
 }

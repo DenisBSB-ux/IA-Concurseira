@@ -2834,3 +2834,5 @@ body:not(.theme-light) .pv-link{ color:var(--gold-bright); }
 .conc-faltante{ background:rgba(224,177,58,.16); border:2px dashed #e0b13a; border-left:4px solid #d94f4f; border-radius:4px; }
 .conc-tag-falta{ display:inline-block; margin-left:6px; padding:1px 7px; border-radius:10px; background:#d94f4f; color:#fff; font-size:10px; font-weight:800; letter-spacing:.04em; }
 .conc-tag-fora{ display:inline-block; margin-left:4px; padding:1px 7px; border-radius:10px; border:1px solid currentColor; font-size:10px; font-weight:700; opacity:.75; }
+
+.sync-clicavel{ cursor:pointer; } .sync-clicavel:hover{ text-decoration:underline; }
