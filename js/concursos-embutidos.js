@@ -5842,5 +5842,1554 @@ const CONCURSOS_EMBUTIDOS = [
     }
    ]
   }
+ },
+ {
+  "id": "cgu-2026-affc",
+  "embutido": true,
+  "nome": "CGU 2026 — Auditor Federal de Finanças e Controle (AFFC)",
+  "orgao": "Controladoria-Geral da União (CGU)",
+  "cargo": "Auditor Federal de Finanças e Controle — Auditoria",
+  "banca": "Cebraspe",
+  "data": "2026-12-13",
+  "rotulo": "13/12/2026 (objetivas de manhã, discursiva à tarde)",
+  "link": "http://www.cebraspe.org.br/concursos/cgu_26_affc",
+  "remuneracao": "R$ 20.000,00 (subsídio inicial)",
+  "vagas": "60 imediatas e cadastro de reserva",
+  "itens": [
+   [
+    "Edital",
+    "Nº 1 – CGU – AFFC, de 8/10/2026, executado pelo Cebraspe"
+   ],
+   [
+    "Regime",
+    "Servidor federal estatutário (Lei nº 8.112/1990); carreira de Finanças e Controle, classe A, padrão I"
+   ],
+   [
+    "Provas",
+    "Objetivas (P1, P2 e P3) e discursiva (P4), todas eliminatórias e classificatórias, nas 27 capitais"
+   ],
+   [
+    "Objetivas",
+    "13/12/2026, pela manhã, 5 horas; itens Certo/Errado: P1 básicos 40 itens (±1 ponto), P2 complementares 40 itens (±1 ponto) e P3 específicos 90 itens (±2 pontos); total de 260 pontos; erro anula acerto"
+   ],
+   [
+    "Itens por matéria",
+    "O edital não divide os itens entre as matérias; a plataforma usa partes iguais dentro de cada prova para ponderar a compatibilidade"
+   ],
+   [
+    "Aprovação nas objetivas",
+    "NP1 ≥ 8; NP2 ≥ 12; NP3 ≥ 54 e nota final (soma) ≥ 78 pontos"
+   ],
+   [
+    "Discursiva",
+    "13/12/2026, à tarde, 3h30: uma questão de complementares (até 30 linhas, 30 pontos) e uma de específicos (até 60 linhas, 70 pontos); total de 100 pontos"
+   ],
+   [
+    "Inscrições",
+    "De 10/10 a 4/11/2026; taxa de R$ 170,00; pagamento até 6/11/2026"
+   ],
+   [
+    "Gabaritos preliminares",
+    "18/12/2026"
+   ],
+   [
+    "Resultado final nas objetivas",
+    "14/1/2027 (previsto)"
+   ],
+   [
+    "Resultado final do concurso",
+    "15/4/2027 (previsto)"
+   ],
+   [
+    "Cargo",
+    "Auditor Federal de Finanças e Controle, com 4 especialidades; requisito: graduação em qualquer área; jornada de 40 horas semanais"
+   ]
+  ],
+  "materias": [],
+  "cargos": [
+   {
+    "nome": "Auditor Federal de Finanças e Controle — Auditoria",
+    "materias": [
+     "Auditoria Governamental: Avaliação, Consultoria e Apuração",
+     "Políticas Públicas e Métodos de Investigação e Avaliação",
+     "Auditoria de Contratações, Transferências e Execução de Recursos",
+     "Integridade, Transparência e Responsabilização Aplicadas ao Controle Público"
+    ],
+    "qtd": {
+     "Auditoria Governamental: Avaliação, Consultoria e Apuração": 22.5,
+     "Políticas Públicas e Métodos de Investigação e Avaliação": 22.5,
+     "Auditoria de Contratações, Transferências e Execução de Recursos": 22.5,
+     "Integridade, Transparência e Responsabilização Aplicadas ao Controle Público": 22.5
+    },
+    "topicos": {
+     "Auditoria Governamental: Avaliação, Consultoria e Apuração": [
+      {
+       "n": 1,
+       "t": "Avaliação, consultoria e apuração",
+       "subs": [
+        "1.1 Seleção da forma de atuação conforme o problema, objetivos e riscos",
+        "1.2 Avaliação: critérios de desempenho e conformidade, exame de evidências e conclusões independentes sobre governança, controles e resultados",
+        "1.3 Consultoria: análise da demanda, pactuação de objetivos, escopo e produtos; assessoramento, aconselhamento e facilitação; salvaguardas de objetividade e limites à assunção de responsabilidades gerenciais",
+        "1.4 Apuração: delimitação dos fatos e hipóteses, planejamento de diligências, reunião e preservação de elementos probatórios, análise de possíveis prejuízos e comunicação às instâncias competentes",
+        "1.5 Distinção entre apuração no controle interno, investigação correcional e processo sancionador; acompanhamento de providências e aprendizado institucional"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Planejamento técnico do trabalho",
+       "subs": [
+        "2.1 Universo, seleção e priorização; risco de auditoria; objetivos, escopo, critérios e questões; matriz de planejamento, programa de trabalho e desenho de evidências",
+        "2.2 Relação entre perguntas de auditoria e de avaliação de políticas, respeitadas suas finalidades e seus desenhos",
+        "2.3 Coordenação de equipes e mudanças de escopo sem comprometer a inferência conjunta; seleção aleatória e por risco e seus propósitos"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Testes e amostragem",
+       "subs": [
+        "3.1 Testes de controles e substantivos; inspeção, confirmação, observação, procedimentos analíticos e recálculo; amostragem estatística e por julgamento; tamanho, seleção, limitações e desenho de procedimentos para riscos identificados"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Achados documentação e revisão",
+       "subs": [
+        "4.1 Critério, condição, causas e efeitos; suficiência e adequação da evidência; papéis de trabalho, trilha de revisão e supervisão; contradita técnica e exame de evidências divergentes; indícios de fraude e aprofundamento compatível com o mandato"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Auditoria de dados e IA",
+       "subs": [
+        "5.1 Testes sobre qualidade de dados, controles e rastreabilidade; desenho de validações independentes; riscos de viés, erro e mudança de desempenho; supervisão e governança de sistemas automatizados; limites do uso de IA como evidência"
+       ]
+      },
+      {
+       "n": 6,
+       "t": "Comunicação monitoramento e qualidade",
+       "subs": [
+        "6.1 Construção de relatórios e recomendações sustentados por evidências; avaliação de soluções alternativas; testes de implementação e resultado; benefícios e monitoramento",
+        "6.2 Asseguração e melhoria da qualidade dos trabalhos; avaliação de capacidade da atividade de auditoria a partir de evidências e planos de melhoria. FINANÇAS PÚBLICAS, ORÇAMENTO E CONTABILIDADE PÚBLICA: 1 Economia e finanças do setor público. 1.1 Funções alocativa, distributiva e estabilizadora; bens públicos, externalidades e monopólios naturais; financiamento de políticas e federalismo fiscal. 1.2 Progressividade, regressividade e neutralidade da tributação; resultados primário e nominal, déficit e necessidades de financiamento; restrições, riscos e sustentabilidade fiscal em análise aplicada. 2 Orçamento e planejamento. 2.1 PPA, LDO e LOA em aplicação; elaboração, emendas, discussão e aprovação do orçamento; classificações relevantes, créditos e alterações, vinculações e metas. 2.2 Programação orçamentária e financeira; limites de empenho e pagamento, contingenciamento e bloqueio no escopo do programa. 3 Execução e responsabilidade fiscal. 3.1 Etapas da receita e da despesa; empenho, liquidação e pagamento; restos a pagar; Conta Única do Tesouro Nacional e gestão de disponibilidades. 3.2 Limites, metas e transparência fiscal; dívida e riscos fiscais no escopo do programa. 4 Informação contábil aplicada ao controle. 4.1 Relações entre execução orçamentária, financeira e patrimônio; reconhecimento e mensuração de operações usuais com receitas, despesas, ativos e passivos. 4.2 Leitura dos balanços orçamentário, financeiro e patrimonial e da demonstração das variações patrimoniais, com notas explicativas pertinentes; conciliação e identificação de inconsistências relevantes para o controle. 5 Custos e análise da execução. 5.1 Comprovação da despesa e conexão físico-financeira; comparação entre recursos, custos e entregas. 5.2 Interpretação de informações de custos e de indicadores de execução e eficiência, observadas comparabilidade, bases de cálculo e limitações. 5.3 MCASP 11ª edição e Manual de Informações do Sistema de Custos (MIC). 6 Informação societária de empresas estatais",
+        "6.1 Distinção entre informação societária e contabilidade aplicada ao setor público",
+        "6.2 Leitura de balanço patrimonial, demonstração do resultado e notas explicativas; relações entre posição patrimonial, desempenho e caixa",
+        "6.3 Reconhecimento de efeitos e incertezas de depreciação, redução ao valor recuperável, provisões, contingências e transações com partes relacionadas"
+       ]
+      },
+      {
+       "n": 7,
+       "t": "Governança e finalidade pública de empresas estatais",
+       "subs": [
+        "7.1 Papéis e responsabilidades do Estado como proprietário das empresas estatais e gestor de seus administradores, dos conselhos de administração e fiscal e das instâncias de auditoria e fiscalização",
+        "7.2 Finalidade pública, sustentabilidade econômico-financeira e prestação de contas; conflitos de interesses e controles",
+        "7.3 Relação entre mandatos de política pública, estratégias empresariais, recursos empregados e resultados sociais e econômicos; custos, riscos e transparência dos compromissos assumidos",
+        "7.4 Coerência entre objetivos, recursos e resultados divulgados; compromissos de políticas públicas e informações da carta anual"
+       ]
+      }
+     ],
+     "Políticas Públicas e Métodos de Investigação e Avaliação": [
+      {
+       "n": 1,
+       "t": "Problema, desenho e avaliabilidade",
+       "subs": [
+        "1.1 Causas e manifestações do problema público; população elegível e público atendido; instrumentos, incentivos, teoria da mudança e modelo lógico",
+        "1.2 Relação entre problema, pressupostos, hipóteses e evidências; explicações alternativas e efeitos não pretendidos",
+        "1.3 Avaliabilidade e compatibilidade entre pergunta e informação disponível"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Implementação gestão e coordenação",
+       "subs": [
+        "2.1 Arranjos federativos e interorganizacionais; parcerias; capacidades, recursos e diferenças territoriais; discricionariedade na linha de frente e barreiras administrativas",
+        "2.2 Processos e projetos como instrumentos de entrega; responsabilidades, riscos e marcos de execução",
+        "2.3 Assessoramento, cooperação e adaptação de soluções com preservação de direitos e controles"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Monitoramento e desenhos de avaliação",
+       "subs": [
+        "3.1 Insumos, atividades, produtos, resultados e impactos; eficiência, eficácia, efetividade e equidade",
+        "3.2 Indicadores, fontes e periodicidade",
+        "3.3 Avaliações ex ante e ex post, de desenho, implementação, resultados, impacto e eficiência",
+        "3.4 Pré-teste e estudo-piloto; critérios de julgamento e seleção do desenho adequado à pergunta"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Estratégias qualitativas e mistas",
+       "subs": [
+        "4.1 Estudos de caso, entrevistas, grupos focais e observação; seleção de casos e participantes, perguntas e controle de indução",
+        "4.2 Análise de processos e hipóteses de mecanismo; triangulação e integração de evidências quantitativas e qualitativas; limites de generalização"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Identificação causal e análise econômica",
+       "subs": [
+        "5.1 Contrafactual, seleção e confundimento; experimentos e quase experimentos; grupos de comparação e medidas anteriores à intervenção",
+        "5.2 Diferenças em diferenças, regressão descontínua e pareamento em interpretação aplicada, com hipóteses e ameaças à validade",
+        "5.3 Custo-efetividade e custo-benefício, custo de oportunidade e sensibilidade; heterogeneidade de efeitos, equidade e impactos territoriais"
+       ]
+      },
+      {
+       "n": 6,
+       "t": "Conclusões, recomendações e uso dos resultados",
+       "subs": [
+        "6.1 Validade interna e externa, incerteza e resultados nulos; comparação de alternativas e recomendações proporcionais e exequíveis",
+        "6.2 Priorização, escuta, adaptação e condições de implementação; acompanhamento de benefícios e efeitos distributivos",
+        "6.3 Distinção entre plano, implementação e resultados, com evidências adequadas a cada etapa"
+       ]
+      },
+      {
+       "n": 7,
+       "t": "Ética da investigação",
+       "subs": [
+        "7.1 Dignidade, privacidade e segurança das pessoas; riscos de coerção, exposição e reidentificação; informação e consentimento quando cabível",
+        "7.2 Integridade dos registros, autoria e prevenção de plágio, fabricação ou seleção indevida de evidências",
+        "7.3 Distinção entre auditoria e pesquisa científica envolvendo seres humanos; finalidades, proteção dos participantes e requisitos de apreciação ética"
+       ]
+      }
+     ],
+     "Auditoria de Contratações, Transferências e Execução de Recursos": [
+      {
+       "n": 1,
+       "t": "Planejamento e seleção",
+       "subs": [
+        "1.1 Necessidade da contratação, estudos e especificação; pesquisa de preços; competição e critérios de seleção; riscos de direcionamento e de restrição indevida"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Execução contratual",
+       "subs": [
+        "2.1 Medição, entrega e aceitação; fiscalização, pagamento, alterações e reequilíbrio; evidências sobre quantidade, qualidade e preço; continuidade de serviços e resposta a falhas"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Transferências e parcerias",
+       "subs": [
+        "3.1 Objetivos, instrumentos, planos de trabalho e obrigações; seleção e execução; acompanhamento e prestação de contas; capacidades locais e responsabilidades dos participantes"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Testes e sinais de irregularidade",
+       "subs": [
+        "4.1 Concentração e vínculos entre fornecedores; fracionamento e padrões atípicos; comprovação física e documental; cruzamentos de dados; limites de amostras dirigidas por risco"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Encaminhamentos e resultados",
+       "subs": [
+        "5.1 Dano e critérios para sua demonstração; correção de processos, proteção de usuários e recuperação de recursos; interfaces com responsabilização e integridade; recomendações proporcionais"
+       ]
+      }
+     ],
+     "Integridade, Transparência e Responsabilização Aplicadas ao Controle Público": [
+      {
+       "n": 1,
+       "t": "Direito público aplicado às respostas de controle",
+       "subs": [
+        "1.1 Análise de vulnerabilidades, incentivos, conflitos e capacidades institucionais; articulação entre governança, riscos e controles",
+        "1.2 Integração de manifestações de ouvidoria, dados de transparência, achados de auditoria e informações correcionais",
+        "1.3 Definição de prioridades e combinação de respostas preventivas, corretivas e de responsabilização; competências, motivação, proporcionalidade, consequências práticas e condições de atuação"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Informação, participação e qualidade dos serviços",
+       "subs": [
+        "2.1 Análise de pedidos e recursos de acesso à informação; aplicação articulada da LAI e da LGPD",
+        "2.2 Informação classificada, sigilos legais, informação pessoal e documentos preparatórios; acesso parcial, motivação e revisão de restrições",
+        "2.3 Transparência ativa e dados abertos; qualidade, cobertura, atualização e risco de reidentificação",
+        "2.4 Análise de reclamações, solicitações, sugestões e outras manifestações; escuta de usuários e não usuários, participação, representatividade, barreiras de acesso e subnotificação",
+        "2.5 Utilização dos resultados para aperfeiçoar serviços e orientar o controle"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Proteção do denunciante e tratamento seguro dos relatos",
+       "subs": [
+        "3.1 Salvaguardas da identidade do denunciante desde o recebimento do relato; pseudonimização, acesso por necessidade de conhecer, rastreabilidade e condições legais de compartilhamento ou revelação",
+        "3.2 Identificação de riscos e práticas de retaliação; medidas preventivas, protetivas e reparadoras e competências para sua adoção",
+        "3.3 Acolhimento e prevenção de revitimização em situações de assédio e discriminação",
+        "3.4 Articulação entre proteção, preservação de evidências, apuração e direitos de defesa"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Avaliação e aperfeiçoamento da integridade pública e privada",
+       "subs": [
+        "4.1 Diagnóstico de riscos e avaliação da existência, implementação e efetividade de programas de integridade",
+        "4.2 Compromisso da liderança, cultura, incentivos, registros, controles, diligência sobre terceiros, canais de relato e remediação",
+        "4.3 Avaliação de maturidade e planos de melhoria proporcionais ao contexto e à capacidade institucional",
+        "4.4 Análise de conflitos de interesses, impedimentos, favorecimento e exercício de atividade privada; medidas de prevenção, orientação e tratamento",
+        "4.5 Prevenção de assédio e discriminação como dimensão da integridade organizacional"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Admissibilidade, prova e requisitos da responsabilização",
+       "subs": [
+        "5.1 Qualificação de notícias de irregularidade e juízo de admissibilidade; arquivamento fundamentado, investigação e instauração de processo",
+        "5.2 Regimes de agentes públicos e de pessoas jurídicas; materialidade, autoria quando exigível, nexo, enquadramento e elemento subjetivo conforme o regime aplicável",
+        "5.3 Responsabilidade objetiva da pessoa jurídica e requisitos de ato lesivo e interesse ou benefício",
+        "5.4 Licitude, suficiência e valoração da prova; compartilhamento entre instâncias, contraditório, defesa e motivação",
+        "5.5 Distinção entre achado de controle e imputação de responsabilidade"
+       ]
+      },
+      {
+       "n": 6,
+       "t": "Instrumentos de responsabilização e soluções consensuais",
+       "subs": [
+        "6.1 Processo administrativo disciplinar e processo administrativo de responsabilização de pessoas jurídicas: cabimento, instrução, garantias e decisão",
+        "6.2 Aplicação dos marcos prescricionais e dos critérios de dosimetria; fundamentação da sanção e da reparação do dano em casos concretos",
+        "6.3 Acordo de leniência: requisitos, colaboração, efeitos, obrigações de integridade e limites",
+        "6.4 Termo de ajustamento de conduta: requisitos, proporcionalidade e acompanhamento",
+        "6.5 Coordenação entre instâncias, distinção entre sanção e reparação e consideração das sanções relativas ao mesmo fato nos termos legais"
+       ]
+      },
+      {
+       "n": 7,
+       "t": "Resultados, comunicação e aprendizagem institucional",
+       "subs": [
+        "7.1 Conversão de manifestações, avaliações e apurações em medidas de melhoria da gestão, da integridade e dos serviços",
+        "7.2 Planos de ação, responsabilidades, indicadores e acompanhamento de compromissos",
+        "7.3 Avaliação da implementação e dos efeitos das medidas sobre recorrência, acesso a direitos e confiança",
+        "7.4 Distinção entre redução de ocorrências e redução da detecção",
+        "7.5 Comunicação pública de resultados, contextualização de informações, proteção de pessoas e prestação de contas"
+       ]
+      }
+     ]
+    },
+    "itens": [
+     [
+      "Requisito",
+      "Graduação de nível superior em qualquer área de formação"
+     ],
+     [
+      "Vagas imediatas",
+      "30 imediatas (Órgão Central – DF: 20; Unidades Regionais AC, AP, MT, RO e RR: 2 em cada)"
+     ],
+     [
+      "Jornada",
+      "40 horas semanais"
+     ]
+    ]
+   },
+   {
+    "nome": "Auditor Federal de Finanças e Controle — TI – Ciência de Dados",
+    "materias": [
+     "Estatística, Programação e Análise de Dados",
+     "Engenharia, Arquitetura e Governança de Dados",
+     "Aprendizado de Máquina e Inteligência Artificial",
+     "Operação, Governança e Gestão de Soluções de Dados e IA"
+    ],
+    "qtd": {
+     "Estatística, Programação e Análise de Dados": 22.5,
+     "Engenharia, Arquitetura e Governança de Dados": 22.5,
+     "Aprendizado de Máquina e Inteligência Artificial": 22.5,
+     "Operação, Governança e Gestão de Soluções de Dados e IA": 22.5
+    },
+    "topicos": {
+     "Estatística, Programação e Análise de Dados": [
+      {
+       "n": 1,
+       "t": "Exploração e descrição",
+       "subs": [
+        "1.1 Tipos de dados e variáveis; distribuições de frequências, medidas de posição e dispersão; exploração e visualização; comparação de grupos e períodos; identificação de padrões, anomalias e limites das fontes"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Probabilidade e inferência",
+       "subs": [
+        "2.1 Probabilidade e distribuições em aplicações; amostragem, estimação, intervalos de confiança e testes de hipóteses",
+        "2.2 Pressupostos, incerteza e erros de inferência; significância estatística e relevância prática"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Relações entre variáveis",
+       "subs": [
+        "3.1 Correlação, regressão e análise de variância; pressupostos, tamanho de efeito e interpretação de resultados",
+        "3.2 Associação, predição e causalidade; seleção, representatividade e explicações alternativas em dados administrativos"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Programação para análise",
+       "subs": [
+        "4.1 Python 3: estruturas de dados, controle de fluxo, funções, módulos, arquivos e exceções; leitura, análise e depuração de rotinas de manipulação de dados; organização modular, testes e reprodutibilidade de análises"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Preparação e transformação",
+       "subs": [
+        "5.1 Valores ausentes, inconsistências, duplicações, outliers e desbalanceamento; transformação, codificação, normalização e padronização; engenharia e seleção de atributos; prevenção de vazamento de informação na preparação dos dados"
+       ]
+      }
+     ],
+     "Engenharia, Arquitetura e Governança de Dados": [
+      {
+       "n": 1,
+       "t": "Modelagem e arquiteturas",
+       "subs": [
+        "1.1 Modelos relacional, documental, chave-valor, multidimensional e vetorial; normalização e integridade; transações e consistência",
+        "1.2 Data warehouse, data mart, data lake e lakehouse; produtos de dados, responsabilidade por domínios, autosserviço e governança federada em data mesh"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "SQL e consultas analíticas",
+       "subs": [
+        "2.1 Definição e manipulação de dados, controle de acesso e transações; filtros, junções, agregações, subconsultas, expressões de tabela comuns e funções de janela",
+        "2.2 Índices, planos de execução e desempenho; valores nulos, duplicações e erros de interpretação em consultas"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Ingestão e integração",
+       "subs": [
+        "3.1 ETL e ELT; processamento em lote e fluxo, completo e incremental; APIs e contratos de dados; formatos CSV, JSON, XML e Parquet; interoperabilidade semântica e técnica; falhas, repetição de processamento e consistência"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Processamento distribuído",
+       "subs": [
+        "4.1 Particionamento, paralelismo, movimentação de dados e execução distribuída de transformações e junções",
+        "4.2 Escalabilidade, tolerância a falhas e custo",
+        "4.3 Planos de execução",
+        "4.4 Assimetria entre partições e resultados inconsistentes"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Qualidade e rastreabilidade",
+       "subs": [
+        "5.1 Metadados, catálogo e linhagem",
+        "5.2 Completude, consistência, validade, unicidade, acurácia e atualidade",
+        "5.3 Perfilamento, deduplicação, vinculação de registros e enriquecimento",
+        "5.4 Conciliação de fontes",
+        "5.5 Riscos de correspondências incorretas entre pessoas ou entidades"
+       ]
+      },
+      {
+       "n": 6,
+       "t": "Compartilhamento e proteção",
+       "subs": [
+        "6.1 Minimização, segregação de ambientes e privilégios",
+        "6.2 Retenção e descarte",
+        "6.3 Anonimização, pseudonimização e reidentificação",
+        "6.4 Publicação, reutilização e compartilhamento controlados",
+        "6.5 Proteção de dados pessoais e equilíbrio entre utilidade analítica, abertura e proteção de pessoas"
+       ]
+      }
+     ],
+     "Aprendizado de Máquina e Inteligência Artificial": [
+      {
+       "n": 1,
+       "t": "Seleção e construção de modelos",
+       "subs": [
+        "1.1 Aprendizado supervisionado e não supervisionado; noções e limites de abordagens semissupervisionadas e por reforço",
+        "1.2 Regressão, classificação, agrupamento, redução de dimensionalidade e detecção de anomalias; regularização, ensembles, sobreajuste e subajuste; comparação com soluções simples"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Validação e generalização",
+       "subs": [
+        "2.1 Separação de treino, validação e teste",
+        "2.2 Validação cruzada e temporal",
+        "2.3 Vazamento de informação",
+        "2.4 Viés e variância",
+        "2.5 Generalização e estabilidade dos resultados",
+        "2.6 Comparação de modelos e adequação ao uso pretendido"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Métricas e efeitos das decisões",
+       "subs": [
+        "3.1 Precisão, sensibilidade, especificidade, calibração e métricas de regressão",
+        "3.2 Custos dos falsos positivos e falsos negativos",
+        "3.3 Desempenho por grupos, discriminação e incerteza",
+        "3.4 Explicabilidade e interpretabilidade",
+        "3.5 Limites do uso de escores para priorização e tomada de decisão"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Redes neurais",
+       "subs": [
+        "4.1 Perceptron e redes multicamadas",
+        "4.2 Funções de ativação e perda, otimização, retropropagação e regularização em nível conceitual e de interpretação de resultados",
+        "4.3 Redes convolucionais, recorrentes e transformers",
+        "4.4 Adequação ao tipo de dado, custo, limitações e alternativas",
+        "4.5 Transferência de aprendizado e ajuste de modelos"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Linguagem natural e modelos generativos",
+       "subs": [
+        "5.1 Pré-processamento e classificação de textos",
+        "5.2 Representações vetoriais, embeddings e similaridade semântica",
+        "5.3 Modelos de linguagem e LLMs",
+        "5.4 Prompts, recuperação de informação para geração de respostas e ajuste de modelos",
+        "5.5 Avaliação de respostas, fontes, alucinações e limitações"
+       ]
+      },
+      {
+       "n": 6,
+       "t": "Agentes e uso seguro de ferramentas",
+       "subs": [
+        "6.1 Agentes de IA e integração com ferramentas e fontes",
+        "6.2 Autorização, rastreabilidade e supervisão",
+        "6.3 Proteção contra instruções maliciosas em conteúdo externo, exposição de dados e uso indevido de ferramentas",
+        "6.4 Avaliação dos resultados e limites de autonomia"
+       ]
+      }
+     ],
+     "Operação, Governança e Gestão de Soluções de Dados e IA": [
+      {
+       "n": 1,
+       "t": "Ciclo de vida e MLOps",
+       "subs": [
+        "1.1 Versionamento de dados, código e modelos",
+        "1.2 Registro de experimentos",
+        "1.3 Pipelines, testes e integração e entrega contínuas",
+        "1.4 Reprodutibilidade",
+        "1.5 Disponibilização por APIs, implantação e reversão",
+        "1.6 Monitoramento de mudanças nas distribuições, nas relações e no desempenho"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Sustentação de soluções analíticas",
+       "subs": [
+        "2.1 Serviços gerenciados e operação própria",
+        "2.2 Requisitos de processamento, memória, armazenamento e aceleradores",
+        "2.3 Custo, latência, disponibilidade e observabilidade de pipelines e inferência",
+        "2.4 Controle de acesso, proteção de segredos e continuidade das soluções"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Governança e responsabilidade",
+       "subs": [
+        "3.1 Papéis, riscos e evidências sobre dados, modelos e decisões",
+        "3.2 Rastreabilidade, avaliação de impacto, revisão humana e contestação",
+        "3.3 Proteção de dados pessoais e informações sensíveis",
+        "3.4 Prevenção e tratamento de discriminação e de uso fora da finalidade",
+        "3.5 Avaliação de resultados e limites da automação"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Gestão de produtos de dados",
+       "subs": [
+        "4.1 Alinhamento entre problema público, produto e resultado",
+        "4.2 Priorização, critérios de aceitação e indicadores",
+        "4.3 Descoberta de necessidades, entrega e ciclo de vida",
+        "4.4 Scrum e Kanban",
+        "4.5 Articulação com PDTIC, plano de transformação digital e plano de dados abertos",
+        "4.6 Comunicação dos resultados e das incertezas aos usuários"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Contratação e controle de soluções",
+       "subs": [
+        "5.1 Estudo técnico preliminar e termo de referência",
+        "5.2 Viabilidade, dimensionamento e custo total de propriedade",
+        "5.3 Comparação entre desenvolvimento próprio, contratação e serviços de nuvem",
+        "5.4 Pesquisa de preços",
+        "5.5 Requisitos de qualidade, proteção e desempenho",
+        "5.6 Fiscalização e pagamento por entregas verificáveis",
+        "5.7 Propriedade intelectual, portabilidade, acesso a dados e modelos, dependência tecnológica e plano de saída"
+       ]
+      }
+     ]
+    },
+    "itens": [
+     [
+      "Requisito",
+      "Graduação de nível superior em qualquer área de formação"
+     ],
+     [
+      "Vagas imediatas",
+      "10 imediatas (Órgão Central – DF)"
+     ],
+     [
+      "Jornada",
+      "40 horas semanais"
+     ]
+    ]
+   },
+   {
+    "nome": "Auditor Federal de Finanças e Controle — TI – Infraestrutura de TI",
+    "materias": [
+     "Redes, Sistemas e Plataformas de Dados",
+     "Computação em Nuvem, Virtualização e Automação",
+     "Cibersegurança, Privacidade e Continuidade de Serviços",
+     "Operação, Governança e Gestão de Serviços Digitais"
+    ],
+    "qtd": {
+     "Redes, Sistemas e Plataformas de Dados": 22.5,
+     "Computação em Nuvem, Virtualização e Automação": 22.5,
+     "Cibersegurança, Privacidade e Continuidade de Serviços": 22.5,
+     "Operação, Governança e Gestão de Serviços Digitais": 22.5
+    },
+    "topicos": {
+     "Redes, Sistemas e Plataformas de Dados": [
+      {
+       "n": 1,
+       "t": "Redes e comunicação",
+       "subs": [
+        "1.1 Modelos TCP/IP e OSI; IPv4 e IPv6, DNS, DHCP, roteamento, segmentação, balanceamento e qualidade de serviço",
+        "1.2 Redes locais, sem fio e de longa distância",
+        "1.3 Comunicação entre nuvem e ambiente local",
+        "1.4 Diagnóstico de falhas, latência e gargalos"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Sistemas e diretórios",
+       "subs": [
+        "2.1 Administração de Windows e Linux",
+        "2.2 Processos, serviços, permissões, usuários, grupos e diretórios",
+        "2.3 Gestão de configuração, atualizações e correções",
+        "2.4 Servidores de aplicação e serviços web",
+        "2.5 Diagnóstico e conformidade de ambientes"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Armazenamento",
+       "subs": [
+        "3.1 Armazenamento em bloco, arquivo e objeto, local e em nuvem",
+        "3.2 Capacidade, desempenho, disponibilidade e proteção",
+        "3.3 Segregação de acesso, retenção e descarte",
+        "3.4 Escolhas de arquitetura conforme requisitos das cargas de trabalho"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Plataformas de bancos de dados",
+       "subs": [
+        "4.1 Bancos relacionais, documentais, chave-valor, cache e busca textual",
+        "4.2 Transações, concorrência, logs, replicação e disponibilidade",
+        "4.3 Índices e planos de execução",
+        "4.4 Diagnóstico de desempenho, segurança e recuperação de dados"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "SQL e sustentação de dados",
+       "subs": [
+        "5.1 SQL para definição e manipulação de dados, controle de acesso e transações",
+        "5.2 Consultas com filtros, junções e agregações",
+        "5.3 Privilégios, bloqueios, consistência e efeitos operacionais",
+        "5.4 Integrações e dependências de serviços de dados"
+       ]
+      }
+     ],
+     "Computação em Nuvem, Virtualização e Automação": [
+      {
+       "n": 1,
+       "t": "Modelos e arquitetura de nuvem",
+       "subs": [
+        "1.1 IaaS, PaaS e SaaS",
+        "1.2 Modelos de implantação e responsabilidade compartilhada",
+        "1.3 Redes virtuais, integração com ambiente local, elasticidade, escalabilidade e portabilidade",
+        "1.4 Dependência entre serviços e requisitos de segurança"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Virtualização e contêineres",
+       "subs": [
+        "2.1 Máquinas virtuais, contêineres e orquestração",
+        "2.2 Isolamento, persistência, redes e recursos",
+        "2.3 Escalonamento, atualização e recuperação",
+        "2.4 Segurança e disponibilidade de ambientes virtualizados e conteinerizados"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Arquiteturas de serviços",
+       "subs": [
+        "3.1 Balanceamento, serviços gerenciados, processamento orientado a eventos e serverless",
+        "3.2 Filas e comunicação entre serviços",
+        "3.3 Tolerância a falhas e continuidade",
+        "3.4 Escolhas entre operação própria e serviços contratados"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Infraestrutura como código",
+       "subs": [
+        "4.1 Versionamento, gestão de configuração e automação",
+        "4.2 Estados desejados, repetibilidade e idempotência",
+        "4.3 Segregação de ambientes e proteção de credenciais",
+        "4.4 Integração e entrega contínuas",
+        "4.5 Validação de mudanças e reversão"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Migração e modernização",
+       "subs": [
+        "5.1 Dependências, compatibilidade e portabilidade",
+        "5.2 Transição entre ambientes locais e de nuvem",
+        "5.3 Transferência e sincronização de dados",
+        "5.4 Testes, continuidade e reversibilidade",
+        "5.5 Dimensionamento e custos da migração e da operação"
+       ]
+      }
+     ],
+     "Cibersegurança, Privacidade e Continuidade de Serviços": [
+      {
+       "n": 1,
+       "t": "Riscos e arquitetura de segurança",
+       "subs": [
+        "1.1 Ameaças, vulnerabilidades e superfícies de ataque",
+        "1.2 Defesa em profundidade, zero trust e segmentação",
+        "1.3 Firewall, prevenção de intrusões, WAF, proteção contra negação de serviço e acesso remoto seguro",
+        "1.4 Controles em ambientes locais e de nuvem"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Identidades e proteção criptográfica",
+       "subs": [
+        "2.1 Autenticação, autorização, identidades, acessos privilegiados, múltiplos fatores e autenticação única",
+        "2.2 Menor privilégio e segregação de funções",
+        "2.3 Federação de identidades",
+        "2.4 Proteção de segredos, chaves e certificados",
+        "2.5 Assinatura digital e criptografia em trânsito e repouso"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Vulnerabilidades e operação de segurança",
+       "subs": [
+        "3.1 Inventário e exposição de ativos",
+        "3.2 Gestão de vulnerabilidades, correções e testes autorizados",
+        "3.3 Proteção de endpoints",
+        "3.4 Correlação de eventos, centros de operação de segurança e inteligência de ameaças",
+        "3.5 Prevenção de vazamento de dados"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Resposta a incidentes",
+       "subs": [
+        "4.1 Detecção, análise, contenção, recuperação e comunicação",
+        "4.2 Responsabilidades e coordenação",
+        "4.3 Preservação de evidências, registros e trilhas",
+        "4.4 Análise de causas e melhoria dos controles",
+        "4.5 Incidentes envolvendo serviços de dados e IA"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Privacidade e proteção operacional",
+       "subs": [
+        "5.1 Minimização, segregação e controle de acesso",
+        "5.2 Proteção de dados pessoais em armazenamento, cópias, registros e integrações",
+        "5.3 Retenção e descarte",
+        "5.4 Pseudonimização e riscos de reidentificação",
+        "5.5 Proteção de contêineres e interfaces com serviços de IA"
+       ]
+      },
+      {
+       "n": 6,
+       "t": "Continuidade e recuperação",
+       "subs": [
+        "6.1 Análise de impacto, redundância e recuperação de desastres",
+        "6.2 Cópias de segurança de ambientes locais, nuvem e serviços contratados",
+        "6.3 Retenção, isolamento, proteção contra alteração indevida e testes de restauração",
+        "6.4 Objetivos de recuperação de tempo e de ponto",
+        "6.5 Dependência de serviços e fornecedores críticos"
+       ]
+      }
+     ],
+     "Operação, Governança e Gestão de Serviços Digitais": [
+      {
+       "n": 1,
+       "t": "Confiabilidade e observabilidade",
+       "subs": [
+        "1.1 Logs, métricas e rastreamento distribuído",
+        "1.2 Indicadores e objetivos de serviço",
+        "1.3 Capacidade, latência, disponibilidade e tolerância a falhas",
+        "1.4 Monitoramento de aplicações, infraestrutura, pipelines e inferência",
+        "1.5 Correlação de eventos e diagnóstico"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Capacidade, custos e infraestrutura de IA",
+       "subs": [
+        "2.1 Dimensionamento e otimização de processamento, memória, armazenamento e aceleradores",
+        "2.2 Disponibilidade e segurança de serviços de modelos e agentes",
+        "2.3 Limites de consumo, latência e isolamento de cargas",
+        "2.4 Custos de nuvem, cotas, alocação e gestão financeira do consumo",
+        "2.5 Efeitos da degradação sobre os usuários"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Gestão de serviços e mudanças",
+       "subs": [
+        "3.1 Demandas, capacidade e níveis de serviço",
+        "3.2 Incidentes, problemas, configuração, mudanças e reversão",
+        "3.3 Integração entre desenvolvimento, operação e segurança",
+        "3.4 Gestão de fluxo com Scrum e Kanban",
+        "3.5 Acompanhamento de entregas e melhoria contínua"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Governança e controle",
+       "subs": [
+        "4.1 Alinhamento institucional, responsabilidades, portfólio, prioridades e indicadores",
+        "4.2 PDTIC, plano de transformação digital e plano de dados abertos nos requisitos de serviços e infraestrutura",
+        "4.3 Gestão de riscos",
+        "4.4 Evidências de desempenho e de efetividade de controles",
+        "4.5 Articulação entre gestão, fiscalização, segurança e auditoria"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Contratações e gestão de fornecedores",
+       "subs": [
+        "5.1 Necessidade, estudo técnico preliminar e termo de referência",
+        "5.2 Viabilidade, capacidade e custo total de propriedade",
+        "5.3 Pesquisa de preços e comparação de alternativas",
+        "5.4 Níveis de serviço e critérios de aceitação",
+        "5.5 Fiscalização, pagamento e verificação de entregas",
+        "5.6 Portabilidade, acesso a dados, continuidade, dependência tecnológica e plano de saída"
+       ]
+      }
+     ]
+    },
+    "itens": [
+     [
+      "Requisito",
+      "Graduação de nível superior em qualquer área de formação"
+     ],
+     [
+      "Vagas imediatas",
+      "10 imediatas (Órgão Central – DF)"
+     ],
+     [
+      "Jornada",
+      "40 horas semanais"
+     ]
+    ]
+   },
+   {
+    "nome": "Auditor Federal de Finanças e Controle — TI – Desenvolvimento de Sistemas",
+    "materias": [
+     "Engenharia de Software e Programação",
+     "Arquitetura e Integração de Sistemas",
+     "Persistência, Integração e Proteção de Dados",
+     "Desenvolvimento Seguro, Qualidade e Gestão da Entrega"
+    ],
+    "qtd": {
+     "Engenharia de Software e Programação": 22.5,
+     "Arquitetura e Integração de Sistemas": 22.5,
+     "Persistência, Integração e Proteção de Dados": 22.5,
+     "Desenvolvimento Seguro, Qualidade e Gestão da Entrega": 22.5
+    },
+    "topicos": {
+     "Engenharia de Software e Programação": [
+      {
+       "n": 1,
+       "t": "Problemas e requisitos",
+       "subs": [
+        "1.1 Necessidades de usuários",
+        "1.2 Requisitos funcionais e não funcionais",
+        "1.3 Restrições e critérios de aceitação",
+        "1.4 Desenho centrado nas pessoas",
+        "1.5 Relações entre problema público, processo de trabalho e solução digital"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Programação e correção",
+       "subs": [
+        "2.1 Linguagem Java: tipos de dados, estruturas de controle, métodos, classes e objetos",
+        "2.2 Encapsulamento, interfaces, herança e polimorfismo",
+        "2.3 Coleções e tipos genéricos",
+        "2.4 Igualdade de objetos, mutabilidade, tratamento de exceções e leitura e escrita de arquivos",
+        "2.5 Estruturas de dados, algoritmos e pseudocódigo",
+        "2.6 Leitura, depuração e testes de borda",
+        "2.7 Complexidade em decisões de desempenho",
+        "2.8 Modularidade e padrões de projeto aplicados à manutenção"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Concorrência e processamento",
+       "subs": [
+        "3.1 Concorrência, paralelismo e assincronia",
+        "3.2 Condições de corrida e sincronização",
+        "3.3 Compartilhamento de estado, bloqueios e falhas",
+        "3.4 Correção e desempenho sob requisições concorrentes"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Interfaces e experiência do usuário",
+       "subs": [
+        "4.1 Usabilidade, prototipagem e desenho responsivo",
+        "4.2 Acessibilidade e barreiras digitais",
+        "4.3 Componentes de interface e reaproveitamento",
+        "4.4 Validação com usuários e prevenção de erros no uso dos serviços",
+        "4.5 Desenvolvimento de interfaces com JavaScript e Vue.js: componentes, reatividade, tratamento de eventos e consumo de APIs"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Manutenção e evolução",
+       "subs": [
+        "5.1 Débito técnico, documentação, modularidade e acoplamento",
+        "5.2 Sustentação e modernização de sistemas legados",
+        "5.3 Interoperabilidade e compatibilidade",
+        "5.4 Impactos das mudanças e das falhas sobre a continuidade e a qualidade dos serviços"
+       ]
+      }
+     ],
+     "Arquitetura e Integração de Sistemas": [
+      {
+       "n": 1,
+       "t": "Arquiteturas de aplicações",
+       "subs": [
+        "1.1 Monolitos, microsserviços e arquiteturas orientadas a eventos",
+        "1.2 Distribuição de responsabilidades, acoplamento e dependências",
+        "1.3 Desempenho, escalabilidade, segurança e custo",
+        "1.4 Escolha de arquitetura conforme restrições",
+        "1.5 Aplicações Java com Spring Framework e Spring Boot: organização de componentes, inversão de controle e injeção de dependências",
+        "1.6 Configuração e autoconfiguração",
+        "1.7 Construção de serviços REST e separação entre apresentação, regras de negócio e acesso a dados"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "APIs e identidade",
+       "subs": [
+        "2.1 Design, contratos e versionamento de APIs REST",
+        "2.2 Autenticação e autorização",
+        "2.3 OAuth",
+        "2.0 para autorização e OpenID Connect para autenticação federada",
+        "2.4 Uso, validação e proteção de tokens",
+        "2.5 Controle de acesso e segregação de funções nas aplicações",
+        "2.6 Spring Security: configuração e avaliação de mecanismos de autenticação e autorização",
+        "2.7 Proteção de endpoints e métodos",
+        "2.8 Identificação e correção de permissões excessivas e falhas de controle de acesso"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Comunicação e consistência",
+       "subs": [
+        "3.1 Mensageria, eventos e persistência",
+        "3.2 Falhas, repetição de requisições, idempotência e consistência",
+        "3.3 Integração entre sistemas e coordenação de operações",
+        "3.4 Evolução de contratos e migração de esquemas"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Integração com dados e IA",
+       "subs": [
+        "4.1 Consumo e disponibilização de serviços de dados e modelos de linguagem",
+        "4.2 Representações vetoriais, busca semântica e recuperação de informação para geração de respostas",
+        "4.3 Agentes e ferramentas",
+        "4.4 Avaliação funcional de respostas e fontes",
+        "4.5 Limites de autorização, supervisão e proteção contra instruções maliciosas em conteúdo externo"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Confiabilidade das aplicações",
+       "subs": [
+        "5.1 Contêineres, serviços de nuvem e processamento serverless como ambientes de implantação",
+        "5.2 Logs, métricas e rastreamento",
+        "5.3 Latência, disponibilidade, capacidade e tolerância a falhas",
+        "5.4 Diagnóstico de integrações e dependências",
+        "5.5 Continuidade, recuperação e degradação de serviços"
+       ]
+      }
+     ],
+     "Persistência, Integração e Proteção de Dados": [
+      {
+       "n": 1,
+       "t": "Modelagem e persistência",
+       "subs": [
+        "1.1 Modelagem relacional, normalização e integridade",
+        "1.2 Bancos documentais, chave-valor e vetoriais",
+        "1.3 Cache e busca textual",
+        "1.4 Escolha de armazenamento conforme uso",
+        "1.5 Transações, concorrência, consistência e evolução de esquemas",
+        "1.6 Persistência em Java com JPA: mapeamento de entidades e relacionamentos, ciclo de vida das entidades, contexto de persistência, consultas e transações",
+        "1.7 Estratégias de carregamento e seus efeitos sobre correção e desempenho",
+        "1.8 Spring Data JPA: repositórios, consultas e paginação",
+        "1.9 Integração da camada de persistência às regras de negócio"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "SQL e desempenho",
+       "subs": [
+        "2.1 Definição e manipulação de dados, controle de acesso e transações",
+        "2.2 Consultas com filtros, junções, agregações, subconsultas e expressões de tabela comuns",
+        "2.3 Índices, planos de execução, valores nulos e duplicações",
+        "2.4 Diagnóstico de consultas e efeitos sobre o desempenho da aplicação"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Fluxos e interoperabilidade",
+       "subs": [
+        "3.1 Ingestão, transformação e carga",
+        "3.2 ETL e ELT",
+        "3.3 Processamento em lote e fluxo, completo e incremental",
+        "3.4 APIs, contratos e formatos CSV, JSON, XML e Parquet",
+        "3.5 Qualidade, rastreabilidade, conciliação e repetição segura de processamento",
+        "3.6 Spring Batch: organização de trabalhos e etapas de processamento (jobs e steps)",
+        "3.7 Leitura, processamento e escrita de registros",
+        "3.8 Controle transacional, registro do estado de execução e reinício após falhas",
+        "3.9 Prevenção de perdas e duplicações no reprocessamento"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Privacidade e segurança de dados",
+       "subs": [
+        "4.1 Minimização, finalidade, acesso e segregação",
+        "4.2 Criptografia em trânsito e repouso",
+        "4.3 Pseudonimização e risco de reidentificação",
+        "4.4 Retenção, descarte e proteção de cópias e registros",
+        "4.5 Compartilhamento e publicação com salvaguardas",
+        "4.6 Proteção de dados pessoais desde a concepção da aplicação"
+       ]
+      }
+     ],
+     "Desenvolvimento Seguro, Qualidade e Gestão da Entrega": [
+      {
+       "n": 1,
+       "t": "Segurança de aplicações",
+       "subs": [
+        "1.1 Ameaças e vulnerabilidades em aplicações e interfaces",
+        "1.2 Validação de entradas e controles de acesso",
+        "1.3 Proteção de segredos e dependências",
+        "1.4 Testes de segurança autorizados",
+        "1.5 Prevenção de vazamentos",
+        "1.6 Registros, preservação de evidências e tratamento de falhas de segurança, inclusive em integrações com IA"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Testes e qualidade",
+       "subs": [
+        "2.1 Testes unitários, de integração, de contrato e de aceitação",
+        "2.2 Análise estática, cobertura e revisão de código",
+        "2.3 Automação e dados de teste",
+        "2.4 Limites das métricas de qualidade",
+        "2.5 Verificação de requisitos funcionais, segurança, desempenho e acessibilidade"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Entrega e operação",
+       "subs": [
+        "3.1 Versionamento, integração e entrega contínuas",
+        "3.2 DevSecOps e segurança da cadeia de dependências",
+        "3.3 Automação de build, teste e implantação",
+        "3.4 Configuração e segregação de ambientes",
+        "3.5 Mudanças, reversão e observabilidade",
+        "3.6 Manutenção da continuidade durante entregas e incidentes"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Gestão de produtos e governança",
+       "subs": [
+        "4.1 Descoberta de necessidades, entrega e ciclo de vida de produtos digitais",
+        "4.2 Scrum e Kanban",
+        "4.3 Priorização, critérios de aceitação e indicadores de resultado",
+        "4.4 PDTIC, plano de transformação digital e plano de dados abertos aplicados a produtos e integrações",
+        "4.5 Riscos, responsabilidades e evidências de efetividade de controles"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Contratação e fiscalização de soluções",
+       "subs": [
+        "5.1 Necessidade, estudo técnico preliminar e termo de referência",
+        "5.2 Comparação entre desenvolvimento próprio, contratação e compartilhamento",
+        "5.3 Viabilidade, dimensionamento, custo total de propriedade e pesquisa de preços",
+        "5.4 Qualidade, níveis de serviço e entregas verificáveis",
+        "5.5 Fiscalização e pagamento",
+        "5.6 Propriedade intelectual, portabilidade, acesso a código e dados, dependência tecnológica e plano de saída"
+       ]
+      }
+     ]
+    },
+    "itens": [
+     [
+      "Requisito",
+      "Graduação de nível superior em qualquer área de formação"
+     ],
+     [
+      "Vagas imediatas",
+      "10 imediatas (Órgão Central – DF)"
+     ],
+     [
+      "Jornada",
+      "40 horas semanais"
+     ]
+    ]
+   }
+  ],
+  "comuns": [
+   "Estado, Democracia, Direitos e Ciência Política",
+   "Sociedade Brasileira, Desigualdades, Diversidade e Desenvolvimento",
+   "Ética Pública e Responsabilidade Profissional",
+   "Administração Pública e Fundamentos de Políticas Públicas",
+   "Fundamentos de Governança, Riscos e Integridade Pública e Privada",
+   "Fundamentos de Transparência, Ouvidoria e Participação Social",
+   "Fundamentos de Direito Público Aplicado, Controle e Responsabilização",
+   "Fundamentos de Evidências, Dados e Inteligência Artificial",
+   "Fundamentos de Auditoria Governamental e Atuação Integrada da CGU"
+  ],
+  "qtdComuns": {
+   "Estado, Democracia, Direitos e Ciência Política": 10,
+   "Sociedade Brasileira, Desigualdades, Diversidade e Desenvolvimento": 10,
+   "Ética Pública e Responsabilidade Profissional": 10,
+   "Administração Pública e Fundamentos de Políticas Públicas": 10,
+   "Fundamentos de Governança, Riscos e Integridade Pública e Privada": 8,
+   "Fundamentos de Transparência, Ouvidoria e Participação Social": 8,
+   "Fundamentos de Direito Público Aplicado, Controle e Responsabilização": 8,
+   "Fundamentos de Evidências, Dados e Inteligência Artificial": 8,
+   "Fundamentos de Auditoria Governamental e Atuação Integrada da CGU": 8
+  },
+  "topicosComuns": {
+   "Estado, Democracia, Direitos e Ciência Política": [
+    {
+     "n": 1,
+     "t": "Estado e legitimidade",
+     "subs": [
+      "1.1 Estado, governo e administração; autoridade, legitimidade e poder; interesse público, pluralismo e conflitos distributivos"
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Democracia e representação",
+     "subs": [
+      "2.1 Representação e participação; responsabilização democrática; relações entre Executivo, Legislativo e Judiciário; governabilidade e controles recíprocos"
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Federalismo e capacidades estatais",
+     "subs": [
+      "3.1 Autonomia, coordenação e cooperação federativa; capacidades administrativas e políticas; burocracia, discricionariedade e implementação de direitos"
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Ordem constitucional e direitos",
+     "subs": [
+      "4.1 Fundamentos e objetivos da República; direitos fundamentais, sociais e políticos; igualdade, devido processo e limites ao exercício do poder; princípios da administração pública"
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Valor público e controle",
+     "subs": [
+      "5.1 Resultados socialmente relevantes; legitimidade, confiança e direitos; controle interno, externo e social em perspectiva institucional; tensões entre eficiência, equidade e garantias"
+     ]
+    },
+    {
+     "n": 6,
+     "t": "Corrupção como fenômeno político e social",
+     "subs": [
+      "6.1 Abuso do poder confiado e apropriação de decisões públicas em benefício particular; dimensões política, administrativa e público-privada",
+      "6.2 Distinções entre corrupção, falha de gestão, conflito de interesses e ilícitos específicos; relações e diferenças entre clientelismo, patronagem, nepotismo e captura"
+     ]
+    },
+    {
+     "n": 7,
+     "t": "Mecanismos de reprodução e captura",
+     "subs": [
+      "7.1 Assimetrias de poder e informação, incentivos e oportunidades; relações principal-agente e problemas de ação coletiva; normas sociais, tolerância organizacional e redes de favorecimento",
+      "7.2 Captura de políticas e influência indevida; distinção entre representação legítima de interesses e favorecimento"
+     ]
+    },
+    {
+     "n": 8,
+     "t": "Consequências e respostas à corrupção",
+     "subs": [
+      "8.1 Efeitos sobre direitos, desigualdades, competição, alocação de recursos, qualidade dos serviços e confiança institucional",
+      "8.2 Relações entre prevenção, detecção, responsabilização e reparação; controles democráticos, participação e capacidades estatais",
+      "8.3 Avaliação crítica das respostas e de seus efeitos não pretendidos, preservados o devido processo e a continuidade de serviços essenciais"
+     ]
+    },
+    {
+     "n": 9,
+     "t": "Estado e modelos de desenvolvimento econômico",
+     "subs": [
+      "9.1 Arranjos de desenvolvimento com diferentes combinações de mercado, planejamento, regulação, provisão pública e atuação empresarial do Estado; industrialização, inovação e transformação produtiva",
+      "9.2 Papel das empresas estatais no investimento de longo prazo, na infraestrutura, no financiamento e na prestação de serviços públicos",
+      "9.3 Relações entre finalidade pública, concorrência, universalização, sustentabilidade fiscal e socioambiental; capacidades estatais, riscos de captura e efeitos distributivos",
+      "9.4 Fundamentos constitucionais da atuação econômica do Estado e comparação de alternativas institucionais à luz de objetivos, evidências e resultados"
+     ]
+    }
+   ],
+   "Sociedade Brasileira, Desigualdades, Diversidade e Desenvolvimento": [
+    {
+     "n": 1,
+     "t": "Fundamentos sociológicos",
+     "subs": [
+      "1.1 Instituições, socialização e ação coletiva; estratificação e mobilidade social; redes, poder, discriminação e reprodução das desigualdades"
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Formação social e cidadania no Brasil",
+     "subs": [
+      "2.1 Heranças da escravidão, hierarquias sociais e construção da cidadania; transformações nas relações entre Estado e sociedade; mecanismos de inclusão e exclusão institucional"
+     ]
+    },
+    {
+     "n": 3,
+     "t": "População, território e trabalho",
+     "subs": [
+      "3.1 Transição demográfica, envelhecimento e cuidado; desigualdades regionais, urbanas e rurais; estrutura produtiva, informalidade e mudanças tecnológicas no trabalho"
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Diversidade e acesso a direitos",
+     "subs": [
+      "4.1 Relações étnico- raciais, gênero e sexualidade; pessoas com deficiência; idade; povos indígenas e comunidades tradicionais. Interseccionalidade, acessibilidade e barreiras administrativas e digitais"
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Desenvolvimento e realidade brasileira",
+     "subs": [
+      "5.1 Pobreza, renda e proteção social; educação, saúde, saneamento e habitação como problemas públicos; sustentabilidade e vulnerabilidade climática; leitura contextual de indicadores e desigualdades"
+     ]
+    }
+   ],
+   "Ética Pública e Responsabilidade Profissional": [
+    {
+     "n": 1,
+     "t": "Fundamentos da ética pública",
+     "subs": [
+      "1.1 Interesse público, dignidade, justiça e responsabilidade; relações entre deveres, consequências e virtudes profissionais; conflitos entre valores em decisões públicas"
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Deveres profissionais",
+     "subs": [
+      "2.1 Imparcialidade, probidade, diligência e respeito; autonomia técnica e responsabilidade; limites da obediência hierárquica; uso adequado de informação e recursos públicos",
+      "2.2 Aplicação dos valores e deveres de conduta ética da CGU a situações de trabalho"
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Conflitos de interesses e imparcialidade",
+     "subs": [
+      "3.1 Identificação de interesses privados em conflito com a função pública e medidas de prevenção, consulta e encaminhamento, nos termos dos arts. 3º a 5º, 8º e 10 da Lei nº 12.813/2013",
+      "3.2 Impedimento e suspeição no processo administrativo federal, nos termos dos arts. 18 a 21 da Lei nº 9.784/1999; comunicação e abstenção quando exigidas"
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Relações de trabalho e atendimento",
+     "subs": [
+      "4.1 Dignidade, diversidade e relações de poder; reconhecimento e prevenção de assédio e discriminação; respeito, escuta e não retaliação",
+      "4.2 Distinção entre acolher uma pessoa, verificar fatos e atribuir responsabilidade"
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Integridade como responsabilidade institucional",
+     "subs": [
+      "5.1 Coerência entre regras e práticas; ambiente organizacional e incentivos; canais de orientação e relato; papel do exemplo, da confiança e da prestação de contas"
+     ]
+    }
+   ],
+   "Administração Pública e Fundamentos de Políticas Públicas": [
+    {
+     "n": 1,
+     "t": "Organização administrativa",
+     "subs": [
+      "1.1 Administração direta e indireta; descentralização e desconcentração; agentes públicos; funções da administração pública: formulação, execução, regulação e controle de políticas e ações públicas; arranjos de cooperação com entes federativos e entidades não estatais"
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Modelos de administração",
+     "subs": [
+      "2.1 Burocracia e profissionalização; gestão orientada a resultados; participação e governança; limites e contribuições de diferentes modelos na realidade brasileira"
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Políticas públicas",
+     "subs": [
+      "3.1 Problema público, agenda e formulação; instrumentos de ação estatal; implementação, monitoramento e avaliação; intersetorialidade e atores governamentais e sociais"
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Planejamento e recursos",
+     "subs": [
+      "4.1 Funções do planejamento e do orçamento; relação entre PPA, LDO e LOA; receita e despesa em nível conceitual; restrições fiscais, escolhas alocativas e sustentabilidade das ações"
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Serviços e transformação digital",
+     "subs": [
+      "5.1 Orientação ao usuário; simplificação e acessibilidade; coordenação de serviços; oportunidades e riscos da automação e da inteligência artificial na administração"
+     ]
+    }
+   ],
+   "Fundamentos de Governança, Riscos e Integridade Pública e Privada": [
+    {
+     "n": 1,
+     "t": "Governança e responsabilidades",
+     "subs": [
+      "1.1 Distinção entre direção, gestão, controle e prestação de contas; papéis, supervisão, transparência e responsabilização. Relação entre decisões organizacionais, finalidade pública e direitos"
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Riscos e controles essenciais",
+     "subs": [
+      "2.1 Risco, causa, consequência e controle; prevenção e detecção; proporcionalidade dos controles, segregação de funções e risco residual",
+      "2.2 Identificação de vulnerabilidades e de controles compatíveis com situações usuais, a partir dos dados fornecidos"
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Integridade pública",
+     "subs": [
+      "3.1 Finalidades dos programas e medidas de integridade; compromisso da liderança, orientação ética, identificação de riscos, canais de relato e acompanhamento de ações",
+      "3.2 Prevenção de favorecimento, assédio e discriminação; ambiente seguro e não retaliação"
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Integridade privada",
+     "subs": [
+      "4.1 Finalidades dos programas de integridade e sua relação com o poder público; compromisso da direção, registros confiáveis, controles, diligência proporcional sobre terceiros, canais de relato e remediação",
+      "4.2 Diferença entre existência documental, implementação e efetividade dos mecanismos"
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Prevenção e melhoria institucional",
+     "subs": [
+      "5.1 Cultura, incentivos e confiança; diferenças de capacidade entre organizações; orientação e medidas proporcionais",
+      "5.2 Denúncias e resultados de controle como insumos de melhoria",
+      "5.3 Distinção entre baixa ocorrência e baixa detecção de problemas; leitura de evidências simples sobre funcionamento e resultados das medidas"
+     ]
+    }
+   ],
+   "Fundamentos de Transparência, Ouvidoria e Participação Social": [
+    {
+     "n": 1,
+     "t": "Acesso à informação",
+     "subs": [
+      "1.1 Transparência ativa e passiva; finalidade de pedidos e recursos; publicidade como regra e motivação das restrições",
+      "1.2 Distinção conceitual entre informação classificada, sigilos previstos em lei, informação pessoal e documento preparatório; acesso parcial e comunicação clara da decisão"
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Transparência e proteção de dados",
+     "subs": [
+      "2.1 Compatibilização entre acesso à informação e proteção de dados pessoais; finalidade, necessidade e salvaguardas",
+      "2.2 Diferença entre dados pessoais e dados pessoais sensíveis; noções de tarjamento, anonimização e risco de reidentificação"
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Ouvidoria e proteção das pessoas",
+     "subs": [
+      "3.1 Finalidades das manifestações; acolhimento, encaminhamento e resposta ao usuário; acessibilidade e linguagem cidadã",
+      "3.2 Proteção da identidade e prevenção de retaliação",
+      "3.3 Distinção entre receber um relato, apurar fatos e decidir sobre responsabilidade"
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Participação e melhoria de serviços",
+     "subs": [
+      "4.1 Participação e controle social; conselhos, consultas e escuta de usuários; representatividade e barreiras à participação",
+      "4.2 Recorrências em manifestações como sinais de problemas. 4.2.1 Subnotificação",
+      "4.3 Transparência ativa, dados abertos e Portal da Transparência como meios de acesso e controle; qualidade, atualização, cobertura e limites da informação",
+      "4.4 Papel da CGU na orientação e no monitoramento da transparência e do acesso à informação, em nível de finalidade institucional"
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Integridade da informação e comunicação",
+     "subs": [
+      "5.1 Confiabilidade e contexto das fontes; distinção entre fato, alegação e interpretação",
+      "5.2 Desinformação e efeitos sobre políticas públicas; comunicação de incertezas e correção de erros",
+      "5.3 Liberdade de expressão e pluralismo. 5.3.1 Distinção entre crítica legítima e desinformação"
+     ]
+    }
+   ],
+   "Fundamentos de Direito Público Aplicado, Controle e Responsabilização": [
+    {
+     "n": 1,
+     "t": "Decisão administrativa",
+     "subs": [
+      "1.1 Competência, finalidade, motivação, proporcionalidade e segurança jurídica; consideração das consequências e das condições de atuação",
+      "1.2 Dever de fundamentação e limites ao exercício do poder e à revisão de decisões"
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Processo e garantias",
+     "subs": [
+      "2.1 Devido processo, contraditório, defesa e imparcialidade; finalidade da instrução e da prova",
+      "2.2 Distinção entre procedimento investigativo e processo sancionador; proteção de direitos e necessidade de fundamentar conclusões"
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Funções de controle e melhoria da gestão",
+     "subs": [
+      "3.1 Finalidades do controle interno, externo e social; inserção institucional da CGU no Poder Executivo federal",
+      "3.2 Avaliação da ação governamental e apoio ao aprimoramento da gestão, da governança, dos controles e dos resultados das políticas públicas; prevenção, detecção e correção de irregularidades",
+      "3.3 Autonomia técnica e responsabilidades dos gestores; diferenças de competências e complementaridade com o controle externo exercido pelo Congresso Nacional com o auxílio do TCU",
+      "3.4 Distinção entre avaliar a gestão, apurar fatos e aplicar sanções; cooperação e compartilhamento lícito de informações"
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Responsabilização em nível introdutório",
+     "subs": [
+      "4.1 Distinção entre indício, falha de gestão, irregularidade e responsabilidade",
+      "4.2 Finalidades e diferenças entre responsabilização de agentes públicos e de pessoas jurídicas; noções de admissibilidade, processo disciplinar, processo administrativo de responsabilização e acordo de leniência"
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Proteção e encaminhamento",
+     "subs": [
+      "5.1 Distinção entre acolhimento, medidas de proteção, apuração de fatos e conclusão sancionadora, especialmente diante de assédio e discriminação; finalidades e garantias de cada atuação"
+     ]
+    }
+   ],
+   "Fundamentos de Evidências, Dados e Inteligência Artificial": [
+    {
+     "n": 1,
+     "t": "Perguntas e fontes",
+     "subs": [
+      "1.1 Relação entre problema, pergunta e informação necessária; fontes documentais, administrativas, estatísticas e de participação social",
+      "1.2 Distinção entre dado, evidência, interpretação e juízo de valor; verificação de origem e confronto de fontes"
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Leitura de dados e indicadores",
+     "subs": [
+      "2.1 Interpretação de tabelas, gráficos, proporções, taxas e medidas descritivas; denominadores, qualidade e comparabilidade",
+      "2.2 Distinção entre indicadores de percepção, experiência, denúncias, detecção e sanções na análise da corrupção; subnotificação e limites de inferência sobre sua ocorrência"
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Inferências e erros de raciocínio",
+     "subs": [
+      "3.1 Associação e causalidade; seleção e representatividade; explicações alternativas e incerteza",
+      "3.2 Generalizações indevidas, falácia ecológica e viés de confirmação; falsos positivos e falsos negativos"
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Integridade da evidência e proteção",
+     "subs": [
+      "4.1 Rastreabilidade e verificação de informações; comunicação proporcional dos resultados e limites",
+      "4.2 Escuta sem indução, confidencialidade e risco de identificação indireta",
+      "4.3 Distinção entre as condições e os regimes de proteção de entrevistados em auditoria, participantes de pesquisa e denunciantes"
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Uso responsável de inteligência artificial",
+     "subs": [
+      "5.1 Possibilidades de classificação, busca, síntese e apoio à análise; escolha entre IA, solução simples e revisão humana",
+      "5.2 Erros, conteúdo não sustentado, vieses e efeitos sobre grupos; proteção de informações, supervisão, rastreabilidade e contestação",
+      "5.3 Verificação de fontes e limites da automação de decisões que afetam direitos"
+     ]
+    }
+   ],
+   "Fundamentos de Auditoria Governamental e Atuação Integrada da CGU": [
+    {
+     "n": 1,
+     "t": "Propósito, serviços e papéis",
+     "subs": [
+      "1.1 Contribuição da auditoria para a governança, os riscos, os controles e os resultados",
+      "1.2 Avaliação e consultoria como serviços de auditoria interna governamental; apuração de atos e fatos com indícios de ilegalidade ou irregularidade na utilização de recursos públicos federais como competência do sistema de controle interno",
+      "1.3 Finalidades e diferenças entre as três formas de atuação da SFC; relação com a gestão, correição e avaliação de políticas",
+      "1.4 Independência, objetividade, diligência e ceticismo; papéis de gestão, supervisão e auditoria no modelo das três linhas"
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Ciclo do trabalho",
+     "subs": [
+      "2.1 Planejamento, execução, comunicação e monitoramento; finalidade de objetivos, escopo, critérios e perguntas",
+      "2.2 Priorização por risco, materialidade e relevância social em nível conceitual; adequação do trabalho às finalidades de avaliação, consultoria ou apuração",
+      "2.3 Apoio à melhoria da gestão com preservação da autonomia técnica e das responsabilidades de decisão e execução dos gestores"
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Evidência e conclusão",
+     "subs": [
+      "3.1 Suficiência, adequação e confiabilidade; noção de achado e de limitações",
+      "3.2 Distinção entre sinal de risco, evidência e conclusão; necessidade de aprofundamento e proporcionalidade da afirmação"
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Comunicação e acompanhamento",
+     "subs": [
+      "4.1 Clareza, contexto e utilidade dos resultados; publicidade e proteção de pessoas e informações",
+      "4.2 Recomendações relacionadas a causas e riscos; distinção entre plano de ação, implementação, resultado e benefício"
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Integração entre funções da CGU",
+     "subs": [
+      "5.1 Denúncias e informações de ouvidoria e transparência como insumos de risco; achados como subsídios para admissibilidade correcional e responsabilização de entes privados",
+      "5.2 Resultados do controle como insumos de integridade e melhoria de serviços; compartilhamento lícito, devolutivas e proteção"
+     ]
+    }
+   ]
+  }
  }
 ];
