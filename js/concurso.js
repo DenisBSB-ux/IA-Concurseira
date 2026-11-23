@@ -48,7 +48,7 @@ function concursoCarregar(){
   else{
     const cargo = (c.cargos || []).some(x => x.nome === CONC_DB.cargo) ? CONC_DB.cargo : ((c.cargos || [])[0] || {}).nome || c.cargo || '';
     const cgo = (c.cargos || []).find(x => x.nome === cargo) || {};
-    CONCURSO = Object.assign({}, CONCURSO_PADRAO, c, { padrao: false, cargo, materias: concursoMateriasDoCargo(c, cargo), qtd: Object.assign({}, c.qtdComuns || {}, cgo.qtd || {}), itensCargo: cgo.itens || [] });
+    CONCURSO = Object.assign({}, CONCURSO_PADRAO, c, { padrao: false, cargo, materias: concursoMateriasDoCargo(c, cargo), qtd: Object.assign({}, c.qtdComuns || {}, cgo.qtd || {}), itensCargo: cgo.itens || [], topicos: Object.assign({}, c.topicosComuns || {}, cgo.topicos || {}) });
   }
   concursoAplicar();
 }
@@ -93,21 +93,49 @@ function concDatasDoTexto(t){
   return out.filter(x => { const o = concursoDataObj(x.d); return o && o.getMonth() + 1 === +x.d.slice(5, 7); }).sort((a, b) => a.i - b.i);
 }
 /* Formato comum dos editais: Anexo I com "Matéria: 1 ..." por cargo + quadro de questões por matéria (item "Da prova objetiva") */
+/* tópicos de uma matéria do edital: "1 Título. 1.1 Sub. 1.2 Sub. 2 Título. ..." -> [{ n, t, subs:[] }] */
+function editalTopicos(txt){
+  const t = ' ' + String(txt || '').replace(/\s+/g, ' ').trim();
+  const marcas = []; let n = 1, de = 0;
+  while(n < 80){
+    const re = new RegExp('(?:^ ?|[.;:)] )' + n + ' (?=[A-ZÀ-Ú(])', 'g'); re.lastIndex = de;
+    const m = re.exec(t.slice(0, t.length)); if(!m) break;
+    const ini = m.index + m[0].length - String(n).length - 1;
+    marcas.push({ n, ini, corpo: m.index + m[0].length }); de = m.index + m[0].length; n++;
+  }
+  return marcas.map((mk, i) => {
+    const fim = i + 1 < marcas.length ? marcas[i + 1].ini : t.length;
+    const seg = t.slice(mk.corpo, fim).trim();
+    const reSub = new RegExp('(?:^|\\s)' + mk.n + '\\.\\d+\\s', 'g'); const cortes = []; let ms;
+    while((ms = reSub.exec(seg))) cortes.push(ms.index + (ms[0][0] === ' ' ? 1 : 0));
+    let titulo = (cortes.length ? seg.slice(0, cortes[0]) : seg).trim();
+    const p = titulo.indexOf('. '); if(p > 25 && !cortes.length) titulo = titulo.slice(0, p);
+    titulo = titulo.replace(/[.;:\s]+$/, ''); if(titulo.length > 150) titulo = titulo.slice(0, 147) + '…';
+    const subs = cortes.map((c, j) => seg.slice(c, j + 1 < cortes.length ? cortes[j + 1] : seg.length).trim().replace(/[.;\s]+$/, ''));
+    return { n: mk.n, t: titulo, subs };
+  }).filter(x => x.t);
+}
 function editalEstruturado(linhas){
   const ini = linhas.map((l, i) => /^ANEXO I\s*[–-]\s*DO CONTE[ÚU]DO PROGRAM/i.test(l) ? i : -1).filter(i => i >= 0).pop();
   if(ini == null) return null;
   let fim = linhas.findIndex((l, i) => i > ini && /^ANEXO II\b/i.test(l)); if(fim < 0) fim = linhas.length;
-  const comuns = [], cargos = []; let modo = null, atual = null;
+  const comuns = [], cargos = [], topComuns = {}; let modo = null, atual = null, cur = null;
+  const fechar = () => { if(!cur) return; const tp = editalTopicos(cur.texto); if(tp.length) cur.alvo[cur.nome] = tp; cur = null; };
+  const lixo = /^(DEFENSORIA P[ÚU]BLICA|CONCURSO P[ÚU]BLICO PARA|EDITAL N|P[áa]gina \d+|Realiza[cç][aã]o:?$)/i;
   const reCg = /^Cargo\s+\d+\s*:\s*(.+)$/i, reMat = /^([A-ZÀ-Ú][^:]{2,110}?):\s*1\s+\S/;
   for(let i = ini + 1; i < fim; i++){
     const l = linhas[i];
-    if(/^Conhecimentos\s+B[áa]sicos/i.test(l)){ modo = 'comum'; continue; }
-    if(/^Conhecimentos\s+Espec[ií]ficos/i.test(l)){ modo = 'cargo'; continue; }
+    if(/^Conhecimentos\s+B[áa]sicos/i.test(l)){ fechar(); modo = 'comum'; continue; }
+    if(/^Conhecimentos\s+Espec[ií]ficos/i.test(l)){ fechar(); modo = 'cargo'; continue; }
     const mc = reCg.exec(l);
-    if(mc){ atual = { nome: mc[1].replace(/\s+[-–—]\s*(?:[ÁA]rea|Especialidade(?:\/[ÁA]rea)?)\s*:\s*/i, ' — ').replace(/\s+/g, ' ').trim(), materias: [], qtd: {} }; cargos.push(atual); modo = 'cargo'; continue; }
+    if(mc){ fechar(); atual = { nome: mc[1].replace(/\s+[-–—]\s*(?:[ÁA]rea|Especialidade(?:\/[ÁA]rea)?)\s*:\s*/i, ' — ').replace(/\s+/g, ' ').trim(), materias: [], qtd: {}, topicos: {} }; cargos.push(atual); modo = 'cargo'; continue; }
     const mm = reMat.exec(l);
-    if(mm && !/^cargo\b/i.test(mm[1])){ const nome = mm[1].replace(/\s+-\s+/g, '-').replace(/\s+/g, ' ').trim(); const alvo = (modo === 'cargo' && atual) ? atual.materias : comuns; if(!alvo.includes(nome)) alvo.push(nome); }
+    if(mm && !/^cargo\b/i.test(mm[1])){
+      fechar(); const nome = mm[1].replace(/\s+-\s+/g, '-').replace(/\s+/g, ' ').trim(); const noCargo = (modo === 'cargo' && atual); const alvo = noCargo ? atual.materias : comuns; if(!alvo.includes(nome)) alvo.push(nome);
+      cur = { nome, alvo: noCargo ? atual.topicos : topComuns, texto: l.slice(l.indexOf(':') + 1) };
+    }else if(cur && !lixo.test(l)) cur.texto += ' ' + l;
   }
+  fechar();
   if(comuns.length + cargos.reduce((a, c) => a + c.materias.length, 0) < 3) return null;
   // quadro de questões por matéria (o nome pode quebrar em 2-3 linhas, antes ou depois dos números)
   const qtdComuns = {}, reRow = /^(?:(.*?)\s+)?(\d{1,3})\s+(\d{1,2})\s+(\d{1,3}\s?,\s?\d)$/;
@@ -140,7 +168,7 @@ function editalEstruturado(linhas){
     const religa = (dest, mats) => { Object.keys(dest).forEach(n => { const m = mats.find(x => k2(x) === k2(n)); if(m && m !== n){ dest[m] = dest[n]; delete dest[n]; } }); };
     religa(qtdComuns, comuns); cargos.forEach(c => religa(c.qtd, c.materias));
   }
-  return { comuns, cargos, qtdComuns };
+  return { comuns, cargos, qtdComuns, topComuns };
 }
 function editalExtrair(texto){
   const t = String(texto || '').replace(/\r/g, '').replace(/[ \t]+/g, ' ');
@@ -216,7 +244,7 @@ function editalExtrair(texto){
   });
   r.cargos = cargos.slice(0, 30); r.comuns = comuns.slice(0, 40); r.materias = comuns.slice(0, 40);
   const est = editalEstruturado(linhas);
-  if(est){ r.cargos = est.cargos; r.comuns = est.comuns; r.materias = est.comuns; r.qtdComuns = est.qtdComuns; }
+  if(est){ r.cargos = est.cargos; r.comuns = est.comuns; r.materias = est.comuns; r.qtdComuns = est.qtdComuns; r.topicosComuns = est.topComuns; }
   r.qtdComuns = r.qtdComuns || {};
   if(est && r.cargos[0]) r.cargo = r.cargos[0].nome; else if(!r.cargo && r.cargos[0]) r.cargo = r.cargos[0].nome;
   // itens soltos úteis
@@ -301,10 +329,10 @@ function concursoForm(c){
 function concursoLerForm(){
   const g = id => ((document.getElementById('conc-' + id) || {}).value || '').trim();
   return { nome: g('nome'), orgao: g('orgao'), cargo: g('cargo'), banca: g('banca'), data: g('data'), rotulo: g('rotulo'), remuneracao: g('remuneracao'), vagas: g('vagas'), link: g('link'),
-    cargos: concursoCargosDeTexto(g('cargos')).cargos.map(x => Object.assign(x, { qtd: concRascunho.qtd[x.nome] || {} })), qtdComuns: concRascunho.qtdComuns, comuns: concursoCargosDeTexto(g('cargos')).comuns, materias: concursoCargosDeTexto(g('cargos')).comuns, itens: concursoItensDeTexto(g('itens')) };
+    cargos: concursoCargosDeTexto(g('cargos')).cargos.map(x => Object.assign(x, { qtd: concRascunho.qtd[x.nome] || {}, topicos: concRascunho.top[x.nome] || {} })), qtdComuns: concRascunho.qtdComuns, topicosComuns: concRascunho.topComuns, comuns: concursoCargosDeTexto(g('cargos')).comuns, materias: concursoCargosDeTexto(g('cargos')).comuns, itens: concursoItensDeTexto(g('itens')) };
 }
-let concRascunho = { qtdComuns: {}, qtd: {} };
-function concursoRascunhoDe(c){ concRascunho = { qtdComuns: Object.assign({}, c.qtdComuns || {}), qtd: {} }; (c.cargos || []).forEach(x => { concRascunho.qtd[x.nome] = Object.assign({}, x.qtd || {}); }); }
+let concRascunho = { qtdComuns: {}, qtd: {}, topComuns: {}, top: {} };
+function concursoRascunhoDe(c){ concRascunho = { qtdComuns: Object.assign({}, c.qtdComuns || {}), qtd: {}, topComuns: Object.assign({}, c.topicosComuns || {}), top: {} }; (c.cargos || []).forEach(x => { concRascunho.qtd[x.nome] = Object.assign({}, x.qtd || {}); concRascunho.top[x.nome] = Object.assign({}, x.topicos || {}); }); }
 function concursoPreencher(r){
   if(r.cargos){ concursoRascunhoDe(r); }
   Object.keys(r).forEach(k => { if(k === 'cargos' || k === 'comuns' || k === 'materias') return; const el = document.getElementById('conc-' + k); if(!el) return; el.value = Array.isArray(r[k]) ? (k === 'itens' ? concursoItensTexto({ itens: r[k] }) : r[k].join('\n')) : (r[k] || el.value); });

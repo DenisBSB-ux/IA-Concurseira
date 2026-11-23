@@ -652,11 +652,24 @@ function renderTabelaEstatisticas(linhas, estiloCelula){
       <div style="width:90px;text-align:right;">${thOrd('ultima','Atualização')}</div>
     </div>
     ${linhas.map((l,i)=>{
-      if(l.faltante) return `<div class="bar-row conc-faltante" style="flex-wrap:wrap;align-items:center;gap:10px;padding:8px 10px 8px 12px;margin-bottom:6px;${estiloCelula}">
-        <div style="width:18px;">⚠️</div><div style="width:26px;">${i+1}</div>
-        <div class="name" style="flex:1;font-weight:700;">${esc(l.nome)} <span class="conc-tag-falta">FALTA LISTA</span></div>
-        <div style="color:inherit;opacity:.8;font-size:12px;">${l.peso ? l.peso+' questões na prova' : 'cobrada no edital'}</div>
-        <button type="button" class="prova-det-btn" data-conc-importar="1" title="Importar o .md desta matéria">Importar lista</button></div>`;
+      if(l.faltante){
+        // matéria do edital sem lista: mesma estrutura das demais (seta, número, assuntos do edital), destacada
+        const tp = ((typeof CONCURSO!=='undefined' && CONCURSO.topicos) || {})[l.nome] || [], kf = 'fal:' + l.nome;
+        const assuntosF = tp.length ? tp.map(x => `<details class="composicao-det" data-comp-tema="${esc(kf + '||' + x.n)}" ${COMPOSICAO_ABERTOS.has(kf + '||' + x.n) ? 'open' : ''}>
+            <summary class="bar-row composicao-linha" title="${esc(x.t)}"><div class="name">${x.n} ${esc(x.t)}</div><div class="bar-track"><div class="bar-fill" style="width:0%;"></div></div><div class="pct">0</div></summary>
+            <div class="composicao-arts">${(x.subs || []).map(sb => `<div class="composicao-art-vazio">${esc(sb)}</div>`).join('') || '<div class="composicao-art-vazio">Sem subitens no edital.</div>'}</div></details>`).join('')
+          : '<div class="composicao-art-vazio">Conteúdo conforme o edital (assuntos não identificados no texto).</div>';
+        return `<div class="bar-row conc-faltante" style="flex-wrap:wrap;align-items:center;padding:8px 10px 8px 12px;margin-bottom:6px;${estiloCelula}">
+        <button type="button" class="mat-seta" data-toggle-mat="${esc(l.nome)}" title="Assuntos do edital" aria-label="Assuntos do edital de ${esc(l.nome)}" style="width:18px;color:inherit;">▾</button>
+        <div style="width:26px;">${i+1}</div>
+        <div class="name" style="flex:1;font-weight:700;display:flex;align-items:center;gap:6px;flex-wrap:wrap;"><span>${esc(l.nome)}</span> <span class="conc-tag-falta">FALTA LISTA</span> <span style="font-weight:400;font-size:11.5px;opacity:.8;">${l.peso ? l.peso + ' questões na prova' : 'cobrada no edital'}</span> <button type="button" class="prova-det-btn" data-conc-importar="1" title="Importar o .md desta matéria" style="margin-top:0;">Importar lista</button></div>
+        <div style="width:56px;text-align:right;">0</div><div style="width:76px;text-align:right;">—</div><div style="width:60px;text-align:right;">—</div><div style="width:52px;text-align:right;">—</div><div style="width:56px;text-align:right;">—</div><div style="width:90px;text-align:right;">—</div>
+      </div>
+      <details class="composicao-det composicao-det-mat" data-comp-tema="${esc(kf)}" ${COMPOSICAO_ABERTOS.has(kf) ? 'open' : ''}>
+        <summary class="composicao-mat-sum"></summary>
+        <div class="composicao-arts">${assuntosF}</div>
+      </details>`;
+      }
       // matéria concluída (100% respondida) = azul, independentemente do % de acerto
       const concluida = l.total>0 && l.respondidas>=l.total;
       const cor = concluida ? corDoTema({ bg:'#dbeafe', fg:'#1e4f8f', fgForte:'#173e72' }) : faixaCorPct(l.pct, l.respondidas);
