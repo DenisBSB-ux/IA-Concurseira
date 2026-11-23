@@ -183,15 +183,17 @@ async function vincularContaGoogle(){
       let contaDoAparelho = null;
       try{ const r = await storageGet(CONTA_DO_APARELHO_KEY); contaDoAparelho = r && r.value; }catch(e){ /* sem registro */ }
       const podeAdotar = STATE.syncCode && (!contaDoAparelho || contaDoAparelho===uid);
-      codigo = podeAdotar ? STATE.syncCode : ('g-' + uid.toLowerCase());
+      codigo = podeAdotar ? String(STATE.syncCode).split('~')[0] : ('g-' + uid.toLowerCase());      // código-base da conta (sem o sufixo do perfil)
       await comLimiteDeTempo(ref.set({ dono: uid, codigo, criadoEm: Date.now() }), 15000, 'tempo esgotado ao registrar a conta na nuvem');
     }
     if(!USUARIO_ATUAL || USUARIO_ATUAL.uid!==uid) return; // trocou de conta no meio
     try{ await storageSet(CONTA_DO_APARELHO_KEY, uid); }catch(e){ /* só evita adoção indevida */ }
-    if(codigo!==STATE.syncCode){
-      // conectarSincronizacao zera o progresso local se este aparelho estava
-      // com OUTRA conta, puxa o da nuvem e envia tudo com o campo "dono"
-      await conectarSincronizacao(codigo);
+    STATE.contaCodigo = codigo;
+    try{ await puxarConcurso(); }catch(_){}                       // concurso/cargo escolhido em outro aparelho
+    const efetivo = codigoDoPerfil(codigo);                        // perfil de estudo = concurso + cargo
+    if(efetivo!==STATE.syncCode){
+      if(STATE.syncCode && String(STATE.syncCode).split('~')[0]===codigo) await ativarPerfilDeEstudo();   // mesma conta, outro perfil: guarda o atual e carrega o novo
+      else await conectarSincronizacao(efetivo);                  // outra conta neste aparelho: zera e puxa da nuvem
     }else{
       const puxou = await pullFromCloud({ silent: true });
       // pull falhou/incompleto (null): não envia nada por cima da nuvem sem ter lido tudo
@@ -202,6 +204,8 @@ async function vincularContaGoogle(){
         await pushToCloud();
       }
     }
+    // a escolha pode ter mudado enquanto isto rodava (tela de escolha): confere de novo
+    if(codigoDoPerfil(codigo)!==STATE.syncCode) await ativarPerfilDeEstudo();
   }catch(e){
     console.error('Falha ao vincular a conta Google à sincronização', e);
     setSyncStatusDOM('err', 'falha ao sincronizar (passe o mouse aqui)', motivoErroFirestore(e));
@@ -286,6 +290,8 @@ async function limparDadosDoUsuarioNoAparelho(){
   STATE.syncStatus = null;
   const escritas = [[STORAGE_KEY, '{}'], [EDICOES_KEY, '{}'], [GABARITOS_ALTERADOS_KEY, '{}'], ['tcdf-edicoes-orfas', '{}'], [IMAGENS_KEY, '{}'], [IMAGENS_ENVIADAS_KEY, '[]'], [SYNC_CODE_KEY, ''], [LAST_SYNC_KEY, ''], [CONTA_DO_APARELHO_KEY, '']];
   chavesQuiz.forEach(k => escritas.push([quizStorageKey(k), '']));
+  try{ if(typeof perfilLimparSnapshots === 'function') await perfilLimparSnapshots(); }catch(_){}
+  STATE.contaCodigo = '';
   for(const [chave, valor] of escritas){
     try{ await storageSet(chave, valor); }catch(e){ console.warn('Falha ao limpar '+chave, e); }
     // cópia antiga no localStorage (versões anteriores) também não pode sobrar
@@ -687,7 +693,7 @@ function _lsGet(k){ try{ return window.localStorage.getItem(k); }catch(_){ retur
 function _lsSet(k, v){ try{ if(v===null||v===undefined) window.localStorage.removeItem(k); else window.localStorage.setItem(k, v); }catch(_){} }
 /* ---------- progresso da REVISÃO (marcas de flashcards/lacunas, assuntos estudados, registro por dia, dias do plano) ----------
    Nunca se perde: sobe para a nuvem (doc próprio, mescla por união, o que existe aqui vale mais que o remoto), entra no backup e na restauração. */
-const REV_CHAVES = { treino:'tcdf_treino_v1', check:'tcdf_resumo_check_v1', log:'tcdf_treino_log_v1', hist:'tcdf_reta7_hist_v2', ts:'tcdf_rev_ts_v1', tent:'tcdf_treino_n_v1', conc:'ia_concursos_v2' };
+const REV_CHAVES = { treino:'tcdf_treino_v1', check:'tcdf_resumo_check_v1', log:'tcdf_treino_log_v1', hist:'tcdf_reta7_hist_v2', ts:'tcdf_rev_ts_v1', tent:'tcdf_treino_n_v1' };
 function revisaoColetar(){
   const o = {}; Object.keys(REV_CHAVES).forEach(k => { try{ o[k] = JSON.parse(localStorage.getItem(REV_CHAVES[k]) || 'null'); }catch(_){ o[k] = null; } });
   return o;
@@ -714,9 +720,6 @@ function revisaoMesclar(r){
     if(alt) gravar(k, loc);
   });
   if(altTs) gravar('ts', tsL);
-  if(r.conc && typeof r.conc === 'object' && !Array.isArray(r.conc) && Number(r.conc.ts) > ((ler('conc') || {}).ts || 0)){   // concurso ativo: vale o mais recente
-    gravar('conc', r.conc); try{ if(typeof concursoCarregar === 'function'){ concursoCarregar(); if(typeof concursoAposSync === 'function') concursoAposSync(); } }catch(_){}
-  }
   if(r.tent && typeof r.tent === 'object' && !Array.isArray(r.tent)){      // tentativas: vale o maior número de cada questão (nunca diminui ao sincronizar)
     const loc = (ler('tent') && typeof ler('tent') === 'object') ? ler('tent') : {}; let alt = false;
     Object.keys(r.tent).forEach(sl => {
@@ -744,7 +747,7 @@ function revisaoMesclar(r){
 }
 let sincRevTimer = null;
 function sincronizarRevisao(){
-  if(typeof sincronizacaoAtiva!=='function' || !sincronizacaoAtiva()) return;
+  if(typeof sincronizacaoAtiva!=='function' || !sincronizacaoAtiva() || (typeof PERFIL_TROCANDO!=='undefined' && PERFIL_TROCANDO)) return;
   clearTimeout(sincRevTimer);
   sincRevTimer = setTimeout(async ()=>{
     try{ await comLimiteDeTempo(fbDb.collection('progresso').doc(`${STATE.syncCode}__revisao`).set(sanitizarParaFirestore(comDono({ revisao: JSON.stringify(revisaoColetar()), updatedAt: Date.now() }))), 15000, 'tempo esgotado ao salvar o progresso da revisão'); }
@@ -770,7 +773,7 @@ function sincronizarPrefs(){
   sincPrefsTimer = setTimeout(async ()=>{
     try{
       const ts = Date.now();
-      await comLimiteDeTempo(fbDb.collection('progresso').doc(`${STATE.syncCode}__prefs`).set(sanitizarParaFirestore(comDono({ prefs: JSON.stringify(coletarPrefs(ts)), updatedAt: ts }))), 15000, 'tempo esgotado ao salvar preferências');
+      await comLimiteDeTempo(fbDb.collection('progresso').doc(`${codigoBase()}__prefs`).set(sanitizarParaFirestore(comDono({ prefs: JSON.stringify(coletarPrefs(ts)), updatedAt: ts }))), 15000, 'tempo esgotado ao salvar preferências');
       _lsSet(PREFS_TS_KEY, String(ts));
     }catch(e){ console.warn('Falha ao salvar preferências na nuvem', e); }
   }, 1500);
@@ -780,7 +783,7 @@ let _prefsUltimoEnvio = 0;
 function sincronizarPrefsLento(){ if(Date.now()-_prefsUltimoEnvio < 600000) return; _prefsUltimoEnvio = Date.now(); sincronizarPrefs(); }
 async function puxarPrefs(){
   try{
-    const doc = await comLimiteDeTempo(fbDb.collection('progresso').doc(`${STATE.syncCode}__prefs`).get(), 15000, 'tempo esgotado ao ler as preferências');
+    const doc = await comLimiteDeTempo(fbDb.collection('progresso').doc(`${codigoBase()}__prefs`).get(), 15000, 'tempo esgotado ao ler as preferências');
     const local = parseInt(_lsGet(PREFS_TS_KEY)||'0', 10) || 0;
     if(!doc.exists){ sincronizarPrefs(); return; }          // primeira vez: sobe as preferências deste aparelho
     const d = doc.data(); if(!(d.updatedAt > local)) return;
@@ -1145,6 +1148,7 @@ function progressoParaNuvem(bucket, outrosBytes){
 // uma única execução por vez; chamadas durante o envio pedem uma nova rodada e esperam por ela
 let _pushEmAndamento = null, _pushPendente = false;
 async function pushToCloud(){
+  if(typeof PERFIL_TROCANDO!=='undefined' && PERFIL_TROCANDO && !PERFIL_MEU) return;      // durante a troca de perfil só os envios da própria troca valem
   if(_pushEmAndamento){ _pushPendente = true; return _pushEmAndamento; }
   _pushEmAndamento = (async()=>{
     try{ do{ _pushPendente = false; await _pushToCloudInterno(); }while(_pushPendente); }
@@ -1238,16 +1242,18 @@ async function conectarSincronizacao(codigo){
   const progressoAnterior = PROGRESS;
   const quizzesAnteriores = STATE.quizzesEmAndamento;
   STATE.syncCode = codigo;
-  try{ await storageSet(SYNC_CODE_KEY, codigo); }catch(e){ /* ignora */ }
   // Cada código de sincronização tem histórico independente: ao TROCAR de código,
   // o progresso local é zerado antes de puxar da nuvem. Na primeira conexão (sem
   // código anterior), o progresso local passa a pertencer ao código conectado e
-  // não é zerado.
-  if(codigoAnterior && codigo !== codigoAnterior){
+  // não é zerado. (O zerar vem junto da troca do código, no mesmo instante, para
+  // nenhum envio levar o progresso do código antigo para o novo.)
+  const trocouCodigo = !!(codigoAnterior && codigo !== codigoAnterior);
+  if(trocouCodigo){
     PROGRESS = {};
     STATE.quizzesEmAndamento = {};
-    try{ await storageSet(STORAGE_KEY, JSON.stringify(PROGRESS)); }catch(e){ /* ignora */ }
   }
+  try{ await storageSet(SYNC_CODE_KEY, codigo); }catch(e){ /* ignora */ }
+  if(trocouCodigo){ try{ await storageSet(STORAGE_KEY, JSON.stringify(PROGRESS)); }catch(e){ /* ignora */ } }
   const encontrouDados = await pullFromCloud();
   if(encontrouDados === null){
     // falha real de rede/permissão (não "código novo sem dados") — desfaz a
