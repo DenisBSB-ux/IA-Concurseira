@@ -3504,5 +3504,2343 @@ const CONCURSOS_EMBUTIDOS = [
   },
   "id": "dpdf-2026-analista",
   "embutido": true
+ },
+ {
+  "id": "abdi-2026-api",
+  "embutido": true,
+  "nome": "ABDI 2026 — Analista de Produtividade e Inovação (API)",
+  "orgao": "Agência Brasileira de Desenvolvimento Industrial (ABDI)",
+  "cargo": "Analista de Produtividade e Inovação — Administrativo",
+  "banca": "FGV",
+  "data": "2026-12-20",
+  "rotulo": "20/12/2026 (13h30 às 17h, on-line)",
+  "link": "https://conhecimento.fgv.br/concursos/psabdi",
+  "remuneracao": "R$ 16.034,70",
+  "vagas": "20 imediatas e 160 de cadastro de reserva",
+  "itens": [
+   [
+    "Edital",
+    "Nº 01/2026 – Processo Seletivo Público (publicado em 20/10/2026), executado pela FGV"
+   ],
+   [
+    "Regime",
+    "CLT, com contrato de experiência de até 90 dias; lotação em Brasília/DF; 9 perfis do cargo de Analista de Produtividade e Inovação"
+   ],
+   [
+    "Benefícios",
+    "Auxílio-alimentação/refeição, auxílio-educação, auxílio-babá, assistência à saúde e odontológica, vale-transporte ou auxílio-garagem, auxílio-enfermidade, auxílio-funeral, seguro de vida e previdência privada complementar"
+   ],
+   [
+    "Etapas",
+    "Prova objetiva (eliminatória e classificatória); avaliação de títulos e experiência profissional (classificatória); entrevista individual por competências (classificatória)"
+   ],
+   [
+    "Prova objetiva",
+    "20/12/2026, das 13h30 às 17h, on-line, 60 questões de múltipla escolha com 5 alternativas: 20 gerais (0,3), 20 institucionais (0,3) e 20 específicos (0,65); total de 25 pontos"
+   ],
+   [
+    "Questões específicas",
+    "O edital não divide as 20 questões por assunto; a plataforma usa partes iguais entre as áreas do perfil para ponderar a compatibilidade"
+   ],
+   [
+    "Aprovação na objetiva",
+    "Mínimo de 50% (12,5 pontos) e não zerar nenhuma das áreas de conhecimento"
+   ],
+   [
+    "Inscrições",
+    "De 20/10/2026 (16h) a 10/11/2026 (18h); taxa de R$ 100,00; um perfil por candidato"
+   ],
+   [
+    "Títulos e currículo",
+    "Convocação em 2/12/2026; envio de 3/12/2026 a 22/12/2026"
+   ],
+   [
+    "Entrevista",
+    "On-line, com até 15 pontos; data a divulgar em edital de convocação"
+   ],
+   [
+    "Reservas",
+    "3% para pessoas com deficiência e 30% para negros, indígenas e quilombolas (25% + 3% + 2%)"
+   ],
+   [
+    "Validade",
+    "2 anos, prorrogáveis por igual período"
+   ],
+   [
+    "Remuneração",
+    "R$ 16.034,70 para todos os perfis (Nível 2, padrão 6 do PCCS)"
+   ]
+  ],
+  "materias": [],
+  "cargos": [
+   {
+    "nome": "Analista de Produtividade e Inovação — Administrativo",
+    "materias": [
+     "Administração Geral e Pública"
+    ],
+    "qtd": {
+     "Administração Geral e Pública": 20.0
+    },
+    "topicos": {
+     "Administração Geral e Pública": [
+      {
+       "n": 1,
+       "t": "Teorias da Administração e evolução do pensamento administrativo",
+       "subs": []
+      },
+      {
+       "n": 2,
+       "t": "Funções administrativas",
+       "subs": [
+        "planejamento, organização, direção e controle"
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Planejamento estratégico, tático e operacional",
+       "subs": []
+      },
+      {
+       "n": 4,
+       "t": "Gestão estratégica",
+       "subs": [
+        "missão, visão, valores, objetivos, análise de ambientes, indicadores e Balanced Scorecard"
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Estruturas organizacionais, departamentalização, centralização, descentralização e desenho organizacional",
+       "subs": []
+      },
+      {
+       "n": 6,
+       "t": "Processo decisório",
+       "subs": []
+      },
+      {
+       "n": 7,
+       "t": "Cultura e clima organizacional",
+       "subs": []
+      },
+      {
+       "n": 8,
+       "t": "Gestão de pessoas",
+       "subs": [
+        "recrutamento e seleção, treinamento e desenvolvimento, gestão por competências, avaliação de desempenho, remuneração e qualidade de vida no trabalho"
+       ]
+      },
+      {
+       "n": 9,
+       "t": "Comportamento organizacional",
+       "subs": [
+        "motivação, liderança, comunicação, trabalho em equipe e gestão de conflitos"
+       ]
+      },
+      {
+       "n": 10,
+       "t": "Gestão de processos",
+       "subs": [
+        "identificação, modelagem, análise, redesenho, melhoria e indicadores de processos"
+       ]
+      },
+      {
+       "n": 11,
+       "t": "Gestão da qualidade e melhoria contínua",
+       "subs": [
+        "princípios e ferramentas"
+       ]
+      },
+      {
+       "n": 12,
+       "t": "Gestão de projetos",
+       "subs": [
+        "conceitos, ciclo de vida, planejamento, execução, monitoramento, controle e encerramento; metodologias tradicionais e ágeis"
+       ]
+      },
+      {
+       "n": 13,
+       "t": "Gestão de riscos e controles internos",
+       "subs": []
+      },
+      {
+       "n": 14,
+       "t": "Governança corporativa, compliance, integridade, ética e responsabilidade corporativa",
+       "subs": []
+      },
+      {
+       "n": 15,
+       "t": "Administração de materiais, patrimônio, estoques, compras e cadeia de suprimentos",
+       "subs": []
+      },
+      {
+       "n": 16,
+       "t": "Gestão de contratos",
+       "subs": []
+      },
+      {
+       "n": 17,
+       "t": "Administração financeira",
+       "subs": [
+        "planejamento financeiro, fluxo de caixa, capital de giro, análise de investimentos e indicadores econômico- financeiros"
+       ]
+      },
+      {
+       "n": 18,
+       "t": "Orçamento empresarial",
+       "subs": []
+      },
+      {
+       "n": 19,
+       "t": "Sustentabilidade e responsabilidade socioambiental nas organizações",
+       "subs": []
+      },
+      {
+       "n": 20,
+       "t": "Gestão do conhecimento, inovação e mudança organizacional",
+       "subs": []
+      },
+      {
+       "n": 21,
+       "t": "Administração e governança de empresas estatais",
+       "subs": []
+      },
+      {
+       "n": 22,
+       "t": "Lei nº 13.303/2016 e suas alterações (Dispõe sobre o estatuto jurídico da empresa pública, da sociedade de economia mista e de suas subsidiárias, no âmbito da União, dos Estados, do Distrito Federal e dos Municípios",
+       "subs": []
+      },
+      {
+       "n": 23,
+       "t": "Tecnologia da Informação",
+       "subs": [
+        "Conceitos gerais de sistemas, análise dos sistemas existentes e novos, entrada e saída de dados, arquivos e controle"
+       ]
+      }
+     ]
+    },
+    "itens": [
+     [
+      "Requisito",
+      "Graduação de nível superior em qualquer área"
+     ],
+     [
+      "Vagas imediatas e cadastro de reserva",
+      "2 imediatas e 24 de cadastro de reserva"
+     ],
+     [
+      "Jornada",
+      "40 horas semanais"
+     ]
+    ]
+   },
+   {
+    "nome": "Analista de Produtividade e Inovação — Comunicação e Marketing",
+    "materias": [
+     "Comunicação e Marketing"
+    ],
+    "qtd": {
+     "Comunicação e Marketing": 20.0
+    },
+    "topicos": {
+     "Comunicação e Marketing": [
+      {
+       "n": 1,
+       "t": "Teorias da comunicação",
+       "subs": []
+      },
+      {
+       "n": 2,
+       "t": "Processos, elementos, modelos e funções da comunicação",
+       "subs": []
+      },
+      {
+       "n": 3,
+       "t": "Comunicação social, institucional, organizacional e pública",
+       "subs": []
+      },
+      {
+       "n": 4,
+       "t": "Planejamento estratégico de comunicação",
+       "subs": []
+      },
+      {
+       "n": 5,
+       "t": "Comunicação integrada",
+       "subs": []
+      },
+      {
+       "n": 6,
+       "t": "Identidade, imagem, marca e reputação institucional",
+       "subs": []
+      },
+      {
+       "n": 7,
+       "t": "Assessoria de comunicação e assessoria de imprensa",
+       "subs": []
+      },
+      {
+       "n": 8,
+       "t": "Relacionamento com a imprensa e fontes de informação",
+       "subs": []
+      },
+      {
+       "n": 9,
+       "t": "Gêneros jornalísticos",
+       "subs": []
+      },
+      {
+       "n": 10,
+       "t": "Técnicas de redação jornalística",
+       "subs": [
+        "notícia, reportagem, entrevista, nota, release, artigo e texto institucional"
+       ]
+      },
+      {
+       "n": 11,
+       "t": "Edição e revisão de conteúdos",
+       "subs": []
+      },
+      {
+       "n": 12,
+       "t": "Comunicação interna e relacionamento com públicos internos",
+       "subs": []
+      },
+      {
+       "n": 13,
+       "t": "Comunicação digital e produção de conteúdo para ambientes digitais",
+       "subs": []
+      },
+      {
+       "n": 14,
+       "t": "Redes sociais",
+       "subs": [
+        "planejamento, produção, publicação, monitoramento e métricas"
+       ]
+      },
+      {
+       "n": 15,
+       "t": "Produção e gestão de conteúdo multimídia",
+       "subs": []
+      },
+      {
+       "n": 16,
+       "t": "Comunicação audiovisual",
+       "subs": [
+        "fundamentos de fotografia, vídeo e áudio"
+       ]
+      },
+      {
+       "n": 17,
+       "t": "Comunicação visual",
+       "subs": [
+        "fundamentos de design, identidade visual e produção gráfica"
+       ]
+      },
+      {
+       "n": 18,
+       "t": "Planejamento e organização de eventos",
+       "subs": []
+      },
+      {
+       "n": 19,
+       "t": "Pesquisa de opinião e avaliação de resultados de comunicação",
+       "subs": []
+      },
+      {
+       "n": 20,
+       "t": "Gestão de crises e comunicação de risco",
+       "subs": []
+      },
+      {
+       "n": 21,
+       "t": "Relacionamento com públicos de interesse e comunidades",
+       "subs": []
+      },
+      {
+       "n": 22,
+       "t": "Comunicação científica, tecnológica e ambiental",
+       "subs": []
+      },
+      {
+       "n": 23,
+       "t": "Ética e legislação aplicadas à comunicação",
+       "subs": []
+      },
+      {
+       "n": 24,
+       "t": "Direito à informação, transparência e acesso à informação",
+       "subs": []
+      },
+      {
+       "n": 25,
+       "t": "Proteção de dados pessoais aplicada às atividades de comunicação",
+       "subs": []
+      },
+      {
+       "n": 26,
+       "t": "Acessibilidade, inclusão e linguagem simples na comunicação",
+       "subs": []
+      }
+     ]
+    },
+    "itens": [
+     [
+      "Requisito",
+      "Graduação em Comunicação Social, Jornalismo, Publicidade e Propaganda, Relações Públicas, Marketing ou correlatos"
+     ],
+     [
+      "Vagas imediatas e cadastro de reserva",
+      "1 imediatas e 8 de cadastro de reserva"
+     ],
+     [
+      "Jornada",
+      "40 horas semanais"
+     ]
+    ]
+   },
+   {
+    "nome": "Analista de Produtividade e Inovação — Contabilidade",
+    "materias": [
+     "Contabilidade"
+    ],
+    "qtd": {
+     "Contabilidade": 20.0
+    },
+    "topicos": {
+     "Contabilidade": [
+      {
+       "n": 1,
+       "t": "Contabilidade Geral",
+       "subs": [
+        "patrimônio, fatos contábeis, contas, escrituração, regime de competência, balancete e apuração do resultado"
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Estrutura Conceitual para Relatório Financeiro",
+       "subs": []
+      },
+      {
+       "n": 3,
+       "t": "Demonstrações contábeis",
+       "subs": [
+        "apresentação, estrutura, elaboração e análise"
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Balanço patrimonial",
+       "subs": []
+      },
+      {
+       "n": 5,
+       "t": "Demonstração do resultado",
+       "subs": []
+      },
+      {
+       "n": 6,
+       "t": "Demonstração do resultado abrangente",
+       "subs": []
+      },
+      {
+       "n": 7,
+       "t": "Demonstração das mutações do patrimônio líquido",
+       "subs": []
+      },
+      {
+       "n": 8,
+       "t": "Demonstração dos fluxos de caixa",
+       "subs": []
+      },
+      {
+       "n": 9,
+       "t": "Demonstração do valor adicionado",
+       "subs": []
+      },
+      {
+       "n": 10,
+       "t": "Notas explicativas",
+       "subs": []
+      },
+      {
+       "n": 11,
+       "t": "Disponibilidades, contas a receber e estoques",
+       "subs": []
+      },
+      {
+       "n": 12,
+       "t": "Ativo imobilizado e ativo intangível",
+       "subs": []
+      },
+      {
+       "n": 13,
+       "t": "Depreciação, amortização e exaustão",
+       "subs": []
+      },
+      {
+       "n": 14,
+       "t": "Redução ao valor recuperável de ativos",
+       "subs": []
+      },
+      {
+       "n": 15,
+       "t": "Provisões, passivos contingentes e ativos contingentes",
+       "subs": []
+      },
+      {
+       "n": 16,
+       "t": "Arrendamentos",
+       "subs": []
+      },
+      {
+       "n": 17,
+       "t": "Reconhecimento e mensuração de receitas",
+       "subs": []
+      },
+      {
+       "n": 18,
+       "t": "Instrumentos financeiros",
+       "subs": [
+        "conceitos fundamentais"
+       ]
+      },
+      {
+       "n": 19,
+       "t": "Contabilidade societária e Lei nº 6.404/1976 e suas alterações",
+       "subs": []
+      },
+      {
+       "n": 20,
+       "t": "Pronunciamentos Técnicos, Interpretações e Orientações do Comitê de Pronunciamentos Contábeis – CPC",
+       "subs": []
+      },
+      {
+       "n": 21,
+       "t": "Contabilidade de custos",
+       "subs": [
+        "terminologia, classificação e comportamento dos custos"
+       ]
+      },
+      {
+       "n": 22,
+       "t": "Métodos de custeio",
+       "subs": []
+      },
+      {
+       "n": 23,
+       "t": "Custos para controle e tomada de decisão",
+       "subs": []
+      },
+      {
+       "n": 24,
+       "t": "Análise das demonstrações contábeis",
+       "subs": [
+        "índices de liquidez, estrutura de capital, rentabilidade e atividade"
+       ]
+      },
+      {
+       "n": 25,
+       "t": "Análise econômico-financeira",
+       "subs": []
+      },
+      {
+       "n": 26,
+       "t": "Matemática financeira aplicada à Contabilidade",
+       "subs": []
+      },
+      {
+       "n": 27,
+       "t": "Noções de orçamento empresarial",
+       "subs": [
+        "Modelo conceitual de planejamento integrado. Orçamento econômico e financeiro. Planejamento e revisões orçamentárias. Considerações sobre índices e cenários macroeconômicos. Projeções de lucro e de fluxos de caixa. Orçamento operacional e de investimento. Controle orçamentário (por centro de responsabilidade e programa). Realização e variações orçamentárias. Orçamento base zero. Contabilidade Tributária: conhecimentos básicos. Imposto de Renda Pessoa Jurídica e Contribuição social sobre o lucro. Imposto de Renda Retido na Fonte – IRRF. Imposto sobre Circulação de Mercadorias e Serviços – ICMS. Participações governamentais. Programa de Integração Social e de Formação do Patrimônio do Servidor Público – PIS/PASEP. Contribuição para o Financiamento da Seguridade Social – COFINS. Contribuição de Intervenção no Domínio Econômico – CIDE: Lei nº 10.336, de 19 de dezembro de 2001 e Lei nº 10.636, de 30 de dezembro de 2002. Legislação do ISS. Contribuição Previdenciária (legislação, alíquotas, base de cálculo e apuração). Emenda Constitucional nº 132, de 20 de dezembro de 2023. Lei Complementar nº 214, de 16 de janeiro de 2025"
+       ]
+      },
+      {
+       "n": 28,
+       "t": "Sistema Público de Escrituração Digital – SPED contábil e fiscal",
+       "subs": [
+        "Legislação aplicável. Objetivos. Implicações. Pessoas jurídicas obrigadas. Usuários das Informações. Livros abrangidos. Plano de Contas Referencial. Prazos. Escrituração contábil digital (ECD)"
+       ]
+      },
+      {
+       "n": 29,
+       "t": "Auditoria contábil e controles internos",
+       "subs": []
+      },
+      {
+       "n": 30,
+       "t": "Ética e legislação profissional",
+       "subs": []
+      }
+     ]
+    },
+    "itens": [
+     [
+      "Requisito",
+      "Graduação em Ciências Contábeis e registro ativo no CRC"
+     ],
+     [
+      "Vagas imediatas e cadastro de reserva",
+      "2 imediatas e 8 de cadastro de reserva"
+     ],
+     [
+      "Jornada",
+      "40 horas semanais"
+     ]
+    ]
+   },
+   {
+    "nome": "Analista de Produtividade e Inovação — Desenvolvimento de TI",
+    "materias": [
+     "Engenharia de Software",
+     "Linguagens de Programação e Desenvolvimento Web",
+     "Banco de Dados",
+     "Integração de Sistemas e APIs",
+     "Metodologias Ágeis e DevOps",
+     "Qualidade e Segurança de Software",
+     "Sustentação e Gestão de Soluções de TI"
+    ],
+    "qtd": {
+     "Engenharia de Software": 2.86,
+     "Linguagens de Programação e Desenvolvimento Web": 2.86,
+     "Banco de Dados": 2.86,
+     "Integração de Sistemas e APIs": 2.86,
+     "Metodologias Ágeis e DevOps": 2.86,
+     "Qualidade e Segurança de Software": 2.86,
+     "Sustentação e Gestão de Soluções de TI": 2.86
+    },
+    "topicos": {
+     "Engenharia de Software": [
+      {
+       "n": "1.1",
+       "t": "Ciclo de vida e processos de desenvolvimento de software",
+       "subs": []
+      },
+      {
+       "n": "1.2",
+       "t": "Engenharia de requisitos e modelagem UML",
+       "subs": []
+      },
+      {
+       "n": "1.3",
+       "t": "Arquitetura de software, padrões de projeto e microsserviços",
+       "subs": []
+      },
+      {
+       "n": "1.4",
+       "t": "Documentação, manutenção e evolução de sistemas",
+       "subs": []
+      }
+     ],
+     "Linguagens de Programação e Desenvolvimento Web": [
+      {
+       "n": "2.1",
+       "t": "Lógica de programação, algoritmos e estruturas de dados",
+       "subs": []
+      },
+      {
+       "n": "2.2",
+       "t": "Programação orientada a objetos",
+       "subs": []
+      },
+      {
+       "n": "2.3",
+       "t": "Linguagens Java, PHP e JavaScript",
+       "subs": []
+      },
+      {
+       "n": "2.4",
+       "t": "Node.js",
+       "subs": []
+      },
+      {
+       "n": "2.5",
+       "t": "HTML5, CSS3 e desenvolvimento de aplicações web responsivas",
+       "subs": []
+      }
+     ],
+     "Banco de Dados": [
+      {
+       "n": "3.1",
+       "t": "Modelagem de dados e modelo relacional",
+       "subs": []
+      },
+      {
+       "n": "3.2",
+       "t": "Normalização e integridade referencial",
+       "subs": []
+      },
+      {
+       "n": "3.3",
+       "t": "Linguagem SQL: consultas, junções, subconsultas e manipulação de dados",
+       "subs": []
+      },
+      {
+       "n": "3.4",
+       "t": "Transações, índices e otimização de consultas",
+       "subs": []
+      }
+     ],
+     "Integração de Sistemas e APIs": [
+      {
+       "n": "4.1",
+       "t": "Serviços web e arquitetura REST",
+       "subs": []
+      },
+      {
+       "n": "4.2",
+       "t": "Protocolos HTTP e HTTPS",
+       "subs": []
+      },
+      {
+       "n": "4.3",
+       "t": "Formatos JSON e XML",
+       "subs": []
+      },
+      {
+       "n": "4.4",
+       "t": "Desenvolvimento, consumo, autenticação e segurança de APIs",
+       "subs": []
+      }
+     ],
+     "Metodologias Ágeis e DevOps": [
+      {
+       "n": "5.1",
+       "t": "Scrum e Kanban",
+       "subs": []
+      },
+      {
+       "n": "5.2",
+       "t": "Histórias de usuário, backlog e critérios de aceitação",
+       "subs": []
+      },
+      {
+       "n": "5.3",
+       "t": "Git, GitHub e GitLab",
+       "subs": []
+      },
+      {
+       "n": "5.4",
+       "t": "Integração e entrega contínuas (CI/CD)",
+       "subs": []
+      },
+      {
+       "n": "5.5",
+       "t": "Automação e implantação de aplicações",
+       "subs": []
+      }
+     ],
+     "Qualidade e Segurança de Software": [
+      {
+       "n": "6.1",
+       "t": "Testes unitários, funcionais, de integração e regressão",
+       "subs": []
+      },
+      {
+       "n": "6.2",
+       "t": "Depuração, revisão de código e qualidade de software",
+       "subs": []
+      },
+      {
+       "n": "6.3",
+       "t": "Desenvolvimento seguro e vulnerabilidades OWASP Top 10",
+       "subs": []
+      },
+      {
+       "n": "6.4",
+       "t": "Autenticação, autorização e controle de acesso",
+       "subs": []
+      },
+      {
+       "n": "6.5",
+       "t": "Proteção de dados pessoais: Lei nº 13.709/2018 (LGPD)",
+       "subs": []
+      }
+     ],
+     "Sustentação e Gestão de Soluções de TI": [
+      {
+       "n": "7.1",
+       "t": "Manutenção, monitoramento e suporte a aplicações",
+       "subs": []
+      },
+      {
+       "n": "7.2",
+       "t": "Gerenciamento de incidentes, problemas e mudanças",
+       "subs": []
+      },
+      {
+       "n": "7.3",
+       "t": "Acordos de Nível de Serviço (SLA)",
+       "subs": []
+      },
+      {
+       "n": "7.4",
+       "t": "Especificação técnica e homologação de soluções",
+       "subs": []
+      },
+      {
+       "n": "7.5",
+       "t": "Acompanhamento de contratos, fornecedores e entregas de software",
+       "subs": []
+      }
+     ]
+    },
+    "itens": [
+     [
+      "Requisito",
+      "Graduação em Ciência da Computação, Sistemas de Informação, Engenharia de Software, Engenharia da Computação, Análise e Desenvolvimento de Sistemas ou correlatos"
+     ],
+     [
+      "Vagas imediatas e cadastro de reserva",
+      "2 imediatas e 16 de cadastro de reserva"
+     ],
+     [
+      "Jornada",
+      "40 horas semanais"
+     ]
+    ]
+   },
+   {
+    "nome": "Analista de Produtividade e Inovação — Gestão de Pessoas",
+    "materias": [
+     "Gestão Estratégica de Pessoas",
+     "Recrutamento, Seleção e Desenvolvimento de Pessoas",
+     "Gestão do Desempenho e Carreiras",
+     "Administração de Pessoal e Legislação Trabalhista",
+     "Cultura Organizacional e Qualidade de Vida no Trabalho",
+     "Processos e Indicadores de Gestão de Pessoas",
+     "Normas e Políticas de Gestão de Pessoas da ABDI"
+    ],
+    "qtd": {
+     "Gestão Estratégica de Pessoas": 2.86,
+     "Recrutamento, Seleção e Desenvolvimento de Pessoas": 2.86,
+     "Gestão do Desempenho e Carreiras": 2.86,
+     "Administração de Pessoal e Legislação Trabalhista": 2.86,
+     "Cultura Organizacional e Qualidade de Vida no Trabalho": 2.86,
+     "Processos e Indicadores de Gestão de Pessoas": 2.86,
+     "Normas e Políticas de Gestão de Pessoas da ABDI": 2.86
+    },
+    "topicos": {
+     "Gestão Estratégica de Pessoas": [
+      {
+       "n": "1.1",
+       "t": "Fundamentos, modelos e processos de gestão de pessoas",
+       "subs": []
+      },
+      {
+       "n": "1.2",
+       "t": "Planejamento estratégico e dimensionamento da força de trabalho",
+       "subs": []
+      },
+      {
+       "n": "1.3",
+       "t": "Gestão por competências",
+       "subs": []
+      },
+      {
+       "n": "1.4",
+       "t": "Indicadores de gestão de pessoas e análise de dados para tomada de decisão",
+       "subs": []
+      }
+     ],
+     "Recrutamento, Seleção e Desenvolvimento de Pessoas": [
+      {
+       "n": "2.1",
+       "t": "Recrutamento e seleção de pessoal",
+       "subs": []
+      },
+      {
+       "n": "2.2",
+       "t": "Integração e desenvolvimento de empregados",
+       "subs": []
+      },
+      {
+       "n": "2.3",
+       "t": "Levantamento de necessidades de treinamento",
+       "subs": []
+      },
+      {
+       "n": "2.4",
+       "t": "Educação corporativa e gestão do conhecimento",
+       "subs": []
+      },
+      {
+       "n": "2.5",
+       "t": "Avaliação de resultados de ações de capacitação",
+       "subs": []
+      }
+     ],
+     "Gestão do Desempenho e Carreiras": [
+      {
+       "n": "3.1",
+       "t": "Métodos e instrumentos de avaliação de desempenho",
+       "subs": []
+      },
+      {
+       "n": "3.2",
+       "t": "Gestão por resultados, metas e competências",
+       "subs": []
+      },
+      {
+       "n": "3.3",
+       "t": "Feedback e desenvolvimento profissional",
+       "subs": []
+      },
+      {
+       "n": "3.4",
+       "t": "Planos de carreira, cargos e salários",
+       "subs": []
+      },
+      {
+       "n": "3.5",
+       "t": "Remuneração, benefícios e políticas de reconhecimento",
+       "subs": []
+      }
+     ],
+     "Administração de Pessoal e Legislação Trabalhista": [
+      {
+       "n": "4.1",
+       "t": "Consolidação das Leis do Trabalho (CLT): contrato de trabalho, jornada, remuneração, férias e rescisão contratual",
+       "subs": []
+      },
+      {
+       "n": "4.2",
+       "t": "Admissão, movimentação e desligamento de empregados",
+       "subs": []
+      },
+      {
+       "n": "4.3",
+       "t": "Folha de pagamento, encargos trabalhistas e previdenciários",
+       "subs": []
+      },
+      {
+       "n": "4.4",
+       "t": "Controle de frequência, banco de horas e benefícios. 4.5. eSocial e obrigações trabalhistas acessórias. 4.6. Acordos coletivos de trabalho",
+       "subs": []
+      }
+     ],
+     "Cultura Organizacional e Qualidade de Vida no Trabalho": [
+      {
+       "n": "5.1",
+       "t": "Cultura e clima organizacional",
+       "subs": []
+      },
+      {
+       "n": "5.2",
+       "t": "Comunicação interna e relacionamento interpessoal",
+       "subs": []
+      },
+      {
+       "n": "5.3",
+       "t": "Motivação, liderança e gestão de conflitos",
+       "subs": []
+      },
+      {
+       "n": "5.4",
+       "t": "Saúde, segurança e qualidade de vida no trabalho",
+       "subs": []
+      },
+      {
+       "n": "5.5",
+       "t": "Diversidade, inclusão e prevenção ao assédio e à discriminação",
+       "subs": []
+      }
+     ],
+     "Processos e Indicadores de Gestão de Pessoas": [
+      {
+       "n": "6.1",
+       "t": "Mapeamento, análise e melhoria de processos de recursos humanos",
+       "subs": []
+      },
+      {
+       "n": "6.2",
+       "t": "Indicadores de desempenho, produtividade, absenteísmo e rotatividade",
+       "subs": []
+      },
+      {
+       "n": "6.3",
+       "t": "Sistemas de informação para gestão de pessoas",
+       "subs": []
+      },
+      {
+       "n": "6.4",
+       "t": "Gestão de riscos, controles internos e conformidade nos processos de pessoal",
+       "subs": []
+      },
+      {
+       "n": "6.5",
+       "t": "Proteção de dados pessoais: Lei nº 13.709/2018 (LGPD)",
+       "subs": []
+      }
+     ],
+     "Normas e Políticas de Gestão de Pessoas da ABDI": [
+      {
+       "n": "7.1",
+       "t": "Plano de Carreira, Cargos e Salários da ABDI (2026)",
+       "subs": []
+      },
+      {
+       "n": "7.2",
+       "t": "Acordo Coletivo de Trabalho da ABDI (2026–2028)",
+       "subs": []
+      },
+      {
+       "n": "7.3",
+       "t": "Gestão de competências, desempenho e desenvolvimento profissional",
+       "subs": []
+      },
+      {
+       "n": "7.4",
+       "t": "Procedimentos institucionais de administração de pessoal e benefícios",
+       "subs": []
+      }
+     ]
+    },
+    "itens": [
+     [
+      "Requisito",
+      "Graduação em Administração, Psicologia, Gestão de RH, Engenharia de Produção ou correlatos"
+     ],
+     [
+      "Vagas imediatas e cadastro de reserva",
+      "1 imediatas e 8 de cadastro de reserva"
+     ],
+     [
+      "Jornada",
+      "40 horas semanais"
+     ]
+    ]
+   },
+   {
+    "nome": "Analista de Produtividade e Inovação — Infraestrutura e Operação",
+    "materias": [
+     "Infraestrutura de Tecnologia da Informação",
+     "Sistemas Operacionais e Administração de Servidores",
+     "Redes de Computadores",
+     "Segurança da Informação",
+     "Operação, Monitoramento e Continuidade de Serviços",
+     "Governança e Gestão de Serviços de TI",
+     "Suporte Técnico e Automação de Infraestrutura"
+    ],
+    "qtd": {
+     "Infraestrutura de Tecnologia da Informação": 2.86,
+     "Sistemas Operacionais e Administração de Servidores": 2.86,
+     "Redes de Computadores": 2.86,
+     "Segurança da Informação": 2.86,
+     "Operação, Monitoramento e Continuidade de Serviços": 2.86,
+     "Governança e Gestão de Serviços de TI": 2.86,
+     "Suporte Técnico e Automação de Infraestrutura": 2.86
+    },
+    "topicos": {
+     "Infraestrutura de Tecnologia da Informação": [
+      {
+       "n": "1.1",
+       "t": "Arquitetura e componentes de infraestrutura de TI",
+       "subs": []
+      },
+      {
+       "n": "1.2",
+       "t": "Servidores, armazenamento e ambientes de processamento",
+       "subs": []
+      },
+      {
+       "n": "1.3",
+       "t": "Virtualização de servidores e contêineres",
+       "subs": []
+      },
+      {
+       "n": "1.4",
+       "t": "Computação em nuvem: modelos IaaS, PaaS e SaaS",
+       "subs": []
+      },
+      {
+       "n": "1.5",
+       "t": "Planejamento de capacidade, disponibilidade e desempenho",
+       "subs": []
+      }
+     ],
+     "Sistemas Operacionais e Administração de Servidores": [
+      {
+       "n": "2.1",
+       "t": "Administração de ambientes Windows Server e Linux",
+       "subs": []
+      },
+      {
+       "n": "2.2",
+       "t": "Instalação, configuração, atualização e manutenção de sistemas operacionais",
+       "subs": []
+      },
+      {
+       "n": "2.3",
+       "t": "Gerenciamento de usuários, permissões e serviços",
+       "subs": []
+      },
+      {
+       "n": "2.4",
+       "t": "Active Directory, DNS e DHCP",
+       "subs": []
+      },
+      {
+       "n": "2.5",
+       "t": "Automação de rotinas administrativas e scripts PowerShell e Shell",
+       "subs": []
+      }
+     ],
+     "Redes de Computadores": [
+      {
+       "n": "3.1",
+       "t": "Arquiteturas, topologias e protocolos de redes",
+       "subs": []
+      },
+      {
+       "n": "3.2",
+       "t": "Modelos OSI e TCP/IP",
+       "subs": []
+      },
+      {
+       "n": "3.3",
+       "t": "Endereçamento IPv4 e IPv6, roteamento e VLANs",
+       "subs": []
+      },
+      {
+       "n": "3.4",
+       "t": "Redes LAN, WAN e VPN",
+       "subs": []
+      },
+      {
+       "n": "3.5",
+       "t": "Switches, roteadores, firewalls e redes sem fio",
+       "subs": []
+      },
+      {
+       "n": "3.6",
+       "t": "Monitoramento e diagnóstico de redes",
+       "subs": []
+      }
+     ],
+     "Segurança da Informação": [
+      {
+       "n": "4.1",
+       "t": "Princípios e políticas de segurança da informação",
+       "subs": []
+      },
+      {
+       "n": "4.2",
+       "t": "Controle de acesso, autenticação e gerenciamento de identidades",
+       "subs": []
+      },
+      {
+       "n": "4.3",
+       "t": "Segurança de redes, servidores e ambientes em nuvem",
+       "subs": []
+      },
+      {
+       "n": "4.4",
+       "t": "Gestão de vulnerabilidades, atualizações e incidentes de segurança",
+       "subs": []
+      },
+      {
+       "n": "4.5",
+       "t": "Criptografia, certificados digitais, backup e recuperação de dados",
+       "subs": []
+      },
+      {
+       "n": "4.6",
+       "t": "Lei nº 13.709/2018 (LGPD)",
+       "subs": []
+      }
+     ],
+     "Operação, Monitoramento e Continuidade de Serviços": [
+      {
+       "n": "5.1",
+       "t": "Administração e operação de ambientes de TI",
+       "subs": []
+      },
+      {
+       "n": "5.2",
+       "t": "Monitoramento de disponibilidade, desempenho e capacidade",
+       "subs": []
+      },
+      {
+       "n": "5.3",
+       "t": "Gerenciamento de incidentes, problemas e mudanças",
+       "subs": []
+      },
+      {
+       "n": "5.4",
+       "t": "Rotinas de backup, restauração e recuperação de desastres",
+       "subs": []
+      },
+      {
+       "n": "5.5",
+       "t": "Continuidade de serviços e planos de contingência",
+       "subs": []
+      },
+      {
+       "n": "5.6",
+       "t": "Acordos de Nível de Serviço (SLA)",
+       "subs": []
+      }
+     ],
+     "Governança e Gestão de Serviços de TI": [
+      {
+       "n": "6.1",
+       "t": "Fundamentos de governança de TI",
+       "subs": []
+      },
+      {
+       "n": "6.2",
+       "t": "ITIL 4: conceitos e práticas de gerenciamento de serviços",
+       "subs": []
+      },
+      {
+       "n": "6.3",
+       "t": "COBIT 2019: princípios e objetivos de governança e gestão",
+       "subs": []
+      },
+      {
+       "n": "6.4",
+       "t": "Gestão de ativos, configurações e licenciamento de software",
+       "subs": []
+      },
+      {
+       "n": "6.5",
+       "t": "Gestão de riscos e indicadores de serviços de TI",
+       "subs": []
+      },
+      {
+       "n": "6.6",
+       "t": "Planejamento e acompanhamento de contratos e fornecedores de soluções tecnológicas",
+       "subs": []
+      }
+     ],
+     "Suporte Técnico e Automação de Infraestrutura": [
+      {
+       "n": "7.1",
+       "t": "Atendimento e suporte técnico a usuários",
+       "subs": []
+      },
+      {
+       "n": "7.2",
+       "t": "Diagnóstico e resolução de falhas em equipamentos, sistemas e serviços",
+       "subs": []
+      },
+      {
+       "n": "7.3",
+       "t": "Ferramentas de gerenciamento remoto e central de serviços",
+       "subs": []
+      },
+      {
+       "n": "7.4",
+       "t": "Automação e gerenciamento de configurações",
+       "subs": []
+      },
+      {
+       "n": "7.5",
+       "t": "Conceitos de DevOps e infraestrutura como código (IaC)",
+       "subs": []
+      },
+      {
+       "n": "7.6",
+       "t": "Documentação técnica e melhoria contínua dos serviços",
+       "subs": []
+      }
+     ]
+    },
+    "itens": [
+     [
+      "Requisito",
+      "Graduação em Ciência da Computação, Sistemas de Informação, Engenharia da Computação, Redes de Computadores, Segurança da Informação ou correlatos"
+     ],
+     [
+      "Vagas imediatas e cadastro de reserva",
+      "2 imediatas e 16 de cadastro de reserva"
+     ],
+     [
+      "Jornada",
+      "40 horas semanais"
+     ]
+    ]
+   },
+   {
+    "nome": "Analista de Produtividade e Inovação — Jurídico",
+    "materias": [
+     "Direito Constitucional",
+     "Direito Administrativo",
+     "Licitações, Contratos e Convênios",
+     "Direito Civil e Contratual",
+     "Direito Processual Civil e Contencioso Judicial",
+     "Direito do Trabalho",
+     "Proteção de Dados Pessoais",
+     "Direito Ambiental"
+    ],
+    "qtd": {
+     "Direito Constitucional": 2.5,
+     "Direito Administrativo": 2.5,
+     "Licitações, Contratos e Convênios": 2.5,
+     "Direito Civil e Contratual": 2.5,
+     "Direito Processual Civil e Contencioso Judicial": 2.5,
+     "Direito do Trabalho": 2.5,
+     "Proteção de Dados Pessoais": 2.5,
+     "Direito Ambiental": 2.5
+    },
+    "topicos": {
+     "Direito Constitucional": [
+      {
+       "n": "1.1",
+       "t": "Constituição Federal de 1988: princípios fundamentais, direitos e garantias fundamentais",
+       "subs": []
+      },
+      {
+       "n": "1.2",
+       "t": "Organização do Estado e repartição de competências",
+       "subs": []
+      },
+      {
+       "n": "1.3",
+       "t": "Administração Pública: princípios constitucionais e regime jurídico",
+       "subs": []
+      },
+      {
+       "n": "1.4",
+       "t": "Ordem econômica e financeira: princípios gerais da atividade econômica e atuação do Estado na economia",
+       "subs": []
+      },
+      {
+       "n": "1.5",
+       "t": "Controle de constitucionalidade",
+       "subs": []
+      }
+     ],
+     "Direito Administrativo": [
+      {
+       "n": "2.1",
+       "t": "Administração Direta e Indireta, entidades paraestatais e Serviços Sociais Autônomos",
+       "subs": []
+      },
+      {
+       "n": "2.2",
+       "t": "Atos e poderes administrativos",
+       "subs": []
+      },
+      {
+       "n": "2.3",
+       "t": "Controle da Administração Pública e atuação dos Tribunais de Contas",
+       "subs": []
+      },
+      {
+       "n": "2.4",
+       "t": "Responsabilidade civil do Estado",
+       "subs": []
+      },
+      {
+       "n": "2.5",
+       "t": "Processo administrativo: Lei nº 9.784/1999",
+       "subs": []
+      },
+      {
+       "n": "2.6",
+       "t": "Improbidade administrativa: Lei nº 8.429/1992 e suas alterações",
+       "subs": []
+      },
+      {
+       "n": "2.7",
+       "t": "Transparência e acesso à informação: Lei nº 12.527/2011",
+       "subs": []
+      },
+      {
+       "n": "2.8",
+       "t": "Responsabilização administrativa e civil de pessoas jurídicas: Lei nº 12.846/2013 e Decreto nº 11.129/2022",
+       "subs": []
+      }
+     ],
+     "Licitações, Contratos e Convênios": [
+      {
+       "n": "3.1",
+       "t": "Princípios e procedimentos de licitação e contratação",
+       "subs": []
+      },
+      {
+       "n": "3.2",
+       "t": "Regulamento de Licitações e Contratos da ABDI",
+       "subs": []
+      },
+      {
+       "n": "3.3",
+       "t": "Contratação direta: dispensa e inexigibilidade",
+       "subs": []
+      },
+      {
+       "n": "3.4",
+       "t": "Formalização, execução, fiscalização, alteração e extinção dos contratos",
+       "subs": []
+      },
+      {
+       "n": "3.5",
+       "t": "Regulamento de Convênios da ABDI: celebração, execução, acompanhamento e prestação de contas",
+       "subs": []
+      },
+      {
+       "n": "3.6",
+       "t": "Acordos de cooperação técnica e instrumentos de parceria",
+       "subs": []
+      }
+     ],
+     "Direito Civil e Contratual": [
+      {
+       "n": "4.1",
+       "t": "Lei de Introdução às Normas do Direito Brasileiro (Decreto-Lei nº 4.657/1942)",
+       "subs": []
+      },
+      {
+       "n": "4.2",
+       "t": "Pessoas jurídicas: personalidade, capacidade e responsabilidade",
+       "subs": []
+      },
+      {
+       "n": "4.3",
+       "t": "Fatos e negócios jurídicos: validade, invalidade, prescrição e decadência",
+       "subs": []
+      },
+      {
+       "n": "4.4",
+       "t": "Obrigações: modalidades, cumprimento e inadimplemento",
+       "subs": []
+      },
+      {
+       "n": "4.5",
+       "t": "Contratos: princípios, formação, interpretação, execução e extinção",
+       "subs": []
+      },
+      {
+       "n": "4.6",
+       "t": "Responsabilidade civil e reparação de danos",
+       "subs": []
+      }
+     ],
+     "Direito Processual Civil e Contencioso Judicial": [
+      {
+       "n": "5.1",
+       "t": "Código de Processo Civil (Lei nº 13.105/2015): princípios, jurisdição, ação e competência",
+       "subs": []
+      },
+      {
+       "n": "5.2",
+       "t": "Sujeitos do processo e atos processuais",
+       "subs": []
+      },
+      {
+       "n": "5.3",
+       "t": "Processo de conhecimento, provas e tutelas provisórias",
+       "subs": []
+      },
+      {
+       "n": "5.4",
+       "t": "Sentença, coisa julgada, cumprimento de sentença e execução",
+       "subs": []
+      },
+      {
+       "n": "5.5",
+       "t": "Recursos e ações autônomas de impugnação",
+       "subs": []
+      },
+      {
+       "n": "5.6",
+       "t": "Métodos consensuais de solução de conflitos: conciliação, mediação e arbitragem (Lei nº 9.307/1996)",
+       "subs": []
+      }
+     ],
+     "Direito do Trabalho": [
+      {
+       "n": "6.1",
+       "t": "Consolidação das Leis do Trabalho (Decreto-Lei nº 5.452/1943): contrato individual de trabalho, jornada, remuneração, férias e rescisão contratual",
+       "subs": []
+      },
+      {
+       "n": "6.2",
+       "t": "Direitos e deveres do empregado e do empregador",
+       "subs": []
+      },
+      {
+       "n": "6.3",
+       "t": "Negociação coletiva, convenções e acordos coletivos de trabalho",
+       "subs": []
+      },
+      {
+       "n": "6.4",
+       "t": "Responsabilidade trabalhista e relações de trabalho nos Serviços Sociais Autônomos",
+       "subs": []
+      }
+     ],
+     "Proteção de Dados Pessoais": [
+      {
+       "n": "7.1",
+       "t": "Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais – LGPD): fundamentos, princípios e âmbito de aplicação",
+       "subs": []
+      },
+      {
+       "n": "7.2",
+       "t": "Tratamento de dados pessoais: requisitos, bases legais e direitos dos titulares",
+       "subs": []
+      },
+      {
+       "n": "7.3",
+       "t": "Agentes de tratamento, responsabilidades e segurança dos dados pessoais",
+       "subs": []
+      },
+      {
+       "n": "7.4",
+       "t": "Autoridade Nacional de Proteção de Dados (ANPD): competências, fiscalização e sanções administrativas",
+       "subs": []
+      }
+     ],
+     "Direito Ambiental": [
+      {
+       "n": "8.1",
+       "t": "Direito Ambiental na Constituição Federal de 1988: arts. 170, inciso VI, e 225; princípios da prevenção, precaução, desenvolvimento sustentável e poluidor-pagador",
+       "subs": []
+      },
+      {
+       "n": "8.2",
+       "t": "Política Nacional do Meio Ambiente: Lei nº 6.938/1981; objetivos, instrumentos, Sistema Nacional do Meio Ambiente (SISNAMA) e responsabilidade por danos ambientais",
+       "subs": []
+      },
+      {
+       "n": "8.3",
+       "t": "Licenciamento ambiental: fundamentos, competências dos entes federativos e avaliação de impactos ambientais; Lei Complementar nº 140/2011 e legislação federal aplicável",
+       "subs": []
+      },
+      {
+       "n": "8.4",
+       "t": "Responsabilidade ambiental nas esferas civil, administrativa e penal: Lei nº 9.605/1998 e Decreto nº 6.514/2008",
+       "subs": []
+      },
+      {
+       "n": "8.5",
+       "t": "Política Nacional de Resíduos Sólidos: Lei nº 12.305/2010; gestão de resíduos industriais, logística reversa e responsabilidade compartilhada pelo ciclo de vida dos produtos",
+       "subs": []
+      },
+      {
+       "n": "8.6",
+       "t": "Sustentabilidade e desenvolvimento industrial: economia circular, descarbonização, transição energética e instrumentos jurídicos de promoção da sustentabilidade",
+       "subs": []
+      }
+     ]
+    },
+    "itens": [
+     [
+      "Requisito",
+      "Bacharelado em Direito e inscrição ativa na OAB"
+     ],
+     [
+      "Vagas imediatas e cadastro de reserva",
+      "2 imediatas e 16 de cadastro de reserva"
+     ],
+     [
+      "Jornada",
+      "40 horas semanais"
+     ]
+    ]
+   },
+   {
+    "nome": "Analista de Produtividade e Inovação — Produtividade Industrial",
+    "materias": [
+     "Fundamentos de Produtividade Industrial",
+     "Gestão e Melhoria de Processos Produtivos",
+     "Gestão da Qualidade e Eficiência Operacional",
+     "Transformação Digital e Indústria 4.0",
+     "Inovação e Competitividade Industrial",
+     "Sustentabilidade e Eficiência de Recursos",
+     "Políticas e Programas de Desenvolvimento Industrial",
+     "Gestão de Programas e Projetos"
+    ],
+    "qtd": {
+     "Fundamentos de Produtividade Industrial": 2.5,
+     "Gestão e Melhoria de Processos Produtivos": 2.5,
+     "Gestão da Qualidade e Eficiência Operacional": 2.5,
+     "Transformação Digital e Indústria 4.0": 2.5,
+     "Inovação e Competitividade Industrial": 2.5,
+     "Sustentabilidade e Eficiência de Recursos": 2.5,
+     "Políticas e Programas de Desenvolvimento Industrial": 2.5,
+     "Gestão de Programas e Projetos": 2.5
+    },
+    "topicos": {
+     "Fundamentos de Produtividade Industrial": [
+      {
+       "n": "1.1",
+       "t": "Conceitos de produtividade, eficiência, eficácia e competitividade",
+       "subs": []
+      },
+      {
+       "n": "1.2",
+       "t": "Produtividade do trabalho e produtividade total dos fatores",
+       "subs": []
+      },
+      {
+       "n": "1.3",
+       "t": "Indicadores de desempenho industrial e análise de resultados",
+       "subs": []
+      },
+      {
+       "n": "1.4",
+       "t": "Diagnóstico de processos produtivos e identificação de oportunidades de melhoria",
+       "subs": []
+      }
+     ],
+     "Gestão e Melhoria de Processos Produtivos": [
+      {
+       "n": "2.1",
+       "t": "Planejamento e controle da produção (PCP)",
+       "subs": []
+      },
+      {
+       "n": "2.2",
+       "t": "Mapeamento, análise e otimização de processos",
+       "subs": []
+      },
+      {
+       "n": "2.3",
+       "t": "Manufatura enxuta (Lean Manufacturing): princípios, ferramentas e eliminação de desperdícios",
+       "subs": []
+      },
+      {
+       "n": "2.4",
+       "t": "Gestão de estoques, capacidade produtiva e fluxos de produção",
+       "subs": []
+      },
+      {
+       "n": "2.5",
+       "t": "Melhoria contínua: Kaizen, PDCA e 5S",
+       "subs": []
+      }
+     ],
+     "Gestão da Qualidade e Eficiência Operacional": [
+      {
+       "n": "3.1",
+       "t": "Fundamentos da gestão da qualidade e normas ISO 9001",
+       "subs": []
+      },
+      {
+       "n": "3.2",
+       "t": "Ferramentas da qualidade e controle estatístico de processos",
+       "subs": []
+      },
+      {
+       "n": "3.3",
+       "t": "Indicadores de qualidade, custos, produtividade e eficiência operacional",
+       "subs": []
+      },
+      {
+       "n": "3.4",
+       "t": "Gestão de manutenção e eficiência global dos equipamentos (OEE)",
+       "subs": []
+      },
+      {
+       "n": "3.5",
+       "t": "Redução de perdas, retrabalho e custos de produção",
+       "subs": []
+      }
+     ],
+     "Transformação Digital e Indústria 4.0": [
+      {
+       "n": "4.1",
+       "t": "Conceitos e tecnologias habilitadoras da Indústria 4.0",
+       "subs": []
+      },
+      {
+       "n": "4.2",
+       "t": "Automação industrial, Internet Industrial das Coisas (IIoT) e sistemas ciberfísicos",
+       "subs": []
+      },
+      {
+       "n": "4.3",
+       "t": "Inteligência artificial, análise de dados e Big Data aplicados à produção",
+       "subs": []
+      },
+      {
+       "n": "4.4",
+       "t": "Sistemas de gestão e integração industrial: ERP, MES e sensores inteligentes",
+       "subs": []
+      },
+      {
+       "n": "4.5",
+       "t": "Maturidade digital e adoção de tecnologias em processos produtivos",
+       "subs": []
+      }
+     ],
+     "Inovação e Competitividade Industrial": [
+      {
+       "n": "5.1",
+       "t": "Gestão da inovação e desenvolvimento tecnológico",
+       "subs": []
+      },
+      {
+       "n": "5.2",
+       "t": "Difusão e transferência de tecnologias",
+       "subs": []
+      },
+      {
+       "n": "5.3",
+       "t": "Gestão de projetos de modernização produtiva",
+       "subs": []
+      },
+      {
+       "n": "5.4",
+       "t": "Cadeias produtivas, arranjos produtivos locais e competitividade industrial",
+       "subs": []
+      },
+      {
+       "n": "5.5",
+       "t": "Avaliação técnica e econômica de investimentos em produtividade",
+       "subs": []
+      }
+     ],
+     "Sustentabilidade e Eficiência de Recursos": [
+      {
+       "n": "6.1",
+       "t": "Produção mais limpa e ecoeficiência",
+       "subs": []
+      },
+      {
+       "n": "6.2",
+       "t": "Eficiência energética e uso racional de recursos produtivos",
+       "subs": []
+      },
+      {
+       "n": "6.3",
+       "t": "Economia circular e gestão de resíduos industriais",
+       "subs": []
+      },
+      {
+       "n": "6.4",
+       "t": "Indicadores de sustentabilidade e desempenho ambiental",
+       "subs": []
+      },
+      {
+       "n": "6.5",
+       "t": "Descarbonização e práticas sustentáveis nos processos industriais",
+       "subs": []
+      }
+     ],
+     "Políticas e Programas de Desenvolvimento Industrial": [
+      {
+       "n": "7.1",
+       "t": "Política industrial brasileira e Nova Indústria Brasil (NIB)",
+       "subs": []
+      },
+      {
+       "n": "7.2",
+       "t": "Programa Brasil Mais Produtivo: objetivos, metodologia e instrumentos de apoio às empresas",
+       "subs": []
+      },
+      {
+       "n": "7.3",
+       "t": "Atuação da ABDI na promoção da produtividade, inovação e transformação digital",
+       "subs": []
+      },
+      {
+       "n": "7.4",
+       "t": "Diagnóstico de maturidade produtiva e digital de empresas",
+       "subs": []
+      },
+      {
+       "n": "7.5",
+       "t": "Monitoramento, avaliação de resultados e indicadores de impacto de programas de produtividade industrial",
+       "subs": []
+      }
+     ],
+     "Gestão de Programas e Projetos": [
+      {
+       "n": "8.1",
+       "t": "Ciclo de vida de programas e projetos",
+       "subs": []
+      },
+      {
+       "n": "8.2",
+       "t": "Planejamento de programas e projetos: escopo, cronograma, custos, riscos e partes interessadas",
+       "subs": []
+      },
+      {
+       "n": "8.3",
+       "t": "Execução, monitoramento e controle",
+       "subs": []
+      },
+      {
+       "n": "8.4",
+       "t": "Avaliação de resultados",
+       "subs": []
+      },
+      {
+       "n": "8.5",
+       "t": "Governança de programas e projetos institucionais",
+       "subs": []
+      }
+     ]
+    },
+    "itens": [
+     [
+      "Requisito",
+      "Graduação de nível superior em qualquer área"
+     ],
+     [
+      "Vagas imediatas e cadastro de reserva",
+      "6 imediatas e 48 de cadastro de reserva"
+     ],
+     [
+      "Jornada",
+      "40 horas semanais"
+     ]
+    ]
+   },
+   {
+    "nome": "Analista de Produtividade e Inovação — Analista de Dados",
+    "materias": [
+     "Fundamentos de Análise de Dados",
+     "Estatística Computacional",
+     "Banco de Dados e Modelagem",
+     "Business Intelligence e Visualização de Dados",
+     "Programação e Engenharia de Dados",
+     "Inteligência Artificial e Análise Preditiva",
+     "Governança, Qualidade e Segurança de Dados"
+    ],
+    "qtd": {
+     "Fundamentos de Análise de Dados": 2.86,
+     "Estatística Computacional": 2.86,
+     "Banco de Dados e Modelagem": 2.86,
+     "Business Intelligence e Visualização de Dados": 2.86,
+     "Programação e Engenharia de Dados": 2.86,
+     "Inteligência Artificial e Análise Preditiva": 2.86,
+     "Governança, Qualidade e Segurança de Dados": 2.86
+    },
+    "topicos": {
+     "Fundamentos de Análise de Dados": [
+      {
+       "n": "1.1",
+       "t": "Conceitos de análise de dados, ciência de dados e inteligência de negócios",
+       "subs": []
+      },
+      {
+       "n": "1.2",
+       "t": "Tipos, fontes e estruturas de dados",
+       "subs": []
+      },
+      {
+       "n": "1.3",
+       "t": "Coleta, tratamento, limpeza e transformação de dados",
+       "subs": []
+      },
+      {
+       "n": "1.4",
+       "t": "Análise exploratória e interpretação de resultados",
+       "subs": []
+      },
+      {
+       "n": "1.5",
+       "t": "Indicadores de desempenho e apoio à tomada de decisão",
+       "subs": []
+      }
+     ],
+     "Estatística Computacional": [
+      {
+       "n": "2.1",
+       "t": "Estatística descritiva e análise exploratória de dados",
+       "subs": []
+      },
+      {
+       "n": "2.2",
+       "t": "Tratamento estatístico de dados: distribuições, amostragem, valores atípicos e dados ausentes",
+       "subs": []
+      },
+      {
+       "n": "2.3",
+       "t": "Correlação, regressão e análise de séries temporais",
+       "subs": []
+      },
+      {
+       "n": "2.4",
+       "t": "Métodos computacionais de análise e interpretação de dados",
+       "subs": []
+      },
+      {
+       "n": "2.5",
+       "t": "Aplicação de ferramentas estatísticas e automação de análises",
+       "subs": []
+      }
+     ],
+     "Banco de Dados e Modelagem": [
+      {
+       "n": "3.1",
+       "t": "Bancos de dados relacionais e não relacionais (NoSQL)",
+       "subs": []
+      },
+      {
+       "n": "3.2",
+       "t": "Modelagem conceitual, lógica e física de dados",
+       "subs": []
+      },
+      {
+       "n": "3.3",
+       "t": "Normalização, integridade e qualidade dos dados",
+       "subs": []
+      },
+      {
+       "n": "3.4",
+       "t": "Linguagem SQL: consultas, junções, subconsultas, agregações e manipulação de dados",
+       "subs": []
+      },
+      {
+       "n": "3.5",
+       "t": "Data Warehouse, Data Mart e modelagem dimensional",
+       "subs": []
+      }
+     ],
+     "Business Intelligence e Visualização de Dados": [
+      {
+       "n": "4.1",
+       "t": "Fundamentos de Business Intelligence (BI)",
+       "subs": []
+      },
+      {
+       "n": "4.2",
+       "t": "Microsoft Power BI: modelagem de dados, Power Query, linguagem DAX e elaboração de dashboards",
+       "subs": []
+      },
+      {
+       "n": "4.3",
+       "t": "Construção de relatórios, gráficos, tabelas e indicadores",
+       "subs": []
+      },
+      {
+       "n": "4.4",
+       "t": "Visualização de dados e comunicação de resultados",
+       "subs": []
+      },
+      {
+       "n": "4.5",
+       "t": "Análise de indicadores estratégicos e operacionais",
+       "subs": []
+      }
+     ],
+     "Programação e Engenharia de Dados": [
+      {
+       "n": "5.1",
+       "t": "Linguagem Python aplicada à análise de dados: Pandas, NumPy e manipulação de arquivos",
+       "subs": []
+      },
+      {
+       "n": "5.2",
+       "t": "Integração de dados e processos ETL/ELT",
+       "subs": []
+      },
+      {
+       "n": "5.3",
+       "t": "Integração de sistemas e consumo de APIs",
+       "subs": []
+      },
+      {
+       "n": "5.4",
+       "t": "Fundamentos de Big Data e processamento distribuído: Hadoop e Apache Spark",
+       "subs": []
+      },
+      {
+       "n": "5.5",
+       "t": "Automação de processos e pipelines de dados: Apache Airflow",
+       "subs": []
+      }
+     ],
+     "Inteligência Artificial e Análise Preditiva": [
+      {
+       "n": "6.1",
+       "t": "Fundamentos de inteligência artificial e aprendizado de máquina (Machine Learning)",
+       "subs": []
+      },
+      {
+       "n": "6.2",
+       "t": "Aprendizado supervisionado e não supervisionado",
+       "subs": []
+      },
+      {
+       "n": "6.3",
+       "t": "Algoritmos de classificação, regressão e agrupamento",
+       "subs": []
+      },
+      {
+       "n": "6.4",
+       "t": "Treinamento, validação e avaliação de modelos preditivos",
+       "subs": []
+      },
+      {
+       "n": "6.5",
+       "t": "Aplicações de inteligência artificial à análise de dados e à tomada de decisão",
+       "subs": []
+      }
+     ],
+     "Governança, Qualidade e Segurança de Dados": [
+      {
+       "n": "7.1",
+       "t": "Governança de dados: princípios, políticas, papéis e responsabilidades",
+       "subs": []
+      },
+      {
+       "n": "7.2",
+       "t": "Qualidade, integridade, consistência e rastreabilidade dos dados",
+       "subs": []
+      },
+      {
+       "n": "7.3",
+       "t": "Metadados, catalogação e integração de fontes de dados",
+       "subs": []
+      },
+      {
+       "n": "7.4",
+       "t": "Segurança da informação e controle de acesso",
+       "subs": []
+      },
+      {
+       "n": "7.5",
+       "t": "Proteção de dados pessoais: Lei nº 13.709/2018 (LGPD)",
+       "subs": []
+      }
+     ]
+    },
+    "itens": [
+     [
+      "Requisito",
+      "Graduação em Ciência de Dados, Estatística, Matemática, Economia, Ciência da Computação, Sistemas de Informação, Engenharia da Computação ou correlatos"
+     ],
+     [
+      "Vagas imediatas e cadastro de reserva",
+      "2 imediatas e 16 de cadastro de reserva"
+     ],
+     [
+      "Jornada",
+      "40 horas semanais"
+     ]
+    ]
+   }
+  ],
+  "comuns": [
+   "Língua Portuguesa",
+   "Raciocínio Lógico",
+   "Noções de Informática",
+   "Natureza e Finalidade dos Serviços Sociais Autônomos",
+   "Legislação de Criação e Estatuto Social da ABDI",
+   "Regulamento de Licitações e Contratos e Regulamento de Convênios da ABDI",
+   "Ética e Conduta Funcional; Missão e Atuação Institucional da ABDI"
+  ],
+  "qtdComuns": {
+   "Língua Portuguesa": 8,
+   "Raciocínio Lógico": 6,
+   "Noções de Informática": 6,
+   "Natureza e Finalidade dos Serviços Sociais Autônomos": 4,
+   "Legislação de Criação e Estatuto Social da ABDI": 4,
+   "Regulamento de Licitações e Contratos e Regulamento de Convênios da ABDI": 8,
+   "Ética e Conduta Funcional; Missão e Atuação Institucional da ABDI": 4
+  },
+  "topicosComuns": {
+   "Língua Portuguesa": [
+    {
+     "n": 1,
+     "t": "Compreensão e interpretação de textos de gêneros variados",
+     "subs": []
+    },
+    {
+     "n": 2,
+     "t": "Reconhecimento de tipos e gêneros textuais",
+     "subs": []
+    },
+    {
+     "n": 3,
+     "t": "Domínio da ortografia oficial",
+     "subs": []
+    },
+    {
+     "n": 4,
+     "t": "Domínio dos mecanismos de coesão textual",
+     "subs": [
+      "4.1 Emprego de elementos de referenciação, substituição e repetição, de conectores e de outros elementos de sequenciação textual",
+      "4.2 Emprego de tempos e modos verbais"
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Domínio da estrutura morfossintática do período",
+     "subs": [
+      "5.1 Emprego das classes de palavras",
+      "5.2 Relações de coordenação entre orações e entre termos da oração",
+      "5.3 Relações de subordinação entre orações e entre termos da oração",
+      "5.4 Emprego dos sinais de pontuação",
+      "5.5 Concordância verbal e nominal",
+      "5.6 Regência verbal e nominal",
+      "5.7 Emprego do sinal indicativo de crase",
+      "5.8 Colocação dos pronomes átonos"
+     ]
+    },
+    {
+     "n": 6,
+     "t": "Reescrita de frases e parágrafos do texto",
+     "subs": [
+      "6.1 Significação das palavras",
+      "6.2 Substituição de palavras ou de trechos de texto",
+      "6.3 Reorganização da estrutura de orações e de períodos do texto",
+      "6.4 Reescrita de textos de diferentes gêneros e níveis de formalidade"
+     ]
+    }
+   ],
+   "Raciocínio Lógico": [
+    {
+     "n": 1,
+     "t": "Estruturas lógicas",
+     "subs": []
+    },
+    {
+     "n": 2,
+     "t": "Lógica de argumentação",
+     "subs": [
+      "analogias, inferências, deduções e conclusões"
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Lógica sentencial (ou proposicional)",
+     "subs": [
+      "3.1 Proposições simples e compostas",
+      "3.2 Tabelas-verdade",
+      "3.3 Equivalências",
+      "3.4 Diagramas lógicos"
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Lógica de primeira ordem",
+     "subs": []
+    },
+    {
+     "n": 5,
+     "t": "Raciocínio lógico envolvendo problemas aritméticos, geométricos e matriciais",
+     "subs": []
+    }
+   ],
+   "Noções de Informática": [
+    {
+     "n": 1,
+     "t": "Conceitos básicos de Informática",
+     "subs": [
+      "hardware, software, periféricos, dispositivos de entrada, saída e armazenamento, organização de arquivos e pastas e principais extensões de arquivos"
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Sistemas operacionais Microsoft Windows 10 e Microsoft Windows 11, em português (Brasil)",
+     "subs": [
+      "área de trabalho, gerenciamento de arquivos e pastas, configurações, pesquisa, impressão, compartilhamento e principais recursos"
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Microsoft 365, em português (Brasil)",
+     "subs": [
+      "Word, Excel, PowerPoint e Outlook"
+     ]
+    },
+    {
+     "n": 4,
+     "t": "LibreOffice 7.x ou superior, em português (Brasil)",
+     "subs": [
+      "Writer, Calc e Impress"
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Internet e Intranet",
+     "subs": [
+      "conceitos, navegação, navegadores Google Chrome, Mozilla Firefox e Microsoft Edge, mecanismos de busca, webmail e demais serviços da Internet"
+     ]
+    },
+    {
+     "n": 6,
+     "t": "Correio eletrônico",
+     "subs": [
+      "envio, recebimento, organização de mensagens, anexos, contatos e calendários"
+     ]
+    },
+    {
+     "n": 7,
+     "t": "Segurança da informação",
+     "subs": [
+      "vírus, malwares, phishing, golpes eletrônicos, antivírus, firewall, backup, autenticação e boas práticas de segurança digital"
+     ]
+    },
+    {
+     "n": 8,
+     "t": "Computação em nuvem",
+     "subs": [
+      "armazenamento, sincronização, compartilhamento de arquivos e colaboração"
+     ]
+    },
+    {
+     "n": 9,
+     "t": "Inteligência Artificial",
+     "subs": [
+      "conceitos básicos, aplicações no ambiente de trabalho, ferramentas de IA generativa, uso responsável, limitações e boas práticas"
+     ]
+    },
+    {
+     "n": 10,
+     "t": "Digitalização, impressão, compartilhamento de documentos, teclas de atalho, recursos de acessibilidade e produtividade em sistemas operacionais e aplicativos",
+     "subs": []
+    },
+    {
+     "n": 11,
+     "t": "Legislação acerca de Segurança da Informação e Proteção De Dados",
+     "subs": [
+      "1. Lei nº 12.527/2011 (Lei de Acesso à Informação); 2. Lei nº 12.737/2012 (Lei de Delitos Informáticos); 3. Lei nº 12.965/2014 (Marco Civil da Internet); 4. Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais – LGPD)"
+     ]
+    }
+   ],
+   "Natureza e Finalidade dos Serviços Sociais Autônomos": [
+    {
+     "n": "1.1",
+     "t": "Conceito, características, natureza jurídica e finalidade dos Serviços Sociais Autônomos. Lei nº 11.080/2004, art. 1º, caput e § 1º, com redação dada pela Lei nº 14.440/2022; Decreto nº 5.352/2005, arts. 1º e 2º",
+     "subs": []
+    },
+    {
+     "n": "1.2",
+     "t": "Personalidade jurídica de direito privado, ausência de fins lucrativos, interesse coletivo e utilidade pública. Lei nº 11.080/2004, art. 1º, § 1º; Decreto nº 5.352/2005, art. 1º",
+     "subs": []
+    },
+    {
+     "n": "1.3",
+     "t": "Autonomia administrativa e gestão de pessoal. Lei nº 11.080/2004, art. 11, §§ 1º a 4º",
+     "subs": []
+    },
+    {
+     "n": "1.4",
+     "t": "Regime jurídico e relações com o Poder Público. Contrato de gestão, princípios aplicáveis e responsabilidades institucionais. Lei nº 11.080/2004, arts. 8º a 12; Decreto nº 5.352/2005, art. 10",
+     "subs": []
+    },
+    {
+     "n": "1.5",
+     "t": "Supervisão, fiscalização, controle e prestação de contas. Lei nº 11.080/2004, arts. 8º, 9º e 14; Decreto nº 5.352/2005, arts. 4º, 6º e 10",
+     "subs": []
+    }
+   ],
+   "Legislação de Criação e Estatuto Social da ABDI": [
+    {
+     "n": "2.1",
+     "t": "Lei nº 11.080/2004 e suas alterações, especialmente a Lei nº 14.440/2022",
+     "subs": []
+    },
+    {
+     "n": "2.2",
+     "t": "Decreto nº 5.352/2005 e suas alterações",
+     "subs": []
+    },
+    {
+     "n": "2.3",
+     "t": "Estatuto Social da ABDI: natureza, finalidade, princípios e competências institucionais",
+     "subs": []
+    },
+    {
+     "n": "2.4",
+     "t": "Organização administrativa e estrutura de governança",
+     "subs": []
+    },
+    {
+     "n": "2.5",
+     "t": "Conselho Deliberativo, Conselho Fiscal e Diretoria-Executiva: composição, competências e atribuições",
+     "subs": []
+    },
+    {
+     "n": "2.6",
+     "t": "Patrimônio, receitas, contrato de gestão e prestação de contas",
+     "subs": []
+    }
+   ],
+   "Regulamento de Licitações e Contratos e Regulamento de Convênios da ABDI": [
+    {
+     "n": "3.1",
+     "t": "Regulamento de Licitações e Contratos da ABDI: princípios e disposições gerais",
+     "subs": []
+    },
+    {
+     "n": "3.2",
+     "t": "Modalidades, procedimentos licitatórios, critérios de julgamento e habilitação",
+     "subs": []
+    },
+    {
+     "n": "3.3",
+     "t": "Contratação direta: dispensa e inexigibilidade",
+     "subs": []
+    },
+    {
+     "n": "3.4",
+     "t": "Formalização, execução, fiscalização, alteração e extinção dos contratos",
+     "subs": []
+    },
+    {
+     "n": "3.5",
+     "t": "Sanções e responsabilidades contratuais",
+     "subs": []
+    },
+    {
+     "n": "3.6",
+     "t": "Regulamento de Convênios da ABDI: disposições gerais, conceitos e modalidades",
+     "subs": []
+    },
+    {
+     "n": "3.7",
+     "t": "Celebração de convênios, plano de trabalho, habilitação e contrapartidas",
+     "subs": []
+    },
+    {
+     "n": "3.8",
+     "t": "Execução, acompanhamento, fiscalização e alterações dos convênios",
+     "subs": []
+    },
+    {
+     "n": "3.9",
+     "t": "Prestação de contas, responsabilidades e disposições finais",
+     "subs": []
+    }
+   ],
+   "Ética e Conduta Funcional; Missão e Atuação Institucional da ABDI": [
+    {
+     "n": "4.1",
+     "t": "Regulamento de Ética e Conduta da ABDI (Resolução do Conselho Deliberativo nº 004/2022): objetivo, aplicabilidade, valores e princípios éticos (arts. 1º a 3º)",
+     "subs": []
+    },
+    {
+     "n": "4.2",
+     "t": "Direitos, deveres e vedações aplicáveis aos profissionais da ABDI (arts. 4º a 6º do Regulamento de Ética e Conduta)",
+     "subs": []
+    },
+    {
+     "n": "4.3",
+     "t": "Critérios de conduta profissional: mídias sociais, confidencialidade de informações, propriedade intelectual, utilização de recursos institucionais, doações e patrocínios (arts. 7º a 11 do Regulamento de Ética e Conduta)",
+     "subs": []
+    },
+    {
+     "n": "4.4",
+     "t": "Conflito de interesses: atividades paralelas, atividades políticas, sindicais e religiosas, relacionamento entre profissionais, brindes, presentes, favores, participação em eventos e utilização de informações privilegiadas (arts. 12 a 17 do Regulamento de Ética e Conduta)",
+     "subs": []
+    },
+    {
+     "n": "4.5",
+     "t": "Descumprimento das normas, medidas disciplinares, comunicação de irregularidades, denúncias e gestão do Regulamento de Ética e Conduta (arts. 18 a 25)",
+     "subs": []
+    },
+    {
+     "n": "4.6",
+     "t": "Missão, visão, valores, diretrizes e objetivos estratégicos da ABDI, conforme o Planejamento Estratégico 2024–2029, aprovado pela Resolução do Conselho Deliberativo nº 008/2023",
+     "subs": []
+    },
+    {
+     "n": "4.7",
+     "t": "Atuação institucional da ABDI: promoção do desenvolvimento industrial, inovação, transformação digital, difusão tecnológica, competitividade e sustentabilidade, conforme o art. 1º da Lei nº 11.080/2004, o art. 2º do Decreto nº 5.352/2005 e o Planejamento Estratégico 2024–2029",
+     "subs": []
+    }
+   ]
+  }
  }
 ];
