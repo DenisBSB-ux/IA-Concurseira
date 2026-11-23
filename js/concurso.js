@@ -418,7 +418,7 @@ function concursoMotivacao(dias){
 /* ---------- comparação do cargo com as listas que já existem ---------- */
 const CONC_CATALOGO = [
   { slug: 'constitucional', mat: 'Constitucional', nome: 'Direito Constitucional', n: 250, dir: ['constitucional', 'constituicao'], rel: [] },
-  { slug: 'administrativo-geral', mat: 'Administrativo (geral)', mat2: ['Adm Geral & Pub'], nome: 'Administrativo (geral)', n: 500, dir: ['direito administrativo', 'administracao publica', 'atos administrativos', 'poderes administrativos'], rel: ['administrativo'] },
+  { slug: 'administrativo-geral', mat: 'Administrativo (geral)', mat2: ['Adm Geral & Pub'], nome: 'Administrativo (geral)', n: 500, dir: ['direito administrativo', 'administracao publica', 'administracao geral', 'atos administrativos', 'poderes administrativos'], rel: ['administrativo'] },
   { slug: 'adm-8429', mat: 'Adm (Lei nº 8.429; nº 9.784; nº 2.834)', nome: 'Adm: Lei 8.429, 9.784 e 2.834', n: 200, dir: ['improbidade', 'processo administrativo', '8.429', '9.784', '2.834'], rel: ['direito administrativo'] },
   { slug: 'adm-lgpd-lai', mat: 'Adm (LGPD + LAI)', nome: 'Adm: LGPD + LAI', n: 203, dir: ['lgpd', 'protecao de dados', 'acesso a informacao', 'lei de acesso'], rel: ['direito administrativo'] },
   { slug: 'afo', mat: 'AFO', nome: 'AFO', n: 300, dir: ['orcamento', 'financas publicas', 'administracao financeira', 'afo', 'responsabilidade fiscal', 'lrf', 'contabilidade publica'], rel: [] },
@@ -503,7 +503,7 @@ function concursoPlanoHtml(){
   cmp.linhas.forEach(l => {
     const st = l.diretas.length ? '✅ coberta' : (l.relacionadas.length ? '🟡 parcial' : '❌ sem lista');
     const lst = l.diretas.concat(l.relacionadas).map(btn).join('<br>') || '<small>Importar um .md desta matéria (aba Importar)</small>';
-    h += `<tr class="${l.diretas.length ? 'conc-ok' : (l.relacionadas.length ? 'conc-par' : 'conc-sem')}"><td>${esc(l.materia)}</td>${cp.comPeso ? `<td>${l.peso || '—'}</td>` : ''}<td>${st}</td><td>${lst}</td></tr>`;
+    h += `<tr class="${l.diretas.length ? 'conc-ok' : (l.relacionadas.length ? 'conc-par' : 'conc-sem')}"><td>${esc(l.materia)}</td>${cp.comPeso ? `<td>${l.peso ? concNum(l.peso) : '—'}</td>` : ''}<td>${st}</td><td>${lst}</td></tr>`;
   });
   h += `</tbody></table>`;
   const fora = CONC_CATALOGO.filter(e => !cmp.usados.has(e.slug));
@@ -557,14 +557,14 @@ function concursoTelaHtml(){
   const dias = d ? Math.round((d - hoje) / 86400000) : null;
   const cont = dias === null ? 'data a definir' : (dias > 1 ? `faltam <b>${dias} dias</b>` : (dias === 1 ? 'falta <b>1 dia</b>' : (dias === 0 ? '<b>é hoje</b>' : 'prova realizada')));
   const fato = (r, v) => v ? `<div class="ct-f"><span>${esc(r)}</span><b>${esc(v)}</b></div>` : '';
-  const qComuns = Object.values(c.qtdComuns || {}).reduce((a, b) => a + b, 0);
+  const qComuns = concNum(Object.values(c.qtdComuns || {}).reduce((a, b) => a + b, 0));
   const comuns = (c.comuns || []).map(m => `<li>${esc(m)}${(c.qtdComuns || {})[m] ? ` <small>· ${c.qtdComuns[m]} questões</small>` : ''}</li>`).join('');
   const cardsCargo = cargos.map(g => {
-    const cp = concursoCompatDe(c, g.nome), qEsp = Object.values(g.qtd || {}).reduce((a, b) => a + b, 0), req = (g.itens || []).find(i => i[0] === 'Requisito');
+    const cp = concursoCompatDe(c, g.nome), qEsp = concNum(Object.values(g.qtd || {}).reduce((a, b) => a + b, 0)), req = (g.itens || []).find(i => i[0] === 'Requisito');
     const sel = g.nome === CONC_SEL_CARGO;
     return `<label class="ct-cargo ${sel ? 'sel' : ''}"><input type="radio" name="ct-cargo" value="${esc(g.nome)}" ${sel ? 'checked' : ''}>
       <span class="ct-cargo-t"><b>${esc(g.nome.split(' — ').pop())}</b>${req ? `<small>Requisito: ${esc(req[1])}</small>` : ''}
-      <small>${(g.materias || []).length} matérias específicas${qEsp ? ` · ${qEsp} questões específicas` : ''}</small></span>
+      <small>${(g.materias || []).length} matéria${(g.materias || []).length === 1 ? '' : 's'} específica${(g.materias || []).length === 1 ? '' : 's'}${qEsp ? ` · ${qEsp} questões específicas` : ''}</small></span>
       <span class="ct-compat" title="Compatibilidade da base de questões da plataforma com este cargo"><b>${cp.pct}%</b><i><u style="width:${cp.pct}%"></u></i><small>da prova na base</small></span></label>`;
   }).join('');
   const lista = todos.map(x => `<button type="button" class="ct-conc ${x.id === CONC_SEL ? 'sel' : ''}" data-ct-conc="${esc(x.id)}"><b>${esc(x.nome)}</b><small>${esc(x.orgao || '')}${x.banca ? ' · ' + esc(x.banca) : ''}${x.rotulo ? ' · prova ' + esc(x.rotulo) : ''}</small></button>`).join('');
@@ -650,6 +650,7 @@ const CONC_STOP = new Set('para sobre entre como pela pelo pelas pelos dessa des
 const CONC_GENERICAS = new Set(['const', 'distr', 'feder', 'norma', 'artig', 'reali', 'gerai', 'conce', 'aspec', 'disposicoes']);
 const CONC_SIN = { sangr: 'hemor', sangu: 'hemor' };
 const CONC_ALIAS = [[/\blindb\b/gi, ' lei de introducao as normas do direito brasileiro '], [/\blrf\b/gi, ' lei de responsabilidade fiscal '], [/\blgpd\b/gi, ' lei geral de protecao de dados '], [/\bcpc\b/gi, ' codigo de processo civil ']];
+function concNum(x){ return Math.round((Number(x) || 0) * 10) / 10; }
 function concCurto(t, n){ t = String(t || ''); n = n || 150; return t.length > n ? t.slice(0, n - 1) + '…' : t; }
 function concStems(txt){
   let t0 = String(txt || ''); CONC_ALIAS.forEach(([re, to]) => { t0 = t0.replace(re, to); });
