@@ -2812,3 +2812,5 @@ body.theme-light .ct-top p,body.theme-light .ct-user small,body.theme-light .ct-
 body.theme-light .ct-h{ color:#5a6472; opacity:1; }
 body.theme-light .ct-compat i{ background:#d9d3c2; }
 body.theme-light .ct-user .side-action-btn{ color:var(--ink); border-color:#c9c2ae; background:#fffdf8; }
+
+.letterhead .conc-inst{ margin:2px 0 0; } .letterhead .conc-sub{ margin-top:2px; }
