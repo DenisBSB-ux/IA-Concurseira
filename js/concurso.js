@@ -27,7 +27,7 @@ function concursoGravarDB(){
   CONC_DB.ts = Date.now();
   try{ localStorage.setItem(CONCURSOS_KEY, JSON.stringify(CONC_DB)); }catch(_){}
   concursoCarregar();
-  try{ if(typeof sincronizarRevisao === 'function') sincronizarRevisao(); }catch(_){}
+  try{ if(typeof sincronizarConcurso === 'function') sincronizarConcurso(); }catch(_){}
 }
 /* concursos que valem para o usuário: os da conta (sobrepõem) + os embutidos na plataforma */
 function concursosTodos(){
@@ -573,6 +573,7 @@ function concursoTelaBind(){
       const c = [CONCURSO_PADRAO].concat(concursosTodos()).find(x => x.id === CONC_SEL) || CONCURSO_PADRAO;
       if(c.id !== 'padrao' && (c.cargos || []).length && !CONC_SEL_CARGO){ alert('Escolha o cargo.'); return; }
       CONC_TELA_ABERTA = false; concursoSessaoMarcar(true); concursoEscolher(c.id, c.id === 'padrao' ? '' : CONC_SEL_CARGO); window.scrollTo(0, 0); render();
+      if(typeof ativarPerfilDeEstudo === 'function') ativarPerfilDeEstudo();      // progresso e estatísticas deste concurso/cargo
     }
   });
   raiz.addEventListener('change', e => { if(e.target && e.target.name === 'ct-cargo'){ CONC_SEL_CARGO = e.target.value; render(); } });
