@@ -246,8 +246,14 @@ function render(){
     if(btnRecarregar) btnRecarregar.addEventListener('click', ()=> location.reload());
     return;
   }
+  // tela independente de escolha do concurso e do cargo: obrigatória antes da plataforma
+  if(typeof concursoTelaAtiva==='function' && concursoTelaAtiva()){
+    document.body.classList.remove('focus-mode');
+    root.innerHTML = concursoTelaHtml();
+    concursoTelaBind();
+    return;
+  }
   ensureMateriaSelecionada();
-  if(typeof concursoPerguntaInicial==='function') concursoPerguntaInicial();
   document.body.classList.toggle('focus-mode', !!STATE.focusMode);
   root.innerHTML = `
     ${STATE.focusMode ? '' : renderLetterhead()}

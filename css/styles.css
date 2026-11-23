@@ -2771,3 +2771,32 @@ body:not(.theme-light) .r7-leg mark.k{ background:rgba(212,170,77,.30); color:#f
 .conc-barra i{ display:block; height:100%; background:linear-gradient(90deg,#d94f4f,#e0b13a,#3fb36b); }
 .conc-tab tr.conc-ok td:first-child{ border-left:4px solid #3fb36b; } .conc-tab tr.conc-par td:first-child{ border-left:4px solid #e0b13a; } .conc-tab tr.conc-sem td:first-child{ border-left:4px solid #d94f4f; }
 .conc-sub{ font-size:12px; opacity:.85; }
+
+/* v626 — tela independente de escolha do concurso e do cargo */
+.ct-tela{ min-height:100vh; padding:20px 16px 40px; display:flex; justify-content:center; }
+.ct-caixa{ width:100%; max-width:1080px; }
+.ct-top{ display:flex; align-items:center; gap:14px; margin-bottom:16px; flex-wrap:wrap; }
+.ct-top h1{ margin:0; font-size:24px; } .ct-top p{ margin:2px 0 0; opacity:.8; font-size:13px; }
+.ct-logo{ width:52px; height:52px; border-radius:11px; }
+.ct-user{ margin-left:auto; display:flex; gap:8px; align-items:center; } .ct-user small{ opacity:.8; }
+.ct-corpo{ display:grid; grid-template-columns:300px 1fr; gap:18px; align-items:start; }
+.ct-lado,.ct-main{ background:rgba(128,128,128,.10); border:1px solid var(--paper-line); border-radius:12px; padding:14px; }
+.ct-h{ font-size:12px; letter-spacing:.06em; text-transform:uppercase; opacity:.75; margin-bottom:8px; font-weight:700; } .ct-h small{ text-transform:none; letter-spacing:0; font-weight:400; }
+.ct-conc{ display:block; width:100%; text-align:left; font:inherit; color:inherit; background:transparent; border:1px solid var(--paper-line); border-radius:10px; padding:10px 12px; margin-bottom:8px; cursor:pointer; }
+.ct-conc small{ display:block; opacity:.75; font-size:11.5px; margin-top:3px; }
+.ct-conc.sel,.ct-cargo.sel{ border-color:#7b7bff; background:rgba(110,110,255,.14); box-shadow:0 0 0 1px #7b7bff inset; }
+.ct-novo{ width:100%; font:inherit; font-size:13px; color:inherit; background:transparent; border:1px dashed var(--paper-line); border-radius:10px; padding:10px; cursor:pointer; }
+.ct-nome{ margin:0 0 10px; font-size:20px; }
+.ct-fatos{ display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:8px; margin-bottom:8px; }
+.ct-f{ border:1px solid var(--paper-line); border-radius:8px; padding:8px 10px; } .ct-f span{ display:block; font-size:11px; opacity:.7; } .ct-f b{ font-size:13.5px; }
+.ct-conta{ margin:6px 0 10px; font-size:13px; }
+.ct-det{ margin:8px 0; font-size:13px; } .ct-det summary{ cursor:pointer; font-weight:600; } .ct-det ul{ margin:6px 0 0; padding-left:18px; } .ct-det li{ margin:3px 0; }
+.ct-ok{ margin:10px 0; font-size:13px; }
+.ct-cargos{ display:grid; gap:8px; }
+.ct-cargo{ display:flex; gap:10px; align-items:center; border:1px solid var(--paper-line); border-radius:10px; padding:10px 12px; cursor:pointer; }
+.ct-cargo input{ flex-shrink:0; } .ct-cargo-t{ flex:1; display:flex; flex-direction:column; gap:2px; } .ct-cargo-t small{ opacity:.75; font-size:11.5px; }
+.ct-compat{ width:96px; text-align:center; flex-shrink:0; } .ct-compat b{ font-size:16px; display:block; } .ct-compat small{ font-size:10px; opacity:.7; }
+.ct-compat i{ display:block; height:7px; border-radius:5px; background:rgba(128,128,128,.28); overflow:hidden; margin:3px 0; }
+.ct-compat u{ display:block; height:100%; background:linear-gradient(90deg,#d94f4f,#e0b13a,#3fb36b); }
+.ct-acoes{ display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; align-items:center; }
+@media (max-width:780px){ .ct-corpo{ grid-template-columns:1fr; } .ct-compat{ width:74px; } .ct-top h1{ font-size:20px; } }
