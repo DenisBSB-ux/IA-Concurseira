@@ -329,7 +329,7 @@ document.addEventListener('click', e => {
   if(t.hasAttribute('data-conc-abrir')) return concursoAbrir();
   if(t.hasAttribute('data-conc-escolher')) return concursoEscolherAbrir();
   if(t.hasAttribute('data-conc-plano')) return concursoPlanoAbrir();
-  if(t.hasAttribute('data-conc-fechar')) { const mm = concursoModal(); if(mm.dataset.obrig === '1') return; mm.hidden = true; if(!CONC_DB.escolhido) concursoEscolherAbrir(); return; }
+  if(t.hasAttribute('data-conc-fechar')) { concursoModal().hidden = true; return; }
   if(t.hasAttribute('data-conc-colar')){
     const ta = document.getElementById('conc-colado'); ta.hidden = false; ta.focus();
     if(!ta._ok){ ta._ok = 1; ta.addEventListener('input', () => { clearTimeout(ta._t); ta._t = setTimeout(() => concursoProcessarTexto(ta.value, document.getElementById('conc-status')), 500); }); }
@@ -342,7 +342,7 @@ document.addEventListener('click', e => {
   if(t.hasAttribute('data-conc-aplicar')){
     const c = concursoLerForm();
     if(!c.nome){ const s = document.getElementById('conc-status'); if(s) s.textContent = 'Informe pelo menos o nome do concurso.'; return; }
-    concursoSalvar(c); concursoModal().hidden = true; if(typeof render === 'function') render(); concursoEscolherAbrir();      // confirma o cargo
+    concursoSalvar(c); concursoModal().hidden = true; concursoEscolherAbrir();      // volta à tela de escolha, com o concurso novo selecionado
   }
 });
 document.addEventListener('change', async e => {
@@ -498,46 +498,84 @@ function concursoPlanoAbrir(){
   el.hidden = false;
 }
 
-/* ---------- escolher concurso e cargo (aparece após o login e pelo botão do cartão da prova) ---------- */
+/* ---------- tela independente: escolher concurso e cargo (antes da plataforma; obrigatória após o login) ---------- */
+let CONC_TELA_ABERTA = false;      // aberta de novo pelo usuário (já havia escolhido)
+let CONC_SEL = null, CONC_SEL_CARGO = '';
+function concursoTelaAtiva(){ return !CONC_DB.escolhido || CONC_TELA_ABERTA; }
 function concursoEscolherAbrir(){
-  const m = concursoModal(); const corpo = document.getElementById('concurso-corpo');
-  m.dataset.obrig = CONC_DB.escolhido ? '' : '1';
-  m.querySelector('.lei-barra strong').textContent = CONC_DB.escolhido ? 'Escolha o concurso e o cargo' : 'Escolha a instituição e o cargo para começar';
+  CONC_TELA_ABERTA = true; CONC_SEL = CONC_DB.ativo || 'padrao'; CONC_SEL_CARGO = CONC_DB.cargo || '';
+  ['concurso-plano', 'prova-modal'].forEach(id => { const el = document.getElementById(id); if(el) el.hidden = true; });
+  if(typeof render === 'function') render();
+}
+function concursoCompatDe(c, cargo){
+  const cgo = (c.cargos || []).find(x => x.nome === cargo) || {};
+  const tmp = Object.assign({}, c, { padrao: false, cargo, materias: concursoMateriasDoCargo(c, cargo), qtd: Object.assign({}, c.qtdComuns || {}, cgo.qtd || {}) });
+  return concursoCompat(tmp);
+}
+function concursoTelaHtml(){
   const todos = [CONCURSO_PADRAO].concat(concursosTodos());
-  const ativo = CONC_DB.ativo || 'padrao';
-  const cargosDe = id => { const c = todos.find(x => x.id === id); return c && c.id !== 'padrao' ? (c.cargos || []) : []; };
-  const html = () => {
-    const sel = corpo.dataset.sel || ativo;
-    const cs = cargosDe(sel);
-    return `<div class="conc-esc">${todos.map(c => `<label class="conc-op"><input type="radio" name="conc-esc" value="${esc(c.id)}" ${c.id === sel ? 'checked' : ''}> <span><b>${esc(c.nome)}</b><br><small>${esc(c.orgao || '')}${c.banca ? ' · ' + esc(c.banca) : ''}${c.rotulo ? ' · prova ' + esc(c.rotulo) : ''}</small></span>${(c.id !== 'padrao' && (!concursoEhEmbutido(c.id) || CONC_DB.lista.some(x => x.id === c.id))) ? `<button type="button" class="prova-det-btn" data-conc-excluir="${esc(c.id)}" title="Remove este concurso da lista">🗑</button>` : ''}</label>`).join('')}</div>
-      ${cs.length ? `<label class="conc-l"><span>Cargo</span><select id="conc-esc-cargo" class="conc-sel">${cs.map(x => `<option ${x.nome === CONC_DB.cargo && sel === ativo ? 'selected' : ''}>${esc(x.nome)}</option>`).join('')}</select></label>` : (sel !== 'padrao' ? '<small>Este concurso não tem cargos cadastrados: use Carregar edital para completar.</small>' : '')}
-      <div class="conc-acoes"><button type="button" class="side-action-btn compact" data-conc-ir="1">✔ Estudar este</button><button type="button" class="side-action-btn compact" data-conc-abrir="1">＋ Novo concurso (carregar edital)</button></div>`;
-  };
-  corpo.dataset.sel = ativo; corpo.innerHTML = html(); m.hidden = false;
-  corpo.onchange = e => { if(e.target.name === 'conc-esc'){ corpo.dataset.sel = e.target.value; corpo.innerHTML = html(); } };
-  corpo.onclick = e => {
-    const ex = e.target.closest && e.target.closest('[data-conc-excluir]');
-    if(ex){ e.preventDefault(); if(confirm('Remover este concurso da lista?')){ concursoExcluir(ex.dataset.concExcluir); corpo.dataset.sel = 'padrao'; corpo.innerHTML = html(); if(typeof render === 'function') render(); } return; }
-    if(e.target.closest && e.target.closest('[data-conc-ir]')){
-      const id = corpo.dataset.sel || 'padrao'; const cg = (document.getElementById('conc-esc-cargo') || {}).value || '';
-      if(id !== 'padrao' && !cg && cargosDe(id).length){ alert('Escolha o cargo.'); return; }
-      concursoEscolher(id, cg); m.dataset.obrig = ''; m.hidden = true; if(typeof render === 'function') render();
-      if(id !== 'padrao') concursoPlanoAbrir();
+  if(!CONC_SEL || !todos.some(x => x.id === CONC_SEL)) CONC_SEL = CONC_DB.ativo || 'padrao';
+  const c = todos.find(x => x.id === CONC_SEL) || CONCURSO_PADRAO;
+  const ehPadrao = c.id === 'padrao';
+  const cargos = ehPadrao ? [] : (c.cargos || []);
+  if(!ehPadrao && cargos.length && !cargos.some(x => x.nome === CONC_SEL_CARGO)) CONC_SEL_CARGO = cargos[0].nome;
+  const d = concursoDataObj(c.data); const hoje = new Date(); hoje.setHours(0, 0, 0, 0);
+  const dias = d ? Math.round((d - hoje) / 86400000) : null;
+  const cont = dias === null ? 'data a definir' : (dias > 1 ? `faltam <b>${dias} dias</b>` : (dias === 1 ? 'falta <b>1 dia</b>' : (dias === 0 ? '<b>é hoje</b>' : 'prova realizada')));
+  const fato = (r, v) => v ? `<div class="ct-f"><span>${esc(r)}</span><b>${esc(v)}</b></div>` : '';
+  const qComuns = Object.values(c.qtdComuns || {}).reduce((a, b) => a + b, 0);
+  const comuns = (c.comuns || []).map(m => `<li>${esc(m)}${(c.qtdComuns || {})[m] ? ` <small>· ${c.qtdComuns[m]} questões</small>` : ''}</li>`).join('');
+  const cardsCargo = cargos.map(g => {
+    const cp = concursoCompatDe(c, g.nome), qEsp = Object.values(g.qtd || {}).reduce((a, b) => a + b, 0), req = (g.itens || []).find(i => i[0] === 'Requisito');
+    const sel = g.nome === CONC_SEL_CARGO;
+    return `<label class="ct-cargo ${sel ? 'sel' : ''}"><input type="radio" name="ct-cargo" value="${esc(g.nome)}" ${sel ? 'checked' : ''}>
+      <span class="ct-cargo-t"><b>${esc(g.nome.split(' — ').pop())}</b>${req ? `<small>Requisito: ${esc(req[1])}</small>` : ''}
+      <small>${(g.materias || []).length} matérias específicas${qEsp ? ` · ${qEsp} questões específicas` : ''}</small></span>
+      <span class="ct-compat" title="Compatibilidade da base de questões da plataforma com este cargo"><b>${cp.pct}%</b><i><u style="width:${cp.pct}%"></u></i><small>da prova na base</small></span></label>`;
+  }).join('');
+  const lista = todos.map(x => `<button type="button" class="ct-conc ${x.id === CONC_SEL ? 'sel' : ''}" data-ct-conc="${esc(x.id)}"><b>${esc(x.nome)}</b><small>${esc(x.orgao || '')}${x.banca ? ' · ' + esc(x.banca) : ''}${x.rotulo ? ' · prova ' + esc(x.rotulo) : ''}</small></button>`).join('');
+  const podeExcluir = !ehPadrao && (!concursoEhEmbutido(c.id) || CONC_DB.lista.some(x => x.id === c.id));
+  const usuario = (typeof USUARIO_ATUAL !== 'undefined' && USUARIO_ATUAL) ? USUARIO_ATUAL : null;
+  return `<div class="ct-tela"><div class="ct-caixa">
+    <header class="ct-top"><img src="img/logo-ia-concurseira.png" alt="IA Concurseira" class="ct-logo"><div><h1>IA Concurseira</h1><p>${CONC_DB.escolhido ? 'Trocar de concurso ou cargo' : 'Escolha o concurso e o cargo para começar'}</p></div>
+      <div class="ct-user">${usuario ? `<small>${esc(usuario.nome || usuario.email || '')}</small> <button type="button" class="side-action-btn compact" data-ct-sair="1">Sair</button>` : ''}</div></header>
+    <div class="ct-corpo">
+      <aside class="ct-lado"><div class="ct-h">1. Concurso</div>${lista}
+        <button type="button" class="ct-novo" data-conc-abrir="1">＋ Carregar edital de outro concurso</button></aside>
+      <main class="ct-main">
+        <div class="ct-h">Resumo do concurso</div>
+        <h2 class="ct-nome">${esc(c.nome)}</h2>
+        <div class="ct-fatos">${fato('Órgão', c.orgao)}${fato('Banca', c.banca)}${fato('Prova', (c.rotulo || '') + (dias === null ? '' : '') )}${ehPadrao || dias === null ? '' : ''}${fato('Remuneração inicial', c.remuneracao)}${fato('Vagas', c.vagas)}${ehPadrao ? fato('Cargo', c.cargo) : fato('Cargos', cargos.length ? cargos.length + ' (escolha abaixo)' : '')}</div>
+        <div class="ct-conta">Contagem regressiva: ${cont}</div>
+        ${(c.itens || []).length ? `<details class="ct-det" open><summary>Informações do edital</summary><ul>${c.itens.map(p => `<li><b>${esc(p[0])}:</b> ${esc(p[1])}</li>`).join('')}</ul></details>` : ''}
+        ${ehPadrao ? `<details class="ct-det"><summary>Detalhes do edital do TCDF</summary>${provaDetalhesHtml()}</details><p class="ct-ok">✅ Base completa: as 20 matérias do TCDF já estão na plataforma.</p>` : ''}
+        ${!ehPadrao && comuns ? `<details class="ct-det"><summary>Conhecimentos básicos (todos os cargos)${qComuns ? ' · ' + qComuns + ' questões' : ''}</summary><ul>${comuns}</ul></details>` : ''}
+        ${!ehPadrao && cargos.length ? `<div class="ct-h" style="margin-top:14px;">2. Cargo <small>(a % mostra quanto da prova do cargo já tem questões na plataforma)</small></div><div class="ct-cargos">${cardsCargo}</div>` : ''}
+        ${!ehPadrao && !cargos.length ? '<p>Este concurso não tem cargos cadastrados. Use "Carregar edital" para completar.</p>' : ''}
+        <div class="ct-acoes"><button type="button" class="btn btn-primary" data-ct-entrar="1" style="font-size:15px;padding:10px 22px;">▶ Entrar na plataforma</button>
+          ${CONC_DB.escolhido ? '<button type="button" class="side-action-btn compact" data-ct-voltar="1">← Voltar sem trocar</button>' : ''}
+          ${podeExcluir ? '<button type="button" class="side-action-btn compact" data-ct-excluir="1" title="Remove este concurso carregado da lista">🗑 Remover da lista</button>' : ''}</div>
+      </main></div></div></div>`;
+}
+function concursoTelaBind(){
+  const raiz = document.querySelector('.ct-tela'); if(!raiz) return;
+  raiz.addEventListener('click', e => {
+    const t = e.target.closest && e.target.closest('[data-ct-conc],[data-ct-entrar],[data-ct-voltar],[data-ct-excluir],[data-ct-sair]'); if(!t) return;
+    if(t.hasAttribute('data-ct-conc')){ CONC_SEL = t.dataset.ctConc; CONC_SEL_CARGO = (CONC_SEL === CONC_DB.ativo) ? CONC_DB.cargo : ''; return render(); }
+    if(t.hasAttribute('data-ct-sair')){ if(typeof sairDaConta === 'function') sairDaConta(); return; }
+    if(t.hasAttribute('data-ct-voltar')){ CONC_TELA_ABERTA = false; return render(); }
+    if(t.hasAttribute('data-ct-excluir')){ if(confirm('Remover este concurso da lista?')){ concursoExcluir(CONC_SEL); CONC_SEL = 'padrao'; render(); } return; }
+    if(t.hasAttribute('data-ct-entrar')){
+      const c = [CONCURSO_PADRAO].concat(concursosTodos()).find(x => x.id === CONC_SEL) || CONCURSO_PADRAO;
+      if(c.id !== 'padrao' && (c.cargos || []).length && !CONC_SEL_CARGO){ alert('Escolha o cargo.'); return; }
+      CONC_TELA_ABERTA = false; concursoEscolher(c.id, c.id === 'padrao' ? '' : CONC_SEL_CARGO); window.scrollTo(0, 0); render();
     }
-  };
+  });
+  raiz.addEventListener('change', e => { if(e.target && e.target.name === 'ct-cargo'){ CONC_SEL_CARGO = e.target.value; render(); } });
 }
-/* após o login a escolha da instituição e do cargo é obrigatória (vale para a conta; sincroniza pela nuvem) */
-function concursoPerguntaInicial(){
-  if(CONC_DB.escolhido) return;
-  const m = document.getElementById('concurso-modal'); if(m && !m.hidden) return;
-  setTimeout(() => { if(!CONC_DB.escolhido){ const mm = document.getElementById('concurso-modal'); if(!mm || mm.hidden) concursoEscolherAbrir(); } }, 300);
-}
-
-/* outro aparelho já tinha escolhido: fecha a pergunta obrigatória e redesenha com o concurso escolhido */
+/* outro aparelho já tinha escolhido: sai da tela obrigatória e abre a plataforma com o concurso escolhido */
 function concursoAposSync(){
   if(!CONC_DB.escolhido) return;
-  const m = document.getElementById('concurso-modal');
-  if(m && !m.hidden && m.dataset.obrig === '1'){ m.hidden = true; m.dataset.obrig = ''; }
   try{ if(typeof render === 'function' && APP_INICIADO) render(); }catch(_){}
 }
 concursoCarregar();
