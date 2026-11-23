@@ -707,7 +707,7 @@ function revisaoMesclar(r){
   });
   if(altTs) gravar('ts', tsL);
   if(r.conc && typeof r.conc === 'object' && !Array.isArray(r.conc) && Number(r.conc.ts) > ((ler('conc') || {}).ts || 0)){   // concurso ativo: vale o mais recente
-    gravar('conc', r.conc); try{ if(typeof concursoCarregar === 'function') concursoCarregar(); }catch(_){}
+    gravar('conc', r.conc); try{ if(typeof concursoCarregar === 'function'){ concursoCarregar(); if(typeof concursoAposSync === 'function') concursoAposSync(); } }catch(_){}
   }
   if(r.tent && typeof r.tent === 'object' && !Array.isArray(r.tent)){      // tentativas: vale o maior número de cada questão (nunca diminui ao sincronizar)
     const loc = (ler('tent') && typeof ler('tent') === 'object') ? ler('tent') : {}; let alt = false;

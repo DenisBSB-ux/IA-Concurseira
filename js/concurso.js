@@ -526,4 +526,11 @@ function concursoPerguntaInicial(){
   setTimeout(() => { if(!CONC_DB.escolhido){ const mm = document.getElementById('concurso-modal'); if(!mm || mm.hidden) concursoEscolherAbrir(); } }, 300);
 }
 
+/* outro aparelho já tinha escolhido: fecha a pergunta obrigatória e redesenha com o concurso escolhido */
+function concursoAposSync(){
+  if(!CONC_DB.escolhido) return;
+  const m = document.getElementById('concurso-modal');
+  if(m && !m.hidden && m.dataset.obrig === '1'){ m.hidden = true; m.dataset.obrig = ''; }
+  try{ if(typeof render === 'function' && APP_INICIADO) render(); }catch(_){}
+}
 concursoCarregar();
