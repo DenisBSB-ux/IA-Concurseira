@@ -108,7 +108,7 @@ function editalEstruturado(linhas){
   const brutos = new Map();    // alvo -> { nome-da-tabela: questões }
   if(iq >= 0){
     let alvo = qtdComuns, buf = [], ult = null;
-    const prep = /(?<![A-Za-zÀ-ú])(d[oae]s?|e|n[ºo°]|em|para|a|o)$/i;
+    const prep = { test: x => /(^|[^A-Za-zÀ-ú])(d[oae]s?|e|n[ºo°]|em|para|a|o)$/i.test(x) };
     for(let i = iq; i < linhas.length; i++){
       const l = linhas[i];
       if(/^\d+\.\d+\.\s*(DOS? CRIT[ÉE]RIOS|DOS? GABARITOS)/i.test(l) || /^11\.\s/.test(l)) break;
