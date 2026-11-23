@@ -2814,3 +2814,16 @@ body.theme-light .ct-compat i{ background:#d9d3c2; }
 body.theme-light .ct-user .side-action-btn{ color:var(--ink); border-color:#c9c2ae; background:#fffdf8; }
 
 .letterhead .conc-inst{ margin:2px 0 0; } .letterhead .conc-sub{ margin-top:2px; }
+
+/* v632 — cartão da prova */
+.pv{ display:flex; flex-direction:column; gap:3px; }
+.pv-kick{ font-size:10.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; opacity:.65; }
+.pv-data{ font-size:19px; font-weight:800; line-height:1.15; }
+.pv-det{ font-size:11.5px; opacity:.75; line-height:1.3; }
+.pv-dias{ margin-top:6px; color:var(--stamp-red); display:flex; align-items:baseline; gap:6px; }
+.pv-dias b{ font-size:28px; font-weight:800; line-height:1; } .pv-dias span{ font-size:12px; font-weight:600; }
+.pv-compat{ margin-top:8px; } .pv-compat-t{ display:flex; justify-content:space-between; font-size:11.5px; } .pv-compat-t b{ font-size:13px; }
+.pv-barra{ height:6px; border-radius:4px; background:rgba(128,128,128,.28); overflow:hidden; margin-top:3px; }
+.pv-barra i{ display:block; height:100%; background:linear-gradient(90deg,#d94f4f,#e0b13a,#3fb36b); }
+.pv-link{ margin-top:8px; font-size:11.5px; font-weight:600; color:var(--navy-700); text-decoration:underline; }
+body:not(.theme-light) .pv-link{ color:var(--gold-bright); }

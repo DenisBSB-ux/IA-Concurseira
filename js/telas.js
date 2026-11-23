@@ -901,13 +901,18 @@ document.addEventListener('click', (ev)=>{
 });
 function provaContagemHtml(){
   const dias = provaDias();
-  const txt = dias>1 ? `Faltam <b>${dias} dias</b>` : (dias===1 ? 'Falta <b>1 dia</b>' : (dias===0 ? '<b>A prova é hoje!</b>' : 'Prova realizada'));
-  return `<div class="prova-info">
-    ${CONCURSO.padrao ? '<div class="prova-rot">Prova objetiva (manhã) e Discursiva (tarde)</div>' : ''}
-    <div class="prova-data">${esc(PROVA_TCDF.rotulo)}</div>
-    ${CONCURSO.padrao ? '' : `<div class="prova-conta">Base × cargo: <b>${concursoCompat().pct}%</b> compatível</div>`}
-    <div class="prova-conta">${PROVA_TCDF.semData ? 'Data da prova a definir' : txt}</div>
-    ${PROVA_TCDF.link ? `<a class="prova-link" href="${esc(PROVA_TCDF.link)}" target="_blank" rel="noopener noreferrer">${CONCURSO.padrao ? 'Cespe: edital e avisos' : esc(CONCURSO.banca||'Edital e avisos')+': edital e avisos'} ↗</a>` : ''}
+  const rot = String(PROVA_TCDF.rotulo || ''), mp = /^(.*?)\s*\((.*)\)\s*$/.exec(rot);
+  const dataTxt = mp ? mp[1] : rot, detalhe = mp ? mp[2] : '';
+  const cp = CONCURSO.padrao ? null : concursoCompat();
+  const num = PROVA_TCDF.semData ? '—' : (dias>1 ? dias : (dias===1 ? 1 : (dias===0 ? 0 : '')));
+  const lbl = PROVA_TCDF.semData ? 'data da prova a definir' : (dias>1 ? 'dias para a prova' : (dias===1 ? 'dia para a prova' : (dias===0 ? 'a prova é hoje!' : 'prova realizada')));
+  return `<div class="prova-info pv">
+    ${CONCURSO.padrao ? '<div class="pv-kick">Prova objetiva e discursiva</div>' : '<div class="pv-kick">Prova</div>'}
+    <div class="pv-data">${esc(dataTxt)}</div>
+    ${detalhe ? `<div class="pv-det">${esc(detalhe)}</div>` : ''}
+    <div class="pv-dias">${num !== '' ? `<b>${num}</b>` : ''} <span>${lbl}</span></div>
+    ${cp ? `<div class="pv-compat" title="Quanto da prova deste cargo já tem questões na plataforma"><div class="pv-compat-t"><span>Base × cargo</span><b>${cp.pct}%</b></div><div class="pv-barra"><i style="width:${cp.pct}%"></i></div></div>` : ''}
+    ${PROVA_TCDF.link ? `<a class="pv-link" href="${esc(PROVA_TCDF.link)}" target="_blank" rel="noopener noreferrer">${CONCURSO.padrao ? 'Cespe' : esc(CONCURSO.banca||'Banca')}: edital e avisos ↗</a>` : ''}
   </div>`;
 }
 function renderSyncSidebarBlock(){
