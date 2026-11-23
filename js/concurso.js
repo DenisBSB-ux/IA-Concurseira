@@ -576,6 +576,14 @@ function concursoTelaHtml(){
   const podeExcluir = !ehPadrao && (!concursoEhEmbutido(c.id) || CONC_DB.lista.some(x => x.id === c.id));
   const usuario = (typeof USUARIO_ATUAL !== 'undefined' && USUARIO_ATUAL) ? USUARIO_ATUAL : null;
   const cargoSel = ehPadrao ? '' : String(CONC_SEL_CARGO || '').split(' — ').pop();
+  const gSel = cargos.find(x => x.nome === CONC_SEL_CARGO) || null;
+  const matRow = (nome, qtd, comum) => {
+    const r = concursoCompararMateria(nome), st = r.diretas.length ? ['ok', 'lista pronta'] : (r.relacionadas.length ? ['par', 'parcial'] : ['sem', 'sem lista']);
+    return `<li class="cx-mat ${comum ? 'comum' : ''}"><span class="cx-mat-n">${esc(nome)}</span>${comum ? '<em class="cx-tag-comum">comum</em>' : ''}<span class="cx-mat-q">${qtd ? concNum(qtd) + ' q.' : ''}</span><span class="cx-mat-s ${st[0]}" title="Situação na base da plataforma">${st[1]}</span></li>`;
+  };
+  const totMat = (c.comuns || []).length + (gSel ? (gSel.materias || []).length : 0);
+  const materiasHtml = (!ehPadrao && totMat) ? `<details class="cx-det" open><summary>Matérias do edital <small>${totMat} no total · ${(c.comuns || []).length} comuns (verde) + ${gSel ? (gSel.materias || []).length : 0} do cargo</small></summary>
+      <ul class="cx-mats">${(c.comuns || []).map(m => matRow(m, (c.qtdComuns || {})[m], true)).join('')}${gSel ? (gSel.materias || []).map(m => matRow(m, (gSel.qtd || {})[m], false)).join('') : ''}</ul></details>` : '';
   const itensHtml = (c.itens || []).length ? `<details class="cx-det"><summary>Edital e regras <small>${c.itens.length} itens</small></summary><dl>${c.itens.map(p => `<dt>${esc(p[0])}</dt><dd>${esc(p[1])}</dd>`).join('')}</dl></details>` : '';
   return `<div class="cx-tela"><div class="cx-caixa">
     <header class="cx-top"><img src="img/logo-ia-concurseira.png" alt="IA Concurseira" class="cx-logo"><div class="cx-tit"><h1>IA Concurseira</h1><p>${CONC_TELA_ABERTA ? 'Trocar de concurso ou cargo' : (CONC_DB.escolhido ? 'Confirme o concurso e o cargo para entrar' : 'Escolha o concurso e o cargo para começar')}</p></div>
@@ -587,7 +595,7 @@ function concursoTelaHtml(){
       <div class="cx-tiles">${tile('Prova', dataTxt, detTxt)}${tile('Remuneração', c.remuneracao)}${tile('Vagas', c.vagas)}${ehPadrao ? tile('Cargo', 'Analista de Controle Externo', 'Área de Gestão') : tile('Cargos', String(cargos.length), 'escolha abaixo')}</div>
       ${itensHtml}
       ${ehPadrao ? `<details class="cx-det"><summary>Detalhes do edital do TCDF</summary>${provaDetalhesHtml()}</details><p class="cx-ok">✅ Base completa: as 20 matérias do TCDF já estão na plataforma.</p>` : ''}
-      ${!ehPadrao && comuns ? `<details class="cx-det"><summary>Conhecimentos comuns <small>${(c.comuns || []).length} matérias${qComuns ? ' · ' + qComuns + ' questões' : ''}</small></summary><ul>${comuns}</ul></details>` : ''}
+      ${materiasHtml}
       ${!ehPadrao && cargos.length ? `<div class="cx-h">Cargo <small>% = quanto da prova do cargo já tem questões na plataforma</small></div><div class="cx-cargos">${cardsCargo}</div>` : ''}
       ${!ehPadrao && !cargos.length ? '<p>Este concurso não tem cargos cadastrados. Use "＋ Edital" para completar.</p>' : ''}
     </section>

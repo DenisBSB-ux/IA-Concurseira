@@ -337,12 +337,54 @@ function computeSnapshot(){
 
 
 
-function computeSnapshotMateria(materiaKey){
+/* ---------- filtro por banca nas estatísticas por matéria ---------- */
+const BANCAS_KEY = 'ia_filtro_bancas_v1';
+let BANCAS_SEL = (()=>{ try{ return new Set(JSON.parse(localStorage.getItem(BANCAS_KEY) || '[]')); }catch(_){ return new Set(); } })();
+function bancaGrupoDeTexto(bc){
+  const b = String(bancaCurta(bc) || '').trim(), n = b.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  if(!n) return 'Sem banca';
+  if(/elaboracao propria|inedita/.test(n)) return 'Elaboração própria';
+  if(/gran cursos/.test(n)) return 'Gran Cursos (simulado)';
+  if(/estrategia/.test(n)) return 'Estratégia (simulado)';
+  if(/aprovalegis/.test(n)) return 'AprovaLegis (simulado)';
+  if(/cebraspe|cespe/.test(n)) return 'Cebraspe/Cespe';
+  if(/aocp/.test(n)) return 'AOCP';
+  if(/consulplan/.test(n)) return 'Consulplan';
+  if(/fundatec|funatec/.test(n)) return 'Fundatec';
+  return b.length > 22 ? b.slice(0, 22) : (b.length <= 8 ? b.toUpperCase() : b);
+}
+function bancaGrupo(q){
+  if(q._bgSrc !== q.bc){ q._bg = bancaGrupoDeTexto(q.bc); q._bgSrc = q.bc; }
+  return q._bg;
+}
+let BANCAS_OUTRAS = new Set();
+function questaoNaBanca(q){ return BANCAS_SEL.size === 0 || BANCAS_SEL.has(bancaGrupo(q)) || (BANCAS_SEL.has('Outras bancas') && BANCAS_OUTRAS.has(bancaGrupo(q))); }
+function bancasDisponiveis(materias){
+  const cont = {}, mats = new Set(materias);
+  ALL_QUESTIONS.forEach(q => { if(!mats.has(q.materia) || q.duplicataOculta || (q.t!=='CE' && q.t!=='MC')) return; const g = bancaGrupo(q); cont[g] = (cont[g]||0) + 1; });
+  const lista = [], outras = new Set(); let nOutras = 0;
+  Object.entries(cont).sort((a,b)=>b[1]-a[1]).forEach(([g,n])=>{ if(n >= 15 || BANCAS_SEL.has(g)) lista.push([g,n]); else { outras.add(g); nOutras += n; } });
+  BANCAS_OUTRAS = outras;
+  if(nOutras) lista.push(['Outras bancas', nOutras]);
+  return lista;
+}
+function bancasGravar(){ try{ localStorage.setItem(BANCAS_KEY, JSON.stringify([...BANCAS_SEL])); }catch(_){} }
+document.addEventListener('change', e => {
+  const c = e.target && e.target.closest && e.target.closest('[data-bc]'); if(!c) return;
+  if(c.checked) BANCAS_SEL.add(c.dataset.bc); else BANCAS_SEL.delete(c.dataset.bc);
+  bancasGravar(); render();
+});
+document.addEventListener('click', e => {
+  const b = e.target.closest && e.target.closest('[data-bc-limpar]'); if(!b) return;
+  BANCAS_SEL.clear(); bancasGravar(); render();
+});
+function computeSnapshotMateria(materiaKey, comFiltroBanca){
   const bucket = getBucket(materiaKey);
   let ac=0, erradas=0, ultimaRespostaTs=null;
   Object.entries(bucket.perguntas).forEach(([uid,p])=>{
     const qq = BY_UID[uid];
     if(!qq || qq.duplicataOculta || (qq.t!=='CE' && qq.t!=='MC')) return; // órfã, duplicata oculta ou fora do escopo do total: não conta (senão 'respondidas' passa do total)
+    if(comFiltroBanca && !questaoNaBanca(qq)) return;
     if(p.ultimoResultado===true) ac++;
     else if(p.ultimoResultado===false) erradas++;
     // (item 3) última resposta dada nesta matéria — o último item do histórico
@@ -353,7 +395,7 @@ function computeSnapshotMateria(materiaKey){
       if(tsDaQuestao && (!ultimaRespostaTs || tsDaQuestao>ultimaRespostaTs)) ultimaRespostaTs = tsDaQuestao;
     }
   });
-  const totalPontuavel = ALL_QUESTIONS.filter(q=>q.materia===materiaKey && !q.duplicataOculta && (q.t==='CE'||q.t==='MC')).length;
+  const totalPontuavel = ALL_QUESTIONS.filter(q=>q.materia===materiaKey && !q.duplicataOculta && (q.t==='CE'||q.t==='MC') && (!comFiltroBanca || questaoNaBanca(q))).length;
   return { taxa: pct(ac, ac+erradas), ac, erradas, totalPontuavel, ultimaRespostaTs };
 }
 
@@ -563,7 +605,7 @@ function renderEstatisticasPorMateria(){
   const foraVisivel = concursoForaVisivel();
   if(materias.length<2 && !(adapt.adapta && (adapt.faltantes.length || adapt.ocultas.length))) return ''; // com 1 matéria só, isso duplicaria o card grande de cima
   const linhas = materias.map(m=>{
-    const s = computeSnapshotMateria(m);
+    const s = computeSnapshotMateria(m, true);
     const respondidas = s.ac + s.erradas;
     const q = quizGeralDe(m);
     const temSimuladoEmAndamento = !!q;
@@ -581,8 +623,11 @@ function renderEstatisticasPorMateria(){
     return a.nome.localeCompare(b.nome,'pt-BR');
   });
   // matérias do edital que ainda não têm lista: entram na lista geral, destacadas, no topo
+  const bancasLista = bancasDisponiveis(materias), filtroAtivo = BANCAS_SEL.size > 0;
+  if(filtroAtivo){ for(let i = linhas.length - 1; i >= 0; i--) if(!linhas[i].total) linhas.splice(i, 1); }
+  const somaQ = linhas.reduce((a, l) => a + (l.total || 0), 0);
   const faltam = adapt.faltantes.map(f => ({ nome: f.materia, faltante: true, peso: f.peso, acertos: 0, erros: 0, pct: 0, respondidas: 0, total: 0, ativa: false }));
-  linhas.unshift(...faltam);
+  if(!filtroAtivo) linhas.unshift(...faltam);
   const estiloCelula = 'font-size:13px;font-weight:400;font-family:inherit;line-height:1.4;';
   const atividade = computeAtividadeDiariaGeral();
   return `
@@ -591,6 +636,7 @@ function renderEstatisticasPorMateria(){
       <h3 style="margin:0;color:inherit;font-size:22px;">📈 Estatísticas por matéria</h3>
       ${adapt.adapta ? `<div class="conc-adapt"><span>Lista adaptada ao cargo: <b>${adapt.visiveis.length}</b> da base${adapt.faltantes.length ? ` · <b class="conc-falta-n">${adapt.faltantes.length}</b> do edital sem lista` : ''}</span>${adapt.ocultas.length ? ` <button type="button" class="prova-det-btn" data-conc-fora="1">${foraVisivel ? 'Ocultar' : 'Mostrar'} ${adapt.ocultas.length} fora do cargo</button>` : ''}</div>` : ''}
     </div>
+    ${bancasLista.length > 1 ? `<div class="bc-filtro" role="group" aria-label="Filtrar por banca"><span class="bc-tit">Banca</span>${bancasLista.map(([g,n])=>`<label class="bc-chip ${BANCAS_SEL.has(g)?'sel':''}"><input type="checkbox" data-bc="${esc(g)}" ${BANCAS_SEL.has(g)?'checked':''}> ${esc(g)} <small>${n}</small></label>`).join('')}${filtroAtivo ? '<button type="button" class="prova-det-btn" data-bc-limpar="1">Limpar</button>' : ''}</div>${filtroAtivo ? `<div class="bc-soma">Somando <b>${[...BANCAS_SEL].map(esc).join(' + ')}</b>: <b>${somaQ}</b> questões em ${linhas.length} matéria${linhas.length===1?'':'s'}</div>` : ''}` : ''}
     <div class="resumo-dia">
       <div class="resumo-esq">
       <span class="resumo-item" title="Baseado no histórico recente de cada questão (últimas 20 tentativas)"><small>Hoje</small><b>${atividade.totalHoje} questõe${atividade.totalHoje===1?'':'s'}</b></span>
@@ -1413,7 +1459,7 @@ function notaArtigosHtml(ag){
 }
 // Estatísticas por matéria: distribuição das questões por assunto, cada um com o menu de artigos
 function distribuicaoAssuntosMateriaHtml(m){
-  const qs = questoesDaMateria(m), cont = {};
+  const qs = questoesDaMateria(m).filter(questaoNaBanca), cont = {};
   qs.forEach(q=>{ const t = q.tema||'Geral'; cont[t] = (cont[t]||0)+1; });
   const temas = temasDisponiveis(m).filter(t=>cont[t]);
   Object.keys(cont).forEach(t=>{ if(!temas.includes(t)) temas.push(t); });
