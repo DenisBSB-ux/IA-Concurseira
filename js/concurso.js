@@ -556,43 +556,48 @@ function concursoTelaHtml(){
   const d = concursoDataObj(c.data); const hoje = new Date(); hoje.setHours(0, 0, 0, 0);
   const dias = d ? Math.round((d - hoje) / 86400000) : null;
   const cont = dias === null ? 'data a definir' : (dias > 1 ? `faltam <b>${dias} dias</b>` : (dias === 1 ? 'falta <b>1 dia</b>' : (dias === 0 ? '<b>é hoje</b>' : 'prova realizada')));
-  const fato = (r, v) => v ? `<div class="ct-f"><span>${esc(r)}</span><b>${esc(v)}</b></div>` : '';
+  const sigla = x => ((String(x.nome || '').match(/\b([A-ZÀ-Ú]{3,7})\s+20\d\d/) || [])[1]) || String(x.orgao || x.nome || '').split(/[\s(]/)[0];
+  const dataCurta = x => { const o = concursoDataObj(x.data); return o ? o.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: '2-digit' }) : ''; };
   const qComuns = concNum(Object.values(c.qtdComuns || {}).reduce((a, b) => a + b, 0));
-  const comuns = (c.comuns || []).map(m => `<li>${esc(m)}${(c.qtdComuns || {})[m] ? ` <small>· ${c.qtdComuns[m]} questões</small>` : ''}</li>`).join('');
+  const comuns = (c.comuns || []).map(m => `<li>${esc(m)}${(c.qtdComuns || {})[m] ? ` <small>· ${concNum(c.qtdComuns[m])} questões</small>` : ''}</li>`).join('');
+  const dataTxt = String(c.rotulo || '').replace(/\s*\(.*\)\s*$/, ''), detTxt = (/\((.*)\)\s*$/.exec(c.rotulo || '') || [])[1] || '';
+  const diasTxt = dias === null ? 'data a definir' : (dias > 1 ? `faltam ${dias} dias` : (dias === 1 ? 'falta 1 dia' : (dias === 0 ? 'é hoje' : 'prova realizada')));
+  const tile = (r, v, sub, extra) => v ? `<div class="cx-t ${extra || ''}"><span>${esc(r)}</span><b>${esc(v)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</div>` : '';
   const cardsCargo = cargos.map(g => {
-    const cp = concursoCompatDe(c, g.nome), qEsp = concNum(Object.values(g.qtd || {}).reduce((a, b) => a + b, 0)), req = (g.itens || []).find(i => i[0] === 'Requisito');
-    const sel = g.nome === CONC_SEL_CARGO;
-    return `<label class="ct-cargo ${sel ? 'sel' : ''}"><input type="radio" name="ct-cargo" value="${esc(g.nome)}" ${sel ? 'checked' : ''}>
-      <span class="ct-cargo-t"><b>${esc(g.nome.split(' — ').pop())}</b>${req ? `<small>Requisito: ${esc(req[1])}</small>` : ''}
-      <small>${(g.materias || []).length} matéria${(g.materias || []).length === 1 ? '' : 's'} específica${(g.materias || []).length === 1 ? '' : 's'}${qEsp ? ` · ${qEsp} questões específicas` : ''}</small></span>
-      <span class="ct-compat" title="Compatibilidade da base de questões da plataforma com este cargo"><b>${cp.pct}%</b><i><u style="width:${cp.pct}%"></u></i><small>da prova na base</small></span></label>`;
+    const cp = concursoCompatDe(c, g.nome), qEsp = concNum(Object.values(g.qtd || {}).reduce((a, b) => a + b, 0)), req = (g.itens || []).find(i => i[0] === 'Requisito'), nm = (g.materias || []).length;
+    const sel = g.nome === CONC_SEL_CARGO, cor = cp.pct >= 60 ? 'alto' : (cp.pct >= 30 ? 'medio' : 'baixo');
+    return `<label class="cx-cargo ${sel ? 'sel' : ''}"><input type="radio" name="ct-cargo" value="${esc(g.nome)}" ${sel ? 'checked' : ''}>
+      <span class="cx-cargo-topo"><b>${esc(g.nome.split(' — ').pop())}</b><em class="cx-pct ${cor}" title="Quanto da prova deste cargo já tem questões na plataforma">${cp.pct}%</em></span>
+      <i class="cx-barra"><u class="${cor}" style="width:${cp.pct}%"></u></i>
+      ${req ? `<small class="cx-req" title="${esc(req[1])}">${esc(req[1])}</small>` : ''}
+      <small class="cx-meta">${nm} matéria${nm === 1 ? '' : 's'} específica${nm === 1 ? '' : 's'}${qEsp ? ' · ' + qEsp + ' questões' : ''}</small></label>`;
   }).join('');
-  const lista = todos.map(x => `<button type="button" class="ct-conc ${x.id === CONC_SEL ? 'sel' : ''}" data-ct-conc="${esc(x.id)}"><b>${esc(x.nome)}</b><small>${esc(x.orgao || '')}${x.banca ? ' · ' + esc(x.banca) : ''}${x.rotulo ? ' · prova ' + esc(x.rotulo) : ''}</small></button>`).join('');
+  const chips = todos.map(x => `<button type="button" class="cx-chip ${x.id === CONC_SEL ? 'sel' : ''}" data-ct-conc="${esc(x.id)}" title="${esc(x.nome)}"><b>${esc(sigla(x))}</b><small>${esc(dataCurta(x))}${x.banca ? ' · ' + esc(x.banca) : ''}</small></button>`).join('');
   const podeExcluir = !ehPadrao && (!concursoEhEmbutido(c.id) || CONC_DB.lista.some(x => x.id === c.id));
   const usuario = (typeof USUARIO_ATUAL !== 'undefined' && USUARIO_ATUAL) ? USUARIO_ATUAL : null;
-  return `<div class="ct-tela"><div class="ct-caixa">
-    <header class="ct-top"><img src="img/logo-ia-concurseira.png" alt="IA Concurseira" class="ct-logo"><div><h1>IA Concurseira</h1><p>${CONC_TELA_ABERTA ? 'Trocar de concurso ou cargo' : (CONC_DB.escolhido ? 'Confirme o concurso e o cargo para entrar' : 'Escolha o concurso e o cargo para começar')}</p></div>
-      <div class="ct-user">${usuario ? `<small>${esc(usuario.nome || usuario.email || '')}</small> <button type="button" class="side-action-btn compact" data-ct-sair="1">Sair</button>` : ''}</div></header>
-    <div class="ct-corpo">
-      <aside class="ct-lado"><div class="ct-h">1. Concurso</div>${lista}
-        <button type="button" class="ct-novo" data-conc-abrir="1">＋ Carregar edital de outro concurso</button></aside>
-      <main class="ct-main">
-        <div class="ct-h">Resumo do concurso</div>
-        <h2 class="ct-nome">${esc(c.nome)}</h2>
-        <div class="ct-fatos">${fato('Órgão', c.orgao)}${fato('Banca', c.banca)}${fato('Prova', (c.rotulo || '') + (dias === null ? '' : '') )}${ehPadrao || dias === null ? '' : ''}${fato('Remuneração inicial', c.remuneracao)}${fato('Vagas', c.vagas)}${ehPadrao ? fato('Cargo', c.cargo) : fato('Cargos', cargos.length ? cargos.length + ' (escolha abaixo)' : '')}</div>
-        <div class="ct-conta">Contagem regressiva: ${cont}</div>
-        ${(c.itens || []).length ? `<details class="ct-det" open><summary>Informações do edital</summary><ul>${c.itens.map(p => `<li><b>${esc(p[0])}:</b> ${esc(p[1])}</li>`).join('')}</ul></details>` : ''}
-        ${ehPadrao ? `<details class="ct-det"><summary>Detalhes do edital do TCDF</summary>${provaDetalhesHtml()}</details><p class="ct-ok">✅ Base completa: as 20 matérias do TCDF já estão na plataforma.</p>` : ''}
-        ${!ehPadrao && comuns ? `<details class="ct-det"><summary>Conhecimentos básicos (todos os cargos)${qComuns ? ' · ' + qComuns + ' questões' : ''}</summary><ul>${comuns}</ul></details>` : ''}
-        ${!ehPadrao && cargos.length ? `<div class="ct-h" style="margin-top:14px;">2. Cargo <small>(a % mostra quanto da prova do cargo já tem questões na plataforma)</small></div><div class="ct-cargos">${cardsCargo}</div>` : ''}
-        ${!ehPadrao && !cargos.length ? '<p>Este concurso não tem cargos cadastrados. Use "Carregar edital" para completar.</p>' : ''}
-        <div class="ct-acoes"><button type="button" class="btn btn-primary" data-ct-entrar="1" style="font-size:15px;padding:10px 22px;">▶ Entrar na plataforma</button>
-          ${CONC_TELA_ABERTA ? '<button type="button" class="side-action-btn compact" data-ct-voltar="1">← Voltar sem trocar</button>' : ''}
-          ${podeExcluir ? '<button type="button" class="side-action-btn compact" data-ct-excluir="1" title="Remove este concurso carregado da lista">🗑 Remover da lista</button>' : ''}</div>
-      </main></div></div></div>`;
+  const cargoSel = ehPadrao ? '' : String(CONC_SEL_CARGO || '').split(' — ').pop();
+  const itensHtml = (c.itens || []).length ? `<details class="cx-det"><summary>Edital e regras <small>${c.itens.length} itens</small></summary><dl>${c.itens.map(p => `<dt>${esc(p[0])}</dt><dd>${esc(p[1])}</dd>`).join('')}</dl></details>` : '';
+  return `<div class="cx-tela"><div class="cx-caixa">
+    <header class="cx-top"><img src="img/logo-ia-concurseira.png" alt="IA Concurseira" class="cx-logo"><div class="cx-tit"><h1>IA Concurseira</h1><p>${CONC_TELA_ABERTA ? 'Trocar de concurso ou cargo' : (CONC_DB.escolhido ? 'Confirme o concurso e o cargo para entrar' : 'Escolha o concurso e o cargo para começar')}</p></div>
+      <div class="cx-user">${usuario ? `<small>${esc(usuario.nome || usuario.email || '')}</small> <button type="button" class="side-action-btn compact" data-ct-sair="1">Sair</button>` : ''}</div></header>
+    <div class="cx-chips" role="tablist" aria-label="Concursos">${chips}<button type="button" class="cx-chip cx-novo" data-conc-abrir="1" title="Carregar o edital (PDF) de outro concurso">＋ Edital</button></div>
+    <section class="cx-painel">
+      <div class="cx-cab"><div><h2>${esc(c.nome)}</h2><p>${esc(c.orgao || '')}${c.banca ? ' · banca ' + esc(c.banca) : ''}</p></div>
+        <span class="cx-dias ${dias !== null && dias >= 0 ? '' : 'off'}">${esc(diasTxt)}</span></div>
+      <div class="cx-tiles">${tile('Prova', dataTxt, detTxt)}${tile('Remuneração', c.remuneracao)}${tile('Vagas', c.vagas)}${ehPadrao ? tile('Cargo', 'Analista de Controle Externo', 'Área de Gestão') : tile('Cargos', String(cargos.length), 'escolha abaixo')}</div>
+      ${itensHtml}
+      ${ehPadrao ? `<details class="cx-det"><summary>Detalhes do edital do TCDF</summary>${provaDetalhesHtml()}</details><p class="cx-ok">✅ Base completa: as 20 matérias do TCDF já estão na plataforma.</p>` : ''}
+      ${!ehPadrao && comuns ? `<details class="cx-det"><summary>Conhecimentos comuns <small>${(c.comuns || []).length} matérias${qComuns ? ' · ' + qComuns + ' questões' : ''}</small></summary><ul>${comuns}</ul></details>` : ''}
+      ${!ehPadrao && cargos.length ? `<div class="cx-h">Cargo <small>% = quanto da prova do cargo já tem questões na plataforma</small></div><div class="cx-cargos">${cardsCargo}</div>` : ''}
+      ${!ehPadrao && !cargos.length ? '<p>Este concurso não tem cargos cadastrados. Use "＋ Edital" para completar.</p>' : ''}
+    </section>
+    <div class="cx-barra-acao"><div class="cx-sel"><small>${CONC_TELA_ABERTA ? 'Trocando para' : 'Selecionado'}</small><b>${esc(sigla(c))}${cargoSel ? ' · ' + esc(cargoSel) : ''}</b></div>
+      <div class="cx-bt">${CONC_TELA_ABERTA ? '<button type="button" class="side-action-btn compact" data-ct-voltar="1">← Voltar</button>' : ''}${podeExcluir ? '<button type="button" class="side-action-btn compact" data-ct-excluir="1" title="Remove este concurso carregado da lista">🗑</button>' : ''}
+      <button type="button" class="btn btn-primary" data-ct-entrar="1">▶ Entrar na plataforma</button></div></div>
+  </div></div>`;
 }
 function concursoTelaBind(){
-  const raiz = document.querySelector('.ct-tela'); if(!raiz) return;
+  const raiz = document.querySelector('.cx-tela'); if(!raiz) return;
   raiz.addEventListener('click', e => {
     const t = e.target.closest && e.target.closest('[data-ct-conc],[data-ct-entrar],[data-ct-voltar],[data-ct-excluir],[data-ct-sair]'); if(!t) return;
     if(t.hasAttribute('data-ct-conc')){ CONC_SEL = t.dataset.ctConc; CONC_SEL_CARGO = (CONC_SEL === CONC_DB.ativo) ? CONC_DB.cargo : ''; return render(); }
