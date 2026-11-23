@@ -192,7 +192,7 @@ function tendenciasDisponiveis(){
 function getLocalTab(materiaKey){
   const tab = STATE.tabByMateria[materiaKey];
   // abas que ainda existem ("Resumo p/ revisão" foi removida)
-  return ['simulado','reta','erros','flashcards','guia-arm'].includes(tab) ? tab : 'simulado';
+  return ['simulado','reta','erros','flashcards','materias'].includes(tab) ? tab : 'simulado';
 }
 function setLocalTab(materiaKey, tab){
   STATE.tabByMateria[materiaKey] = tab;
@@ -727,7 +727,7 @@ function renderTabelaEstatisticas(linhas, estiloCelula){
         <button type="button" class="mat-seta" data-toggle-mat="${esc(l.nome)}" title="Distribuição por assunto" aria-label="Distribuição por assunto de ${esc(l.nome)}" style="width:18px;color:${cor.fgForte};">${COMPOSICAO_ABERTOS.has('mat:'+l.nome)?'▴':'▾'}</button>
         <div style="width:26px;${estiloCelula}color:${cor.fg};">${l.ativa?'▸':i+1}</div>
         <div class="name" style="cursor:pointer;flex:1;${estiloCelula}color:${cor.fgForte};font-weight:${l.ativa?800:600};display:flex;align-items:center;gap:6px;" data-macro-materia="${esc(l.nome)}">
-          <span>${esc(l.nome)}${l.foraDoCargo ? ' <span class="conc-tag-fora">fora do cargo</span>' : (typeof concursoMarca==='function'?concursoMarca(l.nome):'')}${(!l.foraDoCargo && typeof concursoChipFaltam==='function') ? concursoChipFaltam(l.nome) : ''}${l.ativa?' <span style="font-size:10px;font-weight:600;opacity:.75;">(selecionada)</span>':''}</span>
+          <span>${esc(l.nome)}${apostilaChip(l.nome)}${l.foraDoCargo ? ' <span class="conc-tag-fora">fora do cargo</span>' : (typeof concursoMarca==='function'?concursoMarca(l.nome):'')}${(!l.foraDoCargo && typeof concursoChipFaltam==='function') ? concursoChipFaltam(l.nome) : ''}${l.ativa?' <span style="font-size:10px;font-weight:600;opacity:.75;">(selecionada)</span>':''}</span>
           ${l.ativa ? `<button data-continuar-materia="${esc(l.nome)}" style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;border:1px solid ${cor.fgForte};background:transparent;color:${cor.fgForte};cursor:pointer;white-space:nowrap;">▶ Continuar</button>` : ''}
           ${l.ativa ? `<button class="js-config" title="Configurar simulado: quantidade, ordem e filtros" aria-label="Configurar simulado" style="font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;border:1px solid ${cor.fgForte};background:transparent;color:${cor.fgForte};cursor:pointer;line-height:1.3;">⚙</button>` : ''}
         </div>
@@ -1045,11 +1045,47 @@ function renderMateriaPage(){
   </div>`;
 }
 
+/* ---------- aba "Matérias": todas as apostilas em PDF (abrem no Google Drive) ---------- */
+function apostilasDe(materia){ return (typeof APOSTILAS !== 'undefined') ? APOSTILAS.filter(a => a.m === materia) : []; }
+function apostilaChip(materia){
+  const n = apostilasDe(materia).length; if(!n) return '';
+  return ` <button type="button" class="ap-link" data-apostilas-mat="${esc(materia)}" title="Abrir as ${n} apostila${n>1?'s':''} em PDF desta matéria">📄 ${n}</button>`;
+}
+function renderApostilas(){
+  const todas = (typeof APOSTILAS !== 'undefined') ? APOSTILAS : [];
+  const foco = STATE.apostilaFoco || '';
+  const grupos = {}; todas.forEach(a => { (grupos[a.m] = grupos[a.m] || []).push(a); });
+  const ordem = Object.keys(grupos).sort((a,b) => (a===foco ? -1 : b===foco ? 1 : a.localeCompare(b,'pt-BR')));
+  const kb = n => n >= 1024 ? (n/1024).toFixed(1).replace('.', ',') + ' MB' : n + ' KB';
+  return `<div class="ap-aba">
+    <h3 class="ap-h">📚 Matérias — apostilas em PDF</h3>
+    <p class="ap-sub">${todas.length} apostilas em ${ordem.length} matérias. Cada link abre o PDF no seu Google Drive (entre na conta que tem acesso aos arquivos).</p>
+    <input type="search" id="ap-busca" class="ap-busca" placeholder="Buscar apostila ou matéria…" aria-label="Buscar apostila">
+    ${ordem.map(m => `<section class="ap-grupo ${m===foco?'foco':''}" data-ap-grupo="${esc(m)}">
+      <h4>${esc(m)} <small>${grupos[m].length} apostila${grupos[m].length>1?'s':''}</small></h4>
+      <ul>${grupos[m].map(a => `<li data-ap-item="${esc((m+' '+a.t).toLowerCase())}"><a href="${esc(apostilaUrl(a))}" target="_blank" rel="noopener noreferrer">📄 ${esc(a.t)}</a> <small>${kb(a.kb)}</small></li>`).join('')}</ul>
+    </section>`).join('')}
+    <p class="ap-vazio" hidden>Nenhuma apostila encontrada.</p>
+  </div>`;
+}
+document.addEventListener('input', e => {
+  if(!e.target || e.target.id !== 'ap-busca') return;
+  const q = e.target.value.trim().toLowerCase(); let n = 0;
+  document.querySelectorAll('.ap-grupo').forEach(g => { let vis = 0; g.querySelectorAll('[data-ap-item]').forEach(li => { const ok = !q || li.dataset.apItem.includes(q); li.hidden = !ok; if(ok) vis++; }); g.hidden = !vis; n += vis; });
+  const v = document.querySelector('.ap-vazio'); if(v) v.hidden = n > 0;
+});
+document.addEventListener('click', e => {
+  const b = e.target.closest && e.target.closest('[data-apostilas-mat]'); if(!b) return;
+  e.preventDefault(); const m = b.dataset.apostilasMat;
+  STATE.apostilaFoco = m; STATE.materia = m; STATE.tema = 'todos'; STATE.viewImportar = false; STATE.viewAuditoria = false; STATE.quiz = null;
+  setLocalTab(m, 'materias'); render();
+  const c = document.getElementById('conteudo-principal'); if(c && c.scrollIntoView) c.scrollIntoView({ block: 'start' });
+});
 function renderLocalTabs(){
   const tabs = [
     {id:'simulado', n:'01', label:'Questões'},
     {id:'reta', n:'02', label:'Reta Final'},
-    {id:'guia-arm', n:'03', label:'Guia de armadilhas'},
+    {id:'materias', n:'03', label:'Matérias'},
     {id:'importar', n:'04', label:'Importar (Admin)'},
   ];
   let atual = STATE.viewImportar ? 'importar' : getLocalTab(STATE.materia);
@@ -1070,7 +1106,7 @@ function renderMainPanel(tabAtual){
   if(tabAtual==='reta') return (typeof renderReta==='function' ? renderReta() : '');
   if(tabAtual==='erros') return renderErros();
   if(tabAtual==='flashcards') return renderFlashcards();
-  if(tabAtual==='guia-arm') return renderGuiaArmadilhas();
+  if(tabAtual==='materias') return renderApostilas();
   if(tabAtual==='importar') return renderImportarConteudo();
   return '';
 }
