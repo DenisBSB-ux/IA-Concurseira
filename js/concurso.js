@@ -501,7 +501,10 @@ function concursoPlanoAbrir(){
 /* ---------- tela independente: escolher concurso e cargo (antes da plataforma; obrigatória após o login) ---------- */
 let CONC_TELA_ABERTA = false;      // aberta de novo pelo usuário (já havia escolhido)
 let CONC_SEL = null, CONC_SEL_CARGO = '';
-function concursoTelaAtiva(){ return !CONC_DB.escolhido || CONC_TELA_ABERTA; }
+/* sequência: login (tela 1) -> escolha do concurso/cargo com o resumo do edital (tela 2, a cada login) -> plataforma (tela 3) */
+function concursoSessaoOk(){ try{ return sessionStorage.getItem('ia_conc_sessao') === '1'; }catch(_){ return false; } }
+function concursoSessaoMarcar(v){ try{ if(v) sessionStorage.setItem('ia_conc_sessao', '1'); else sessionStorage.removeItem('ia_conc_sessao'); }catch(_){} }
+function concursoTelaAtiva(){ return !CONC_DB.escolhido || CONC_TELA_ABERTA || !concursoSessaoOk(); }
 function concursoEscolherAbrir(){
   CONC_TELA_ABERTA = true; CONC_SEL = CONC_DB.ativo || 'padrao'; CONC_SEL_CARGO = CONC_DB.cargo || '';
   ['concurso-plano', 'prova-modal'].forEach(id => { const el = document.getElementById(id); if(el) el.hidden = true; });
@@ -513,6 +516,7 @@ function concursoCompatDe(c, cargo){
   return concursoCompat(tmp);
 }
 function concursoTelaHtml(){
+  if(CONC_SEL === null){ CONC_SEL = CONC_DB.ativo || 'padrao'; CONC_SEL_CARGO = CONC_DB.cargo || ''; }
   const todos = [CONCURSO_PADRAO].concat(concursosTodos());
   if(!CONC_SEL || !todos.some(x => x.id === CONC_SEL)) CONC_SEL = CONC_DB.ativo || 'padrao';
   const c = todos.find(x => x.id === CONC_SEL) || CONCURSO_PADRAO;
@@ -537,7 +541,7 @@ function concursoTelaHtml(){
   const podeExcluir = !ehPadrao && (!concursoEhEmbutido(c.id) || CONC_DB.lista.some(x => x.id === c.id));
   const usuario = (typeof USUARIO_ATUAL !== 'undefined' && USUARIO_ATUAL) ? USUARIO_ATUAL : null;
   return `<div class="ct-tela"><div class="ct-caixa">
-    <header class="ct-top"><img src="img/logo-ia-concurseira.png" alt="IA Concurseira" class="ct-logo"><div><h1>IA Concurseira</h1><p>${CONC_DB.escolhido ? 'Trocar de concurso ou cargo' : 'Escolha o concurso e o cargo para começar'}</p></div>
+    <header class="ct-top"><img src="img/logo-ia-concurseira.png" alt="IA Concurseira" class="ct-logo"><div><h1>IA Concurseira</h1><p>${CONC_TELA_ABERTA ? 'Trocar de concurso ou cargo' : (CONC_DB.escolhido ? 'Confirme o concurso e o cargo para entrar' : 'Escolha o concurso e o cargo para começar')}</p></div>
       <div class="ct-user">${usuario ? `<small>${esc(usuario.nome || usuario.email || '')}</small> <button type="button" class="side-action-btn compact" data-ct-sair="1">Sair</button>` : ''}</div></header>
     <div class="ct-corpo">
       <aside class="ct-lado"><div class="ct-h">1. Concurso</div>${lista}
@@ -553,7 +557,7 @@ function concursoTelaHtml(){
         ${!ehPadrao && cargos.length ? `<div class="ct-h" style="margin-top:14px;">2. Cargo <small>(a % mostra quanto da prova do cargo já tem questões na plataforma)</small></div><div class="ct-cargos">${cardsCargo}</div>` : ''}
         ${!ehPadrao && !cargos.length ? '<p>Este concurso não tem cargos cadastrados. Use "Carregar edital" para completar.</p>' : ''}
         <div class="ct-acoes"><button type="button" class="btn btn-primary" data-ct-entrar="1" style="font-size:15px;padding:10px 22px;">▶ Entrar na plataforma</button>
-          ${CONC_DB.escolhido ? '<button type="button" class="side-action-btn compact" data-ct-voltar="1">← Voltar sem trocar</button>' : ''}
+          ${CONC_TELA_ABERTA ? '<button type="button" class="side-action-btn compact" data-ct-voltar="1">← Voltar sem trocar</button>' : ''}
           ${podeExcluir ? '<button type="button" class="side-action-btn compact" data-ct-excluir="1" title="Remove este concurso carregado da lista">🗑 Remover da lista</button>' : ''}</div>
       </main></div></div></div>`;
 }
@@ -563,12 +567,12 @@ function concursoTelaBind(){
     const t = e.target.closest && e.target.closest('[data-ct-conc],[data-ct-entrar],[data-ct-voltar],[data-ct-excluir],[data-ct-sair]'); if(!t) return;
     if(t.hasAttribute('data-ct-conc')){ CONC_SEL = t.dataset.ctConc; CONC_SEL_CARGO = (CONC_SEL === CONC_DB.ativo) ? CONC_DB.cargo : ''; return render(); }
     if(t.hasAttribute('data-ct-sair')){ if(typeof sairDaConta === 'function') sairDaConta(); return; }
-    if(t.hasAttribute('data-ct-voltar')){ CONC_TELA_ABERTA = false; return render(); }
+    if(t.hasAttribute('data-ct-voltar')){ CONC_TELA_ABERTA = false; concursoSessaoMarcar(true); return render(); }
     if(t.hasAttribute('data-ct-excluir')){ if(confirm('Remover este concurso da lista?')){ concursoExcluir(CONC_SEL); CONC_SEL = 'padrao'; render(); } return; }
     if(t.hasAttribute('data-ct-entrar')){
       const c = [CONCURSO_PADRAO].concat(concursosTodos()).find(x => x.id === CONC_SEL) || CONCURSO_PADRAO;
       if(c.id !== 'padrao' && (c.cargos || []).length && !CONC_SEL_CARGO){ alert('Escolha o cargo.'); return; }
-      CONC_TELA_ABERTA = false; concursoEscolher(c.id, c.id === 'padrao' ? '' : CONC_SEL_CARGO); window.scrollTo(0, 0); render();
+      CONC_TELA_ABERTA = false; concursoSessaoMarcar(true); concursoEscolher(c.id, c.id === 'padrao' ? '' : CONC_SEL_CARGO); window.scrollTo(0, 0); render();
     }
   });
   raiz.addEventListener('change', e => { if(e.target && e.target.name === 'ct-cargo'){ CONC_SEL_CARGO = e.target.value; render(); } });
