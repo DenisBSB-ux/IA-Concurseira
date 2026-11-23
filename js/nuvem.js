@@ -126,6 +126,7 @@ try{
       fbAuth = firebase.auth();
       fbAuth.onAuthStateChanged(usuario=>{
         AUTH_RESOLVIDO = true;
+        if(!usuario){ try{ sessionStorage.removeItem('ia_conc_sessao'); }catch(_){} }      // novo login = passa de novo pela tela de escolha
         const uidAntes = USUARIO_ATUAL && USUARIO_ATUAL.uid;
         USUARIO_ATUAL = usuario ? {
           uid: usuario.uid,
