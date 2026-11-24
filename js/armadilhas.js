@@ -492,7 +492,7 @@ function armBlocoAutoteste(escopo){
   if(Q.fim) return `<div class="guia-quiz-fim"><b>Resultado: ${Q.ok} de ${Q.uids.length}</b> ${Q.ok===Q.uids.length?'🎯':''}</div><button class="btn-outline" data-armq-novo="1">↻ Novo autoteste</button>`;
   const q = BY_UID[Q.uids[Q.i]]; if(!q){ STATE.armQuiz = null; return ''; }
   const a = armEfetiva(q);
-  const texto = String(typeof limparEnunciado==='function' ? limparEnunciado(q.q, q.t) : q.q).slice(0,700);
+  const texto = figSemImagem(String(typeof limparEnunciado==='function' ? limparEnunciado(q.q, q.t) : q.q)).slice(0,700);
   const botoes = ARM_ORDEM.map(c=>`<button class="btn-outline guia-quiz-op" data-armq-resp="${c}" ${Q.resp?'disabled':''} style="border-color:${ARM_TIPOS[c].cor};">${armChip(c)} ${esc(ARM_TIPOS[c].nome)}</button>`).join('');
   let fb = '';
   if(Q.resp){

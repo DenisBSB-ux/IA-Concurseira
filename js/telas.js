@@ -1728,7 +1728,7 @@ function gerarImpressao(){
       <div class="print-q">
         <h4>Questão ${i+1} (nº original ${esc(String(q.n))})</h4>
         <div class="print-tags">${esc(q.bc)} · ${NIVEL_STARS[q.nv]} · ${esc(q.td||'')}</div>
-        <div class="print-enun">${esc(limparEnunciado(q.q, q.t))}</div>
+        <div class="print-enun">${(()=>{ const f = figProteger(esc(limparEnunciado(q.q, q.t))); return figRestaurar(f.txt, f.figs); })()}</div>
         <div class="print-gab">Gabarito: ${esc(gabaritoEfetivo(q)||'—')}</div>
         <div class="print-res"><b>Resolução:</b> ${esc(q.r)}</div>
         <div class="print-res" style="margin-top:4px;"><b>Resumo flash:</b> ${esc(q.rf)}</div>
