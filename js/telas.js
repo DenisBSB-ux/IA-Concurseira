@@ -1059,11 +1059,11 @@ function renderApostilas(){
   const kb = n => n >= 1024 ? (n/1024).toFixed(1).replace('.', ',') + ' MB' : n + ' KB';
   return `<div class="ap-aba">
     <h3 class="ap-h">📚 Matérias — apostilas em PDF</h3>
-    <p class="ap-sub">${todas.length} apostilas em ${ordem.length} matérias. Cada link abre o PDF no seu Google Drive (entre na conta que tem acesso aos arquivos).</p>
+    <p class="ap-sub">${todas.length} apostilas em ${ordem.length} matérias. As apostilas abrem direto do site; as anotações de AFO (marcadas com Drive) abrem no seu Google Drive.</p>
     <input type="search" id="ap-busca" class="ap-busca" placeholder="Buscar apostila ou matéria…" aria-label="Buscar apostila">
     ${ordem.map(m => `<section class="ap-grupo ${m===foco?'foco':''}" data-ap-grupo="${esc(m)}">
       <h4>${esc(m)} <small>${grupos[m].length} apostila${grupos[m].length>1?'s':''}</small></h4>
-      <ul>${grupos[m].map(a => `<li data-ap-item="${esc((m+' '+a.t).toLowerCase())}"><a href="${esc(apostilaUrl(a))}" target="_blank" rel="noopener noreferrer">📄 ${esc(a.t)}</a> <small>${kb(a.kb)}</small></li>`).join('')}</ul>
+      <ul>${grupos[m].map(a => `<li data-ap-item="${esc((m+' '+a.t).toLowerCase())}"><a href="${esc(apostilaUrl(a))}" target="_blank" rel="noopener noreferrer">📄 ${esc(a.t)}</a> <small>${kb(a.kb)}${a.local ? '' : ' · Drive'}</small></li>`).join('')}</ul>
     </section>`).join('')}
     <p class="ap-vazio" hidden>Nenhuma apostila encontrada.</p>
   </div>`;
