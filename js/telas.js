@@ -367,7 +367,7 @@ function cargoGrupoDeTexto(bc){
     const segs = s.split('/').map(x => x.trim()), org = (segs[1] || '').toLowerCase();
     const resto = segs.slice(1).map(x => x.replace(anoIni, '').trim()).filter(x => x && !/^(19|20)\d{2}$/.test(x) && x.toLowerCase() !== org);
     c = resto.slice().reverse().find(eCargo) || '';
-    if(!c){ const m = segs[0].match(/(?:\s-\s|\s—\s|,\s)([^()]+?)\s*\(/); const sig = m ? m[1].trim().toLowerCase() : ''; c = CARGO_SIGLAS[sig] || ''; }
+    if(!c){ const m = segs[0].match(/(?:\s-\s|\s—\s|,\s)([^()]+?)\s*\(/); const sig = m ? m[1].trim().toLowerCase() : ''; c = CARGO_SIGLAS[sig] || resto[resto.length - 1] || ''; }
   }else{
     c = String(cargoCurto(s) || '').replace(/\s+/g, ' ').trim();
     const partes = c.split(/\s+—\s+/); if(partes.length > 1 && partes[partes.length-1].length > 4) c = partes[partes.length-1];
@@ -1122,7 +1122,7 @@ function renderApostilas(){
   const kb = n => n >= 1024 ? (n/1024).toFixed(1).replace('.', ',') + ' MB' : n + ' KB';
   return `<div class="ap-aba">
     <h3 class="ap-h">📚 Matérias — apostilas em PDF</h3>
-    <p class="ap-sub">${todas.length} apostilas em ${ordem.length} matérias. As apostilas abrem direto do site; as anotações de AFO (marcadas com Drive) abrem no seu Google Drive.</p>
+    <p class="ap-sub">${todas.length} apostilas em ${ordem.length} matérias. As apostilas abrem direto do site.</p>
     <input type="search" id="ap-busca" class="ap-busca" placeholder="Buscar apostila ou matéria…" aria-label="Buscar apostila">
     ${ordem.map(m => `<section class="ap-grupo ${m===foco?'foco':''}" data-ap-grupo="${esc(m)}">
       <h4>${esc(m)} <small>${grupos[m].length} apostila${grupos[m].length>1?'s':''}</small></h4>
