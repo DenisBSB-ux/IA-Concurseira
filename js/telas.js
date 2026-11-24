@@ -281,7 +281,6 @@ function render(){
   `;
   attachHandlers();
   if(typeof retaAnexar==='function') retaAnexar();
-  if(typeof discursivaMontar==='function') discursivaMontar();
 }
 
 // Banner fixo quando storageSet/storageGet falham (armazenamento cheio,
@@ -1174,7 +1173,7 @@ function renderLocalTabs(){
     {id:'simulado', n:'01', label:'Questões'},
     {id:'reta', n:'02', label:'Reta Final'},
     {id:'materias', n:'03', label:'Matérias'},
-    {id:'guia', n:'04', label:'Discursiva'},
+    {id:'guia', n:'04', label:'Guia Discursiva'},
     {id:'importar', n:'05', label:'Importar (Admin)'},
   ];
   let atual = STATE.viewImportar ? 'importar' : getLocalTab(STATE.materia);
@@ -1186,9 +1185,11 @@ function renderLocalTabs(){
 }
 
 
-/* Aba Discursiva (js/discursiva.js): temas de treino, escrita, nota, folhas e o Guia; o conteúdo é montado depois do render */
+/* Guia Discursiva: página própria (guia-discursiva/index.html), mostrada dentro da aba; segue o tema claro/escuro da plataforma */
 function renderGuiaDiscursiva(){
-  return '<div id="dsc-raiz" class="dsc"><p class="dsc-vazio">Carregando…</p></div>';
+  try{ localStorage.setItem('gd.theme', document.body.classList.contains('theme-light') ? 'light' : 'dark'); }catch(_){}
+  const v = ((window.__TCDF_BUILD__ || {}).versao || '');
+  return `<div class="guia-wrap"><iframe class="guia-frame" title="Guia Discursiva" src="guia-discursiva/index.html?v=${esc(v)}" sandbox="allow-scripts allow-same-origin allow-modals allow-popups" loading="lazy"></iframe></div>`;
 }
 function renderMainPanel(tabAtual){
   if(tabAtual==='simulado'){
