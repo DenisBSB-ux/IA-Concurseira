@@ -158,6 +158,21 @@ function extrairBancaECargo(bc){
 function bancaCurta(bc){
   return extrairBancaECargo(bc).banca;
 }
+function cargoExibicao(bc){      // linha "Cargo:" da questão: o cargo por extenso, sem nome de simulado, órgão ou ano
+  const bruto = cargoCurto(bc) || '', norm = x => x.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  if(!bruto) return '';
+  const orgs = new Set(((String(bc).match(/\(([^)]*)\)/g)) || []).map(x => x.slice(1, -1).trim().toLowerCase()));
+  const partes = bruto.split(/\s+—\s+/).map(t => t.trim()).filter(Boolean), saida = [];
+  partes.forEach((t, i) => {
+    const sem = t.replace(/\(.*?\)/g, ' ').replace(/\s+/g, ' ').trim(), n = norm(sem);
+    if(!sem || /^(19|20)\d{2}$/.test(sem) || /\bsimulado\b/.test(n) || /^(elaboracao propria|inedita)/.test(n)) return;          // "1º Simulado TCDF 2026"
+    if(/^[A-Z0-9][A-Z0-9 \-.]{1,15}$/.test(sem) && !CARGO_SIGLAS[sem.toLowerCase()]) return;                                      // órgão: "TCDF", "PC-DF", "TCE RN"
+    if(orgs.has(n) || (i > 0 && orgs.has(norm(partes[i-1]).replace(/\s+/g, ' ')))) { if(!CARGO_PALAVRAS.test(n)) return; }
+    saida.push(CARGO_SIGLAS[sem.toLowerCase()] || t.replace(/\s*\((?=[^)]*\))[A-Z0-9][A-Z0-9 \-.\/]*\)\s*$/, '').replace(/[\s,;\-—]*(19|20)\d{2}\s*$/, '').trim());
+  });
+  const r = saida.join(' — ');
+  return CARGO_PALAVRAS.test(norm(r)) ? r : '';      // sem cargo de verdade ("TCDF", "Inédita", só a área): a linha não aparece
+}
 function cargoCurto(bc){
   return extrairBancaECargo(bc).cargo;
 }
@@ -478,12 +493,12 @@ function bancaCargoAnoLine(q){
     // descrição completa do cargo (não a versão truncada de identificarProva,
     // que corta no primeiro "/" só pra fins de agrupar provas)
     banca = prova.banca;
-    cargo = cargoCurto(q.bc) || prova.cargo;
+    cargo = cargoExibicao(q.bc);
     ano = prova.ano;
   } else {
     banca = bancaCurta(q.bc);
     ano = anoRealDaQuestao(q) || (q.an && q.an.length ? Math.max(...q.an) : null);
-    cargo = cargoCurto(q.bc);
+    cargo = cargoExibicao(q.bc);
     // remove um ano já embutido no fim do texto do cargo (ex.: "Agente
     // Administrativo — 2025") pra não duplicar com a linha "Ano:" seguinte
     if(cargo && ano) cargo = cargo.replace(new RegExp(`[\\s\\u2014-]*${ano}\\s*$`), '').trim();
