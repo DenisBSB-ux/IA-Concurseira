@@ -3055,8 +3055,3 @@ body.theme-light .cx-barra-acao{ background:rgba(255,255,255,.9); border:1px sol
 .cx-sair:focus-visible{ outline:2px solid #a5b4fc; outline-offset:2px; }
 body.theme-light .cx-conta{ background:rgba(255,255,255,.8); border-color:rgba(60,60,110,.16); } body.theme-light .cx-sair{ background:rgba(60,60,110,.07); border-color:rgba(60,60,110,.18); } body.theme-light .cx-sair:hover{ background:#fdecea; border-color:#f1a9a3; }
 @media (max-width:560px){ .cx-top{ flex-wrap:wrap; } .cx-user{ margin-left:0; width:100%; } .cx-conta{ width:100%; } .cx-nome{ flex:1; max-width:none; } }
-
-/* aba Guia Discursiva (v666) */
-.guia-wrap{ margin:6px 0 0; }
-.guia-frame{ display:block; width:100%; height:calc(100vh - 190px); min-height:520px; border:1px solid rgba(255,255,255,.14); border-radius:14px; background:#fff; }
-body.theme-light .guia-frame{ border-color:rgba(60,60,110,.16); }
