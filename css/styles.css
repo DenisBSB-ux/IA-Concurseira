@@ -3045,3 +3045,13 @@ body.theme-light .cx-barra-acao{ background:rgba(255,255,255,.9); border:1px sol
 .cx-sel b{ font-size:15px; }
 @media (max-width:640px){ .cx-tiles{ grid-template-columns:repeat(2,1fr); gap:8px; } .cx-t{ padding:11px 12px; } .cx-t b{ font-size:14px; } .cx-painel{ padding:18px 14px; border-radius:20px; } .cx-cab h2{ font-size:20px; } .cx-barra-acao{ bottom:8px; width:calc(100% - 16px); padding:9px 10px 9px 14px; } .cx-barra-acao .btn-primary{ padding:11px 16px; } }
 @media (prefers-reduced-motion:reduce){ .cx-chip,.cx-cargo,.cx-barra-acao .btn-primary{ transition:none; } }
+
+/* conta do usuário na tela de escolha (v665) */
+.cx-conta{ display:flex; align-items:center; gap:10px; padding:5px 6px 5px 6px; border-radius:999px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); max-width:100%; }
+.cx-av{ flex:none; width:32px; height:32px; border-radius:50%; display:grid; place-items:center; font-size:12px; font-weight:800; letter-spacing:.02em; color:#fff; background:linear-gradient(135deg,#6366f1,#8b5cf6); box-shadow:0 4px 12px rgba(99,102,241,.45); }
+.cx-nome{ font-size:13px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:180px; }
+.cx-sair{ flex:none; display:inline-flex; align-items:center; gap:5px; font:inherit; font-size:12.5px; font-weight:700; color:inherit; cursor:pointer; padding:7px 13px; border-radius:999px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.18); transition:background .15s, border-color .15s; }
+.cx-sair:hover{ background:rgba(248,113,113,.2); border-color:rgba(248,113,113,.55); }
+.cx-sair:focus-visible{ outline:2px solid #a5b4fc; outline-offset:2px; }
+body.theme-light .cx-conta{ background:rgba(255,255,255,.8); border-color:rgba(60,60,110,.16); } body.theme-light .cx-sair{ background:rgba(60,60,110,.07); border-color:rgba(60,60,110,.18); } body.theme-light .cx-sair:hover{ background:#fdecea; border-color:#f1a9a3; }
+@media (max-width:560px){ .cx-top{ flex-wrap:wrap; } .cx-user{ margin-left:0; width:100%; } .cx-conta{ width:100%; } .cx-nome{ flex:1; max-width:none; } }
