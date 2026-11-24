@@ -153,13 +153,14 @@ function renderQuiz(){
     optionsHtml = q.alt.map((a,idx)=>{
       const letraUp = a.letra.toUpperCase();
       const customAlt = EDICOES_USUARIO[uidAtual] && EDICOES_USUARIO[uidAtual]['alt'+idx] && hidratarImagens(limparHtmlEditado(EDICOES_USUARIO[uidAtual]['alt'+idx]));
-      let textoHtml = customAlt || esc(a.texto);
+      const _fpa = figProteger(esc(a.texto));
+      let textoHtml = customAlt || _fpa.txt;
       if(!emEdicaoAlt && !customAlt && STATE.quiz && STATE.quiz.respostas && STATE.quiz.respostas[uidAtual] && String(gabaritoEfetivo(q)||'').toUpperCase()===letraUp) textoHtml = destacarChavesNoEnunciado(textoHtml, q, 'alt');   // alternativa correta: palavras-chave da justificativa
       if(!emEdicaoAlt && !customAlt && STATE.quiz && STATE.quiz.respostas && STATE.quiz.respostas[uidAtual] && typeof mcMarcasAlternativas==='function'){ const mm = mcMarcasAlternativas(q); if(mm && mm[letraUp]) textoHtml = mm[letraUp]; }   // errada: palavras que a separam da certa riscadas; certa: palavras que a distinguem destacadas
       if(emEdicaoAlt){
         return `<div class="answer-opt-edit">
           <span class="letter">${esc(letraUp)}</span>
-          <div class="campo-editavel-conteudo" contenteditable="true" id="conteudo-alt${idx}-${esc(uidAtual)}" style="flex:1;">${textoHtml}</div>
+          <div class="campo-editavel-conteudo" contenteditable="true" id="conteudo-alt${idx}-${esc(uidAtual)}" style="flex:1;">${figRestaurar(textoHtml, _fpa.figs)}</div>
         </div>`;
       }
       let cls='answer-opt';
@@ -173,7 +174,7 @@ function renderQuiz(){
       }
       if(riscadas.includes(letraUp)) cls+=' riscado';
       return `<button class="${cls}" data-opt="${esc(letraUp)}" ${revelado?'disabled':''} title="2 cliques risca esta alternativa">
-        <span class="letter">${esc(letraUp)}</span> <span class="opt-text">${textoHtml}</span>
+        <span class="letter">${esc(letraUp)}</span> <span class="opt-text">${figRestaurar(textoHtml, _fpa.figs)}</span>
       </button>`;
     }).join('');
   } else {
@@ -424,7 +425,8 @@ function blocoEnunciadoEditavel(q){
   const uid = q.uid;
   const custom = EDICOES_USUARIO[uid] && hidratarImagens(limparHtmlEditado(EDICOES_USUARIO[uid]['q']));
   const emEdicao = edicaoAtual === uid;
-  const htmlAuto = esc(limparEnunciado(q.q, q.t));
+  const _fp = figProteger(esc(limparEnunciado(q.q, q.t)));
+  const htmlAuto = _fp.txt;
   let conteudo = custom || htmlAuto;
   // depois de responder, o trecho-chave da armadilha aparece destacado em vermelho
   if(!emEdicao && STATE.quiz && STATE.quiz.respostas && STATE.quiz.respostas[uid]){
@@ -441,7 +443,7 @@ function blocoEnunciadoEditavel(q){
       </span>
     </div>
     ${emEdicao ? editorToolbarHtml(uid) : ''}
-    <div class="campo-editavel-conteudo" ${emEdicao ? 'contenteditable="true"' : ''} id="conteudo-q-${esc(uid)}">${conteudo}</div>
+    <div class="campo-editavel-conteudo" ${emEdicao ? 'contenteditable="true"' : ''} id="conteudo-q-${esc(uid)}">${figRestaurar(conteudo, _fp.figs)}</div>
     ${justificativaSobEnunciado(q, emEdicao)}
   `;
 }
@@ -821,7 +823,7 @@ function renderErros(){
       return `<div class="error-row">
         <span class="num">${esc(String(q.n).padStart(3,'0'))}</span>
         ${cobrancaTag(q) || `<span class="tag tag-cobranca-ausente" title="Esta questão ainda não tem o rótulo de tipo de cobrança (Literal, Interpretativa etc.) classificado">❔ Sem rótulo</span>`}
-        <div class="summary">${esc(limparEnunciado(q.q, q.t) || q.rf || '')}</div>
+        <div class="summary">${esc(figSemImagem(limparEnunciado(q.q, q.t)) || q.rf || '')}</div>
         <button class="btn btn-gold btn-sm" data-refazer="${esc(uid)}">Refazer</button>
       </div>`;
     }).join('')}
@@ -838,7 +840,7 @@ function renderErros(){
       return `<div class="error-row">
         <span class="num">${esc(String(q.n).padStart(3,'0'))}</span>
         ${cobrancaTag(q) || `<span class="tag tag-cobranca-ausente" title="Esta questão ainda não tem o rótulo de tipo de cobrança (Literal, Interpretativa etc.) classificado">❔ Sem rótulo</span>`}
-        <div class="summary">${esc(limparEnunciado(q.q, q.t) || q.rf || '')}</div>
+        <div class="summary">${esc(figSemImagem(limparEnunciado(q.q, q.t)) || q.rf || '')}</div>
         <button class="btn btn-ghost btn-sm" data-desmarcar-estudo="${esc(uid)}" title="Remover a marca ${esc(m.rot)}">✕ Desmarcar</button>
         <button class="btn btn-gold btn-sm" data-refazer="${esc(uid)}">Refazer</button>
       </div>`;
@@ -1078,7 +1080,8 @@ function renderFlashcards(){
   const emEdicao = edicaoAtual === uid;
   const customQ = EDICOES_USUARIO[uid] && hidratarImagens(limparHtmlEditado(EDICOES_USUARIO[uid]['q']));
   const customRf = EDICOES_USUARIO[uid] && hidratarImagens(limparHtmlEditado(EDICOES_USUARIO[uid]['rf']));
-  const qHtml = customQ || esc(limparEnunciado(q.q, q.t));
+  const _fpf = figProteger(esc(limparEnunciado(q.q, q.t)));
+  const qHtml = customQ || figRestaurar(_fpf.txt, _fpf.figs);
   const rfHtml = customRf || (q.rf ? formatarTextoComDestaque(q.rf, palavrasChaveDaRespostaCorreta(q)) : formatarTextoComDestaque(limparResolucao(resumoFlashDaResolucao(q)), palavrasChaveDaRespostaCorreta(q)));
 
   return `

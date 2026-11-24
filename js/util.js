@@ -89,6 +89,19 @@ function esc(str){
   return str.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 }
 
+/* Figuras nas questões: "![Figura](img/questoes/…png)" no enunciado/alternativas vira <img>. As imagens ficam protegidas por símbolos
+   privados durante os destaques de palavras-chave (para não quebrar o src) e voltam no fim. Só caminhos img/questoes/ são aceitos. */
+function figProteger(h){
+  const figs = [];
+  const txt = String(h || '').replace(/!\[([^\]]*)\]\((img\/questoes\/[A-Za-z0-9_\/.-]+\.(?:png|jpe?g|webp|svg))\)/g, (m, alt, src) => {
+    figs.push(`<img class="q-fig" src="${src}" alt="${String(alt).replace(/[^\wÀ-ú .,()-]/g, '')}" loading="lazy">`);
+    return '\uE000' + String.fromCharCode(0xE100 + figs.length - 1) + '\uE001';
+  });
+  return { txt, figs };
+}
+function figRestaurar(h, figs){ return figs && figs.length ? String(h).replace(/\uE000([\uE100-\uE1FF])\uE001/g, (m, c) => figs[c.charCodeAt(0) - 0xE100] || '') : h; }
+function figSemImagem(t){ return String(t || '').replace(/!\[[^\]]*\]\(img\/questoes\/[^)]*\)/g, '[figura]'); }
+
 // confirma que existe uma sequência real de algarismos romanos (I...II ou II...III)
 // antes de tratar qualquer "I"/"V"/"X" isolado como item de lista — sem essa
 // checagem, palavras/iniciais comuns do texto poderiam ser quebradas por engano

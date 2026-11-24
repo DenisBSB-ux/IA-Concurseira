@@ -408,7 +408,7 @@ function retaLinhaErro(e){
   const fig = (()=>{ try{ return ((!textoResolucaoEditado(q) && teoriaCartaoDaQuestao(q)) ? cartaoTeoriaHtml(q) : (typeof cartaoResolucaoHtml==='function' ? cartaoResolucaoHtml(q) : '')); }catch(_){ return ''; } })();
   const aberto = STATE.retaFigura === e.uid;
   return `<div class="reta-erro"><div class="reta-erro-cab"><span class="cx ${n.cls}">${n.ico} ${n.n}</span>${e.reinc>=2?`<span class="cx rr">reincidente ×${e.reinc}</span>`:''}<span class="chip">${esc(e.mat)}${q.tema?' · '+esc(q.tema):''}</span><span class="chip">${esc(e.causa)}</span>${e.chute?'<span class="chip">🎲 chute</span>':''}</div>
-    <p>${esc(limparEnunciado(q.q, q.t) || '')}</p>
+    <p>${esc(figSemImagem(limparEnunciado(q.q, q.t)) || '')}</p>
     <div class="reta-erro-acoes">${fig?`<button class="btn btn-gold btn-sm" data-reta-figura="${esc(e.uid)}">${aberto?'Esconder a figura':'Ver a teoria em figura'}</button>`:''}<button class="btn btn-sm" data-reta-refazer="${esc(e.uid)}" data-reta-materia="${esc(e.mat)}">Refazer</button></div>
     ${aberto?`<div class="reta-fig">${fig}</div>`:''}</div>`;
 }
