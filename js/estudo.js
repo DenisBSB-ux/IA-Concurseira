@@ -219,7 +219,7 @@ function renderQuiz(){
       </div>
     </div>
     <div class="qm-provabar">
-      <div class="qm-prova">${q.tema && q.tema!=='Geral' ? `<div class="q-meta-line"><span class="lbl-inline">Assunto:</span> ${esc(q.tema)}</div>` : ''}${bancaCargoAnoLine(q)}</div>
+      <div class="qm-prova">${q.tema && q.tema!=='Geral' && !/^fora do edital/i.test(q.tema) ? `<div class="q-meta-line"><span class="lbl-inline">Assunto:</span> ${esc(q.tema)}</div>` : ''}${bancaCargoAnoLine(q)}</div>
     </div>
     <div class="case-columns ${revelado?'revelado':'nao-revelado'}" style="zoom:${STATE.zoomLevel};">
       <div class="case-col-left">

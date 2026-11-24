@@ -207,7 +207,7 @@ function treinoInfoHtml(it){
     const p = [bc];
     if(q.ar && bc.indexOf(String(q.ar)) < 0) p.push(q.ar);
     l1 = p.filter(Boolean).join(' · ');
-    if(q.tema) l2 = 'Assunto: ' + q.tema;
+    if(q.tema && !/^fora do edital/i.test(q.tema)) l2 = 'Assunto: ' + q.tema;
   } else if(it.bq) l1 = it.bq;
   if(!l1 && !l2) return '';
   return '<span class="tr-info">' + (l1 ? esc(l1) : '') + (l2 ? '<br>' + esc(l2) : '') + '</span>';
