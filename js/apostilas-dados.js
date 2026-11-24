@@ -1,6 +1,14 @@
 /* Apostilas em PDF: matéria da base, título, id do arquivo no Drive e tamanho em KB. "url" aponta para a cópia no site (pasta apostilas/); sem "url", abre no Drive. */
 const APOSTILAS = [
  {
+  "m": "Redes de Computadores",
+  "t": "Apostila por assuntos do edital (DPDF 2026 — Informática/Redes)",
+  "id": "",
+  "kb": 279,
+  "url": "apostilas/redes-de-computadores-apostila-edital.pdf",
+  "local": true
+ },
+ {
   "m": "Direito Civil",
   "t": "LINDB",
   "id": "10sqZzerU1Qyq4xHTAKRPE-OUclfSh8rV",
@@ -265,4 +273,7 @@ const APOSTILAS = [
   "local": true
  }
 ];
+/* nomes alternativos da matéria na base (o chip 📄 e a aba Matérias reconhecem os dois) */
+const APOSTILA_ALIAS = { 'redes': 'Redes de Computadores' };
+function apostilaMateria(m){ const k = String(m || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase(); return APOSTILA_ALIAS[k] || m; }
 function apostilaUrl(a){ return a.url || ("https://drive.google.com/file/d/"+a.id+"/view"); }

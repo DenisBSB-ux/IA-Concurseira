@@ -1131,14 +1131,14 @@ function renderMateriaPage(){
 }
 
 /* ---------- aba "Matérias": todas as apostilas em PDF (abrem no Google Drive) ---------- */
-function apostilasDe(materia){ return (typeof APOSTILAS !== 'undefined') ? APOSTILAS.filter(a => a.m === materia) : []; }
+function apostilasDe(materia){ if(typeof APOSTILAS === 'undefined') return []; const m = apostilaMateria(materia); return APOSTILAS.filter(a => a.m === materia || a.m === m); }
 function apostilaChip(materia){
   const n = apostilasDe(materia).length; if(!n) return '';
   return ` <button type="button" class="ap-link" data-apostilas-mat="${esc(materia)}" title="Abrir as ${n} apostila${n>1?'s':''} em PDF desta matéria">📄 ${n}</button>`;
 }
 function renderApostilas(){
   const todas = (typeof APOSTILAS !== 'undefined') ? APOSTILAS : [];
-  const foco = STATE.apostilaFoco || '';
+  const foco = apostilaMateria(STATE.apostilaFoco || '');
   const grupos = {}; todas.forEach(a => { (grupos[a.m] = grupos[a.m] || []).push(a); });
   const ordem = Object.keys(grupos).sort((a,b) => (a===foco ? -1 : b===foco ? 1 : a.localeCompare(b,'pt-BR')));
   const kb = n => n >= 1024 ? (n/1024).toFixed(1).replace('.', ',') + ' MB' : n + ' KB';
