@@ -340,33 +340,30 @@ function computeSnapshot(){
 /* ---------- filtro por banca nas estatísticas por matéria ---------- */
 const BANCAS_KEY = 'ia_filtro_bancas_v1';
 let BANCAS_SEL = (()=>{ try{ return new Set(JSON.parse(localStorage.getItem(BANCAS_KEY) || '[]')); }catch(_){ return new Set(); } })();
+const BANCAS_NOMES = [
+  [/elaboracao propria|inedita/, 'Elaboração própria'], [/gran cursos/, 'Gran Cursos (simulado)'], [/estrategia/, 'Estratégia Concursos (simulado)'], [/aprovalegis/, 'AprovaLegis (simulado)'],
+  [/cebraspe|cespe/, 'Cebraspe/Cespe'], [/iades/, 'IADES'], [/quadrix/, 'Quadrix'], [/\bfcc\b/, 'FCC'], [/ibfc/, 'IBFC'], [/\bfgv\b/, 'FGV'], [/aocp/, 'AOCP'], [/idecan/, 'IDECAN'],
+  [/fundatec|funatec/, 'Fundatec'], [/consulplan/, 'Consulplan'], [/legalle/, 'Legalle'], [/vunesp/, 'Vunesp'], [/ipefae/, 'IPEFAE'], [/funiversa/, 'Funiversa'], [/verbena/, 'Instituto Verbena'],
+  [/cogepe|fiocruz/, 'COGEPE/Fiocruz'], [/fcpc/, 'FCPC'], [/fadesp/, 'FADESP'], [/iacp/, 'Instituto IACP'], [/selecon/, 'Selecon'], [/amauc/, 'AMAUC'], [/fundep/, 'FUNDEP'], [/acafe/, 'ACAFE'],
+  [/fafipa/, 'FAFIPA'], [/ieses/, 'IESES'], [/igeduc/, 'IGEDUC'], [/inep|enem/, 'INEP (ENEM)'], [/itame/, 'ITAME'], [/pgp|ufv/, 'UFV (PGP)'], [/objetiva/, 'Objetiva Concursos']
+];
 function bancaGrupoDeTexto(bc){
-  const b = String(bancaCurta(bc) || '').trim(), n = b.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-  if(!n) return 'Sem banca';
-  if(/elaboracao propria|inedita/.test(n)) return 'Elaboração própria';
-  if(/gran cursos/.test(n)) return 'Gran Cursos (simulado)';
-  if(/estrategia/.test(n)) return 'Estratégia (simulado)';
-  if(/aprovalegis/.test(n)) return 'AprovaLegis (simulado)';
-  if(/cebraspe|cespe/.test(n)) return 'Cebraspe/Cespe';
-  if(/aocp/.test(n)) return 'AOCP';
-  if(/consulplan/.test(n)) return 'Consulplan';
-  if(/fundatec|funatec/.test(n)) return 'Fundatec';
-  return b.length > 22 ? b.slice(0, 22) : (b.length <= 8 ? b.toUpperCase() : b);
+  const b = String(bancaCurta(bc) || '').trim(), n = b.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  if(!n) return 'Sem banca informada';
+  for(const [re, nome] of BANCAS_NOMES) if(re.test(n)) return nome;
+  return b.length <= 8 ? b.toUpperCase() : b.replace(/\s+/g, ' ');      // banca nova: usa o nome como está escrito
 }
 function bancaGrupo(q){
   if(q._bgSrc !== q.bc){ q._bg = bancaGrupoDeTexto(q.bc); q._bgSrc = q.bc; }
   return q._bg;
 }
-let BANCAS_OUTRAS = new Set();
-function questaoNaBanca(q){ return BANCAS_SEL.size === 0 || BANCAS_SEL.has(bancaGrupo(q)) || (BANCAS_SEL.has('Outras bancas') && BANCAS_OUTRAS.has(bancaGrupo(q))); }
+let BANCAS_MENU_ABERTO = false;
+BANCAS_SEL.delete('Outras bancas');
+function questaoNaBanca(q){ return BANCAS_SEL.size === 0 || BANCAS_SEL.has(bancaGrupo(q)); }
 function bancasDisponiveis(materias){
   const cont = {}, mats = new Set(materias);
   ALL_QUESTIONS.forEach(q => { if(!mats.has(q.materia) || q.duplicataOculta || (q.t!=='CE' && q.t!=='MC')) return; const g = bancaGrupo(q); cont[g] = (cont[g]||0) + 1; });
-  const lista = [], outras = new Set(); let nOutras = 0;
-  Object.entries(cont).sort((a,b)=>b[1]-a[1]).forEach(([g,n])=>{ if(n >= 15 || BANCAS_SEL.has(g)) lista.push([g,n]); else { outras.add(g); nOutras += n; } });
-  BANCAS_OUTRAS = outras;
-  if(nOutras) lista.push(['Outras bancas', nOutras]);
-  return lista;
+  return Object.entries(cont).sort((a,b)=>b[1]-a[1] || a[0].localeCompare(b[0],'pt-BR'));      // todas as bancas, uma a uma
 }
 function bancasGravar(){ try{ localStorage.setItem(BANCAS_KEY, JSON.stringify([...BANCAS_SEL])); }catch(_){} }
 document.addEventListener('change', e => {
@@ -375,9 +372,13 @@ document.addEventListener('change', e => {
   bancasGravar(); render();
 });
 document.addEventListener('click', e => {
-  const b = e.target.closest && e.target.closest('[data-bc-limpar]'); if(!b) return;
-  BANCAS_SEL.clear(); bancasGravar(); render();
+  const t = e.target.closest && e.target.closest('[data-bc-toggle]');
+  if(t){ BANCAS_MENU_ABERTO = !BANCAS_MENU_ABERTO; const pop = document.querySelector('.bc-pop'); if(pop) pop.hidden = !BANCAS_MENU_ABERTO; t.setAttribute('aria-expanded', String(BANCAS_MENU_ABERTO)); return; }
+  const b = e.target.closest && e.target.closest('[data-bc-limpar]');
+  if(b){ BANCAS_SEL.clear(); bancasGravar(); render(); return; }
+  if(BANCAS_MENU_ABERTO && !(e.target.closest && e.target.closest('.bc-menu'))){ BANCAS_MENU_ABERTO = false; const pop = document.querySelector('.bc-pop'); if(pop) pop.hidden = true; }
 });
+document.addEventListener('keydown', e => { if(e.key === 'Escape' && BANCAS_MENU_ABERTO){ BANCAS_MENU_ABERTO = false; const pop = document.querySelector('.bc-pop'); if(pop) pop.hidden = true; } });
 function computeSnapshotMateria(materiaKey, comFiltroBanca){
   const bucket = getBucket(materiaKey);
   let ac=0, erradas=0, ultimaRespostaTs=null;
@@ -636,7 +637,13 @@ function renderEstatisticasPorMateria(){
       <h3 style="margin:0;color:inherit;font-size:22px;">📈 Estatísticas por matéria</h3>
       ${adapt.adapta ? `<div class="conc-adapt"><span>Lista adaptada ao cargo: <b>${adapt.visiveis.length}</b> da base${adapt.faltantes.length ? ` · <b class="conc-falta-n">${adapt.faltantes.length}</b> do edital sem lista` : ''}</span>${adapt.ocultas.length ? ` <button type="button" class="prova-det-btn" data-conc-fora="1">${foraVisivel ? 'Ocultar' : 'Mostrar'} ${adapt.ocultas.length} fora do cargo</button>` : ''}</div>` : ''}
     </div>
-    ${bancasLista.length > 1 ? `<div class="bc-filtro" role="group" aria-label="Filtrar por banca"><span class="bc-tit">Banca</span>${bancasLista.map(([g,n])=>`<label class="bc-chip ${BANCAS_SEL.has(g)?'sel':''}"><input type="checkbox" data-bc="${esc(g)}" ${BANCAS_SEL.has(g)?'checked':''}> ${esc(g)} <small>${n}</small></label>`).join('')}${filtroAtivo ? '<button type="button" class="prova-det-btn" data-bc-limpar="1">Limpar</button>' : ''}</div>${filtroAtivo ? `<div class="bc-soma">Somando <b>${[...BANCAS_SEL].map(esc).join(' + ')}</b>: <b>${somaQ}</b> questões em ${linhas.length} matéria${linhas.length===1?'':'s'}</div>` : ''}` : ''}
+    ${bancasLista.length > 1 ? `<div class="bc-menu" role="group" aria-label="Filtrar por banca">
+      <button type="button" class="bc-btn ${filtroAtivo?'ativo':''}" data-bc-toggle="1" aria-expanded="${BANCAS_MENU_ABERTO}">Banca: <b>${filtroAtivo ? (BANCAS_SEL.size === 1 ? esc([...BANCAS_SEL][0]) : BANCAS_SEL.size + ' selecionadas') : 'todas'}</b> <span class="bc-seta">▾</span></button>
+      <div class="bc-pop" ${BANCAS_MENU_ABERTO ? '' : 'hidden'}>
+        <div class="bc-pop-topo"><span>${bancasLista.length} bancas</span>${filtroAtivo ? '<button type="button" class="prova-det-btn" data-bc-limpar="1">Limpar</button>' : ''}</div>
+        <div class="bc-lista">${bancasLista.map(([g,n])=>`<label class="bc-op ${BANCAS_SEL.has(g)?'sel':''}"><input type="checkbox" data-bc="${esc(g)}" ${BANCAS_SEL.has(g)?'checked':''}> <span>${esc(g)}</span> <small>${n}</small></label>`).join('')}</div>
+      </div>
+    </div>${filtroAtivo ? `<div class="bc-soma">Somando <b>${[...BANCAS_SEL].map(esc).join(' + ')}</b>: <b>${somaQ}</b> questões em ${linhas.length} matéria${linhas.length===1?'':'s'}</div>` : ''}` : ''}
     <div class="resumo-dia">
       <div class="resumo-esq">
       <span class="resumo-item" title="Baseado no histórico recente de cada questão (últimas 20 tentativas)"><small>Hoje</small><b>${atividade.totalHoje} questõe${atividade.totalHoje===1?'':'s'}</b></span>

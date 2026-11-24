@@ -2932,3 +2932,14 @@ body.theme-light .letterhead .subtitle.conc-banca{ color:#5a6472; } body.theme-l
 .ap-grupo h4{ margin:0 0 6px; font-size:15px; } .ap-grupo h4 small{ font-weight:400; opacity:.65; margin-left:6px; }
 .ap-grupo ul{ list-style:none; margin:0; padding:0; } .ap-grupo li{ padding:5px 0; border-top:1px solid var(--paper-line); font-size:13.5px; } .ap-grupo li:first-child{ border-top:0; }
 .ap-grupo a{ color:inherit; text-decoration:underline; text-underline-offset:2px; } .ap-grupo li small{ opacity:.6; margin-left:6px; }
+
+/* v646 — filtro de bancas em menu suspenso */
+.bc-menu{ position:relative; display:inline-block; margin:8px 0 4px; }
+.bc-btn{ font:inherit; font-size:13px; color:inherit; background:transparent; border:1px solid var(--paper-line); border-radius:8px; padding:6px 12px; cursor:pointer; display:inline-flex; gap:6px; align-items:center; }
+.bc-btn.ativo{ border-color:#2b5fa8; background:rgba(43,95,168,.14); } .bc-btn b{ font-weight:700; } .bc-seta{ opacity:.7; }
+.bc-pop{ position:absolute; z-index:60; top:calc(100% + 4px); left:0; min-width:300px; max-width:min(92vw,380px); background:var(--paper); color:var(--ink); border:1px solid var(--paper-line); border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,.35); padding:8px; }
+body:not(.theme-light) .bc-pop{ background:#1d1d21; color:var(--paper); border-color:rgba(255,255,255,.18); }
+.bc-pop-topo{ display:flex; justify-content:space-between; align-items:center; font-size:11px; letter-spacing:.06em; text-transform:uppercase; opacity:.8; padding:2px 4px 6px; }
+.bc-lista{ max-height:320px; overflow:auto; display:flex; flex-direction:column; }
+.bc-op{ display:flex; align-items:center; gap:8px; padding:6px 8px; border-radius:6px; font-size:13px; cursor:pointer; } .bc-op:hover{ background:rgba(128,128,128,.14); } .bc-op.sel{ background:rgba(43,95,168,.16); font-weight:600; }
+.bc-op span{ flex:1; } .bc-op small{ opacity:.65; } .bc-op input{ accent-color:#2b5fa8; }
