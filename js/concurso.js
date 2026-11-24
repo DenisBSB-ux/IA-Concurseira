@@ -562,7 +562,7 @@ function concursoTelaHtml(){
   const comuns = (c.comuns || []).map(m => `<li>${esc(m)}${(c.qtdComuns || {})[m] ? ` <small>· ${concNum(c.qtdComuns[m])} questões</small>` : ''}</li>`).join('');
   const dataTxt = String(c.rotulo || '').replace(/\s*\(.*\)\s*$/, ''), detTxt = (/\((.*)\)\s*$/.exec(c.rotulo || '') || [])[1] || '';
   const diasTxt = dias === null ? 'data a definir' : (dias > 1 ? `faltam ${dias} dias` : (dias === 1 ? 'falta 1 dia' : (dias === 0 ? 'é hoje' : 'prova realizada')));
-  const tile = (r, v, sub, extra) => v ? `<div class="cx-t ${extra || ''}"><span>${esc(r)}</span><b>${esc(v)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</div>` : '';
+  const tile = (r, v, sub, extra) => v ? `<div class="cx-t ${extra || ''}"><span><i class="cx-ti" aria-hidden="true">${({ 'Prova':'📅', 'Remuneração':'💰', 'Vagas':'👥', 'Cargo':'🎯', 'Cargos':'🎯' })[r] || '•'}</i>${esc(r)}</span><b>${esc(v)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</div>` : '';
   const cardsCargo = cargos.map(g => {
     const cp = concursoCompatDe(c, g.nome), qEsp = concNum(Object.values(g.qtd || {}).reduce((a, b) => a + b, 0)), req = (g.itens || []).find(i => i[0] === 'Requisito'), nm = (g.materias || []).length;
     const sel = g.nome === CONC_SEL_CARGO, cor = cp.pct >= 60 ? 'alto' : (cp.pct >= 30 ? 'medio' : 'baixo');
@@ -588,6 +588,7 @@ function concursoTelaHtml(){
   return `<div class="cx-tela"><div class="cx-caixa">
     <header class="cx-top"><img src="img/logo-ia-concurseira.png" alt="IA Concurseira" class="cx-logo"><div class="cx-tit"><h1>IA Concurseira</h1><p>${CONC_TELA_ABERTA ? 'Trocar de concurso ou cargo' : (CONC_DB.escolhido ? 'Confirme o concurso e o cargo para entrar' : 'Escolha o concurso e o cargo para começar')}</p></div>
       <div class="cx-user">${usuario ? `<small>${esc(usuario.nome || usuario.email || '')}</small> <button type="button" class="side-action-btn compact" data-ct-sair="1">Sair</button>` : ''}</div></header>
+    <ol class="cx-passos" aria-label="Etapas"><li class="on"><b>1</b> Concurso</li><li class="${(ehPadrao || !cargos.length || CONC_SEL_CARGO) ? 'on' : ''}"><b>2</b> Cargo</li><li><b>3</b> Estudar</li></ol>
     <div class="cx-chips" role="tablist" aria-label="Concursos">${chips}<button type="button" class="cx-chip cx-novo" data-conc-abrir="1" title="Carregar o edital (PDF) de outro concurso">＋ Edital</button></div>
     <section class="cx-painel">
       <div class="cx-cab"><div><h2>${esc(c.nome)}</h2><p>${esc(c.orgao || '')}${c.banca ? ' · banca ' + esc(c.banca) : ''}</p></div>
@@ -595,8 +596,8 @@ function concursoTelaHtml(){
       <div class="cx-tiles">${tile('Prova', dataTxt, detTxt)}${tile('Remuneração', c.remuneracao)}${tile('Vagas', c.vagas)}${ehPadrao ? tile('Cargo', 'Analista de Controle Externo', 'Área de Gestão') : tile('Cargos', String(cargos.length), 'escolha abaixo')}</div>
       ${itensHtml}
       ${ehPadrao ? `<details class="cx-det"><summary>Detalhes do edital do TCDF</summary>${provaDetalhesHtml()}</details><p class="cx-ok">✅ Base completa: as 20 matérias do TCDF já estão na plataforma.</p>` : ''}
+      ${!ehPadrao && cargos.length ? `<div class="cx-h">Escolha o cargo <small>% = quanto da prova do cargo já tem questões na plataforma</small></div><div class="cx-cargos">${cardsCargo}</div>` : ''}
       ${materiasHtml}
-      ${!ehPadrao && cargos.length ? `<div class="cx-h">Cargo <small>% = quanto da prova do cargo já tem questões na plataforma</small></div><div class="cx-cargos">${cardsCargo}</div>` : ''}
       ${!ehPadrao && !cargos.length ? '<p>Este concurso não tem cargos cadastrados. Use "＋ Edital" para completar.</p>' : ''}
     </section>
     <div class="cx-barra-acao"><div class="cx-sel"><small>${CONC_TELA_ABERTA ? 'Trocando para' : 'Selecionado'}</small><b>${esc(sigla(c))}${cargoSel ? ' · ' + esc(cargoSel) : ''}</b></div>
