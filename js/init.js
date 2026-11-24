@@ -39,10 +39,8 @@ try{
             const usados = performance.getEntriesByType('resource').map(r=>r.name);
             const lazy = [];
             try{ Object.values(LEI_FONTES).forEach(f=>{ if(f.arquivo) lazy.push(f.arquivo+q); }); }catch(_){}
-            lazy.push('guia-discursiva/index.html'+q);
-            ['folha_questao.pdf','folha_peca.pdf','folhas_completas.pdf','prev_q-1.png','prev_p-1.png','prev_p-2.png'].forEach(n=>lazy.push('discursiva/'+n));
             lazy.push('manifest.webmanifest','img/icon-192.png','img/icon-512.png');
-            ['doutrina-ps','doutrina-redes','discursiva-dados','doutrina-pdpm','doutrina-df','doutrina-dadm','doutrina-cst','doutrina-adm','teoria-dt','armadilhas-dados','resumos-dados'].forEach(n=>lazy.push('js/'+n+'.js'+q));
+            ['doutrina-ps','doutrina-redes','doutrina-pdpm','doutrina-df','doutrina-dadm','doutrina-cst','doutrina-adm','teoria-dt','armadilhas-dados','resumos-dados'].forEach(n=>lazy.push('js/'+n+'.js'+q));
             try{ (typeof TREINO_LIBERADAS!=='undefined' ? TREINO_LIBERADAS : []).forEach(sl=>lazy.push('js/treino-'+sl+'.js'+q)); }catch(_){}
             const alvo = reg.active || navigator.serviceWorker.controller;
             if(alvo) alvo.postMessage({ tipo:'precache', urls: [location.href].concat(usados, lazy) });

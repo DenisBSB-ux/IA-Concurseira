@@ -207,7 +207,7 @@ function tendenciasDisponiveis(){
 function getLocalTab(materiaKey){
   const tab = STATE.tabByMateria[materiaKey];
   // abas que ainda existem ("Resumo p/ revisão" foi removida)
-  return ['simulado','reta','erros','flashcards','materias','guia'].includes(tab) ? tab : 'simulado';
+  return ['simulado','reta','erros','flashcards','materias'].includes(tab) ? tab : 'simulado';
 }
 function setLocalTab(materiaKey, tab){
   STATE.tabByMateria[materiaKey] = tab;
@@ -281,7 +281,6 @@ function render(){
   `;
   attachHandlers();
   if(typeof retaAnexar==='function') retaAnexar();
-  if(typeof discursivaMontar==='function') discursivaMontar();
 }
 
 // Banner fixo quando storageSet/storageGet falham (armazenamento cheio,
@@ -1174,8 +1173,7 @@ function renderLocalTabs(){
     {id:'simulado', n:'01', label:'Questões'},
     {id:'reta', n:'02', label:'Reta Final'},
     {id:'materias', n:'03', label:'Matérias'},
-    {id:'guia', n:'04', label:'Discursiva'},
-    {id:'importar', n:'05', label:'Importar (Admin)'},
+    {id:'importar', n:'04', label:'Importar (Admin)'},
   ];
   let atual = STATE.viewImportar ? 'importar' : getLocalTab(STATE.materia);
   if(atual==='erros' || atual==='flashcards') atual = 'reta';   // as telas clássicas ficam dentro da Reta Final
@@ -1186,10 +1184,6 @@ function renderLocalTabs(){
 }
 
 
-/* Aba Discursiva (js/discursiva.js): temas de treino, escrita, nota, folhas e o Guia; o conteúdo é montado depois do render */
-function renderGuiaDiscursiva(){
-  return '<div id="dsc-raiz" class="dsc"><p class="dsc-vazio">Carregando…</p></div>';
-}
 function renderMainPanel(tabAtual){
   if(tabAtual==='simulado'){
     if(STATE.quiz) return renderQuiz();
@@ -1200,7 +1194,6 @@ function renderMainPanel(tabAtual){
   if(tabAtual==='erros') return renderErros();
   if(tabAtual==='flashcards') return renderFlashcards();
   if(tabAtual==='materias') return renderApostilas();
-  if(tabAtual==='guia') return renderGuiaDiscursiva();
   if(tabAtual==='importar') return renderImportarConteudo();
   return '';
 }
