@@ -607,7 +607,7 @@ function auditarDados(){
 }
 function gerarMarkdownAuditoria(rel){
   const materias = Object.keys(rel.porMateria).sort((a,b)=>a.localeCompare(b,'pt-BR'));
-  let md = `# Auditoria de dados — TCDF Plataforma\n\nGerado em ${new Date().toLocaleString('pt-BR')}\n\n`;
+  let md = `# Auditoria de dados — IA Concurseira\n\nGerado em ${new Date().toLocaleString('pt-BR')}\n\n`;
   md += `## Resumo por matéria\n\n| Matéria | Total | Ano divergente | Cargo suspeito | Banca ausente | Sem gabarito |\n|---|---|---|---|---|---|\n`;
   materias.forEach(m=>{
     const s = rel.porMateria[m];

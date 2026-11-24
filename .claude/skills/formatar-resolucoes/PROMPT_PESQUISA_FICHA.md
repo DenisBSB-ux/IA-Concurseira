@@ -1,6 +1,6 @@
 # Pesquisa de fatos para ampliar as fichas de "Conhecimentos do DF" (qualidade acima de velocidade)
 
-Contexto: a plataforma mostra, ao lado de cada questão, uma ficha de doutrina (arquivo `/home/user/tcdf-plataforma/js/doutrina-df.js`, somente leitura para você; leia-o antes). Ela foi feita só da apostila do usuário. Em 65 questões a ficha NÃO traz o fato que decide o item (lista em `<PASTA>/pesq_in_K.json`: n, assunto, gabarito, aviso, enunciado, resolução atual). O usuário autorizou ampliar a ficha com a **apostila (Drive)** OU **sites externos**.
+Contexto: a plataforma mostra, ao lado de cada questão, uma ficha de doutrina (arquivo `js/doutrina-df.js`, somente leitura para você; leia-o antes). Ela foi feita só da apostila do usuário. Em 65 questões a ficha NÃO traz o fato que decide o item (lista em `<PASTA>/pesq_in_K.json`: n, assunto, gabarito, aviso, enunciado, resolução atual). O usuário autorizou ampliar a ficha com a **apostila (Drive)** OU **sites externos**.
 
 ## O que fazer, para cada questão do seu arquivo `pesq_in_K.json`
 1. Descubra o fato que decide o item.

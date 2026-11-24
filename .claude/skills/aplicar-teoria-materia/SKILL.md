@@ -1,6 +1,6 @@
 ---
 name: aplicar-teoria-materia
-description: Aplica a uma matéria do TCDF Plataforma o "modelo de teoria": botão ⚖️ em cada questão (antes e depois de responder) que abre o pop-up com o texto oficial da lei, o dispositivo citado em destaque e, se houver, o trecho da apostila com a pegadinha. Use quando o usuário pedir teoria/pop-up de lei/apostila para uma matéria (ex.: "aplique na Lei 14.133", "agora o Previdenciário"). Uma matéria por vez, só quando ele pedir.
+description: Aplica a uma matéria do IA Concurseira o "modelo de teoria": botão ⚖️ em cada questão (antes e depois de responder) que abre o pop-up com o texto oficial da lei, o dispositivo citado em destaque e, se houver, o trecho da apostila com a pegadinha. Use quando o usuário pedir teoria/pop-up de lei/apostila para uma matéria (ex.: "aplique na Lei 14.133", "agora o Previdenciário"). Uma matéria por vez, só quando ele pedir.
 ---
 
 # Aplicar o modelo de teoria a uma matéria

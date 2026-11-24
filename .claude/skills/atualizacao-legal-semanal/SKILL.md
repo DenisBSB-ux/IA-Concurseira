@@ -1,6 +1,6 @@
 ---
 name: atualizacao-legal-semanal
-description: Rotina semanal do TCDF Plataforma que confere mudanças em leis, decretos, súmulas e jurisprudência de TODAS as matérias, registra as alterações em js/atualizacoes-legais.js (selo + ALTERACOES_LEGAIS) para a plataforma sinalizar matérias e questões afetadas, e abre PR. Use na rotina agendada ou quando o usuário pedir para conferir atualizações legais.
+description: Rotina semanal do IA Concurseira que confere mudanças em leis, decretos, súmulas e jurisprudência de TODAS as matérias, registra as alterações em js/atualizacoes-legais.js (selo + ALTERACOES_LEGAIS) para a plataforma sinalizar matérias e questões afetadas, e abre PR. Use na rotina agendada ou quando o usuário pedir para conferir atualizações legais.
 ---
 
 # Atualização legal semanal (versão 13/11/2026)
@@ -9,7 +9,7 @@ Objetivo: manter fiel o selo `⚖️ DD/MM/AAAA` de cada matéria e registrar ca
 
 ## 0. Acesso ao repositório (obrigatório, foi o que falhou em 26/10/2026)
 A sessão da rotina pode iniciar SEM o repositório. Antes de qualquer coisa:
-1. `ToolSearch` com `select:mcp__claude-code-remote__add_repo,mcp__claude-code-remote__check_repo_access` e chame `add_repo` (owner `denisbsb-ux`, repo `tcdf-plataforma`, access `push`); depois clone/`register_repo_root` conforme a resposta.
+1. `ToolSearch` com `select:mcp__claude-code-remote__add_repo,mcp__claude-code-remote__check_repo_access` e chame `add_repo` (owner `denisbsb-ux`, repo `ia-concurseira`, access `push`); depois clone/`register_repo_root` conforme a resposta.
 2. Se mesmo assim o repositório não vier ou o push der 403: NÃO encerre em silêncio. Entregue o conteúdo pronto (diff do `js/atualizacoes-legais.js`) no resumo e em arquivo, notifique o usuário dizendo "push negado" e peça para autorizar o repositório na rotina. Nunca declare sucesso sem PR aberto.
 
 ## 1. Escopo: todas as matérias (lista dinâmica, vale para matérias novas)

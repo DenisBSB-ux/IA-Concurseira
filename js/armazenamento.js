@@ -165,7 +165,7 @@ let STORAGE_MODE = CLAUDE_STORAGE_OK ? 'claude' : 'local';
 // A migração é automática e não destrutiva: um valor que só exista no
 // localStorage (versões antigas) é lido e copiado pro IndexedDB, sem apagar o
 // original.
-const IDB_NAME = 'tcdf-plataforma-db';
+const IDB_NAME = 'tcdf-plataforma-db';   // nome mantido de propósito: trocar criaria um banco vazio e o progresso do aparelho pareceria perdido
 const IDB_STORE = 'kv';
 let idbPromise = null;
 function idbOpen(){

@@ -1,6 +1,6 @@
 # Prompt do revisor de repetições (por matéria)
 
-Você revisa o RESUMO da matéria <NOME> (arquivo <ARQ_RESUMO>) do TCDF Plataforma, apenas para ELIMINAR REPETIÇÕES. Há muitas informações praticamente iguais: frases diferentes que dizem o mesmo fato/regra, dentro de um assunto (blocos "⚡ Em 30 segundos", "📌 Regras por lei" — inclusive linhas de nível 2 "  - " — e "💡 Macetes").
+Você revisa o RESUMO da matéria <NOME> (arquivo <ARQ_RESUMO>) do IA Concurseira, apenas para ELIMINAR REPETIÇÕES. Há muitas informações praticamente iguais: frases diferentes que dizem o mesmo fato/regra, dentro de um assunto (blocos "⚡ Em 30 segundos", "📌 Regras por lei" — inclusive linhas de nível 2 "  - " — e "💡 Macetes").
 Para cada assunto, procure:
 1. Duas ou mais linhas que expressam a MESMA regra (mesmo sentido, palavras diferentes, ou uma contida na outra). Mantenha UMA (a mais completa e clara); apague as outras (new=null) ou, se a apagada trouxer um detalhe que falta na mantida, reescreva a mantida (edição de substituição) incluindo esse detalhe.
 2. Linha em "Regras por lei" que repete um item já dado em "Em 30 segundos" do mesmo assunto: apague a da regra (o 30 segundos tem prioridade).
