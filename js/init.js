@@ -39,6 +39,7 @@ try{
             const usados = performance.getEntriesByType('resource').map(r=>r.name);
             const lazy = [];
             try{ Object.values(LEI_FONTES).forEach(f=>{ if(f.arquivo) lazy.push(f.arquivo+q); }); }catch(_){}
+            lazy.push('guia-discursiva/index.html'+q);
             lazy.push('manifest.webmanifest','img/icon-192.png','img/icon-512.png');
             ['doutrina-ps','doutrina-redes','doutrina-pdpm','doutrina-df','doutrina-dadm','doutrina-cst','doutrina-adm','teoria-dt','armadilhas-dados','resumos-dados'].forEach(n=>lazy.push('js/'+n+'.js'+q));
             try{ (typeof TREINO_LIBERADAS!=='undefined' ? TREINO_LIBERADAS : []).forEach(sl=>lazy.push('js/treino-'+sl+'.js'+q)); }catch(_){}
