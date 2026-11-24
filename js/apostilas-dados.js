@@ -275,5 +275,6 @@ const APOSTILAS = [
 ];
 /* nomes alternativos da matéria na base (o chip 📄 e a aba Matérias reconhecem os dois) */
 const APOSTILA_ALIAS = { 'redes': 'Redes de Computadores' };
-function apostilaMateria(m){ const k = String(m || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase(); return APOSTILA_ALIAS[k] || m; }
+function apostilaMateria(m){ const t = String(m || '').match(/^.+? - (.+) - \d{4}(?:-\d{2}-\d{2})?$/); if(t) m = t[1];      // título "Banca - Matéria - data" → só a matéria
+  const k = String(m || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase(); return APOSTILA_ALIAS[k] || m; }
 function apostilaUrl(a){ return a.url || ("https://drive.google.com/file/d/"+a.id+"/view"); }
