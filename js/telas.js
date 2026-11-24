@@ -261,7 +261,6 @@ function render(){
     ${STATE.avisoStorage ? renderAvisoStorage() : ''}
     ${STATE.avisoCorrecaoAno ? renderAvisoCorrecaoAno() : ''}
     ${ALL_QUESTIONS.length===0 ? renderImportarPage() : renderMateriaPage()}
-    ${STATE.focusMode ? '' : `<div class="footer-note">${esc(CONFIG.footer)} · Versão ${esc(window.__TCDF_BUILD__.versao)} (${esc(window.__TCDF_BUILD__.build)}) · armazenamento: ${esc(STORAGE_MODE==='local' ? 'IndexedDB' : STORAGE_MODE)}</div>`}
   `;
   attachHandlers();
   if(typeof retaAnexar==='function') retaAnexar();
@@ -382,7 +381,14 @@ function cargoGrupo(q){
   if(q._cgSrc !== q.bc){ q._cg = cargoGrupoDeTexto(q.bc); q._cgSrc = q.bc; }
   return q._cg;
 }
-function anoGrupo(q){ const a = anoRealDaQuestao(q); return a ? String(a) : 'Sem ano'; }
+function anoGrupo(q){
+  let a;
+  const bc = String(q.bc || '');
+  if(/^(elabora|in[eé]dita)/i.test(bc) && /\b(basead[oa]|lei|decreto|lc)\b/i.test(bc)){      // "Simulado baseado na Lei 4.320/1964": o ano é da norma, não da prova
+    const m = bc.replace(/\b(basead[oa]|lei|decreto|lc)\b.*$/i, '').match(/\b(19|20)\d{2}\b/g); a = m ? parseInt(m[m.length-1], 10) : null;
+  }else a = anoRealDaQuestao(q);
+  return a ? String(a) : 'Sem ano';
+}
 const FX = {
   banca: { rot: 'Banca', plural: 'bancas', todas: 'todas', key: 'ia_filtro_bancas_v1', get: bancaGrupo },
   cargo: { rot: 'Cargo', plural: 'cargos', todas: 'todos', key: 'ia_filtro_cargos_v1', get: cargoGrupo },
