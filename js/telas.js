@@ -358,6 +358,14 @@ function bancaGrupo(q){
 
 const CARGO_PALAVRAS = /\b(analista|auditor|tecnic[oa]|procurador|conselheir[oa]|assistente|advogad[oa]|administrador|contador|auxiliar|agente|especialista|engenheir[oa]|medic[oa]|professor|oficial|delegad[oa]|escriv[aã]o|perit[oa]|tecnologista|pesquisador|gestor|economista|arquitet[oa]|estatistic[oa]|bibliotecari[oa]|arquivista|secretari[oa]|inspetor|fiscal|promotor|juiz|defensor|consultor|coordenador|desenvolvedor|programador|psicolog[oa]|assessor)\b/;
 const CARGO_SIGLAS = { 'proc':'Procurador', 'proc mun':'Procurador Municipal', 'proc jur':'Procurador Jurídico', 'adv':'Advogado', 'cont':'Contador', 'del pol':'Delegado de Polícia', 'ass amb':'Assistente Ambiental', 'ag adm':'Agente Administrativo', 'aud':'Auditor', 'med':'Médico', 'ana jur':'Analista Jurídico', 'tec adm':'Técnico Administrativo', 'ace':'Auditor de Controle Externo', 'audce':'Auditor de Controle Externo', 'aace':'Analista Administrativo de Controle Externo', 'aci':'Auditor de Controle Interno', 'aufc':'Auditor Federal de Controle Externo', 'tefc':'Técnico Federal de Controle Externo', 'ana adm':'Analista Administrativo', 'ana':'Analista', 'esp gt':'Especialista', 'tec min':'Técnico' };
+const CARGO_BASES = [[/\banalista/,'Analista'],[/\bauditor/,'Auditor'],[/\btecnic[oa]/,'Técnico'],[/\bprocurador/,'Procurador'],[/\bconselheir[oa]/,'Conselheiro'],[/\bassistente/,'Assistente'],[/\badvogad[oa]/,'Advogado'],[/\badministrador/,'Administrador'],[/\bcontador/,'Contador'],[/\bauxiliar/,'Auxiliar'],[/\bagente/,'Agente'],[/\bespecialista/,'Especialista'],[/\bengenheir[oa]/,'Engenheiro'],[/\bmedic[oa]/,'Médico'],[/\bprofessor/,'Professor'],[/\boficial/,'Oficial'],[/\bdelegad[oa]/,'Delegado'],[/\bescriv[aã]o/,'Escrivão'],[/\bperit[oa]/,'Perito'],[/\btecnologista/,'Tecnologista'],[/\bpesquisador/,'Pesquisador'],[/\bgestor/,'Gestor'],[/\beconomista/,'Economista'],[/\barquitet[oa]/,'Arquiteto'],[/\bestatistic[oa]/,'Estatístico'],[/\bbibliotecari[oa]/,'Bibliotecário'],[/\barquivista/,'Arquivista'],[/\bsecretari[oa]/,'Secretário'],[/\binspetor/,'Inspetor'],[/\bfiscal/,'Fiscal'],[/\bpromotor/,'Promotor'],[/\bjuiz/,'Juiz'],[/\bdefensor/,'Defensor'],[/\bconsultor/,'Consultor'],[/\bcoordenador/,'Coordenador'],[/\bdesenvolvedor/,'Desenvolvedor'],[/\bprogramador/,'Programador'],[/\bpsicolog[oa]/,'Psicólogo'],[/\bassessor/,'Assessor']];
+function cargoBase(c){      // "Analista de Controle Externo" → "Analista"; só os policiais ficam completos
+  const n = c.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  if(/^agente (de|da|do) policia/.test(n)) return 'Agente de Polícia';
+  let melhor = null, pos = 1e9;
+  CARGO_BASES.forEach(([re, nome]) => { const m = re.exec(n); if(m && m.index < pos){ pos = m.index; melhor = nome; } });
+  return melhor || c;
+}
 function cargoGrupoDeTexto(bc){
   const SEM = 'Sem cargo informado', norm = x => x.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   const eCargo = x => CARGO_PALAVRAS.test(norm(x)) && !/^(simulado|questao)\b/.test(norm(x));
@@ -366,8 +374,8 @@ function cargoGrupoDeTexto(bc){
   if(!resto) return SEM;
   const toks = resto.split(/\s+[-–—]\s+|\s*\/\s*|,\s+/).map(t => t.replace(/\(.*?\)/g, ' ').replace(/^(19|20)\d{2}\b[\s,;\-—]*/, '').replace(/[\s,;\-—]*(19|20)\d{2}\s*$/, '').replace(/^["'“]+|["'”]+$/g, '').replace(/\s+/g, ' ').trim()).filter(t => t);
   const cortar = c => c.length > 90 ? c.slice(0, 87) + '…' : c;
-  const porExtenso = toks.find(eCargo); if(porExtenso) return cortar(porExtenso);      // o órgão ("PC-DF", "TCE RN") nunca é cargo
-  const sigla = toks.find(t => CARGO_SIGLAS[t.toLowerCase()]); if(sigla) return CARGO_SIGLAS[sigla.toLowerCase()];
+  const porExtenso = toks.find(eCargo); if(porExtenso) return cargoBase(porExtenso);      // o órgão ("PC-DF", "TCE RN") nunca é cargo
+  const sigla = toks.find(t => CARGO_SIGLAS[t.toLowerCase()]); if(sigla) return cargoBase(CARGO_SIGLAS[sigla.toLowerCase()]);
   if(bruto.indexOf('/') > 0){      // formato "SIGLA (ÓRGÃO)/ÓRGÃO/área/ano": sem cargo por extenso, vale a área
     const orgs = new Set((resto.match(/\(([^)]*)\)/g) || []).map(x => x.slice(1, -1).trim().toLowerCase())); if(toks[1]) orgs.add(toks[1].toLowerCase());
     const area = toks.slice(1).reverse().find(t => /[a-z]/.test(t) && !orgs.has(t.toLowerCase()) && !/^sem especialidade$/i.test(t));
