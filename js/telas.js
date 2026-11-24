@@ -356,13 +356,29 @@ function bancaGrupo(q){
   return q._bg;
 }
 
-function cargoGrupo(q){
-  if(q._cgSrc !== q.bc){
-    let c = String(cargoCurto(q.bc) || '').replace(/\s+/g, ' ').trim();
-    const partes = c.split(/\s+\u2014\s+/); if(partes.length > 1 && partes[partes.length-1].length > 4) c = partes[partes.length-1];      // "Simulado X — Órgão — Cargo": fica o cargo
-    c = c.replace(/[\s\u2014\-\/,]*(19|20)\d{2}\s*$/, '').trim();
-    q._cg = c ? (c.length > 90 ? c.slice(0, 87) + '…' : c) : 'Sem cargo informado'; q._cgSrc = q.bc;
+const CARGO_PALAVRAS = /\b(analista|auditor|tecnic[oa]|procurador|conselheir[oa]|assistente|advogad[oa]|administrador|contador|auxiliar|agente|especialista|engenheir[oa]|medic[oa]|professor|oficial|delegad[oa]|escriv[aã]o|perit[oa]|tecnologista|pesquisador|gestor|economista|arquitet[oa]|estatistic[oa]|bibliotecari[oa]|arquivista|secretari[oa]|inspetor|fiscal|promotor|juiz|defensor|consultor|coordenador|desenvolvedor|programador|psicolog[oa]|assessor|auditoria)\b/;
+const CARGO_SIGLAS = { 'proc':'Procurador', 'proc mun':'Procurador Municipal', 'proc jur':'Procurador Jurídico', 'adv':'Advogado', 'cont':'Contador', 'del pol':'Delegado de Polícia', 'ass amb':'Assistente Ambiental', 'ag adm':'Agente Administrativo', 'aud':'Auditor', 'med':'Médico', 'ana jur':'Analista Jurídico', 'tec adm':'Técnico Administrativo', 'ace':'Auditor de Controle Externo', 'audce':'Auditor de Controle Externo', 'aace':'Analista Administrativo de Controle Externo', 'aci':'Auditor de Controle Interno', 'aufc':'Auditor Federal de Controle Externo', 'tefc':'Técnico Federal de Controle Externo', 'ana adm':'Analista Administrativo', 'ana':'Analista', 'esp gt':'Especialista', 'tec min':'Técnico' };
+function cargoGrupoDeTexto(bc){
+  const SEM = 'Sem cargo informado', anoIni = /^(19|20)\d{2}\b[\s,;\-—]*/, norm = x => x.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const eCargo = x => CARGO_PALAVRAS.test(norm(x)) && !/^simulado\b/.test(norm(x));
+  let c = '', s = String(bc || '').replace(/\s+/g, ' ').trim();
+  if(!s) return SEM;
+  if(s.indexOf('/') > 0 && /\/\s*(19|20)\d{2}|\/[^/]+\//.test(s)){          // "BANCA (CARGO) - SIGLA (ÓRGÃO)/ÓRGÃO/área/cargo/ano"
+    const segs = s.split('/').map(x => x.trim()), org = (segs[1] || '').toLowerCase();
+    const resto = segs.slice(1).map(x => x.replace(anoIni, '').trim()).filter(x => x && !/^(19|20)\d{2}$/.test(x) && x.toLowerCase() !== org);
+    c = resto.slice().reverse().find(eCargo) || '';
+    if(!c){ const m = segs[0].match(/(?:\s-\s|\s—\s|,\s)([^()]+?)\s*\(/); const sig = m ? m[1].trim().toLowerCase() : ''; c = CARGO_SIGLAS[sig] || ''; }
+  }else{
+    c = String(cargoCurto(s) || '').replace(/\s+/g, ' ').trim();
+    const partes = c.split(/\s+—\s+/); if(partes.length > 1 && partes[partes.length-1].length > 4) c = partes[partes.length-1];
+    c = c.replace(/^["'“]+|["'”]+$/g, '').replace(/,\s*[A-Z][A-Za-z0-9 ]{1,10}$/, '').trim();
+    if(!eCargo(c)) return CARGO_SIGLAS[c.toLowerCase()] || SEM;               // "Inédita", "Simulado X", órgão, sigla solta não são cargo
   }
+  c = c.replace(/,\s*[A-Z][A-Za-z0-9 ]{1,10}$/, '').replace(/\s*\((?=[^)]*\))[A-Z0-9][A-Z0-9 \-.\/]*\)\s*$/, '').replace(/[\s—\-\/,]*(19|20)\d{2}\s*$/, '').trim();       // tira "(TC DF)", "(TCDF 2026)" e o ano finais
+  return c && /[A-Za-zÀ-ú]{3}/.test(c) ? (c.length > 90 ? c.slice(0, 87) + '…' : c) : SEM;
+}
+function cargoGrupo(q){
+  if(q._cgSrc !== q.bc){ q._cg = cargoGrupoDeTexto(q.bc); q._cgSrc = q.bc; }
   return q._cg;
 }
 function anoGrupo(q){ const a = anoRealDaQuestao(q); return a ? String(a) : 'Sem ano'; }
