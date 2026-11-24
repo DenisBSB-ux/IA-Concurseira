@@ -337,9 +337,7 @@ function computeSnapshot(){
 
 
 
-/* ---------- filtro por banca nas estatísticas por matéria ---------- */
-const BANCAS_KEY = 'ia_filtro_bancas_v1';
-let BANCAS_SEL = (()=>{ try{ return new Set(JSON.parse(localStorage.getItem(BANCAS_KEY) || '[]')); }catch(_){ return new Set(); } })();
+/* ---------- filtros (banca, cargo, ano) nas estatísticas por matéria ---------- */
 const BANCAS_NOMES = [
   [/elaboracao propria|inedita/, 'Elaboração própria'], [/gran cursos/, 'Gran Cursos (simulado)'], [/estrategia/, 'Estratégia Concursos (simulado)'], [/aprovalegis/, 'AprovaLegis (simulado)'],
   [/cebraspe|cespe/, 'Cebraspe/Cespe'], [/iades/, 'IADES'], [/quadrix/, 'Quadrix'], [/\bfcc\b/, 'FCC'], [/ibfc/, 'IBFC'], [/\bfgv\b/, 'FGV'], [/aocp/, 'AOCP'], [/idecan/, 'IDECAN'],
@@ -357,35 +355,82 @@ function bancaGrupo(q){
   if(q._bgSrc !== q.bc){ q._bg = bancaGrupoDeTexto(q.bc); q._bgSrc = q.bc; }
   return q._bg;
 }
-let BANCAS_MENU_ABERTO = false;
-BANCAS_SEL.delete('Outras bancas');
-function questaoNaBanca(q){ return BANCAS_SEL.size === 0 || BANCAS_SEL.has(bancaGrupo(q)); }
-function bancasDisponiveis(materias){
-  const cont = {}, mats = new Set(materias);
-  ALL_QUESTIONS.forEach(q => { if(!mats.has(q.materia) || q.duplicataOculta || (q.t!=='CE' && q.t!=='MC')) return; const g = bancaGrupo(q); cont[g] = (cont[g]||0) + 1; });
-  return Object.entries(cont).sort((a,b)=>b[1]-a[1] || a[0].localeCompare(b[0],'pt-BR'));      // todas as bancas, uma a uma
+
+function cargoGrupo(q){
+  if(q._cgSrc !== q.bc){
+    let c = String(cargoCurto(q.bc) || '').replace(/\s+/g, ' ').trim();
+    const partes = c.split(/\s+\u2014\s+/); if(partes.length > 1 && partes[partes.length-1].length > 4) c = partes[partes.length-1];      // "Simulado X — Órgão — Cargo": fica o cargo
+    c = c.replace(/[\s\u2014\-\/,]*(19|20)\d{2}\s*$/, '').trim();
+    q._cg = c ? (c.length > 90 ? c.slice(0, 87) + '…' : c) : 'Sem cargo informado'; q._cgSrc = q.bc;
+  }
+  return q._cg;
 }
-function bancasGravar(){ try{ localStorage.setItem(BANCAS_KEY, JSON.stringify([...BANCAS_SEL])); }catch(_){} }
+function anoGrupo(q){ const a = anoRealDaQuestao(q); return a ? String(a) : 'Sem ano'; }
+const FX = {
+  banca: { rot: 'Banca', plural: 'bancas', todas: 'todas', key: 'ia_filtro_bancas_v1', get: bancaGrupo },
+  cargo: { rot: 'Cargo', plural: 'cargos', todas: 'todos', key: 'ia_filtro_cargos_v1', get: cargoGrupo },
+  ano:   { rot: 'Ano',   plural: 'anos',   todas: 'todos', key: 'ia_filtro_anos_v1',   get: anoGrupo }
+};
+Object.keys(FX).forEach(id => { const f = FX[id]; try{ f.sel = new Set(JSON.parse(localStorage.getItem(f.key) || '[]')); }catch(_){ f.sel = new Set(); } f.sel.delete('Outras bancas'); f.busca = ''; f.foco = false; });
+let FX_ABERTO = null;
+function filtrosAtivos(){ return Object.values(FX).some(f => f.sel.size > 0); }
+function questaoNosFiltros(q){ for(const id in FX){ const f = FX[id]; if(f.sel.size && !f.sel.has(f.get(q))) return false; } return true; }
+function fxOpcoes(id, materias){
+  const f = FX[id], cont = {}, mats = new Set(materias);
+  ALL_QUESTIONS.forEach(q => { if(!mats.has(q.materia) || q.duplicataOculta || (q.t!=='CE' && q.t!=='MC')) return; const g = f.get(q); cont[g] = (cont[g]||0) + 1; });
+  const lista = Object.entries(cont);
+  if(id === 'ano') return lista.sort((a,b) => (a[0]==='Sem ano') - (b[0]==='Sem ano') || b[0].localeCompare(a[0]));
+  return lista.sort((a,b) => b[1]-a[1] || a[0].localeCompare(b[0],'pt-BR'));
+}
+function fxGravar(id){ try{ localStorage.setItem(FX[id].key, JSON.stringify([...FX[id].sel])); }catch(_){} }
+function fxNorm(t){ return String(t||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase(); }
+function fxMenuHtml(id, opcoes){
+  const f = FX[id], aberto = FX_ABERTO === id, ativo = f.sel.size > 0, q = fxNorm(f.busca);
+  const visiveis = opcoes.filter(([g]) => !q || fxNorm(g).includes(q));
+  const rotBtn = ativo ? (f.sel.size === 1 ? esc([...f.sel][0]) : f.sel.size + ' selecionados') : f.todas;
+  return `<div class="bc-menu" data-fx-menu="${id}">
+    <button type="button" class="bc-btn ${ativo?'ativo':''}" data-fx-toggle="${id}" aria-expanded="${aberto}">${f.rot}: <b>${rotBtn.length > 34 ? rotBtn.slice(0,33)+'…' : rotBtn}</b> <span class="bc-seta">▾</span></button>
+    <div class="bc-pop" ${aberto ? '' : 'hidden'}>
+      <input type="search" class="bc-busca" data-fx-busca="${id}" placeholder="Pesquisar ${f.plural}…" value="${esc(f.busca)}" aria-label="Pesquisar ${f.plural}">
+      <div class="bc-pop-topo"><label class="bc-todos"><input type="checkbox" data-fx-todos="${id}" ${visiveis.length && visiveis.every(([g]) => f.sel.has(g)) ? 'checked' : ''}> Selecionar tudo${q ? ' (resultado)' : ''}</label><span>${visiveis.length}/${opcoes.length}</span>${ativo ? `<button type="button" class="prova-det-btn" data-fx-limpar="${id}">Limpar</button>` : ''}</div>
+      <div class="bc-lista">${visiveis.map(([g,n]) => `<label class="bc-op ${f.sel.has(g)?'sel':''}"><input type="checkbox" data-fx="${id}" data-fx-v="${esc(g)}" ${f.sel.has(g)?'checked':''}> <span>${esc(g)}</span> <small>${n}</small></label>`).join('') || '<div class="bc-vazio">Nada encontrado.</div>'}</div>
+    </div>
+  </div>`;
+}
+function fxPosRender(){
+  if(!FX_ABERTO) return; const f = FX[FX_ABERTO]; if(!f || !f.foco) return;
+  const el = document.querySelector('[data-fx-busca="' + FX_ABERTO + '"]'); if(el){ el.focus(); try{ el.setSelectionRange(el.value.length, el.value.length); }catch(_){} }
+}
+document.addEventListener('input', e => {
+  const b = e.target && e.target.dataset && e.target.dataset.fxBusca; if(!b) return;
+  FX[b].busca = e.target.value; FX[b].foco = true; render(); fxPosRender();
+});
 document.addEventListener('change', e => {
-  const c = e.target && e.target.closest && e.target.closest('[data-bc]'); if(!c) return;
-  if(c.checked) BANCAS_SEL.add(c.dataset.bc); else BANCAS_SEL.delete(c.dataset.bc);
-  bancasGravar(); render();
+  const c = e.target; if(!c || !c.dataset) return;
+  if(c.dataset.fx){ const f = FX[c.dataset.fx]; if(c.checked) f.sel.add(c.dataset.fxV); else f.sel.delete(c.dataset.fxV); f.foco = false; fxGravar(c.dataset.fx); render(); return; }
+  if(c.dataset.fxTodos){
+    const id = c.dataset.fxTodos, f = FX[id];
+    document.querySelectorAll('[data-fx="' + id + '"]').forEach(x => { if(c.checked) f.sel.add(x.dataset.fxV); else f.sel.delete(x.dataset.fxV); });
+    f.foco = false; fxGravar(id); render();
+  }
 });
 document.addEventListener('click', e => {
-  const t = e.target.closest && e.target.closest('[data-bc-toggle]');
-  if(t){ BANCAS_MENU_ABERTO = !BANCAS_MENU_ABERTO; const pop = document.querySelector('.bc-pop'); if(pop) pop.hidden = !BANCAS_MENU_ABERTO; t.setAttribute('aria-expanded', String(BANCAS_MENU_ABERTO)); return; }
-  const b = e.target.closest && e.target.closest('[data-bc-limpar]');
-  if(b){ BANCAS_SEL.clear(); bancasGravar(); render(); return; }
-  if(BANCAS_MENU_ABERTO && !(e.target.closest && e.target.closest('.bc-menu'))){ BANCAS_MENU_ABERTO = false; const pop = document.querySelector('.bc-pop'); if(pop) pop.hidden = true; }
+  const t = e.target.closest && e.target.closest('[data-fx-toggle]');
+  if(t){ const id = t.dataset.fxToggle; FX_ABERTO = FX_ABERTO === id ? null : id; render(); return; }
+  const l = e.target.closest && e.target.closest('[data-fx-limpar]');
+  if(l){ const id = l.dataset.fxLimpar; FX[id].sel.clear(); FX[id].busca = ''; fxGravar(id); render(); return; }
+  const lt = e.target.closest && e.target.closest('[data-fx-limpar-todos]');
+  if(lt){ Object.keys(FX).forEach(id => { FX[id].sel.clear(); fxGravar(id); }); render(); return; }
+  if(FX_ABERTO && !(e.target.closest && e.target.closest('.bc-menu'))){ FX_ABERTO = null; render(); }
 });
-document.addEventListener('keydown', e => { if(e.key === 'Escape' && BANCAS_MENU_ABERTO){ BANCAS_MENU_ABERTO = false; const pop = document.querySelector('.bc-pop'); if(pop) pop.hidden = true; } });
+document.addEventListener('keydown', e => { if(e.key === 'Escape' && FX_ABERTO){ FX_ABERTO = null; render(); } });
 function computeSnapshotMateria(materiaKey, comFiltroBanca){
   const bucket = getBucket(materiaKey);
   let ac=0, erradas=0, ultimaRespostaTs=null;
   Object.entries(bucket.perguntas).forEach(([uid,p])=>{
     const qq = BY_UID[uid];
     if(!qq || qq.duplicataOculta || (qq.t!=='CE' && qq.t!=='MC')) return; // órfã, duplicata oculta ou fora do escopo do total: não conta (senão 'respondidas' passa do total)
-    if(comFiltroBanca && !questaoNaBanca(qq)) return;
+    if(comFiltroBanca && !questaoNosFiltros(qq)) return;
     if(p.ultimoResultado===true) ac++;
     else if(p.ultimoResultado===false) erradas++;
     // (item 3) última resposta dada nesta matéria — o último item do histórico
@@ -396,7 +441,7 @@ function computeSnapshotMateria(materiaKey, comFiltroBanca){
       if(tsDaQuestao && (!ultimaRespostaTs || tsDaQuestao>ultimaRespostaTs)) ultimaRespostaTs = tsDaQuestao;
     }
   });
-  const totalPontuavel = ALL_QUESTIONS.filter(q=>q.materia===materiaKey && !q.duplicataOculta && (q.t==='CE'||q.t==='MC') && (!comFiltroBanca || questaoNaBanca(q))).length;
+  const totalPontuavel = ALL_QUESTIONS.filter(q=>q.materia===materiaKey && !q.duplicataOculta && (q.t==='CE'||q.t==='MC') && (!comFiltroBanca || questaoNosFiltros(q))).length;
   return { taxa: pct(ac, ac+erradas), ac, erradas, totalPontuavel, ultimaRespostaTs };
 }
 
@@ -624,7 +669,7 @@ function renderEstatisticasPorMateria(){
     return a.nome.localeCompare(b.nome,'pt-BR');
   });
   // matérias do edital que ainda não têm lista: entram na lista geral, destacadas, no topo
-  const bancasLista = bancasDisponiveis(materias), filtroAtivo = BANCAS_SEL.size > 0;
+  const filtroAtivo = filtrosAtivos();
   if(filtroAtivo){ for(let i = linhas.length - 1; i >= 0; i--) if(!linhas[i].total) linhas.splice(i, 1); }
   const somaQ = linhas.reduce((a, l) => a + (l.total || 0), 0);
   const faltam = adapt.faltantes.map(f => ({ nome: f.materia, faltante: true, peso: f.peso, acertos: 0, erros: 0, pct: 0, respondidas: 0, total: 0, ativa: false }));
@@ -637,13 +682,8 @@ function renderEstatisticasPorMateria(){
       <h3 style="margin:0;color:inherit;font-size:22px;">📈 Estatísticas por matéria</h3>
       ${adapt.adapta ? `<div class="conc-adapt"><span>Lista adaptada ao cargo: <b>${adapt.visiveis.length}</b> da base${adapt.faltantes.length ? ` · <b class="conc-falta-n">${adapt.faltantes.length}</b> do edital sem lista` : ''}</span>${adapt.ocultas.length ? ` <button type="button" class="prova-det-btn" data-conc-fora="1">${foraVisivel ? 'Ocultar' : 'Mostrar'} ${adapt.ocultas.length} fora do cargo</button>` : ''}</div>` : ''}
     </div>
-    ${bancasLista.length > 1 ? `<div class="bc-menu" role="group" aria-label="Filtrar por banca">
-      <button type="button" class="bc-btn ${filtroAtivo?'ativo':''}" data-bc-toggle="1" aria-expanded="${BANCAS_MENU_ABERTO}">Banca: <b>${filtroAtivo ? (BANCAS_SEL.size === 1 ? esc([...BANCAS_SEL][0]) : BANCAS_SEL.size + ' selecionadas') : 'todas'}</b> <span class="bc-seta">▾</span></button>
-      <div class="bc-pop" ${BANCAS_MENU_ABERTO ? '' : 'hidden'}>
-        <div class="bc-pop-topo"><span>${bancasLista.length} bancas</span>${filtroAtivo ? '<button type="button" class="prova-det-btn" data-bc-limpar="1">Limpar</button>' : ''}</div>
-        <div class="bc-lista">${bancasLista.map(([g,n])=>`<label class="bc-op ${BANCAS_SEL.has(g)?'sel':''}"><input type="checkbox" data-bc="${esc(g)}" ${BANCAS_SEL.has(g)?'checked':''}> <span>${esc(g)}</span> <small>${n}</small></label>`).join('')}</div>
-      </div>
-    </div>${filtroAtivo ? `<div class="bc-soma">Somando <b>${[...BANCAS_SEL].map(esc).join(' + ')}</b>: <b>${somaQ}</b> questões em ${linhas.length} matéria${linhas.length===1?'':'s'}</div>` : ''}` : ''}
+    <div class="fx-barra" role="group" aria-label="Filtros das estatísticas">${['banca','cargo','ano'].map(id => fxMenuHtml(id, fxOpcoes(id, materias))).join('')}${filtroAtivo ? '<button type="button" class="prova-det-btn" data-fx-limpar-todos="1">Limpar filtros</button>' : ''}</div>
+    ${filtroAtivo ? `<div class="bc-soma">Somando ${Object.keys(FX).filter(id => FX[id].sel.size).map(id => `<b>${FX[id].rot}</b>: ${[...FX[id].sel].slice(0,2).map(esc).join(', ')}${FX[id].sel.size > 2 ? ' +' + (FX[id].sel.size - 2) : ''}`).join(' · ')} → <b>${somaQ}</b> questões em ${linhas.length} matéria${linhas.length===1?'':'s'}</div>` : ''}
     <div class="resumo-dia">
       <div class="resumo-esq">
       <span class="resumo-item" title="Baseado no histórico recente de cada questão (últimas 20 tentativas)"><small>Hoje</small><b>${atividade.totalHoje} questõe${atividade.totalHoje===1?'':'s'}</b></span>
@@ -1503,7 +1543,7 @@ function notaArtigosHtml(ag){
 }
 // Estatísticas por matéria: distribuição das questões por assunto, cada um com o menu de artigos
 function distribuicaoAssuntosMateriaHtml(m){
-  const qs = questoesDaMateria(m).filter(questaoNaBanca), cont = {};
+  const qs = questoesDaMateria(m).filter(questaoNosFiltros), cont = {};
   qs.forEach(q=>{ const t = q.tema||'Geral'; cont[t] = (cont[t]||0)+1; });
   const temas = temasDisponiveis(m).filter(t=>cont[t]);
   Object.keys(cont).forEach(t=>{ if(!temas.includes(t)) temas.push(t); });
