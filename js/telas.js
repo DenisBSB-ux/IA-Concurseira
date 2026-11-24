@@ -338,7 +338,7 @@ function computeSnapshot(){
 
 /* ---------- filtros (banca, cargo, ano) nas estatísticas por matéria ---------- */
 const BANCAS_NOMES = [
-  [/elaboracao propria|inedita/, 'Elaboração própria'], [/gran cursos/, 'Gran Cursos (simulado)'], [/estrategia/, 'Estratégia Concursos (simulado)'], [/aprovalegis/, 'AprovaLegis (simulado)'],
+  [/elaboracao propria|inedita/, 'Elaboração própria'], [/gran cursos|estrategia|aprovalegis/, 'Cebraspe/Cespe'],      // simulados de cursinho seguem o padrão Cebraspe; o nome do cursinho continua no texto de cada questão
   [/cebraspe|cespe/, 'Cebraspe/Cespe'], [/iades/, 'IADES'], [/quadrix/, 'Quadrix'], [/\bfcc\b/, 'FCC'], [/ibfc/, 'IBFC'], [/\bfgv\b/, 'FGV'], [/aocp/, 'AOCP'], [/idecan/, 'IDECAN'],
   [/fundatec|funatec/, 'Fundatec'], [/consulplan/, 'Consulplan'], [/legalle/, 'Legalle'], [/vunesp/, 'Vunesp'], [/ipefae/, 'IPEFAE'], [/funiversa/, 'Funiversa'], [/verbena/, 'Instituto Verbena'],
   [/cogepe|fiocruz/, 'COGEPE/Fiocruz'], [/fcpc/, 'FCPC'], [/fadesp/, 'FADESP'], [/iacp/, 'Instituto IACP'], [/selecon/, 'Selecon'], [/amauc/, 'AMAUC'], [/fundep/, 'FUNDEP'], [/acafe/, 'ACAFE'],
