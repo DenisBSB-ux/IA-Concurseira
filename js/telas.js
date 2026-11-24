@@ -376,11 +376,6 @@ function cargoGrupoDeTexto(bc){
   const cortar = c => c.length > 90 ? c.slice(0, 87) + '…' : c;
   const porExtenso = toks.find(eCargo); if(porExtenso) return cargoBase(porExtenso);      // o órgão ("PC-DF", "TCE RN") nunca é cargo
   const sigla = toks.find(t => CARGO_SIGLAS[t.toLowerCase()]); if(sigla) return cargoBase(CARGO_SIGLAS[sigla.toLowerCase()]);
-  if(bruto.indexOf('/') > 0){      // formato "SIGLA (ÓRGÃO)/ÓRGÃO/área/ano": sem cargo por extenso, vale a área
-    const orgs = new Set((resto.match(/\(([^)]*)\)/g) || []).map(x => x.slice(1, -1).trim().toLowerCase())); if(toks[1]) orgs.add(toks[1].toLowerCase());
-    const area = toks.slice(1).reverse().find(t => /[a-z]/.test(t) && !orgs.has(t.toLowerCase()) && !/^sem especialidade$/i.test(t));
-    if(area) return cortar(area);
-  }
   return SEM;
 }
 function cargoGrupo(q){
