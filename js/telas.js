@@ -1134,7 +1134,7 @@ function renderMateriaPage(){
 function apostilasDe(materia){ if(typeof APOSTILAS === 'undefined') return []; const m = apostilaMateria(materia); return APOSTILAS.filter(a => a.m === materia || a.m === m); }
 function apostilaChip(materia){
   const n = apostilasDe(materia).length; if(!n) return '';
-  return ` <button type="button" class="ap-link" data-apostilas-mat="${esc(materia)}" title="Abrir as ${n} apostila${n>1?'s':''} em PDF desta matéria">📄 ${n}</button>`;
+  return ` <button type="button" class="ap-link" data-apostilas-mat="${esc(materia)}" title="Abrir ${n>1?'as '+n+' apostilas':'a apostila'} em PDF desta matéria"><span class="ap-ico" aria-hidden="true">📄</span> ${n>1 ? n+' apostilas' : 'Apostila'}</button>`;
 }
 function renderApostilas(){
   const todas = (typeof APOSTILAS !== 'undefined') ? APOSTILAS : [];
