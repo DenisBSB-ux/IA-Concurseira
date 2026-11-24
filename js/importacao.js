@@ -865,7 +865,8 @@ function cancelarImportSemelhante(){
 }
 
 function handleImportFile(file, modoForcado){
-  const sugestaoNome = (file.name||'').replace(/\.[^/.]+$/,'').replace(/[_\-]+/g,' ').trim();
+  // "Banca - Matéria - data" (padrão das listas): mantém o " - " e o hífen das datas; os demais hífens e _ viram espaço
+  const sugestaoNome = (file.name||'').replace(/\.[^/.]+$/,'').replace(/_+/g,' ').replace(/(\S)-(?=\S)/g, (m, a) => /\d/.test(a) ? m : a + ' ').replace(/\s+/g,' ').trim();
   const ehPdf = /\.pdf$/i.test(file.name||'') || file.type === 'application/pdf';
   if(ehPdf){
     extrairTextoDePdf(file, sugestaoNome, modoForcado);
