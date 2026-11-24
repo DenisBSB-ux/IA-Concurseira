@@ -357,6 +357,11 @@ const DOUTRINA_TEXTO = [
   [/planejamento|organiza[çc][ãa]o|dire[çc][ãa]o|controle|departamentaliza|amplitude|estrutura|fun[çc][õo]es/i,'funcoes'],
   [/pol[íi]ticas p[úu]blicas/i,'governanca']
 ];
+/* Redes de Computadores: o assunto da questão já é o item do edital ("N Título"); a ficha abre na seção N */
+function doutrinaRedesDaQuestao(q){
+  const m = String(q.tema||'').match(/^(\d+) /);
+  return m && +m[1] >= 1 && +m[1] <= 12 ? 'redes:' + (+m[1] - 1) : null;
+}
 function doutrinaPsDaQuestao(q){
   const t = String(q.q||'');
   const R = [[0,/XABCDE|\bAVDI\b|gerenciamento de riscos|hierarquia|isolar a [áa]rea|seguran[çc]a (da cena|do local)/i],
@@ -440,6 +445,7 @@ function doutrinaDaQuestao(q){
   if(ehConst && /efic[áa]cia (plena|contida|limitada)|normas (constitucionais )?program[áa]ticas|classifica[çc][ãa]o tripartite|aplicabilidade das normas|restringida pelo legislador infraconstitucional/i.test(t)) return 'eficacia';
   if(/^reg/i.test(String(q.materia||'')) && /mandado de seguran[çc]a/i.test(String(q.q||'')) && /Minist[ée]rio P[úu]blico|MP\b/.test(String(q.q||''))) return 'mpc';
   if(/primeiros socorros/i.test(String(q.materia||''))) return doutrinaPsDaQuestao(q);
+  if(/redes de computadores/i.test(String(q.materia||''))) return doutrinaRedesDaQuestao(q);
   if(/PDPM|mulher|maria da penha/i.test(String(q.materia||''))){ const k = doutrinaPdpmDaQuestao(q); if(k) return k; }
   if(/^constitucional/i.test(String(q.materia||'').trim())) return 'cst:geral';
   const tema = String(q.tema||'').trim();
@@ -453,10 +459,22 @@ function doutrinaTitulo(chave){
   if(/^df:/.test(chave)) return DF_TITULOS[String(chave).slice(3)] || 'Conhecimentos do DF';
   if(/^cst:/.test(chave)) return 'Constitucional: jurisprudência e doutrina';
   if(/^dadm:/.test(chave)) return DADM_TITULOS[String(chave).slice(5)] || 'Direito Administrativo';
+  if(/^redes:/.test(chave)){ const T = ['Fundamentos','LAN, WAN, WLAN e meios','Ethernet e IEEE 802','TCP, UDP, IP, ICMP e ARP','IPv4, IPv6, CIDR e NAT','DNS, DHCP, NTP, HTTP, SSH e SNMP','VLAN, trunk e STP','Roteamento','VPN','Equipamentos de rede','Redes sem fio','Alta disponibilidade, QoS e diagnóstico']; return 'Redes: ' + (T[+String(chave).slice(6)] || 'resumo do assunto'); }
   if(/^ps:/.test(chave)){ const T = ['Segurança da cena e avaliação','RCP e DEA','Engasgo','Hemorragias e choque','Queimaduras e choque elétrico','Fraturas, entorse e luxação','Convulsão, desmaio e hipoglicemia','Intoxicações e peçonhentos','Calor e afogamento']; return T[+String(chave).slice(3)] || 'Primeiros socorros'; }
   if(/^pdpm:/.test(chave)){ const T = { consulta:'Consulta pública do II PDPM', acoes:'Ações e projetos do II PDPM', diversidade:'Misoginia e saúde (II PDPM)', principios:'Laicidade e ação afirmativa', penal:'Crimes contra a mulher e súmulas' }; return T[String(chave).split(':')[1].split('@')[0]] || 'Doutrina'; }
   if(DOUTRINA[chave]) return DOUTRINA[chave].titulo.split(' · ')[0];
   const k = String(chave).replace(/^adm:/,''); const t = DOUTRINA_TEMAS.find(x=>x[1]===k); return t ? t[2] : 'Doutrina';
+}
+let doutrinaRedesPromessa = null;
+function doutrinaRedesCarregar(){
+  if(typeof DOUTRINA_REDES!=='undefined') return Promise.resolve();
+  if(doutrinaRedesPromessa) return doutrinaRedesPromessa;
+  doutrinaRedesPromessa = new Promise((ok,falha)=>{
+    const sc = document.createElement('script'); sc.src = 'js/doutrina-redes.js?v=' + ((window.__TCDF_BUILD__||{}).versao||'');
+    sc.onload = ok; sc.onerror = ()=>{ doutrinaRedesPromessa = null; falha(new Error('Não foi possível carregar o resumo de Redes.')); };
+    anexarScriptComTimeout(sc);
+  });
+  return doutrinaRedesPromessa;
 }
 let doutrinaPsPromessa = null;
 function doutrinaPsCarregar(){
@@ -527,7 +545,11 @@ function doutrinaAdmCarregar(){
 async function doutrinaAbrir(chave, uid){
   const el = leiEl(); LEI.modo = 'apostila'; LEI.q = uid; LEI.aberta = true; el.hidden = false; el.classList.add('modo-apostila');
   let d = DOUTRINA[chave], ini = 0;
-  if(!d && /^ps:/.test(chave)){
+  if(!d && /^redes:/.test(chave)){
+    document.getElementById('lei-corpo').textContent = 'Carregando…';
+    try{ await doutrinaRedesCarregar(); }catch(e){ document.getElementById('lei-corpo').textContent = e.message; return; }
+    const m = String(chave).match(/^redes:(\d+)$/); d = DOUTRINA_REDES.redes; ini = m ? +m[1] : 0;
+  } else if(!d && /^ps:/.test(chave)){
     document.getElementById('lei-corpo').textContent = 'Carregando…';
     try{ await doutrinaPsCarregar(); }catch(e){ document.getElementById('lei-corpo').textContent = e.message; return; }
     const m = String(chave).match(/^ps:(\d+)$/); d = DOUTRINA_PS.ps; ini = m ? +m[1] : 0;

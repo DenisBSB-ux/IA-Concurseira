@@ -331,6 +331,7 @@ const EDITAL = {
   /* Redes de Computadores — DPDF 2026, Analista de Apoio à Assistência Judiciária (Informática/Redes): 12 assuntos na ordem do edital.
      O assunto do caderno (tecconcursos) vira o item do edital; o que o edital de Redes não cobra fica como "Fora do edital — …". */
   'Redes de Computadores': {
+    ocultarFora: true,      // assuntos de outras matérias do cargo (AD, SAN, nuvem…) ficam guardados, mas ocultos nesta lista (podem servir a outro concurso)
     itens: ['1 Fundamentos de redes de computadores', '2 Redes LAN, WAN e WLAN. Topologias e meios de transmissão', '3 Ethernet e padrões IEEE 802', '4 Protocolos TCP, UDP, IP, ICMP e ARP', '5 Endereçamento IPv4 e IPv6, sub-redes, CIDR e NAT', '6 Serviços e protocolos de rede: DNS, DHCP, NTP, HTTP/HTTPS, SSH e SNMP', '7 VLAN, trunking e Spanning Tree', '8 Roteamento estático e dinâmico', '9 Redes privadas virtuais (VPN)', '10 Equipamentos de rede: switches, roteadores, pontos de acesso e balanceadores de carga', '11 Redes sem fio: conceitos, padrões, configuração e segurança', '12 Redundância, alta disponibilidade, qualidade de serviço (QoS) e diagnóstico de redes'],
     mapa: Object.assign({},
       ...[
