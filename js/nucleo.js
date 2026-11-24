@@ -350,6 +350,8 @@ function marcarDuplicatas(){
       lista.forEach((q,i)=>{ if(i>0) q.duplicataOculta = true; });
     });
   });
+  // listas cujo edital manda ocultar o que está "Fora do edital — …" (ex.: Redes): a questão fica guardada, só some das telas
+  ALL_QUESTIONS.forEach(q => { const c = (typeof editalCfgDe === 'function') ? editalCfgDe(q.materia) : null; if(c && c.ocultarFora && String(q.tema||'').startsWith(FORA_DO_EDITAL)){ q.duplicataOculta = true; q.foraEditalOculta = true; } });
   try{ if(typeof concursoMarcarForaDoCargo === 'function') concursoMarcarForaDoCargo(); }catch(e){ console.warn('Filtro de assuntos do cargo', e); }      // assuntos fora do edital do cargo ficam ocultos
 }
 /* edição manual órfã: o uid é "matéria-número" e o número muda entre arquivos; uma edição antiga (guardada no aparelho ou na nuvem)
