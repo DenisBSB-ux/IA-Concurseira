@@ -1,6 +1,6 @@
 ---
 name: teoria-em-figura
-description: Gera e mantém as "figuras" das resoluções do TCDF Plataforma (cartões de teoria com fonte e resolução em figura). Use quando o usuário enviar uma lista .md e pedir figuras/teoria em figura de uma matéria, ou perguntar se uma mudança precisa de upload das listas.
+description: Gera e mantém as "figuras" das resoluções do IA Concurseira (cartões de teoria com fonte e resolução em figura). Use quando o usuário enviar uma lista .md e pedir figuras/teoria em figura de uma matéria, ou perguntar se uma mudança precisa de upload das listas.
 ---
 
 # Teoria em figura / Resolução em figura

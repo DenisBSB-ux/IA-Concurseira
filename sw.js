@@ -1,4 +1,4 @@
-/* Service worker da TCDF Plataforma: deixa o app abrir e funcionar sem internet depois de uma primeira visita.
+/* Service worker da IA Concurseira: deixa o app abrir e funcionar sem internet depois de uma primeira visita.
    Estratégia: rede primeiro (sempre a versão nova quando há conexão), cache como reserva quando a rede falha.
    Nunca guarda chamadas do Firebase/Firestore (o app tem a própria fila de envio). */
 const CACHE = 'tcdf-offline-v1';

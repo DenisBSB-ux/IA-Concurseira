@@ -2,11 +2,11 @@
 # Pipeline de montagem de uma lista (rodar na pasta de trabalho, com original.md, res/bNN.py e limite_destaques.py ao lado).
 # build -> destaques do 📌 (1 ==fundo== + 1 **negrito**) -> final2.md. Item Errado força 🪤 vazia (padrão: sem 🪤 em Errado). Depois: reduzir, limpar, classificar (após "sim"), verificações.
 cd "${1:-.}"
-SK=/home/user/tcdf-plataforma/.claude/skills/formatar-resolucoes
+export SK="$(git -C "$(dirname "$0")" rev-parse --show-toplevel)/.claude/skills/formatar-resolucoes"
 rm -rf res2; mkdir -p res2
 python3 - <<'P'
 import glob,os,importlib.util
-spec=importlib.util.spec_from_file_location('m','/home/user/tcdf-plataforma/.claude/skills/formatar-resolucoes/montar_resolucoes.py')
+spec=importlib.util.spec_from_file_location('m',os.environ['SK']+'/montar_resolucoes.py')
 m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
 _,p,Q=m.ler('original.md')
 for f in sorted(glob.glob('res/b*.py')):

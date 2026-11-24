@@ -3,6 +3,7 @@
 Uso: python3 gerar_texto_lei.py entrada.txt LC116_TEXTO lc116-texto.js "Texto da LC 116/2003" [--corte REGEX] [--depois REGEX] [--max N]
 (roda da raiz do repositório). Mantém a ÚLTIMA ocorrência de cada artigo e, dentro do artigo, o último de cada § / inciso / alínea repetido:
 o Planalto imprime o texto antigo riscado antes do vigente, e o pdftotext não distingue o risco."""
+import os
 import re,json,sys
 INI=re.compile(r'^(Art(?:igo)?\.?\s*\d+(?:-[A-Z])?\s*[º°o.]?\s|§\s*\d+|Parágrafo único|[IVXLC]+\s*[-–—]\s|[a-z]\)\s|\d+\.\s)')
 CAB=re.compile(r'^(LIVRO|T[ÍI]TULO|CAP[ÍI]TULO|SE[ÇC][ÃA]O|SUBSE[ÇC][ÃA]O|PARTE|DISPOSI[ÇC][ÕO]ES|ANEXO)\b')
@@ -63,7 +64,7 @@ def grava(arq,var,cab,art):
     for k,ps in art.items():
         ps[0]=re.sub(r'^Art\.?\s*(\d+(?:-[A-Z])?)\s*[º°o.]?\s*',lambda m:'Art. '+m.group(1)+('º' if m.group(1).isdigit() and int(m.group(1))<10 else '.')+' ',ps[0])
     ks=sorted(art,key=lambda x:(int(x.split('-')[0]),x.split('-')[1] if '-' in x else ''))
-    open('/home/user/tcdf-plataforma/js/'+arq,'w',encoding='utf-8').write(f"/* {cab} — carregado só quando alguém abre um artigo. */\nconst {var} = "+json.dumps({k:art[k] for k in ks},ensure_ascii=False,separators=(',',':'))+";\n")
+    open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','..','js',arq),'w',encoding='utf-8').write(f"/* {cab} — carregado só quando alguém abre um artigo. */\nconst {var} = "+json.dumps({k:art[k] for k in ks},ensure_ascii=False,separators=(',',':'))+";\n")
     print(arq,len(art),ks[:2],ks[-2:])
     return art
 

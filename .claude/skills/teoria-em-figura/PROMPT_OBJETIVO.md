@@ -1,6 +1,6 @@
 # Prompt do revisor "resumo objetivo e prático" (por matéria)
 
-Você reescreve o RESUMO da matéria <NOME> (arquivo <ARQ_RESUMO>, só assuntos <FAIXA>) do TCDF Plataforma para ficar OBJETIVO e PRÁTICO. Problema atual: o mesmo fato aparece várias vezes (⚡ Em 30 segundos, tabela "O que a banca troca", 📌 Regras por lei com microtítulos "### X · 1 prova", 💡 Macetes). O aluno quer ler pouco e lembrar muito.
+Você reescreve o RESUMO da matéria <NOME> (arquivo <ARQ_RESUMO>, só assuntos <FAIXA>) do IA Concurseira para ficar OBJETIVO e PRÁTICO. Problema atual: o mesmo fato aparece várias vezes (⚡ Em 30 segundos, tabela "O que a banca troca", 📌 Regras por lei com microtítulos "### X · 1 prova", 💡 Macetes). O aluno quer ler pouco e lembrar muito.
 
 Para CADA assunto, devolva o markdown novo COMPLETO no formato:
 ```

@@ -1,6 +1,6 @@
 # Prompt do revisor de resumo (uma matéria por vez)
 
-Você revisa o RESUMO de estudo da matéria <NOME> do TCDF Plataforma (concurso TCDF). Leia o arquivo <ARQ_RESUMO> (resumo por assunto: "Em 30 segundos", "Regras por lei", "Pegadinhas", "Macetes"). Fontes de verdade, só dentro do projeto /home/user/tcdf-plataforma: textos de lei em js/*-texto.js (CF, CTN, leis, decretos…), js/doutrina-*.js, e os flashcards/lacunas da matéria em js/treino-<SLUG>.js (campos f=enunciado, g=gabarito, v=resumo curto, x=erro→certo, ref=dispositivo). NÃO use a internet.
+Você revisa o RESUMO de estudo da matéria <NOME> do IA Concurseira (concurso TCDF). Leia o arquivo <ARQ_RESUMO> (resumo por assunto: "Em 30 segundos", "Regras por lei", "Pegadinhas", "Macetes"). Fontes de verdade, só dentro do projeto a raiz do repositório: textos de lei em js/*-texto.js (CF, CTN, leis, decretos…), js/doutrina-*.js, e os flashcards/lacunas da matéria em js/treino-<SLUG>.js (campos f=enunciado, g=gabarito, v=resumo curto, x=erro→certo, ref=dispositivo). NÃO use a internet.
 
 Objetivo: o resumo deve servir à revisão rápida e estar CORRETO. Procure e proponha correções para:
 1. Erros de conteúdo (conceito, prazo, número, competência, dispositivo) — confira SEMPRE no texto da lei do projeto antes de afirmar; se não conseguir confirmar, não mude.

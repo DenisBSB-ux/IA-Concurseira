@@ -1,6 +1,6 @@
 rules_version = '2';
 
-// Regras de segurança do Firestore da TCDF Plataforma.
+// Regras de segurança do Firestore da IA Concurseira.
 // Como publicar: Firebase Console → Firestore Database → aba "Regras" →
 // colar este arquivo → "Publicar". Passo a passo completo em SEGURANCA.md.
 //

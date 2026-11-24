@@ -1,4 +1,4 @@
-# PADRÃO ÚNICO das listas de questões (TCDF Plataforma)
+# PADRÃO ÚNICO das listas de questões (IA Concurseira)
 
 Todas as matérias saem **iguais**. Este arquivo reúne tudo o que o usuário decidiu (out/2026). Antes de mexer em qualquer lista, leia-o inteiro; para executar, siga `ATUALIZAR_LISTA.md` (um comando fecha a lista: `finalizar_lista.sh`).
 

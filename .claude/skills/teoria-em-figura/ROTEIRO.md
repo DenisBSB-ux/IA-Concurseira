@@ -3,7 +3,7 @@ Você produz cartões de teoria (dados JS) para um bloco de questões. NUNCA cit
 
 ## Entradas
 - Lista: <lista.md>  (blocos `## QUESTÃO n`; leia Enunciado, Gabarito e a linha ⚖️ da Resolução).
-- Texto da lei: `node /home/user/tcdf-plataforma/.claude/skills/formatar-resolucoes/lei.js "CF" 150` (siglas: CF, CTN, "Lei 9.430", "LC 116", "LC 87", "ADCT", "EC 132", "Decreto-lei 1.598"). Leia o(s) artigo(s) citados na linha ⚖️ ANTES de escrever cada cartão. Se o dispositivo não estiver carregado ("artigo não carregado") ou for jurisprudência/súmula sem texto carregado, PULE a questão e registre em skip.
+- Texto da lei: `node .claude/skills/formatar-resolucoes/lei.js "CF" 150` (siglas: CF, CTN, "Lei 9.430", "LC 116", "LC 87", "ADCT", "EC 132", "Decreto-lei 1.598"). Leia o(s) artigo(s) citados na linha ⚖️ ANTES de escrever cada cartão. Se o dispositivo não estiver carregado ("artigo não carregado") ou for jurisprudência/súmula sem texto carregado, PULE a questão e registre em skip.
 
 ## Saída (um arquivo JS por bloco, caminho dado na tarefa)
 ```js
