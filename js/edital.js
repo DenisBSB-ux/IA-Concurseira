@@ -328,14 +328,59 @@ const EDITAL = {
     mapa: { 'Fiscalização':_GESTAO.fiscal, 'Fiscalização Setorial':_GESTAO.fiscal, 'Fiscalização Administrativa':_GESTAO.fiscal, 'Reunião Inicial':_GESTAO.fiscal, 'Segregação de Funções':_GESTAO.fiscal, 'Único Servidor':_GESTAO.fiscal, 'IMR':_GESTAO.clausulas, 'IMR e Glosas':_GESTAO.irregular, 'Diário de Ocorrências':_GESTAO.irregular, 'Repactuação':_GESTAO.repact, 'Preclusão de Repactuação':_GESTAO.repact, 'Preposto':_GESTAO.preposto, 'Preposto da Empresa':_GESTAO.preposto, 'Sanções Contratuais':_GESTAO.sancoes },
     artigos: [[11,11,_GESTAO.clausulas],[17,17,_GESTAO.clausulas],[44,44,_GESTAO.preposto],[46,46,_GESTAO.irregular],[49,49,_GESTAO.irregular],[51,51,_GESTAO.irregular],[39,50,_GESTAO.fiscal],[52,53,_GESTAO.execucao],[54,60,_GESTAO.repact],[61,61,_GESTAO.reajuste],[72,73,_GESTAO.sancoes]],
   },
+  /* Redes de Computadores — DPDF 2026, Analista de Apoio à Assistência Judiciária (Informática/Redes): 12 assuntos na ordem do edital.
+     O assunto do caderno (tecconcursos) vira o item do edital; o que o edital de Redes não cobra fica como "Fora do edital — …". */
+  'Redes de Computadores': {
+    itens: ['1 Fundamentos de redes de computadores', '2 Redes LAN, WAN e WLAN. Topologias e meios de transmissão', '3 Ethernet e padrões IEEE 802', '4 Protocolos TCP, UDP, IP, ICMP e ARP', '5 Endereçamento IPv4 e IPv6, sub-redes, CIDR e NAT', '6 Serviços e protocolos de rede: DNS, DHCP, NTP, HTTP/HTTPS, SSH e SNMP', '7 VLAN, trunking e Spanning Tree', '8 Roteamento estático e dinâmico', '9 Redes privadas virtuais (VPN)', '10 Equipamentos de rede: switches, roteadores, pontos de acesso e balanceadores de carga', '11 Redes sem fio: conceitos, padrões, configuração e segurança', '12 Redundância, alta disponibilidade, qualidade de serviço (QoS) e diagnóstico de redes'],
+    mapa: Object.assign({},
+      ...[
+        ['1 Fundamentos de redes de computadores', ['Modelo OSI', 'Definições e Conceitos Básicos de Redes', 'Arquitetura Cliente-Servidor', 'Ponto a Ponto (P2P)']],
+        ['2 Redes LAN, WAN e WLAN. Topologias e meios de transmissão', ['Classificação das Redes (LAN, MAN, WAN)', 'Topologias de Redes']],
+        ['3 Ethernet e padrões IEEE 802', ['Algoritmos de Codificação e de Detecção de Erros (Redes)']],
+        ['4 Protocolos TCP, UDP, IP, ICMP e ARP', ['ICMP', 'ARP e RARP']],
+        ['5 Endereçamento IPv4 e IPv6, sub-redes, CIDR e NAT', ['Conceitos e Especificações do IP', 'NAT']],
+        ['6 Serviços e protocolos de rede: DNS, DHCP, NTP, HTTP/HTTPS, SSH e SNMP', ['DNS (Domain Name System)', 'DHCP', 'HTTP', 'WWW (Word Wide Web)', 'FTP e TFTP', 'POP3 (Post Office Protocol v3)', 'Protocolo SNMP, sua Extensão RMON e a Base de Informações MIB', 'Conceitos Gerais de Servidores Web', 'Apache', 'Aspectos Gerais de Gerenciamento de Redes', 'Outras Ferramentas de Gerenciamento de Redes (MRTG, Cacti, etc.)', 'Acesso Remoto (VNC, TeamViewer, RPC, etc.)', 'Outros Tipos de Servidores e Questões Mescladas (Arquivos, Diretórios etc.)']],
+        ['8 Roteamento estático e dinâmico', ['BGP (Border Gateway Protocol)']],
+        ['10 Equipamentos de rede: switches, roteadores, pontos de acesso e balanceadores de carga', ['Equipamentos de Redes (Roteador, Switch, Hub, etc.)']],
+        ['11 Redes sem fio: conceitos, padrões, configuração e segurança', ['WLAN (Wireless - Redes Sem Fio)']],
+        ['12 Redundância, alta disponibilidade, qualidade de serviço (QoS) e diagnóstico de redes', ['VOIP, H.323, SIP, RTP, SCTP, etc.', 'Protocolos de Alta Disponibilidade ou Gateway Redundante (HSRP, VRR, GLBP e CARP)', 'Comandos e Ferramentas de Diagnóstico de Redes (Nslookup, Traceroute, Ping, etc.)']],
+        [FORA_DO_EDITAL + ' — Active Directory e administração de usuários', ['Active Directory e Administração de Usuários']],
+        [FORA_DO_EDITAL + ' — LDAP e serviços de diretório', ['LDAP e X.500']],
+        [FORA_DO_EDITAL + ' — Armazenamento (SAN, DAS e NAS)', ['Storages (SAN, DAS e NAS)']],
+        [FORA_DO_EDITAL + ' — Computação em nuvem', ['Cloud Computing (Computação em Nuvem)']],
+        [FORA_DO_EDITAL + ' — Datacenters', ['Datacenters']],
+        [FORA_DO_EDITAL + ' — Redes ATM', ['Redes ATM']],
+        [FORA_DO_EDITAL + ' — Navegadores (isolamento de site)', ['Conceitos de Sistema Operacional de Redes']],
+      ].map(([item, temas]) => Object.fromEntries(temas.map(t => [t, item])))
+    ),
+    dividir: {
+      'Arquitetura TCP/IP': [[/ipconfig|\/flushdns/i, '12 Redundância, alta disponibilidade, qualidade de serviço (QoS) e diagnóstico de redes'], [/protocolos que operam na camada de rede/i, '4 Protocolos TCP, UDP, IP, ICMP e ARP'], [null, '1 Fundamentos de redes de computadores']],
+      'Intranet, Extranet e Proxy': [[/proxy/i, '10 Equipamentos de rede: switches, roteadores, pontos de acesso e balanceadores de carga'], [null, '1 Fundamentos de redes de computadores']],
+      'Formas de Comunicação e Envio de Dados': [[/Manchester/i, '3 Ethernet e padrões IEEE 802'], [null, '1 Fundamentos de redes de computadores']],
+      'Conceitos Gerais de Ethernet': [[/568|cabeamento estruturado|categoria de cabos/i, '2 Redes LAN, WAN e WLAN. Topologias e meios de transmissão'], [/função principal de um switch/i, '10 Equipamentos de rede: switches, roteadores, pontos de acesso e balanceadores de carga'], [null, '3 Ethernet e padrões IEEE 802']],
+      'Cabeamento e Meios de Transmissão': [[/1000BASE|Fast Ethernet/i, '3 Ethernet e padrões IEEE 802'], [null, '2 Redes LAN, WAN e WLAN. Topologias e meios de transmissão']],
+      'TCP e UDP': [[/HTTPS|DNS-TCP|portas ditas conhecidas/i, '6 Serviços e protocolos de rede: DNS, DHCP, NTP, HTTP/HTTPS, SSH e SNMP'], [null, '4 Protocolos TCP, UDP, IP, ICMP e ARP']],
+      'Máscara e Endereçamento IP': [[/nome de domínio/i, '6 Serviços e protocolos de rede: DNS, DHCP, NTP, HTTP/HTTPS, SSH e SNMP'], [/testes de conectividade/i, '12 Redundância, alta disponibilidade, qualidade de serviço (QoS) e diagnóstico de redes'], [null, '5 Endereçamento IPv4 e IPv6, sub-redes, CIDR e NAT']],
+      'Análise de Redes (Figuras)': [[/IEEE 754|NaN/i, FORA_DO_EDITAL + ' — Tipos de dados (IEEE 754)'], [null, '3 Ethernet e padrões IEEE 802']],
+      'Outros Assuntos e Questões Variadas de Redes': [[/recomenda/i, FORA_DO_EDITAL + ' — Algoritmos de recomendação'], [null, '5 Endereçamento IPv4 e IPv6, sub-redes, CIDR e NAT']],
+      'Redes de Computadores (geral)': [[/nuvem|IaaS/i, FORA_DO_EDITAL + ' — Computação em nuvem'], [/Wi-Fi|802\.11|WEP|WPA/i, '11 Redes sem fio: conceitos, padrões, configuração e segurança'], [/RFC 1918|IPv4/i, '5 Endereçamento IPv4 e IPv6, sub-redes, CIDR e NAT'], [/portas padronizadas|IANA/i, '6 Serviços e protocolos de rede: DNS, DHCP, NTP, HTTP/HTTPS, SSH e SNMP'], [/equipamentos de rede|switch|roteador/i, '10 Equipamentos de rede: switches, roteadores, pontos de acesso e balanceadores de carga'], [null, '1 Fundamentos de redes de computadores']],
+      'Tópicos Mesclados de Principais Protocolos de Redes': [[/VPN/i, '9 Redes privadas virtuais (VPN)'], [/algoritmo de roteamento/i, '8 Roteamento estático e dinâmico'], [/switch|roteador/i, '10 Equipamentos de rede: switches, roteadores, pontos de acesso e balanceadores de carga'], [/portas|SSH|HTTPS/i, '6 Serviços e protocolos de rede: DNS, DHCP, NTP, HTTP/HTTPS, SSH e SNMP'], [/máscara|IPv4|IPv6|sub-rede/i, '5 Endereçamento IPv4 e IPv6, sub-redes, CIDR e NAT'], [/TCP\/IP é o padrão|protocolo de Internet \(IP\)/i, '4 Protocolos TCP, UDP, IP, ICMP e ARP'], [null, '1 Fundamentos de redes de computadores']],
+    },
+  },
 };
 
+/* o título da lista pode vir como "Banca - Matéria - data" (padrão das listas): a configuração vale para a matéria dentro dele */
+function editalCfgDe(materia){
+  if(EDITAL[materia]) return EDITAL[materia];
+  const t = String(materia || '').match(/^.+? - (.+) - \d{4}(?:-\d{2}-\d{2})?$/);
+  return t ? (EDITAL[t[1]] || null) : null;
+}
 function _artigoCitado(q){
   const m = String((q.r||'') + ' ' + (q.q||'')).match(/\bart(?:igo)?s?\.?\s*(\d+)/i);
   return m ? Number(m[1]) : null;
 }
 function temaDoEdital(q){
-  const cfg = EDITAL[q.materia];
+  const cfg = editalCfgDe(q.materia);
   const orig = q.temaOriginal || q.tema;
   if(!cfg) return orig;
   if(cfg.itens && cfg.itens.includes(orig)) return orig; // já é item do edital (ex.: trocado à mão)
@@ -379,7 +424,7 @@ function aplicarTemaDoEdital(q){
 }
 function ehForaDoEdital(tema){ return !tema || tema==='Fora do Edital' || tema.startsWith(FORA_DO_EDITAL); }
 function ordemNoEdital(materia, tema){
-  const cfg = EDITAL[materia];
+  const cfg = editalCfgDe(materia);
   const i = cfg && cfg.itens ? cfg.itens.indexOf(tema) : -1;
   return i===-1 ? (ehForaDoEdital(tema) ? 1e6 : 1e5) : i;
 }
