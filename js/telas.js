@@ -720,7 +720,7 @@ function renderEstatisticasPorMateria(){
   <div class="card-block" style="margin-top:22px;">
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
       <h3 style="margin:0;color:inherit;font-size:22px;">📈 Estatísticas por matéria</h3>
-      ${adapt.adapta ? `<div class="conc-adapt"><span>Lista adaptada ao cargo: <b>${adapt.visiveis.length}</b> da base${adapt.faltantes.length ? ` · <b class="conc-falta-n">${adapt.faltantes.length}</b> do edital sem lista` : ''}</span>${adapt.ocultas.length ? ` <button type="button" class="prova-det-btn" data-conc-fora="1">${foraVisivel ? 'Ocultar' : 'Mostrar'} ${adapt.ocultas.length} fora do cargo</button>` : ''}</div>` : ''}
+      ${adapt.adapta ? `<div class="conc-adapt"><span>Lista adaptada ao cargo: <b>${adapt.visiveis.length}</b> da base${adapt.faltantes.length ? ` · <b class="conc-falta-n">${adapt.faltantes.length}</b> do edital sem lista` : ''}</span>${(adapt.ocultas.length || foraDoCargoResumo().questoes) ? ' ' + foraDoCargoBotao() : ''}</div>` : ''}
     </div>
     <div class="fx-barra" role="group" aria-label="Filtros das estatísticas">${['banca','cargo','ano'].map(id => fxMenuHtml(id, fxOpcoes(id, materias))).join('')}${filtroAtivo ? '<button type="button" class="prova-det-btn" data-fx-limpar-todos="1">Limpar filtros</button>' : ''}</div>
     ${filtroAtivo ? `<div class="bc-soma">Somando ${Object.keys(FX).filter(id => FX[id].sel.size).map(id => `<b>${FX[id].rot}</b>: ${[...FX[id].sel].slice(0,2).map(esc).join(', ')}${FX[id].sel.size > 2 ? ' +' + (FX[id].sel.size - 2) : ''}`).join(' · ')} → <b>${somaQ}</b> questões em ${linhas.length} matéria${linhas.length===1?'':'s'}</div>` : ''}
@@ -1215,7 +1215,7 @@ function foraEditalBarra(){
   const fora = todas.filter(q => q.foraEdital || q.foraAssunto).length; if(!fora) return '';
   const ver = (typeof concursoForaVisivel === 'function') && concursoForaVisivel();
   const dentro = todas.filter(q => !(q.foraEdital || q.foraAssunto) && !q.duplicataOculta).length;
-  return `<div class="fe-barra" role="status"><span class="fe-tx">${ver ? `Mostrando também <b>${fora}</b> ${fora>1?'questões':'questão'} <b>fora do edital</b> do seu cargo (marcadas).` : `Só as questões do edital do seu cargo: <b>${dentro}</b>. Ocultas, fora do edital: <b>${fora}</b>.`}</span> <button type="button" class="fe-bt" data-conc-fora="1">${ver ? 'Ocultar as de fora' : 'Mostrar também as de fora'}</button></div>`;
+  return `<div class="fe-barra" role="status"><span class="fe-tx">${ver ? `Mostrando também <b>${fora}</b> ${fora>1?'questões':'questão'} <b>fora do edital</b> do seu cargo (marcadas).` : `Só as questões do edital do seu cargo: <b>${dentro}</b>. Ocultas, fora do edital: <b>${fora}</b>.`}</span> ${foraDoCargoBotao()}</div>`;
 }
 function renderMainPanel(tabAtual){
   if(tabAtual==='simulado'){
@@ -1232,7 +1232,7 @@ function renderMainPanel(tabAtual){
     let semDisc = false; try{ const a = JSON.parse(localStorage.getItem('ia_cargo_ativo_v1') || 'null'); semDisc = !!(a && a.semDiscursiva); }catch(_){}
     if(semDisc) return '<div class="notice" style="margin-top:16px"><b>Este concurso não tem prova discursiva.</b><br>O edital cadastrado prevê só prova objetiva, títulos e entrevista. Se houver retificação, atualize o edital em "＋ Edital".</div>';
   }
-  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v681" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
+  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v682" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
   return '';
 }
 
