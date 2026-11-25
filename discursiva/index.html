@@ -1739,6 +1739,11 @@ const P26_P = {
 const CARGO = (function(){
   const pad = { nome: "Analista Administrativo de Controle Externo — TCDF", tcdf: true, materias: [] };
   try{
+    const a = JSON.parse(localStorage.getItem("ia_cargo_ativo_v1") || "null");
+    if(a && typeof a === "object"){
+      const tcdf = !!a.padrao || (/analista administrativo/i.test(a.cargo || "") && /tcdf|tribunal de contas do distrito federal/i.test((a.orgao || "") + " " + (a.nome || "")));
+      return { nome: (a.nome || "") + (a.cargo ? " · " + a.cargo : ""), tcdf: tcdf, materias: Array.isArray(a.materias) ? a.materias : [] };
+    }
     const db = JSON.parse(localStorage.getItem("ia_concursos_v2") || "null");
     if(!db || !Array.isArray(db.lista) || !db.ativo || db.ativo === "padrao") return pad;
     const c = db.lista.find(x => x.id === db.ativo);
@@ -1751,18 +1756,22 @@ const CARGO = (function(){
     return { nome: (c.nome || "") + " · " + cargo, tcdf: tcdf, materias: materias };
   }catch(e){ return pad; }
 })();
+/* sem temas para o cargo: placeholders vazios (nunca os exemplos do TCDF) */
+const SEM_Q = { id:"sem-tema-q", tipo:"questao", exemplo:true, vazio:true, fonte:"", criado:"", titulo:"Nenhum tema para este cargo", disciplina:"", assunto:"", texto_base:"", itens:[], quesitos:[], linhas:20, tl:50, nivel:"", banca:"", ano:"", nota:20, valor:15, paragrafos:[], modo:"foto" };
+const SEM_P = { id:"sem-tema-p", tipo:"peca", exemplo:true, vazio:true, fonte:"", criado:"", titulo:"Nenhum tema para este cargo", disciplina:"", assunto:"", texto_base:"", itens:[], quesitos:[], linhas:50, tl:50, nivel:"", banca:"", ano:"", nota:35, valor:35, paragrafos:[], modo:"foto" };
+window.__CARGO = CARGO;
 const todos = () => !CARGO.tcdf ? [] : [...temas, EXT_Q, AL_Q, AL_P, ...GRAN, S2_Q1, S2_Q2, S2_P, SAL_Q, SAL_P, P26_Q, P26_P, S1_Q, S1_P, EX_Q, EX_P];
 const temasOcultos = () => { const a = store.get("tdf.temasOcultos", []); return Array.isArray(a) ? a : []; };
 const all = () => { const o = temasOcultos(); return todos().filter(t => !o.includes(t.id)); };
-const atual = { questao: store.get("tdf.atual.questao", EX_Q.id), peca: store.get("tdf.atual.peca", EX_P.id) };
-let corrId = store.get("tdf.corrId", EX_Q.id);
+const atual = { questao: store.get("tdf.atual.questao", CARGO.tcdf ? EX_Q.id : SEM_Q.id), peca: store.get("tdf.atual.peca", CARGO.tcdf ? EX_P.id : SEM_P.id) };
+let corrId = store.get("tdf.corrId", CARGO.tcdf ? EX_Q.id : SEM_Q.id);
 let sample = null, imgLimits = null, mcp = null;
 let fotos = [];
 let originais = []; // arquivos como vieram (PDF/JPG/PNG), enviados direto ao OCR do Drive
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const fmt = n => (Math.round(n*100)/100).toFixed(2).replace(".", ",");
-const find = id => all().find(t => t.id === id) || todos().find(t => t.id === id) || EX_Q;
+const find = id => all().find(t => t.id === id) || todos().find(t => t.id === id) || (CARGO.tcdf ? EX_Q : (id === SEM_P.id ? SEM_P : SEM_Q));
 
 // ---------- Abas ----------
 const TABS = ["questao","peca","corrigir","recurso","folhas"];
@@ -2181,7 +2190,7 @@ function excluirTema(t, btn){
   else { temas = temas.filter(x => x.id !== t.id); store.set("tdf.temas", temas); }
   const prox = all().find(x => x.tipo === tipo);
   atual[tipo] = prox.id; store.set("tdf.atual."+tipo, prox.id);
-  if(corrId === t.id){ corrId = (all()[0]||EX_Q).id; store.set("tdf.corrId", corrId); }
+  if(corrId === t.id){ corrId = (all()[0]||(CARGO.tcdf ? EX_Q : SEM_Q)).id; store.set("tdf.corrId", corrId); }
   renderTema(tipo); try{ provasTopo(); }catch(e){}
 }
 
@@ -3597,13 +3606,13 @@ showTab(TABS.includes(tab0) ? tab0 : "questao");
 /* aviso e texto do edital conforme o cargo escolhido */
 (function(){
   const h = document.getElementById("discHint");
-  if(h && !CARGO.tcdf) h.textContent = "Disciplinas do edital de " + CARGO.nome + ". Os assuntos são sugestões; use o campo livre para qualquer tópico do edital.";
+  if(h && !window.__CARGO.tcdf) h.textContent = "Disciplinas do edital de " + window.__CARGO.nome + ". Os assuntos são sugestões; use o campo livre para qualquer tópico do edital.";
   const nc = document.getElementById("noclaude");
-  if(!CARGO.tcdf && nc){
+  if(!window.__CARGO.tcdf && nc){
     const box = document.createElement("div");
     box.className = "notice";
     box.style.marginTop = "20px";
-    box.textContent = "Ainda não há temas de discursiva para " + CARGO.nome + " na plataforma. A geração e a correção por IA usam o Claude da sua conta no artefato do claude.ai: gere e corrija lá e importe o backup aqui.";
+    box.textContent = "Ainda não há temas de discursiva para " + window.__CARGO.nome + " na plataforma. A geração e a correção por IA usam o Claude da sua conta no artefato do claude.ai: gere e corrija lá e importe o backup aqui.";
     nc.insertAdjacentElement("beforebegin", box);
   }
 })();
@@ -3651,8 +3660,11 @@ function bkpImport(inp){var f=inp.files&&inp.files[0];if(!f)return;var r=new Fil
         ops.slice(i, i + 300).forEach(function(o){ batch.set(ref(o.id), o.data); });
         await batch.commit();
       }
+      var atualIdx = await ref(idxDe()).get();
+      var chavesIdx = (atualIdx.exists && Array.isArray(atualIdx.data().chaves)) ? atualIdx.data().chaves.slice() : [];
+      Object.keys(window.__TDF_MEM).forEach(function(k){ if(chavesIdx.indexOf(k) < 0) chavesIdx.push(k); });
       var idx = db.batch();
-      idx.set(ref(idxDe()), { dono: uid, chaves: Object.keys(window.__TDF_MEM), ts: Date.now() });
+      idx.set(ref(idxDe()), { dono: uid, chaves: chavesIdx, ts: Date.now() });
       await idx.commit();
       keys.forEach(function(k){ if(grandes.indexOf(k) < 0) delete dirty[k]; });
       if(grandes.length){ st("Item grande demais para a nuvem (muitas fotos ou PDF): reduza", "err"); }
