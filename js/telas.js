@@ -446,9 +446,17 @@ function fxMenuHtml(id, opcoes){
 /* filtros Banca/Ano dentro da janela da questão: restringem a FILA em andamento (as já respondidas e a atual ficam) */
 function quizAplicarFiltros(quiz){
   if(!quiz.filaBase) quiz.filaBase = quiz.queue.slice();
-  const atualU = quiz.queue[quiz.idx], resp = quiz.respostas || {};
-  const nova = quiz.filaBase.filter(u => u === atualU || resp[u] !== undefined || (BY_UID[u] && questaoNosFiltros(BY_UID[u])));
-  quiz.queue = nova; const i = nova.indexOf(atualU); quiz.idx = i >= 0 ? i : 0;
+  const atualU = quiz.queue[quiz.idx], base = quiz.filaBase;
+  const nova = base.filter(u => BY_UID[u] && questaoNosFiltros(BY_UID[u]));      // vale para TODAS as questões da fila, respondidas ou não
+  quiz.fxVazio = !nova.length && base.length > 0 && filtrosAtivos();
+  if(quiz.fxVazio) return;      // nenhuma questão combina: a fila fica como está e a barra avisa
+  quiz.queue = nova;
+  let i = nova.indexOf(atualU);
+  if(i < 0){      // a questão atual saiu: vai para a primeira que combina depois dela na fila original
+    const pos = base.indexOf(atualU), seguinte = nova.find(u => base.indexOf(u) >= pos);
+    i = seguinte ? nova.indexOf(seguinte) : 0;
+  }
+  quiz.idx = Math.max(0, i);
 }
 function fxAtualizado(){
   const q = STATE.quiz;
@@ -465,7 +473,7 @@ function fxOpcoesFila(id, quiz){
 function fxBarraDaFila(quiz){
   Object.keys(FX).forEach(id => { FX[id].sel = new Set((quiz.fx && quiz.fx[id]) || []); });      // o estado do filtro é da fila
   const base = (quiz.filaBase || quiz.queue).length, ativo = (quiz.fx && (quiz.fx.banca || []).length + (quiz.fx.ano || []).length) > 0;
-  return `<div class="fx-barra qm-filtros" role="group" aria-label="Filtros da fila de questões"><span class="qm-filtros-t">Filtrar esta fila:</span>${['banca','ano'].map(id => fxMenuHtml(id, fxOpcoesFila(id, quiz))).join('')}${ativo ? `<span class="qm-filtros-n">${quiz.queue.length} de ${base} questões</span><button type="button" class="prova-det-btn" data-fx-limpar-todos="1">Limpar filtros</button>` : ''}</div>`;
+  return `<div class="fx-barra qm-filtros" role="group" aria-label="Filtros da fila de questões"><span class="qm-filtros-t">Filtrar esta fila:</span>${['banca','ano'].map(id => fxMenuHtml(id, fxOpcoesFila(id, quiz))).join('')}${ativo ? `<span class="qm-filtros-n">${quiz.fxVazio ? '<b>Nenhuma questão combina com esses filtros</b> (fila mantida)' : quiz.queue.length + ' de ' + base + ' questões'}</span><button type="button" class="prova-det-btn" data-fx-limpar-todos="1">Limpar filtros</button>` : ''}</div>`;
 }
 function fxPosRender(){
   if(!FX_ABERTO) return; const f = FX[FX_ABERTO]; if(!f || !f.foco) return;
@@ -1267,7 +1275,7 @@ function renderMainPanel(tabAtual){
     let semDisc = false; try{ const a = JSON.parse(localStorage.getItem('ia_cargo_ativo_v1') || 'null'); semDisc = !!(a && a.semDiscursiva); }catch(_){}
     if(semDisc) return '<div class="notice" style="margin-top:16px"><b>Este concurso não tem prova discursiva.</b><br>O edital cadastrado prevê só prova objetiva, títulos e entrevista. Se houver retificação, atualize o edital em "＋ Edital".</div>';
   }
-  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v690" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
+  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v691" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
   return '';
 }
 
