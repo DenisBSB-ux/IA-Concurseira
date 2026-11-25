@@ -393,7 +393,8 @@ function cargoGrupoDeTexto(bc){
   const bruto = String(bc || '').replace(/\s+/g, ' ').trim();
   const resto = String(cargoCurto(bruto) || '').replace(/\s+/g, ' ').trim();       // tira a banca; sobra "órgão — cargo — ano", "cargo (órgão), ano", "sigla (órgão)/órgão/área/ano"…
   if(!resto) return SEM;
-  const toks = resto.split(/\s+[-–—]\s+|\s*\/\s*|,\s+/).map(t => t.replace(/\(.*?\)/g, ' ').replace(/^(19|20)\d{2}\b[\s,;\-—]*/, '').replace(/[\s,;\-—]*(19|20)\d{2}\s*$/, '').replace(/^["'“]+|["'”]+$/g, '').replace(/\s+/g, ' ').trim()).filter(t => t);
+  const semParenteses = t => { while(/\([^()]*\)/.test(t)) t = t.replace(/\([^()]*\)/g, ' '); return t; };      // inclui parênteses aninhados: "Proc (CM Boa Vista (RR))"
+  const toks = resto.split(/\s+[-–—]\s+|\s*\/\s*|,\s+/).map(t => semParenteses(t).replace(/^(19|20)\d{2}\b[\s,;\-—]*/, '').replace(/[\s,;\-—]*(19|20)\d{2}\s*$/, '').replace(/^["'“]+|["'”]+$/g, '').replace(/\s+/g, ' ').trim()).filter(t => t);
   const cortar = c => c.length > 90 ? c.slice(0, 87) + '…' : c;
   const porExtenso = toks.find(eCargo); if(porExtenso) return cargoBase(porExtenso);      // o órgão ("PC-DF", "TCE RN") nunca é cargo
   const sigla = toks.find(t => CARGO_SIGLAS[t.toLowerCase()]); if(sigla) return cargoBase(CARGO_SIGLAS[sigla.toLowerCase()]);
@@ -411,13 +412,16 @@ function anoGrupo(q){
   }else a = anoRealDaQuestao(q);
   return a ? String(a) : 'Sem ano';
 }
+function orgaoGrupo(q){ return orgaoExibicao(q.bc) || 'Sem órgão'; }
+const FX_IDS_FILA = ['assunto', 'banca', 'cargo', 'orgao', 'ano'];      // filtros da janela da questão, nesta ordem
 const FX = {
+  assunto: { rot: 'Assunto', plural: 'assuntos', todas: 'todos', key: 'ia_filtro_assuntos_v1', get: q => (q.tema && q.tema !== 'Geral') ? q.tema : 'Sem assunto' },
   banca: { rot: 'Banca', plural: 'bancas', todas: 'todas', key: 'ia_filtro_bancas_v1', get: bancaGrupo },
   cargo: { rot: 'Cargo', plural: 'cargos', todas: 'todos', key: 'ia_filtro_cargos_v1', get: cargoGrupo },
+  orgao: { rot: 'Órgão', plural: 'órgãos', todas: 'todos', key: 'ia_filtro_orgaos_v1', get: orgaoGrupo },
   ano:   { rot: 'Ano',   plural: 'anos',   todas: 'todos', key: 'ia_filtro_anos_v1',   get: anoGrupo }
 };
 Object.keys(FX).forEach(id => { const f = FX[id]; f.sel = new Set(); try{ localStorage.removeItem(f.key); }catch(_){} f.busca = ''; f.foco = false; });      // filtros agora valem só dentro da janela da questão (por fila): nada fica guardado
-FX.cargo.sel = new Set(); try{ localStorage.removeItem(FX.cargo.key); }catch(_){}      // filtro de cargo removido da tela (muitas questões vêm sem cargo no arquivo): nenhuma escolha antiga pode continuar filtrando sem aparecer
 let FX_ABERTO = null;
 function filtrosAtivos(){ return Object.values(FX).some(f => f.sel.size > 0); }
 function questaoNosFiltros(q){ for(const id in FX){ const f = FX[id]; if(f.sel.size && !f.sel.has(f.get(q))) return false; } return true; }
@@ -458,15 +462,15 @@ function quizAplicarFiltros(quiz){
   }
   quiz.idx = Math.max(0, i);
 }
-/* a questão passa pelo filtro de Banca/Ano da fila em andamento? (usado também pela reconciliação da fila em renderQuiz) */
+/* a questão passa pelos filtros (Assunto, Banca, Cargo, Órgão, Ano) da fila em andamento? (usado também pela reconciliação da fila em renderQuiz) */
 function quizPassaFiltro(quiz, q){
-  const fx = quiz && quiz.fx; if(!fx) return true;
-  for(const id of ['banca', 'ano']){ const sel = fx[id]; if(sel && sel.length && !sel.includes(FX[id].get(q))) return false; }
+  const fx = quiz && quiz.fx; if(!fx || quiz.fxVazio) return true;      // sem nenhuma questão que combine, a fila fica como está (não deixa a reconciliação esvaziá-la)
+  for(const id of FX_IDS_FILA){ const sel = fx[id]; if(sel && sel.length && !sel.includes(FX[id].get(q))) return false; }
   return true;
 }
 function fxAtualizado(){
   const q = STATE.quiz;
-  if(q){ q.fx = { banca: [...FX.banca.sel], ano: [...FX.ano.sel] }; quizAplicarFiltros(q); try{ salvarQuizEmAndamento(); }catch(_){} }
+  if(q){ q.fx = {}; FX_IDS_FILA.forEach(id => { q.fx[id] = [...FX[id].sel]; }); quizAplicarFiltros(q); try{ salvarQuizEmAndamento(); }catch(_){} }
   render();
 }
 function fxOpcoesFila(id, quiz){
@@ -478,8 +482,8 @@ function fxOpcoesFila(id, quiz){
 }
 function fxBarraDaFila(quiz){
   Object.keys(FX).forEach(id => { FX[id].sel = new Set((quiz.fx && quiz.fx[id]) || []); });      // o estado do filtro é da fila
-  const base = (quiz.filaBase || quiz.queue).length, ativo = (quiz.fx && (quiz.fx.banca || []).length + (quiz.fx.ano || []).length) > 0;
-  return `<div class="fx-barra qm-filtros" role="group" aria-label="Filtros da fila de questões"><span class="qm-filtros-t">Filtrar esta fila:</span>${['banca','ano'].map(id => fxMenuHtml(id, fxOpcoesFila(id, quiz))).join('')}${ativo ? `<span class="qm-filtros-n">${quiz.fxVazio ? '<b>Nenhuma questão combina com esses filtros</b> (fila mantida)' : quiz.queue.length + ' de ' + base + ' questões'}</span><button type="button" class="prova-det-btn" data-fx-limpar-todos="1">Limpar filtros</button>` : ''}</div>`;
+  const base = (quiz.filaBase || quiz.queue).length, ativo = !!quiz.fx && FX_IDS_FILA.some(id => (quiz.fx[id] || []).length > 0);
+  return `<div class="fx-barra qm-filtros" role="group" aria-label="Filtros da fila de questões"><span class="qm-filtros-t">Filtrar esta fila:</span>${FX_IDS_FILA.map(id => fxMenuHtml(id, fxOpcoesFila(id, quiz))).join('')}${ativo ? `<span class="qm-filtros-n">${quiz.fxVazio ? '<b>Nenhuma questão combina com esses filtros</b>: mostrando a fila completa' : quiz.queue.length + ' de ' + base + ' questões'}</span><button type="button" class="prova-det-btn" data-fx-limpar-todos="1">Limpar filtros</button>` : ''}</div>`;
 }
 function fxPosRender(){
   if(!FX_ABERTO) return; const f = FX[FX_ABERTO]; if(!f || !f.foco) return;
@@ -1281,7 +1285,7 @@ function renderMainPanel(tabAtual){
     let semDisc = false; try{ const a = JSON.parse(localStorage.getItem('ia_cargo_ativo_v1') || 'null'); semDisc = !!(a && a.semDiscursiva); }catch(_){}
     if(semDisc) return '<div class="notice" style="margin-top:16px"><b>Este concurso não tem prova discursiva.</b><br>O edital cadastrado prevê só prova objetiva, títulos e entrevista. Se houver retificação, atualize o edital em "＋ Edital".</div>';
   }
-  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v695" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
+  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v696" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
   return '';
 }
 

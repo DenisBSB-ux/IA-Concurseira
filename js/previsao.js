@@ -177,8 +177,9 @@ function narrativaBancaBanner(q){
   const d = analisarTemasDaMateriaCached(q.materia).find(a => a.tema===q.tema);
   if(!d) return '';
   const p = Math.round(d.frequencia*100);
-  const faixa = p>=50 ? ['muito cobrado','alta'] : p>=25 ? ['cobrado com frequência','media'] : p>=10 ? ['cobrança ocasional','baixa'] : ['cobrança rara','rara'];
-  const dica = `Este assunto aparece em ${d.nProvasComTema} das ${d.totalProvas} provas desta base (${p}%). A base é uma amostra: um assunto ausente numa prova da base pode ter caído nela.`;
+  const pequena = d.totalProvas < 5;      // com poucas provas na base o percentual não diz nada: avisa em vez de afirmar "muito cobrado"
+  const faixa = pequena ? ['amostra pequena','rara'] : p>=50 ? ['muito cobrado','alta'] : p>=25 ? ['cobrado com frequência','media'] : p>=10 ? ['cobrança ocasional','baixa'] : ['cobrança rara','rara'];
+  const dica = `Este assunto aparece em ${d.nProvasComTema} das ${d.totalProvas} provas desta base (${p}%). A base é uma amostra: um assunto ausente numa prova da base pode ter caído nela.${pequena ? ' Com menos de 5 provas na base o percentual ainda não é confiável.' : ''}`;
   return `<div class="prov-badge prov-${faixa[1]}" title="${esc(dica)}">
     <div class="prov-badge-topo"><span class="prov-badge-ico">📊</span><span class="prov-badge-pct">${p}%</span><span class="prov-badge-rot">das provas</span></div>
     <div class="prov-badge-bar"><i style="width:${Math.max(4,p)}%"></i></div>
