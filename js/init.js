@@ -77,7 +77,10 @@ async function verificarNovaVersao(){
         try{ salvarTudoAgoraAoSair(); }catch(_){}
         // location.reload() pode receber do CDN do GitHub Pages uma cópia antiga do index.html por alguns minutos (a checagem acima usa uma URL
         // nova a cada vez e por isso já enxerga a versão nova): abrir com um parâmetro novo força a cópia atual e o aviso não volta
-        setTimeout(()=>{ try{ if('caches' in window) caches.keys().then(ks => ks.forEach(k => caches.delete(k))).catch(()=>{}); }catch(_){} location.href = location.pathname + '?_v=' + Date.now(); }, 400);
+        const limpar = [new Promise(ok => setTimeout(ok, 400))];      // dá tempo de o salvamento terminar
+          try{ if('caches' in window) limpar.push(caches.keys().then(ks => Promise.all(ks.map(k => caches.delete(k))))); }catch(_){}
+          try{ if('serviceWorker' in navigator) limpar.push(navigator.serviceWorker.getRegistrations().then(rs => Promise.all(rs.map(r => r.unregister())))); }catch(_){}      // tira também o service worker antigo: ele é quem pode estar segurando a versão velha
+          Promise.race([Promise.all(limpar).catch(()=>{}), new Promise(ok => setTimeout(ok, 2500))]).then(()=>{ location.href = location.pathname + '?_v=' + Date.now(); });
       });
       d.querySelector('#btn-adiar-app').addEventListener('click', ()=>{ d.remove(); setTimeout(()=>{ _avisoVersaoMostrado = false; }, 30*60000); });
     }
