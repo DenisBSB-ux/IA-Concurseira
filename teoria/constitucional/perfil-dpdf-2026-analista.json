@@ -1,0 +1,130 @@
+{
+ "esquema": 1,
+ "slug": "constitucional",
+ "concursoId": "dpdf-2026-analista",
+ "concurso": "DPDF 2026 — Analista de Apoio à Assistência Judiciária",
+ "versao": 1,
+ "atualizado": "2026-11-25",
+ "padrao": [
+  {
+   "n": "1",
+   "t": "Constituição da República Federativa do Brasil de 1988",
+   "topicos": [
+    "cf.geral.classificacao",
+    "cf.geral.preambulo",
+    "cf.geral.poder-constituinte",
+    "cf.prin.fundamentos",
+    "cf.prin.poderes-objetivos",
+    "cf.prin.relacoes-internacionais",
+    "cf.emenda.proposta-votacao",
+    "cf.emenda.limites",
+    "cf.emenda.revisao"
+   ]
+  },
+  {
+   "n": "2",
+   "t": "Aplicabilidade das normas constitucionais",
+   "topicos": [
+    "cf.eficacia.classificacao",
+    "cf.eficacia.supremacia"
+   ]
+  },
+  {
+   "n": "3",
+   "t": "Direitos e garantias fundamentais",
+   "topicos": [
+    "cf.dir-ind.caput-igualdade",
+    "cf.dir-ind.liberdades",
+    "cf.dir-ind.intimidade-propriedade",
+    "cf.dir-ind.penal-processual",
+    "cf.dir-ind.remedios",
+    "cf.dir-ind.coletivos-outros",
+    "cf.dir-soc.art-6",
+    "cf.dir-soc.trabalhadores",
+    "cf.dir-soc.coletivos",
+    "cf.nac-pol.nacionalidade",
+    "cf.nac-pol.cargos-privativos",
+    "cf.nac-pol.direitos-politicos",
+    "cf.nac-pol.partidos"
+   ]
+  },
+  {
+   "n": "4",
+   "t": "Organização político-administrativa do Estado",
+   "topicos": [
+    "cf.federal.organizacao",
+    "cf.federal.competencias",
+    "cf.federal.df",
+    "cf.federal.intervencao"
+   ]
+  },
+  {
+   "n": "5",
+   "t": "Administração Pública",
+   "topicos": [
+    "cf.adm.principios",
+    "cf.adm.cargos-concurso",
+    "cf.adm.remuneracao-teto",
+    "cf.adm.responsabilidade",
+    "cf.serv.regime",
+    "cf.serv.estabilidade"
+   ]
+  },
+  {
+   "n": "6",
+   "t": "Poder Executivo",
+   "topicos": [
+    "cf.pres.eleicao-mandato",
+    "cf.pres.atribuicoes",
+    "cf.pres.responsabilidade",
+    "cf.pres.ministros"
+   ]
+  },
+  {
+   "n": "7",
+   "t": "Poder Legislativo",
+   "topicos": [
+    "cf.leg.estrutura",
+    "cf.leg.atribuicoes",
+    "cf.leg.imunidades",
+    "cf.leg.comissoes-sessoes",
+    "cf.proc-leg.especies",
+    "cf.proc-leg.iniciativa-tramitacao",
+    "cf.proc-leg.medida-provisoria",
+    "cf.proc-leg.delegada-outros",
+    "cf.fisc.controle-externo",
+    "cf.fisc.competencias-tcu",
+    "cf.fisc.composicao-tcdf",
+    "cf.cpi.poderes-limites"
+   ]
+  },
+  {
+   "n": "8",
+   "t": "Poder Judiciário",
+   "topicos": [
+    "cf.jud.orgaos-garantias",
+    "cf.jud.stf",
+    "cf.jud.outros-tribunais-cnj"
+   ]
+  },
+  {
+   "n": "9",
+   "t": "Funções essenciais à justiça",
+   "topicos": [
+    "cf.mp.principios-funcoes",
+    "cf.mp.organizacao",
+    "cf.adv-pub.agu-procuradorias",
+    "cf.dp.defensoria"
+   ]
+  },
+  {
+   "n": "10",
+   "t": "Controle de constitucionalidade",
+   "topicos": [
+    "cf.cc.modalidades",
+    "cf.cc.acoes"
+   ]
+  }
+ ],
+ "cargos": {}
+}

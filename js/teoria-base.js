@@ -5,7 +5,8 @@
    em teoria/<slug>/ (offline e reserva). Vale a de maior "versao". Esquema e regras: teoria/LEIAME.md. */
 const tbEsc = s => esc(String(s == null ? "" : s));
 const TEORIA_BASE_INDICE = {
-  'redes-de-computadores': { materia: 'Redes de Computadores', perfis: ['dpdf-2026-analista'] }
+  'redes-de-computadores': { materia: 'Redes de Computadores', perfis: ['dpdf-2026-analista'] },
+  'constitucional': { materia: 'Constitucional', perfis: ['padrao', 'dpdf-2026-analista', 'abdi-2026-api'] }
 };
 const TEORIA_ADMIN_UIDS = ['LjkZLfBRfNRuDxHqbA3ivlywlq23'];   // os mesmos de firestore.rules (a regra é quem de fato protege a escrita)
 const TEORIA_BASE_CACHE = {};        // slug -> { base, perfis:{concursoId: perfil}, origem }
@@ -184,6 +185,14 @@ async function teoriaAutoPublicar(){
    (referencia:true) liga esse item aos ids de tópico; o perfil do edital ativo diz quais tópicos o cargo cobra.
    Questão cujos tópicos não estão no perfil ativo fica "fora do edital": oculta, a menos que o usuário peça para mostrar. */
 const TEORIA_PERFIS_PRE = {};      // slug -> { concursoId: perfil }
+/* item do perfil de referência a que o assunto da questão ("3.1 Direitos sociais") corresponde: pelo rótulo completo "n título";
+   se o texto diferir um pouco, pelo número inicial, desde que único */
+function tbAcharItem(itens, tema){
+  const lista = itens || [], t = String(tema || '');
+  const cheio = lista.find(i => (i.n + ' ' + i.t) === t); if(cheio) return cheio;
+  const m = t.match(/^([\d.–-]+)\s/); if(!m) return null;
+  const achados = lista.filter(i => String(i.n) === m[1]); return achados.length === 1 ? achados[0] : null;
+}
 function teoriaIdsDoPerfil(p, cargo){
   const itens = (p && ((p.cargos && p.cargos[cargo]) || p.padrao)) || [], ids = new Set();
   itens.forEach(it => (it.topicos || []).forEach(id => ids.add(id)));
@@ -196,9 +205,8 @@ function teoriaNoEdital(q){
     const ativo = perfis[(typeof CONCURSO !== 'undefined' && CONCURSO.id) || '']; if(!ativo) return true;      // edital sem perfil: não filtra
     const tema = String(q.tema || '');
     if(/^Fora do edital/i.test(tema)) return false;
-    const m = tema.match(/^(\d+) /); if(!m) return true;
     const ref = Object.values(perfis).find(p => p.referencia); if(!ref) return true;
-    const item = (ref.padrao || []).find(i => String(i.n) === m[1]); if(!item) return true;
+    const item = tbAcharItem(ref.padrao, tema); if(!item) return true;
     const permitidos = teoriaIdsDoPerfil(ativo, (typeof CONCURSO !== 'undefined' && CONCURSO.cargo) || '');
     return (item.topicos || []).some(id => permitidos.has(id));
   }catch(_){ return true; }

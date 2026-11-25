@@ -12,10 +12,10 @@ function tbPerfilDeReferencia(slug){ const ps = TEORIA_PERFIS_PRE[slug]; return 
 function tbPerfilAtivo(slug){ const ps = TEORIA_PERFIS_PRE[slug]; return ps ? (ps[(typeof CONCURSO !== 'undefined' && CONCURSO.id) || ''] || null) : null; }
 function tbTopico(slug, id){ const b = TEORIA_BASE_PRE[slug]; return b ? (b.topicos || []).find(t => t.id === id) || null : null; }
 const _tbCandCache = {};
-function tbCandidatos(slug, n){
-  const k = slug + '|' + n + '|' + ((TEORIA_BASE_PRE[slug] || {}).versao || 0); if(_tbCandCache[k]) return _tbCandCache[k];
+function tbCandidatos(slug, tema){
   const ref = tbPerfilDeReferencia(slug), base = TEORIA_BASE_PRE[slug]; if(!ref || !base) return [];
-  const item = (ref.padrao || []).find(i => String(i.n) === String(n)); if(!item) return [];
+  const item = tbAcharItem(ref.padrao, tema); if(!item) return [];
+  const k = slug + '|' + item.n + ' ' + item.t + '|' + (base.versao || 0); if(_tbCandCache[k]) return _tbCandCache[k];
   const lista = (item.topicos || []).map(id => base.topicos.find(t => t.id === id)).filter(t => t && t.resumo && !/\.pegadinhas$|\.quadro-/.test(t.id))
     .map(t => ({ id: t.id, termo: tbStems(t.t + ' ' + (t.palavras || []).join(' ')), corpo: tbStems(t.resumo) }));
   return (_tbCandCache[k] = lista);
@@ -23,8 +23,8 @@ function tbCandidatos(slug, n){
 /* tópico (id) da questão dentro do item do edital em que ela está; null se não houver acerto claro */
 function teoriaTopicoDaQuestao(q){
   const slug = teoriaSlugDe(q.materia); if(!slug || !TEORIA_BASE_PRE[slug]) return null;
-  const m = String(q.tema || '').match(/^(\d+) /); if(!m) return null;
-  const cands = tbCandidatos(slug, m[1]); if(!cands.length) return null;
+  const cands = tbCandidatos(slug, q.tema); if(!cands.length) return null;
+  if(cands.length === 1) return cands[0].id;      // item com um só tópico: sem ambiguidade
   const enun = (q.q || '') + ' ' + (Array.isArray(q.alt) ? q.alt.map(a => (a && a.texto) || a || '').join(' ') : '');
   const qa = tbStems(enun), qr = tbStems(q.r || ''); let melhor = null, pm = 0;
   cands.forEach(c => {
@@ -55,11 +55,11 @@ function teoriaStats(materia){
     lista.forEach(q => { const p = bucket.perguntas[q.uid]; if(!p || p.ultimoResultado == null) return; resp++; if(p.ultimoResultado === true) ac++; const h = p.historico && p.historico[p.historico.length - 1]; if(h && h.ts > ts) ts = h.ts; });
     return { n: lista.length, resp, ac, ts, uids: lista.map(q => q.uid) };
   };
-  const nItem = {}; qs.forEach(q => { const m = String(q.tema || '').match(/^(\d+) /); if(m) nItem[m[1]] = (nItem[m[1]] || 0) + 1; });
+  const nItem = {}; qs.forEach(q => { const k = String(q.tema || ''); nItem[k] = (nItem[k] || 0) + 1; });      // por assunto completo ("3.1 Direitos sociais")
   const itens = ia.itens.map(it => {
     const tops = (it.topicos || []).map(id => tbTopico(slug, id)).filter(t => t && t.resumo && !/\.pegadinhas$|\.quadro-/.test(t.id));
     const linhas = tops.map(t => Object.assign({ id: t.id, t: t.t }, stat([t.id])));
-    const total = nItem[String(it.n)] || 0, ligadas = linhas.reduce((s, l) => s + l.n, 0);
+    const ligadas = linhas.reduce((s, l) => s + l.n, 0), total = (it.n + ' ' + it.t) in nItem ? nItem[it.n + ' ' + it.t] : ligadas;      // perfil de outro edital: só se contam as questões ligadas aos tópicos dele
     const agg = stat(tops.map(t => t.id));
     return { n: it.n, t: it.t, topicos: linhas, total, ligadas, resp: agg.resp, ac: agg.ac };
   });

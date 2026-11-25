@@ -1,0 +1,71 @@
+{
+ "esquema": 1,
+ "slug": "constitucional",
+ "concursoId": "abdi-2026-api",
+ "concurso": "ABDI 2026 — Analista de Produtividade e Inovação (Jurídico)",
+ "versao": 1,
+ "atualizado": "2026-11-25",
+ "padrao": [
+  {
+   "n": "1.1",
+   "t": "Constituição Federal de 1988: princípios fundamentais, direitos e garantias fundamentais",
+   "topicos": [
+    "cf.prin.fundamentos",
+    "cf.prin.poderes-objetivos",
+    "cf.prin.relacoes-internacionais",
+    "cf.dir-ind.caput-igualdade",
+    "cf.dir-ind.liberdades",
+    "cf.dir-ind.intimidade-propriedade",
+    "cf.dir-ind.penal-processual",
+    "cf.dir-ind.remedios",
+    "cf.dir-ind.coletivos-outros",
+    "cf.dir-soc.art-6",
+    "cf.dir-soc.trabalhadores",
+    "cf.dir-soc.coletivos",
+    "cf.nac-pol.nacionalidade",
+    "cf.nac-pol.cargos-privativos",
+    "cf.nac-pol.direitos-politicos",
+    "cf.nac-pol.partidos"
+   ]
+  },
+  {
+   "n": "1.2",
+   "t": "Organização do Estado e repartição de competências",
+   "topicos": [
+    "cf.federal.organizacao",
+    "cf.federal.competencias",
+    "cf.federal.df",
+    "cf.federal.intervencao"
+   ]
+  },
+  {
+   "n": "1.3",
+   "t": "Administração Pública: princípios constitucionais e regime jurídico",
+   "topicos": [
+    "cf.adm.principios",
+    "cf.adm.cargos-concurso",
+    "cf.adm.remuneracao-teto",
+    "cf.adm.responsabilidade",
+    "cf.serv.regime",
+    "cf.serv.estabilidade"
+   ]
+  },
+  {
+   "n": "1.4",
+   "t": "Ordem econômica e financeira: princípios gerais da atividade econômica e atuação do Estado na economia",
+   "topicos": [
+    "cf.eco.principios",
+    "cf.eco.estado-economia"
+   ]
+  },
+  {
+   "n": "1.5",
+   "t": "Controle de constitucionalidade",
+   "topicos": [
+    "cf.cc.modalidades",
+    "cf.cc.acoes"
+   ]
+  }
+ ],
+ "cargos": {}
+}
