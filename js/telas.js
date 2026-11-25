@@ -204,6 +204,10 @@ function tendenciasDisponiveis(){
   scoreableFiltradas().forEach(q=>presentes.add(tendenciaCurta(q.td)));
   return ['crescente','estável','decrescente'].filter(t=>presentes.has(t));
 }
+/* a discursiva só tem temas do TCDF (Analista Administrativo): para os demais cargos a aba avisa */
+function discursivaDisponivel(){
+  return /analista administrativo/i.test(CONCURSO.cargo||'') && /tribunal de contas do distrito federal|tcdf/i.test((CONCURSO.orgao||'')+' '+(CONCURSO.nome||''));
+}
 function getLocalTab(materiaKey){
   const tab = STATE.tabByMateria[materiaKey];
   // abas que ainda existem ("Resumo p/ revisão" foi removida)
@@ -1196,7 +1200,10 @@ function renderMainPanel(tabAtual){
   if(tabAtual==='flashcards') return renderFlashcards();
   if(tabAtual==='materias') return renderApostilas();
   if(tabAtual==='importar') return renderImportarConteudo();
-  if(tabAtual==='discursivas') return '<iframe src="discursiva/" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:#fff"></iframe>';
+  if(tabAtual==='discursivas'){
+    if(discursivaDisponivel()) return '<iframe src="discursiva/" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:#fff"></iframe>';
+    return '<div style="padding:16px;border:1px solid #e5e7eb;border-radius:12px;background:#fff"><b>Discursiva indisponível para este cargo.</b><p style="margin:8px 0 0">Hoje a discursiva está disponível só para <b>Analista Administrativo — TCDF</b>. Cargo escolhido: '+esc(CONCURSO.cargo||'não informado')+'.</p></div>';
+  }
   return '';
 }
 
