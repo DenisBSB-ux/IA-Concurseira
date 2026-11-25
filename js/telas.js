@@ -1140,7 +1140,7 @@ function apostilaChip(materia){
 }
 function teoriaBotoesMateria(m){
   const sl = (typeof teoriaSlugDe === 'function') ? teoriaSlugDe(m) : null; if(!sl) return '';
-  return `<p class="tb-botoes"><button type="button" class="btn btn-primary tb-abrir" data-teoria-abrir="${esc(sl)}" title="Teoria única da matéria, na ordem do edital do seu cargo">📘 Apostila do edital</button>${teoriaEhAdmin() ? ` <button type="button" class="side-action-btn compact" data-teoria-publicar="${esc(sl)}" title="Envia a teoria e os perfis do repositório para a nuvem (administrador)">☁️ Publicar na nuvem</button>` : ''}</p>`;
+  return `<p class="tb-botoes"><button type="button" class="btn btn-primary tb-abrir" data-teoria-abrir="${esc(sl)}" title="Teoria única da matéria, na ordem do edital do seu cargo">📘 Apostila do edital</button>${teoriaEhAdmin() ? ` <small class="tb-nuvem" title="A teoria é enviada à nuvem sozinha quando o site tem versão mais nova">☁️ ${TEORIA_AUTO_STATUS === 'erro' ? 'nuvem: falhou (veja o console)' : (TEORIA_AUTO_STATUS ? 'nuvem em dia' : 'nuvem: verificando…')}</small> <button type="button" class="side-action-btn compact" data-teoria-publicar="${esc(sl)}" title="Reenvia a teoria e os perfis para a nuvem agora">↻ Reenviar</button>` : ''}</p>`;
 }
 function renderApostilas(){
   const todas = (typeof APOSTILAS !== 'undefined') ? APOSTILAS : [];
@@ -1204,7 +1204,7 @@ function renderMainPanel(tabAtual){
     let semDisc = false; try{ const a = JSON.parse(localStorage.getItem('ia_cargo_ativo_v1') || 'null'); semDisc = !!(a && a.semDiscursiva); }catch(_){}
     if(semDisc) return '<div class="notice" style="margin-top:16px"><b>Este concurso não tem prova discursiva.</b><br>O edital cadastrado prevê só prova objetiva, títulos e entrevista. Se houver retificação, atualize o edital em "＋ Edital".</div>';
   }
-  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v677" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
+  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v678" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
   return '';
 }
 
