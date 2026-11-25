@@ -207,7 +207,7 @@ function tendenciasDisponiveis(){
 function getLocalTab(materiaKey){
   const tab = STATE.tabByMateria[materiaKey];
   // abas que ainda existem ("Resumo p/ revisão" foi removida)
-  return ['simulado','reta','erros','flashcards','materias'].includes(tab) ? tab : 'simulado';
+  return ['simulado','reta','erros','flashcards','materias','discursivas'].includes(tab) ? tab : 'simulado';
 }
 function setLocalTab(materiaKey, tab){
   STATE.tabByMateria[materiaKey] = tab;
@@ -1174,6 +1174,7 @@ function renderLocalTabs(){
     {id:'reta', n:'02', label:'Reta Final'},
     {id:'materias', n:'03', label:'Matérias'},
     {id:'importar', n:'04', label:'Importar (Admin)'},
+    {id:'discursivas', n:'05', label:'Discursivas'},
   ];
   let atual = STATE.viewImportar ? 'importar' : getLocalTab(STATE.materia);
   if(atual==='erros' || atual==='flashcards') atual = 'reta';   // as telas clássicas ficam dentro da Reta Final
@@ -1195,6 +1196,7 @@ function renderMainPanel(tabAtual){
   if(tabAtual==='flashcards') return renderFlashcards();
   if(tabAtual==='materias') return renderApostilas();
   if(tabAtual==='importar') return renderImportarConteudo();
+  if(tabAtual==='discursivas') return '<iframe src="discursiva/" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:#fff"></iframe>';
   return '';
 }
 
