@@ -654,6 +654,18 @@ function concursoAposSync(){
 }
 
 /* ---------- lista de matérias adaptada ao cargo ---------- */
+/* chave única "fora do meu cargo": matérias inteiras que o cargo não cobre + questões de assuntos fora do edital */
+function foraDoCargoResumo(){
+  let materias = 0; try{ materias = concursoListaAdaptada(materiasDisponiveis()).ocultas.length; }catch(_){}
+  const questoes = ALL_QUESTIONS.filter(q => q.foraEdital || q.foraAssunto).length;
+  return { materias, questoes };
+}
+function foraDoCargoBotao(){
+  const ver = concursoForaVisivel(), r = foraDoCargoResumo(), partes = [];
+  if(r.materias) partes.push(r.materias + ' matéria' + (r.materias > 1 ? 's' : ''));
+  if(r.questoes) partes.push(r.questoes + (r.questoes > 1 ? ' questões' : ' questão'));
+  return `<button type="button" class="prova-det-btn fe-bt" data-conc-fora="1" title="Liga ou desliga, de uma vez, as matérias e as questões fora do edital do seu cargo">${ver ? 'Ocultar' : 'Mostrar'} o que está fora do meu cargo${partes.length ? ' <small>(' + partes.join(' e ') + ')</small>' : ''}</button>`;
+}
 function concursoForaVisivel(){ try{ return localStorage.getItem('ia_conc_fora_v2') === '1'; }catch(_){ return false; } }      // a escolha "mostrar fora do edital" é lembrada entre sessões
 function concursoMateriaNoCargo(nome, cmp){
   const nm = concNorm(nome);

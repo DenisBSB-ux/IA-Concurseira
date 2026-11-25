@@ -3106,3 +3106,5 @@ body.theme-light .ap-pop-cx{ background:#fff; color:#15212b; }
 .q-topico{ font:inherit; font-size:.72rem; font-weight:700; margin-left:8px; padding:1px 9px; border-radius:999px; border:1px solid #4f8fd6; background:rgba(79,143,214,.14); color:inherit; cursor:pointer; vertical-align:middle; } .q-topico:hover{ background:rgba(79,143,214,.3); }
 .tb-foco{ outline:2px solid #4f8fd6; box-shadow:0 0 0 4px rgba(79,143,214,.25); } .tb-treinar{ margin:6px 0 0; }
 @media (max-width:560px){ .tc-cab, .tc-item>summary{ grid-template-columns:minmax(0,1fr) 44px 40px; } .tc-cab span:nth-child(4), .tc-s{ display:none; } }
+
+.fe-bt small{ font-weight:400; opacity:.85; margin-left:4px; }
