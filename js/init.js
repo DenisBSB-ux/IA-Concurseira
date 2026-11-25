@@ -75,7 +75,9 @@ async function verificarNovaVersao(){
       document.body.appendChild(d);
       d.querySelector('#btn-atualizar-app').addEventListener('click', ()=>{
         try{ salvarTudoAgoraAoSair(); }catch(_){}
-        setTimeout(()=>{ location.reload(); }, 300);
+        // location.reload() pode receber do CDN do GitHub Pages uma cópia antiga do index.html por alguns minutos (a checagem acima usa uma URL
+        // nova a cada vez e por isso já enxerga a versão nova): abrir com um parâmetro novo força a cópia atual e o aviso não volta
+        setTimeout(()=>{ try{ if('caches' in window) caches.keys().then(ks => ks.forEach(k => caches.delete(k))).catch(()=>{}); }catch(_){} location.href = location.pathname + '?_v=' + Date.now(); }, 400);
       });
       d.querySelector('#btn-adiar-app').addEventListener('click', ()=>{ d.remove(); setTimeout(()=>{ _avisoVersaoMostrado = false; }, 30*60000); });
     }

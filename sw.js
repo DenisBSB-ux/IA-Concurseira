@@ -40,7 +40,7 @@ self.addEventListener('fetch', e => {
   e.respondWith((async () => {
     const cache = await caches.open(CACHE);
     try {
-      const resp = await fetch(req);
+      const resp = await fetch(req, req.mode === 'navigate' ? { cache: 'no-cache' } : undefined);      // a página principal sempre revalida (não usa a cópia do cache HTTP por até 10 min)
       if (resp && (resp.ok || resp.type === 'opaque') && resp.status !== 206) {
         // uma única versão por arquivo: apaga as cópias com outro ?v= do mesmo caminho
         if (mesmaOrigem) { for (const k of await cache.keys()) { const ku = new URL(k.url); if (ku.pathname === url.pathname && ku.search !== url.search) await cache.delete(k); } }
