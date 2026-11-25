@@ -416,7 +416,7 @@ const FX = {
   cargo: { rot: 'Cargo', plural: 'cargos', todas: 'todos', key: 'ia_filtro_cargos_v1', get: cargoGrupo },
   ano:   { rot: 'Ano',   plural: 'anos',   todas: 'todos', key: 'ia_filtro_anos_v1',   get: anoGrupo }
 };
-Object.keys(FX).forEach(id => { const f = FX[id]; try{ f.sel = new Set(JSON.parse(localStorage.getItem(f.key) || '[]')); }catch(_){ f.sel = new Set(); } f.sel.delete('Outras bancas'); f.busca = ''; f.foco = false; });
+Object.keys(FX).forEach(id => { const f = FX[id]; f.sel = new Set(); try{ localStorage.removeItem(f.key); }catch(_){} f.busca = ''; f.foco = false; });      // filtros agora valem só dentro da janela da questão (por fila): nada fica guardado
 FX.cargo.sel = new Set(); try{ localStorage.removeItem(FX.cargo.key); }catch(_){}      // filtro de cargo removido da tela (muitas questões vêm sem cargo no arquivo): nenhuma escolha antiga pode continuar filtrando sem aparecer
 let FX_ABERTO = null;
 function filtrosAtivos(){ return Object.values(FX).some(f => f.sel.size > 0); }
@@ -428,7 +428,7 @@ function fxOpcoes(id, materias){
   if(id === 'ano') return lista.sort((a,b) => (a[0]==='Sem ano') - (b[0]==='Sem ano') || b[0].localeCompare(a[0]));
   return lista.sort((a,b) => b[1]-a[1] || a[0].localeCompare(b[0],'pt-BR'));
 }
-function fxGravar(id){ try{ localStorage.setItem(FX[id].key, JSON.stringify([...FX[id].sel])); }catch(_){} }
+function fxGravar(id){ /* sem persistência: o filtro pertence à fila da questão em andamento */ }
 function fxNorm(t){ return String(t||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase(); }
 function fxMenuHtml(id, opcoes){
   const f = FX[id], aberto = FX_ABERTO === id, ativo = f.sel.size > 0, q = fxNorm(f.busca);
@@ -443,6 +443,30 @@ function fxMenuHtml(id, opcoes){
     </div>
   </div>`;
 }
+/* filtros Banca/Ano dentro da janela da questão: restringem a FILA em andamento (as já respondidas e a atual ficam) */
+function quizAplicarFiltros(quiz){
+  if(!quiz.filaBase) quiz.filaBase = quiz.queue.slice();
+  const atualU = quiz.queue[quiz.idx], resp = quiz.respostas || {};
+  const nova = quiz.filaBase.filter(u => u === atualU || resp[u] !== undefined || (BY_UID[u] && questaoNosFiltros(BY_UID[u])));
+  quiz.queue = nova; const i = nova.indexOf(atualU); quiz.idx = i >= 0 ? i : 0;
+}
+function fxAtualizado(){
+  const q = STATE.quiz;
+  if(q){ q.fx = { banca: [...FX.banca.sel], ano: [...FX.ano.sel] }; quizAplicarFiltros(q); try{ salvarQuizEmAndamento(); }catch(_){} }
+  render();
+}
+function fxOpcoesFila(id, quiz){
+  const f = FX[id], cont = {};
+  (quiz.filaBase || quiz.queue).forEach(u => { const q = BY_UID[u]; if(!q) return; const g = f.get(q); cont[g] = (cont[g] || 0) + 1; });
+  const lista = Object.entries(cont);
+  if(id === 'ano') return lista.sort((a, b) => (a[0] === 'Sem ano') - (b[0] === 'Sem ano') || b[0].localeCompare(a[0]));
+  return lista.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'pt-BR'));
+}
+function fxBarraDaFila(quiz){
+  Object.keys(FX).forEach(id => { FX[id].sel = new Set((quiz.fx && quiz.fx[id]) || []); });      // o estado do filtro é da fila
+  const base = (quiz.filaBase || quiz.queue).length, ativo = (quiz.fx && (quiz.fx.banca || []).length + (quiz.fx.ano || []).length) > 0;
+  return `<div class="fx-barra qm-filtros" role="group" aria-label="Filtros da fila de questões"><span class="qm-filtros-t">Filtrar esta fila:</span>${['banca','ano'].map(id => fxMenuHtml(id, fxOpcoesFila(id, quiz))).join('')}${ativo ? `<span class="qm-filtros-n">${quiz.queue.length} de ${base} questões</span><button type="button" class="prova-det-btn" data-fx-limpar-todos="1">Limpar filtros</button>` : ''}</div>`;
+}
 function fxPosRender(){
   if(!FX_ABERTO) return; const f = FX[FX_ABERTO]; if(!f || !f.foco) return;
   const el = document.querySelector('[data-fx-busca="' + FX_ABERTO + '"]'); if(el){ el.focus(); try{ el.setSelectionRange(el.value.length, el.value.length); }catch(_){} }
@@ -453,20 +477,20 @@ document.addEventListener('input', e => {
 });
 document.addEventListener('change', e => {
   const c = e.target; if(!c || !c.dataset) return;
-  if(c.dataset.fx){ const f = FX[c.dataset.fx]; if(c.checked) f.sel.add(c.dataset.fxV); else f.sel.delete(c.dataset.fxV); f.foco = false; fxGravar(c.dataset.fx); render(); return; }
+  if(c.dataset.fx){ const f = FX[c.dataset.fx]; if(c.checked) f.sel.add(c.dataset.fxV); else f.sel.delete(c.dataset.fxV); f.foco = false; fxGravar(c.dataset.fx); fxAtualizado(); return; }
   if(c.dataset.fxTodos){
     const id = c.dataset.fxTodos, f = FX[id];
     document.querySelectorAll('[data-fx="' + id + '"]').forEach(x => { if(c.checked) f.sel.add(x.dataset.fxV); else f.sel.delete(x.dataset.fxV); });
-    f.foco = false; fxGravar(id); render();
+    f.foco = false; fxGravar(id); fxAtualizado();
   }
 });
 document.addEventListener('click', e => {
   const t = e.target.closest && e.target.closest('[data-fx-toggle]');
   if(t){ const id = t.dataset.fxToggle; FX_ABERTO = FX_ABERTO === id ? null : id; render(); return; }
   const l = e.target.closest && e.target.closest('[data-fx-limpar]');
-  if(l){ const id = l.dataset.fxLimpar; FX[id].sel.clear(); FX[id].busca = ''; fxGravar(id); render(); return; }
+  if(l){ const id = l.dataset.fxLimpar; FX[id].sel.clear(); FX[id].busca = ''; fxGravar(id); fxAtualizado(); return; }
   const lt = e.target.closest && e.target.closest('[data-fx-limpar-todos]');
-  if(lt){ Object.keys(FX).forEach(id => { FX[id].sel.clear(); fxGravar(id); }); render(); return; }
+  if(lt){ Object.keys(FX).forEach(id => { FX[id].sel.clear(); fxGravar(id); }); fxAtualizado(); return; }
   if(FX_ABERTO && !(e.target.closest && e.target.closest('.bc-menu'))){ FX_ABERTO = null; render(); }
 });
 document.addEventListener('keydown', e => { if(e.key === 'Escape' && FX_ABERTO){ FX_ABERTO = null; render(); } });
@@ -494,6 +518,11 @@ function computeSnapshotMateria(materiaKey, comFiltroBanca){
 
 // cada parte (Banca / Cargo / Ano) agora vira sua própria linha — layout
 // pedido: uma linha por metadado, em vez do antigo "Banca: X · Cargo: Y · Ano: Z"
+function orgaoExibicao(bc){      // formato TEC "Banca - SIGLA (ÓRGÃO)/ÓRGÃO/área/ano": o órgão é o 2º trecho ("CAM DEP", "UDESC", "SEFAZ PR")
+  const t = String(bc || '').split('/').map(x => x.trim());
+  if(t.length < 3 || !/\s[-–—]\s/.test(t[0]) || !t[1] || /^(19|20)\d{2}$/.test(t[1])) return '';
+  return t[1];
+}
 function bancaCargoAnoLine(q){
   let banca, cargo, ano;
   const prova = identificarProva(q);
@@ -522,6 +551,8 @@ function bancaCargoAnoLine(q){
   const linhas = [];
   if(banca) linhas.push(`<div class="q-meta-line"><span class="lbl-inline">Banca:</span> ${esc(banca)}</div>`);
   if(cargo) linhas.push(`<div class="q-meta-line"><span class="lbl-inline">Cargo:</span> ${esc(cargo)}</div>`);
+  const orgao = orgaoExibicao(q.bc);
+  if(orgao) linhas.push(`<div class="q-meta-line"><span class="lbl-inline">Órgão:</span> ${esc(orgao)}</div>`);
   if(ano) linhas.push(`<div class="q-meta-line"><span class="lbl-inline">Ano:</span> ${ano}</div>`);
   return linhas.join('');
 }
@@ -697,7 +728,7 @@ function renderEstatisticasPorMateria(){
   const foraVisivel = concursoForaVisivel();
   if(materias.length<2 && !(adapt.adapta && (adapt.faltantes.length || adapt.ocultas.length))) return ''; // com 1 matéria só, isso duplicaria o card grande de cima
   const linhas = materias.map(m=>{
-    const s = computeSnapshotMateria(m, true);
+    const s = computeSnapshotMateria(m);
     const respondidas = s.ac + s.erradas;
     const q = quizGeralDe(m);
     const temSimuladoEmAndamento = !!q;
@@ -715,7 +746,7 @@ function renderEstatisticasPorMateria(){
     return a.nome.localeCompare(b.nome,'pt-BR');
   });
   // matérias do edital que ainda não têm lista: entram na lista geral, destacadas, no topo
-  const filtroAtivo = filtrosAtivos();
+  const filtroAtivo = false;      // os filtros de Banca e Ano ficam na janela da questão
   if(filtroAtivo){ for(let i = linhas.length - 1; i >= 0; i--) if(!linhas[i].total) linhas.splice(i, 1); }
   const somaQ = linhas.reduce((a, l) => a + (l.total || 0), 0);
   const faltam = adapt.faltantes.map(f => ({ nome: f.materia, faltante: true, peso: f.peso, acertos: 0, erros: 0, pct: 0, respondidas: 0, total: 0, ativa: false }));
@@ -728,8 +759,6 @@ function renderEstatisticasPorMateria(){
       <h3 style="margin:0;color:inherit;font-size:22px;">📈 Estatísticas por matéria</h3>
       ${adapt.adapta ? `<div class="conc-adapt"><span>Lista adaptada ao cargo: <b>${adapt.visiveis.length}</b> da base${adapt.faltantes.length ? ` · <b class="conc-falta-n">${adapt.faltantes.length}</b> do edital sem lista` : ''}</span>${(adapt.ocultas.length || foraDoCargoResumo().questoes) ? ' ' + foraDoCargoBotao() : ''}</div>` : ''}
     </div>
-    <div class="fx-barra" role="group" aria-label="Filtros das estatísticas">${['banca','ano'].map(id => fxMenuHtml(id, fxOpcoes(id, materias))).join('')}${filtroAtivo ? '<button type="button" class="prova-det-btn" data-fx-limpar-todos="1">Limpar filtros</button>' : ''}</div>
-    ${filtroAtivo ? `<div class="bc-soma">Somando ${Object.keys(FX).filter(id => FX[id].sel.size).map(id => `<b>${FX[id].rot}</b>: ${[...FX[id].sel].slice(0,2).map(esc).join(', ')}${FX[id].sel.size > 2 ? ' +' + (FX[id].sel.size - 2) : ''}`).join(' · ')} → <b>${somaQ}</b> questões em ${linhas.length} matéria${linhas.length===1?'':'s'}</div>` : ''}
     <div class="resumo-dia">
       <div class="resumo-esq">
       <span class="resumo-item" title="Baseado no histórico recente de cada questão (últimas 20 tentativas)"><small>Hoje</small><b>${atividade.totalHoje} questõe${atividade.totalHoje===1?'':'s'}</b></span>
@@ -1238,7 +1267,7 @@ function renderMainPanel(tabAtual){
     let semDisc = false; try{ const a = JSON.parse(localStorage.getItem('ia_cargo_ativo_v1') || 'null'); semDisc = !!(a && a.semDiscursiva); }catch(_){}
     if(semDisc) return '<div class="notice" style="margin-top:16px"><b>Este concurso não tem prova discursiva.</b><br>O edital cadastrado prevê só prova objetiva, títulos e entrevista. Se houver retificação, atualize o edital em "＋ Edital".</div>';
   }
-  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v688" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
+  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v689" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
   return '';
 }
 
@@ -1617,7 +1646,7 @@ function notaArtigosHtml(ag){
 }
 // Estatísticas por matéria: distribuição das questões por assunto, cada um com o menu de artigos
 function distribuicaoAssuntosMateriaHtml(m){
-  const qs = questoesDaMateria(m).filter(questaoNosFiltros), cont = {};
+  const qs = questoesDaMateria(m), cont = {};
   qs.forEach(q=>{ const t = q.tema||'Geral'; cont[t] = (cont[t]||0)+1; });
   const temas = temasDisponiveis(m).filter(t=>cont[t]);
   Object.keys(cont).forEach(t=>{ if(!temas.includes(t)) temas.push(t); });

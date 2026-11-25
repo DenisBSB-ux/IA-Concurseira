@@ -3108,3 +3108,5 @@ body.theme-light .ap-pop-cx{ background:#fff; color:#15212b; }
 @media (max-width:560px){ .tc-cab, .tc-item>summary{ grid-template-columns:minmax(0,1fr) 44px 40px; } .tc-cab span:nth-child(4), .tc-s{ display:none; } }
 
 .fe-bt small{ font-weight:400; opacity:.85; margin-left:4px; }
+
+.qm-filtros{ display:flex; flex-wrap:wrap; align-items:center; gap:8px 10px; margin:0 0 10px; } .qm-filtros-t{ font-size:.8rem; opacity:.75; } .qm-filtros-n{ font-size:.8rem; opacity:.85; }
