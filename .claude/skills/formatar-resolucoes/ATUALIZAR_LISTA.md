@@ -12,6 +12,14 @@ Uma lista por vez. Ferramentas desta pasta; arquivos de trabalho numa pasta de r
 6. Duplicata para a plataforma (`distintas` < total em `contar_distintas.js`): se já existe no ORIGINAL, não mexa no enunciado; avise o usuário (a plataforma mantém uma das duas).
 7. Entrega (SendUserFile) + relatório curto: gabaritos propostos (a lei carregada prevalece, PADRAO §4; doutrina nunca muda), "Conferir o gabarito", sem ⚖️, divergências.
 
+## 0b. MODO ECONÔMICO (pedido do usuário em 25/11/2026): resoluções por script, com pouco consumo de tokens
+Em vez de 1 subagente por lote (que lê arquivos, usa ferramentas e acumula contexto), rode:
+`python3 .claude/skills/formatar-resolucoes/rodar_lote.py <P> --materia "<matéria e normas>" [--modelo sonnet] [--tam 25]`
+- Cada lote é uma chamada isolada de `claude -p` sem ferramentas e sem o contexto do projeto; o script lê, valida (formato, trechos literais, cobertura de E/X/EE) e grava `lotes/bNN.py`, `resp/rNN.py`, `resp/eNN.py`. Retoma de onde parou; mede tokens em `<P>/uso.json`.
+- Use `--dry-run` primeiro (estima a entrada). Sonnet no rascunho; modelo maior só nos gabaritos que o relatório marcar como duvidosos.
+- Sem texto de lei, a ⚖️ só entra se o modelo tiver certeza; o portão do pop-up (passo 4) e o `lei.js` fecham o resto. Depois: `bash fechar_lista_completa.sh <P> "<Matéria>"`.
+- Calibrar a cota: veja `/usage` antes e depois de um lote; questões por janela de 5 h ≈ cota ÷ tokens por questão.
+
 ## 1. Preparar
 `python3 preparar_lista.py lista.md pasta/` → `pasta/base.md` (limpa: sem ID, Explicação, Ano redundante, Fonte, selo, "texto não carregado"), `pasta/tarefas.md` (itens E, C, M), `pasta/modelo_respostas.py`.
 - Lista **crua** (resolução em texto livre, com Resumo Flash — ex.: lista nova do usuário): antes, escrever as resoluções no formato (⚖️ 📌 🔑 ⚠️ 🪤 💡) em lotes `bNN.py` (`R = {idx: (ess, [chaves], base, atencao, armadilha, macete)}`, lendo `montar_resolucoes.py dump`), `montar_resolucoes.py build lista.md lotes/ saida.md`, e só então `preparar_lista.py saida.md pasta/`.
