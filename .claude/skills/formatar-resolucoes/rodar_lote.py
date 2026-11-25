@@ -59,7 +59,8 @@ def chamar(prompt, modelo, esforco):
     cmd = ['claude', '-p', '--model', modelo, '--output-format', 'json', '--tools', '', '--system-prompt', SISTEMA,
            '--no-session-persistence', '--disable-slash-commands']
     if esforco: cmd += ['--effort', esforco]
-    r = subprocess.run(cmd, input=prompt, capture_output=True, text=True, cwd=tempfile.mkdtemp(prefix='lote_'), timeout=900)
+    env = dict(os.environ, MAX_THINKING_TOKENS='0')      # sem raciocínio estendido: no teste, cortou ~28% dos tokens (24,8 mil -> 17,9 mil em 4 questões)
+    r = subprocess.run(cmd, input=prompt, capture_output=True, text=True, cwd=tempfile.mkdtemp(prefix='lote_'), timeout=900, env=env)
     if r.returncode:
         raise RuntimeError('claude -p falhou: ' + (r.stderr or r.stdout)[:400])
     j = json.loads(r.stdout)
@@ -165,7 +166,7 @@ def main():
             usos.append(dict(lote=NN, ini=i0, fim=i1, ok=False, **uso_tot)); continue
         gravar(a.pasta, k, ns, i0, i1)
         usos.append(dict(lote=NN, ini=i0, fim=i1, ok=True, **uso_tot))
-        print(f'lote {NN} ({i0}..{i1}) ok: {uso_tot["total"]} tokens ({uso_tot["total"] // (i1 - i0)} por questão), custo de referência US$ {uso_tot["custo_ref_usd"]}')
+        print(f'lote {NN} ({i0}..{i1}) ok: {uso_tot["total"]} tokens ({uso_tot["total"] // (i1 - i0)} por questão; saída {uso_tot["saida"]}, leitura de cache {uso_tot["cache_leitura"]}), custo de referência US$ {uso_tot["custo_ref_usd"]}')
         json.dump(usos, open(arq_uso, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     feitos = [u for u in usos if u.get('ok')]
     if feitos:
