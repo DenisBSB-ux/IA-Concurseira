@@ -654,7 +654,7 @@ function concursoAposSync(){
 }
 
 /* ---------- lista de matérias adaptada ao cargo ---------- */
-function concursoForaVisivel(){ try{ return sessionStorage.getItem('ia_conc_fora') === '1'; }catch(_){ return false; } }
+function concursoForaVisivel(){ try{ return localStorage.getItem('ia_conc_fora_v2') === '1'; }catch(_){ return false; } }      // a escolha "mostrar fora do edital" é lembrada entre sessões
 function concursoMateriaNoCargo(nome, cmp){
   const nm = concNorm(nome);
   const e = concEntradaDaMateria(nome);
@@ -679,7 +679,7 @@ function materiasDoPerfil(){
 }
 document.addEventListener('click', e => {
   const t = e.target.closest && e.target.closest('[data-conc-fora],[data-conc-importar]'); if(!t) return;
-  if(t.hasAttribute('data-conc-fora')){ try{ sessionStorage.setItem('ia_conc_fora', concursoForaVisivel() ? '0' : '1'); }catch(_){} try{ marcarDuplicatas(); }catch(_){} if(typeof render === 'function') render(); return; }
+  if(t.hasAttribute('data-conc-fora')){ try{ localStorage.setItem('ia_conc_fora_v2', concursoForaVisivel() ? '0' : '1'); }catch(_){} try{ marcarDuplicatas(); }catch(_){} if(typeof render === 'function') render(); return; }
   if(t.hasAttribute('data-conc-importar')){ STATE.viewImportar = true; STATE.viewAuditoria = false; STATE.importLog = null; if(typeof render === 'function') render(); }
 });
 

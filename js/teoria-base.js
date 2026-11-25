@@ -98,7 +98,15 @@ function teoriaTopicoHtml(t, slug){
     + (t.figuras || []).map(f => '<figure class="tb-fig" data-tb-fig="' + tbEsc('teoria/' + slug + '/' + f.src) + '"><div class="tb-fig-i">Carregando figura…</div>' + (f.legenda ? '<figcaption>' + tbEsc(f.legenda) + '</figcaption>' : '') + '</figure>').join('')
     + (t.macete ? '<p class="tb-macete">💡 <i>' + teoriaInline(t.macete) + '</i></p>' : '')
     + (t.pegadinhas ? '<p class="tb-peg">⚠️ ' + teoriaInline(t.pegadinhas) + '</p>' : '')
+    + teoriaTreinarBotao(t)
     + '</article>';
+}
+function teoriaTreinarBotao(t){
+  try{
+    if(typeof STATE === 'undefined' || !STATE.materia) return '';
+    const n = ALL_QUESTIONS.filter(q => q.materia === STATE.materia && !q.duplicataOculta && q.topicoId === t.id).length;
+    return n ? '<p class="tb-treinar"><button type="button" class="fe-bt" data-tb-estudar="' + tbEsc(t.id) + '">Treinar ' + n + ' ' + (n > 1 ? 'questões' : 'questão') + ' deste tópico</button></p>' : '';
+  }catch(_){ return ''; }
 }
 function teoriaApostilaHtml(slug, dados){
   const m = teoriaMontar(dados), nome = TEORIA_BASE_INDICE[slug].materia;
@@ -111,7 +119,7 @@ function teoriaApostilaHtml(slug, dados){
     + m.caps.map((c, i) => '<section class="tb-cap" id="tb-cap-' + i + '"><h3>' + (c.n !== '' ? '<span class="tb-n">Item ' + tbEsc(c.n) + ' do edital</span> ' : '') + tbEsc(c.t) + '</h3>' + c.topicos.map(t => teoriaTopicoHtml(t, slug)).join('') + '</section>').join('')
     + (fontes ? '<section class="tb-fontes"><h4>Fontes</h4><ul>' + fontes + '</ul></section>' : '');
 }
-async function teoriaAbrir(slug){
+async function teoriaAbrir(slug, focoId){
   if(!TEORIA_BASE_INDICE[slug]) return;
   let box = document.getElementById('tb-modal'); if(box) box.remove();
   box = document.createElement('div'); box.id = 'tb-modal'; box.className = 'tb-modal'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true');
@@ -121,6 +129,7 @@ async function teoriaAbrir(slug){
   try{
     const dados = await teoriaCarregar(slug);
     caixa.innerHTML = teoriaApostilaHtml(slug, dados);
+    if(focoId){ const alvo = document.getElementById('tb-' + focoId); if(alvo){ alvo.classList.add('tb-foco'); setTimeout(() => { try{ alvo.scrollIntoView({ block: 'center' }); }catch(_){} }, 60); } }
     caixa.querySelectorAll('[data-tb-fig]').forEach(async f => {
       const alvo = f.querySelector('.tb-fig-i'), url = f.dataset.tbFig;
       try{
@@ -198,6 +207,7 @@ async function teoriaPrecarregarPerfis(){
   let mudou = false;
   for(const slug of Object.keys(TEORIA_BASE_INDICE)){
     for(const cid of (TEORIA_BASE_INDICE[slug].perfis || [])){
+      try{ if(!TEORIA_BASE_PRE[slug]) TEORIA_BASE_PRE[slug] = await teoriaFetchJson('teoria/' + slug + '/base.json'); }catch(_){}
       try{ const p = await teoriaFetchJson('teoria/' + slug + '/perfil-' + cid + '.json'); (TEORIA_PERFIS_PRE[slug] = TEORIA_PERFIS_PRE[slug] || {})[cid] = p; mudou = true; }catch(_){}
     }
   }

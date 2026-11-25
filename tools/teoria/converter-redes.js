@@ -1,4 +1,5 @@
-/* Converte a teoria atual de Redes (js/doutrina-redes.js) na BASE única + PERFIL do edital da DPDF.
+/* USO ÚNICO (origem do piloto): depois da conversão, o arquivo teoria/redes-de-computadores/base.json é a fonte e é editado direto; rodar este script de novo SOBRESCREVE os ajustes (títulos, palavras, versão).
+   Converte a teoria atual de Redes (js/doutrina-redes.js) na BASE única + PERFIL do edital da DPDF.
    Uso (da raiz do repo): node tools/teoria/converter-redes.js
    Gera teoria/redes-de-computadores/base.json e perfil-dpdf-2026-analista.json.
    Os ids dos tópicos são permanentes: "redes.<item do edital>.<termo>". Não renomeie depois de publicados (só aposente). */

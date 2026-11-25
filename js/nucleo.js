@@ -351,6 +351,7 @@ function marcarDuplicatas(){
     });
   });
   // listas cujo edital manda ocultar o que está "Fora do edital — …" (ex.: Redes): a questão fica guardada, só some das telas
+  try{ if(typeof teoriaClassificarQuestoes === 'function') teoriaClassificarQuestoes(); }catch(e){ console.warn('Tópicos das questões', e); }      // tópico da teoria-base de cada questão
   // (com "mostrar fora do edital" ligado, a questão aparece, marcada como fora do edital)
   const verFora = (typeof concursoForaVisivel === 'function') && concursoForaVisivel();
   ALL_QUESTIONS.forEach(q => {
