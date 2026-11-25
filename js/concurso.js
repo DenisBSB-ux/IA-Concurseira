@@ -41,6 +41,18 @@ function concursoMateriasDoCargo(c, cargo){
   const out = []; (c.comuns || []).concat(cg ? cg.materias || [] : []).forEach(m => { if(m && !out.includes(m)) out.push(m); });
   return out;
 }
+/* matérias que podem cair na DISCURSIVA: só as específicas do cargo (+ Atualidades quando o edital pede dissertação/tema da atualidade).
+   Língua Portuguesa e demais básicos não entram. Um concurso pode fixar a lista em "materiasDiscursiva". */
+function concursoMateriasDiscursiva(c, cargo){
+  if(!c) return [];
+  if(Array.isArray(c.materiasDiscursiva) && c.materiasDiscursiva.length) return c.materiasDiscursiva.slice();
+  const cg = (c.cargos || []).find(x => x.nome === cargo);
+  let out = (cg && cg.materias || []).filter(m => m && !/l[ií]ngua portuguesa|portugu[eê]s|reda[cç][aã]o/i.test(m));
+  const texto = (c.itens || []).filter(i => /discursiv/i.test(i[0] || '')).map(i => i[1] || '').join(' ');
+  if(!out.length) out = (c.comuns || []).filter(m => m && !/l[ií]ngua portuguesa|portugu[eê]s/i.test(m));
+  if(/atualidade/i.test(texto) && !out.includes('Atualidades')) out.push('Atualidades');
+  return out;
+}
 function concursoCarregar(){
   CONC_DB = concursoLerDB();
   const c = concursosTodos().find(x => x.id === CONC_DB.ativo);
@@ -52,7 +64,7 @@ function concursoCarregar(){
   }
   concursoAplicar();
   /* cargo ativo para a aba Discursivas (site): inclui concursos embutidos, que não ficam em ia_concursos_v2 */
-  try{ localStorage.setItem('ia_cargo_ativo_v1', JSON.stringify({ nome: CONCURSO.nome || '', orgao: CONCURSO.orgao || '', cargo: CONCURSO.cargo || '', materias: CONCURSO.materias || [], padrao: !!CONCURSO.padrao })); }catch(_){}
+  try{ localStorage.setItem('ia_cargo_ativo_v1', JSON.stringify({ nome: CONCURSO.nome || '', orgao: CONCURSO.orgao || '', cargo: CONCURSO.cargo || '', materias: CONCURSO.materias || [], materiasDisc: concursoMateriasDiscursiva(c, CONCURSO.cargo), padrao: !!CONCURSO.padrao })); }catch(_){}
   try{ if(typeof marcarDuplicatas === 'function' && typeof ALL_QUESTIONS !== 'undefined' && ALL_QUESTIONS.length) marcarDuplicatas(); }catch(_){}
 }
 /* salva (ou atualiza) um concurso da lista e o torna o ativo; null volta ao TCDF */

@@ -1196,7 +1196,7 @@ function renderMainPanel(tabAtual){
   if(tabAtual==='flashcards') return renderFlashcards();
   if(tabAtual==='materias') return renderApostilas();
   if(tabAtual==='importar') return renderImportarConteudo();
-  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v674" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
+  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v675" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
   return '';
 }
 
