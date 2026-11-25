@@ -1167,6 +1167,7 @@ function renderApostilas(){
   const ordem = Object.keys(grupos).sort((a,b) => (a===foco ? -1 : b===foco ? 1 : a.localeCompare(b,'pt-BR')));
   const kb = n => n >= 1024 ? (n/1024).toFixed(1).replace('.', ',') + ' MB' : n + ' KB';
   return `<div class="ap-aba">
+    ${(typeof teoriaPainelHtml === 'function' && STATE.materia) ? teoriaPainelHtml(STATE.materia) : ''}
     <h3 class="ap-h">📚 Matérias — apostilas em PDF</h3>
     <p class="ap-sub">${todas.length} apostilas em ${ordem.length} matérias. As apostilas abrem direto do site.</p>
     <input type="search" id="ap-busca" class="ap-busca" placeholder="Buscar apostila ou matéria…" aria-label="Buscar apostila">
@@ -1231,7 +1232,7 @@ function renderMainPanel(tabAtual){
     let semDisc = false; try{ const a = JSON.parse(localStorage.getItem('ia_cargo_ativo_v1') || 'null'); semDisc = !!(a && a.semDiscursiva); }catch(_){}
     if(semDisc) return '<div class="notice" style="margin-top:16px"><b>Este concurso não tem prova discursiva.</b><br>O edital cadastrado prevê só prova objetiva, títulos e entrevista. Se houver retificação, atualize o edital em "＋ Edital".</div>';
   }
-  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v680" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
+  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v681" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
   return '';
 }
 

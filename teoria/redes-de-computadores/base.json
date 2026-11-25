@@ -2,7 +2,7 @@
  "esquema": 1,
  "slug": "redes-de-computadores",
  "materia": "Redes de Computadores",
- "versao": 1,
+ "versao": 2,
  "atualizado": "2026-11-25",
  "fontes": [
   [
@@ -59,7 +59,17 @@
    "id": "redes.1.rede",
    "t": "Rede",
    "resumo": "hosts ligados por um meio de transmissão e regidos por protocolos, com comutação de pacotes (a mensagem é dividida e os pacotes compartilham os enlaces). Sentido da transmissão: simplex (um só sentido), half-duplex (nos dois sentidos, mas alternados) e full-duplex (simultâneo).",
-   "origem": "apostila"
+   "origem": "apostila",
+   "palavras": [
+    "simplex",
+    "half-duplex",
+    "full-duplex",
+    "comutacao",
+    "internet",
+    "intranet",
+    "extranet",
+    "peer"
+   ]
   },
   {
    "id": "redes.1.cliente-servidor-p2p",
@@ -75,13 +85,13 @@
   },
   {
    "id": "redes.1.modelo-osi-7-camadas-de-cima-para-baixo",
-   "t": "Modelo OSI (7 camadas, de cima para baixo)",
+   "t": "Modelo OSI",
    "resumo": "Aplicação, Apresentação (formato, tradução, criptografia), Sessão (abre, mantém e fecha o diálogo; pontos de verificação), Transporte (fim a fim; segmento), Rede (endereço lógico e roteamento; pacote), Enlace (MAC; quadro) e Física (bits).",
    "origem": "apostila"
   },
   {
    "id": "redes.1.modelo-tcp-ip-4-camadas",
-   "t": "Modelo TCP/IP (4 camadas)",
+   "t": "Modelo TCP/IP",
    "resumo": "Aplicação (agrupa as camadas 5 a 7 do OSI), Transporte, Internet (Rede) e Acesso à rede (Enlace e Física). Encapsulamento: dados → segmento → pacote → quadro → bits. Switch opera no enlace (MAC), roteador na rede (IP), hub na física.",
    "origem": "apostila"
   },
@@ -162,9 +172,16 @@
   },
   {
    "id": "redes.2.alcance",
-   "t": "Alcance",
+   "t": "Alcance: PAN, LAN, MAN e WAN",
    "resumo": "PAN (pessoal), LAN (sala, prédio, campus; alta velocidade e baixa latência), MAN (cidade; interliga LANs), WAN (países e continentes; enlaces de operadoras) e WLAN (LAN sem fio, IEEE 802.11).",
-   "origem": "apostila"
+   "origem": "apostila",
+   "palavras": [
+    "pan",
+    "lan",
+    "man",
+    "wan",
+    "wlan"
+   ]
   },
   {
    "id": "redes.2.topologias",
@@ -205,13 +222,13 @@
   },
   {
    "id": "redes.3.dominios",
-   "t": "Domínios",
+   "t": "Domínios de colisão e de broadcast",
    "resumo": "hub e repetidor formam um único domínio de colisão; cada porta de switch é um domínio de colisão separado; o switch sem VLAN mantém um único domínio de broadcast; roteador e VLAN o dividem.",
    "origem": "apostila"
   },
   {
    "id": "redes.3.padroes",
-   "t": "Padrões",
+   "t": "Padrões Ethernet (10BASE-T, 100BASE-TX…)",
    "resumo": "10BASE-T (10 Mbps), 100BASE-TX (Fast Ethernet, 100 Mbps, 2 pares), 1000BASE-T (Gigabit, 4 pares), 10GBASE-T (cat 6A). Fibra: 1000BASE-SX (850 nm, multimodo, 220 a 550 m) e 1000BASE-LX (1310 nm, multimodo ou monomodo, até 5 km). A Fast Ethernet admite half e full-duplex.",
    "origem": "apostila"
   },
@@ -256,7 +273,13 @@
    "id": "redes.4.portas-e-socket",
    "t": "Portas e socket",
    "resumo": "16 bits: conhecidas (0 a 1023), registradas (1024 a 49151) e dinâmicas (49152 a 65535). Socket (endereço de socket) é a combinação de endereço IP e número de porta, que identifica um processo de rede.",
-   "origem": "apostila"
+   "origem": "apostila",
+   "palavras": [
+    "porta",
+    "portas",
+    "socket",
+    "well-known"
+   ]
   },
   {
    "id": "redes.4.icmp",
@@ -329,7 +352,7 @@
   },
   {
    "id": "redes.5.exemplos",
-   "t": "Exemplos",
+   "t": "Exemplos de cálculo de sub-redes",
    "resumo": "187.214.177.64/27: bloco de 32, rede .64, broadcast .95. 201.183.167.160/27: broadcast .191. Com máscara 255.255.192.0 o prefixo é /18 (classe B). VLSM: 32.000 hosts pedem /17; 2.000 hosts, /21; 249 hosts, /24. De um /32 IPv6 saem 2^16 = 65.536 prefixos /48.",
    "origem": "apostila"
   },
@@ -384,9 +407,22 @@
   },
   {
    "id": "redes.6.outros",
-   "t": "Outros",
+   "t": "FTP, SMTP, POP3, IMAP e HTTP/HTTPS",
    "resumo": "FTP (TCP 21 de controle e 20 de dados), SMTP (25; 587 e 465), POP3 (110; baixa o e-mail, sincronização unidirecional), IMAP (143; mantém no servidor e sincroniza os dispositivos), LDAP (389; 636 seguro), Syslog (UDP 514).",
-   "origem": "apostila"
+   "origem": "apostila",
+   "palavras": [
+    "ftp",
+    "tftp",
+    "smtp",
+    "pop3",
+    "imap",
+    "http",
+    "https",
+    "web",
+    "correio",
+    "mail",
+    "navegador"
+   ]
   },
   {
    "id": "redes.6.pegadinhas",
@@ -415,7 +451,7 @@
   },
   {
    "id": "redes.7.rstp-802-1w-converge-em-segundos-mstp",
-   "t": "RSTP (802.1w) converge em segundos; MSTP",
+   "t": "RSTP e MSTP",
    "resumo": "RSTP (802.1w) converge em segundos; MSTP (802.1s) agrupa VLANs em instâncias; PVST+ é a versão por VLAN da Cisco. Proteções: PortFast, BPDU Guard, Root Guard e Loop Guard.",
    "origem": "apostila"
   },
@@ -434,15 +470,22 @@
   },
   {
    "id": "redes.8.estatico-dinamico",
-   "t": "Estático × dinâmico",
+   "t": "Roteamento estático × dinâmico",
    "resumo": "estático é configurado à mão, não se adapta a falhas e não gera tráfego de controle (redes pequenas, rota padrão); dinâmico usa protocolos que aprendem e trocam rotas e se ajusta sozinho a mudanças de carga ou topologia.",
    "origem": "apostila"
   },
   {
    "id": "redes.8.igp-egp",
-   "t": "IGP × EGP",
+   "t": "IGP × EGP (RIP, OSPF, EIGRP, BGP)",
    "resumo": "dentro de um sistema autônomo (AS) usam-se RIP, OSPF, EIGRP e IS-IS; entre ASs usa-se o BGP. RIP: vetor de distância, métrica em saltos (máximo 15), UDP 520. OSPF: estado de enlace, algoritmo SPF (Dijkstra), áreas (a 0 é o backbone), custo por largura de banda, IP protocolo 89. BGP: vetor de caminho, TCP 179, eBGP e iBGP, com políticas.",
-   "origem": "apostila"
+   "origem": "apostila",
+   "palavras": [
+    "rip",
+    "ospf",
+    "eigrp",
+    "bgp",
+    "sistema autonomo"
+   ]
   },
   {
    "id": "redes.8.distancia-administrativa",
@@ -471,9 +514,18 @@
   },
   {
    "id": "redes.9.outras",
-   "t": "Outras",
+   "t": "SSL/TLS VPN, L2TP e outras VPNs",
    "resumo": "SSL/TLS VPN (443, via navegador ou cliente leve), L2TP/IPsec (UDP 1701), PPTP (obsoleto e inseguro), GRE (encapsulamento sem criptografia, protocolo 47), OpenVPN e WireGuard. Split tunneling envia pela VPN só o tráfego da rede corporativa.",
-   "origem": "apostila"
+   "origem": "apostila",
+   "palavras": [
+    "ssl",
+    "tls",
+    "l2tp",
+    "pptp",
+    "gre",
+    "openvpn",
+    "mpls"
+   ]
   },
   {
    "id": "redes.9.pegadinhas",
@@ -484,9 +536,18 @@
   },
   {
    "id": "redes.10.por-camada",
-   "t": "Por camada",
+   "t": "Equipamentos por camada",
    "resumo": "repetidor e hub (física; hub retransmite para todas as portas e forma um único domínio de colisão); bridge e switch L2 (enlace; filtram por MAC); switch L3 e roteador (rede; roteiam por IP); modem (adapta o sinal ao meio do provedor); gateway (liga redes com protocolos diferentes; \"gateway padrão\" é o roteador de saída); ponto de acesso (conecta o sem fio à rede cabeada).",
-   "origem": "apostila"
+   "origem": "apostila",
+   "palavras": [
+    "repetidor",
+    "hub",
+    "bridge",
+    "ponte",
+    "camada",
+    "access",
+    "ponto de acesso"
+   ]
   },
   {
    "id": "redes.10.switch",
@@ -569,15 +630,24 @@
   },
   {
    "id": "redes.11.conceitos",
-   "t": "Conceitos",
+   "t": "Conceitos de redes sem fio",
    "resumo": "modo infraestrutura (BSS com um AP; ESS com vários APs e roaming), SSID (nome da rede), BSSID (MAC do AP) e modo ad hoc. Acesso ao meio por CSMA/CA, com ACK e RTS/CTS opcional (nó oculto). Em 2,4 GHz os canais 1, 6 e 11 não se sobrepõem; 2,4 GHz tem maior alcance e mais interferência; 5 GHz tem mais canais e velocidade, e menor alcance. Beamforming direciona o sinal, concentrando a energia em um feixe estreito.",
    "origem": "apostila"
   },
   {
    "id": "redes.11.seguranca",
-   "t": "Segurança",
+   "t": "Segurança Wi-Fi (WEP, WPA, WPA2, WPA3)",
    "resumo": "WEP (RC4, quebrável em minutos, obsoleto), WPA (TKIP), WPA2 (AES-CCMP; PSK ou 802.1X/EAP com RADIUS) e WPA3 (SAE no lugar do PSK, proteção de quadros de gerência, modo Enterprise de 192 bits). WPS é vulnerável; ocultar o SSID e filtrar MAC são medidas fracas; rogue AP e evil twin são ameaças.",
-   "origem": "apostila"
+   "origem": "apostila",
+   "palavras": [
+    "wep",
+    "wpa",
+    "wpa2",
+    "wpa3",
+    "tkip",
+    "aes",
+    "criptografia"
+   ]
   },
   {
    "id": "redes.11.configuracao",
@@ -600,7 +670,7 @@
   },
   {
    "id": "redes.12.tecnicas",
-   "t": "Técnicas",
+   "t": "Técnicas de redundância",
    "resumo": "STP/RSTP e agregação de links (LACP) na camada 2; gateway redundante com IP virtual: HSRP (Cisco, ativo/standby), VRRP (padrão aberto, mestre/backup) e GLBP (Cisco, também balanceia). Para disponibilidade contínua, a técnica mais eficaz é balanceamento de carga com failover.",
    "origem": "apostila"
   },

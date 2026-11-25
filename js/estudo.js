@@ -185,7 +185,7 @@ function renderQuiz(){
   const cFilaPB = contagemDaFila(quiz);
   const progressPct = pct(cFilaPB.ac + cFilaPB.erradas, quiz.queue.length);
   const foraTag = (q.foraEdital || q.foraAssunto) ? ' <span class="q-fora" title="Este assunto não está no edital do seu cargo">fora do edital</span>' : '';
-  const temaLinha = q.tema && q.tema!=='Geral' ? `<div class="q-tema-line">${esc(q.tema)}${foraTag}</div>` : (foraTag ? `<div class="q-tema-line">${foraTag}</div>` : '');
+  const temaLinha = q.tema && q.tema!=='Geral' ? `<div class="q-tema-line">${esc(q.tema)}${foraTag}${(typeof teoriaChipDaQuestao === 'function') ? teoriaChipDaQuestao(q) : ''}</div>` : (foraTag ? `<div class="q-tema-line">${foraTag}</div>` : '');
   const historicoHtml = ''; // removido a pedido: poluía o cabeçalho sem agregar valor suficiente
   const idxUltimaRespondida = acharIdxUltimaRespondida(quiz);
   const idxProximoAssunto = acharIdxProximoAssunto(quiz);
