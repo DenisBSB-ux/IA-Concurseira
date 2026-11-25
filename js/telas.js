@@ -1135,13 +1135,31 @@ function renderMateriaPage(){
 /* ---------- aba "Matérias": todas as apostilas em PDF (abrem no Google Drive) ---------- */
 function apostilasDe(materia){ if(typeof APOSTILAS === 'undefined') return []; const m = apostilaMateria(materia); return APOSTILAS.filter(a => a.m === materia || a.m === m); }
 function apostilaChip(materia){
-  const n = apostilasDe(materia).length; if(!n) return '';
-  return ` <button type="button" class="ap-link" data-apostilas-mat="${esc(materia)}" title="Abrir ${n>1?'as '+n+' apostilas':'a apostila'} em PDF desta matéria"><span class="ap-ico" aria-hidden="true">📄</span> ${n>1 ? n+' apostilas' : 'Apostila'}</button>`;
+  const ap = apostilasDe(materia), n = ap.length; if(!n) return '';
+  const um = n === 1;
+  return ` <button type="button" class="ap-link" ${um ? 'data-apostila-pop="' + esc(String(APOSTILAS.indexOf(ap[0]))) + '"' : 'data-apostilas-mat="' + esc(materia) + '"'} title="${um ? 'Ler a apostila em PDF (abre numa janela)' : 'Ver as ' + n + ' apostilas desta matéria'}"><span class="ap-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/><path d="M9 8h6M9 12h6"/></svg></span><span class="ap-tx">${um ? 'Apostila' : n + ' apostilas'}</span></button>`;
 }
-function teoriaBotoesMateria(m){
-  const sl = (typeof teoriaSlugDe === 'function') ? teoriaSlugDe(m) : null; if(!sl) return '';
-  return `<p class="tb-botoes"><button type="button" class="btn btn-primary tb-abrir" data-teoria-abrir="${esc(sl)}" title="Teoria única da matéria, na ordem do edital do seu cargo">📘 Apostila do edital</button>${teoriaEhAdmin() ? ` <small class="tb-nuvem" title="A teoria é enviada à nuvem sozinha quando o site tem versão mais nova">☁️ ${TEORIA_AUTO_STATUS === 'erro' ? 'nuvem: falhou (veja o console)' : (TEORIA_AUTO_STATUS ? 'nuvem em dia' : 'nuvem: verificando…')}</small> <button type="button" class="side-action-btn compact" data-teoria-publicar="${esc(sl)}" title="Reenvia a teoria e os perfis para a nuvem agora">↻ Reenviar</button>` : ''}</p>`;
+/* janela (pop-up) com o PDF da apostila: arquivo do site direto; do Drive, pela visualização incorporada */
+function apostilaPopAbrir(i){
+  const a = (typeof APOSTILAS !== 'undefined') ? APOSTILAS[i] : null; if(!a) return;
+  const url = apostilaUrl(a), src = a.url ? a.url + '#view=FitH&toolbar=1' : 'https://drive.google.com/file/d/' + a.id + '/preview';
+  let box = document.getElementById('ap-pop'); if(box) box.remove();
+  box = document.createElement('div'); box.id = 'ap-pop'; box.className = 'ap-pop'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-label', a.t);
+  box.innerHTML = `<div class="ap-pop-cx"><div class="ap-pop-top"><div class="ap-pop-t"><b>${esc(a.m)}</b><small>${esc(a.t)}</small></div>
+    <a class="ap-pop-bt" href="${esc(url)}" target="_blank" rel="noopener noreferrer" title="Abrir em outra aba">↗ Abrir</a>${a.url ? `<a class="ap-pop-bt" href="${esc(a.url)}" download title="Baixar o PDF">⬇ Baixar</a>` : ''}
+    <button type="button" class="ap-pop-x" data-ap-pop-fechar="1" aria-label="Fechar">✕</button></div>
+    <iframe class="ap-pop-fr" src="${esc(src)}" title="${esc(a.t)}"></iframe>
+    <p class="ap-pop-ajuda">Se o PDF não aparecer aqui (alguns celulares não mostram PDF em janela), use <b>↗ Abrir</b> ou <b>⬇ Baixar</b>.</p></div>`;
+  document.body.appendChild(box);
 }
+document.addEventListener('click', e => {
+  const t = e.target; if(!t || !t.closest) return;
+  const b = t.closest('[data-apostila-pop]'); if(b){ e.preventDefault(); e.stopPropagation(); apostilaPopAbrir(+b.dataset.apostilaPop); return; }
+  const l = t.closest('a[data-ap-i]'); if(l && !(e.ctrlKey || e.metaKey || e.shiftKey || e.button)){ e.preventDefault(); apostilaPopAbrir(+l.dataset.apI); return; }
+  if(t.closest('[data-ap-pop-fechar]') || t === document.getElementById('ap-pop')){ const p = document.getElementById('ap-pop'); if(p) p.remove(); }
+}, true);
+document.addEventListener('keydown', e => { if(e.key === 'Escape'){ const p = document.getElementById('ap-pop'); if(p) p.remove(); } });
+function teoriaBotoesMateria(m){ return ''; }   // botões da apostila do edital e de publicação ocultos (a publicação na nuvem segue automática)
 function renderApostilas(){
   const todas = (typeof APOSTILAS !== 'undefined') ? APOSTILAS : [];
   const foco = apostilaMateria(STATE.apostilaFoco || '');
@@ -1154,7 +1172,7 @@ function renderApostilas(){
     <input type="search" id="ap-busca" class="ap-busca" placeholder="Buscar apostila ou matéria…" aria-label="Buscar apostila">
     ${ordem.map(m => `<section class="ap-grupo ${m===foco?'foco':''}" data-ap-grupo="${esc(m)}">
       <h4>${esc(m)} <small>${grupos[m].length} apostila${grupos[m].length>1?'s':''}</small></h4>${teoriaBotoesMateria(m)}
-      <ul>${grupos[m].map(a => `<li data-ap-item="${esc((m+' '+a.t).toLowerCase())}"><a href="${esc(apostilaUrl(a))}" target="_blank" rel="noopener noreferrer">📄 ${esc(a.t)}</a> <small>${kb(a.kb)}${a.local ? '' : ' · Drive'}</small></li>`).join('')}</ul>
+      <ul>${grupos[m].map(a => `<li data-ap-item="${esc((m+' '+a.t).toLowerCase())}"><a href="${esc(apostilaUrl(a))}" data-ap-i="${APOSTILAS.indexOf(a)}" target="_blank" rel="noopener noreferrer">📄 ${esc(a.t)}</a> <small>${kb(a.kb)}${a.local ? '' : ' · Drive'}</small></li>`).join('')}</ul>
     </section>`).join('')}
     <p class="ap-vazio" hidden>Nenhuma apostila encontrada.</p>
   </div>`;
@@ -1204,7 +1222,7 @@ function renderMainPanel(tabAtual){
     let semDisc = false; try{ const a = JSON.parse(localStorage.getItem('ia_cargo_ativo_v1') || 'null'); semDisc = !!(a && a.semDiscursiva); }catch(_){}
     if(semDisc) return '<div class="notice" style="margin-top:16px"><b>Este concurso não tem prova discursiva.</b><br>O edital cadastrado prevê só prova objetiva, títulos e entrevista. Se houver retificação, atualize o edital em "＋ Edital".</div>';
   }
-  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v678" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
+  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v679" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
   return '';
 }
 

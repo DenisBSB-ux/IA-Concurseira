@@ -2,7 +2,7 @@
 const APOSTILAS = [
  {
   "m": "Redes de Computadores",
-  "t": "Apostila por assuntos do edital (DPDF 2026 — Informática/Redes)",
+  "t": "DPDF — Analista de Apoio à Assistência Judiciária · Informática - Redes",
   "id": "",
   "kb": 279,
   "url": "apostilas/redes-de-computadores-apostila-edital.pdf",
