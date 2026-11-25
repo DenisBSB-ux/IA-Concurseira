@@ -1,0 +1,1033 @@
+{
+ "esquema": 1,
+ "slug": "constitucional",
+ "materia": "Constitucional",
+ "versao": 1,
+ "atualizado": "2026-11-25",
+ "fontes": [
+  [
+   "Constituição da República Federativa do Brasil de 1988 (texto compilado, Planalto)",
+   "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+  ],
+  [
+   "Súmulas e teses do STF (conferir no portal do STF)",
+   "https://portal.stf.jus.br/"
+  ],
+  [
+   "Lei 9.868/1999 (ADI e ADC)",
+   "https://www.planalto.gov.br/ccivil_03/leis/l9868.htm"
+  ],
+  [
+   "Lei 9.882/1999 (ADPF)",
+   "https://www.planalto.gov.br/ccivil_03/leis/l9882.htm"
+  ]
+ ],
+ "topicos": [
+  {
+   "id": "cf.geral.classificacao",
+   "t": "Classificação da CF/88",
+   "resumo": "**Escrita** (codificada), **dogmática**, **promulgada** (democrática, votada por Assembleia Constituinte em 1988), **analítica** (extensa), **rígida** (processo de emenda mais difícil que o das leis; art. 60) e **formal**. Quanto à origem do poder: **popular**. Estrutura: Preâmbulo, 250 artigos (parte permanente) e ADCT (disposições transitórias).",
+   "macete": "Rígida (não super-rígida): quase tudo pode mudar por emenda; só as **cláusulas pétreas** (art. 60, § 4º) não.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.geral.preambulo",
+   "t": "Preâmbulo e ADCT",
+   "resumo": "O **preâmbulo** não é norma constitucional de reprodução obrigatória, **não tem força normativa**, não limita o legislador e **não serve de parâmetro** para o controle de constitucionalidade (STF, ADI 2.076); vale como **elemento de interpretação**. O **ADCT** tem a mesma hierarquia da Constituição e **pode ser objeto de controle**.",
+   "pegadinhas": "Afirmar que o preâmbulo é norma de repetição obrigatória pelas Constituições estaduais, ou que tem força normativa.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.geral.poder-constituinte",
+   "t": "Poder constituinte",
+   "resumo": "**Originário**: inicial, autônomo, **ilimitado juridicamente** e incondicionado (cria a Constituição). **Derivado reformador**: limitado e condicionado, exercido pelo Congresso por emenda (art. 60). **Derivado decorrente**: dos Estados e do DF para elaborar suas Constituições e leis orgânicas (art. 25 e art. 32), limitado pelos princípios da CF.",
+   "tabelas": [
+    {
+     "titulo": "Espécies de poder constituinte",
+     "cab": [
+      "Espécie",
+      "Natureza",
+      "Limites"
+     ],
+     "linhas": [
+      [
+       "Originário",
+       "inicial, autônomo, incondicionado",
+       "ilimitado juridicamente (sofre limites de direito natural e valores)"
+      ],
+      [
+       "Derivado reformador",
+       "jurídico, condicionado",
+       "formais, circunstanciais e materiais (art. 60)"
+      ],
+      [
+       "Derivado decorrente",
+       "jurídico, condicionado",
+       "princípios da Constituição Federal (simetria)"
+      ]
+     ]
+    }
+   ],
+   "origem": "externa"
+  },
+  {
+   "id": "cf.prin.fundamentos",
+   "t": "Fundamentos da República (art. 1º)",
+   "resumo": "A República Federativa do Brasil é formada pela **união indissolúvel** dos Estados, Municípios e do DF e constitui **Estado Democrático de Direito**. Fundamentos: **soberania**, **cidadania**, **dignidade da pessoa humana**, **valores sociais do trabalho e da livre iniciativa** e **pluralismo político**. Todo o poder emana do povo (parágrafo único): democracia **semidireta**.",
+   "macete": "SO-CI-DI-VA-PLU: Soberania, Cidadania, Dignidade, Valores sociais do trabalho e da livre iniciativa, Pluralismo político.",
+   "pegadinhas": "Trocar fundamento por objetivo (ex.: \"erradicar a pobreza\" é objetivo, não fundamento) ou incluir \"desenvolvimento nacional\" entre os fundamentos.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.prin.poderes-objetivos",
+   "t": "Separação dos Poderes e objetivos fundamentais (arts. 2º e 3º)",
+   "resumo": "Legislativo, Executivo e Judiciário são **independentes e harmônicos entre si** (art. 2º). Objetivos (art. 3º): **construir** uma sociedade livre, justa e solidária; **garantir** o desenvolvimento nacional; **erradicar** a pobreza e a marginalização e **reduzir** as desigualdades sociais e regionais; **promover** o bem de todos, sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação.",
+   "macete": "CO-GA-ER-PRO: Construir, Garantir, Erradicar/reduzir, Promover.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.prin.relacoes-internacionais",
+   "t": "Relações internacionais (art. 4º)",
+   "resumo": "Princípios: **independência nacional**, **prevalência dos direitos humanos**, **autodeterminação dos povos**, **não intervenção**, **igualdade entre os Estados**, **defesa da paz**, **solução pacífica dos conflitos**, **repúdio ao terrorismo e ao racismo**, **cooperação entre os povos** e **concessão de asilo político**. O Brasil buscará a **integração** econômica, política, social e cultural dos povos da **América Latina**.",
+   "pegadinhas": "Incluir \"intervenção humanitária\" ou \"guerra preventiva\": a CF fala em não intervenção e solução pacífica.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.eficacia.classificacao",
+   "t": "Eficácia das normas constitucionais (José Afonso da Silva)",
+   "resumo": "**Plena**: eficácia direta, imediata e integral, sem depender de lei. **Contida** (redutível): eficácia imediata, mas a lei **pode restringir** o alcance. **Limitada**: precisa de lei para produzir todos os efeitos; pode ser de **princípio institutivo** (organiza instituições) ou de **princípio programático** (programas de ação). As normas definidoras de direitos e garantias fundamentais têm **aplicação imediata** (art. 5º, § 1º).",
+   "tabelas": [
+    {
+     "titulo": "Classificação de José Afonso da Silva",
+     "cab": [
+      "Eficácia",
+      "Aplicabilidade",
+      "Lei posterior",
+      "Exemplo"
+     ],
+     "linhas": [
+      [
+       "Plena",
+       "imediata, direta e integral",
+       "não é necessária",
+       "art. 2º (separação dos Poderes)"
+      ],
+      [
+       "Contida",
+       "imediata, mas restringível",
+       "pode restringir",
+       "art. 5º, XIII (liberdade de profissão, \"atendidas as qualificações que a lei estabelecer\")"
+      ],
+      [
+       "Limitada",
+       "mediata (depende de lei)",
+       "necessária para efetivar",
+       "art. 37, VII (direito de greve do servidor: \"nos termos e nos limites definidos em lei específica\")"
+      ]
+     ]
+    }
+   ],
+   "macete": "Contida = \"pode ser contida pela lei\"; limitada = \"só funciona depois da lei\".",
+   "pegadinhas": "Confundir norma contida (já eficaz, a lei só restringe) com limitada (ineficaz até a lei).",
+   "origem": "externa",
+   "palavras": [
+    "norma plena",
+    "contida",
+    "limitada",
+    "programatica",
+    "eficacia"
+   ]
+  },
+  {
+   "id": "cf.eficacia.supremacia",
+   "t": "Supremacia e bloco de constitucionalidade",
+   "resumo": "A Constituição é a norma **suprema** do ordenamento: todas as normas buscam nela seu fundamento de validade. Tratados de **direitos humanos** aprovados em cada Casa, **em dois turnos, por três quintos**, têm **status de emenda constitucional** (art. 5º, § 3º); os demais têm, segundo o STF, **status supralegal** (acima das leis, abaixo da Constituição). O Brasil se submete à jurisdição do **Tribunal Penal Internacional** (§ 4º).",
+   "pegadinhas": "Atribuir status de emenda a qualquer tratado: só vale para os de direitos humanos aprovados pelo rito do § 3º.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.emenda.proposta-votacao",
+   "t": "Emenda constitucional: proposta e votação (art. 60)",
+   "resumo": "Pode ser proposta por **1/3**, no mínimo, dos membros da Câmara **ou** do Senado; pelo **Presidente da República**; ou por **mais da metade das Assembleias Legislativas**, cada uma pela **maioria relativa** de seus membros. Discussão e votação **em cada Casa, em dois turnos, com 3/5** dos votos dos respectivos membros. **Promulgação pelas Mesas** da Câmara e do Senado (sem sanção ou veto).",
+   "macete": "Iniciativa: 1/3 – Presidente – >½ das Assembleias. Votação: 2 turnos × 3/5 em cada Casa.",
+   "pegadinhas": "Exigir sanção do Presidente; trocar 3/5 por maioria absoluta; atribuir a promulgação ao Presidente da República.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.emenda.limites",
+   "t": "Limites ao poder de reforma",
+   "resumo": "**Circunstanciais**: a Constituição não pode ser emendada na vigência de **intervenção federal, estado de defesa ou estado de sítio** (§ 1º). **Materiais** (cláusulas pétreas, § 4º): não será objeto de deliberação proposta **tendente a abolir** a forma federativa de Estado; o voto direto, secreto, universal e periódico; a separação dos Poderes; os direitos e garantias individuais. **Formais**: o procedimento do art. 60. Matéria de proposta **rejeitada ou prejudicada** não pode ser reapresentada na **mesma sessão legislativa** (§ 5º).",
+   "macete": "FI-VO-SE-DI: Forma federativa, Voto, Separação, Direitos individuais. A proposta \"tendente a abolir\" é vedada; ampliar ou reforçar a cláusula pétrea é possível.",
+   "pegadinhas": "Dizer que a república ou o presidencialismo são cláusulas pétreas (não estão no § 4º); confundir \"mesma sessão legislativa\" com \"mesma legislatura\".",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.emenda.revisao",
+   "t": "Revisão constitucional (ADCT, art. 3º)",
+   "resumo": "Prevista no ADCT, art. 3º: revisão **cinco anos após** a promulgação, pelo voto da **maioria absoluta** dos membros do Congresso, em **sessão unicameral**. Foi realizada em 1993-1994 (seis emendas de revisão) e está **exaurida**.",
+   "pegadinhas": "Tratar a revisão como instrumento ainda disponível ou exigir quórum de 3/5.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.dir-ind.caput-igualdade",
+   "t": "Art. 5º: caput, igualdade e direitos de primeira geração",
+   "resumo": "Garante a brasileiros e **estrangeiros residentes no País** a inviolabilidade do direito à **vida, liberdade, igualdade, segurança e propriedade**. Homens e mulheres são **iguais em direitos e obrigações** (I). Ninguém é obrigado a fazer ou deixar de fazer algo senão em virtude de **lei** (II: legalidade). **Proibida a tortura** e o tratamento desumano (III). A **aplicação** dos direitos fundamentais é **imediata** (§ 1º).",
+   "pegadinhas": "Dizer que só brasileiros são titulares; a jurisprudência estende aos estrangeiros **não residentes** também.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.dir-ind.liberdades",
+   "t": "Liberdades: expressão, crença, reunião e associação",
+   "resumo": "**Livre** a manifestação do pensamento, **vedado o anonimato** (IV); **direito de resposta** proporcional ao agravo (V); **inviolável** a liberdade de consciência e de crença; o **livre exercício dos cultos** e a proteção aos locais de culto (VI). **Livre** a expressão da atividade intelectual, artística, científica e de comunicação, **independente de censura ou licença** (IX). **Reunião**: pacífica, **sem armas**, em locais abertos ao público, **independentemente de autorização**, bastando **prévio aviso** à autoridade (XVI). **Associação**: plena liberdade para fins **lícitos**, vedada a de caráter **paramilitar** (XVII); **ninguém** é obrigado a associar-se ou a permanecer associado (XX).",
+   "macete": "Reunião = **sem armas** + **prévio aviso** (não autorização). Associação = fins lícitos; paramilitar é vedada.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.dir-ind.intimidade-propriedade",
+   "t": "Intimidade, domicílio, sigilo e propriedade",
+   "resumo": "São **invioláveis** a intimidade, a vida privada, a honra e a imagem, com **indenização** pelo dano (X). A **casa** é asilo inviolável: só entra-se **com consentimento**, ou em **flagrante delito**, **desastre**, para **prestar socorro**, ou, **durante o dia, por determinação judicial** (XI). É inviolável o **sigilo** da correspondência e das comunicações telegráficas, **de dados** e telefônicas; a **interceptação telefônica**, só **por ordem judicial**, para fins de **investigação criminal ou instrução processual penal** (XII). É garantido o direito de **propriedade**, que atenderá à sua **função social** (XXII e XXIII). **Desapropriação** por necessidade ou utilidade pública, ou interesse social, mediante **prévia e justa indenização em dinheiro** (XXIV).",
+   "pegadinhas": "Autorizar a entrada na casa **à noite** por ordem judicial (só durante o dia); trocar \"indenização em dinheiro\" por \"em títulos\" (a regra geral é dinheiro).",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.dir-ind.penal-processual",
+   "t": "Direitos e garantias penais e processuais",
+   "resumo": "**Legalidade e anterioridade** penal (XXXIX); a lei penal **não retroagirá, salvo para beneficiar o réu** (XL). **Pena**: individualização (XLVI); **vedadas** penas de morte (salvo guerra declarada), perpétuas, de trabalhos forçados, de banimento e cruéis (XLVII). **Juiz natural** (XXXVII e LIII); **devido processo legal** (LIV); **contraditório e ampla defesa** (LV); **inadmissíveis as provas ilícitas** (LVI); **presunção de inocência** até o trânsito em julgado (LVII). **Prisão**: só em flagrante ou por ordem escrita e fundamentada de autoridade judiciária (LXI); **comunicação imediata** ao juiz e à família; direito de **permanecer calado** (LXIII). **Tribunal do júri**: plenitude de defesa, sigilo das votações, soberania dos veredictos e competência para os **crimes dolosos contra a vida** (XXXVIII).",
+   "macete": "Retroatividade da lei penal: só a **benéfica**. Tribunal do júri = P-S-S-C: Plenitude de defesa, Sigilo, Soberania, Competência (dolosos contra a vida).",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.dir-ind.remedios",
+   "t": "Remédios constitucionais",
+   "resumo": "Instrumentos para proteger direitos fundamentais. **Habeas corpus**: liberdade de locomoção ameaçada ou violada. **Habeas data**: conhecer, retificar ou anotar informações pessoais em bancos de dados públicos. **Mandado de segurança**: direito líquido e certo não amparado por HC ou HD (individual ou coletivo). **Mandado de injunção**: falta de norma regulamentadora que inviabiliza direitos e liberdades constitucionais. **Ação popular**: anular ato lesivo ao patrimônio público, à moralidade administrativa, ao meio ambiente e ao patrimônio histórico e cultural (o autor é **isento de custas**, salvo má-fé).",
+   "tabelas": [
+    {
+     "titulo": "Comparativo dos remédios",
+     "cab": [
+      "Remédio",
+      "Protege",
+      "Quem pode propor",
+      "Observação"
+     ],
+     "linhas": [
+      [
+       "Habeas corpus",
+       "liberdade de locomoção",
+       "qualquer pessoa (inclusive sem advogado)",
+       "gratuito (art. 5º, LXXVII)"
+      ],
+      [
+       "Habeas data",
+       "informações pessoais",
+       "o próprio titular",
+       "gratuito; exige negativa prévia na via administrativa"
+      ],
+      [
+       "Mandado de segurança",
+       "direito líquido e certo",
+       "pessoa física ou jurídica; coletivo: partido, sindicato, entidade de classe",
+       "residual (não cabe se couber HC ou HD)"
+      ],
+      [
+       "Mandado de injunção",
+       "direitos inviabilizados por falta de norma",
+       "qualquer interessado (individual ou coletivo)",
+       "suprir a omissão normativa"
+      ],
+      [
+       "Ação popular",
+       "patrimônio público, moralidade, meio ambiente, patrimônio histórico",
+       "cidadão (eleitor)",
+       "isento de custas e ônus da sucumbência, salvo má-fé"
+      ]
+     ]
+    }
+   ],
+   "pegadinhas": "Dizer que o HC exige advogado, ou que o mandado de segurança protege a liberdade de locomoção (isso é HC).",
+   "origem": "externa",
+   "palavras": [
+    "hc",
+    "habeas",
+    "mandado",
+    "injuncao",
+    "acao popular"
+   ]
+  },
+  {
+   "id": "cf.dir-ind.coletivos-outros",
+   "t": "Direitos coletivos e outros direitos do art. 5º",
+   "resumo": "Associações podem representar os filiados **se expressamente autorizadas** (XXI) e a entidade pode agir em juízo (**legitimidade extraordinária**). **Direito de petição** e de **certidão** (XXXIV), **acesso à Justiça** (XXXV: a lei não excluirá da apreciação do Judiciário lesão ou ameaça a direito), **assistência jurídica integral e gratuita** aos que comprovarem insuficiência de recursos (LXXIV), **razoável duração do processo** (LXXVIII). **Extradição**: nenhum **brasileiro** será extraditado, salvo o **naturalizado** por crime comum **anterior** à naturalização ou por tráfico ilícito de entorpecentes, na forma da lei (LI); não se concede extradição de **estrangeiro por crime político ou de opinião** (LII).",
+   "pegadinhas": "Dizer que o brasileiro nato pode ser extraditado; ou que o naturalizado nunca pode.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.dir-soc.art-6",
+   "t": "Direitos sociais (art. 6º)",
+   "resumo": "São direitos sociais: **educação, saúde, alimentação, trabalho, moradia, transporte, lazer, segurança, previdência social, proteção à maternidade e à infância e assistência aos desamparados**. Todo brasileiro em situação de vulnerabilidade social tem direito a uma **renda básica familiar**, na forma da lei (parágrafo único, incluído pela EC 114/2021).",
+   "macete": "Transporte e alimentação entraram por emenda (EC 90/2015 e EC 64/2010): sempre aparecem em questões de \"lista completa\".",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.dir-soc.trabalhadores",
+   "t": "Direitos dos trabalhadores (art. 7º)",
+   "resumo": "Alguns direitos: relação de emprego protegida contra despedida arbitrária; **seguro-desemprego**; **FGTS**; **salário mínimo** nacionalmente unificado (**vedada sua vinculação para qualquer fim**, art. 7º, IV); **décimo terceiro**; **jornada** normal de até **8 horas diárias e 40 semanais** (XIII, redação da **EC 141/2026**; antes eram 44 semanais — conferir a data de início da escala 5x2); **férias** com **1/3 a mais** (XVII); **licença-gestante de 120 dias** (XVIII) e **licença-paternidade** (XIX); **proibição de diferença** de salário, exercício de funções e critério de admissão por sexo, idade, cor ou estado civil (XXX); **proibição de trabalho noturno, perigoso ou insalubre a menores de 18** e de qualquer trabalho a menores de **16, salvo aprendiz a partir de 14** (XXXIII). Os **domésticos** têm os direitos listados no **§ 1º** (antigo parágrafo único; EC 72/2013 e EC 141/2026). O § 2º (EC 141/2026) admite que convenção ou acordo coletivo estabeleça **regime compensatório** que assegure, na média, **2 dias de repouso semanal** no mês, e o § 3º permite a lei criar **regimes diferenciados** respeitados os limites dos incisos XIII, XIV e XV.",
+   "pegadinhas": "Trocar 120 dias por 180; dizer que o aprendiz só pode ser maior de 16 (a partir de 14); responder 44 horas semanais sem considerar a EC 141/2026 (o texto vigente traz 40).",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.dir-soc.coletivos",
+   "t": "Direitos coletivos dos trabalhadores (arts. 8º a 11)",
+   "resumo": "**Liberdade sindical** (art. 8º): livre a associação profissional ou sindical, **vedada** a interferência do Poder Público; **unicidade sindical** (só uma organização por categoria na mesma base territorial, no mínimo um município); **contribuição** fixada em assembleia; ninguém é obrigado a filiar-se; o **sindicato** defende direitos coletivos e individuais da categoria; é **obrigatória** a participação dos sindicatos nas **negociações coletivas**. **Greve** (art. 9º): **direito**, cabendo aos trabalhadores decidir sobre a oportunidade e os interesses; a lei define **serviços essenciais** e os abusos sujeitam os responsáveis às penas da lei. **Participação** dos trabalhadores em colegiados (art. 10) e **representante** nas empresas com mais de 200 empregados (art. 11).",
+   "pegadinhas": "Dizer que a CF adota a pluralidade sindical (adota a unicidade); confundir o direito de greve do trabalhador privado (art. 9º) com o do servidor (art. 37, VII).",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.nac-pol.nacionalidade",
+   "t": "Nacionalidade (art. 12)",
+   "resumo": "**Natos**: nascidos no Brasil, ainda que de pais estrangeiros que não estejam a serviço de seu país (**jus soli**); nascidos no exterior de pai ou mãe brasileiros **a serviço do Brasil**; e nascidos no exterior de pai ou mãe brasileiros que sejam **registrados em repartição brasileira** ou **venham residir no Brasil e optem, a qualquer tempo, depois da maioridade** (**nacionalidade potestativa**). **Naturalizados**: na forma da lei (originários de países de **língua portuguesa**: apenas **1 ano** de residência e idoneidade moral) e **estrangeiros residentes há mais de 15 anos ininterruptos e sem condenação penal**, que requeiram. **Portugueses** com residência permanente, se houver **reciprocidade**, recebem direitos inerentes ao brasileiro (§ 1º). A lei **não pode distinguir** natos e naturalizados, salvo nos casos da Constituição (§ 2º).",
+   "pegadinhas": "Dizer que o filho de brasileiro nascido no exterior é nato sem registro nem opção; confundir os prazos de naturalização (1 ano para lusófonos; 15 anos para os demais, sem condenação).",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.nac-pol.cargos-privativos",
+   "t": "Cargos privativos de brasileiro nato e perda da nacionalidade",
+   "resumo": "São **privativos de brasileiro nato** os cargos de **Presidente e Vice-Presidente da República, Presidente da Câmara dos Deputados, Presidente do Senado Federal, Ministro do STF, carreira diplomática, oficial das Forças Armadas e Ministro de Estado da Defesa** (art. 12, § 3º). **Perde a nacionalidade** (art. 12, § 4º, redação da **EC 131/2023**) o brasileiro que (I) tiver **cancelada a naturalização, por sentença judicial**, em virtude de **fraude relacionada ao processo de naturalização** ou de **atentado contra a ordem constitucional e o Estado Democrático**; ou (II) fizer **pedido expresso de perda** da nacionalidade perante autoridade brasileira competente, **ressalvadas situações que acarretem apatridia**. Pela redação antiga, a perda ocorria também ao **adquirir outra nacionalidade**: regra **superada** (a aquisição de outra nacionalidade, por si só, já não faz perder a brasileira).",
+   "macete": "PRE-VICE-CAM-SEN-STF-DIP-MIL-DEF: quem está na linha sucessória do Presidente, mais STF, diplomata, oficial militar e Ministro da Defesa.",
+   "pegadinhas": "Incluir \"Ministro de Estado\" em geral (só o da Defesa) ou \"Vice-Presidente do Senado\" na lista; dizer que adquirir outra nacionalidade faz perder a brasileira (regra antiga, alterada pela EC 131/2023).",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.nac-pol.direitos-politicos",
+   "t": "Direitos políticos, alistamento e elegibilidade (arts. 14 e 15)",
+   "resumo": "A soberania popular é exercida pelo **sufrágio universal e voto direto e secreto**, com valor igual para todos, mediante **plebiscito, referendo e iniciativa popular**. **Alistamento e voto**: **obrigatórios** para os maiores de **18** anos; **facultativos** para analfabetos, maiores de **70** e maiores de **16 e menores de 18**. **Não podem alistar-se** os estrangeiros e, durante o serviço militar obrigatório, os **conscritos**. **Idades mínimas**: **35** para Presidente, Vice-Presidente e Senador; **30** para Governador e Vice; **21** para Deputado (federal, estadual e distrital), Prefeito, Vice-Prefeito e juiz de paz; **18** para Vereador. **Perda ou suspensão** dos direitos políticos (art. 15): **vedada a cassação**; casos: cancelamento da naturalização por sentença transitada em julgado; **incapacidade civil absoluta**; **condenação criminal transitada em julgado**, enquanto durarem seus efeitos; **recusa de cumprir obrigação a todos imposta** ou prestação alternativa; **improbidade administrativa**.",
+   "tabelas": [
+    {
+     "titulo": "Idade mínima para os cargos eletivos (art. 14, § 3º, VI)",
+     "cab": [
+      "Idade",
+      "Cargos"
+     ],
+     "linhas": [
+      [
+       "35 anos",
+       "Presidente, Vice-Presidente e Senador"
+      ],
+      [
+       "30 anos",
+       "Governador e Vice-Governador"
+      ],
+      [
+       "21 anos",
+       "Deputado federal/estadual/distrital, Prefeito, Vice-Prefeito e juiz de paz"
+      ],
+      [
+       "18 anos",
+       "Vereador"
+      ]
+     ]
+    }
+   ],
+   "macete": "Perda (definitiva, em tese: cancelamento de naturalização) × suspensão (temporária); cassação é **vedada**.",
+   "pegadinhas": "Dizer que a cassação de direitos políticos é permitida; trocar 70 por 65 anos; inverter a idade de Senador e Deputado.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.nac-pol.partidos",
+   "t": "Partidos políticos (art. 17)",
+   "resumo": "**Livre** a criação, fusão, incorporação e extinção, resguardados a **soberania nacional**, o **regime democrático**, o **pluripartidarismo** e os **direitos fundamentais**; **caráter nacional**; **proibido** o recebimento de recursos de entidade ou governo estrangeiros e a **subordinação** a eles; **prestação de contas** à Justiça Eleitoral; **funcionamento parlamentar** de acordo com a lei. Os partidos têm **autonomia** para definir sua estrutura, organização e funcionamento, inclusive coligações nas eleições **proporcionais** (vedadas, após a EC 97/2017).",
+   "pegadinhas": "Dizer que o partido adquire personalidade jurídica no Tribunal Superior Eleitoral (adquire no registro civil e depois registra o estatuto no TSE).",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.federal.organizacao",
+   "t": "Organização político-administrativa (arts. 18 a 20)",
+   "resumo": "A organização compreende **União, Estados, DF e Municípios**, **todos autônomos**. **Brasília** é a Capital Federal. Estados podem **incorporar-se, subdividir-se ou desmembrar-se** por **plebiscito** e **lei complementar**, após **oitiva das Assembleias Legislativas**; Municípios: criação, fusão e desmembramento por **lei estadual**, dentro do período fixado por **lei complementar federal**, após **consulta prévia**, mediante plebiscito, às populações. **Vedações comuns** (art. 19): estabelecer cultos religiosos ou igrejas, **recusar fé aos documentos públicos** e **criar distinções** entre brasileiros. **Bens da União** (art. 20): terras devolutas indispensáveis à defesa, **rios e lagos** que banhem mais de um Estado, **praias fluviais**, **ilhas oceânicas**, **mar territorial**, recursos naturais da plataforma continental e da ZEE, **terrenos de marinha** e acrescidos, **cavidades naturais** subterrâneas.",
+   "pegadinhas": "Atribuir aos Estados os terrenos de marinha ou o mar territorial (são da União); exigir lei federal ordinária para criar Município.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.federal.competencias",
+   "t": "Repartição de competências (arts. 21 a 24 e 30)",
+   "resumo": "**Materiais exclusivas da União** (art. 21): manter relações com Estados estrangeiros, declarar guerra, emitir moeda, **organizar e manter o Poder Judiciário, o MP e a Defensoria Pública do DF e dos Territórios**, e a **polícia civil, polícia militar e corpo de bombeiros militar do DF**. **Legislativas privativas da União** (art. 22): direito civil, comercial, penal, processual, eleitoral, agrário, marítimo, aeronáutico, espacial e do trabalho; desapropriação; águas, energia, informática, telecomunicações; trânsito e transporte; **a lei complementar pode autorizar os Estados** a legislar sobre questões específicas (parágrafo único). **Comuns** (art. 23): cuidar da saúde e assistência pública, proteger documentos, obras e bens de valor histórico, o meio ambiente, combater a pobreza, entre outras. **Concorrentes** (art. 24): União **normas gerais**, Estados **suplementam**; direito tributário, financeiro, penitenciário, econômico e urbanístico; orçamento; educação, cultura, ensino e desporto; proteção do meio ambiente; responsabilidade por dano ao meio ambiente e ao consumidor, entre outros. **Municípios** (art. 30): legislar sobre assuntos de **interesse local**, suplementar a legislação federal e estadual, instituir e arrecadar tributos, organizar serviços públicos locais.",
+   "tabelas": [
+    {
+     "titulo": "Competências legislativas",
+     "cab": [
+      "Tipo",
+      "Quem legisla",
+      "Resumo"
+     ],
+     "linhas": [
+      [
+       "Privativa (art. 22)",
+       "União",
+       "delegável por lei complementar a Estados em questões específicas"
+      ],
+      [
+       "Concorrente (art. 24)",
+       "União, Estados e DF",
+       "União edita normas gerais; Estados e DF suplementam; se não houver norma geral, exercem a competência plena"
+      ],
+      [
+       "Suplementar (art. 24, § 2º; art. 30, II)",
+       "Estados, DF e Municípios",
+       "completar ou suprir lacunas"
+      ],
+      [
+       "Remanescente (art. 25, § 1º)",
+       "Estados",
+       "o que não for vedado pela CF"
+      ]
+     ]
+    }
+   ],
+   "pegadinhas": "Atribuir aos Estados as competências privativas do art. 22; dizer que a União pode editar normas específicas na competência concorrente.",
+   "origem": "externa",
+   "palavras": [
+    "competencia",
+    "privativa",
+    "concorrente",
+    "suplementar"
+   ]
+  },
+  {
+   "id": "cf.federal.df",
+   "t": "Distrito Federal (art. 32)",
+   "resumo": "**Vedada a divisão do DF em Municípios.** Rege-se por **lei orgânica**, votada em **dois turnos** com **interstício mínimo de dez dias** e aprovada por **dois terços** da Câmara Legislativa, que a promulgará. Tem as **competências legislativas reservadas aos Estados e Municípios** (art. 32, § 1º). **Eleição** do Governador, Vice-Governador e Deputados Distritais na mesma data dos Estados. **Organização e manutenção do Judiciário, do MP e da Defensoria Pública do DF** (e da polícia civil, militar e dos bombeiros) são da **União** (art. 21, XIII e XIV), mas o DF tem **autonomia** para administrar-se. O número de **Deputados Distritais** segue a regra do art. 27: o **triplo** da representação do DF na Câmara dos Deputados.",
+   "pegadinhas": "Dizer que o DF pode dividir-se em Municípios, ou que sua lei orgânica é votada em turno único.",
+   "origem": "externa",
+   "palavras": [
+    "distrito federal",
+    "df",
+    "lei organica"
+   ]
+  },
+  {
+   "id": "cf.federal.intervencao",
+   "t": "Intervenção federal (arts. 34 a 36)",
+   "resumo": "A **regra é a não intervenção**; a União só intervém nos casos do art. 34, entre eles: manter a **integridade nacional**, repelir invasão, pôr termo a **grave comprometimento da ordem pública**, **garantir o livre exercício dos Poderes**, reorganizar as **finanças** da unidade que suspender o pagamento da dívida por mais de dois anos, **prover a execução de lei federal, ordem ou decisão judicial**, assegurar os **princípios constitucionais sensíveis**. O **decreto** é do Presidente da República, que o submete ao **Congresso** em **24 horas**; **dispensa-se** a apreciação nos casos de **ação de inconstitucionalidade interventiva** e de requisição judicial para execução de lei federal ou ordem ou decisão judicial. **Requisição** pelo **STF** ou **STJ** para ordem ou decisão judicial, pelo **TSE** em matéria eleitoral e **provimento pelo STF**, após representação do **PGR**, para os princípios sensíveis.",
+   "pegadinhas": "Dizer que a União intervém nos Municípios de qualquer Estado (a União só intervém nos Municípios situados em Território; os Estados intervêm nos seus Municípios); confundir os princípios sensíveis com os casos de livre exercício.",
+   "origem": "externa",
+   "palavras": [
+    "intervencao",
+    "intervencao federal"
+   ]
+  },
+  {
+   "id": "cf.adm.principios",
+   "t": "Princípios da administração pública (art. 37, caput)",
+   "resumo": "**Legalidade, impessoalidade, moralidade, publicidade e eficiência.** A administração direta e indireta de qualquer dos Poderes da União, Estados, DF e Municípios obedece a esses princípios. **Publicidade** dos atos, programas, obras, serviços e campanhas dos órgãos públicos: caráter **educativo, informativo ou de orientação social**, **vedada** a promoção pessoal de autoridades ou servidores (art. 37, § 1º).",
+   "macete": "LIMPE: Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência.",
+   "pegadinhas": "Incluir \"razoabilidade\" ou \"supremacia do interesse público\" no caput (são princípios implícitos, não expressos no art. 37).",
+   "origem": "externa",
+   "palavras": [
+    "limpe",
+    "legalidade",
+    "impessoalidade",
+    "moralidade",
+    "publicidade",
+    "eficiencia"
+   ]
+  },
+  {
+   "id": "cf.adm.cargos-concurso",
+   "t": "Acesso a cargos, concurso e funções de confiança (art. 37, I a V)",
+   "resumo": "Os cargos, empregos e funções públicas são acessíveis aos brasileiros que preencham os requisitos da lei e **também aos estrangeiros**, na forma da lei. **Concurso público** de provas ou de provas e títulos para cargo ou emprego (**exceto** cargo em comissão de livre nomeação e exoneração). Prazo de validade de **até 2 anos, prorrogável uma vez por igual período**. Durante o prazo improrrogável, o aprovado em concurso **tem precedência** sobre os novos concursados. **Reserva** de percentual de cargos e empregos para **pessoas com deficiência**. **Funções de confiança** são exercidas **exclusivamente por servidores ocupantes de cargo efetivo**; **cargos em comissão** são preenchidos por servidores de carreira nos casos, condições e percentuais fixados em lei, destinados apenas às atribuições de **direção, chefia e assessoramento**.",
+   "pegadinhas": "Trocar \"até 2 anos\" por \"dois anos improrrogáveis\"; dizer que cargo em comissão exige concurso; dizer que função de confiança pode ser exercida por quem não é efetivo.",
+   "origem": "externa",
+   "palavras": [
+    "concurso",
+    "cargo em comissao",
+    "funcao de confianca"
+   ]
+  },
+  {
+   "id": "cf.adm.remuneracao-teto",
+   "t": "Remuneração, teto e acumulação (art. 37, X a XVI)",
+   "resumo": "A remuneração e o subsídio só podem ser fixados ou alterados por **lei específica**; **revisão geral anual**, sempre na mesma data e sem distinção de índices. **Teto** (XI): o **subsídio mensal dos Ministros do STF**; nos Estados e no DF, o subsídio do Governador (Executivo), dos Deputados (Legislativo) e dos Desembargadores (Judiciário, limitado a **90,25%** do subsídio dos Ministros do STF). **Não entram no teto** as **parcelas de caráter indenizatório** previstas em **lei ordinária nacional**, aprovada pelo Congresso e aplicável a todos os Poderes (art. 37, § 11, redação da **EC 135/2024**). **Vedada** a vinculação ou equiparação de remunerações. **Acumulação remunerada** vedada, **exceto**, com compatibilidade de horários e observado o teto: **dois cargos de professor**, **um cargo de professor com outro de qualquer natureza** (redação da **EC 138/2025**; antes, o outro cargo tinha de ser técnico ou científico) e **dois cargos ou empregos privativos de profissionais de saúde**, com profissões regulamentadas.",
+   "macete": "Acumulação permitida (com compatibilidade de horários e teto): dois de professor; professor + outro de qualquer natureza (EC 138/2025); dois da saúde.",
+   "pegadinhas": "Dizer que o teto é o salário do Presidente da República; ignorar a necessidade de compatibilidade de horários; manter a regra antiga (professor + técnico ou científico), superada pela EC 138/2025.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.adm.responsabilidade",
+   "t": "Responsabilidade e improbidade (art. 37, §§ 4º a 6º)",
+   "resumo": "**Improbidade administrativa**: suspensão dos direitos políticos, **perda da função pública**, **indisponibilidade dos bens** e **ressarcimento ao erário**, na forma e gradação previstas em lei, **sem prejuízo da ação penal** (§ 4º). **Prescrição**: a lei estabelece prazos para ilícitos que causem prejuízo ao erário, ressalvadas as respectivas **ações de ressarcimento**, que são **imprescritíveis** (§ 5º; fixado pelo STF para o ressarcimento por ato doloso de improbidade, Tema 897 — conferir). **Responsabilidade civil**: as pessoas jurídicas de direito público e as **privadas prestadoras de serviço público** respondem pelos danos que seus agentes, **nessa qualidade**, causarem a terceiros, assegurado o **direito de regresso** contra o responsável nos casos de **dolo ou culpa** (§ 6º): **responsabilidade objetiva** do Estado e **subjetiva** do agente.",
+   "pegadinhas": "Afirmar que a ação de ressarcimento é sempre prescritível (a CF ressalva; o STF fixou imprescritibilidade só para ato doloso de improbidade); dizer que o agente responde objetivamente.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.serv.regime",
+   "t": "Servidores públicos: regime e direitos (arts. 39 e 40)",
+   "resumo": "Os servidores titulares de cargo público efetivo submetem-se ao **regime jurídico único** (o STF restabeleceu, na ADI 2.135, a redação original do art. 39, caput; conferir a situação atual no portal do STF) e à **carreira**. Os direitos sociais aplicáveis aos servidores constam do art. 39, § 3º (ex.: salário mínimo, décimo terceiro, férias com 1/3, licença-gestante, jornada). Os membros de Poder, titulares de mandato eletivo, Ministros de Estado e Secretários são remunerados **exclusivamente por subsídio**, em **parcela única**. **Direito de greve** do servidor: **nos termos e nos limites definidos em lei específica** (art. 37, VII; norma de eficácia limitada, aplicando-se, enquanto não editada, a lei de greve do setor privado). **Livre associação sindical** (art. 37, VI).",
+   "pegadinhas": "Dizer que o servidor não tem direito de associação sindical, ou que o direito de greve é de eficácia plena.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.serv.estabilidade",
+   "t": "Estabilidade e perda do cargo (art. 41)",
+   "resumo": "São **estáveis** após **três anos de efetivo exercício** os servidores nomeados para **cargo de provimento efetivo** em virtude de **concurso público**; condição: **avaliação especial de desempenho** por comissão instituída para essa finalidade. O servidor estável só **perde o cargo** por **sentença judicial transitada em julgado**; **processo administrativo** com ampla defesa; **procedimento de avaliação periódica de desempenho**, na forma de lei complementar, assegurada ampla defesa; e para cumprir o **limite de despesa com pessoal** (art. 169, § 4º). **Reintegração** do servidor demitido ilegalmente: o eventual ocupante é reconduzido ao cargo de origem sem direito a indenização, aproveitado em outro ou posto em **disponibilidade** com remuneração proporcional.",
+   "tabelas": [
+    {
+     "titulo": "Perda do cargo do servidor estável",
+     "cab": [
+      "Hipótese",
+      "Fundamento"
+     ],
+     "linhas": [
+      [
+       "Sentença judicial transitada em julgado",
+       "art. 41, § 1º, I"
+      ],
+      [
+       "Processo administrativo (ampla defesa)",
+       "art. 41, § 1º, II"
+      ],
+      [
+       "Avaliação periódica de desempenho (lei complementar)",
+       "art. 41, § 1º, III"
+      ],
+      [
+       "Excesso de despesa com pessoal",
+       "art. 169, § 4º"
+      ]
+     ]
+    }
+   ],
+   "macete": "Estabilidade = 3 anos + cargo efetivo + concurso + avaliação especial. Quem tem cargo em comissão ou emprego temporário não adquire.",
+   "pegadinhas": "Dizer que a estabilidade se adquire em 2 anos ou que o ocupante de cargo em comissão se torna estável.",
+   "origem": "externa",
+   "palavras": [
+    "estabilidade",
+    "estavel"
+   ]
+  },
+  {
+   "id": "cf.pres.eleicao-mandato",
+   "t": "Presidente da República: eleição, posse e mandato (arts. 76 a 83)",
+   "resumo": "O Poder Executivo é exercido pelo **Presidente da República**, auxiliado pelos **Ministros de Estado**. Eleição **simultânea** com o Vice, no **primeiro domingo de outubro** (1º turno) e no **último domingo de outubro** (2º turno, se houver), **do ano anterior ao do término do mandato**; vence quem obtiver **maioria absoluta** de votos válidos (não se computam brancos e nulos). Mandato de **quatro anos**, com início em **5 de janeiro** (EC 111/2021). Pode haver **reeleição para um único período subsequente**. **Posse** perante o Congresso: compromisso de manter, defender e cumprir a Constituição. **Vacância**: o Vice **sucede** e é **substituído** pelos Presidentes da Câmara, do Senado e do STF, nessa ordem. Se vagos os cargos na **segunda metade** do mandato, a eleição é **indireta**, pelo Congresso, em **30 dias**; na **primeira metade**, nova eleição **direta** em **90 dias**.",
+   "pegadinhas": "Dizer que há eleição direta se a vacância ocorrer nos dois últimos anos; confundir a data da posse (5 de janeiro, a partir de 2027).",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.pres.atribuicoes",
+   "t": "Atribuições do Presidente (art. 84)",
+   "resumo": "**Privativas**: nomear e exonerar Ministros de Estado; **exercer a direção superior da administração federal**; **sancionar, promulgar e fazer publicar** as leis e **vetar** projetos; **expedir decretos e regulamentos** para a fiel execução das leis; **manter relações** com Estados estrangeiros; **celebrar tratados** (sujeitos a referendo do Congresso); **decretar estado de defesa e de sítio** e a **intervenção federal**; **prover cargos públicos federais**; **comandar as Forças Armadas**; **conceder indulto e comutar penas**. **Delegáveis** a Ministros de Estado, ao PGR e ao AGU (parágrafo único): as de **dispor sobre organização e funcionamento da administração federal** (VI), **conceder indulto e comutar penas** (XII, primeira parte) e **prover e desprover cargos** públicos federais (XXV, primeira parte).",
+   "macete": "Delegáveis = VI, XII, XXV (organização, indulto/comutação e provimento de cargos).",
+   "pegadinhas": "Dizer que o Presidente pode delegar a celebração de tratados ou a decretação do estado de sítio (são indelegáveis).",
+   "origem": "externa",
+   "palavras": [
+    "decreto",
+    "indulto",
+    "sancionar"
+   ]
+  },
+  {
+   "id": "cf.pres.responsabilidade",
+   "t": "Responsabilidade do Presidente (arts. 85 e 86)",
+   "resumo": "**Crimes de responsabilidade**: atos que atentem contra a Constituição, em especial a existência da União, o livre exercício dos Poderes, o exercício dos direitos políticos, a segurança interna do País, a **probidade na administração**, a **lei orçamentária**, o cumprimento das leis e das decisões judiciais. **Processo**: **autorização da Câmara por 2/3** dos membros; **julgamento pelo STF** (infrações penais comuns) ou **pelo Senado** (crimes de responsabilidade). **Suspensão** das funções: **infrações comuns**, se recebida a denúncia ou queixa; **crimes de responsabilidade**, após a instauração do processo pelo Senado. Se o julgamento não for concluído em **180 dias**, cessa o afastamento. Enquanto não houver sentença condenatória, **não está sujeito a prisão**; **na vigência do mandato** não pode ser responsabilizado por atos **estranhos ao exercício de suas funções** (imunidade temporária).",
+   "macete": "Câmara admite (2/3). Senado julga os crimes de responsabilidade; STF julga as infrações penais comuns.",
+   "pegadinhas": "Dizer que a Câmara julga o Presidente; que a prisão em flagrante é possível; que a imunidade vale para atos anteriores ao mandato sem ressalva (a CF só fala \"estranhos ao exercício das funções\").",
+   "origem": "externa",
+   "palavras": [
+    "impeachment",
+    "crime de responsabilidade"
+   ]
+  },
+  {
+   "id": "cf.pres.ministros",
+   "t": "Ministros de Estado e Conselhos (arts. 87 a 91)",
+   "resumo": "Os **Ministros de Estado** são escolhidos dentre **brasileiros maiores de 21 anos** e no exercício dos direitos políticos. Competência: exercer a **orientação, coordenação e supervisão** dos órgãos da área, **expedir instruções** para a execução das leis, referendar os atos do Presidente, apresentar **relatório anual** (art. 87). O **Conselho da República** (órgão superior de consulta: Vice-Presidente, Presidentes da Câmara e do Senado, líderes da maioria e da minoria, Ministro da Justiça e seis cidadãos) e o **Conselho de Defesa Nacional** (opinam sobre estado de defesa, estado de sítio, intervenção federal e soberania) são **órgãos consultivos** do Presidente.",
+   "pegadinhas": "Dizer que o Conselho da República é deliberativo ou que exige Ministros de 35 anos.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.leg.estrutura",
+   "t": "Estrutura do Legislativo (arts. 44 a 47)",
+   "resumo": "O Poder Legislativo federal é exercido pelo **Congresso Nacional**, composto pela **Câmara dos Deputados** e pelo **Senado Federal** (**bicameralismo**). **Legislatura** de **quatro anos**. **Câmara**: representantes do **povo**, eleitos pelo sistema **proporcional**, número fixado por lei complementar (mínimo de **8** e máximo de **70** por Estado e DF). **Senado**: representantes dos **Estados e do DF**, eleitos pelo princípio **majoritário**, **3 Senadores** por unidade, mandato de **oito anos**, renovação **de quatro em quatro anos, alternadamente por um e dois terços**; cada Senador tem **dois suplentes**. Deliberações: **maioria dos votos, presente a maioria absoluta** dos membros (art. 47).",
+   "tabelas": [
+    {
+     "titulo": "Câmara × Senado",
+     "cab": [
+      "Característica",
+      "Câmara dos Deputados",
+      "Senado Federal"
+     ],
+     "linhas": [
+      [
+       "Representa",
+       "o povo",
+       "os Estados e o DF"
+      ],
+      [
+       "Sistema eleitoral",
+       "proporcional",
+       "majoritário"
+      ],
+      [
+       "Mandato",
+       "4 anos (uma legislatura)",
+       "8 anos"
+      ],
+      [
+       "Idade mínima",
+       "21 anos",
+       "35 anos"
+      ],
+      [
+       "Renovação",
+       "integral a cada 4 anos",
+       "1/3 e 2/3, alternadamente"
+      ]
+     ]
+    }
+   ],
+   "pegadinhas": "Dizer que o Senado é eleito por sistema proporcional ou que a renovação é integral.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.leg.atribuicoes",
+   "t": "Atribuições do Congresso, da Câmara e do Senado (arts. 48, 49, 51 e 52)",
+   "resumo": "**Congresso, com sanção do Presidente** (art. 48): tributos, plano plurianual, diretrizes orçamentárias, orçamento, matéria financeira, limites do território, incorporação, subdivisão e desmembramento de Estados, entre outras. **Competência exclusiva do Congresso, sem sanção** (art. 49): **resolver definitivamente sobre tratados**, **autorizar o Presidente** a declarar guerra e celebrar a paz e a ausentar-se do País por mais de 15 dias, **sustar atos normativos** do Executivo que exorbitem o poder regulamentar, **julgar as contas** do Presidente, fixar subsídio, **apreciar** a concessão e renovação de rádio e TV. **Câmara** (art. 51): autorizar a instauração de processo contra o Presidente, Vice e Ministros (**2/3**), tomar as contas do Presidente, elaborar seu regimento. **Senado** (art. 52): **processar e julgar** o Presidente, Vice, Ministros nos crimes de responsabilidade, **aprovar previamente por voto secreto** a escolha de magistrados, Ministros do TCU, Governador de Território, Presidente e diretores do Banco Central, PGR; **suspender a execução** de lei declarada inconstitucional pelo STF (art. 52, X).",
+   "macete": "Câmara **autoriza** o processo; Senado **processa e julga** (crime de responsabilidade).",
+   "pegadinhas": "Trocar quem processa o Presidente; dizer que o Senado julga ministros do STF por crimes comuns (julga os crimes de responsabilidade).",
+   "origem": "externa",
+   "palavras": [
+    "congresso",
+    "camara",
+    "senado"
+   ]
+  },
+  {
+   "id": "cf.leg.imunidades",
+   "t": "Imunidades e prerrogativas parlamentares (arts. 53 a 56)",
+   "resumo": "**Imunidade material** (inviolabilidade): Deputados e Senadores são **invioláveis, civil e penalmente, por quaisquer de suas opiniões, palavras e votos**, **desde que relacionados ao mandato**. **Imunidade formal**: desde a **expedição do diploma**, só podem ser **presos em flagrante de crime inafiançável**, e os autos são remetidos à Casa em **24 horas** para decidir, por **maioria dos membros**, sobre a prisão. Recebida a denúncia por crime ocorrido após a diplomação, o STF dá **ciência à Casa**, que pode, por **maioria absoluta** e **iniciativa de partido político**, **sustar o andamento da ação** (prazo de 45 dias). **Foro por prerrogativa**: julgamento **no STF** por crimes **cometidos durante o mandato e relacionados ao cargo** (STF, AP 937). **Incompatibilidades** (art. 54) e **perda do mandato** (art. 55): infringir as incompatibilidades, procedimento incompatível com o decoro, perda ou suspensão de direitos políticos, deixar de comparecer a mais de **1/3** das sessões. A perda é por **maioria absoluta** da Casa, por voto **aberto**, após ampla defesa.",
+   "pegadinhas": "Dizer que a imunidade material é absoluta (só alcança opiniões relacionadas ao mandato); que o parlamentar pode ser preso em flagrante de qualquer crime.",
+   "origem": "externa",
+   "palavras": [
+    "imunidade",
+    "parlamentar",
+    "deputado",
+    "senador",
+    "inviolabilidade"
+   ]
+  },
+  {
+   "id": "cf.leg.comissoes-sessoes",
+   "t": "Comissões, Mesas e sessões (arts. 57 a 58)",
+   "resumo": "O Congresso reúne-se de **2 de fevereiro a 17 de julho** e de **1º de agosto a 22 de dezembro**; a sessão legislativa **não é interrompida** sem a aprovação da **LDO**. A **Mesa** de cada Casa é eleita para mandato de **dois anos**, **vedada a recondução** para o mesmo cargo na eleição imediatamente subsequente, dentro da mesma legislatura. As **comissões** (permanentes e temporárias) têm composição proporcional à representação dos partidos; as **comissões parlamentares de inquérito** têm poderes de investigação próprios das autoridades judiciais (art. 58, § 3º).",
+   "pegadinhas": "Dizer que a recondução da Mesa é livre ou que a sessão legislativa pode ser interrompida sem aprovar a LDO.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.proc-leg.especies",
+   "t": "Espécies normativas (art. 59)",
+   "resumo": "O processo legislativo compreende: **emendas à Constituição, leis complementares, leis ordinárias, leis delegadas, medidas provisórias, decretos legislativos e resoluções**. Lei **complementar**: aprovada por **maioria absoluta** (art. 69); lei **ordinária**: **maioria simples** (presente a maioria absoluta). **Reserva** de lei complementar para matérias expressas (ex.: normas gerais tributárias, organização da Defensoria). Não há **hierarquia** entre lei complementar e ordinária: o que as distingue é a **matéria** reservada e o **quórum**.",
+   "tabelas": [
+    {
+     "titulo": "Lei complementar × lei ordinária",
+     "cab": [
+      "Aspecto",
+      "Lei complementar",
+      "Lei ordinária"
+     ],
+     "linhas": [
+      [
+       "Quórum de aprovação",
+       "maioria absoluta (art. 69)",
+       "maioria simples"
+      ],
+      [
+       "Matéria",
+       "somente nos casos previstos na CF",
+       "residual (o que a CF não reserva à LC)"
+      ],
+      [
+       "Hierarquia",
+       "não há (diferença é de matéria e quórum)",
+       "—"
+      ]
+     ]
+    }
+   ],
+   "pegadinhas": "Dizer que a lei complementar é hierarquicamente superior à ordinária.",
+   "origem": "externa",
+   "palavras": [
+    "lei complementar",
+    "lei ordinaria"
+   ]
+  },
+  {
+   "id": "cf.proc-leg.iniciativa-tramitacao",
+   "t": "Iniciativa e fases (arts. 61 a 67)",
+   "resumo": "**Iniciativa**: qualquer membro ou comissão da Câmara, do Senado ou do Congresso, o Presidente, o STF, os Tribunais Superiores, o PGR e os **cidadãos** (**1% do eleitorado nacional**, distribuído por 5 Estados com 0,3% em cada). **Iniciativa privativa do Presidente** (art. 61, § 1º): fixação e modificação dos **efetivos das Forças Armadas**, **criação de cargos** e aumento de remuneração na administração, **organização administrativa e judiciária** dos Territórios, **servidores** da União, **organização do Ministério Público e da Defensoria** da União. **Fases**: iniciativa, **discussão e votação**, **revisão** (na outra Casa), **sanção ou veto** e **promulgação e publicação**. **Veto**: **15 dias úteis**, pode ser **total ou parcial** (parcial só de texto integral de artigo, parágrafo, inciso ou alínea); **apreciado em sessão conjunta em 30 dias**, só **rejeitado por maioria absoluta** dos Deputados e Senadores; silêncio = **sanção tácita**.",
+   "macete": "Veto: 15 dias úteis para decidir; 30 dias no Congresso; derruba com maioria absoluta dos Deputados e dos Senadores (em sessão conjunta).",
+   "pegadinhas": "Dizer que o veto parcial pode abranger palavras isoladas; que 15 dias são corridos; que o veto é derrubado por maioria simples.",
+   "origem": "externa",
+   "palavras": [
+    "veto",
+    "sancao",
+    "iniciativa"
+   ]
+  },
+  {
+   "id": "cf.proc-leg.medida-provisoria",
+   "t": "Medidas provisórias (art. 62)",
+   "resumo": "Em caso de **relevância e urgência**, o Presidente pode adotar medidas provisórias, **com força de lei**, e as submete de imediato ao Congresso. **Vedadas** sobre: nacionalidade, cidadania, direitos políticos, partidos e direito eleitoral; direito penal, processual penal e processual civil; organização do Judiciário e do MP; **plano plurianual, diretrizes orçamentárias, orçamento e créditos adicionais** (exceto crédito extraordinário); **detenção ou sequestro** de bens, poupança popular; reservada a **lei complementar**; já **disciplinada** em projeto aprovado e pendente de sanção. **Prazo de vigência**: **60 dias**, **prorrogável por mais 60** (suspenso nos períodos de recesso). Se não for apreciada em **45 dias**, **tranca a pauta** (sobrestamento) da Casa em que estiver. **Perde a eficácia** se não for convertida em lei no prazo; o Congresso disciplina por **decreto legislativo** as relações jurídicas decorrentes (60 dias).",
+   "tabelas": [
+    {
+     "titulo": "Prazos da medida provisória",
+     "cab": [
+      "Prazo",
+      "Efeito"
+     ],
+     "linhas": [
+      [
+       "45 dias",
+       "sobrestamento (trancamento) das demais deliberações da Casa"
+      ],
+      [
+       "60 dias",
+       "vigência inicial (prorrogável por mais 60)"
+      ],
+      [
+       "120 dias",
+       "perda de eficácia se não convertida em lei"
+      ],
+      [
+       "60 dias (após a perda)",
+       "prazo para o decreto legislativo regular as relações jurídicas"
+      ]
+     ]
+    }
+   ],
+   "macete": "45 – 60 – 60. A MP é analisada primeiro em **comissão mista**; depois, pela Câmara e pelo Senado.",
+   "pegadinhas": "Dizer que a MP pode tratar de direito penal ou que perde eficácia em 45 dias.",
+   "origem": "externa",
+   "palavras": [
+    "mp",
+    "mpv",
+    "medida provisoria"
+   ]
+  },
+  {
+   "id": "cf.proc-leg.delegada-outros",
+   "t": "Lei delegada, decretos legislativos e resoluções (arts. 59 e 68)",
+   "resumo": "**Lei delegada**: elaborada pelo Presidente, mediante **delegação do Congresso** (solicitada por ele, por **resolução** que fixa conteúdo e termos). **Vedada** a delegação sobre atos de **competência exclusiva** do Congresso, da Câmara ou do Senado, **matéria reservada à lei complementar**, legislação sobre **organização do Judiciário e do MP**, **nacionalidade, cidadania, direitos individuais, políticos e eleitorais** e **planos plurianuais, diretrizes orçamentárias e orçamentos**. **Decretos legislativos** e **resoluções** regulam matérias de **competência exclusiva** do Congresso (decretos) ou de cada Casa (resoluções) e **não passam por sanção** presidencial.",
+   "pegadinhas": "Dizer que o Presidente pode editar lei delegada sem autorização ou que o decreto legislativo precisa ser sancionado.",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.fisc.controle-externo",
+   "t": "Controle externo e controle interno (arts. 70 e 74)",
+   "resumo": "A fiscalização **contábil, financeira, orçamentária, operacional e patrimonial** da União e das entidades da administração direta e indireta, quanto à **legalidade, legitimidade e economicidade**, é exercida pelo **Congresso Nacional** (**controle externo**) e pelo **sistema de controle interno** de cada Poder. O controle externo conta com o **auxílio do Tribunal de Contas da União**. Presta contas qualquer pessoa física ou jurídica, pública ou privada, que utilize, arrecade, guarde, gerencie ou administre dinheiro, bens e valores públicos. O **sistema de controle interno** avalia as metas, a execução dos programas, comprova a legalidade, apoia o controle externo; **os responsáveis darão ciência ao TCU** de irregularidade ou ilegalidade, sob pena de **responsabilidade solidária**. Qualquer **cidadão, partido, associação ou sindicato** é parte legítima para **denunciar irregularidades** ao TCU (art. 74, § 2º).",
+   "pegadinhas": "Dizer que o Tribunal de Contas integra o Poder Legislativo ou é órgão do Judiciário (é órgão de controle externo auxiliar; não integra nenhum Poder).",
+   "origem": "externa",
+   "palavras": [
+    "controle externo",
+    "controle interno",
+    "fiscalizacao"
+   ]
+  },
+  {
+   "id": "cf.fisc.competencias-tcu",
+   "t": "Competências do TCU (art. 71)",
+   "resumo": "O TCU **auxilia** o Congresso. **Competências**: **apreciar as contas do Presidente** da República, mediante **parecer prévio em 60 dias** do recebimento; **julgar as contas** dos administradores e demais responsáveis por dinheiro público e as **contas de quem der causa a perda, extravio ou outra irregularidade**; **apreciar, para fins de registro, a legalidade dos atos de admissão** de pessoal (**exceto** cargo em comissão) e de **concessões de aposentadorias, reformas e pensões** (**exceto** melhorias posteriores que não alterem o fundamento); realizar **inspeções e auditorias**; **fiscalizar** as contas nacionais de empresas supranacionais; **aplicar sanções** (multa proporcional ao dano) e determinar **prazo para correção** de ilegalidade; **sustar a execução do ato impugnado** se não atendido (comunicando ao Congresso); **representar** ao Poder competente sobre irregularidades. **Contratos**: o ato de **sustação** é de competência **do Congresso Nacional**, que solicita as medidas ao Executivo; se este **não as adotar em 90 dias**, o **TCU decide** a respeito (§§ 1º e 2º). As decisões que resultem em **imputação de débito ou multa** têm **eficácia de título executivo**.",
+   "tabelas": [
+    {
+     "titulo": "Atos de pessoal e contratos no art. 71",
+     "cab": [
+      "Tema",
+      "Quem decide",
+      "Observação"
+     ],
+     "linhas": [
+      [
+       "Parecer prévio sobre as contas do Presidente",
+       "TCU (60 dias)",
+       "o julgamento é do Congresso (art. 49, IX)"
+      ],
+      [
+       "Registro de admissão, aposentadoria, reforma e pensão",
+       "TCU aprecia a legalidade",
+       "não alcança cargo em comissão"
+      ],
+      [
+       "Sustar ato administrativo",
+       "TCU",
+       "se o responsável não corrigir"
+      ],
+      [
+       "Sustar contrato",
+       "Congresso Nacional",
+       "se não o fizer em 90 dias, o TCU decide"
+      ]
+     ]
+    }
+   ],
+   "pegadinhas": "Atribuir ao TCU (e não ao Congresso) a sustação de contratos; dizer que o TCU julga as contas do Presidente (só dá parecer prévio).",
+   "origem": "externa",
+   "palavras": [
+    "tcu",
+    "parecer previo",
+    "contas"
+   ]
+  },
+  {
+   "id": "cf.fisc.composicao-tcdf",
+   "t": "Composição do TCU e Tribunais de Contas dos Estados e do DF (arts. 73 e 75)",
+   "resumo": "O TCU tem **nove Ministros**: **um terço** escolhidos pelo **Presidente da República**, com aprovação do **Senado** (sendo **dois alternadamente** entre auditores e membros do **Ministério Público junto ao Tribunal**, indicados em lista tríplice) e **dois terços** pelo **Congresso Nacional**. Requisitos: mais de **35 e menos de 70 anos**, idoneidade moral e reputação ilibada, **notórios conhecimentos** jurídicos, contábeis, econômicos, financeiros ou de administração pública e **mais de dez anos** de função ou atividade profissional. Os Ministros têm as **mesmas garantias, prerrogativas, impedimentos, vencimentos e vantagens dos Ministros do STJ**. Art. 75 (redação da **EC 139/2026**): os **Tribunais de Contas** são instituições permanentes, essenciais ao controle externo, e as normas desta Seção aplicam-se, **no que couber**, aos **Tribunais de Contas dos Estados e do DF** e aos **Tribunais e Conselhos de Contas dos Municípios**, **vedada sua extinção, criação ou instalação**. As Constituições estaduais disporão sobre os Tribunais de Contas respectivos, integrados por **sete Conselheiros** (parágrafo único). O **TCDF** é o Tribunal de Contas do Distrito Federal.",
+   "pegadinhas": "Trocar o número de Ministros (nove); dizer que se podem criar ou extinguir Tribunais ou Conselhos de Contas municipais (vedado pela EC 139/2026).",
+   "origem": "externa",
+   "palavras": [
+    "tcu",
+    "tcdf",
+    "tribunal de contas",
+    "conselheiro"
+   ]
+  },
+  {
+   "id": "cf.cpi.poderes-limites",
+   "t": "Comissões parlamentares de inquérito (art. 58, § 3º)",
+   "resumo": "**Criação**: requerimento de **1/3** dos membros da Casa (**sem** necessidade de votação plenária). Requisitos: **fato determinado**, **prazo certo** e **mais de um fato** em simultâneo não é vedado (desde que determinados). **Poderes** de investigação **próprios das autoridades judiciais**, além de outros do regimento: convocar testemunhas, requisitar documentos, quebrar **sigilo bancário, fiscal e telefônico (dados)**. **Limites** (cláusula de **reserva de jurisdição**): não pode **decretar prisão** (salvo flagrante), **busca e apreensão domiciliar**, **interceptação telefônica** (escuta) nem **medidas cautelares** de natureza jurisdicional (arresto, sequestro, indisponibilidade de bens). As **conclusões** são encaminhadas ao **Ministério Público** para a responsabilização civil e criminal. O **investigado** tem o direito de **permanecer calado** e a assistência de advogado.",
+   "macete": "CPI pode **quebrar sigilo** (dados), mas não **ouvir a conversa** (interceptação) nem **prender**: tudo que exige reserva de jurisdição é do juiz.",
+   "pegadinhas": "Dizer que a CPI pode decretar prisão preventiva ou determinar interceptação telefônica; que a CPI aplica pena.",
+   "origem": "externa",
+   "palavras": [
+    "cpi",
+    "cpis",
+    "inquerito"
+   ]
+  },
+  {
+   "id": "cf.jud.orgaos-garantias",
+   "t": "Órgãos e garantias da magistratura (arts. 92 a 95)",
+   "resumo": "São órgãos: **STF, CNJ, STJ, TRFs e juízes federais, Tribunais e juízes do Trabalho, Eleitorais, Militares, Tribunais e juízes dos Estados e do DF e Territórios**. O STF, os **Tribunais Superiores** e o CNJ têm **sede na Capital Federal** e jurisdição em todo o território nacional (o CNJ **não é órgão jurisdicional**). **Garantias dos juízes**: **vitaliciedade** (após **2 anos** de exercício, a perda do cargo exige **sentença judicial transitada em julgado**), **inamovibilidade** (salvo interesse público, por voto de 2/3 do tribunal ou do CNJ) e **irredutibilidade de subsídio**. **Vedações**: exercer outro cargo ou função, **salvo uma de magistério**; receber custas ou participação em processo; dedicar-se à atividade político-partidária; receber auxílios de pessoas físicas ou entidades públicas ou privadas; exercer a advocacia **no juízo ou tribunal do qual se afastou** antes de **três anos** do afastamento (quarentena de saída).",
+   "pegadinhas": "Dizer que o CNJ exerce jurisdição; que a vitaliciedade se adquire em 3 anos ou que a inamovibilidade é absoluta.",
+   "origem": "externa",
+   "palavras": [
+    "magistrado",
+    "juiz",
+    "vitaliciedade",
+    "inamovibilidade",
+    "magistratura"
+   ]
+  },
+  {
+   "id": "cf.jud.stf",
+   "t": "Supremo Tribunal Federal (arts. 101 a 103-A)",
+   "resumo": "**11 Ministros**, **maiores de 35 e menores de 70 anos**, com **notável saber jurídico e reputação ilibada**, nomeados pelo Presidente da República **após aprovação por maioria absoluta do Senado**. **Guarda da Constituição**. **Competência originária**: **ADI e ADC** de lei ou ato normativo federal ou estadual, **infrações penais comuns** do Presidente, Vice, membros do Congresso, seus próprios Ministros e PGR, **crimes de responsabilidade** dos Ministros de Estado, Comandantes das Forças e membros dos Tribunais Superiores e do TCU; **extradição** solicitada por Estado estrangeiro; **habeas corpus** e **mandado de segurança** contra atos de certas autoridades; **ADPF** (art. 102, § 1º). **Competência recursal**: recurso **ordinário** (HC, MS, HD e mandado de injunção decididos em única instância pelos Tribunais Superiores, se denegatória a decisão; crime político) e **extraordinário** (causas decididas em única ou última instância, nos casos do art. 102, III). **Súmula vinculante**: aprovada por **2/3** dos Ministros, **efeito vinculante** em relação aos órgãos do Judiciário e à administração pública **direta e indireta** nas esferas federal, estadual e municipal (art. 103-A); **não vincula** o Poder **Legislativo** no exercício de sua função típica.",
+   "macete": "Quórum: súmula vinculante exige **2/3** (8 dos 11 Ministros). O Legislativo não fica vinculado pela súmula vinculante (nem o próprio STF).",
+   "pegadinhas": "Dizer que a súmula vinculante vincula o Legislativo ou exige maioria simples; que o Presidente nomeia Ministro do STF sem aprovação do Senado.",
+   "origem": "externa",
+   "palavras": [
+    "stf",
+    "supremo",
+    "sumula",
+    "vinculante",
+    "adpf"
+   ]
+  },
+  {
+   "id": "cf.jud.outros-tribunais-cnj",
+   "t": "STJ, CNJ, Justiça Federal e Tribunais dos Estados e do DF (arts. 104 a 126)",
+   "resumo": "**STJ**: no mínimo **33 Ministros**, maiores de 35 e menores de 70 anos, nomeados pelo Presidente após aprovação por **maioria absoluta** do Senado (1/3 juízes dos TRFs, 1/3 desembargadores dos TJs, 1/3 advogados e membros do MP). **CNJ** (art. 103-B): **15 membros**, **mandato de 2 anos**, **admitida uma recondução**; **controle da atuação administrativa e financeira** do Judiciário e do **cumprimento dos deveres funcionais dos juízes**; **presidido pelo Presidente do STF**; o **Corregedor Nacional** é o Ministro do STJ. **Justiça Federal**: TRFs e juízes federais (art. 106 e ss.); competência dos juízes federais (art. 109): causas em que a **União**, entidade autárquica ou empresa pública federal forem interessadas, crimes **políticos** e infrações em detrimento de bens da União, entre outras. **Tribunais e juízes dos Estados e do DF** (arts. 125 e 126): o **TJDFT** é organizado e mantido **pela União** (art. 21, XIII); os Estados organizam sua Justiça, observados os princípios da CF.",
+   "pegadinhas": "Dizer que o CNJ é presidido pelo Presidente do STJ ou que seus membros têm mandato de 3 anos.",
+   "origem": "externa",
+   "palavras": [
+    "stj",
+    "cnj",
+    "trf",
+    "tjdft",
+    "justica federal",
+    "superior tribunal"
+   ]
+  },
+  {
+   "id": "cf.mp.principios-funcoes",
+   "t": "Ministério Público: princípios e funções (arts. 127 e 129)",
+   "resumo": "Instituição **permanente**, essencial à função jurisdicional, incumbida da defesa da **ordem jurídica**, do **regime democrático** e dos **interesses sociais e individuais indisponíveis**. **Princípios institucionais**: **unidade**, **indivisibilidade** e **independência funcional**. **Autonomia funcional e administrativa**, proposta orçamentária própria e iniciativa de lei de organização. **Funções institucionais** (art. 129): **promover, privativamente, a ação penal pública**; zelar pelos serviços de relevância pública; **instaurar inquérito civil** e **ação civil pública** para proteger o patrimônio público e social, o meio ambiente e outros interesses difusos e coletivos; **promover ação de inconstitucionalidade ou representação para fins de intervenção** da União e dos Estados; **exercer o controle externo da atividade policial**; **requisitar diligências investigatórias e a instauração de inquérito policial**. **Vedado** representar judicialmente ou dar consultoria a entidades públicas.",
+   "macete": "Princípios: unidade, indivisibilidade e independência funcional. Ação penal pública: **privativa** do MP; ação civil pública: **não privativa**.",
+   "pegadinhas": "Dizer que o MP exerce controle interno da polícia (é externo) ou que a ação civil pública é privativa do MP.",
+   "origem": "externa",
+   "palavras": [
+    "mp",
+    "ministerio publico",
+    "acao penal",
+    "inquerito civil"
+   ]
+  },
+  {
+   "id": "cf.mp.organizacao",
+   "t": "Organização do MP: MPU, MPs dos Estados e CNMP (arts. 128 e 130-A)",
+   "resumo": "O MP abrange o **Ministério Público da União** (**MPF, MPT, MPM e MPDFT**) e os **Ministérios Públicos dos Estados**. O MPU tem por chefe o **Procurador-Geral da República (PGR)**, nomeado pelo Presidente dentre **integrantes da carreira, maiores de 35 anos**, após **aprovação por maioria absoluta do Senado**, para **mandato de 2 anos, permitida a recondução**. Os MPs dos Estados e do DF formam **lista tríplice** para a escolha do **Procurador-Geral**, nomeado pelo **Chefe do Executivo** (mandato de 2 anos, **uma** recondução). **CNMP** (art. 130-A): **14 membros**, mandato de **2 anos** (uma recondução), **controle da atuação administrativa e financeira** do MP e do **cumprimento dos deveres funcionais** de seus membros. **Garantias**: **vitaliciedade** (após **2 anos**), **inamovibilidade** e **irredutibilidade de subsídio**. **Vedações**: receber honorários, **exercer a advocacia**, participar de sociedade comercial, exercer atividade político-partidária.",
+   "pegadinhas": "Dizer que o PGR é escolhido fora da carreira; que a lista tríplice se aplica ao MPU; que o CNMP exerce atividade jurisdicional.",
+   "origem": "externa",
+   "palavras": [
+    "mpu",
+    "mpf",
+    "pgr",
+    "cnmp",
+    "procurador-geral"
+   ]
+  },
+  {
+   "id": "cf.adv-pub.agu-procuradorias",
+   "t": "Advocacia Pública (arts. 131 e 132)",
+   "resumo": "A **Advocacia-Geral da União (AGU)** representa a União, **judicial e extrajudicialmente**, e exerce as atividades de **consultoria e assessoramento jurídico** do Poder Executivo. É chefiada pelo **Advogado-Geral da União**, de livre nomeação pelo Presidente dentre **cidadãos maiores de 35 anos**, de notável saber jurídico e reputação ilibada (**não precisa ser da carreira**). O ingresso nas classes iniciais é por **concurso público de provas e títulos**. A **representação judicial** da **Fazenda Nacional**, na execução da dívida ativa de natureza tributária, cabe à **Procuradoria-Geral da Fazenda Nacional**. Os **Procuradores dos Estados e do DF**, organizados em carreira, exercem a representação judicial e a consultoria jurídica das respectivas unidades, com ingresso por concurso com a participação da OAB e **estabilidade após três anos de efetivo exercício**, mediante avaliação de desempenho.",
+   "pegadinhas": "Dizer que o Advogado-Geral da União é escolhido dentre os integrantes da carreira ou exige mandato; que a Advocacia Pública dos Estados não tem estabilidade.",
+   "origem": "externa",
+   "palavras": [
+    "agu",
+    "advocacia",
+    "procurador"
+   ]
+  },
+  {
+   "id": "cf.dp.defensoria",
+   "t": "Defensoria Pública (arts. 134 e 135)",
+   "resumo": "Instituição **permanente**, essencial à função jurisdicional do Estado, incumbida, como **expressão e instrumento do regime democrático**, da **orientação jurídica**, da **promoção dos direitos humanos** e da **defesa**, **em todos os graus, judicial e extrajudicial**, dos **direitos individuais e coletivos**, de forma **integral e gratuita**, aos **necessitados** (art. 5º, LXXIV). **Princípios**: **unidade, indivisibilidade e independência funcional** (art. 134, § 4º, que remete ao art. 93 e ao art. 96, II). **Autonomia funcional e administrativa** e **iniciativa da proposta orçamentária** dentro dos limites da LDO (EC 45/2004 e EC 74/2013 para a DPU). **Lei complementar** organiza a **Defensoria Pública da União, do Distrito Federal e dos Territórios** e estabelece normas gerais para os Estados. **Garantia** de **inamovibilidade** aos integrantes e **vedação** ao exercício da advocacia **fora das atribuições institucionais** (art. 134, § 1º). **Ingresso** na classe inicial por concurso público de provas e títulos. O **subsídio** dos Defensores é fixado em parcela única (art. 135, remetendo ao art. 39, § 4º).",
+   "macete": "Mesma lógica do MP: unidade, indivisibilidade e independência funcional; **inamovibilidade** e **proibição de advocacia privada**.",
+   "pegadinhas": "Dizer que a Defensoria só atua no âmbito judicial (atua também no extrajudicial) ou que não tem autonomia financeira própria.",
+   "origem": "externa",
+   "palavras": [
+    "dpu",
+    "defensor",
+    "necessitados"
+   ]
+  },
+  {
+   "id": "cf.cc.modalidades",
+   "t": "Controle de constitucionalidade: modalidades",
+   "resumo": "**Quanto ao momento**: **preventivo** (antes da lei existir: comissões de constituição e justiça, **veto jurídico** do Presidente e, excepcionalmente, **mandado de segurança de parlamentar** ao STF) e **repressivo** (depois de editada a norma). **Quanto ao órgão**: **difuso** (qualquer juiz ou tribunal, na análise do caso concreto: efeitos **inter partes**) e **concentrado** (STF, por ações diretas: efeitos, em regra, **erga omnes e vinculantes**). **Cláusula de reserva de plenário** (art. 97): os tribunais só declaram a inconstitucionalidade de lei ou ato normativo **pelo voto da maioria absoluta** de seus membros ou do órgão especial. **Resolução do Senado** (art. 52, X): suspende, no controle difuso, a execução da lei declarada inconstitucional pelo STF (o STF admite a **abstrativização** do controle difuso).",
+   "tabelas": [
+    {
+     "titulo": "Difuso × concentrado",
+     "cab": [
+      "Aspecto",
+      "Difuso",
+      "Concentrado"
+     ],
+     "linhas": [
+      [
+       "Quem julga",
+       "qualquer juiz ou tribunal",
+       "STF (norma federal e estadual contra a CF); TJ (norma estadual e municipal contra a Constituição Estadual)"
+      ],
+      [
+       "Como",
+       "incidental (no caso concreto)",
+       "ação direta, por via principal"
+      ],
+      [
+       "Efeitos",
+       "inter partes (em regra)",
+       "erga omnes e vinculantes"
+      ],
+      [
+       "Legitimidade",
+       "as partes do processo",
+       "os legitimados do art. 103"
+      ]
+     ]
+    }
+   ],
+   "pegadinhas": "Dizer que no controle difuso a decisão tem efeitos erga omnes sem passar pelo Senado; que o juiz singular não pode declarar inconstitucionalidade.",
+   "origem": "externa",
+   "palavras": [
+    "difuso",
+    "concentrado",
+    "reserva de plenario",
+    "controle de constitucionalidade"
+   ]
+  },
+  {
+   "id": "cf.cc.acoes",
+   "t": "Ações do controle concentrado (ADI, ADC, ADPF e ADO)",
+   "resumo": "**ADI** (genérica): declarar a inconstitucionalidade de lei ou ato normativo **federal ou estadual**. **ADC**: declarar a constitucionalidade de lei ou ato normativo **federal**, havendo **controvérsia judicial relevante**. **ADPF** (art. 102, § 1º): evitar ou reparar **lesão a preceito fundamental**, inclusive em face de **normas municipais** e **anteriores** à CF (**direito pré-constitucional**) — tem **caráter subsidiário**. **ADO**: declarar a **omissão** de medida para tornar efetiva norma constitucional; dá **ciência ao Poder competente** e, em se tratando de órgão administrativo, **30 dias** (art. 103, § 2º). **Legitimados** (art. 103): Presidente, Mesas do Senado, da Câmara e das Assembleias/Câmara Legislativa, **Governador de Estado ou do DF**, **PGR**, **Conselho Federal da OAB**, **partido com representação no Congresso**, **confederação sindical ou entidade de classe de âmbito nacional**. Desde a **EC 45/2004**, os **mesmos legitimados** do art. 103 propõem a **ADI e a ADC**. **Efeitos** (art. 102, § 2º): **eficácia contra todos** e **efeito vinculante**; a **modulação** dos efeitos da decisão exige **2/3** dos Ministros (Lei 9.868/1999, art. 27).",
+   "tabelas": [
+    {
+     "titulo": "Comparativo das ações",
+     "cab": [
+      "Ação",
+      "Objeto",
+      "Observação"
+     ],
+     "linhas": [
+      [
+       "ADI",
+       "lei ou ato normativo federal ou estadual",
+       "efeito erga omnes e vinculante"
+      ],
+      [
+       "ADC",
+       "lei ou ato normativo federal",
+       "exige controvérsia judicial relevante"
+      ],
+      [
+       "ADPF",
+       "ato do Poder Público (inclusive municipal e pré-constitucional)",
+       "subsidiária; lesão a preceito fundamental"
+      ],
+      [
+       "ADO",
+       "omissão inconstitucional",
+       "dá ciência ao Poder; 30 dias para órgão administrativo"
+      ]
+     ]
+    }
+   ],
+   "macete": "Mesmos nove legitimados para ADI e ADC (art. 103, após a EC 45/2004). Tribunal de Justiça local julga a representação de inconstitucionalidade estadual.",
+   "pegadinhas": "Dizer que a ADPF só vale para normas federais; que a ADC tem legitimados diferentes dos da ADI; que a modulação exige maioria simples.",
+   "origem": "externa",
+   "palavras": [
+    "adi",
+    "adc",
+    "adpf",
+    "ado",
+    "acao direta"
+   ]
+  },
+  {
+   "id": "cf.eco.principios",
+   "t": "Ordem econômica e financeira: princípios gerais (art. 170)",
+   "resumo": "A ordem econômica é **fundada na valorização do trabalho humano e na livre iniciativa**, com o fim de assegurar a todos **existência digna**, conforme os ditames da **justiça social**. **Princípios**: **soberania nacional**, **propriedade privada**, **função social da propriedade**, **livre concorrência**, **defesa do consumidor**, **defesa do meio ambiente**, **redução das desigualdades regionais e sociais**, **busca do pleno emprego** e **tratamento favorecido para empresas de pequeno porte** constituídas sob as leis brasileiras e com sede e administração no País. É **assegurado a todos o livre exercício de qualquer atividade econômica**, independentemente de autorização, salvo nos casos previstos em lei.",
+   "macete": "SO-PRO-FU-LIV-CON-MEI-RED-PLE-TRA: Soberania, Propriedade, Função social, Livre concorrência, Consumidor, Meio ambiente, Redução de desigualdades, Pleno emprego, Tratamento favorecido (pequeno porte).",
+   "origem": "externa"
+  },
+  {
+   "id": "cf.eco.estado-economia",
+   "t": "Atuação do Estado na economia (arts. 173 a 181)",
+   "resumo": "**Exploração direta** de atividade econômica pelo Estado **só quando necessária aos imperativos da segurança nacional ou a relevante interesse coletivo** (art. 173). As **empresas públicas e sociedades de economia mista** que explorem atividade econômica sujeitam-se ao **regime jurídico próprio das empresas privadas**, inclusive quanto às obrigações civis, comerciais, trabalhistas e tributárias; **não podem gozar de privilégios fiscais** não extensivos ao setor privado. **Papel de agente normativo e regulador** (art. 174): **fiscalização, incentivo e planejamento** (determinante para o setor público e **indicativo** para o privado). **Serviços públicos** (art. 175): incumbência do Poder Público, **diretamente ou sob regime de concessão ou permissão**, sempre **mediante licitação**. **Monopólio da União** (art. 177): pesquisa e lavra de petróleo e gás natural, refino, importação e exportação, transporte marítimo e por conduto, **pesquisa, lavra e enriquecimento de minerais nucleares**. Lei reprimirá o **abuso do poder econômico** que vise à dominação dos mercados, à eliminação da concorrência e ao aumento arbitrário dos lucros (art. 173, § 4º).",
+   "tabelas": [
+    {
+     "titulo": "Atividade econômica × serviço público",
+     "cab": [
+      "Aspecto",
+      "Atividade econômica (art. 173)",
+      "Serviço público (art. 175)"
+     ],
+     "linhas": [
+      [
+       "Regra",
+       "livre à iniciativa privada",
+       "titularidade do Poder Público"
+      ],
+      [
+       "Estado",
+       "exceção: segurança nacional ou relevante interesse coletivo",
+       "dever: direto ou por concessão e permissão"
+      ],
+      [
+       "Regime",
+       "direito privado (empresas estatais)",
+       "regime de direito público, com licitação na delegação"
+      ]
+     ]
+    }
+   ],
+   "pegadinhas": "Dizer que as estatais econômicas podem ter privilégios fiscais não extensivos ao setor privado; que o planejamento estatal é determinante também para o setor privado.",
+   "origem": "externa"
+  }
+ ]
+}

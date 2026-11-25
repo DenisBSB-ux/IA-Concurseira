@@ -1,0 +1,174 @@
+{
+ "esquema": 1,
+ "slug": "constitucional",
+ "concursoId": "padrao",
+ "concurso": "TCDF 2026 — Analista de Controle Externo (edital padrão)",
+ "versao": 1,
+ "atualizado": "2026-11-25",
+ "padrao": [
+  {
+   "n": "1.1",
+   "t": "Princípios fundamentais",
+   "topicos": [
+    "cf.prin.fundamentos",
+    "cf.prin.poderes-objetivos",
+    "cf.prin.relacoes-internacionais"
+   ]
+  },
+  {
+   "n": "2.1",
+   "t": "Eficácia das normas constitucionais",
+   "topicos": [
+    "cf.eficacia.classificacao",
+    "cf.eficacia.supremacia"
+   ]
+  },
+  {
+   "n": "2.2",
+   "t": "Emenda, reforma e revisão constitucional",
+   "topicos": [
+    "cf.emenda.proposta-votacao",
+    "cf.emenda.limites",
+    "cf.emenda.revisao"
+   ]
+  },
+  {
+   "n": "3.1",
+   "t": "Direitos e deveres individuais e coletivos",
+   "topicos": [
+    "cf.dir-ind.caput-igualdade",
+    "cf.dir-ind.liberdades",
+    "cf.dir-ind.intimidade-propriedade",
+    "cf.dir-ind.penal-processual",
+    "cf.dir-ind.remedios",
+    "cf.dir-ind.coletivos-outros"
+   ]
+  },
+  {
+   "n": "3.1",
+   "t": "Direitos sociais",
+   "topicos": [
+    "cf.dir-soc.art-6",
+    "cf.dir-soc.trabalhadores",
+    "cf.dir-soc.coletivos"
+   ]
+  },
+  {
+   "n": "3.1",
+   "t": "Direitos de nacionalidade e políticos",
+   "topicos": [
+    "cf.nac-pol.nacionalidade",
+    "cf.nac-pol.cargos-privativos",
+    "cf.nac-pol.direitos-politicos",
+    "cf.nac-pol.partidos"
+   ]
+  },
+  {
+   "n": "4.1",
+   "t": "Estado federal: União, estados, DF e municípios",
+   "topicos": [
+    "cf.federal.organizacao",
+    "cf.federal.competencias",
+    "cf.federal.df",
+    "cf.federal.intervencao"
+   ]
+  },
+  {
+   "n": "5.1",
+   "t": "Administração pública: disposições gerais",
+   "topicos": [
+    "cf.adm.principios",
+    "cf.adm.cargos-concurso",
+    "cf.adm.remuneracao-teto",
+    "cf.adm.responsabilidade"
+   ]
+  },
+  {
+   "n": "5.2",
+   "t": "Servidores públicos",
+   "topicos": [
+    "cf.serv.regime",
+    "cf.serv.estabilidade"
+   ]
+  },
+  {
+   "n": "6.1",
+   "t": "Presidente da República: atribuições e responsabilidades",
+   "topicos": [
+    "cf.pres.eleicao-mandato",
+    "cf.pres.atribuicoes",
+    "cf.pres.responsabilidade",
+    "cf.pres.ministros"
+   ]
+  },
+  {
+   "n": "7.1–7.2",
+   "t": "Poder Legislativo: estrutura, funcionamento e atribuições",
+   "topicos": [
+    "cf.leg.estrutura",
+    "cf.leg.atribuicoes",
+    "cf.leg.imunidades",
+    "cf.leg.comissoes-sessoes"
+   ]
+  },
+  {
+   "n": "7.3",
+   "t": "Processo legislativo",
+   "topicos": [
+    "cf.proc-leg.especies",
+    "cf.proc-leg.iniciativa-tramitacao",
+    "cf.proc-leg.medida-provisoria",
+    "cf.proc-leg.delegada-outros"
+   ]
+  },
+  {
+   "n": "7.4",
+   "t": "Fiscalização contábil, financeira e orçamentária",
+   "topicos": [
+    "cf.fisc.controle-externo",
+    "cf.fisc.competencias-tcu",
+    "cf.fisc.composicao-tcdf"
+   ]
+  },
+  {
+   "n": "7.5",
+   "t": "Comissões parlamentares de inquérito",
+   "topicos": [
+    "cf.cpi.poderes-limites"
+   ]
+  },
+  {
+   "n": "8",
+   "t": "Poder Judiciário",
+   "topicos": [
+    "cf.jud.orgaos-garantias",
+    "cf.jud.stf",
+    "cf.jud.outros-tribunais-cnj"
+   ]
+  },
+  {
+   "n": "9.1",
+   "t": "Ministério Público",
+   "topicos": [
+    "cf.mp.principios-funcoes",
+    "cf.mp.organizacao"
+   ]
+  },
+  {
+   "n": "9.2",
+   "t": "Advocacia pública",
+   "topicos": [
+    "cf.adv-pub.agu-procuradorias"
+   ]
+  },
+  {
+   "n": "9.3",
+   "t": "Defensoria Pública",
+   "topicos": [
+    "cf.dp.defensoria"
+   ]
+  }
+ ],
+ "cargos": {},
+ "referencia": true
+}
