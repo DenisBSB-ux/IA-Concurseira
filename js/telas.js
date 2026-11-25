@@ -412,6 +412,7 @@ const FX = {
   ano:   { rot: 'Ano',   plural: 'anos',   todas: 'todos', key: 'ia_filtro_anos_v1',   get: anoGrupo }
 };
 Object.keys(FX).forEach(id => { const f = FX[id]; try{ f.sel = new Set(JSON.parse(localStorage.getItem(f.key) || '[]')); }catch(_){ f.sel = new Set(); } f.sel.delete('Outras bancas'); f.busca = ''; f.foco = false; });
+FX.cargo.sel = new Set(); try{ localStorage.removeItem(FX.cargo.key); }catch(_){}      // filtro de cargo removido da tela (muitas questões vêm sem cargo no arquivo): nenhuma escolha antiga pode continuar filtrando sem aparecer
 let FX_ABERTO = null;
 function filtrosAtivos(){ return Object.values(FX).some(f => f.sel.size > 0); }
 function questaoNosFiltros(q){ for(const id in FX){ const f = FX[id]; if(f.sel.size && !f.sel.has(f.get(q))) return false; } return true; }
@@ -722,7 +723,7 @@ function renderEstatisticasPorMateria(){
       <h3 style="margin:0;color:inherit;font-size:22px;">📈 Estatísticas por matéria</h3>
       ${adapt.adapta ? `<div class="conc-adapt"><span>Lista adaptada ao cargo: <b>${adapt.visiveis.length}</b> da base${adapt.faltantes.length ? ` · <b class="conc-falta-n">${adapt.faltantes.length}</b> do edital sem lista` : ''}</span>${(adapt.ocultas.length || foraDoCargoResumo().questoes) ? ' ' + foraDoCargoBotao() : ''}</div>` : ''}
     </div>
-    <div class="fx-barra" role="group" aria-label="Filtros das estatísticas">${['banca','cargo','ano'].map(id => fxMenuHtml(id, fxOpcoes(id, materias))).join('')}${filtroAtivo ? '<button type="button" class="prova-det-btn" data-fx-limpar-todos="1">Limpar filtros</button>' : ''}</div>
+    <div class="fx-barra" role="group" aria-label="Filtros das estatísticas">${['banca','ano'].map(id => fxMenuHtml(id, fxOpcoes(id, materias))).join('')}${filtroAtivo ? '<button type="button" class="prova-det-btn" data-fx-limpar-todos="1">Limpar filtros</button>' : ''}</div>
     ${filtroAtivo ? `<div class="bc-soma">Somando ${Object.keys(FX).filter(id => FX[id].sel.size).map(id => `<b>${FX[id].rot}</b>: ${[...FX[id].sel].slice(0,2).map(esc).join(', ')}${FX[id].sel.size > 2 ? ' +' + (FX[id].sel.size - 2) : ''}`).join(' · ')} → <b>${somaQ}</b> questões em ${linhas.length} matéria${linhas.length===1?'':'s'}</div>` : ''}
     <div class="resumo-dia">
       <div class="resumo-esq">
@@ -1232,7 +1233,7 @@ function renderMainPanel(tabAtual){
     let semDisc = false; try{ const a = JSON.parse(localStorage.getItem('ia_cargo_ativo_v1') || 'null'); semDisc = !!(a && a.semDiscursiva); }catch(_){}
     if(semDisc) return '<div class="notice" style="margin-top:16px"><b>Este concurso não tem prova discursiva.</b><br>O edital cadastrado prevê só prova objetiva, títulos e entrevista. Se houver retificação, atualize o edital em "＋ Edital".</div>';
   }
-  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v683" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
+  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v684" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
   return '';
 }
 

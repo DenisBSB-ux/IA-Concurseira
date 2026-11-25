@@ -50,9 +50,14 @@ def blocos(total, tam, ini, fim):
     return [(a, min(a + tam, fim)) for a in range(ini, fim, tam)]
 
 
-def dump(orig, a, b):
-    return subprocess.run([sys.executable, os.path.join(SK, 'montar_resolucoes.py'), 'dump', orig, str(a), str(b)],
-                          capture_output=True, text=True, check=True).stdout
+def dump(orig, a, b, Q=None):
+    """texto do lote para o modelo: enunciado COMPLETO (o `dump` do montar_resolucoes corta o enunciado e faria o modelo escrever resoluções genéricas)."""
+    if Q is None: _, _, Q = M.ler(orig)
+    blocos = []
+    for i in range(a, b):
+        q = Q[i]
+        blocos.append(f"#{i} | {q['assunto']} | GAB={q['gab']}\nENUN: {q['enun']}" + (f"\nRES_ANTIGA: {q['res']}" if q['res'] else ''))
+    return '\n\n'.join(blocos)
 
 
 def chamar(prompt, modelo, esforco):
@@ -102,7 +107,7 @@ def validar(ns, Q, a, b):
                 if not tr or tr not in q['enun']: erros.append(f'E n={n}: o trecho não é cópia literal do enunciado')
             if n not in X: erros.append(f'X sem n={n} (item Errado)')
         if not ce:
-            letras = [L for L in re.findall(r'(?m)^\s*\(?([A-E])[).]\s', q['enun'])]
+            letras = [L for L in re.findall(r'(?m)^\s*(?:-\s*)?\*{0,2}\(?([A-E])[).]\*{0,2}\s', q['enun'])]
             esperadas = [L for L in dict.fromkeys(letras) if L != gab.strip('() ')] if letras else []
             ee = EE.get(i, {})
             faltam = [L for L in esperadas if L not in ee]
@@ -126,14 +131,41 @@ def gravar(pasta, k, ns, a, b):
     if EE: open(os.path.join(pasta, 'resp', f'e{NN}.py'), 'w', encoding='utf-8').write('EE = %r\n' % (EE,))
 
 
+def refazer(a, Q, orig, ns_n):
+    """refaz só as questões ns_n (n 1-based) e as mescla nos arquivos do lote que as contém (mesmos nomes bNN.py/rNN.py/eNN.py)."""
+    por_lote = {}
+    for n in ns_n: por_lote.setdefault((n - 1) // a.tam, []).append(n - 1)
+    for k, ruins in por_lote.items():
+        i0, i1 = k * a.tam, min((k + 1) * a.tam, len(Q)); NN = '%02d' % k
+        ns = {}
+        for arq in (f'lotes/b{NN}.py', f'resp/r{NN}.py', f'resp/e{NN}.py'):
+            f = os.path.join(a.pasta, arq)
+            if os.path.exists(f): exec(open(f, encoding='utf-8').read(), ns)
+        ne2 = [r + 1 for r in ruins if (Q[r]['gab'] or '').strip() == 'Errado']; mc2 = [r for r in ruins if (Q[r]['gab'] or '').strip() not in ('Certo', 'Errado')]
+        prompt = (f'Matéria e normas: {a.materia}\nREFAÇA SOMENTE as questões idx {ruins}. OBRIGATÓRIO: R com essas chaves; E e X com n = {ne2 if ne2 else "nenhuma"}; EE com idx = {mc2 if mc2 else "nenhuma"}. '
+                  'O trecho de E deve ser cópia EXATA (caractere por caractere) de um pedaço do ENUNCIADO.\n\n' + dump(orig, 0, 0, Q) + '\n\n'.join(
+                  f"#{r} | {Q[r]['assunto']} | GAB={Q[r]['gab']}\nENUN: {Q[r]['enun']}" for r in ruins))
+        for tent in range(a.retry + 1):
+            res, uso = chamar(prompt, a.modelo, a.esforco)
+            novo = {}; exec(extrair(res), novo)
+            for nome in ('R', 'E', 'C', 'X', 'GAB', 'EE'): ns.setdefault(nome, {}).update(novo.get(nome, {}))
+            erros = validar(ns, Q, i0, i1)
+            print(f'lote {NN}: refeitas {[r + 1 for r in ruins]}; {uso["total"]} tokens; problemas: {erros[:5] if erros else "nenhum"}')
+            if not erros: break
+            prompt += '\n\nProblemas na sua resposta anterior: ' + '; '.join(erros[:10])
+        if not erros: gravar(a.pasta, k, ns, i0, i1)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
     ap.add_argument('pasta'); ap.add_argument('--materia', required=True); ap.add_argument('--modelo', default='sonnet')
     ap.add_argument('--tam', type=int, default=25); ap.add_argument('--ini', type=int, default=0); ap.add_argument('--fim', type=int)
-    ap.add_argument('--esforco', default='low'); ap.add_argument('--retry', type=int, default=1); ap.add_argument('--dry-run', action='store_true')
+    ap.add_argument('--so', help='refaz só estas questões (n, 1-based, separados por vírgula) dentro dos lotes já gravados'); ap.add_argument('--esforco', default='low'); ap.add_argument('--retry', type=int, default=1); ap.add_argument('--dry-run', action='store_true')
     a = ap.parse_args()
     orig = os.path.join(a.pasta, 'original.md')
     _, _, Q = M.ler(orig)
+    if a.so:
+        refazer(a, Q, orig, [int(x) for x in a.so.split(',')]); return
     B = blocos(len(Q), a.tam, a.ini, a.fim)
     print(f'{len(Q)} questões; {len(B)} lote(s) de até {a.tam}; modelo {a.modelo}')
     usos = []; arq_uso = os.path.join(a.pasta, 'uso.json')
@@ -145,7 +177,7 @@ def main():
         ne = [i + 1 for i in range(i0, i1) if (Q[i]['gab'] or '').strip() == 'Errado']
         mc = [i for i in range(i0, i1) if (Q[i]['gab'] or '').strip() not in ('Certo', 'Errado')]
         exigido = f'OBRIGATÓRIO neste lote: R com as chaves idx {i0}..{i1 - 1}; E e X com as chaves n = {ne if ne else "nenhuma"} (n = idx + 1); EE com as chaves idx = {mc if mc else "nenhuma"}.'
-        entrada = f'Matéria e normas: {a.materia}\nLote idx {i0} a {i1 - 1}.\n{exigido}\n\n' + dump(orig, i0, i1)
+        entrada = f'Matéria e normas: {a.materia}\nLote idx {i0} a {i1 - 1}.\n{exigido}\n\n' + dump(orig, i0, i1, Q)
         if a.dry_run:
             print(f'lote {NN} ({i0}..{i1}): ~{(len(SISTEMA) + len(entrada)) // 3} tokens de entrada (sem contar a saída)'); continue
         prompt, ns, erros, uso_tot = entrada, {}, ['não executou'], dict(entrada=0, cache_escrita=0, cache_leitura=0, saida=0, total=0, custo_ref_usd=0)
@@ -153,14 +185,25 @@ def main():
             res, uso = chamar(prompt, a.modelo, a.esforco)
             for c in uso_tot: uso_tot[c] = round(uso_tot[c] + uso[c], 4)
             try:
-                ns = {}; exec(extrair(res), ns)
+                novo = {}; exec(extrair(res), novo)
+                if tent == 0: ns = novo
+                else:      # reparo: só substitui o que foi reenviado para os idx com problema
+                    for nome in ('R', 'E', 'C', 'X', 'GAB', 'EE'): ns.setdefault(nome, {}).update(novo.get(nome, {}))
                 erros = validar(ns, Q, i0, i1)
             except Exception as e:
-                erros = [f'o código não executou: {e}']
+                erros = [f'o código não executou: {e}']; ns = ns if tent else {}
             if not erros: break
             os.makedirs(os.path.join(a.pasta, '_falhas'), exist_ok=True)
             open(os.path.join(a.pasta, '_falhas', f'b{NN}_t{tent}.txt'), 'w', encoding='utf-8').write(res)      # resposta bruta, para diagnóstico
-            prompt = entrada + '\n\nSua resposta anterior teve estes problemas; reenvie o bloco inteiro corrigido:\n- ' + '\n- '.join(erros[:25])
+            ruins = sorted({int(x) for e in erros for x in re.findall(r'idx (\d+)', e)} | {int(x) - 1 for e in erros for x in re.findall(r'n=(\d+)', e)} | {int(x) - 1 for e in erros for x in re.findall(r'sem n=(\d+)', e)})
+            ruins = [r for r in ruins if i0 <= r < i1]
+            if ruins and ns.get('R'):       # reparo barato: reenvia só as questões com problema, não o lote inteiro
+                ne2 = [r + 1 for r in ruins if (Q[r]['gab'] or '').strip() == 'Errado']; mc2 = [r for r in ruins if (Q[r]['gab'] or '').strip() not in ('Certo', 'Errado')]
+                prompt = (f'Matéria e normas: {a.materia}\nCORREÇÃO: refaça SOMENTE as questões idx {ruins}. OBRIGATÓRIO: R com essas chaves; E e X com n = {ne2 if ne2 else "nenhuma"}; EE com idx = {mc2 if mc2 else "nenhuma"}. '
+                          'O trecho de E deve ser cópia EXATA (caractere por caractere) de um pedaço do ENUNCIADO. Problemas: ' + '; '.join(erros[:15]) + '\n\n' + '\n\n'.join(
+                          f"#{r} | {Q[r]['assunto']} | GAB={Q[r]['gab']}\nENUN: {Q[r]['enun']}" for r in ruins))
+            else:
+                prompt = entrada + '\n\nSua resposta anterior teve estes problemas; reenvie o bloco inteiro corrigido:\n- ' + '\n- '.join(erros[:25])
         if erros:
             print(f'lote {NN}: {len(erros)} problema(s) depois de {a.retry + 1} tentativa(s); NÃO gravado:'); [print('  -', e) for e in erros[:10]]
             usos.append(dict(lote=NN, ini=i0, fim=i1, ok=False, **uso_tot)); continue
