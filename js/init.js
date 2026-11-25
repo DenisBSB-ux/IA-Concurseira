@@ -72,7 +72,7 @@ function _atualizarAgora(alvo){
   const limpar = [new Promise(ok => setTimeout(ok, 400))];      // dá tempo de o salvamento terminar
   try{ if('caches' in window) limpar.push(caches.keys().then(ks => Promise.all(ks.map(k => caches.delete(k))))); }catch(_){}
   try{ if('serviceWorker' in navigator) limpar.push(navigator.serviceWorker.getRegistrations().then(rs => Promise.all(rs.map(r => r.unregister())))); }catch(_){}
-  Promise.race([Promise.all(limpar).catch(()=>{}), new Promise(ok => setTimeout(ok, 2500))]).then(()=>{ location.href = location.pathname + '?_v=' + Date.now(); });
+  Promise.race([Promise.all(limpar).catch(()=>{}), new Promise(ok => setTimeout(ok, 2500))]).then(()=>{ location.href = location.pathname.replace(/[^\/]*$/, '') + 'index.html?_v=' + Date.now(); });      // vai para index.html (e não para a pasta): é o mesmo endereço que a checagem usa e que já chega atualizado
 }
 async function verificarNovaVersao(){
   if(_avisoVersaoMostrado || (typeof navigator!=='undefined' && navigator.onLine===false)) return;
