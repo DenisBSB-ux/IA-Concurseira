@@ -3,7 +3,7 @@
  "slug": "redes-de-computadores",
  "concursoId": "dpdf-2026-analista",
  "concurso": "DPDF 2026 — Analista de Apoio à Assistência Judiciária",
- "versao": 1,
+ "versao": 2,
  "atualizado": "2026-11-25",
  "padrao": [
   {
@@ -149,5 +149,6 @@
    ]
   }
  ],
- "cargos": {}
+ "cargos": {},
+ "referencia": true
 }

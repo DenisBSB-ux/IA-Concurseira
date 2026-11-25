@@ -745,8 +745,9 @@ function concursoAnaliseAssuntos(){
 }
 function concursoMarcarForaDoCargo(){
   ALL_QUESTIONS.forEach(q => { q.foraAssunto = false; });
-  const f = concursoAnaliseAssuntos(); if(!f || concursoForaVisivel()) return;
-  ALL_QUESTIONS.forEach(q => { const a = f[q.materia]; if(a && !a.permitidos.has(q.tema || 'Geral')){ q.foraAssunto = true; q.duplicataOculta = true; } });
+  const f = concursoAnaliseAssuntos(); if(!f) return;
+  const ver = concursoForaVisivel();      // ligado: a questão aparece, só marcada como fora do edital
+  ALL_QUESTIONS.forEach(q => { const a = f[q.materia]; if(a && !a.permitidos.has(q.tema || 'Geral')){ q.foraAssunto = true; if(!ver) q.duplicataOculta = true; } });
 }
 function concursoAssuntosDe(matBase){ const f = concursoAnaliseAssuntos(); return f ? (f[matBase] || null) : null; }
 function concursoChipFaltam(matBase){

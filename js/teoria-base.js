@@ -169,6 +169,41 @@ async function teoriaAutoPublicar(){
   }catch(e){ TEORIA_AUTO_STATUS = 'erro'; console.warn('Publicação automática da teoria falhou', e); TEORIA_AUTO_RODOU = false; }
   try{ if(typeof render === 'function' && STATE.localTab === 'materias') render(); }catch(_){}
 }
+
+/* ---- filtro de questões pelo perfil do edital/cargo ----
+   Cada questão da lista geral já traz o item do edital de referência no assunto ("4 Protocolos…"). O perfil de referência
+   (referencia:true) liga esse item aos ids de tópico; o perfil do edital ativo diz quais tópicos o cargo cobra.
+   Questão cujos tópicos não estão no perfil ativo fica "fora do edital": oculta, a menos que o usuário peça para mostrar. */
+const TEORIA_PERFIS_PRE = {};      // slug -> { concursoId: perfil }
+function teoriaIdsDoPerfil(p, cargo){
+  const itens = (p && ((p.cargos && p.cargos[cargo]) || p.padrao)) || [], ids = new Set();
+  itens.forEach(it => (it.topicos || []).forEach(id => ids.add(id)));
+  return ids;
+}
+function teoriaNoEdital(q){
+  try{
+    const slug = teoriaSlugDe(q.materia); if(!slug) return true;
+    const perfis = TEORIA_PERFIS_PRE[slug]; if(!perfis) return true;
+    const ativo = perfis[(typeof CONCURSO !== 'undefined' && CONCURSO.id) || '']; if(!ativo) return true;      // edital sem perfil: não filtra
+    const tema = String(q.tema || '');
+    if(/^Fora do edital/i.test(tema)) return false;
+    const m = tema.match(/^(\d+) /); if(!m) return true;
+    const ref = Object.values(perfis).find(p => p.referencia); if(!ref) return true;
+    const item = (ref.padrao || []).find(i => String(i.n) === m[1]); if(!item) return true;
+    const permitidos = teoriaIdsDoPerfil(ativo, (typeof CONCURSO !== 'undefined' && CONCURSO.cargo) || '');
+    return (item.topicos || []).some(id => permitidos.has(id));
+  }catch(_){ return true; }
+}
+async function teoriaPrecarregarPerfis(){
+  let mudou = false;
+  for(const slug of Object.keys(TEORIA_BASE_INDICE)){
+    for(const cid of (TEORIA_BASE_INDICE[slug].perfis || [])){
+      try{ const p = await teoriaFetchJson('teoria/' + slug + '/perfil-' + cid + '.json'); (TEORIA_PERFIS_PRE[slug] = TEORIA_PERFIS_PRE[slug] || {})[cid] = p; mudou = true; }catch(_){}
+    }
+  }
+  if(mudou){ try{ if(typeof marcarDuplicatas === 'function' && typeof ALL_QUESTIONS !== 'undefined' && ALL_QUESTIONS.length) marcarDuplicatas(); if(typeof APP_INICIADO !== 'undefined' && APP_INICIADO && typeof render === 'function') render(); }catch(_){} }
+}
+setTimeout(teoriaPrecarregarPerfis, 600);
 document.addEventListener('click', e => {
   const t = e.target; if(!t || !t.closest) return;
   const ab = t.closest('[data-teoria-abrir]'); if(ab){ e.preventDefault(); teoriaAbrir(ab.dataset.teoriaAbrir); return; }

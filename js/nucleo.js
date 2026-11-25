@@ -330,7 +330,7 @@ function anoRealDaQuestao(q){
 function marcarDuplicatas(){
   const porMateria = {};
   ALL_QUESTIONS.forEach(q=>{
-    q.duplicataOculta = false;
+    q.duplicataOculta = false; q.foraEdital = false; q.foraEditalOculta = false;
     const chave = normalizarParaComparacao(q.q + (Array.isArray(q.alt) ? ' ' + q.alt.map(a=>(a&&a.letra?a.letra+' ':'')+((a&&a.texto)||'')).join(' ') : ''));   // MC: enunciado-base igual com alternativas diferentes NÃO é duplicata
     if(!chave || chave.length<15) return; // enunciados muito curtos não entram na checagem (risco de falso positivo)
     if(!porMateria[q.materia]) porMateria[q.materia] = {};
@@ -351,7 +351,13 @@ function marcarDuplicatas(){
     });
   });
   // listas cujo edital manda ocultar o que está "Fora do edital — …" (ex.: Redes): a questão fica guardada, só some das telas
-  ALL_QUESTIONS.forEach(q => { const c = (typeof editalCfgDe === 'function') ? editalCfgDe(q.materia) : null; if(c && c.ocultarFora && String(q.tema||'').startsWith(FORA_DO_EDITAL)){ q.duplicataOculta = true; q.foraEditalOculta = true; } });
+  // (com "mostrar fora do edital" ligado, a questão aparece, marcada como fora do edital)
+  const verFora = (typeof concursoForaVisivel === 'function') && concursoForaVisivel();
+  ALL_QUESTIONS.forEach(q => {
+    const c = (typeof editalCfgDe === 'function') ? editalCfgDe(q.materia) : null;
+    const fora = (c && c.ocultarFora && String(q.tema||'').startsWith(FORA_DO_EDITAL)) || (typeof teoriaNoEdital === 'function' && !teoriaNoEdital(q));      // regra do edital da lista ou perfil do edital/cargo ativo
+    if(fora){ q.foraEdital = true; if(!verFora){ q.duplicataOculta = true; q.foraEditalOculta = true; } }
+  });
   try{ if(typeof concursoMarcarForaDoCargo === 'function') concursoMarcarForaDoCargo(); }catch(e){ console.warn('Filtro de assuntos do cargo', e); }      // assuntos fora do edital do cargo ficam ocultos
 }
 /* edição manual órfã: o uid é "matéria-número" e o número muda entre arquivos; uma edição antiga (guardada no aparelho ou na nuvem)

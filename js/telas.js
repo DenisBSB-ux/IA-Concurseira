@@ -1207,11 +1207,20 @@ function renderLocalTabs(){
 }
 
 
+/* faixa da matéria: só as questões do edital do cargo, com a opção de mostrar também as de fora (marcadas) */
+function foraEditalBarra(){
+  if(!STATE.materia) return '';
+  const todas = ALL_QUESTIONS.filter(q => q.materia === STATE.materia);
+  const fora = todas.filter(q => q.foraEdital || q.foraAssunto).length; if(!fora) return '';
+  const ver = (typeof concursoForaVisivel === 'function') && concursoForaVisivel();
+  const dentro = todas.filter(q => !(q.foraEdital || q.foraAssunto) && !q.duplicataOculta).length;
+  return `<div class="fe-barra" role="status"><span class="fe-tx">${ver ? `Mostrando também <b>${fora}</b> ${fora>1?'questões':'questão'} <b>fora do edital</b> do seu cargo (marcadas).` : `Só as questões do edital do seu cargo: <b>${dentro}</b>. Ocultas, fora do edital: <b>${fora}</b>.`}</span> <button type="button" class="fe-bt" data-conc-fora="1">${ver ? 'Ocultar as de fora' : 'Mostrar também as de fora'}</button></div>`;
+}
 function renderMainPanel(tabAtual){
   if(tabAtual==='simulado'){
     if(STATE.quiz) return renderQuiz();
-    if(STATE.mostrarConfigSimulado) return renderSetupInline();
-    return renderLanding();
+    if(STATE.mostrarConfigSimulado) return foraEditalBarra() + renderSetupInline();
+    return foraEditalBarra() + renderLanding();
   }
   if(tabAtual==='reta') return (typeof renderReta==='function' ? renderReta() : '');
   if(tabAtual==='erros') return renderErros();
@@ -1222,7 +1231,7 @@ function renderMainPanel(tabAtual){
     let semDisc = false; try{ const a = JSON.parse(localStorage.getItem('ia_cargo_ativo_v1') || 'null'); semDisc = !!(a && a.semDiscursiva); }catch(_){}
     if(semDisc) return '<div class="notice" style="margin-top:16px"><b>Este concurso não tem prova discursiva.</b><br>O edital cadastrado prevê só prova objetiva, títulos e entrevista. Se houver retificação, atualize o edital em "＋ Edital".</div>';
   }
-  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v679" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
+  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v680" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
   return '';
 }
 
