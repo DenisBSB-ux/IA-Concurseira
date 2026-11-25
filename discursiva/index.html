@@ -324,7 +324,7 @@ details.padrao .leg{display:none}
         </div>
         <div id="q-st" class="status" hidden><span class="dot"></span><span id="q-stt">Pensando…</span></div>
         <div id="q-err" class="notice err" hidden></div>
-        <p class="hint">Disciplinas do edital TCDF 2026 (conhecimentos especializados). Os assuntos são sugestões; use o campo livre para qualquer tópico do edital.</p>
+        <p class="hint" id="discHint">Disciplinas do edital TCDF 2026 (conhecimentos especializados). Os assuntos são sugestões; use o campo livre para qualquer tópico do edital.</p>
         <h2 style="margin-top:6px">Questões geradas</h2>
         <div id="q-hist" class="hist"></div>
       </aside>
@@ -1735,7 +1735,23 @@ const P26_P = {
   ]
 };
 
-const todos = () => [...temas, EXT_Q, AL_Q, AL_P, ...GRAN, S2_Q1, S2_Q2, S2_P, SAL_Q, SAL_P, P26_Q, P26_P, S1_Q, S1_P, EX_Q, EX_P];
+/* cargo ativo do concurso escolhido na plataforma (mesma origem: lê a escolha salva no aparelho) */
+const CARGO = (function(){
+  const pad = { nome: "Analista Administrativo de Controle Externo — TCDF", tcdf: true, materias: [] };
+  try{
+    const db = JSON.parse(localStorage.getItem("ia_concursos_v2") || "null");
+    if(!db || !Array.isArray(db.lista) || !db.ativo || db.ativo === "padrao") return pad;
+    const c = db.lista.find(x => x.id === db.ativo);
+    if(!c) return pad;
+    const cargo = db.cargo || (c.cargos && c.cargos[0] && c.cargos[0].nome) || c.cargo || "";
+    const cg = (c.cargos || []).find(x => x.nome === cargo) || {};
+    const materias = [];
+    (c.comuns || []).concat(cg.materias || []).forEach(m => { if(m && materias.indexOf(m) < 0) materias.push(m); });
+    const tcdf = /analista administrativo/i.test(cargo) && /tcdf|tribunal de contas do distrito federal/i.test((c.orgao || "") + " " + (c.nome || ""));
+    return { nome: (c.nome || "") + " · " + cargo, tcdf: tcdf, materias: materias };
+  }catch(e){ return pad; }
+})();
+const todos = () => !CARGO.tcdf ? [] : [...temas, EXT_Q, AL_Q, AL_P, ...GRAN, S2_Q1, S2_Q2, S2_P, SAL_Q, SAL_P, P26_Q, P26_P, S1_Q, S1_P, EX_Q, EX_P];
 const temasOcultos = () => { const a = store.get("tdf.temasOcultos", []); return Array.isArray(a) ? a : []; };
 const all = () => { const o = temasOcultos(); return todos().filter(t => !o.includes(t.id)); };
 const atual = { questao: store.get("tdf.atual.questao", EX_Q.id), peca: store.get("tdf.atual.peca", EX_P.id) };
@@ -1761,13 +1777,13 @@ TABS.forEach(x => $("tab-"+x).onclick = () => showTab(x));
 // ---------- Formulários ----------
 function opts(list, first){ return (first?`<option value="">${esc(first)}</option>`:"") + list.map(v => Array.isArray(v)?`<option value="${esc(v[0])}">${esc(v[1])}</option>`:`<option>${esc(v)}</option>`).join(""); }
 function setupForm(p){
-  $(p+"-disc").innerHTML = opts(Object.keys(DISC), "Qualquer disciplina do edital");
+  $(p+"-disc").innerHTML = opts(CARGO.tcdf ? Object.keys(DISC) : CARGO.materias, "Qualquer disciplina do edital");
   $(p+"-nivel").innerHTML = opts(NIVEIS);
-  const fillA = () => { const d=$(p+"-disc").value; $(p+"-assunto").innerHTML = opts(d?DISC[d]:[], d?"Qualquer assunto da disciplina":"Escolha a disciplina ou sorteie"); };
+  const fillA = () => { const d=$(p+"-disc").value; $(p+"-assunto").innerHTML = opts((d&&DISC[d])?DISC[d]:[], d?"Qualquer assunto da disciplina":"Escolha a disciplina ou sorteie"); };
   $(p+"-disc").onchange = fillA; fillA();
   $(p+"-sortear").onclick = () => {
-    const ds = Object.keys(DISC); const d = ds[Math.floor(Math.random()*ds.length)];
-    $(p+"-disc").value = d; fillA(); const as = DISC[d]; $(p+"-assunto").value = as[Math.floor(Math.random()*as.length)]; $(p+"-livre").value = "";
+    const ds = CARGO.tcdf ? Object.keys(DISC) : CARGO.materias; const d = ds[Math.floor(Math.random()*ds.length)];
+    $(p+"-disc").value = d; fillA(); const as = (DISC[d] || []); $(p+"-assunto").value = as.length ? as[Math.floor(Math.random()*as.length)] : ""; $(p+"-livre").value = "";
     if(p==="p") $("p-proc").value = PROC[Math.floor(Math.random()*PROC.length)];
   };
 }
@@ -3576,6 +3592,20 @@ showTab(TABS.includes(tab0) ? tab0 : "questao");
   
   if(imgLimits) $("fotoInfo").textContent = "Até " + imgLimits.maxCount + " imagens por correção. Fotografe de cima, com boa luz, a folha inteira e sem cortes. A correção lê a letra, avalia a legibilidade palavra por palavra e corrige o conteúdo.";
 })();
+})();
+
+/* aviso e texto do edital conforme o cargo escolhido */
+(function(){
+  const h = document.getElementById("discHint");
+  if(h && !CARGO.tcdf) h.textContent = "Disciplinas do edital de " + CARGO.nome + ". Os assuntos são sugestões; use o campo livre para qualquer tópico do edital.";
+  const nc = document.getElementById("noclaude");
+  if(!CARGO.tcdf && nc){
+    const box = document.createElement("div");
+    box.className = "notice";
+    box.style.marginTop = "20px";
+    box.textContent = "Ainda não há temas de discursiva para " + CARGO.nome + " na plataforma. A geração e a correção por IA usam o Claude da sua conta no artefato do claude.ai: gere e corrija lá e importe o backup aqui.";
+    nc.insertAdjacentElement("beforebegin", box);
+  }
 })();
 </script>
 
