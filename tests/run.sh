@@ -5,5 +5,6 @@ rc=0
 node tests/merge.test.js || rc=1
 node tests/geral.test.js || rc=1
 node tests/perfil.test.js || rc=1
+node tests/teoria.test.js || rc=1
 node .claude/skills/atualizacao-legal-semanal/verificar_textos.js - js/*-texto.js >/dev/null || { echo "FALHOU: verificar_textos.js"; rc=1; }
 exit $rc

@@ -25,6 +25,13 @@ service cloud.firestore {
       allow write: if administrador();
     }
 
+    // Teoria-base e perfis por edital (apostila do edital): qualquer pessoa lê,
+    // só o administrador publica (botão "Publicar na nuvem" na aba Matérias).
+    match /teoria/{documento} {
+      allow read: if true;
+      allow write: if administrador();
+    }
+
     // Progresso pessoal (documentos {codigo} e {codigo}__{materia}).
     // O campo "dono" guarda o UID de quem gravou. Documentos antigos, sem
     // "dono", só são legíveis por contas logadas e passam a pertencer à

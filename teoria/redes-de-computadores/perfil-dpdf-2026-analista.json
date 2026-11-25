@@ -1,0 +1,153 @@
+{
+ "esquema": 1,
+ "slug": "redes-de-computadores",
+ "concursoId": "dpdf-2026-analista",
+ "concurso": "DPDF 2026 — Analista de Apoio à Assistência Judiciária",
+ "versao": 1,
+ "atualizado": "2026-11-25",
+ "padrao": [
+  {
+   "n": 1,
+   "t": "Fundamentos de redes de computadores",
+   "topicos": [
+    "redes.1.rede",
+    "redes.1.cliente-servidor-p2p",
+    "redes.1.desempenho",
+    "redes.1.modelo-osi-7-camadas-de-cima-para-baixo",
+    "redes.1.modelo-tcp-ip-4-camadas",
+    "redes.1.pegadinhas",
+    "redes.1.quadro-osi-tcpip"
+   ]
+  },
+  {
+   "n": 2,
+   "t": "Redes LAN, WAN e WLAN. Topologias e meios de transmissão",
+   "topicos": [
+    "redes.2.alcance",
+    "redes.2.topologias",
+    "redes.2.par-trancado-utp-stp",
+    "redes.2.t568a-t568b",
+    "redes.2.fibra-optica",
+    "redes.2.pegadinhas"
+   ]
+  },
+  {
+   "n": 3,
+   "t": "Ethernet e padrões IEEE 802",
+   "topicos": [
+    "redes.3.ethernet-ieee-802-3",
+    "redes.3.dominios",
+    "redes.3.padroes",
+    "redes.3.familia-ieee-802",
+    "redes.3.codificacao-manchester",
+    "redes.3.pegadinhas"
+   ]
+  },
+  {
+   "n": 4,
+   "t": "Protocolos TCP, UDP, IP, ICMP e ARP",
+   "topicos": [
+    "redes.4.ip",
+    "redes.4.tcp",
+    "redes.4.udp",
+    "redes.4.portas-e-socket",
+    "redes.4.icmp",
+    "redes.4.pegadinhas",
+    "redes.4.quadro-tcp-udp"
+   ]
+  },
+  {
+   "n": 5,
+   "t": "Endereçamento IPv4 e IPv6, sub-redes, CIDR e NAT",
+   "topicos": [
+    "redes.5.ipv4",
+    "redes.5.mascara-e-cidr",
+    "redes.5.exemplos",
+    "redes.5.ipv6",
+    "redes.5.nat",
+    "redes.5.pegadinhas"
+   ]
+  },
+  {
+   "n": 6,
+   "t": "Serviços e protocolos de rede: DNS, DHCP, NTP, HTTP/HTTPS, SSH e SNMP",
+   "topicos": [
+    "redes.6.dns",
+    "redes.6.dhcp",
+    "redes.6.ntp",
+    "redes.6.ssh",
+    "redes.6.snmp",
+    "redes.6.outros",
+    "redes.6.pegadinhas"
+   ]
+  },
+  {
+   "n": 7,
+   "t": "VLAN, trunking e Spanning Tree",
+   "topicos": [
+    "redes.7.vlan",
+    "redes.7.trunk",
+    "redes.7.stp-ieee-802-1d",
+    "redes.7.rstp-802-1w-converge-em-segundos-mstp",
+    "redes.7.pegadinhas"
+   ]
+  },
+  {
+   "n": 8,
+   "t": "Roteamento estático e dinâmico",
+   "topicos": [
+    "redes.8.roteador",
+    "redes.8.estatico-dinamico",
+    "redes.8.igp-egp",
+    "redes.8.distancia-administrativa",
+    "redes.8.pegadinhas"
+   ]
+  },
+  {
+   "n": 9,
+   "t": "Redes privadas virtuais (VPN)",
+   "topicos": [
+    "redes.9.vpn",
+    "redes.9.ipsec",
+    "redes.9.outras",
+    "redes.9.pegadinhas"
+   ]
+  },
+  {
+   "n": 10,
+   "t": "Equipamentos de rede: switches, roteadores, pontos de acesso e balanceadores de carga",
+   "topicos": [
+    "redes.10.por-camada",
+    "redes.10.switch",
+    "redes.10.roteador",
+    "redes.10.balanceador-de-carga",
+    "redes.10.proxy",
+    "redes.10.pegadinhas",
+    "redes.10.quadro-hub-switch-roteador"
+   ]
+  },
+  {
+   "n": 11,
+   "t": "Redes sem fio: conceitos, padrões, configuração e segurança",
+   "topicos": [
+    "redes.11.padroes-ieee-802-11",
+    "redes.11.conceitos",
+    "redes.11.seguranca",
+    "redes.11.configuracao",
+    "redes.11.pegadinhas"
+   ]
+  },
+  {
+   "n": 12,
+   "t": "Redundância, alta disponibilidade, qualidade de serviço (QoS) e diagnóstico de redes",
+   "topicos": [
+    "redes.12.alta-disponibilidade",
+    "redes.12.tecnicas",
+    "redes.12.qos",
+    "redes.12.diagnostico",
+    "redes.12.pegadinhas"
+   ]
+  }
+ ],
+ "cargos": {}
+}
