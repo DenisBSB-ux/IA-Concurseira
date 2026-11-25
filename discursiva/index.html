@@ -292,8 +292,8 @@ details.padrao .leg{display:none}
 <header class="top">
   <div class="top-in">
     <div class="brand">
-      <h1>Treino Discursiva TCDF</h1>
-      <small>Analista Administrativo de Controle Externo · Cebraspe · questão (20 linhas) e Informação (50 linhas)</small>
+      <h1>Academia de Discursiva</h1>
+      <small id="cargo-linha">Analista Administrativo de Controle Externo — TCDF</small>
     </div>
     <div class="bkp" style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:12px"><button type="button" onclick="bkpExport()" style="font:inherit;padding:4px 8px;border:1px solid #ccc;border-radius:6px;background:#fff;cursor:pointer">Exportar dados</button><button type="button" onclick="document.getElementById('bkpFile').click()" style="font:inherit;padding:4px 8px;border:1px solid #ccc;border-radius:6px;background:#fff;cursor:pointer">Importar dados</button><input type="file" id="bkpFile" accept="application/json,.json" hidden onchange="bkpImport(this)"><span id="bkpMsg"></span><span id="cloudSt" style="margin-left:auto;font-size:12px"></span><button type="button" onclick="__TDF_SAIR()" style="font:inherit;padding:4px 8px;border:1px solid #ccc;border-radius:6px;background:#fff;cursor:pointer">Sair</button></div><div class="tabs" role="tablist">
       <button class="tab" role="tab" id="tab-questao" aria-selected="true" aria-controls="view-questao">1 · Questão</button>
@@ -523,6 +523,15 @@ details.padrao .leg{display:none}
     </div>
   </section>
 </main>
+<script>/* tema: acompanha o claro/escuro da plataforma (mesma origem) */
+(function(){
+  try{
+    if(window.parent===window) return;
+    var pb=window.parent.document.body, r=document.documentElement;
+    var ap=function(){ r.setAttribute("data-theme", pb.classList.contains("theme-light")?"light":"dark"); };
+    ap(); new MutationObserver(ap).observe(pb,{attributes:true,attributeFilter:["class"]});
+  }catch(e){}
+})();</script>
 <script type="text/plain" id="app-src">
 (() => {
 "use strict";
@@ -1760,6 +1769,8 @@ const CARGO = (function(){
 const SEM_Q = { id:"sem-tema-q", tipo:"questao", exemplo:true, vazio:true, fonte:"", criado:"", titulo:"Nenhum tema para este cargo", disciplina:"", assunto:"", texto_base:"", itens:[], quesitos:[], linhas:20, tl:50, nivel:"", banca:"", ano:"", nota:20, valor:15, paragrafos:[], modo:"foto" };
 const SEM_P = { id:"sem-tema-p", tipo:"peca", exemplo:true, vazio:true, fonte:"", criado:"", titulo:"Nenhum tema para este cargo", disciplina:"", assunto:"", texto_base:"", itens:[], quesitos:[], linhas:50, tl:50, nivel:"", banca:"", ano:"", nota:35, valor:35, paragrafos:[], modo:"foto" };
 window.__CARGO = CARGO;
+(function(){ var el=document.getElementById("cargo-linha"); if(el) el.textContent=CARGO.nome; })();
+
 const todos = () => !CARGO.tcdf ? [] : [...temas, EXT_Q, AL_Q, AL_P, ...GRAN, S2_Q1, S2_Q2, S2_P, SAL_Q, SAL_P, P26_Q, P26_P, S1_Q, S1_P, EX_Q, EX_P];
 const temasOcultos = () => { const a = store.get("tdf.temasOcultos", []); return Array.isArray(a) ? a : []; };
 const all = () => { const o = temasOcultos(); return todos().filter(t => !o.includes(t.id)); };
@@ -3500,7 +3511,7 @@ async function montarPdfTema(t, comPadrao){
     }
   }
   const pages = doc.internal.getNumberOfPages();
-  for(let i=1;i<=pages;i++){ doc.setPage(i); doc.setFont("helvetica","normal"); doc.setFontSize(7.5); doc.setTextColor(140,146,150); doc.text("Treino Discursiva TCDF · " + pdfSafe(t.titulo).slice(0,80), M, H - 30); doc.text(i + "/" + pages, W - M, H - 30, {align:"right"}); }
+  for(let i=1;i<=pages;i++){ doc.setPage(i); doc.setFont("helvetica","normal"); doc.setFontSize(7.5); doc.setTextColor(140,146,150); doc.text("Academia de Discursiva · " + pdfSafe(t.titulo).slice(0,80), M, H - 30); doc.text(i + "/" + pages, W - M, H - 30, {align:"right"}); }
   if(comPadrao && t.formato !== "relatorio"){ doc.setPage(pages); await montarFolhaTema(t, doc); }
   return doc.output("blob");
 }
