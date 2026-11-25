@@ -205,6 +205,7 @@ function renderQuiz(){
   const pctTotM = vistosM.size ? Math.round(resolvidasM*100/vistosM.size) : 0;
   return `
   <div class="qm-breadcrumb">Estudo <span>›</span> ${esc(quiz.materia||'')} <span>›</span> Questões</div>
+  ${(typeof fxBarraDaFila === 'function') ? fxBarraDaFila(quiz) : ''}
   <div class="case-file">
     <div class="case-header qm-header">
       <div class="qm-title">
