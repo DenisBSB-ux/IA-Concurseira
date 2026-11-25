@@ -1751,7 +1751,7 @@ const CARGO = (function(){
     const a = JSON.parse(localStorage.getItem("ia_cargo_ativo_v1") || "null");
     if(a && typeof a === "object"){
       const tcdf = !!a.padrao || (/analista administrativo/i.test(a.cargo || "") && /tcdf|tribunal de contas do distrito federal/i.test((a.orgao || "") + " " + (a.nome || "")));
-      return { nome: (a.nome || "") + (a.cargo ? " · " + a.cargo : ""), tcdf: tcdf, materias: Array.isArray(a.materias) ? a.materias : [] };
+      return { nome: (a.nome || "") + (a.cargo ? " · " + a.cargo : ""), tcdf: tcdf, materias: Array.isArray(a.materiasDisc) && a.materiasDisc.length ? a.materiasDisc : (Array.isArray(a.materias) ? a.materias : []) };
     }
     const db = JSON.parse(localStorage.getItem("ia_concursos_v2") || "null");
     if(!db || !Array.isArray(db.lista) || !db.ativo || db.ativo === "padrao") return pad;
