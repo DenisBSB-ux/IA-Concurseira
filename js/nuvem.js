@@ -135,6 +135,7 @@ try{
         } : null;
         if(usuario && usuario.uid!==uidAntes){
           vincularContaGoogle();
+          setTimeout(()=>{ try{ if(typeof teoriaAutoPublicar === 'function') teoriaAutoPublicar(); }catch(_){} }, 6000);   // administrador: envia a teoria nova à nuvem sozinha
           // mostra algo NA HORA (a vinculação com a nuvem pode levar segundos): tela de escolha do concurso, ou aviso de carregamento
           try{
             if(APP_INICIADO) render();

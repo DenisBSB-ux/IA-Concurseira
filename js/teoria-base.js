@@ -148,6 +148,27 @@ async function teoriaPublicarNuvem(slug){
   delete TEORIA_BASE_CACHE[slug];
   return { topicos: b.topicos.length, partes: partes.length, perfis: Object.keys(est.perfis).length };
 }
+/* Publicação automática: com a conta administradora logada, envia para a nuvem o que estiver mais novo no site (base ou perfil de versão maior).
+   Roda uma vez por abertura da página, em segundo plano; erro só vai ao console. Para os demais usuários não faz nada. */
+let TEORIA_AUTO_RODOU = false, TEORIA_AUTO_STATUS = '';
+async function teoriaAutoPublicar(){
+  if(TEORIA_AUTO_RODOU || !teoriaEhAdmin() || typeof FIREBASE_OK === 'undefined' || !FIREBASE_OK || !fbDb) return;
+  TEORIA_AUTO_RODOU = true; const col = fbDb.collection('teoria'); let enviados = 0;
+  try{
+    for(const slug of Object.keys(TEORIA_BASE_INDICE)){
+      const est = await teoriaLerEstatica(slug); let precisa = false;
+      const db = await col.doc('base__' + slug).get();
+      if(!db.exists || (db.data().versao || 0) < (est.base.versao || 0)) precisa = true;
+      for(const cid of Object.keys(est.perfis)){
+        const dp = await col.doc('perfil__' + slug + '__' + cid).get();
+        if(!dp.exists || (dp.data().versao || 0) < (est.perfis[cid].versao || 0)) precisa = true;
+      }
+      if(precisa){ await teoriaPublicarNuvem(slug); enviados++; }
+    }
+    TEORIA_AUTO_STATUS = enviados ? 'ok:' + enviados : 'em-dia';
+  }catch(e){ TEORIA_AUTO_STATUS = 'erro'; console.warn('Publicação automática da teoria falhou', e); TEORIA_AUTO_RODOU = false; }
+  try{ if(typeof render === 'function' && STATE.localTab === 'materias') render(); }catch(_){}
+}
 document.addEventListener('click', e => {
   const t = e.target; if(!t || !t.closest) return;
   const ab = t.closest('[data-teoria-abrir]'); if(ab){ e.preventDefault(); teoriaAbrir(ab.dataset.teoriaAbrir); return; }
@@ -155,7 +176,7 @@ document.addEventListener('click', e => {
   const ir = t.closest('[data-tb-ir]'); if(ir){ e.preventDefault(); const el = document.getElementById(ir.dataset.tbIr); if(el && el.scrollIntoView) el.scrollIntoView({ block: 'start' }); return; }
   const pub = t.closest('[data-teoria-publicar]'); if(pub){
     e.preventDefault(); const slug = pub.dataset.teoriaPublicar; pub.disabled = true; const txt = pub.textContent; pub.textContent = 'Publicando…';
-    teoriaPublicarNuvem(slug).then(r => alert('Teoria publicada na nuvem: ' + r.topicos + ' tópicos em ' + r.partes + ' documento(s) e ' + r.perfis + ' perfil(is).'))
+    teoriaPublicarNuvem(slug).then(r => alert('Teoria reenviada à nuvem: ' + r.topicos + ' tópicos em ' + r.partes + ' documento(s) e ' + r.perfis + ' perfil(is).'))
       .catch(err => alert('Não publicou: ' + (err && err.message || err))).finally(() => { pub.disabled = false; pub.textContent = txt; });
   }
 });

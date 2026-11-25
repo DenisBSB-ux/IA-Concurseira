@@ -58,7 +58,7 @@ Gere `teoria/<slug>/perfil-<concursoId>.json` (o `concursoId` é o `id` do concu
 2. Valide: `node tests/teoria.test.js` (ids únicos, perfil sem id inexistente, tabelas retangulares, figuras existentes, tamanho). Corrija até passar e rode `bash tests/run.sh`.
 3. Mudou JS/CSS: subir `vNNN` em todas as ocorrências do `index.html`. Só arquivos em `teoria/` e a lista de questões não exigem versão.
 4. Aba Matérias: confira no navegador (Playwright) o botão **📘 Apostila do edital**, o sumário na ordem do edital, as tabelas, a figura (claro e escuro) e o celular (390 px).
-5. **Nuvem:** a cópia do repositório já funciona sozinha. Para a coleção Firestore `teoria`, avise o usuário para usar **☁️ Publicar na nuvem** (conta administradora) depois do merge. Você não grava no Firestore.
+5. **Nuvem:** a cópia do repositório já funciona sozinha. Para a coleção Firestore `teoria`, a publicação é **automática**: depois do merge, ao abrir o site com a conta administradora, a teoria de versão maior sobe sozinha (↻ Reenviar força). Lembre de **subir a `versao`** da base e do perfil. Você não grava no Firestore.
 6. Pop-up 📖 por questão e assunto no padrão do `EDITAL` (`js/edital.js`: `itens`, `mapa`, `dividir`) quando a matéria tiver edital cadastrado.
 7. Preserve o progresso: mantenha as chaves `n:h` das questões que não mudaram; se um cartão trocar de chave, migre a marca.
 8. Fluxo de publicação do `CLAUDE.md` (commit com os trailers, PR, squash-merge); em lote, PR a cada 5 matérias concluídas ou quando o usuário pedir.
@@ -66,5 +66,5 @@ Gere `teoria/<slug>/perfil-<concursoId>.json` (o `concursoId` é o `id` do concu
 ## ENTREGA FINAL (por matéria)
 Responder, nesta ordem, **em texto curto**:
 1. Resumo: nº de questões, gabaritos a conferir, figuras recortadas, tópicos novos na base, itens do perfil, **LACUNAS** do edital (itens sem fonte confirmada).
-2. Se precisa de **upload das listas** ou a plataforma resolve sozinha (código/layout = só atualizar o site; questões, gabarito e cartões = o usuário reimporta o `.md` com 🔁 Substituir por matéria) e se precisa clicar em **☁️ Publicar na nuvem**.
+2. Se precisa de **upload das listas** ou a plataforma resolve sozinha (código/layout = só atualizar o site; questões, gabarito e cartões = o usuário reimporta o `.md` com 🔁 Substituir por matéria) e que a teoria sobe sozinha para a nuvem quando o administrador abrir o site.
 3. Por último, o envio do `.md` atualizado (sem texto depois dele).
