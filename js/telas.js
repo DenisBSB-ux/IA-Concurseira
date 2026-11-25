@@ -1233,7 +1233,7 @@ function renderMainPanel(tabAtual){
     let semDisc = false; try{ const a = JSON.parse(localStorage.getItem('ia_cargo_ativo_v1') || 'null'); semDisc = !!(a && a.semDiscursiva); }catch(_){}
     if(semDisc) return '<div class="notice" style="margin-top:16px"><b>Este concurso não tem prova discursiva.</b><br>O edital cadastrado prevê só prova objetiva, títulos e entrevista. Se houver retificação, atualize o edital em "＋ Edital".</div>';
   }
-  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v684" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
+  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v685" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
   return '';
 }
 
@@ -1424,17 +1424,7 @@ function camposFiltroPartes(){
       </div>
     </div>` : ''}
 `;
-  P.cargo = `
-    ${cargos.length>1 ? `<div class="setup-mini-field">
-      <button type="button" class="assunto-toggle" id="btn-toggle-cargo-menu" style="width:100%;">
-        <label style="margin-bottom:0;cursor:pointer;">Cargo (${cargos.length})</label>
-        <span class="assunto-atual">${setup.cargoMenuAberto?'▴':'▾'}</span>
-      </button>
-      ${setup.cargoMenuAberto ? `<div class="chip-row" id="chip-cargo" style="margin-top:8px;">
-        ${cargos.map(c=>`<span class="chip ${!setup.cargosExcluidos.has(c)?'selected':''}" data-cargo="${esc(c)}">${esc(c)}</span>`).join('')}
-      </div>` : ''}
-    </div>` : ''}
-`;
+  P.cargo = '';      // filtro de cargo removido (muitas questões vêm sem cargo no arquivo)
   return P;
 }
 // ---- quantidade de questões do simulado (0 = todas as do filtro) ----
@@ -1723,7 +1713,7 @@ function renderSetupInline(){
     <div class="setup-layout">
       <div class="setup-col-main">
         ${grupo(1,'Tamanho e ordem','Quantas questões e em que sequência', P.qtd + P.ordem)}
-        ${grupo(2,'Filtros de conteúdo','Nível de incidência, tendência, ano, banca e cargo', P.nivel + P.tend + P.ano + P.banca + P.cargo)}
+        ${grupo(2,'Filtros de conteúdo','Nível de incidência, tendência, ano e banca', P.nivel + P.tend + P.ano + P.banca + P.cargo)}
         ${grupo(3,'Tipo de cobrança e armadilhas','Como a questão é redigida e onde a banca costuma pegar', P.cob + P.arm + P.orig)}
       </div>
       <aside class="setup-col-resumo">
@@ -1744,7 +1734,6 @@ function pool(){
     setup.niveis.has(q.nv) &&
     !setup.anosExcluidos.has(String(anoRealDaQuestao(q)||'')) &&
     !setup.bancasExcluidas.has(bancaCurta(q.bc)) &&
-    !setup.cargosExcluidos.has(cargoCurto(q.bc)) &&
     !setup.tendenciasExcluidas.has(tendenciaCurta(q.td)) &&
     (setup.incluirIneditas || !isInedita(q)) &&
     (!setup.soAtualizadas || questaoAtualizadaPendente(q)) &&
