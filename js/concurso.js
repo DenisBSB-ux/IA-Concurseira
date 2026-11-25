@@ -51,6 +51,8 @@ function concursoCarregar(){
     CONCURSO = Object.assign({}, CONCURSO_PADRAO, c, { padrao: false, cargo, materias: concursoMateriasDoCargo(c, cargo), qtd: Object.assign({}, c.qtdComuns || {}, cgo.qtd || {}), itensCargo: cgo.itens || [], topicos: Object.assign({}, c.topicosComuns || {}, cgo.topicos || {}) });
   }
   concursoAplicar();
+  /* cargo ativo para a aba Discursivas (site): inclui concursos embutidos, que não ficam em ia_concursos_v2 */
+  try{ localStorage.setItem('ia_cargo_ativo_v1', JSON.stringify({ nome: CONCURSO.nome || '', orgao: CONCURSO.orgao || '', cargo: CONCURSO.cargo || '', materias: CONCURSO.materias || [], padrao: !!CONCURSO.padrao })); }catch(_){}
   try{ if(typeof marcarDuplicatas === 'function' && typeof ALL_QUESTIONS !== 'undefined' && ALL_QUESTIONS.length) marcarDuplicatas(); }catch(_){}
 }
 /* salva (ou atualiza) um concurso da lista e o torna o ativo; null volta ao TCDF */
