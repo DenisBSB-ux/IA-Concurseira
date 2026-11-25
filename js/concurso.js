@@ -33,7 +33,8 @@ function concursoGravarDB(){
 function concursosTodos(){
   const emb = (typeof CONCURSOS_EMBUTIDOS !== 'undefined' && Array.isArray(CONCURSOS_EMBUTIDOS)) ? CONCURSOS_EMBUTIDOS : [];
   const ids = new Set(CONC_DB.lista.map(x => x.id));
-  return CONC_DB.lista.concat(emb.filter(x => !ids.has(x.id)));
+  const oc = new Set(CONC_DB.ocultos || []);
+  return CONC_DB.lista.concat(emb.filter(x => !ids.has(x.id) && !oc.has(x.id)));
 }
 function concursoEhEmbutido(id){ return (typeof CONCURSOS_EMBUTIDOS !== 'undefined') && CONCURSOS_EMBUTIDOS.some(x => x.id === id); }
 function concursoMateriasDoCargo(c, cargo){
@@ -49,9 +50,19 @@ function concursoMateriasDiscursiva(c, cargo){
   const cg = (c.cargos || []).find(x => x.nome === cargo);
   let out = (cg && cg.materias || []).filter(m => m && !/l[ií]ngua portuguesa|portugu[eê]s|reda[cç][aã]o/i.test(m));
   const texto = (c.itens || []).filter(i => /discursiv/i.test(i[0] || '')).map(i => i[1] || '').join(' ');
+  /* "complementares" (CGU): as comuns que vêm depois dos básicos (itens do bloco P1) entram na discursiva */
+  if(/complementar/i.test(texto) && (c.comuns || []).length){
+    const tb = (c.itens || []).map(i => (i[1] || '')).join(' ').match(/b[áa]sicos\s+(\d+)\s+itens/i), nb = tb ? +tb[1] : 0;
+    let acc = 0; const comp = []; (c.comuns || []).forEach(m => { if(nb && acc >= nb && !out.includes(m)) comp.push(m); acc += +((c.qtdComuns || {})[m] || 0); }); out = comp.concat(out);
+  }
   if(!out.length) out = (c.comuns || []).filter(m => m && !/l[ií]ngua portuguesa|portugu[eê]s/i.test(m));
   if(/atualidade/i.test(texto) && !out.includes('Atualidades')) out.push('Atualidades');
   return out;
+}
+/* edital com itens cadastrados mas sem nenhuma menção a prova discursiva (ex.: ABDI) */
+function concursoSemDiscursiva(c){
+  if(!c || c.padrao || !(c.itens || []).length) return false;
+  return !c.itens.some(i => /discursiv|dissertat|reda[cç][aã]o|pe[cç]a/i.test((i[0] || '') + ' ' + (i[1] || '')));
 }
 function concursoCarregar(){
   CONC_DB = concursoLerDB();
@@ -64,7 +75,7 @@ function concursoCarregar(){
   }
   concursoAplicar();
   /* cargo ativo para a aba Discursivas (site): inclui concursos embutidos, que não ficam em ia_concursos_v2 */
-  try{ localStorage.setItem('ia_cargo_ativo_v1', JSON.stringify({ nome: CONCURSO.nome || '', orgao: CONCURSO.orgao || '', cargo: CONCURSO.cargo || '', materias: CONCURSO.materias || [], materiasDisc: concursoMateriasDiscursiva(c, CONCURSO.cargo), padrao: !!CONCURSO.padrao })); }catch(_){}
+  try{ localStorage.setItem('ia_cargo_ativo_v1', JSON.stringify({ nome: CONCURSO.nome || '', orgao: CONCURSO.orgao || '', cargo: CONCURSO.cargo || '', materias: CONCURSO.materias || [], materiasDisc: concursoMateriasDiscursiva(c, CONCURSO.cargo), semDiscursiva: concursoSemDiscursiva(c), padrao: !!CONCURSO.padrao })); }catch(_){}
   try{ if(typeof marcarDuplicatas === 'function' && typeof ALL_QUESTIONS !== 'undefined' && ALL_QUESTIONS.length) marcarDuplicatas(); }catch(_){}
 }
 /* salva (ou atualiza) um concurso da lista e o torna o ativo; null volta ao TCDF */
@@ -78,7 +89,7 @@ function concursoSalvar(c){
   concursoGravarDB();      // a escolha (obrigatória) só vale quando o usuário confirma em "Estudar este"
 }
 function concursoEscolher(id, cargo){ CONC_DB.ativo = id; CONC_DB.cargo = cargo || ''; CONC_DB.escolhido = true; concursoGravarDB(); }
-function concursoExcluir(id){ CONC_DB.lista = CONC_DB.lista.filter(x => x.id !== id); if(CONC_DB.ativo === id){ CONC_DB.ativo = 'padrao'; CONC_DB.cargo = ''; } concursoGravarDB(); }
+function concursoExcluir(id){ CONC_DB.lista = CONC_DB.lista.filter(x => x.id !== id); if(concursoEhEmbutido(id)){ CONC_DB.ocultos = (CONC_DB.ocultos || []).filter(x => x !== id).concat(id); } if(CONC_DB.ativo === id){ CONC_DB.ativo = 'padrao'; CONC_DB.cargo = ''; } concursoGravarDB(); }
 function concursoDataObj(iso){
   const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || ''); return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null;
 }
@@ -587,7 +598,7 @@ function concursoTelaHtml(){
       <small class="cx-meta">${nm} matéria${nm === 1 ? '' : 's'} específica${nm === 1 ? '' : 's'}${qEsp ? ' · ' + qEsp + ' questões' : ''}</small></label>`;
   }).join('');
   const chips = todos.map(x => `<button type="button" class="cx-chip ${x.id === CONC_SEL ? 'sel' : ''}" data-ct-conc="${esc(x.id)}" title="${esc(x.nome)}"><b>${esc(sigla(x))}</b><small>${esc(dataCurta(x))}${x.banca ? ' · ' + esc(x.banca) : ''}</small></button>`).join('');
-  const podeExcluir = !ehPadrao && (!concursoEhEmbutido(c.id) || CONC_DB.lista.some(x => x.id === c.id));
+  const podeExcluir = !ehPadrao;
   const usuario = (typeof USUARIO_ATUAL !== 'undefined' && USUARIO_ATUAL) ? USUARIO_ATUAL : null;
   const cargoSel = ehPadrao ? '' : String(CONC_SEL_CARGO || '').split(' — ').pop();
   const gSel = cargos.find(x => x.nome === CONC_SEL_CARGO) || null;
@@ -615,7 +626,7 @@ function concursoTelaHtml(){
       ${!ehPadrao && !cargos.length ? '<p>Este concurso não tem cargos cadastrados. Use "＋ Edital" para completar.</p>' : ''}
     </section>
     <div class="cx-barra-acao"><div class="cx-sel"><small>${CONC_TELA_ABERTA ? 'Trocando para' : 'Selecionado'}</small><b>${esc(sigla(c))}${cargoSel ? ' · ' + esc(cargoSel) : ''}</b></div>
-      <div class="cx-bt">${CONC_TELA_ABERTA ? '<button type="button" class="side-action-btn compact" data-ct-voltar="1">← Voltar</button>' : ''}${podeExcluir ? '<button type="button" class="side-action-btn compact" data-ct-excluir="1" title="Remove este concurso carregado da lista">🗑</button>' : ''}
+      <div class="cx-bt">${CONC_TELA_ABERTA ? '<button type="button" class="side-action-btn compact" data-ct-voltar="1">← Voltar</button>' : ''}${podeExcluir ? '<button type="button" class="side-action-btn compact" data-ct-excluir="1" title="Remover este concurso da lista">🗑 Excluir concurso</button>' : ''}
       <button type="button" class="btn btn-primary" data-ct-entrar="1">▶ Entrar na plataforma</button></div></div>
   </div></div>`;
 }
