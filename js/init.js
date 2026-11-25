@@ -39,6 +39,7 @@ try{
             const usados = performance.getEntriesByType('resource').map(r=>r.name);
             const lazy = [];
             try{ Object.values(LEI_FONTES).forEach(f=>{ if(f.arquivo) lazy.push(f.arquivo+q); }); }catch(_){}
+            try{ Object.keys(TEORIA_BASE_INDICE).forEach(sl=>{ lazy.push('teoria/'+sl+'/base.json'+q); (TEORIA_BASE_INDICE[sl].perfis||[]).forEach(c=>lazy.push('teoria/'+sl+'/perfil-'+c+'.json'+q)); }); lazy.push('teoria/redes-de-computadores/fig-osi-tcpip.svg'+q); }catch(_){}
             lazy.push('manifest.webmanifest','img/icon-192.png','img/icon-512.png');
             ['doutrina-ps','doutrina-redes','doutrina-pdpm','doutrina-df','doutrina-dadm','doutrina-cst','doutrina-adm','teoria-dt','armadilhas-dados','resumos-dados'].forEach(n=>lazy.push('js/'+n+'.js'+q));
             try{ (typeof TREINO_LIBERADAS!=='undefined' ? TREINO_LIBERADAS : []).forEach(sl=>lazy.push('js/treino-'+sl+'.js'+q)); }catch(_){}

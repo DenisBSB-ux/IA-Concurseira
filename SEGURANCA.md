@@ -36,6 +36,7 @@ sincronização dela.
 | Coleção | Leitura | Escrita |
 |---|---|---|
 | `publico/*` (matérias) | qualquer pessoa | só o administrador (UID nas regras) |
+| `teoria/*` (teoria-base e perfis por edital) | qualquer pessoa | só o administrador (UID nas regras) |
 | `progresso/*` | dono do documento (ou qualquer conta logada, enquanto o documento antigo ainda não tem dono) | só o dono; documento sem dono é assumido pela primeira conta que gravar |
 
 Para ter mais de um administrador, coloque os UIDs na lista:
