@@ -7,7 +7,7 @@ os gabaritos que o relatório marcar como duvidosos.
 
 Uso (de qualquer pasta):
   python3 rodar_lote.py <pasta> --materia "Redes de Computadores (RFCs e padrões IEEE)" [--modelo sonnet] [--tam 25]
-                        [--ini 0] [--fim N] [--esforco medium] [--retry 1] [--dry-run]
+                        [--ini 0] [--fim N] [--esforco low] [--retry 1] [--dry-run]
 <pasta> contém original.md (padrão da plataforma). Grava <pasta>/lotes/bNN.py, <pasta>/resp/rNN.py, <pasta>/resp/eNN.py
 (mesmos formatos do PROMPT_LOTE.md) e <pasta>/uso.json (tokens e custo de referência por lote).
 Retoma de onde parou: lote com bNN.py e rNN.py já existentes é pulado (apague os dois para refazer).
@@ -129,7 +129,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
     ap.add_argument('pasta'); ap.add_argument('--materia', required=True); ap.add_argument('--modelo', default='sonnet')
     ap.add_argument('--tam', type=int, default=25); ap.add_argument('--ini', type=int, default=0); ap.add_argument('--fim', type=int)
-    ap.add_argument('--esforco', default='medium'); ap.add_argument('--retry', type=int, default=1); ap.add_argument('--dry-run', action='store_true')
+    ap.add_argument('--esforco', default='low'); ap.add_argument('--retry', type=int, default=1); ap.add_argument('--dry-run', action='store_true')
     a = ap.parse_args()
     orig = os.path.join(a.pasta, 'original.md')
     _, _, Q = M.ler(orig)
