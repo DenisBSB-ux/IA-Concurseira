@@ -60,35 +60,43 @@ async function instalarApp(){
   const ev = window.__PROMPT_INSTALAR; if(!ev) return;
   ev.prompt(); try{ await ev.userChoice; }catch(_){} window.__PROMPT_INSTALAR = null; try{ render(); }catch(_){}
 }
-// aviso "Nova versão disponível": compara a versão do index.html no servidor com a que está em uso (a cada 5 min e ao voltar para o app)
+// aviso "Nova versão disponível": compara a versão do index.html no servidor com a que está em uso (a cada 5 min e ao voltar para o app).
+// O servidor do GitHub Pages guarda cada página por até 10 min depois de uma publicação (e ignora o "?..." do endereço): se, logo depois do
+// clique em "Atualizar agora", a página abrir ainda na versão antiga, em vez de mostrar o mesmo aviso (parece um loop) o app explica e deixa tentar de novo.
 let _avisoVersaoMostrado = false;
+function _tentativaDeAtualizar(){ try{ return JSON.parse(sessionStorage.getItem('ia_atualizando') || 'null'); }catch(_){ return null; } }
+function _atualizarAgora(alvo){
+  try{ salvarTudoAgoraAoSair(); }catch(_){}
+  try{ sessionStorage.setItem('ia_atualizando', JSON.stringify({ alvo: alvo, ts: Date.now() })); }catch(_){}
+  // location.reload() pode receber do CDN uma cópia antiga: tira o service worker e os caches do app e abre a página com um parâmetro novo
+  const limpar = [new Promise(ok => setTimeout(ok, 400))];      // dá tempo de o salvamento terminar
+  try{ if('caches' in window) limpar.push(caches.keys().then(ks => Promise.all(ks.map(k => caches.delete(k))))); }catch(_){}
+  try{ if('serviceWorker' in navigator) limpar.push(navigator.serviceWorker.getRegistrations().then(rs => Promise.all(rs.map(r => r.unregister())))); }catch(_){}
+  Promise.race([Promise.all(limpar).catch(()=>{}), new Promise(ok => setTimeout(ok, 2500))]).then(()=>{ location.href = location.pathname + '?_v=' + Date.now(); });
+}
 async function verificarNovaVersao(){
   if(_avisoVersaoMostrado || (typeof navigator!=='undefined' && navigator.onLine===false)) return;
   try{
     const r = await fetch('index.html?_=' + Date.now(), { cache:'no-store' }); if(!r.ok) return;
     const m = (await r.text()).match(/versao:\s*'(v\d+)'/); if(!m) return;
-    const atual = (window.__TCDF_BUILD__||{}).versao;
+    const atual = (window.__TCDF_BUILD__||{}).versao, tent = _tentativaDeAtualizar();
+    if(tent && atual === tent.alvo){ try{ sessionStorage.removeItem('ia_atualizando'); }catch(_){} }      // deu certo
     if(m[1] && atual && m[1] !== atual){
       _avisoVersaoMostrado = true;
+      const aindaChegando = tent && tent.alvo === m[1] && (Date.now() - tent.ts) < 12*60000;
       const d = document.createElement('div'); d.id = 'aviso-nova-versao'; d.setAttribute('role','status');
-      d.innerHTML = '🆕 Nova versão disponível (' + m[1] + '). <button type="button" id="btn-atualizar-app">Atualizar agora</button> <button type="button" id="btn-adiar-app" aria-label="Fechar aviso">✕</button>';
+      d.innerHTML = aindaChegando
+        ? '⏳ A versão ' + m[1] + ' ainda está chegando ao servidor (pode levar até 10 minutos depois de uma publicação). Você pode continuar estudando e tentar de novo daqui a pouco. <button type="button" id="btn-atualizar-app">Tentar de novo</button> <button type="button" id="btn-adiar-app" aria-label="Fechar aviso">✕</button>'
+        : '🆕 Nova versão disponível (' + m[1] + '). <button type="button" id="btn-atualizar-app">Atualizar agora</button> <button type="button" id="btn-adiar-app" aria-label="Fechar aviso">✕</button>';
       document.body.appendChild(d);
-      d.querySelector('#btn-atualizar-app').addEventListener('click', ()=>{
-        try{ salvarTudoAgoraAoSair(); }catch(_){}
-        // location.reload() pode receber do CDN do GitHub Pages uma cópia antiga do index.html por alguns minutos (a checagem acima usa uma URL
-        // nova a cada vez e por isso já enxerga a versão nova): abrir com um parâmetro novo força a cópia atual e o aviso não volta
-        const limpar = [new Promise(ok => setTimeout(ok, 400))];      // dá tempo de o salvamento terminar
-          try{ if('caches' in window) limpar.push(caches.keys().then(ks => Promise.all(ks.map(k => caches.delete(k))))); }catch(_){}
-          try{ if('serviceWorker' in navigator) limpar.push(navigator.serviceWorker.getRegistrations().then(rs => Promise.all(rs.map(r => r.unregister())))); }catch(_){}      // tira também o service worker antigo: ele é quem pode estar segurando a versão velha
-          Promise.race([Promise.all(limpar).catch(()=>{}), new Promise(ok => setTimeout(ok, 2500))]).then(()=>{ location.href = location.pathname + '?_v=' + Date.now(); });
-      });
-      d.querySelector('#btn-adiar-app').addEventListener('click', ()=>{ d.remove(); setTimeout(()=>{ _avisoVersaoMostrado = false; }, 30*60000); });
+      d.querySelector('#btn-atualizar-app').addEventListener('click', ()=>{ _atualizarAgora(m[1]); });
+      d.querySelector('#btn-adiar-app').addEventListener('click', ()=>{ d.remove(); setTimeout(()=>{ _avisoVersaoMostrado = false; }, aindaChegando ? 3*60000 : 30*60000); });
     }
   }catch(_){}
 }
 setInterval(verificarNovaVersao, 5*60000);
 document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='visible') verificarNovaVersao(); });
-setTimeout(verificarNovaVersao, 20000);
+setTimeout(verificarNovaVersao, _tentativaDeAtualizar() ? 3000 : 20000);      // logo depois de um clique em "Atualizar agora", confere em 3 s
 (async function init(){
   root.innerHTML = `<div style="padding:60px;text-align:center;color:#a9b6cc;font-family:var(--font-mono);font-size:13px;">Carregando processo…</div>`;
   try{ if(typeof precisaLogin==='function' && precisaLogin()) render(); }catch(_){}      // tela de login já, sem esperar a carga dos dados
