@@ -162,16 +162,21 @@ function cargoExibicao(bc){      // linha "Cargo:" da questão: o cargo por exte
   const bruto = cargoCurto(bc) || '', norm = x => x.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   if(!bruto) return '';
   const orgs = new Set(((String(bc).match(/\(([^)]*)\)/g)) || []).map(x => x.slice(1, -1).trim().toLowerCase()));
+  const seg = String(bc).split('/'); if(seg.length >= 3){ let o = seg[1].trim(); orgs.add(norm(o).replace(/\s+/g, ' ')); while(/\([^()]*\)/.test(o)) o = o.replace(/\([^()]*\)/g, ' '); orgs.add(norm(o.replace(/\s+/g, ' ').trim())); }      // formato TEC: o 2º trecho é o órgão ("CM Boa Vista (RR)")
   const partes = bruto.split(/\s+—\s+/).map(t => t.trim()).filter(Boolean), saida = [];
   partes.forEach((t, i) => {
-    const sem = t.replace(/\(.*?\)/g, ' ').replace(/\s+/g, ' ').trim(), n = norm(sem);
+    let sem = t; while(/\([^()]*\)/.test(sem)) sem = sem.replace(/\([^()]*\)/g, ' ');      // tira também parênteses aninhados: "Proc (CM Boa Vista (RR))"
+    sem = sem.replace(/\s+/g, ' ').trim(); const n = norm(sem);
     if(!sem || /^(19|20)\d{2}$/.test(sem) || /\bsimulado\b/.test(n) || /^(elaboracao propria|inedita)/.test(n)) return;          // "1º Simulado TCDF 2026"
     if(/^[A-Z0-9][A-Z0-9 \-.]{1,15}$/.test(sem) && !CARGO_SIGLAS[sem.toLowerCase()]) return;                                      // órgão: "TCDF", "PC-DF", "TCE RN"
     if(orgs.has(n) || (i > 0 && orgs.has(norm(partes[i-1]).replace(/\s+/g, ' ')))) { if(!CARGO_PALAVRAS.test(n)) return; }
     saida.push(CARGO_SIGLAS[sem.toLowerCase()] || t.replace(/\s*\((?=[^)]*\))[A-Z0-9][A-Z0-9 \-.\/]*\)\s*$/, '').replace(/[\s,;\-—]*(19|20)\d{2}\s*$/, '').trim());
   });
   const r = saida.join(' — ');
-  return CARGO_PALAVRAS.test(norm(r)) ? r : '';      // sem cargo de verdade ("TCDF", "Inédita", só a área): a linha não aparece
+  if(CARGO_PALAVRAS.test(norm(r))) return r;
+  // formato TEC "Banca - SIGLA (ÓRGÃO)/ÓRGÃO/área/ano" com sigla ainda não traduzida: mostra a sigla como o TEC a escreveu, em vez de deixar a linha vazia
+  const tec = /^.+?\s[-–—]\s+([A-Za-zÀ-ú][A-Za-zÀ-ú0-9 .\-]{0,18}?)\s*\((.{1,40}?)\)\s*\//.exec(String(bc));
+  return tec ? tec[1].trim() + ' (' + tec[2].trim() + ')' : '';      // sem cargo de verdade ("TCDF", "Inédita", só a área): a linha não aparece
 }
 function cargoCurto(bc){
   return extrairBancaECargo(bc).cargo;
@@ -373,7 +378,7 @@ function bancaGrupo(q){
 }
 
 const CARGO_PALAVRAS = /\b(analista|auditor|tecnic[oa]|procurador|conselheir[oa]|assistente|advogad[oa]|administrador|contador|auxiliar|agente|especialista|engenheir[oa]|medic[oa]|professor|oficial|delegad[oa]|escriv[aã]o|perit[oa]|tecnologista|pesquisador|gestor|economista|arquitet[oa]|estatistic[oa]|bibliotecari[oa]|arquivista|secretari[oa]|inspetor|fiscal|promotor|juiz|defensor|consultor|coordenador|desenvolvedor|programador|psicolog[oa]|assessor)\b/;
-const CARGO_SIGLAS = { 'proc':'Procurador', 'proc mun':'Procurador Municipal', 'proc jur':'Procurador Jurídico', 'adv':'Advogado', 'cont':'Contador', 'del pol':'Delegado de Polícia', 'ass amb':'Assistente Ambiental', 'ag adm':'Agente Administrativo', 'aud':'Auditor', 'med':'Médico', 'ana jur':'Analista Jurídico', 'tec adm':'Técnico Administrativo', 'ace':'Auditor de Controle Externo', 'audce':'Auditor de Controle Externo', 'aace':'Analista Administrativo de Controle Externo', 'aci':'Auditor de Controle Interno', 'aufc':'Auditor Federal de Controle Externo', 'tefc':'Técnico Federal de Controle Externo', 'ana adm':'Analista Administrativo', 'ana':'Analista', 'esp gt':'Especialista', 'tec min':'Técnico' };
+const CARGO_SIGLAS = { 'proc':'Procurador', 'proc mun':'Procurador Municipal', 'proc jur':'Procurador Jurídico', 'adv':'Advogado', 'cont':'Contador', 'del pol':'Delegado de Polícia', 'ass amb':'Assistente Ambiental', 'ag adm':'Agente Administrativo', 'aud':'Auditor', 'med':'Médico', 'ana jur':'Analista Jurídico', 'tec adm':'Técnico Administrativo', 'ace':'Auditor de Controle Externo', 'audce':'Auditor de Controle Externo', 'aace':'Analista Administrativo de Controle Externo', 'aci':'Auditor de Controle Interno', 'aufc':'Auditor Federal de Controle Externo', 'tefc':'Técnico Federal de Controle Externo', 'ana adm':'Analista Administrativo', 'ana':'Analista', 'esp gt':'Especialista', 'tec min':'Técnico' , 'prof':'Professor', 'peb':'Professor de Educação Básica', 'ana reg':'Analista Regulador', 'ana tran':'Analista de Trânsito', 'ana prev':'Analista Previdenciário', 'ana leg':'Analista Legislativo', 'al':'Analista Legislativo', 'tl':'Técnico Legislativo', 'analista':'Analista', 'diplomata':'Diplomata', 'ag pol jud':'Agente de Polícia Judiciária', 'afre':'Auditor Fiscal da Receita Estadual', 'afrm':'Auditor Fiscal da Receita Municipal', 'ana amb':'Analista Ambiental', 'aj':'Analista Judiciário', 'alun of':'Aluno Oficial', 'per oc':'Perito Oficial Criminal', 'cons leg':'Consultor Legislativo', 'cir dent':'Cirurgião-Dentista', 'esp reg':'Especialista em Regulação', 'of inv pol':'Oficial Investigador de Polícia', 'auce':'Auditor de Controle Externo', 'esp sau':'Especialista em Saúde', 'tns':'Técnico de Nível Superior', 'assi':'Assistente', 'ana tec i':'Analista Técnico I', 'tec':'Técnico', 'ana ti':'Analista de TI', 'ati':'Analista de Tecnologia da Informação', 'ass':'Assistente', 'ass ti':'Assistente de TI', 'ana sis':'Analista de Sistemas', 'adm red':'Administrador de Redes', 'tec red':'Técnico de Redes'};
 const CARGO_BASES = [[/\banalista/,'Analista'],[/\bauditor/,'Auditor'],[/\btecnic[oa]/,'Técnico'],[/\bprocurador/,'Procurador'],[/\bconselheir[oa]/,'Conselheiro'],[/\bassistente/,'Assistente'],[/\badvogad[oa]/,'Advogado'],[/\badministrador/,'Administrador'],[/\bcontador/,'Contador'],[/\bauxiliar/,'Auxiliar'],[/\bagente/,'Agente'],[/\bespecialista/,'Especialista'],[/\bengenheir[oa]/,'Engenheiro'],[/\bmedic[oa]/,'Médico'],[/\bprofessor/,'Professor'],[/\boficial/,'Oficial'],[/\bdelegad[oa]/,'Delegado'],[/\bescriv[aã]o/,'Escrivão'],[/\bperit[oa]/,'Perito'],[/\btecnologista/,'Tecnologista'],[/\bpesquisador/,'Pesquisador'],[/\bgestor/,'Gestor'],[/\beconomista/,'Economista'],[/\barquitet[oa]/,'Arquiteto'],[/\bestatistic[oa]/,'Estatístico'],[/\bbibliotecari[oa]/,'Bibliotecário'],[/\barquivista/,'Arquivista'],[/\bsecretari[oa]/,'Secretário'],[/\binspetor/,'Inspetor'],[/\bfiscal/,'Fiscal'],[/\bpromotor/,'Promotor'],[/\bjuiz/,'Juiz'],[/\bdefensor/,'Defensor'],[/\bconsultor/,'Consultor'],[/\bcoordenador/,'Coordenador'],[/\bdesenvolvedor/,'Desenvolvedor'],[/\bprogramador/,'Programador'],[/\bpsicolog[oa]/,'Psicólogo'],[/\bassessor/,'Assessor']];
 function cargoBase(c){      // "Analista de Controle Externo" → "Analista"; só os policiais ficam completos
   const n = c.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -1233,7 +1238,7 @@ function renderMainPanel(tabAtual){
     let semDisc = false; try{ const a = JSON.parse(localStorage.getItem('ia_cargo_ativo_v1') || 'null'); semDisc = !!(a && a.semDiscursiva); }catch(_){}
     if(semDisc) return '<div class="notice" style="margin-top:16px"><b>Este concurso não tem prova discursiva.</b><br>O edital cadastrado prevê só prova objetiva, títulos e entrevista. Se houver retificação, atualize o edital em "＋ Edital".</div>';
   }
-  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v685" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
+  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v686" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
   return '';
 }
 
