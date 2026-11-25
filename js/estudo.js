@@ -69,7 +69,7 @@ function renderQuiz(){
   // (origemErros) são um subconjunto de propósito e não são tocadas.
   if(!quiz.origemErros && !quiz.limitado && quiz.materia){
     // universo = o conjunto filtrado com que o simulado foi criado (assunto, nível, banca…); simulados antigos, sem ele, só perdem órfãs
-    const poolValido = q2=>q2.materia===quiz.materia && !q2.duplicataOculta && (q2.t==='CE'||q2.t==='MC');
+    const poolValido = q2=>q2.materia===quiz.materia && !q2.duplicataOculta && (q2.t==='CE'||q2.t==='MC') && (typeof quizPassaFiltro !== 'function' || quizPassaFiltro(quiz, q2));      // com filtro de Banca/Ano ligado, a reconciliação não devolve à fila o que o filtro tirou
     const universoSet = Array.isArray(quiz.universo) ? new Set(quiz.universo) : null;
     const naFila = new Set(quiz.queue);
     const poolAtual = ALL_QUESTIONS.filter(q2=> poolValido(q2) && (universoSet ? universoSet.has(q2.uid) : naFila.has(q2.uid)));

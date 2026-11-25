@@ -458,6 +458,12 @@ function quizAplicarFiltros(quiz){
   }
   quiz.idx = Math.max(0, i);
 }
+/* a questão passa pelo filtro de Banca/Ano da fila em andamento? (usado também pela reconciliação da fila em renderQuiz) */
+function quizPassaFiltro(quiz, q){
+  const fx = quiz && quiz.fx; if(!fx) return true;
+  for(const id of ['banca', 'ano']){ const sel = fx[id]; if(sel && sel.length && !sel.includes(FX[id].get(q))) return false; }
+  return true;
+}
 function fxAtualizado(){
   const q = STATE.quiz;
   if(q){ q.fx = { banca: [...FX.banca.sel], ano: [...FX.ano.sel] }; quizAplicarFiltros(q); try{ salvarQuizEmAndamento(); }catch(_){} }
@@ -1275,7 +1281,7 @@ function renderMainPanel(tabAtual){
     let semDisc = false; try{ const a = JSON.parse(localStorage.getItem('ia_cargo_ativo_v1') || 'null'); semDisc = !!(a && a.semDiscursiva); }catch(_){}
     if(semDisc) return '<div class="notice" style="margin-top:16px"><b>Este concurso não tem prova discursiva.</b><br>O edital cadastrado prevê só prova objetiva, títulos e entrevista. Se houver retificação, atualize o edital em "＋ Edital".</div>';
   }
-  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v694" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
+  if(tabAtual==='discursivas') return '<iframe src="discursiva/?v695" title="Discursivas: treino de prova discursiva" style="display:block;width:100%;height:82vh;min-height:520px;border:0;border-radius:12px;background:transparent"></iframe>';
   return '';
 }
 
