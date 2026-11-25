@@ -45,7 +45,7 @@ D.secs.forEach((s, i) => {
 });
 const base = { esquema: 1, slug: 'redes-de-computadores', materia: 'Redes de Computadores', versao: 1, atualizado: '2026-11-25',
   fontes: D.fontes || [], topicos };
-const perfil = { esquema: 1, slug: 'redes-de-computadores', concursoId: 'dpdf-2026-analista', concurso: 'DPDF 2026 — Analista de Apoio à Assistência Judiciária', versao: 1, atualizado: '2026-11-25', padrao: itens, cargos: {} };
+const perfil = { esquema: 1, slug: 'redes-de-computadores', concursoId: 'dpdf-2026-analista', concurso: 'DPDF 2026 — Analista de Apoio à Assistência Judiciária', versao: 2, referencia: true, atualizado: '2026-11-25', padrao: itens, cargos: {} };
 fs.writeFileSync('teoria/redes-de-computadores/base.json', JSON.stringify(base, null, 1));
 fs.writeFileSync('teoria/redes-de-computadores/perfil-dpdf-2026-analista.json', JSON.stringify(perfil, null, 1));
 console.log('tópicos', topicos.length, 'itens', itens.length);
