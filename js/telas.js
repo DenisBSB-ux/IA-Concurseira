@@ -1018,7 +1018,7 @@ function renderContaBlock(){
   }
   // o UID fica só no title (passar o mouse) — é o valor usado em firestore.rules
   return `${syncUsuarioHtml()}
-    <button class="side-action-btn compact" id="btn-sair-google">Logout (sair)</button>`;
+    <button class="side-action-btn compact" id="btn-sair-google" title="Sair da conta Google neste aparelho (o progresso continua salvo na nuvem)"><span class="sair-ic" aria-hidden="true">⎋</span> Sair da conta</button>`;
 }
 // data da prova e contagem regressiva: ver js/concurso.js (PROVA_TCDF, concurso ativo)
 // uma mensagem de motivação por dia (muda a cada dia da contagem regressiva)
@@ -1164,7 +1164,7 @@ function renderSyncSidebarBlock(){
       <button class="side-action-btn compact" id="btn-ver-alertas-sobrescrita" style="margin-top:4px;">Ver detalhes</button>
       <button class="side-action-btn compact" id="btn-dispensar-alertas-sobrescrita" style="margin-top:4px;">Dispensar</button>
     </div>` : ''}
-    <button class="side-action-btn compact" id="btn-sair-google">Logout (sair)</button>
+    <button class="side-action-btn compact" id="btn-sair-google" title="Sair da conta Google neste aparelho (o progresso continua salvo na nuvem)"><span class="sair-ic" aria-hidden="true">⎋</span> Sair da conta</button>
     ${provaContagemHtml()}
   </div></div>`;
 }
