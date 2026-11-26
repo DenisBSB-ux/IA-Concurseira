@@ -683,7 +683,7 @@ function foraDoCargoBotao(){
   const ver = concursoForaVisivel(), r = foraDoCargoResumo(), partes = [];
   if(r.materias) partes.push(r.materias + ' matéria' + (r.materias > 1 ? 's' : ''));
   if(r.questoes) partes.push(r.questoes + (r.questoes > 1 ? ' questões' : ' questão'));
-  return `<button type="button" class="conc-fora-bt${ver ? ' on' : ''}" data-conc-fora="1" role="switch" aria-checked="${ver}" title="${ver ? 'Clique para mostrar só as matérias do edital do seu cargo' : 'Clique para mostrar todas as matérias e questões, inclusive as fora do edital do seu cargo'}"><span class="cfb-chave" aria-hidden="true"><i></i></span><span class="cfb-txt">${ver ? 'Todas as matérias' : 'Matérias do edital'}</span>${partes.length ? ` <span class="cfb-n">${ver ? 'inclui ' : 'fora: '}${partes.join(' e ')}</span>` : ''}</button>`;
+  return `<button type="button" class="conc-fora-bt${ver ? ' on' : ''}" data-conc-fora="1" role="switch" aria-checked="${ver}" title="${ver ? 'Clique para mostrar só as matérias do edital do seu cargo' : 'Clique para mostrar todas as matérias e questões, inclusive as fora do edital do seu cargo' + (partes.length ? ' (' + partes.join(' e ') + ')' : '')}"><span class="cfb-chave" aria-hidden="true"><i></i></span><span class="cfb-txt">${ver ? 'Todas as matérias' : 'Matérias do edital'}</span></button>`;
 }
 function concursoForaVisivel(){ try{ return localStorage.getItem('ia_conc_fora_v2') === '1'; }catch(_){ return false; } }      // a escolha "mostrar fora do edital" é lembrada entre sessões
 function concursoMateriaNoCargo(nome, cmp){
