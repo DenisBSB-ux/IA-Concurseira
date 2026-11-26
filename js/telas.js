@@ -480,10 +480,16 @@ function fxOpcoesFila(id, quiz){
   if(id === 'ano') return lista.sort((a, b) => (a[0] === 'Sem ano') - (b[0] === 'Sem ano') || b[0].localeCompare(a[0]));
   return lista.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'pt-BR'));
 }
+/* chips "Ordem das questões" abaixo dos filtros: reordenam a fila em andamento (mesmo comportamento do setup do simulado) */
+function fxOrdemDaFila(quiz){
+  if(!quiz || quiz.finished || quiz.origemErros || quiz.reaberto) return '';
+  const atual = quiz.ordem || STATE.ordemSimulado;
+  return `<div class="qm-ordem" role="group" aria-label="Ordem das questões"><span class="qm-ordem-t">Ordem das questões</span>${ORDENS_SIMULADO.map(([k,rot,dica]) => `<span class="chip ${atual===k?'selected':''}" data-ordem-simulado="${k}" title="${esc(dica)}">${rot}</span>`).join('')}</div>`;
+}
 function fxBarraDaFila(quiz){
   Object.keys(FX).forEach(id => { FX[id].sel = new Set((quiz.fx && quiz.fx[id]) || []); });      // o estado do filtro é da fila
   const base = (quiz.filaBase || quiz.queue).length, ativo = !!quiz.fx && FX_IDS_FILA.some(id => (quiz.fx[id] || []).length > 0);
-  return `<div class="fx-barra qm-filtros" role="group" aria-label="Filtros da fila de questões"><span class="qm-filtros-t">Filtrar esta fila:</span>${FX_IDS_FILA.map(id => fxMenuHtml(id, fxOpcoesFila(id, quiz))).join('')}${ativo ? `<span class="qm-filtros-n">${quiz.fxVazio ? '<b>Nenhuma questão combina com esses filtros</b>: mostrando a fila completa' : quiz.queue.length + ' de ' + base + ' questões'}</span><button type="button" class="prova-det-btn" data-fx-limpar-todos="1">Limpar filtros</button>` : ''}</div>`;
+  return `<div class="fx-barra qm-filtros" role="group" aria-label="Filtros da fila de questões">${FX_IDS_FILA.map(id => fxMenuHtml(id, fxOpcoesFila(id, quiz))).join('')}${ativo ? `<span class="qm-filtros-n">${quiz.fxVazio ? '<b>Nenhuma questão combina com esses filtros</b>: mostrando a fila completa' : quiz.queue.length + ' de ' + base + ' questões'}</span><button type="button" class="prova-det-btn" data-fx-limpar-todos="1">Limpar filtros</button>` : ''}</div>${fxOrdemDaFila(quiz)}`;
 }
 function fxPosRender(){
   if(!FX_ABERTO) return; const f = FX[FX_ABERTO]; if(!f || !f.foco) return;
