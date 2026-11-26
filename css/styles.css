@@ -1634,12 +1634,11 @@ body.theme-light .sync-quem small{ color:#4b5563; }
 .seal-logo{ width:44px; height:44px; border-radius:9px; flex-shrink:0; object-fit:cover; box-shadow:0 1px 6px rgba(0,0,0,.25); }
 body::before{
   content:''; position:fixed; inset:0; z-index:-1; pointer-events:none;
-  background:url('../img/fundo-tcdf.jpg') center 30% / cover no-repeat;
-  opacity:.075; filter:grayscale(.35);
-  -webkit-mask-image:linear-gradient(to bottom, #000 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.15) 100%);
-          mask-image:linear-gradient(to bottom, #000 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.15) 100%);
+  background:url('../img/painel-bancas.svg') center top / 900px 600px repeat;      /* painel com os logos das bancas (img/bancas/) no lugar da foto do TCDF */
+  opacity:.07; filter:grayscale(.6);
 }
-body:not(.theme-light)::before{ opacity:.12; filter:grayscale(1) brightness(.85); }
+body:not(.theme-light)::before{ opacity:.09; filter:grayscale(1) invert(1) brightness(1.1); }
+@media (max-width:720px){ body::before{ background-size:600px 400px; } }
 body::after{
   content:''; position:fixed; right:28px; bottom:22px; width:200px; height:200px; z-index:-1; pointer-events:none;
   background:url('../img/logo-ia-concurseira.png') center / contain no-repeat; opacity:.04; border-radius:24px;
