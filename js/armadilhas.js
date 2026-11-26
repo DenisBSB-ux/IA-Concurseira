@@ -304,7 +304,7 @@ document.addEventListener('click', (ev)=>{
     if(!armAplicarEdicao(q)) return;
   }
   salvarEdicoesUsuario();
-  marcarProgressoSujo(q.materia); pushToCloud();
+  marcarProgressoSujo(chaveProgresso(q.materia)); pushToCloud();
   STATE.armEditUid = null;
   render();
 });
@@ -386,7 +386,7 @@ function armGuiaDados(escopo){
     if(q.duplicataOculta || q.t!=='CE') return;
     const a = armEfetiva(q); if(!a || !a.classificada || !a.errado) return;
     const cods = armCodigos(a); if(!cods.length) return;
-    const bk = PROGRESS[q.materia], p = bk && bk.perguntas && bk.perguntas[q.uid];
+    const bk = PROGRESS[chaveProgresso(q.materia)], p = bk && bk.perguntas && bk.perguntas[q.uid];
     const resp = !!(p && p.tentativas>0), caiu = resp && p.ultimoResultado===false, acertou = resp && p.ultimoResultado===true;
     // matéria × armadilha: sempre todas as matérias
     cods.forEach(c=>{ if(!resp) return; const m = D.mat[q.materia] = D.mat[q.materia]||{}; const cel = m[c] = m[c]||{n:0,q:0}; cel.n++; if(caiu) cel.q++; });

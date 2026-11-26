@@ -73,6 +73,9 @@ function concursoCarregar(){
     const cgo = (c.cargos || []).find(x => x.nome === cargo) || {};
     CONCURSO = Object.assign({}, CONCURSO_PADRAO, c, { padrao: false, cargo, materias: concursoMateriasDoCargo(c, cargo), qtd: Object.assign({}, c.qtdComuns || {}, cgo.qtd || {}), itensCargo: cgo.itens || [], topicos: Object.assign({}, c.topicosComuns || {}, cgo.topicos || {}) });
   }
+  try{ const pf = perfilProgressoId(); if(typeof window.__perfilProg === 'string' && window.__perfilProg !== pf && typeof STATE !== 'undefined' && STATE){
+    STATE.quiz = null; STATE.flashDeck = null; STATE.materia = null; STATE.tema = 'todos'; try{ if(typeof render === 'function') setTimeout(render, 0); }catch(_){} }
+    window.__perfilProg = pf; }catch(_){}
   concursoAplicar();
   /* cargo ativo para a aba Discursivas (site): inclui concursos embutidos, que não ficam em ia_concursos_v2 */
   try{ localStorage.setItem('ia_cargo_ativo_v1', JSON.stringify({ nome: CONCURSO.nome || '', orgao: CONCURSO.orgao || '', cargo: CONCURSO.cargo || '', materias: CONCURSO.materias || [], materiasDisc: concursoMateriasDiscursiva(c, CONCURSO.cargo), semDiscursiva: concursoSemDiscursiva(c), padrao: !!CONCURSO.padrao })); }catch(_){}
