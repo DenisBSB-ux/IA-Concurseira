@@ -788,7 +788,7 @@ function renderEstatisticasPorMateria(){
   <div class="card-block" style="margin-top:22px;">
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
       <h3 style="margin:0;color:inherit;font-size:22px;">📈 Estatísticas por matéria</h3>
-      ${adapt.adapta ? `<div class="conc-adapt"><span>Lista adaptada ao cargo: <b>${adapt.visiveis.length}</b> da base${adapt.faltantes.length ? ` · <b class="conc-falta-n">${adapt.faltantes.length}</b> do edital sem lista` : ''}</span>${(adapt.ocultas.length || foraDoCargoResumo().questoes) ? ' ' + foraDoCargoBotao() : ''}</div>` : ''}
+      ${adapt.adapta ? `${(adapt.ocultas.length || foraDoCargoResumo().questoes) ? '<div class="conc-adapt">' + foraDoCargoBotao() + '</div>' : ''}` : ''}
     </div>
     <div class="resumo-dia">
       <div class="resumo-esq">
