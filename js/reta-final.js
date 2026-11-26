@@ -308,7 +308,7 @@ function retaAvaliar(nota){
   const uid = s.fila[s.idx], q = BY_UID[uid]; if(!q) return;
   const b = getBucket(q.materia), agora = Date.now();
   b.srs[uid] = retaAgenda(b.srs[uid], nota, agora, retaDias());
-  marcarProgressoSujo(q.materia); saveProgress();
+  marcarProgressoSujo(chaveProgresso(q.materia)); saveProgress();
   s.n[nota-1]++;
   if(nota === 1 && s.fila.length - s.idx > 2) s.fila.splice(Math.min(s.fila.length, s.idx + 6), 0, uid);   // errou: volta já nesta sessão
   s.idx++; s.revelado = false;

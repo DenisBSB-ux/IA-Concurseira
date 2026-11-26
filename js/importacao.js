@@ -772,7 +772,7 @@ async function aplicarImportacao(materiaNome, content, results, ignoradas, semGa
   });
   if(progressoAnterior){
     // registra a "geração" do progresso: outro aparelho que ainda tenha uids antigos usa este mapa para migrá-los no merge
-    try{ const idGer = Date.now(); const mig = { de: bucket.geracao||0, id: idGer, mapa: mapaUid }; bucket.migracao = mig; bucket.migracoes = (Array.isArray(bucket.migracoes) ? bucket.migracoes : []).concat([mig]).slice(-8); bucket.geracao = idGer; marcarProgressoSujo(materiaNome); }catch(_){}
+    try{ const idGer = Date.now(); const mig = { de: bucket.geracao||0, id: idGer, mapa: mapaUid }; bucket.migracao = mig; bucket.migracoes = (Array.isArray(bucket.migracoes) ? bucket.migracoes : []).concat([mig]).slice(-8); bucket.geracao = idGer; marcarProgressoSujo(chaveProgresso(materiaNome)); }catch(_){}
     // 2) os uids são `${slug}-${número}` e o número muda entre arquivos: o simulado salvo (respostas por uid) passaria a apontar
     //    para outra questão. O progresso já acompanhou cada questão pelo enunciado; o simulado é descartado e recomeça dele.
     try{ limparQuizSalvo(materiaNome); if(STATE.quiz && STATE.quiz.materia===materiaNome) STATE.quiz = null; }catch(_){}
@@ -780,7 +780,7 @@ async function aplicarImportacao(materiaNome, content, results, ignoradas, semGa
     deduplicarMateriaNaMemoria(materiaNome);
     salvarEdicoesUsuario(); salvarGabaritosAlterados();
     added = ALL_QUESTIONS.filter(q => q.materia===materiaNome && q.origem!=='embutido').length;
-    marcarProgressoSujo(materiaNome);
+    marcarProgressoSujo(chaveProgresso(materiaNome));
     saveProgress();
   }
   TEXTOS_ORIGINAIS[materiaNome] = { texto: content, versaoProcessada: (window.__TCDF_BUILD__ && window.__TCDF_BUILD__.versao) || null };
@@ -1049,7 +1049,7 @@ async function removerDuplicatasDaMateria(materiaNome){
   return comTravaDeEscrita(async ()=>{
     const removidas = deduplicarMateriaNaMemoria(materiaNome);
     reindex();
-    marcarProgressoSujo(materiaNome);
+    marcarProgressoSujo(chaveProgresso(materiaNome));
     await saveCustomQuestions();
     saveProgress();
     marcarMateriaAtualizada(materiaNome);
@@ -1142,7 +1142,7 @@ async function mesclarMaterias(nomeOrigem, nomeDestino){
     // importações anteriores) — a mescla sempre termina sem duplicatas
     const duplicatasRemovidas = deduplicarMateriaNaMemoria(nomeDestino);
 
-    delete PROGRESS[nomeOrigem];
+    chavesProgressoDaMateria(nomeOrigem).forEach(k => delete PROGRESS[k]);
     delete TEXTOS_ORIGINAIS[nomeOrigem];
     salvarTextosOriginaisLocalmente();
     delete MATERIA_ULTIMA_ATUALIZACAO[nomeOrigem];
@@ -1154,7 +1154,7 @@ async function mesclarMaterias(nomeOrigem, nomeDestino){
     if(STATE.materia===nomeOrigem) STATE.materia = nomeDestino;
 
     reindex();
-    marcarProgressoSujo(nomeDestino);
+    marcarProgressoSujo(chaveProgresso(nomeDestino));
     marcarMateriaAtualizada(nomeDestino);
     await saveCustomQuestions();
     saveProgress();
@@ -1430,7 +1430,7 @@ async function removerMateria(materiaNome){
       if(bucket && bucket.flash) delete bucket.flash[uid];
     });
   });
-  delete PROGRESS[materiaNome];
+  chavesProgressoDaMateria(materiaNome).forEach(k => delete PROGRESS[k]);
 
   // salva e envia pra nuvem IMEDIATAMENTE (sem esperar o debounce), pra evitar que uma
   // sincronização automática logo em seguida "restaure" a matéria removida a partir

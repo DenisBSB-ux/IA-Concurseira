@@ -97,7 +97,7 @@ let salvarGabaritosAlteradosTimer = null;
 function gabAtivo(uid){ const g = GABARITOS_ALTERADOS[uid]; return g && !g.removido && !(g.confirmado && g.novo===g.original) ? g : null; }
 function salvarGabaritosAlterados(uid){
   // sincroniza com o Firebase (a cópia do navegador é só cache): marca a matéria da questão e envia
-  try{ const q = uid && BY_UID[uid]; if(q && typeof marcarProgressoSujo==='function'){ marcarProgressoSujo(q.materia); if(typeof pushToCloud==='function') pushToCloud(); } }catch(_){}
+  try{ const q = uid && BY_UID[uid]; if(q && typeof marcarProgressoSujo==='function'){ marcarProgressoSujo(chaveProgresso(q.materia)); if(typeof pushToCloud==='function') pushToCloud(); } }catch(_){}
   clearTimeout(salvarGabaritosAlteradosTimer);
   salvarGabaritosAlteradosTimer = setTimeout(async ()=>{
     try{ await storageSet(GABARITOS_ALTERADOS_KEY, JSON.stringify(GABARITOS_ALTERADOS)); }
@@ -345,9 +345,28 @@ function migrarChutesParaEstudo(materiaKey, b){
     if(!ex || !ex.n) b.estudo[uid] = { n:'teoria', t:(c && c.ts) || Date.now(), o:'chute' };
   });
   b.chutes = {};
-  try{ marcarProgressoSujo(materiaKey); }catch(_){}
+  try{ marcarProgressoSujo(chaveProgresso(materiaKey)); }catch(_){}
+}
+/* PROGRESSO POR CONCURSO + CARGO: o perfil padrão (TCDF) usa a chave da matéria como sempre; cada concurso/cargo do DODF
+   tem o seu próprio histórico, gravado numa chave "Matéria ⟦perfil⟧" (a nuvem trata como mais uma matéria, sem mudança). */
+const PROGRESSO_SEP = ' ⟦';
+function perfilProgressoId(){
+  try{ if(typeof CONCURSO === 'undefined' || !CONCURSO || CONCURSO.padrao || !CONCURSO.id) return ''; return CONCURSO.id + '|' + (CONCURSO.cargo || ''); }catch(_){ return ''; }
+}
+function chaveProgresso(materiaKey, perfil){
+  if(typeof materiaKey !== 'string' || materiaKey.includes(PROGRESSO_SEP)) return materiaKey;
+  const p = perfil === undefined ? perfilProgressoId() : perfil;
+  return p ? materiaKey + PROGRESSO_SEP + p + '⟧' : materiaKey;
+}
+/* todas as chaves de progresso de uma matéria (todos os perfis): para apagar a matéria de vez */
+function chavesProgressoDaMateria(materiaKey){ return Object.keys(PROGRESS || {}).filter(k => k === materiaKey || k.startsWith(materiaKey + PROGRESSO_SEP)); }
+/* só os buckets do perfil ativo (estatísticas e atividade por dia) */
+function bucketsDoPerfil(){
+  const p = perfilProgressoId(), fim = p ? '⟧' : '';
+  return Object.entries(PROGRESS || {}).filter(([k]) => p ? k.endsWith(PROGRESSO_SEP + p + fim) : !k.includes(PROGRESSO_SEP)).map(([, b]) => b);
 }
 function getBucket(materiaKey){
+  materiaKey = chaveProgresso(materiaKey);
   if(!PROGRESS[materiaKey]) PROGRESS[materiaKey] = { perguntas:{}, flash:{}, sessoes:[], simuladosSalvos:[], chutes:{} };
   normalizarBucketProgresso(PROGRESS[materiaKey]);
   if(!PROGRESS[materiaKey].simuladosSalvos) PROGRESS[materiaKey].simuladosSalvos = [];
@@ -378,7 +397,7 @@ function getBucket(materiaKey){
 // AUDITORIA DE INTEGRIDADE de todas as matérias: normaliza o progresso, concilia o simulado em andamento com o
 // progresso oficial e devolve um relatório por matéria. Roda no boot (depois de carregar os simulados salvos) e no diagnóstico.
 function auditarIntegridadeProgresso(corrigir){
-  const nomes = new Set(Object.keys(PROGRESS||{}));
+  const nomes = new Set(Object.keys(PROGRESS||{}).filter(k => !k.includes(PROGRESSO_SEP)));
   (typeof ALL_QUESTIONS!=='undefined' ? ALL_QUESTIONS : []).forEach(q=>nomes.add(q.materia));
   Object.values(STATE.quizzesEmAndamento||{}).forEach(q=>{ if(q && q.materia) nomes.add(q.materia); });
   const linhas = []; let restauradas = 0;
@@ -386,13 +405,13 @@ function auditarIntegridadeProgresso(corrigir){
     if(!m || m==='undefined') return;
     const temBase = ALL_QUESTIONS.some(q=>q.materia===m);
     const quiz = (STATE.quizzesEmAndamento||{})[m] || null;
-    const b = PROGRESS[m] ? getBucket(m) : null;
+    const b = PROGRESS[chaveProgresso(m)] ? getBucket(m) : null;
     const perg = b ? Object.entries(b.perguntas||{}) : [];
     const resp = quiz && quiz.respostas ? Object.entries(quiz.respostas) : [];
     const semProgresso = resp.filter(([u,r])=>{ if(!r || !BY_UID[u]) return false; const p = b && b.perguntas[u]; return !(p && p.tentativas>0 && (p.ultimoResultado===true||p.ultimoResultado===false)); }).length;
     let rest = 0;
     if(corrigir && quiz && temBase){ try{ rest = reconciliarProgressoComQuiz(quiz, m); }catch(_){} restauradas += rest; }
-    const b2 = PROGRESS[m] ? getBucket(m) : null;
+    const b2 = PROGRESS[chaveProgresso(m)] ? getBucket(m) : null;
     const perg2 = b2 ? Object.entries(b2.perguntas||{}) : [];
     linhas.push({ materia:m, naBase:temBase, questoes:ALL_QUESTIONS.filter(q=>q.materia===m).length,
       progresso:perg2.length, orfas:perg2.filter(([u])=>!BY_UID[u]).length,
@@ -425,7 +444,7 @@ function reconciliarProgressoComQuiz(quiz, materiaKey){
     bucket.perguntas[uid] = novo; n++;
   });
   _quizReconciliados.add(quiz);
-  if(n){ try{ if(typeof marcarProgressoSujo==='function') marcarProgressoSujo(materia); if(typeof saveProgress==='function') saveProgress(); }catch(_){} }
+  if(n){ try{ if(typeof marcarProgressoSujo==='function') marcarProgressoSujo(chaveProgresso(materia)); if(typeof saveProgress==='function') saveProgress(); }catch(_){} }
   return n;
 }
 

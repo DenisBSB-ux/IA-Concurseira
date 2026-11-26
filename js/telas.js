@@ -70,6 +70,13 @@ let STATE = {
   importPendente: null,
   dedupInfo: null,
 };
+/* simulados em andamento são do concurso/cargo em que foram feitos: em outro cargo não aparecem (nem contam como respondidos) */
+(function(){
+  let bruto = STATE.quizzesEmAndamento || {};
+  const trap = { get(t, k){ const v = t[k]; if(v && typeof v === 'object' && typeof k === 'string' && (v.perfil || '') !== perfilProgressoId()) return undefined; return v; } };
+  let proxy = new Proxy(bruto, trap);
+  Object.defineProperty(STATE, 'quizzesEmAndamento', { configurable: true, enumerable: true, get(){ return proxy; }, set(v){ bruto = v || {}; proxy = new Proxy(bruto, trap); } });
+})();
 
 function getSetup(materiaKey){
   if(!STATE.setupByMateria[materiaKey]){
@@ -803,7 +810,7 @@ function renderEstatisticasPorMateria(){
 // tentativas, reflete a atividade recente, não o total absoluto.
 function computeAtividadeDiariaGeral(){
   const porDia = {};
-  Object.values(PROGRESS).forEach(bucket=>{
+  bucketsDoPerfil().forEach(bucket=>{
     if(!bucket || !bucket.perguntas) return;
     Object.entries(bucket.perguntas).forEach(([uid,p])=>{
       if(!BY_UID[uid]) return; // órfã: questão não existe mais na base atual
@@ -1342,7 +1349,7 @@ function ajustarQuantidadeSimulado(n){
   quiz.limitado = fila.length < pool().length;
   getSetup(STATE.materia).qtd = quiz.limitado ? fila.length : 0;
   salvarQuizEmAndamento();
-  if(typeof marcarProgressoSujo==='function'){ try{ marcarProgressoSujo(quiz.materia); pushToCloud(); }catch(_){} }
+  if(typeof marcarProgressoSujo==='function'){ try{ marcarProgressoSujo(chaveProgresso(quiz.materia)); pushToCloud(); }catch(_){} }
   STATE.avisoQtdAndamento = { ts: Date.now(), msg: aviso || `Simulado ajustado para ${fila.length} questões — as respondidas foram mantidas.` };
   return aviso;
 }

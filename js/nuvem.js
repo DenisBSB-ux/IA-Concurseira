@@ -23,6 +23,7 @@ function salvarQuizEmAndamento(){
   const quiz = STATE.quiz;
   if(!quiz || quiz.finished) return;
   quiz.ultimoSalvamento = Date.now();
+  if(quiz.perfil === undefined) quiz.perfil = perfilProgressoId();      // o simulado pertence ao concurso/cargo em que começou
   const chave = chaveEmAndamento(quiz);
   storageSet(quizStorageKey(chave), JSON.stringify(quiz)).catch(()=>{});
   STATE.quizzesEmAndamento[chave] = quiz;
@@ -1670,7 +1671,7 @@ function exportarDiagnosticoMateria(){
   const quizzes = {}; Object.entries(STATE.quizzesEmAndamento||{}).forEach(([k,q])=>{ if(q) quizzes[k] = q; });
   if(STATE.quiz && STATE.quiz.materia) quizzes['__em_memoria__'+STATE.quiz.materia] = STATE.quiz;
   const resumoQuiz = Object.entries(quizzes).map(([k,q])=>{
-    const resp = Object.entries(q.respostas||{}); const perg2 = (PROGRESS[q.materia] ? PROGRESS[q.materia].perguntas : {}) || {};
+    const resp = Object.entries(q.respostas||{}); const perg2 = (PROGRESS[chaveProgresso(q.materia)] ? PROGRESS[chaveProgresso(q.materia)].perguntas : {}) || {};
     return { chave:k, materia:q.materia, fila:(q.queue||[]).length, filaNaBase:(q.queue||[]).filter(u=>BY_UID[u]).length, respostas:resp.length,
       respostasNaBase: resp.filter(([u])=>BY_UID[u]).length,
       respostasComProgresso: resp.filter(([u])=>{ const p=perg2[u]; return p && p.tentativas>0 && (p.ultimoResultado===true||p.ultimoResultado===false); }).length,
@@ -1769,7 +1770,7 @@ function registrarResposta(materiaKey, uid, acertou, segundos){
   p.historico.push(typeof segundos==='number' ? { ts: Date.now(), c: acertou, t: segundos } : { ts: Date.now(), c: acertou });
   if(p.historico.length > 20) p.historico = p.historico.slice(-20);
   bucket.perguntas[uid] = p;
-  marcarProgressoSujo(materiaKey);
+  marcarProgressoSujo(chaveProgresso(materiaKey));
   saveProgress();
 }
 
@@ -1794,7 +1795,7 @@ function undoRegistro(materiaKey, uid){
     p.ultimoResultado = null;
   }
   if(p.tentativas===0){ delete bucket.perguntas[uid]; } else { bucket.perguntas[uid] = p; }
-  marcarProgressoSujo(materiaKey);
+  marcarProgressoSujo(chaveProgresso(materiaKey));
   saveProgress();
 }
 
@@ -1811,7 +1812,7 @@ function definirEstudoMarca(materiaKey, uid, n){
   const b = getBucket(materiaKey);
   const atual = (b.estudo[uid] && b.estudo[uid].n) || '';
   b.estudo[uid] = { n: (atual === n ? '' : n), t: Date.now() };
-  marcarProgressoSujo(materiaKey);
+  marcarProgressoSujo(chaveProgresso(materiaKey));
   saveProgress();
 }
 // questões com a marca, da mais recente para a mais antiga (visíveis: sem duplicata oculta)
@@ -1826,7 +1827,7 @@ function chuteMarcado(materiaKey, uid){   // estatísticas de "chute" = questõe
 }
 function registrarFlash(materiaKey, uid, status){
   getBucket(materiaKey).flash[uid] = { status, ts: Date.now() };
-  marcarProgressoSujo(materiaKey);
+  marcarProgressoSujo(chaveProgresso(materiaKey));
   saveProgress();
 }
 
@@ -1836,14 +1837,15 @@ function registrarSessao(materiaKey, total, acertos, tema, queue, respostas){
   // depois a partir do histórico "Últimos simulados", não só dos salvos manualmente
   bucket.sessoes.push({ ts: Date.now(), total, acertos, tema: tema || 'todos', queue: queue||null, respostas: respostas||null });
   if(bucket.sessoes.length > 50) bucket.sessoes = bucket.sessoes.slice(-50);
-  marcarProgressoSujo(materiaKey);
+  marcarProgressoSujo(chaveProgresso(materiaKey));
   saveProgress();
 }
 
 function resetProgressoMateria(materiaKey){
   limparQuizSalvo(materiaKey);   // sem isso o simulado em andamento ressuscitaria o progresso (reconciliarProgressoComQuiz)
+  materiaKey = chaveProgresso(materiaKey);      // só zera o progresso do concurso/cargo ativo
   PROGRESS[materiaKey] = { perguntas:{}, flash:{}, sessoes:[], resetEm: Date.now() };   // resetEm: o merge não traz de volta o que é anterior
-  marcarProgressoSujo(materiaKey);
+  marcarProgressoSujo(chaveProgresso(materiaKey));
   saveProgress();
 }
 

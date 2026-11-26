@@ -84,7 +84,7 @@ function attachHandlers(){
     EDICOES_USUARIO[uid].rt = txt;          // vazio = volta ao texto da lista (a string vazia também vence a cópia de outro aparelho)
     EDICOES_USUARIO[uid].rtT = Date.now();
     salvarEdicoesUsuario();
-    const qq = BY_UID[uid]; if(qq){ marcarProgressoSujo(qq.materia); pushToCloud(); }
+    const qq = BY_UID[uid]; if(qq){ marcarProgressoSujo(chaveProgresso(qq.materia)); pushToCloud(); }
     edicaoAtual = null; STATE.armEditUid = null; render();
   });
   const chkBackupAuto = document.getElementById('chk-backup-arquivo-auto');
@@ -290,7 +290,7 @@ function attachHandlers(){
         if(Object.keys(EDICOES_USUARIO[uid]).length===0) delete EDICOES_USUARIO[uid];
         salvarEdicoesUsuario();
         const qRestaurada = BY_UID[uid];
-        if(qRestaurada){ marcarProgressoSujo(qRestaurada.materia); pushToCloud(); }
+        if(qRestaurada){ marcarProgressoSujo(chaveProgresso(qRestaurada.materia)); pushToCloud(); }
       }
       render();
     });
@@ -351,7 +351,7 @@ function attachHandlers(){
         salvarEdicoesUsuario();
         // salvar a edição marca a matéria como pendente e envia pra nuvem na hora
         const qEditada = BY_UID[uid];
-        if(qEditada){ marcarProgressoSujo(qEditada.materia); pushToCloud(); }
+        if(qEditada){ marcarProgressoSujo(chaveProgresso(qEditada.materia)); pushToCloud(); }
         edicaoAtual = null;
         render();
       }
@@ -513,7 +513,7 @@ function attachHandlers(){
       const bucket = getBucket(STATE.materia);
       bucket.simuladosSalvos = (bucket.simuladosSalvos||[]).filter(s=>s.ts!==ts);
       (bucket.lapides = bucket.lapides || {})['s:'+ts] = Date.now();
-      marcarProgressoSujo(STATE.materia);
+      marcarProgressoSujo(chaveProgresso(STATE.materia));
       saveProgress();
       render();
     });
