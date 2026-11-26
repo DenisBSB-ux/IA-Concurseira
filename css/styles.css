@@ -3119,9 +3119,9 @@ body.theme-light .ap-pop-cx{ background:#fff; color:#15212b; }
 .conc-fora-bt{ display:inline-flex; align-items:center; gap:9px; font:inherit; font-size:12.5px; font-weight:600; padding:6px 12px 6px 8px; border-radius:999px; border:1px solid var(--paper-line); background:transparent; color:var(--ink); cursor:pointer; transition:background .15s,border-color .15s; }
 .conc-fora-bt:hover{ border-color:var(--gold); background:rgba(79,143,214,.10); }
 .conc-fora-bt:focus-visible{ outline:2px solid var(--gold); outline-offset:2px; }
-.cfb-chave{ position:relative; width:30px; height:17px; border-radius:999px; background:#b9b3a3; flex:none; transition:background .15s; }
+.cfb-chave{ position:relative; width:30px; height:17px; border-radius:999px; background:#3a9d5c; flex:none; transition:background .15s; }
 .cfb-chave i{ position:absolute; top:2px; left:2px; width:13px; height:13px; border-radius:50%; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,.3); transition:left .15s; }
-.conc-fora-bt.on .cfb-chave{ background:#3a9d5c; }
+.conc-fora-bt.on .cfb-chave{ background:#c0392b; }
 .conc-fora-bt.on .cfb-chave i{ left:15px; }
 .cfb-n{ font-weight:500; font-size:11.5px; padding:1px 8px; border-radius:999px; background:rgba(128,128,128,.16); opacity:.9; }
 /* Logout */
