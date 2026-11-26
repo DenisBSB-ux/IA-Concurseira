@@ -480,10 +480,26 @@ function concursoCompararMateria(m){
   });
   return { diretas: dir, relacionadas: dir.length ? [] : rel, vizinhas: rel };      // vizinhas: relacionadas que só mantêm a lista visível
 }
+/* núcleo do nome de uma lista importada: tira "Banca - " e "- data" e unifica sinônimos (Português = Língua Portuguesa) */
+function concNucleo(nome){
+  let m = String(nome || ''); try{ if(typeof apostilaMateria === 'function') m = apostilaMateria(m); }catch(_){}
+  return concNorm(m).replace(/^lingua /, '');
+}
+/* listas importadas (fora do catálogo das 20) cujo núcleo bate com a matéria do edital: a lista é da base e vale para qualquer edital */
+function concImportadasDaMateria(m){
+  const alvo = concNucleo(m); if(!alvo) return [];
+  const vistos = new Set(), out = [];
+  try{ ALL_QUESTIONS.forEach(q => {
+    const nm = q.materia; if(!nm || vistos.has(nm) || q.duplicataOculta) return; vistos.add(nm);
+    if(concEntradaDaMateria(nm)) return;
+    const n = concNucleo(nm); if(n && (n === alvo || alvo.includes(n) || n.includes(alvo))) out.push({ slug: 'imp:' + concNorm(nm), mat: nm, nome: nm, n: 0, dir: [], rel: [] });
+  }); }catch(_){}
+  return out;
+}
 function concursoComparar(c){
   const mats = c.padrao ? [] : (c.materias || []);
   const qt = c.qtd || {}, qn = {}; Object.keys(qt).forEach(k => { qn[concNorm(k)] = qt[k]; });
-  const linhas = mats.map(m => ({ materia: m, peso: qn[concNorm(m)] || 0, ...concursoCompararMateria(m) }));
+  const linhas = mats.map(m => { const r = concursoCompararMateria(m); const imp = concImportadasDaMateria(m); if(imp.length) r.diretas = r.diretas.concat(imp); return { materia: m, peso: qn[concNorm(m)] || 0, ...r }; });
   const usados = new Set(); linhas.forEach(l => l.diretas.concat(l.relacionadas, l.vizinhas || []).forEach(e => usados.add(e.slug)));
   return { linhas, usados, cobertas: linhas.filter(l => l.diretas.length).length, parciais: linhas.filter(l => !l.diretas.length && l.relacionadas.length).length, semLista: linhas.filter(l => !l.diretas.length && !l.relacionadas.length) };
 }
@@ -672,7 +688,8 @@ function concursoMateriaNoCargo(nome, cmp){
   const e = concEntradaDaMateria(nome);
   if(e) return cmp.usados.has(e.slug);
   // lista importada por você que não é uma das 20 da base: fica se o nome bater com alguma matéria do edital
-  return cmp.linhas.some(l => { const ln = concNorm(l.materia); return ln.includes(nm) || nm.includes(ln); });
+  const nn = concNucleo(nome);
+  return cmp.linhas.some(l => { const ln = concNorm(l.materia), lc = concNucleo(l.materia); return ln.includes(nm) || nm.includes(ln) || (nn && lc && (nn === lc || lc.includes(nn) || nn.includes(lc))); });
 }
 /* para o cargo ativo: quais matérias da base ficam visíveis, quais saem e quais do edital ainda não têm lista */
 function concursoListaAdaptada(nomes){

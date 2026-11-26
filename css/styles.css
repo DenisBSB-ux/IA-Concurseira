@@ -3110,3 +3110,7 @@ body.theme-light .ap-pop-cx{ background:#fff; color:#15212b; }
 .fe-bt small{ font-weight:400; opacity:.85; margin-left:4px; }
 
 .qm-filtros{ display:flex; flex-wrap:wrap; align-items:center; gap:8px 10px; margin:0 0 10px; } .qm-filtros-t{ font-size:.8rem; opacity:.75; } .qm-filtros-n{ font-size:.8rem; opacity:.85; }
+
+.qm-ordem{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:6px 0 10px}
+.qm-ordem-t{font-size:11.5px;font-weight:700;color:var(--ink-soft);margin-right:2px}
+.qm-ordem .chip{font-size:12px;padding:3px 9px}
