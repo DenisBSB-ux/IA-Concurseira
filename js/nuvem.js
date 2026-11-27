@@ -122,6 +122,8 @@ try{
   if(typeof firebase !== 'undefined' && FIREBASE_CONFIG && FIREBASE_CONFIG.apiKey){
     firebase.initializeApp(FIREBASE_CONFIG);
     fbDb = firebase.firestore();
+    // redes/antivírus que bloqueiam WebSocket/QUIC deixavam o Firestore sem resposta ("tempo esgotado"): detecta e usa long polling
+    try{ fbDb.settings({ experimentalAutoDetectLongPolling: true, merge: true }); }catch(_){ try{ fbDb.settings({ experimentalForceLongPolling: true, merge: true }); }catch(__){} }
     FIREBASE_OK = true;
     if(firebase.auth){
       fbAuth = firebase.auth();
@@ -176,7 +178,7 @@ async function vincularContaGoogle(){
   const uid = USUARIO_ATUAL.uid;
   try{
     const ref = fbDb.collection('progresso').doc(`_conta_${uid}`);
-    const doc = await comLimiteDeTempo(ref.get(), 15000, 'tempo esgotado ao consultar a conta na nuvem');
+    const doc = await comLimiteDeTempo(ref.get(), 25000, 'tempo esgotado ao consultar a conta na nuvem');
     let codigo = doc.exists ? doc.data().codigo : null;
     const primeiraVez = !codigo;
     if(primeiraVez){
@@ -208,9 +210,13 @@ async function vincularContaGoogle(){
     }
     // a escolha pode ter mudado enquanto isto rodava (tela de escolha): confere de novo
     if(codigoDoPerfil(codigo)!==STATE.syncCode) await ativarPerfilDeEstudo();
+    window.__vincTent = 0;
   }catch(e){
     console.error('Falha ao vincular a conta Google à sincronização', e);
     setSyncStatusDOM('err', 'falha ao sincronizar (passe o mouse aqui)', motivoErroFirestore(e));
+    // falha de rede passageira: tenta de novo sozinho (até 3 vezes: 8 s, 20 s e 45 s depois)
+    window.__vincTent = (window.__vincTent || 0) + 1;
+    if(window.__vincTent <= 3 && USUARIO_ATUAL && USUARIO_ATUAL.uid === uid) setTimeout(()=>{ if(USUARIO_ATUAL && USUARIO_ATUAL.uid === uid) vincularContaGoogle(); }, [8000, 20000, 45000][window.__vincTent - 1]);
   }
   render();
 }
