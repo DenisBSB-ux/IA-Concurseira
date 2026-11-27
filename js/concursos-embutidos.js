@@ -7441,6 +7441,10 @@ const CONCURSOS_EMBUTIDOS = [
    [
     "Nota final",
     "NFPE = (NP1 + 3 × NP2 + 2 × NPD) ÷ 6"
+   ],
+   [
+    "Observação",
+    "Matemática Financeira e Estatística viraram a matéria 'Matemática' e Raciocínio Lógico ganhou menu próprio; o edital dá 10 itens ao conjunto, aqui divididos 5 e 5 (estimativa)."
    ]
   ],
   "materias": [],
@@ -7453,7 +7457,8 @@ const CONCURSOS_EMBUTIDOS = [
    "Direito Civil, Empresarial e Penal",
    "Economia e Finanças Públicas",
    "Tecnologia da Informação",
-   "Matemática Financeira, Estatística e Raciocínio Lógico"
+   "Matemática",
+   "Raciocínio Lógico"
   ],
   "qtdComuns": {
    "Língua Portuguesa": 10,
@@ -7464,7 +7469,8 @@ const CONCURSOS_EMBUTIDOS = [
    "Direito Civil, Empresarial e Penal": 10,
    "Economia e Finanças Públicas": 10,
    "Tecnologia da Informação": 10,
-   "Matemática Financeira, Estatística e Raciocínio Lógico": 10
+   "Matemática": 5,
+   "Raciocínio Lógico": 5
   },
   "topicosComuns": {
    "Língua Portuguesa": [
@@ -8340,70 +8346,70 @@ const CONCURSOS_EMBUTIDOS = [
      ]
     }
    ],
-   "Matemática Financeira, Estatística e Raciocínio Lógico": [
+   "Matemática": [
     {
      "n": 1,
-     "t": "Matemática Financeira — Regra de três simples e composta",
+     "t": "Regra de três simples e composta",
      "subs": [
       "1.1 Porcentagens."
      ]
     },
     {
      "n": 2,
-     "t": "Matemática Financeira — Juros simples e compostos",
+     "t": "Juros simples e compostos",
      "subs": [
       "2.1 Capitalização e desconto."
      ]
     },
     {
      "n": 3,
-     "t": "Matemática Financeira — Taxas de juros",
+     "t": "Taxas de juros",
      "subs": [
       "3.1 Nominal, efetiva e equivalente."
      ]
     },
     {
      "n": 4,
-     "t": "Matemática Financeira — Rendas uniformes e variáveis",
+     "t": "Rendas uniformes e variáveis",
      "subs": []
     },
     {
      "n": 5,
-     "t": "Matemática Financeira — Planos de amortização de empréstimos e financiamentos",
+     "t": "Planos de amortização de empréstimos e financiamentos",
      "subs": []
     },
     {
      "n": 6,
-     "t": "Matemática Financeira — Cálculo financeiro",
+     "t": "Cálculo financeiro",
      "subs": [
       "6.1 Custo efetivo de operações de financiamento, empréstimo e investimento."
      ]
     },
     {
      "n": 7,
-     "t": "Matemática Financeira — Avaliação de alternativas de investimento",
+     "t": "Avaliação de alternativas de investimento",
      "subs": []
     },
     {
      "n": 8,
-     "t": "Matemática Financeira — Taxas de retorno; taxa interna de retorno",
+     "t": "Taxas de retorno; taxa interna de retorno",
      "subs": []
     },
     {
      "n": 9,
-     "t": "Estatística — Estatística descritiva",
+     "t": "Estatística: Estatística descritiva",
      "subs": []
     },
     {
      "n": 10,
-     "t": "Estatística — Análise exploratória de dados",
+     "t": "Estatística: Análise exploratória de dados",
      "subs": [
       "2.1 Gráficos, diagramas, tabelas, medidas descritivas (posição, dispersão, assimetria e curtose)."
      ]
     },
     {
      "n": 11,
-     "t": "Estatística — Probabilidade",
+     "t": "Estatística: Probabilidade",
      "subs": [
       "3.1 Definições básicas e axiomas.",
       "3.2 Probabilidade condicional e independência."
@@ -8411,26 +8417,28 @@ const CONCURSOS_EMBUTIDOS = [
     },
     {
      "n": 12,
-     "t": "Estatística — Amostragem",
+     "t": "Estatística: Amostragem",
      "subs": [
       "4.1 Amostragem aleatória simples, estratificada, sistemática e por conglomerados."
      ]
-    },
+    }
+   ],
+   "Raciocínio Lógico": [
     {
-     "n": 13,
-     "t": "Raciocínio Lógico — Estruturas lógicas",
+     "n": 1,
+     "t": "Estruturas lógicas",
      "subs": []
     },
     {
-     "n": 14,
-     "t": "Raciocínio Lógico — Lógica de argumentação",
+     "n": 2,
+     "t": "Lógica de argumentação",
      "subs": [
       "2.1 Analogias, inferências, deduções e conclusões."
      ]
     },
     {
-     "n": 15,
-     "t": "Raciocínio Lógico — Lógica sentencial (ou proposicional)",
+     "n": 3,
+     "t": "Lógica sentencial (ou proposicional)",
      "subs": [
       "3.1 Proposições simples e compostas.",
       "3.2 Tabelas-verdade.",
@@ -8440,23 +8448,23 @@ const CONCURSOS_EMBUTIDOS = [
      ]
     },
     {
-     "n": 16,
-     "t": "Raciocínio Lógico — Lógica de primeira ordem",
+     "n": 4,
+     "t": "Lógica de primeira ordem",
      "subs": []
     },
     {
-     "n": 17,
-     "t": "Raciocínio Lógico — Princípios de contagem e probabilidade",
+     "n": 5,
+     "t": "Princípios de contagem e probabilidade",
      "subs": []
     },
     {
-     "n": 18,
-     "t": "Raciocínio Lógico — Operações com conjuntos",
+     "n": 6,
+     "t": "Operações com conjuntos",
      "subs": []
     },
     {
-     "n": 19,
-     "t": "Raciocínio Lógico — Raciocínio lógico envolvendo problemas aritméticos, geométricos e matriciais",
+     "n": 7,
+     "t": "Raciocínio lógico envolvendo problemas aritméticos, geométricos e matriciais",
      "subs": []
     }
    ]
