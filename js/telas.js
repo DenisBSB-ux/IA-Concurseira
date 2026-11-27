@@ -1128,10 +1128,11 @@ function provaContagemHtml(){
   const rot = String(PROVA_TCDF.rotulo || ''), mp = /^(.*?)\s*\((.*)\)\s*$/.exec(rot);
   const dataTxt = mp ? mp[1] : rot, detalhe = mp ? mp[2] : '';
   const cp = CONCURSO.padrao ? null : concursoCompat();
-  const num = PROVA_TCDF.semData ? '—' : (dias>1 ? dias : (dias===1 ? 1 : (dias===0 ? 0 : '')));
-  const lbl = PROVA_TCDF.semData ? 'data da prova a definir' : (dias>1 ? 'dias para a prova' : (dias===1 ? 'dia para a prova' : (dias===0 ? 'a prova é hoje!' : 'prova realizada')));
+  const pre = !CONCURSO.padrao && CONCURSO.preEdital;
+  const num = pre ? '' : PROVA_TCDF.semData ? '—' : (dias>1 ? dias : (dias===1 ? 1 : (dias===0 ? 0 : '')));
+  const lbl = pre ? 'pré-edital: prova anterior como referência' : PROVA_TCDF.semData ? 'data da prova a definir' : (dias>1 ? 'dias para a prova' : (dias===1 ? 'dia para a prova' : (dias===0 ? 'a prova é hoje!' : 'prova realizada')));
   return `<div class="prova-info pv">
-    ${CONCURSO.padrao ? '<div class="pv-kick">Prova objetiva e discursiva</div>' : '<div class="pv-kick">Prova</div>'}
+    ${CONCURSO.padrao ? '<div class="pv-kick">Prova objetiva e discursiva</div>' : '<div class="pv-kick">' + (CONCURSO.preEdital ? '<span class="tag-pre">Pré-edital</span> ' : '') + 'Prova</div>'}
     <div class="pv-data">${esc(dataTxt)}</div>
     ${detalhe ? `<div class="pv-det">${esc(detalhe)}</div>` : ''}
     <div class="pv-dias">${num !== '' ? `<b>${num}</b>` : ''} <span>${lbl}</span></div>

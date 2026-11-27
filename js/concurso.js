@@ -605,7 +605,7 @@ function concursoTelaHtml(){
   const qComuns = concNum(Object.values(c.qtdComuns || {}).reduce((a, b) => a + b, 0));
   const comuns = (c.comuns || []).map(m => `<li>${esc(m)}${(c.qtdComuns || {})[m] ? ` <small>· ${concNum(c.qtdComuns[m])} questões</small>` : ''}</li>`).join('');
   const dataTxt = String(c.rotulo || '').replace(/\s*\(.*\)\s*$/, ''), detTxt = (/\((.*)\)\s*$/.exec(c.rotulo || '') || [])[1] || '';
-  const diasTxt = dias === null ? 'data a definir' : (dias > 1 ? `faltam ${dias} dias` : (dias === 1 ? 'falta 1 dia' : (dias === 0 ? 'é hoje' : 'prova realizada')));
+  const diasTxt = c.preEdital ? 'pré-edital' : dias === null ? 'data a definir' : (dias > 1 ? `faltam ${dias} dias` : (dias === 1 ? 'falta 1 dia' : (dias === 0 ? 'é hoje' : 'prova realizada')));
   const tile = (r, v, sub, extra) => v ? `<div class="cx-t ${extra || ''}"><span><i class="cx-ti" aria-hidden="true">${({ 'Prova':'📅', 'Remuneração':'💰', 'Vagas':'👥', 'Cargo':'🎯', 'Cargos':'🎯' })[r] || '•'}</i>${esc(r)}</span><b>${esc(v)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</div>` : '';
   const cardsCargo = cargos.map(g => {
     const cp = concursoCompatDe(c, g.nome), qEsp = concNum(Object.values(g.qtd || {}).reduce((a, b) => a + b, 0)), req = (g.itens || []).find(i => i[0] === 'Requisito'), nm = (g.materias || []).length;
@@ -616,7 +616,7 @@ function concursoTelaHtml(){
       ${req ? `<small class="cx-req" title="${esc(req[1])}">${esc(req[1])}</small>` : ''}
       <small class="cx-meta">${nm} matéria${nm === 1 ? '' : 's'} específica${nm === 1 ? '' : 's'}${qEsp ? ' · ' + qEsp + ' questões' : ''}</small></label>`;
   }).join('');
-  const chips = todos.map(x => `<button type="button" class="cx-chip ${x.id === CONC_SEL ? 'sel' : ''}" data-ct-conc="${esc(x.id)}" title="${esc(x.nome)}"><b>${esc(sigla(x))}</b><small>${esc(dataCurta(x))}${x.banca ? ' · ' + esc(x.banca) : ''}</small></button>`).join('');
+  const chips = todos.map(x => `<button type="button" class="cx-chip ${x.id === CONC_SEL ? 'sel' : ''}" data-ct-conc="${esc(x.id)}" title="${esc(x.nome)}"><b>${esc(sigla(x))}</b>${x.preEdital ? '<em class="tag-pre">Pré-edital</em>' : ''}<small>${esc(dataCurta(x))}${x.banca ? ' · ' + esc(x.banca) : ''}</small></button>`).join('');
   const podeExcluir = !ehPadrao;
   const usuario = (typeof USUARIO_ATUAL !== 'undefined' && USUARIO_ATUAL) ? USUARIO_ATUAL : null;
   const cargoSel = ehPadrao ? '' : String(CONC_SEL_CARGO || '').split(' — ').pop();
@@ -635,7 +635,7 @@ function concursoTelaHtml(){
     <ol class="cx-passos" aria-label="Etapas"><li class="on"><b>1</b> Concurso</li><li class="${(ehPadrao || !cargos.length || CONC_SEL_CARGO) ? 'on' : ''}"><b>2</b> Cargo</li><li><b>3</b> Estudar</li></ol>
     <div class="cx-chips" role="tablist" aria-label="Concursos">${chips}<button type="button" class="cx-chip cx-novo" data-conc-abrir="1" title="Carregar o edital (PDF) de outro concurso">＋ Edital</button></div>
     <section class="cx-painel">
-      <div class="cx-cab"><div><h2>${esc(c.nome)}</h2><p>${esc(c.orgao || '')}${c.banca ? ' · banca ' + esc(c.banca) : ''}</p></div>
+      <div class="cx-cab"><div><h2>${esc(c.nome)}${c.preEdital ? ' <span class="tag-pre">Pré-edital</span>' : ''}</h2><p>${esc(c.orgao || '')}${c.banca ? ' · banca ' + esc(c.banca) : ''}</p></div>
         <span class="cx-dias ${dias !== null && dias >= 0 ? '' : 'off'}">${esc(diasTxt)}</span></div>
       <div class="cx-tiles">${tile('Prova', dataTxt, detTxt)}${tile('Remuneração', c.remuneracao)}${tile('Vagas', c.vagas)}${ehPadrao ? tile('Cargo', 'Analista de Controle Externo', 'Área de Gestão') : tile('Cargos', String(cargos.length), 'escolha abaixo')}</div>
       ${itensHtml}
