@@ -1275,14 +1275,7 @@ function renderLocalTabs(){
 
 
 /* faixa da matéria: só as questões do edital do cargo, com a opção de mostrar também as de fora (marcadas) */
-function foraEditalBarra(){
-  if(!STATE.materia) return '';
-  const todas = ALL_QUESTIONS.filter(q => q.materia === STATE.materia);
-  const fora = todas.filter(q => q.foraEdital || q.foraAssunto).length; if(!fora) return '';
-  const ver = (typeof concursoForaVisivel === 'function') && concursoForaVisivel();
-  const dentro = todas.filter(q => !(q.foraEdital || q.foraAssunto) && !q.duplicataOculta).length;
-  return `<div class="fe-barra" role="status">${foraDoCargoBotao()}</div>`;
-}
+function foraEditalBarra(){ return ''; }      // a chave "Matérias do edital" fica só em Estatísticas por matéria
 function renderMainPanel(tabAtual){
   if(tabAtual==='simulado'){
     if(STATE.quiz) return renderQuiz();
