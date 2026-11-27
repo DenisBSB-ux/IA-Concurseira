@@ -250,12 +250,12 @@ function renderTelaLogin(){
   }else if(!AUTH_RESOLVIDO){
     conteudo = `<p class="lg-sub lg-carregando"><span class="lg-spin" aria-hidden="true"></span> Verificando sua conta…</p>`;
   }else{
-    conteudo = `<h2 class="lg-titulo">Entre para continuar</h2>
-      <p class="lg-sub">Use sua conta Google para acessar as questões e salvar seu progresso em qualquer aparelho.</p>
+    conteudo = `<h2 class="lg-titulo">Bem-vindo de volta</h2>
+      <p class="lg-sub">Entre com sua conta Google para abrir as questões e continuar de onde parou, em qualquer aparelho.</p>
       <button class="lg-btn lg-btn-google" id="btn-login-google" ${LOGIN_EM_ANDAMENTO?'disabled':''}>${LOGIN_EM_ANDAMENTO?'<span class="lg-spin" aria-hidden="true"></span> Abrindo o Google…':G+'<span>Entrar com Google</span>'}</button>
       ${LOGIN_ERRO?`<p class="lg-erro" role="alert">${esc(LOGIN_ERRO)}</p>`:''}
-      <a href="#" id="btn-login-redirect" class="lg-alt">Entrar de outro jeito, sem janela extra</a>
-      <ul class="lg-pontos"><li><b>☁</b> Progresso salvo na nuvem</li><li><b>✓</b> Questões comentadas</li><li><b>⚡</b> Funciona offline</li></ul>`;
+      <a href="#" id="btn-login-redirect" class="lg-alt" title="Use se a janela do Google for bloqueada pelo navegador">A janela do Google não abriu? Entrar na mesma aba</a>
+      <ul class="lg-pontos"><li><i aria-hidden="true">☁</i><b>Progresso na nuvem</b><small>continue em qualquer aparelho</small></li><li><i aria-hidden="true">✓</i><b>Questões comentadas</b><small>resolução em cada item</small></li><li><i aria-hidden="true">⚡</i><b>Funciona offline</b><small>estude sem internet</small></li></ul>`;
   }
   return `<div class="tela-login"><div class="lg-card">
     <div class="lg-logo"><img src="img/logo-ia-concurseira.png" alt="IA Concurseira"></div>
