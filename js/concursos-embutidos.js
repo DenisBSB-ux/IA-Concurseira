@@ -7391,5 +7391,1881 @@ const CONCURSOS_EMBUTIDOS = [
     }
    ]
   }
+ },
+ {
+  "id": "seec-2019-afrdf-pre",
+  "embutido": true,
+  "preEdital": true,
+  "nome": "SEEC 2019 — Auditor Fiscal da Receita do DF",
+  "orgao": "Secretaria de Estado de Economia do Distrito Federal (SEEC/DF)",
+  "cargo": "Auditor Fiscal da Receita do Distrito Federal",
+  "banca": "Cebraspe",
+  "data": "2020-02-02",
+  "rotulo": "02/02/2020 (edital nº 1/2019, usado como pré-edital; objetivas à tarde)",
+  "link": "http://www.cebraspe.org.br/concursos/seec_auditor_19",
+  "remuneracao": "R$ 14.970,00",
+  "vagas": "40 vagas (24 ampla, 8 negros, 8 PcD) e cadastro de reserva de 80",
+  "itens": [
+   [
+    "Edital",
+    "Nº 1 – SEEC/DF, de 17/09/2019 (Cebraspe). Pré-edital: serve de referência para o próximo concurso do cargo."
+   ],
+   [
+    "Cargo",
+    "Auditor Fiscal da Receita do Distrito Federal, carreira de Auditoria Tributária do DF (Lei nº 4.717/2011). Regime: LC nº 840/2011."
+   ],
+   [
+    "Requisito",
+    "Diploma de nível superior em qualquer área"
+   ],
+   [
+    "Jornada",
+    "40 horas semanais"
+   ],
+   [
+    "Fases",
+    "Provas objetivas (eliminatória e classificatória), prova discursiva (eliminatória e classificatória) e avaliação de vida pregressa (eliminatória)"
+   ],
+   [
+    "Objetivas",
+    "P1 (conhecimentos básicos) e P2 (específicos), 80 itens cada, certo/errado com anulação (cada erro desconta um acerto); 5 horas; turno da tarde"
+   ],
+   [
+    "Aprovação",
+    "Mínimo de 48 acertos na P1 e 48 na P2. Nota final das objetivas: (NP1 + 3 × NP2) ÷ 4"
+   ],
+   [
+    "Discursiva",
+    "Uma dissertação (30 a 60 linhas, 5,00 pts) e duas questões (10 a 20 linhas, 2,50 pts cada); específicos do cargo; 4 horas"
+   ],
+   [
+    "Nota final",
+    "NFPE = (NP1 + 3 × NP2 + 2 × NPD) ÷ 6"
+   ]
+  ],
+  "materias": [],
+  "comuns": [
+   "Língua Portuguesa",
+   "Conhecimentos sobre o Distrito Federal",
+   "Contabilidade Pública",
+   "Direito Administrativo",
+   "Direito Constitucional",
+   "Direito Civil, Empresarial e Penal",
+   "Economia e Finanças Públicas",
+   "Tecnologia da Informação",
+   "Matemática Financeira, Estatística e Raciocínio Lógico"
+  ],
+  "qtdComuns": {
+   "Língua Portuguesa": 10,
+   "Conhecimentos sobre o Distrito Federal": 2,
+   "Contabilidade Pública": 8,
+   "Direito Administrativo": 10,
+   "Direito Constitucional": 10,
+   "Direito Civil, Empresarial e Penal": 10,
+   "Economia e Finanças Públicas": 10,
+   "Tecnologia da Informação": 10,
+   "Matemática Financeira, Estatística e Raciocínio Lógico": 10
+  },
+  "topicosComuns": {
+   "Língua Portuguesa": [
+    {
+     "n": 1,
+     "t": "Compreensão e interpretação de textos de gêneros variados",
+     "subs": []
+    },
+    {
+     "n": 2,
+     "t": "Reconhecimento de tipos e gêneros textuais",
+     "subs": []
+    },
+    {
+     "n": 3,
+     "t": "Ortografia oficial",
+     "subs": []
+    },
+    {
+     "n": 4,
+     "t": "Domínio dos mecanismos de coesão e coerência textual",
+     "subs": [
+      "4.1 Emprego de elementos de referenciação, substituição e repetição de conectores e de outros elementos de sequenciação textual.",
+      "4.2 Emprego de tempos e modos verbais."
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Domínio da estrutura morfossintática do período",
+     "subs": [
+      "5.1 Emprego das classes de palavras.",
+      "5.2 Relações de coordenação entre orações e entre termos da oração.",
+      "5.3 Relações de subordinação entre orações e entre termos da oração.",
+      "5.4 Emprego dos sinais de pontuação e acentuação gráfica.",
+      "5.5 Concordância verbal e nominal.",
+      "5.6 Regência verbal e nominal.",
+      "5.7 Acentuação gráfica.",
+      "5.8 Colocação pronominal."
+     ]
+    },
+    {
+     "n": 6,
+     "t": "Reescrita de frases e parágrafos do texto",
+     "subs": [
+      "6.1 Significação das palavras.",
+      "6.2 Substituição de palavras ou de trechos de texto.",
+      "6.3 Reorganização da estrutura de orações e de períodos do texto.",
+      "6.4 Reescrita de textos de diferentes gêneros e níveis de formalidade."
+     ]
+    }
+   ],
+   "Conhecimentos sobre o Distrito Federal": [
+    {
+     "n": 1,
+     "t": "Domínio de tópicos atuais e relevantes acerca da realidade étnica, social, histórica, geográfica, cultural, política e econômica do Distrito Federal e",
+     "subs": []
+    }
+   ],
+   "Contabilidade Pública": [
+    {
+     "n": 1,
+     "t": "Conceituação, objeto e campo de aplicação",
+     "subs": []
+    },
+    {
+     "n": 2,
+     "t": "Princípios e Normas de Contabilidade sob a perspectiva do Setor Público, em especial as seguintes normas: NBCASP 8ª edição, NBC TSP – Estrutura Contáb",
+     "subs": []
+    },
+    {
+     "n": 3,
+     "t": "Patrimônio Público",
+     "subs": [
+      "3.1 Ativo.",
+      "3.2 Passivo.",
+      "3.3 Saldo Patrimonial."
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Variações Patrimoniais",
+     "subs": [
+      "4.1 Qualitativas.",
+      "4.2 Quantitativas.",
+      "4.3 Realização da variação patrimonial.",
+      "4.4 Resultado patrimonial."
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Receita e Despesa sob o enfoque patrimonial",
+     "subs": []
+    },
+    {
+     "n": 6,
+     "t": "Mensuração de ativos",
+     "subs": [
+      "6.1 Ativo Imobilizado.",
+      "6.2 Ativo Intangível.",
+      "6.3 Reavaliação e redução ao valor recuperável.",
+      "6.4 Depreciação, amortização e exaustão."
+     ]
+    },
+    {
+     "n": 7,
+     "t": "Mensuração de passivos",
+     "subs": [
+      "7.1 Provisões.",
+      "7.2 Passivos Contingentes."
+     ]
+    },
+    {
+     "n": 8,
+     "t": "Tratamento contábil aplicável aos impostos e contribuições",
+     "subs": []
+    },
+    {
+     "n": 9,
+     "t": "Sistema de custos no setor público",
+     "subs": [
+      "9.1 Classificação e Nomenclatura de custos.",
+      "9.2 Aspectos legais do sistema de custos.",
+      "9.3 Ambiente da informação de custos.",
+      "9.4 Características da informação de custos.",
+      "9.5 Terminologia de custos."
+     ]
+    },
+    {
+     "n": 10,
+     "t": "Plano de contas aplicado ao setor público",
+     "subs": []
+    },
+    {
+     "n": 11,
+     "t": "Demonstrações contábeis aplicadas ao setor público",
+     "subs": [
+      "11.1 Balanço orçamentário.",
+      "11.2 Balanço Financeiro.",
+      "11.3 Demonstração das variações patrimoniais.",
+      "11.4 Balanço patrimonial.",
+      "11.5 Demonstração de fluxos de caixa.",
+      "11.6 Demonstração das Mutações do Patrimônio Líquido.",
+      "11.7 Notas explicativas às demonstrações contábeis.",
+      "11.8 Consolidação das demonstrações contábeis."
+     ]
+    },
+    {
+     "n": 12,
+     "t": "Transações no setor público",
+     "subs": []
+    },
+    {
+     "n": 13,
+     "t": "Receita e Despesa pública",
+     "subs": [
+      "13.1 Conceito, etapas, estágios e categorias econômicas."
+     ]
+    },
+    {
+     "n": 14,
+     "t": "Execução orçamentária e financeira",
+     "subs": []
+    },
+    {
+     "n": 15,
+     "t": "Suprimento de Fundos",
+     "subs": []
+    }
+   ],
+   "Direito Administrativo": [
+    {
+     "n": 1,
+     "t": "Estado, governo e administração pública",
+     "subs": [
+      "1.1 Conceitos."
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Direito administrativo",
+     "subs": [
+      "2.1 Conceito.",
+      "2.2 Objeto.",
+      "2.3 Fontes."
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Ato administrativo",
+     "subs": [
+      "3.1 Conceito, requisitos, atributos, classificação e espécies.",
+      "3.2 Extinção do ato administrativo.",
+      "3.2.1 Cassação, anulação, revogação e convalidação.",
+      "3.3 Decadência administrativa."
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Agentes públicos",
+     "subs": [
+      "4.1 Conceito.",
+      "4.2 Espécies.",
+      "4.3 Cargo, emprego e função pública.",
+      "4.3.1 Provimento.",
+      "4.3.2 Vacância.",
+      "4.3.3 Efetividade, estabilidade e vitaliciedade.",
+      "4.4 Remuneração.",
+      "4.5 Direitos e deveres.",
+      "4.6 Responsabilidade.",
+      "4.7 Sindicância e Processo administrativo disciplinar.",
+      "4.8 Lei Complementar nº 840/2011 (Regime Jurídico dos Servidores Públicos Civis do Distrito Federal, das Autarquias e das Fundações Públicas Distritais).",
+      "4.9 Disposições constitucionais aplicáveis."
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Poderes da administração pública",
+     "subs": [
+      "5.1 Hierárquico, disciplinar, regulamentar e de polícia.",
+      "5.2 Uso e abuso de poder."
+     ]
+    },
+    {
+     "n": 6,
+     "t": "Regime jurídico-administrativo",
+     "subs": [
+      "6.1 Conceito.",
+      "6.2 Princípios expressos e implícitos da administração pública."
+     ]
+    },
+    {
+     "n": 7,
+     "t": "Responsabilidade civil do Estado",
+     "subs": [
+      "7.1 Evolução histórica.",
+      "7.2 Responsabilidade por ato comissivo do Estado.",
+      "7.3 Responsabilidade por omissão do Estado.",
+      "7.4 Requisitos para a demonstração da responsabilidade do Estado.",
+      "7.5 Causas excludentes e atenuantes da responsabilidade do Estado.",
+      "7.6 Reparação do dano.",
+      "7.7 Direito de regresso."
+     ]
+    },
+    {
+     "n": 8,
+     "t": "Serviços públicos",
+     "subs": [
+      "8.1 Conceito.",
+      "8.2 Elementos constitutivos.",
+      "8.3 Formas de prestação e meios de execução.",
+      "8.4 Delegação.",
+      "8.4.1 Concessão, permissão e autorização.",
+      "8.5 Classificação.",
+      "8.6 Princípios."
+     ]
+    },
+    {
+     "n": 9,
+     "t": "Organização administrativa",
+     "subs": [
+      "9.1 Autarquias, fundações, empresas públicas e sociedades de economia mista.",
+      "9.1.1 Lei Federal nº 13.303/2016 (Estatuto jurídico da empresa pública, da sociedade de economia mista e de suas subsidiárias, no âmbito da União, dos Estados, do Distrito Federal e dos Municípios).",
+      "9.2 Entidades paraestatais e terceiro setor.",
+      "9.2.1 Serviços sociais autônomos, entidades de apoio, organizações sociais, organizações da sociedade civil de interesse público."
+     ]
+    },
+    {
+     "n": 10,
+     "t": "Controle da administração pública",
+     "subs": [
+      "10.1 Controle exercido pela administração pública.",
+      "10.2 Controle judicial.",
+      "10.3 Controle legislativo.",
+      "10.4 Lei Federal nº 8.429/1992 (improbidade administrativa)."
+     ]
+    },
+    {
+     "n": 11,
+     "t": "Lei Federal nº 9.784/1999 e suas alterações (processo administrativo) aplicável ao Distrito Federal por força da Lei Distrital nº 2.834/2001 e suas al",
+     "subs": []
+    },
+    {
+     "n": 12,
+     "t": "Licitações e contratos administrativos",
+     "subs": [
+      "12.1 Lei Federal nº 8.666/1993 e suas alterações.",
+      "12.2 Lei Federal nº 10.520/2002 e demais disposições normativas relativas ao pregão.",
+      "12.3 Decreto Distrital nº 26.851/2006.",
+      "12.4 Decreto Federal nº 7.892/2013 e suas alterações (sistema de registro de preços)."
+     ]
+    },
+    {
+     "n": 13,
+     "t": "Lei Distrital nº 4.717/2011 (reestrutura a Carreira de Auditoria Tributária do Distrito Federal)",
+     "subs": []
+    },
+    {
+     "n": 14,
+     "t": "Decreto Distrital nº 845/1994 (institui o Código de Ética dos Servidores da Carreira Auditoria Tributária)",
+     "subs": []
+    }
+   ],
+   "Direito Constitucional": [
+    {
+     "n": 1,
+     "t": "Aplicabilidade e interpretação das normas constitucionais",
+     "subs": [
+      "1.1 Normas de eficácia plena, contida e limitada.",
+      "1.2 Normas programáticas."
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Constituição da República Federativa do Brasil de 1988",
+     "subs": [
+      "2.1 Princípios fundamentais.",
+      "2.2 Direitos e garantias fundamentais (direitos e deveres individuais, coletivos, sociais, políticos e de nacionalidade).",
+      "2.3 Cláusulas Pétreas.",
+      "2.4 Organização político-administrativa do Estado."
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Supremacia da Constituição Federal",
+     "subs": [
+      "3.1 Controle de constitucionalidade.",
+      "3.1.1 Sistemas de controle de constitucionalidade: Ação direta de constitucionalidade. Ação declaratória de constitucionalidade. Arguição de descumprimento de preceito fundamental."
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Da ordem Econômica e Financeira",
+     "subs": [
+      "4.1 Princípios gerais da atividade econômica.",
+      "4.2 Sistema Financeiro Nacional."
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Lei Orgânica do Distrito Federal",
+     "subs": [
+      "5.1 Fundamentos da Organização dos Poderes e do Distrito Federal (Poder Legislativo, Poder Executivo e Administração Pública).",
+      "5.2 Da Organização do Distrito Federal.",
+      "5.3 Da Organização dos Poderes."
+     ]
+    }
+   ],
+   "Direito Civil, Empresarial e Penal": [
+    {
+     "n": 1,
+     "t": "Direito Civil — Lei de introdução às normas do direito brasileiro",
+     "subs": [
+      "1.1 Vigência, aplicação, obrigatoriedade, interpretação e integração das leis.",
+      "1.2 Conflito das leis no tempo.",
+      "1.3 Eficácia das leis no espaço."
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Direito Civil — Pessoas naturais",
+     "subs": [
+      "2.1 Conceito.",
+      "2.2 Início da pessoa natural.",
+      "2.3 Personalidade.",
+      "2.4 Capacidade.",
+      "2.5 Direitos da personalidade.",
+      "2.6 Domicílio."
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Direito Civil — Pessoas jurídicas",
+     "subs": [
+      "3.1 Disposições Gerais.",
+      "3.2 Constituição.",
+      "3.3 Extinção.",
+      "3.4 Sociedades de fato.",
+      "3.5 Associações.",
+      "3.6 Fundações."
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Direito Civil — Bens imóveis, móveis e públicos",
+     "subs": []
+    },
+    {
+     "n": 5,
+     "t": "Direito Civil — Fato jurídico",
+     "subs": []
+    },
+    {
+     "n": 6,
+     "t": "Direito Civil — Negócio jurídico",
+     "subs": [
+      "6.1 Disposições gerais.",
+      "6.2 Invalidade."
+     ]
+    },
+    {
+     "n": 7,
+     "t": "Direito Civil — Prescrição",
+     "subs": [
+      "7.1 Disposições gerais."
+     ]
+    },
+    {
+     "n": 8,
+     "t": "Direito Civil — Decadência",
+     "subs": []
+    },
+    {
+     "n": 9,
+     "t": "Direito Civil — Direitos reais e obrigacionais",
+     "subs": [
+      "9.1 Conceito; natureza; distinção. 8 Propriedade.",
+      "9.1 Conceito.",
+      "9.2 Noções gerais.",
+      "9.3 Aquisição, perda; restrições ao direito de propriedade.",
+      "9.4 Condomínio."
+     ]
+    },
+    {
+     "n": 10,
+     "t": "Direito Civil — Posse",
+     "subs": [
+      "10.1 Conceito.",
+      "10.2 Classificação.",
+      "10.3 Aquisição.",
+      "10.4 Perda.",
+      "10.5 Efeitos da posse.",
+      "10.6 Posse e detenção."
+     ]
+    },
+    {
+     "n": 11,
+     "t": "Direito Civil — Direitos reais sobre a coisa alheia",
+     "subs": [
+      "11.1 Conceito, superfície, servidões, usufruto, uso, habitação, penhor, hipoteca e propriedade fiduciária."
+     ]
+    },
+    {
+     "n": 12,
+     "t": "Direito Civil — Obrigações",
+     "subs": [
+      "12.1 Direitos reais, direitos pessoais.",
+      "12.2 Obrigações de dar, de fazer, de não fazer.",
+      "12.3 Obrigações decorrentes de atos ilícitos.",
+      "12.4 Solidariedade, indivisibilidade, inexecução.",
+      "12.5 Transmissão das obrigações.",
+      "12.6 Adimplemento e extinção."
+     ]
+    },
+    {
+     "n": 13,
+     "t": "Direito Civil — Contratos",
+     "subs": [
+      "13.1 Conceito.",
+      "13.2 Classificação.",
+      "13.3 Formação.",
+      "13.4 Efeitos.",
+      "13.5 Revisão.",
+      "13.6 Extinção.",
+      "13.7 Contrato, pré-contrato e negociações preliminares.",
+      "13.8 Compra e venda.",
+      "13.9 Troca ou permuta.",
+      "13.10 Doação.",
+      "13.11 Empréstimo.",
+      "13.12 Prestação de serviço.",
+      "13.13 Empreitada.",
+      "13.14 Depósito.",
+      "13.15 Mandato, fiança e aval.",
+      "13.16 Sociedade. Parceria rural.",
+      "13.17 Transporte."
+     ]
+    },
+    {
+     "n": 14,
+     "t": "Direito Civil — Alienação fiduciária em garantia",
+     "subs": []
+    },
+    {
+     "n": 15,
+     "t": "Direito Civil — Cooperativas",
+     "subs": [
+      "15.1 Conceito.",
+      "15.2 Natureza.",
+      "15.3 Regime jurídico.",
+      "15.4 Atos cooperativos, operações de mercado."
+     ]
+    },
+    {
+     "n": 16,
+     "t": "Direito Civil — Casamento",
+     "subs": [
+      "16.1 Regime de bens.",
+      "16.2 Dissolução da sociedade conjugal."
+     ]
+    },
+    {
+     "n": 17,
+     "t": "Direito Civil — Sucessão legítima",
+     "subs": [
+      "17.1 Ordem de vocação hereditária.",
+      "17.2 Herdeiros legítimos, necessários.",
+      "17.3 Direito de representação."
+     ]
+    },
+    {
+     "n": 18,
+     "t": "Direito Civil — Sucessão testamentária",
+     "subs": [
+      "18.1 Noções.",
+      "18.2 Testamento público.",
+      "18.3 Particular.",
+      "18.4 Capacidade para testar.",
+      "18.5 Usufruto.",
+      "18.6 Revogação dos testamentos."
+     ]
+    },
+    {
+     "n": 19,
+     "t": "Direito Civil — Herança",
+     "subs": [
+      "19.1 Noções.",
+      "19.2 Aceitação.",
+      "19.3 Desistência.",
+      "19.4 Exclusão."
+     ]
+    },
+    {
+     "n": 20,
+     "t": "Direito Civil — Inventário e partilha",
+     "subs": []
+    },
+    {
+     "n": 21,
+     "t": "Direito Empresarial — Direito empresarial",
+     "subs": [
+      "1.1 Empresário.",
+      "1.1.1 Conceito, caracterização, inscrição, capacidade.",
+      "1.2 Institutos complementares.",
+      "1.2.1 Nome empresarial, estabelecimento empresarial, escrituração.",
+      "1.2.2 Microempresa e empresa de pequeno porte.",
+      "1.2.3 Prepostos.",
+      "1.2.4 Escrituração."
+     ]
+    },
+    {
+     "n": 22,
+     "t": "Direito Empresarial — Títulos de crédito",
+     "subs": [
+      "2.1 Classificação dos títulos de crédito.",
+      "2.2 Letra de câmbio.",
+      "2.3 Nota promissória.",
+      "2.4 Cheque.",
+      "2.5 Duplicata.",
+      "2.6 Protesto."
+     ]
+    },
+    {
+     "n": 23,
+     "t": "Direito Empresarial — Direito societário",
+     "subs": [
+      "3.1 Conceito de sociedades.",
+      "3.1.1 Sociedades simples e empresárias.",
+      "3.2 Sociedade limitada.",
+      "3.3 Sociedade anônima.",
+      "3.4 Lei Federal nº 6.404/1976 e suas alterações.",
+      "3.5 Operações societárias.",
+      "3.6 Dissolução e liquidação de sociedades."
+     ]
+    },
+    {
+     "n": 24,
+     "t": "Direito Empresarial — Contratos mercantis",
+     "subs": [
+      "4.1 Características.",
+      "4.2 Compra e venda mercantil.",
+      "4.3 Franquia (franchising).",
+      "4.4 Contratos bancários impróprios.",
+      "4.4.1 Alienação fiduciária em garantia, arrendamento mercantil (leasing), faturização (factoring)."
+     ]
+    },
+    {
+     "n": 25,
+     "t": "Direito Empresarial — Direito falimentar",
+     "subs": [
+      "5.1 Lei Federal nº 11.101/2005 e suas alterações.",
+      "5.2 Teoria geral do direito falimentar."
+     ]
+    },
+    {
+     "n": 26,
+     "t": "Direito Empresarial — O comércio eletrônico",
+     "subs": []
+    },
+    {
+     "n": 27,
+     "t": "Direito Penal — Aplicação da lei penal",
+     "subs": []
+    },
+    {
+     "n": 28,
+     "t": "Direito Penal — Crime",
+     "subs": []
+    },
+    {
+     "n": 29,
+     "t": "Direito Penal — Dolo e culpa",
+     "subs": []
+    },
+    {
+     "n": 30,
+     "t": "Direito Penal — Crimes contra a fé pública",
+     "subs": [
+      "4.1 Falsidade de títulos e outros papéis públicos; falsidade documental; fraudes em certames de interesse público."
+     ]
+    },
+    {
+     "n": 31,
+     "t": "Direito Penal — Crimes contra a administração pública",
+     "subs": [
+      "5.1 Crimes praticados por funcionário público e por particular contra a administração pública."
+     ]
+    },
+    {
+     "n": 32,
+     "t": "Direito Penal — Lei Federal nº 8.429/1992 e suas alterações (improbidade administrativa)",
+     "subs": []
+    },
+    {
+     "n": 33,
+     "t": "Direito Penal — Lei Federal nº 8.137/1990 e suas alterações (crimes contra a ordem tributária)",
+     "subs": []
+    },
+    {
+     "n": 34,
+     "t": "Direito Penal — Lei Federal nº 10.028/2000 (crimes contra as finanças públicas)",
+     "subs": []
+    },
+    {
+     "n": 35,
+     "t": "Direito Penal — Infração administrativa",
+     "subs": []
+    }
+   ],
+   "Economia e Finanças Públicas": [
+    {
+     "n": 1,
+     "t": "Economia — Introdução geral aos problemas econômicos",
+     "subs": [
+      "1.1 Escassez e escolha; a curva de possibilidades de produção; fatores de produção; produtividade e remuneração dos fatores de produção; livre mercado; o papel do governo em uma economia em desenvolvimento."
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Economia — Microeconomia",
+     "subs": [
+      "2.1 Lei da oferta e da demanda; as curvas de demanda e de oferta; elasticidade-preço; fatores que afetam a elasticidade-preço; elasticidade-renda; noções de teoria da produção; função de produção; conceitos básicos de custos de produção; preço e produto em concorrência perfeita e no monopólio; eficiência econômica; bens públicos e falhas no sistema de mercado."
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Economia — Macroeconomia",
+     "subs": [
+      "3.1 As contas nacionais; conceitos de produto e de renda; os agregados macroeconômicos; renda e produto de equilíbrio; consumo, poupança e investimento; o multiplicador; o setor governo e a política fiscal; déficits e dívida pública; políticas de estabilização."
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Economia — Moeda e crédito",
+     "subs": [
+      "4.1 Conceitos e funções da moeda; base monetária e meios de pagamento; o multiplicador monetário; o Banco Central e os instrumentos de controle monetário; o Sistema Financeiro Nacional."
+     ]
+    },
+    {
+     "n": 5,
+     "t": "Economia — Comércio exterior",
+     "subs": [
+      "5.1 Balanço de Pagamentos.",
+      "5.1.1 Conceito e estrutura das principais contas; equilíbrio e desequilíbrio do balanço de pagamentos; taxas de câmbio; sistemas de taxas de câmbio fixas e flexíveis."
+     ]
+    },
+    {
+     "n": 6,
+     "t": "Finanças Públicas — Objetivos, metas, abrangência e definição",
+     "subs": []
+    },
+    {
+     "n": 7,
+     "t": "Finanças Públicas — Funções do Estado",
+     "subs": []
+    },
+    {
+     "n": 8,
+     "t": "Finanças Públicas — Financiamento dos gastos públicos",
+     "subs": [
+      "3.1 Tributação e equidade."
+     ]
+    },
+    {
+     "n": 9,
+     "t": "Finanças Públicas — A função do bem-estar; políticas alocativas, distributivas e de estabilização",
+     "subs": []
+    },
+    {
+     "n": 10,
+     "t": "Finanças Públicas — Instrumentos e recursos da economia pública (política fiscal, regulatória e monetária)",
+     "subs": []
+    },
+    {
+     "n": 11,
+     "t": "Finanças Públicas — Tributação",
+     "subs": [
+      "6.1 Tipos de tributos; progressividade, regressividade e neutralidade."
+     ]
+    },
+    {
+     "n": 12,
+     "t": "Finanças Públicas — Receita orçamentária",
+     "subs": [
+      "7.1 Classificação, estágios (etapas) da receita, regime de execução orçamentária, recursos orçamentários, deduções da receita orçamentária."
+     ]
+    },
+    {
+     "n": 13,
+     "t": "Finanças Públicas — Despesa orçamentária",
+     "subs": [
+      "8.1 Classificação da despesa orçamentária sob seus diversos enfoques, estágios (fases) da despesa orçamentária."
+     ]
+    },
+    {
+     "n": 14,
+     "t": "Finanças Públicas — Orçamento público",
+     "subs": [
+      "9.1 Conceitos e princípios orçamentários, tipos de orçamento, técnicas de elaboração orçamentária."
+     ]
+    },
+    {
+     "n": 15,
+     "t": "Finanças Públicas — Ciclo orçamentário",
+     "subs": []
+    },
+    {
+     "n": 16,
+     "t": "Finanças Públicas — Créditos adicionais",
+     "subs": [
+      "11.1 Conceitos, tipos, requisitos para abertura, fontes de recursos, incorporação ao orçamento."
+     ]
+    },
+    {
+     "n": 17,
+     "t": "Finanças Públicas — Conceito de déficit público; financiamento do déficit; sustentabilidade da política fiscal",
+     "subs": []
+    },
+    {
+     "n": 18,
+     "t": "Finanças Públicas — Crédito público",
+     "subs": [
+      "13.1 Fonte alternativa de financiamento das despesas públicas; limites do crédito público."
+     ]
+    },
+    {
+     "n": 19,
+     "t": "Finanças Públicas — Reforma Administrativa e Reforma Previdenciária",
+     "subs": []
+    },
+    {
+     "n": 20,
+     "t": "Finanças Públicas — Política fiscal",
+     "subs": [
+      "15.1 Equilíbrio orçamentário; estabilização da moeda; pleno emprego; desenvolvimento econômico; redistribuição da renda."
+     ]
+    },
+    {
+     "n": 21,
+     "t": "Finanças Públicas — Tópicos da Lei de Responsabilidade Fiscal (Lei Complementar Federal nº 101/2000 e suas alterações)",
+     "subs": [
+      "16.1 Princípios, objetivos; limites para dívida; “regra de ouro” (Constituição Federal, art. 167, III); renúncia de receita; geração de despesas.",
+      "16.2 Transferências voluntárias.",
+      "16.2.1 Conceito e requisitos.",
+      "16.3 Destinação de recursos para o setor privado.",
+      "16.3.1 Requisitos e vedações."
+     ]
+    },
+    {
+     "n": 22,
+     "t": "Finanças Públicas — Ordenador de despesa",
+     "subs": [
+      "17.1 Conceito; ordenador primário; delegação de competência."
+     ]
+    }
+   ],
+   "Tecnologia da Informação": [
+    {
+     "n": 1,
+     "t": "Conceitos básicos de informática, componentes funcionais de computadores (hardware e software), periféricos e dispositivos de entrada, saída e armazen",
+     "subs": []
+    },
+    {
+     "n": 2,
+     "t": "Conceitos básicos de sistemas operacionais, características dos principais sistemas operacionais do mercado (Windows e Linux)",
+     "subs": []
+    },
+    {
+     "n": 3,
+     "t": "Noções dos ambientes Microsoft Office e BR Office",
+     "subs": []
+    },
+    {
+     "n": 4,
+     "t": "Conceitos, funções e aplicações de Intranet e Internet",
+     "subs": []
+    },
+    {
+     "n": 5,
+     "t": "Navegadores",
+     "subs": []
+    },
+    {
+     "n": 6,
+     "t": "Correio eletrônico",
+     "subs": []
+    },
+    {
+     "n": 7,
+     "t": "Conceitos e funções de aplicativos de editores de texto",
+     "subs": []
+    },
+    {
+     "n": 8,
+     "t": "Gerência de Projetos",
+     "subs": [
+      "8.1 Conceitos.",
+      "8.2 Processos do PMBOK."
+     ]
+    },
+    {
+     "n": 9,
+     "t": "Gestão de Processos de Negócio",
+     "subs": [
+      "9.1 Modelagem de processos.",
+      "9.2 Técnicas de análise e modelagem de processo."
+     ]
+    },
+    {
+     "n": 10,
+     "t": "Gerência de Serviços de TI",
+     "subs": [
+      "10.1 Fundamentos da ITIL® (Versão 3)."
+     ]
+    },
+    {
+     "n": 11,
+     "t": "Banco de dados",
+     "subs": [
+      "11.1 Conceito: entidade, atributos, relacionamentos e cardinalidade.",
+      "11.2 Modelagem de dados relacional.",
+      "11.3 Modelagem de dados multidimensional.",
+      "11.4 Conceitos e estratégias de implantação de Data Warehouse, OLAP, Data Mining, ETL e Business Intelligence."
+     ]
+    },
+    {
+     "n": 12,
+     "t": "Segurança da informação",
+     "subs": [
+      "12.1 Conceitos básicos.",
+      "12.2 Plano de continuidade de negócio.",
+      "12.3 Noções sobre criptografia, assinatura digital e autenticação.",
+      "12.4 Certificação digital.",
+      "12.5 Auditoria, vulnerabilidade e conformidade"
+     ]
+    }
+   ],
+   "Matemática Financeira, Estatística e Raciocínio Lógico": [
+    {
+     "n": 1,
+     "t": "Matemática Financeira — Regra de três simples e composta",
+     "subs": [
+      "1.1 Porcentagens."
+     ]
+    },
+    {
+     "n": 2,
+     "t": "Matemática Financeira — Juros simples e compostos",
+     "subs": [
+      "2.1 Capitalização e desconto."
+     ]
+    },
+    {
+     "n": 3,
+     "t": "Matemática Financeira — Taxas de juros",
+     "subs": [
+      "3.1 Nominal, efetiva e equivalente."
+     ]
+    },
+    {
+     "n": 4,
+     "t": "Matemática Financeira — Rendas uniformes e variáveis",
+     "subs": []
+    },
+    {
+     "n": 5,
+     "t": "Matemática Financeira — Planos de amortização de empréstimos e financiamentos",
+     "subs": []
+    },
+    {
+     "n": 6,
+     "t": "Matemática Financeira — Cálculo financeiro",
+     "subs": [
+      "6.1 Custo efetivo de operações de financiamento, empréstimo e investimento."
+     ]
+    },
+    {
+     "n": 7,
+     "t": "Matemática Financeira — Avaliação de alternativas de investimento",
+     "subs": []
+    },
+    {
+     "n": 8,
+     "t": "Matemática Financeira — Taxas de retorno; taxa interna de retorno",
+     "subs": []
+    },
+    {
+     "n": 9,
+     "t": "Estatística — Estatística descritiva",
+     "subs": []
+    },
+    {
+     "n": 10,
+     "t": "Estatística — Análise exploratória de dados",
+     "subs": [
+      "2.1 Gráficos, diagramas, tabelas, medidas descritivas (posição, dispersão, assimetria e curtose)."
+     ]
+    },
+    {
+     "n": 11,
+     "t": "Estatística — Probabilidade",
+     "subs": [
+      "3.1 Definições básicas e axiomas.",
+      "3.2 Probabilidade condicional e independência."
+     ]
+    },
+    {
+     "n": 12,
+     "t": "Estatística — Amostragem",
+     "subs": [
+      "4.1 Amostragem aleatória simples, estratificada, sistemática e por conglomerados."
+     ]
+    },
+    {
+     "n": 13,
+     "t": "Raciocínio Lógico — Estruturas lógicas",
+     "subs": []
+    },
+    {
+     "n": 14,
+     "t": "Raciocínio Lógico — Lógica de argumentação",
+     "subs": [
+      "2.1 Analogias, inferências, deduções e conclusões."
+     ]
+    },
+    {
+     "n": 15,
+     "t": "Raciocínio Lógico — Lógica sentencial (ou proposicional)",
+     "subs": [
+      "3.1 Proposições simples e compostas.",
+      "3.2 Tabelas-verdade.",
+      "3.3 Equivalências.",
+      "3.4 Leis de De Morgan.",
+      "3.5 Diagramas lógicos."
+     ]
+    },
+    {
+     "n": 16,
+     "t": "Raciocínio Lógico — Lógica de primeira ordem",
+     "subs": []
+    },
+    {
+     "n": 17,
+     "t": "Raciocínio Lógico — Princípios de contagem e probabilidade",
+     "subs": []
+    },
+    {
+     "n": 18,
+     "t": "Raciocínio Lógico — Operações com conjuntos",
+     "subs": []
+    },
+    {
+     "n": 19,
+     "t": "Raciocínio Lógico — Raciocínio lógico envolvendo problemas aritméticos, geométricos e matriciais",
+     "subs": []
+    }
+   ]
+  },
+  "cargos": [
+   {
+    "nome": "Auditor Fiscal da Receita do Distrito Federal",
+    "materias": [
+     "Auditoria Fiscal do ICMS e do ISS",
+     "Contabilidade Geral e de Custos",
+     "Direito Financeiro",
+     "Direito Tributário",
+     "Legislação Tributária"
+    ],
+    "qtd": {
+     "Auditoria Fiscal do ICMS e do ISS": 20,
+     "Contabilidade Geral e de Custos": 15,
+     "Direito Financeiro": 5,
+     "Direito Tributário": 15,
+     "Legislação Tributária": 25
+    },
+    "itens": [
+     [
+      "Requisito",
+      "Diploma de nível superior em qualquer área"
+     ]
+    ],
+    "topicos": {
+     "Auditoria Fiscal do ICMS e do ISS": [
+      {
+       "n": 1,
+       "t": "Noções gerais sobre auditoria: conceituação e objetivos",
+       "subs": []
+      },
+      {
+       "n": 2,
+       "t": "Distinção entre auditoria interna, independente e auditoria tributária",
+       "subs": []
+      },
+      {
+       "n": 3,
+       "t": "Desenvolvimento do plano de auditoria",
+       "subs": []
+      },
+      {
+       "n": 4,
+       "t": "Procedimentos de auditoria e suas aplicações",
+       "subs": []
+      },
+      {
+       "n": 5,
+       "t": "Amostragem em Auditoria",
+       "subs": []
+      },
+      {
+       "n": 6,
+       "t": "Testes de Observância",
+       "subs": []
+      },
+      {
+       "n": 7,
+       "t": "Testes substantivos",
+       "subs": []
+      },
+      {
+       "n": 8,
+       "t": "Testes para subavaliação e testes para superavaliação",
+       "subs": []
+      },
+      {
+       "n": 9,
+       "t": "Evidências de auditoria",
+       "subs": []
+      },
+      {
+       "n": 10,
+       "t": "Identificação de fraudes na escrita contábil",
+       "subs": []
+      },
+      {
+       "n": 11,
+       "t": "Demonstrações contábeis sujeitas a auditoria",
+       "subs": []
+      },
+      {
+       "n": 12,
+       "t": "Auditoria no ativo circulante: recomposição contábil do fluxo de caixa da empresa",
+       "subs": []
+      },
+      {
+       "n": 13,
+       "t": "Identificação de saldo credor na conta caixa por falta de emissão de documentos fiscais",
+       "subs": []
+      },
+      {
+       "n": 14,
+       "t": "Suprimento das disponibilidades sem que haja comprovação quanto à efetiva entrega dos recursos financeiros: aumento do capital social, adiantamentos d",
+       "subs": []
+      },
+      {
+       "n": 15,
+       "t": "Aquisições de mercadorias, bens, serviços e outros ativos não contabilizados e sem comprovação da origem do numerário",
+       "subs": []
+      },
+      {
+       "n": 16,
+       "t": "Baixa fictícia de títulos não recebidos",
+       "subs": []
+      },
+      {
+       "n": 17,
+       "t": "Cotejamento de recebíveis com os registros contábeis de receitas",
+       "subs": []
+      },
+      {
+       "n": 18,
+       "t": "Auditoria no ativo não circulante: superavaliação dos custos de estoque",
+       "subs": []
+      },
+      {
+       "n": 19,
+       "t": "Auditoria no ativo realizável a longo prazo: identificação de origens de recursos fictícias",
+       "subs": []
+      },
+      {
+       "n": 20,
+       "t": "Auditoria no ativo imobilizado: ativos ocultos",
+       "subs": []
+      },
+      {
+       "n": 21,
+       "t": "Alienação fictícia de bens",
+       "subs": []
+      },
+      {
+       "n": 22,
+       "t": "Auditoria no ativo intangível",
+       "subs": []
+      },
+      {
+       "n": 23,
+       "t": "Auditoria no passivo circulante de curto prazo",
+       "subs": []
+      },
+      {
+       "n": 24,
+       "t": "Passivos fictícios",
+       "subs": []
+      },
+      {
+       "n": 25,
+       "t": "Identificação de passivos já pagos e não baixados",
+       "subs": []
+      },
+      {
+       "n": 26,
+       "t": "Auditoria no passivo não circulante",
+       "subs": []
+      },
+      {
+       "n": 27,
+       "t": "Auditoria no patrimônio líquido",
+       "subs": []
+      },
+      {
+       "n": 28,
+       "t": "Contabilização de reservas",
+       "subs": []
+      },
+      {
+       "n": 29,
+       "t": "Auditoria em contas de resultado",
+       "subs": []
+      },
+      {
+       "n": 30,
+       "t": "Registro de receitas e despesas",
+       "subs": []
+      },
+      {
+       "n": 31,
+       "t": "Ocultação de receitas",
+       "subs": []
+      },
+      {
+       "n": 32,
+       "t": "Superavaliação de custos e despesas",
+       "subs": []
+      },
+      {
+       "n": 33,
+       "t": "Identificação de fraudes e erros na escrita fiscal",
+       "subs": []
+      },
+      {
+       "n": 34,
+       "t": "Auditoria na Escrita Fiscal Digital (EFD) e nos documentos fiscais",
+       "subs": []
+      },
+      {
+       "n": 35,
+       "t": "Auditoria para identificação de apropriação indevida de crédito do ICMS",
+       "subs": []
+      },
+      {
+       "n": 36,
+       "t": "Auditoria na apuração da base de cálculo do ISS",
+       "subs": [
+        "36.1 Auditoria na apuração da base de cálculo do ISS nos serviços de construção civil; diversões, lazer e entretenimento; propaganda e publicidade; intermediação e congêneres; informática e congêneres; setor bancário ou financeiro; locação/cessão de veículo, máquina, equipamento ou qualquer bem, mediante quantia certa e previamente estipulada ao usuário, em que seja fornecido conjuntamente motorista ou operador para a execução do serviço; saúde, assistência médica e congêneres prestados por hospitais, clínicas, laboratórios, sanatórios, manicômios, casas de saúde, prontos-socorros, ambulatórios, casas de repouso e de recuperação, creches, asilos e congêneres, medicina e assistência veterinária e congêneres, centros de emagrecimentos, spa e congêneres; agência de turismo.",
+        "36.2 Auditoria na apuração da base de cálculo do ISS nas prestações de serviços com aplicação de materiais, de peças e partes."
+       ]
+      },
+      {
+       "n": 37,
+       "t": "Tributação dos serviços de composição gráfica e de produtos farmacêuticos manipulados",
+       "subs": []
+      },
+      {
+       "n": 38,
+       "t": "Verificação de registro do débito fiscal nos livros fiscais definidos na legislação tributária",
+       "subs": []
+      }
+     ],
+     "Contabilidade Geral e de Custos": [
+      {
+       "n": 1,
+       "t": "Contabilidade Geral — Contabilidade",
+       "subs": [
+        "1.1 Conceito, objeto, objetivos, campo de atuação e usuários da informação contábil."
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Contabilidade Geral — Princípios e Normas Brasileiras de Contabilidade emanadas pelo Conselho Federal de Contabilidade (CFC)",
+       "subs": []
+      },
+      {
+       "n": 3,
+       "t": "Contabilidade Geral — Conceitos, forma de avaliação, evidenciação, natureza, espécie e estrutura",
+       "subs": []
+      },
+      {
+       "n": 4,
+       "t": "Contabilidade Geral — Atos e fatos administrativos",
+       "subs": []
+      },
+      {
+       "n": 5,
+       "t": "Contabilidade Geral — Livros contábeis obrigatórios e documentação contábil",
+       "subs": []
+      },
+      {
+       "n": 6,
+       "t": "Contabilidade Geral — Variação do patrimônio líquido",
+       "subs": [
+        "6.1 Receita, despesa, ganhos e perdas."
+       ]
+      },
+      {
+       "n": 7,
+       "t": "Contabilidade Geral — Apuração dos resultados",
+       "subs": []
+      },
+      {
+       "n": 8,
+       "t": "Contabilidade Geral — Regimes de apuração",
+       "subs": [
+        "8.1 Caixa e competência."
+       ]
+      },
+      {
+       "n": 9,
+       "t": "Contabilidade Geral — Escrituração contábil",
+       "subs": [
+        "9.1 Lançamentos contábeis; contas patrimoniais, resultado."
+       ]
+      },
+      {
+       "n": 10,
+       "t": "Contabilidade Geral — Fatos contábeis",
+       "subs": [
+        "10.1 Permutativos, modificativos e mistos."
+       ]
+      },
+      {
+       "n": 11,
+       "t": "Contabilidade Geral — Itens Patrimoniais",
+       "subs": [
+        "11.1 Conteúdo, conceitos, estrutura, formas de avaliação e classificação dos itens patrimoniais do ativo, do passivo e do patrimônio líquido."
+       ]
+      },
+      {
+       "n": 12,
+       "t": "Contabilidade Geral — Demonstrações contábeis",
+       "subs": [
+        "12.1 Balanço patrimonial, demonstração do resultado do exercício, demonstração de lucros ou prejuízos acumulados, demonstração das mutações do patrimônio líquido, demonstração dos fluxos de caixa e demonstração do valor adicionado."
+       ]
+      },
+      {
+       "n": 13,
+       "t": "Contabilidade Geral — Notas explicativas às demonstrações contábeis",
+       "subs": [
+        "13.1 Conteúdo, forma de apresentação e exigências legais de informações."
+       ]
+      },
+      {
+       "n": 14,
+       "t": "Contabilidade Geral — Ajustes, classificações e avaliações dos itens patrimoniais exigidos pelas novas práticas contábeis adotadas no Brasil trazidas pela Lei Federal nº 11",
+       "subs": []
+      },
+      {
+       "n": 15,
+       "t": "Contabilidade Geral — Estoques",
+       "subs": [
+        "15.1 Tipos de inventários, critérios e métodos de avaliação."
+       ]
+      },
+      {
+       "n": 16,
+       "t": "Contabilidade Geral — Apuração do custo das mercadorias vendidas, tratamento contábil dos tributos incidentes em operações de compras e vendas",
+       "subs": []
+      },
+      {
+       "n": 17,
+       "t": "Contabilidade De Custos — Conceitos gerais e terminologia aplicável à contabilidade de custos",
+       "subs": []
+      },
+      {
+       "n": 18,
+       "t": "Contabilidade De Custos — Conceitos e classificação dos custos",
+       "subs": []
+      },
+      {
+       "n": 19,
+       "t": "Contabilidade De Custos — Apropriação dos custos à produção",
+       "subs": [
+        "3.1 Conceito e critérios de atribuição dos custos."
+       ]
+      },
+      {
+       "n": 20,
+       "t": "Contabilidade De Custos — Departamentalização",
+       "subs": [
+        "4.1 Conceito, tratamento contábil, forma de apropriação e impacto no custo do produto."
+       ]
+      },
+      {
+       "n": 21,
+       "t": "Contabilidade De Custos — Taxa de aplicação dos custos indiretos de produção",
+       "subs": []
+      },
+      {
+       "n": 22,
+       "t": "Contabilidade De Custos — Apuração da produção acabada, dos produtos em elaboração e dos produtos vendidos",
+       "subs": []
+      },
+      {
+       "n": 23,
+       "t": "Contabilidade De Custos — Utilização de equivalentes de produção",
+       "subs": []
+      },
+      {
+       "n": 24,
+       "t": "Contabilidade De Custos — Tipos de produção",
+       "subs": [
+        "8.1 Conceito, aplicabilidade, tratamento contábil e apropriação dos custos.",
+        "8.2 Produção por ordem, produção contínua, produção conjunta."
+       ]
+      },
+      {
+       "n": 25,
+       "t": "Contabilidade De Custos — Tipos de custeio",
+       "subs": []
+      },
+      {
+       "n": 26,
+       "t": "Contabilidade De Custos — Formas de controle dos custos",
+       "subs": []
+      },
+      {
+       "n": 27,
+       "t": "Contabilidade De Custos — Custos estimados",
+       "subs": [
+        "11.1 Conceito, tratamento contábil, análise das variações."
+       ]
+      },
+      {
+       "n": 28,
+       "t": "Contabilidade De Custos — Custos controláveis",
+       "subs": [
+        "12.1 Conceito, tratamento contábil e aplicação."
+       ]
+      },
+      {
+       "n": 29,
+       "t": "Contabilidade De Custos — Custo padrão",
+       "subs": [
+        "13.1 Conceito, tratamento contábil, aplicação e análises das variações."
+       ]
+      },
+      {
+       "n": 30,
+       "t": "Contabilidade De Custos — Margem de contribuição",
+       "subs": [
+        "14.1 Conceito, cálculos e aplicação."
+       ]
+      },
+      {
+       "n": 31,
+       "t": "Contabilidade De Custos — Análise do custo × volume × lucro",
+       "subs": []
+      },
+      {
+       "n": 32,
+       "t": "Contabilidade De Custos — Variações do ponto de equilíbrio",
+       "subs": []
+      },
+      {
+       "n": 33,
+       "t": "Contabilidade De Custos — Grau de alavancagem operacional",
+       "subs": []
+      },
+      {
+       "n": 34,
+       "t": "Contabilidade De Custos — Margem de segurança",
+       "subs": []
+      }
+     ],
+     "Direito Financeiro": [
+      {
+       "n": 1,
+       "t": "Direito financeiro",
+       "subs": [
+        "1.1 Conceito e objeto.",
+        "1.2 Direito financeiro na Constituição Federal de 1988.",
+        "1.2.1 Normas gerais e orçamento."
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Despesa pública",
+       "subs": [
+        "2.1 Conceito e classificação de despesa pública.",
+        "2.2 Disciplina constitucional dos precatórios."
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Receita pública",
+       "subs": [
+        "3.1 Conceito, ingresso e receitas.",
+        "3.2 Classificação das receitas públicas."
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Orçamento público",
+       "subs": [
+        "4.1 Conceito, espécies e natureza jurídica.",
+        "4.2 Princípios orçamentários.",
+        "4.3 Leis orçamentárias.",
+        "4.3.1 Espécies e tramitação legislativa.",
+        "4.4 Lei Federal nº 4.320/1964 e suas alterações.",
+        "4.5 Fiscalização financeira e orçamentária."
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Lei de Responsabilidade Fiscal (Lei Complementar Federal nº 101/2000 e suas alterações)",
+       "subs": [
+        "5.1 Planejamento.",
+        "5.2 Receita pública.",
+        "5.3 Despesa pública.",
+        "5.4 Transferências voluntárias.",
+        "5.5 Destinação de recursos públicos para o setor privado.",
+        "5.6 Dívida e endividamento.",
+        "5.7 Gestão patrimonial.",
+        "5.8 Transparência, controle e fiscalização.",
+        "5.9 Disposições preliminares, finais e transitórias."
+       ]
+      },
+      {
+       "n": 6,
+       "t": "Crédito público",
+       "subs": [
+        "6.1 Conceito e classificação de crédito público.",
+        "6.2 Natureza jurídica.",
+        "6.3 Controle, fiscalização e prestação de contas."
+       ]
+      },
+      {
+       "n": 7,
+       "t": "Dívida pública",
+       "subs": [
+        "7.1 Dívida ativa da União, dos Estados, do Distrito Federal, dos Munícipios e dos Territórios, de natureza tributária e não tributária."
+       ]
+      }
+     ],
+     "Direito Tributário": [
+      {
+       "n": 1,
+       "t": "Direito tributário",
+       "subs": [
+        "1.1 Conceito.",
+        "1.2 Fontes do direito tributário."
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Receitas públicas",
+       "subs": [
+        "2.1 Receitas tributárias."
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Sistema Tributário Nacional na Constituição Federal",
+       "subs": [
+        "3.1 Princípios.",
+        "3.2 Limitações constitucionais do poder de tributar.",
+        "3.3 Competência tributária.",
+        "3.4 Repartição das Receitas Tributárias.",
+        "3.5 Limitações constitucionais do poder de tributar da União, dos estados, do Distrito Federal e dos municípios."
+       ]
+      },
+      {
+       "n": 4,
+       "t": "Lei Federal nº 5.172/1966 e suas alterações (Sistema Tributário no Código Tributário Nacional)",
+       "subs": [
+        "4.1 Disposições Gerais.",
+        "4.2 Tributos",
+        "4.3 Espécies de tributos.",
+        "4.4 Classificação dos tributos.",
+        "4.5 Limitações da Competência Tributária.",
+        "4.6 Impostos.",
+        "4.6.1 Conceito.",
+        "4.6.2 Impostos de competência da União, dos estados, do Distrito Federal e dos municípios: fato gerador, base de cálculo e contribuinte.",
+        "4.7 Impostos extraordinários."
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Taxas e Contribuição de Melhoria: conceito",
+       "subs": []
+      },
+      {
+       "n": 6,
+       "t": "Lei Orgânica do Distrito Federal",
+       "subs": [
+        "6.1 Do Sistema Tributário do Distrito Federal (Arts. 125 a 142)."
+       ]
+      },
+      {
+       "n": 7,
+       "t": "Normas legais",
+       "subs": [
+        "7.1 Leis Complementares.",
+        "7.2 Leis Ordinárias.",
+        "7.3 Leis Delegadas.",
+        "7.4 Medidas Provisórias.",
+        "7.5 Tratados Internacionais.",
+        "7.6 Decretos.",
+        "7.7 Resoluções.",
+        "7.8 Decretos Legislativos.",
+        "7.9 Convênios.",
+        "7.10 Normas Complementares."
+       ]
+      },
+      {
+       "n": 8,
+       "t": "Vigência da legislação tributária",
+       "subs": []
+      },
+      {
+       "n": 9,
+       "t": "Aplicação da legislação tributária",
+       "subs": []
+      },
+      {
+       "n": 10,
+       "t": "Interpretação e integração da legislação tributária",
+       "subs": []
+      },
+      {
+       "n": 11,
+       "t": "Obrigação tributária principal e acessória",
+       "subs": []
+      },
+      {
+       "n": 12,
+       "t": "Fato gerador da obrigação tributária",
+       "subs": []
+      },
+      {
+       "n": 13,
+       "t": "Sujeição ativa e passiva",
+       "subs": [
+        "13.1 Solidariedade.",
+        "13.2 Capacidade tributária."
+       ]
+      },
+      {
+       "n": 14,
+       "t": "Domicílio tributário",
+       "subs": []
+      },
+      {
+       "n": 15,
+       "t": "Responsabilidade tributária",
+       "subs": []
+      },
+      {
+       "n": 16,
+       "t": "Responsabilidade dos sucessores",
+       "subs": []
+      },
+      {
+       "n": 17,
+       "t": "Responsabilidade de terceiros",
+       "subs": []
+      },
+      {
+       "n": 18,
+       "t": "Responsabilidade por infrações",
+       "subs": []
+      },
+      {
+       "n": 19,
+       "t": "Crédito tributário",
+       "subs": [
+        "19.1 Constituição do crédito tributário."
+       ]
+      },
+      {
+       "n": 20,
+       "t": "Lançamento",
+       "subs": [
+        "20.1 Efeitos.",
+        "20.2 Modalidades de lançamento.",
+        "20.3 Hipóteses de alteração do lançamento."
+       ]
+      },
+      {
+       "n": 21,
+       "t": "Suspensão da exigibilidade do crédito tributário",
+       "subs": []
+      },
+      {
+       "n": 22,
+       "t": "Exclusão do crédito tributário",
+       "subs": []
+      },
+      {
+       "n": 23,
+       "t": "Extinção do crédito tributário",
+       "subs": []
+      },
+      {
+       "n": 24,
+       "t": "Pagamento indevido",
+       "subs": [
+        "24.1 Repetição do indébito."
+       ]
+      },
+      {
+       "n": 25,
+       "t": "Garantias e privilégios do crédito tributário",
+       "subs": []
+      },
+      {
+       "n": 26,
+       "t": "Administração Tributária",
+       "subs": [
+        "26.1 Fiscalização.",
+        "26.2 Competência."
+       ]
+      },
+      {
+       "n": 27,
+       "t": "Dívida ativa",
+       "subs": [
+        "27.1 Certidões negativas."
+       ]
+      },
+      {
+       "n": 28,
+       "t": "Informações fiscais e sigilo fiscal",
+       "subs": []
+      }
+     ],
+     "Legislação Tributária": [
+      {
+       "n": 1,
+       "t": "Legislação tributária básica do Distrito Federal",
+       "subs": [
+        "1.1 Lei Orgânica do Distrito Federal (Título IV - Da Tributação e do Orçamento do Distrito Federal)."
+       ]
+      },
+      {
+       "n": 2,
+       "t": "Lei Complementar Distrital nº 4/1994 e suas alterações (Código Tributário do Distrito Federal)",
+       "subs": [
+        "2.1 Decreto-Lei nº 82/1966 (regula o Sistema Tributário do Distrito Federal)."
+       ]
+      },
+      {
+       "n": 3,
+       "t": "Processo Administrativo Fiscal Contencioso e Voluntário do Distrito Federal (Lei Distrital nº 4.567/2011 e Decreto nº 33.269/2011)",
+       "subs": []
+      },
+      {
+       "n": 4,
+       "t": "Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunic",
+       "subs": [
+        "4.1 Lei Distrital nº 1.254/1996 e suas alterações (Lei do ICMS no DF), Lei Kandir (Lei Federal nº 87/1996 e suas alterações).",
+        "4.2 Lei Distrital nº 5.005/2012 e suas alterações (Regime Especial de tributação do ICMS nas operações realizadas por contribuinte industrial, atacadista e distribuidor).",
+        "4.3 Decreto Distrital nº 18.955/1997 e seus anexos e suas alterações (Regulamento do ICMS - RICMS)."
+       ]
+      },
+      {
+       "n": 5,
+       "t": "Imposto Sobre Serviços de Qualquer Natureza (ISS)",
+       "subs": [
+        "5.1 Lei Complementar Federal nº 116/2003 e suas alterações (Lei do ISS), Lei Complementar Federal nº 157/2016, Lei Complementar Distrital nº 687/2003 e suas alterações, Lei Complementar Distrital nº 937/2017 e suas alterações, Decreto-Lei nº 82/1966 e suas alterações aplicável por força Art. 70, inciso II, da Lei Complementar Distrital nº 4/1994 e suas alterações).",
+        "5.2 Decreto Distrital nº 25.508/2005 (regulamenta o Imposto sobre Serviços de qualquer natureza - ISS)."
+       ]
+      },
+      {
+       "n": 6,
+       "t": "Decreto-Lei nº 82/1966 e suas alterações aplicável por força do Art",
+       "subs": [
+        "6.1 Decreto Distrital nº 28.445/2007 (regulamenta o Imposto sobre a Propriedade Predial e Territorial Urbana - IPTU)."
+       ]
+      },
+      {
+       "n": 7,
+       "t": "Imposto sobre a Propriedade de Veículos Automotores (IPVA)",
+       "subs": [
+        "7.1 Lei Federal nº 7.431/1985 (institui no Distrito Federal, o imposto sobre a propriedade de veículos automotores).",
+        "7.2 Decreto Distrital nº 34.024/2012 (regulamenta a legislação do IPVA)."
+       ]
+      },
+      {
+       "n": 8,
+       "t": "Imposto sobre Transmissão Causa Mortis e Doação de quaisquer Bens ou Direitos (ITCD)",
+       "subs": [
+        "8.1 Lei Distrital nº 3.804/2006 e suas alterações (Lei do ITCD).",
+        "8.2 Decreto Distrital nº 34.982/2013 (regulamenta o ITCD)."
+       ]
+      },
+      {
+       "n": 9,
+       "t": "Imposto sobre a Transmissão Inter Vivos de Bens Imóveis e de Direitos a eles relativos (ITBI)",
+       "subs": [
+        "9.1 Lei Distrital nº 3.830/2006 e suas alterações (Lei do ITBI).",
+        "9.2 Decreto Distrital nº 27.576/2006 e suas alterações (regulamenta o ITBI)."
+       ]
+      },
+      {
+       "n": 10,
+       "t": "Taxa de Limpeza Pública (TLP): Lei Federal nº 6.945/1981 e suas alterações, Decreto-lei nº 82/1966 e suas alterações aplicável por força do Art",
+       "subs": []
+      },
+      {
+       "n": 11,
+       "t": "Contribuição de Iluminação Pública (CIP)",
+       "subs": [
+        "11.1 Lei Distrital nº 673/2002 (Lei da CIP).",
+        "11.2 Decreto Distrital nº 23.499/2002 e suas alterações (regulamenta a CIP)."
+       ]
+      },
+      {
+       "n": 12,
+       "t": "Contribuição de Melhoria (Decreto-Lei nº 82/1966 e suas alterações aplicável por força do Art",
+       "subs": []
+      },
+      {
+       "n": 13,
+       "t": "Lei Complementar Distrital nº 833/2011 e suas alterações (Parcelamento de créditos de natureza tributária e não tributária de titularidade do Distrito",
+       "subs": []
+      },
+      {
+       "n": 14,
+       "t": "Lei Complementar Distrital nº 435/2001 (Atualização monetária dos créditos de natureza tributária e não tributária do Distrito Federal)",
+       "subs": []
+      },
+      {
+       "n": 15,
+       "t": "Lei Complementar Federal nº 24/1975 (Concessão ou Revogação de Benefícios e Incentivos Fiscais do ICMS), Lei Complementar Federal nº 160/2017 e suas a",
+       "subs": []
+      },
+      {
+       "n": 16,
+       "t": "Lei Complementar Federal nº 123/2006 e suas alterações (Estatuto Nacional da Microempresa e da Empresa de Pequeno Porte - Simples Nacional)",
+       "subs": []
+      },
+      {
+       "n": 17,
+       "t": "Legislação Diversa",
+       "subs": [
+        "17.1 Lei Complementar Distrital nº 53/1997 (Equipamento Emissor de Cupom Fiscal – ECF).",
+        "17.2 Ajuste SINIEF nº 07/2005 (Nota Fiscal Eletrônica - NF-e).",
+        "17.3 Decreto Distrital nº 26.529/2006 e Portaria SEF nº 210/2006 (Livro Fiscal Eletrônico).",
+        "17.4 Lei Federal nº 9.784/1999 e suas alterações, aplicável no Distrito Federal por força da Lei Distrital nº 2.834/2001 e suas alterações. André Clemente Lara de Oliveira Secretário de Economia do Distrito Federal"
+       ]
+      }
+     ]
+    }
+   }
+  ]
  }
 ];
