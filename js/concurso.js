@@ -631,7 +631,7 @@ function concursoTelaHtml(){
   const itensHtml = (c.itens || []).length ? `<details class="cx-det"><summary>Edital e regras <small>${c.itens.length} itens</small></summary><dl>${c.itens.map(p => `<dt>${esc(p[0])}</dt><dd>${esc(p[1])}</dd>`).join('')}</dl></details>` : '';
   return `<div class="cx-tela"><div class="cx-caixa">
     <header class="cx-top"><img src="img/logo-ia-concurseira.png" alt="IA Concurseira" class="cx-logo"><div class="cx-tit"><h1>IA Concurseira</h1><p>${CONC_TELA_ABERTA ? 'Trocar de concurso ou cargo' : (CONC_DB.escolhido ? 'Confirme o concurso e o cargo para entrar' : 'Escolha o concurso e o cargo para começar')}</p></div>
-      <div class="cx-user">${usuario ? (() => { const nm = String(usuario.nome || usuario.email || '').trim(), ini = nm.split(/[\s@._-]+/).filter(Boolean).slice(0, 2).map(x => x[0]).join('').toUpperCase() || '?'; return `<div class="cx-conta" title="${esc(usuario.email || nm)}"><span class="cx-av" aria-hidden="true">${esc(ini)}</span><span class="cx-nome">${esc(nm)}</span><button type="button" class="cx-sair" data-ct-sair="1" title="Sair da conta" aria-label="Sair da conta"><span aria-hidden="true">⎋</span> Sair</button></div>`; })() : ''}</div></header>
+      <div class="cx-user"><button type="button" class="cx-tema" data-ct-tema="1" title="Alternar modo claro/escuro" aria-label="Alternar modo claro ou escuro"><span aria-hidden="true">${document.body.classList.contains('theme-light') ? '🌙' : '☀️'}</span></button>${usuario ? (() => { const nm = String(usuario.nome || usuario.email || '').trim(), ini = nm.split(/[\s@._-]+/).filter(Boolean).slice(0, 2).map(x => x[0]).join('').toUpperCase() || '?'; return `<div class="cx-conta" title="${esc(usuario.email || nm)}"><span class="cx-av" aria-hidden="true">${esc(ini)}</span><span class="cx-nome">${esc(nm)}</span><button type="button" class="cx-sair" data-ct-sair="1" title="Sair da conta" aria-label="Sair da conta"><span aria-hidden="true">⎋</span> Sair</button></div>`; })() : ''}</div></header>
     <ol class="cx-passos" aria-label="Etapas"><li class="on"><b>1</b> Concurso</li><li class="${(ehPadrao || !cargos.length || CONC_SEL_CARGO) ? 'on' : ''}"><b>2</b> Cargo</li><li><b>3</b> Estudar</li></ol>
     <div class="cx-chips" role="tablist" aria-label="Concursos">${chips}<button type="button" class="cx-chip cx-novo" data-conc-abrir="1" title="Carregar o edital (PDF) de outro concurso">＋ Edital</button></div>
     <section class="cx-painel">
@@ -652,8 +652,9 @@ function concursoTelaHtml(){
 function concursoTelaBind(){
   const raiz = document.querySelector('.cx-tela'); if(!raiz) return;
   raiz.addEventListener('click', e => {
-    const t = e.target.closest && e.target.closest('[data-ct-conc],[data-ct-entrar],[data-ct-voltar],[data-ct-excluir],[data-ct-sair]'); if(!t) return;
+    const t = e.target.closest && e.target.closest('[data-ct-conc],[data-ct-entrar],[data-ct-voltar],[data-ct-excluir],[data-ct-sair],[data-ct-tema]'); if(!t) return;
     if(t.hasAttribute('data-ct-conc')){ CONC_SEL = t.dataset.ctConc; CONC_SEL_CARGO = (CONC_SEL === CONC_DB.ativo) ? CONC_DB.cargo : ''; return render(); }
+    if(t.hasAttribute('data-ct-tema')){ if(typeof alternarTema === 'function') alternarTema(); return; }
     if(t.hasAttribute('data-ct-sair')){ if(typeof sairDaConta === 'function') sairDaConta(); return; }
     if(t.hasAttribute('data-ct-voltar')){ CONC_TELA_ABERTA = false; concursoSessaoMarcar(true); return render(); }
     if(t.hasAttribute('data-ct-excluir')){ if(confirm('Remover este concurso da lista?')){ concursoExcluir(CONC_SEL); CONC_SEL = 'padrao'; render(); } return; }

@@ -3163,3 +3163,9 @@ body.theme-light .lg-pontos li i{ background:rgba(91,75,219,.12); color:#5b4bdb;
 .lg-alt:hover{ opacity:1; background:rgba(255,255,255,.08); }
 @media (max-width:420px){ .lg-pontos{ grid-template-columns:repeat(2,1fr); } .lg-pontos li{ flex-direction:column; text-align:center; } .lg-pontos li small{ display:block; } }
 .lg-card .lg-marca{ margin-bottom:26px; }
+
+.cx-tema{ width:38px; height:38px; flex:none; display:grid; place-items:center; border-radius:50%; font-size:17px; line-height:1; cursor:pointer; color:inherit; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); transition:background .15s, transform .15s; }
+.cx-tema:hover{ background:rgba(255,255,255,.16); transform:rotate(15deg); }
+.cx-tema:focus-visible{ outline:2px solid var(--gold,#a5b4fc); outline-offset:2px; }
+body.theme-light .cx-tema{ background:rgba(255,255,255,.8); border-color:rgba(60,60,110,.16); }
+@media (max-width:560px){ .cx-user{ gap:8px; } .cx-conta{ width:auto; flex:1; } }
