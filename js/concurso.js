@@ -103,7 +103,7 @@ function concursoAplicar(){
   PROVA_TCDF.link = c.link || '';
   PROVA_TCDF.semData = !d;
   try{ CONFIG.eyebrow = c.orgao || ''; CONFIG.footer = c.padrao ? 'PROCESSO Nº LO-TCDF/2026 · MATERIAL DE ESTUDO PRIVADO' : 'MATERIAL DE ESTUDO PRIVADO · ' + String(c.nome || '').toUpperCase(); }catch(_){}
-  try{ document.title = c.padrao ? 'IA Concurseira' : 'IA Concurseira · ' + (c.orgao || c.nome); }catch(_){}
+  try{ document.title = 'IAC'; }catch(_){}
 }
 
 /* ---------- extração do edital (heurística; o usuário confere antes de aplicar) ---------- */
