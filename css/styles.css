@@ -3156,3 +3156,10 @@ body.theme-light .lg-pontos li i{ background:rgba(91,75,219,.12); color:#5b4bdb;
 .lg-pontos{ margin-top:22px; padding-top:18px; }
 .lg-pontos li{ padding:10px 6px; }
 @media (max-width:420px){ .lg-pontos{ grid-template-columns:repeat(3,1fr); } .lg-pontos li{ flex-direction:column; text-align:center; gap:3px; } }
+
+.lg-pontos{ grid-template-columns:repeat(2,1fr); }
+.lg-pontos li i{ font-size:16px; }
+.lg-alt{ display:block; width:max-content; margin:14px auto 0; font-size:20px; line-height:1; text-decoration:none; opacity:.55; padding:4px 10px; border-radius:10px; }
+.lg-alt:hover{ opacity:1; background:rgba(255,255,255,.08); }
+@media (max-width:420px){ .lg-pontos{ grid-template-columns:repeat(2,1fr); } .lg-pontos li{ flex-direction:column; text-align:center; } .lg-pontos li small{ display:block; } }
+.lg-card .lg-marca{ margin-bottom:26px; }
