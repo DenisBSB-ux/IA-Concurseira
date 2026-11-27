@@ -3151,3 +3151,8 @@ body.theme-light .lg-pontos li i{ background:rgba(91,75,219,.12); color:#5b4bdb;
 .lg-pontos li small{ font-size:11px; opacity:.65; }
 @media (max-width:420px){ .lg-pontos{ grid-template-columns:1fr; } .lg-pontos li{ flex-direction:row; text-align:left; gap:10px; } .lg-pontos li small{ display:none; } }
 .tela-login{ position:fixed; inset:0; z-index:5; overflow:auto; }
+
+.lg-titulo{ margin-bottom:22px; }
+.lg-pontos{ margin-top:22px; padding-top:18px; }
+.lg-pontos li{ padding:10px 6px; }
+@media (max-width:420px){ .lg-pontos{ grid-template-columns:repeat(3,1fr); } .lg-pontos li{ flex-direction:column; text-align:center; gap:3px; } }
