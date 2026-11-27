@@ -351,6 +351,9 @@ function migrarChutesParaEstudo(materiaKey, b){
    tem o seu próprio histórico, gravado numa chave "Matéria ⟦perfil⟧" (a nuvem trata como mais uma matéria, sem mudança). */
 const PROGRESSO_SEP = ' ⟦';
 function perfilProgressoId(){
+  /* DESLIGADO (v712): a separação por concurso+cargo já existe em perfil.js (v633: o PROGRESS inteiro é trocado ao mudar de cargo).
+     Somar esta chave por cima escondia o histórico de quem já tinha progresso em outro cargo. */
+  return '';
   try{ if(typeof CONCURSO === 'undefined' || !CONCURSO || CONCURSO.padrao || !CONCURSO.id) return ''; return CONCURSO.id + '|' + (CONCURSO.cargo || ''); }catch(_){ return ''; }
 }
 function chaveProgresso(materiaKey, perfil){

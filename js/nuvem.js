@@ -230,6 +230,8 @@ async function entrarComGoogle(forcarRedirect){
     // app instalado (tela inicial do celular): a janela de login costuma não voltar; vai direto por redirecionamento
     if(forcarRedirect === true || appInstaladoStandalone()){ await porRedirect(); return; }
     await fbAuth.signInWithPopup(provedor);
+    // o Google confirmou, mas o navegador não guardou o login (cookies/armazenamento de terceiros bloqueados, aba anônima): avisa em vez de voltar mudo ao login
+    setTimeout(()=>{ if(!USUARIO_ATUAL){ LOGIN_ERRO = 'O Google confirmou a conta, mas o navegador não guardou o login. Libere cookies de terceiros para este site, saia do modo anônimo ou toque em ↪ (entrar na mesma aba).'; try{ render(); }catch(_){} } }, 4000);
   }catch(e){
     const cod = e && e.code;
     if(cod==='auth/popup-blocked' || cod==='auth/operation-not-supported-in-this-environment'){
