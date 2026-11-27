@@ -1281,7 +1281,7 @@ function foraEditalBarra(){
   const fora = todas.filter(q => q.foraEdital || q.foraAssunto).length; if(!fora) return '';
   const ver = (typeof concursoForaVisivel === 'function') && concursoForaVisivel();
   const dentro = todas.filter(q => !(q.foraEdital || q.foraAssunto) && !q.duplicataOculta).length;
-  return `<div class="fe-barra" role="status"><span class="fe-tx">${ver ? `Mostrando também <b>${fora}</b> ${fora>1?'questões':'questão'} <b>fora do edital</b> do seu cargo (marcadas).` : `Só as questões do edital do seu cargo: <b>${dentro}</b>. Ocultas, fora do edital: <b>${fora}</b>.`}</span> ${foraDoCargoBotao()}</div>`;
+  return `<div class="fe-barra" role="status">${foraDoCargoBotao()}</div>`;
 }
 function renderMainPanel(tabAtual){
   if(tabAtual==='simulado'){
